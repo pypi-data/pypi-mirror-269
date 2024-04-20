@@ -1,0 +1,206 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            rust: "1.74"  # MSRV
+            args: --exclude macos-certificate-truster
+          - os: macos-latest
+            rust: "1.74"
+            args: --exclude windows-redirector
+          - os: ubuntu-latest
+            rust: stable
+            args: --exclude windows-redirector --exclude macos-certificate-truster
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Rust toolchain
+        run: rustup toolchain install ${{ matrix.rust }} --profile minimal
+      - uses: Swatinem/rust-cache@23bce251a8cd2ffc3c1075eaa2367cf899916d84  # v2.7.3
+        timeout-minutes: 2
+        continue-on-error: true
+      # PyO3 wants recent Python on Windows.
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .github/python-version.txt
+
+      - name: Run "cargo check"
+        # the action-rs/cargo action adds inline annotations for "cargo check" output
+        uses: actions-rs/cargo@9e120dd99b0fbad1c065f686657e914e76bd7b72
+        with:
+          toolchain: ${{ matrix.rust }}
+          command: check
+          args: --workspace --verbose ${{ matrix.args }}
+      - name: Run "cargo test"
+        # the action-rs/cargo action adds inline annotations for "cargo test" output
+        uses: actions-rs/cargo@9e120dd99b0fbad1c065f686657e914e76bd7b72
+        with:
+          toolchain: ${{ matrix.rust }}
+          command: test
+          args: --workspace --verbose ${{ matrix.args }}
+
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+          - os: ubuntu-latest
+            args: --compatibility manylinux2014 --zig --sdist
+          - os: ubuntu-latest
+            target: aarch64-unknown-linux-gnu
+            args: --compatibility manylinux2014 --zig --target aarch64-unknown-linux-gnu
+          - os: macos-latest
+            target: aarch64-apple-darwin
+            args: --target universal2-apple-darwin
+    runs-on: ${{ matrix.os }}
+    name: build mitmproxy-rs (${{ matrix.os }}, ${{ matrix.target || 'x64' }})
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup toolchain install stable --profile minimal
+      - run: rustup default stable
+      - if: matrix.target
+        run: rustup target add ${{ matrix.target }}
+      - run: rustup show
+      - uses: Swatinem/rust-cache@23bce251a8cd2ffc3c1075eaa2367cf899916d84  # v2.7.3
+        timeout-minutes: 2
+        continue-on-error: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .github/python-version.txt
+
+      - if: runner.os == 'Linux'
+        name: Install maturin[zig] from PyPI
+        uses: install-pinned/maturin-with-zig@7dc6082180bb4d3acd615d58c00156b7d444c772
+      - if: runner.os != 'Linux'
+        name: Install maturin from PyPI
+        uses: install-pinned/maturin@dfebcaa782a69944b584ec164e97fbbd09885352
+
+      - if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+        run: python .github/scripts/pin-versions.py
+
+      - run: maturin build --release ${{ matrix.args }}
+        working-directory: ./mitmproxy-rs
+
+      # ensure that sdist is building.
+      # We do this here instead of a separate job because we don't want to wait for the entire matrix.
+      - if: contains(matrix.args, 'sdist')
+        run: pip install target/wheels/*.tar.gz
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheels-${{ runner.os }}-${{ matrix.target || 'x64' }}
+          path: target/wheels
+
+  build-macos-app:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        id: cache-app
+        with:
+          path: mitmproxy-macos/redirector/dist/
+          key: macos-${{ hashFiles('mitmproxy-macos/redirector/**', '.github/scripts/build-macos-redirector.sh') }}
+      - if: steps.cache-app.outputs.cache-hit != 'true' || hashFiles('mitmproxy-macos/redirector/dist/Mitmproxy Redirector.app.tar') == ''
+        run: $GITHUB_WORKSPACE/.github/scripts/build-macos-redirector.sh
+        working-directory: mitmproxy-macos/redirector
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+          APPLE_PROVISIONING_PROFILE_APP: ${{ secrets.APPLE_PROVISIONING_PROFILE_APP }}
+          APPLE_PROVISIONING_PROFILE_EXT: ${{ secrets.APPLE_PROVISIONING_PROFILE_EXT }}
+          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos-app
+          path: mitmproxy-macos/redirector/dist/
+
+  build-os-wheels:
+    needs: build-macos-app
+    strategy:
+      matrix:
+        include:
+          - os: windows
+            build-rust: --package windows-redirector
+          - os: macos
+            build-rust: --package macos-certificate-truster
+    runs-on: ${{ matrix.os }}-latest
+    name: build mitmproxy-${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Build Rust
+      - uses: Swatinem/rust-cache@23bce251a8cd2ffc3c1075eaa2367cf899916d84  # v2.7.3
+        timeout-minutes: 2
+        continue-on-error: true
+      - run: rustup toolchain install stable --profile minimal
+      - run: rustup default stable
+      - if: runner.os == 'macOS'
+        run: rustup target add aarch64-apple-darwin
+      - if: runner.os == 'macOS'
+        run: |
+          cargo build --release ${{ matrix.build-rust }} --target x86_64-apple-darwin
+          cargo build --release ${{ matrix.build-rust }} --target aarch64-apple-darwin
+          lipo -create -output target/release/macos-certificate-truster target/x86_64-apple-darwin/release/macos-certificate-truster target/aarch64-apple-darwin/release/macos-certificate-truster
+      - if: runner.os != 'macOS'
+        run: cargo build --release ${{ matrix.build-rust }}
+
+
+      # Download macOS app
+      - if: runner.os == 'macOS'
+        uses: actions/download-artifact@v4
+        with:
+          name: macos-app
+          path: mitmproxy-macos/redirector/dist/
+
+      # Build & upload wheel
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .github/python-version.txt
+      - name: Install build from PyPI
+        uses: install-pinned/build@6921a57b43fbb0fd3bcc42465ec9b4f3630e0032
+      - run: python -m build --wheel ./mitmproxy-${{ matrix.os }} --outdir target/wheels/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheels-os-${{ runner.os }}
+          path: target/wheels
+
+  check:
+    if: always()
+    needs:
+      - test
+      - build
+      - build-os-wheels
+    uses: mhils/workflows/.github/workflows/alls-green.yml@main
+    with:
+      jobs: ${{ toJSON(needs) }}
+
+  deploy:
+    uses: mhils/workflows/.github/workflows/python-deploy.yml@v5
+    needs: check
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+    with:
+      artifact-pattern: wheels-*
+      artifact-merge-multiple: true
+      # repository: testpypi
+      # environment: deploy-testpypi
+    secrets:
+      password: ${{ secrets.PYPI_TOKEN }}
