@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: os11
+Version: 0.0.3
+Summary: os11
+Author: KTHM
+Author-email: kthmcollegenashik1@gmail.com
+Keywords: arithmetic,os,college,python tutorial,os college
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+A package to perform details of os programs
