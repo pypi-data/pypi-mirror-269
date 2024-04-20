@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: numerical-pde-solver
+Version: 0.1
+Summary: A package for solving PDEs using Euler and Milstein methods
+Author: Amit Kumar Jha
+Author-email: jha.8@alumni.iitj.ac.in
+Requires-Dist: numpy
