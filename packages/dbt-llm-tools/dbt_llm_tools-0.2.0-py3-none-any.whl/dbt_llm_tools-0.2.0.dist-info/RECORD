@@ -1,0 +1,12 @@
+dbt_llm_tools/__init__.py,sha256=3Q350Z8GORkna3OXnQmIEu9bn6Z7uMHs5adfqomBUnQ,496
+dbt_llm_tools/chatbot.py,sha256=VCR2K_eMJvKGMFVcJAFVB2B5Eubb4Qvrd3lWFz6xDns,7647
+dbt_llm_tools/dbt_model.py,sha256=C9RrckDjNd2e5MJColTWFGpbkdFPdYjAsT4XWE8aC5s,3389
+dbt_llm_tools/dbt_project.py,sha256=ykZT5JuC8QrQhrTim6uiS2Nus5NVvA_7Ack3lUVwKOM,10696
+dbt_llm_tools/documentation_generator.py,sha256=eDzVD5Zyl0x7C1AQb5rdaFbAdh44TcAp8CAKPf1nHxo,7195
+dbt_llm_tools/instructions.py,sha256=bQlOLaDm-PG1GIUSUkeuZrs6jL9X72Gj8FLjM-6l0Ho,2312
+dbt_llm_tools/types.py,sha256=br8-UEnJJQ3n-7GMFBMKsN2H8hl882LNHn6D4OVPnDY,1457
+dbt_llm_tools/vector_store.py,sha256=5z7Zf5Kigwkj4y2HuhsiTL5Eoq4x8xcofZgg6Sd397Q,6869
+dbt_llm_tools-0.2.0.dist-info/LICENSE.md,sha256=ySa4p8Lo0gH9ze_U0UOrmzMiFA_srdSeHkwR2HnnspM,1665
+dbt_llm_tools-0.2.0.dist-info/METADATA,sha256=bPIwgR8BCU5vGHHVjo4P8UA5QSoi_A9vL3w2y2P4OyM,5131
+dbt_llm_tools-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dbt_llm_tools-0.2.0.dist-info/RECORD,,
