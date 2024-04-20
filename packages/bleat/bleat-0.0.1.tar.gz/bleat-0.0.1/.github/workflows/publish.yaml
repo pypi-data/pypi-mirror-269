@@ -1,0 +1,44 @@
+name: Upload Python Package
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      id: setup-python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Cache virtual environment
+      id: venv-cache
+      uses: actions/cache@v4
+      with:
+        key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version}}-venv-${{ hashFiles('pyproject.toml') }}
+        path: .venv
+
+    - name: make install
+      run: make install
+      # outputs.cache-hit is set by cache action after it attempts to retrieve cached data. It holds a true value
+      # if the value is false it means there is no cached data available for the specific key
+      if: steps.venv-cache.outputs.cache-hit != 'true'
+
+    - name: Build distribution
+      run: make dist
+
+    - name: Publish package
+      uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_API_TOKEN }}

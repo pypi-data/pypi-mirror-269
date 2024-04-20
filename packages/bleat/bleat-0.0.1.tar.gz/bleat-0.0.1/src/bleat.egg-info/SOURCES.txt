@@ -1,0 +1,17 @@
+.gitignore
+.pre-commit-config.yaml
+.python-version
+Makefile
+README.md
+package.json
+pyproject.toml
+.github/workflows/ci.yaml
+.github/workflows/publish.yaml
+src/bleat/__init__.py
+src/bleat/main.py
+src/bleat.egg-info/PKG-INFO
+src/bleat.egg-info/SOURCES.txt
+src/bleat.egg-info/dependency_links.txt
+src/bleat.egg-info/requires.txt
+src/bleat.egg-info/top_level.txt
+tests/test_dummy.py

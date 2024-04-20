@@ -1,0 +1,83 @@
+[project]
+name = "bleat"
+description = "A CLI chatbot with Llama 3"
+dynamic = ["version"]
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["llama", "command line", "cli"]
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "build~=1.0",
+    "pre-commit~=3.5",
+    "pytest~=8.0",
+    "ruff~=0.4",
+    "twine~=5.0",
+]
+
+[project.scripts]
+
+[project.urls]
+homepage = "https://github.com/mhasanbulli/bleat"
+
+[build-system]
+requires = ["setuptools", "setuptools_scm[toml]", "wheel"]
+
+# enable setuptools_scm to set the version based on git tags
+[tool.setuptools_scm]
+fallback_version = "0.0.0"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = ["src", "tests"]
+strictListInference = true
+strictDictionaryInference = true
+strictParameterNoneValue = true
+reportTypedDictNotRequiredAccess = false
+
+[tool.ruff]
+line-length = 120
+
+# rules to enable/ignore
+select = [
+    "F",    # pyflakes
+    "E",    # pycodestyle
+    "W",    # pycodestyle
+    "ANN",  # type annotations
+    "N",    # pep8-naming
+    "B",    # bugbear
+    "I",    # isort
+    "ARG",  # flake8-unused-arguments
+    "SLF",  # flake8-self
+    "UP",   # pyupgrade
+    "PERF", # perflint
+    "RUF",  # ruff-specific
+    "FA",   # flake8-future-annotations (for python 3.7/8/9)
+]
+ignore = [
+    # allow untyped self and cls args, and no return type from dunder methods
+    "ANN101",
+    "ANN102",
+    "ANN204",
+    # allow == True because pandas dataframes overload equality
+    "E712",
+]
+# first-party imports for sorting
+src = ["src"]
+fix = true
+show-fixes = true
+
+[tool.ruff.per-file-ignores]
+# test functions don't need return types
+"tests/*" = ["ANN201", "ANN202"]
+# main.py can have long lines
+"src/aec/main.py" = ["E501"]
+
+[tool.ruff.flake8-annotations]
+# allow *args: Any, **kwargs: Any
+allow-star-arg-any = true
