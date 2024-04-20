@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="product_usage_type_expense" model="product.usage_type">
+    <field name="name">Expense</field>
+    <field name="code">EXP</field>
+</record>
+
+<record id="product_usage_type_income" model="product.usage_type">
+    <field name="name">Income</field>
+    <field name="code">INC</field>
+</record>
+</odoo>

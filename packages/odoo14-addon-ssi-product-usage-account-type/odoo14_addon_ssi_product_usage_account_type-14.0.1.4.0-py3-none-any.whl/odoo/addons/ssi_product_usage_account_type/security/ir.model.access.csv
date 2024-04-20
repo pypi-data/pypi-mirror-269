@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_usage_type_configurator,product.usage_type - configurator,model_product_usage_type,product_usage_type_group,1,1,1,1
+access_product_usage_type_all,product.usage_type - all,model_product_usage_type,,1,0,0,0
+access_product_category_account_configurator,product.category.account - configurator,model_product_category_account,ssi_product.product_category_group,1,1,1,1
+access_product_category_account_all,product.category.account - all,model_product_category_account,,1,0,0,0
+access_product_template_account_configurator,product.template.account - configurator,model_product_template_account,ssi_product.product_configurator_group,1,1,1,1
+access_product_template_account_all,product.template.account - all,model_product_template_account,,1,0,0,0
+access_product_product_account_configurator,product.account - configurator,model_product_account,ssi_product.product_configurator_group,1,1,1,1
+access_product_product_account_all,product.account - all,model_product_account,,1,0,0,0
