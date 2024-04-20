@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "offish"
+authors = [
+  { name="offish", email="overutilization@gmail.com" },
+]
+description = "offish"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["offish"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["requests"]
+dynamic = ["version"]
+
+[project.urls]
+"Homepage" = "https://github.com/offish/offish"
+"Bug Tracker" = "https://github.com/offish/offish/issues"
+
+[tool.setuptools_scm]

@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: offish
+Version: 0.0.1
+Summary: offish
+Author-email: offish <overutilization@gmail.com>
+Project-URL: Homepage, https://github.com/offish/offish
+Project-URL: Bug Tracker, https://github.com/offish/offish/issues
+Keywords: offish
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# offish
+[![https://img.shields.io/pypi/dm/offish](https://pypi.org/project/offish/)]
+
+A small Python package with code I often reuse or find neat.
