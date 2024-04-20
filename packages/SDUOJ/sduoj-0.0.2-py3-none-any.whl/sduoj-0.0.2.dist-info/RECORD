@@ -1,0 +1,16 @@
+SDUOJ/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SDUOJ/__main__.py,sha256=d_fCjvLeb8MQyAD9iDQ5SiHa9NLAnkEl9ElkmdU8QAw,531
+SDUOJ/ojd.py,sha256=I3xedcYFKmVbivrYe0PMqSlJDpKI8sJVdiD70mQyhTE,4754
+SDUOJ/uploadAns.py,sha256=2QDpIW0Sot4_3YCLfETfDVhkcUKzGUqLQlRYXAggNGw,1958
+SDUOJ/oj/SDUOJ_Manager.py,sha256=lWnF2hYEQDeL1GF0Tl2U8DrIQmKTk4LKI364GnUvXOM,7848
+SDUOJ/oj/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SDUOJ/oj/entity.py,sha256=NXJikfYNbUbw1EQHYi7ZuPiYeu4Tqav8LD9hOQMXF0U,2235
+SDUOJ/utils/Authenticator.py,sha256=DbNoEJpnlDyfoa9mKxEiQpPcL71ZON17ntfFyt12T58,2118
+SDUOJ/utils/FileHandler.py,sha256=NcEPr0tQVIdY1EX8PU2IZI0JjsoovvYJYA32oAJMWAA,1058
+SDUOJ/utils/UserInputHandler.py,sha256=oP0ItSWFEGdIZdQvEFvry_NNDiMOyNxV0kjVxQq5gC0,1294
+SDUOJ/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SDUOJ/utils/config.py,sha256=beTzq1s1x-_lhTBc26k1__JskhAwG_OlODnVsoLzmZo,567
+sduoj-0.0.2.dist-info/METADATA,sha256=dZFV8xhjbfygpszrrmeF-Zpyr5dD1CitK0cIxBLfmDU,1544
+sduoj-0.0.2.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+sduoj-0.0.2.dist-info/licenses/LICENSE,sha256=ylN4F1VrykKHyE3Yv1yvxID82mwo21j3qKEc4C0Cmz8,1063
+sduoj-0.0.2.dist-info/RECORD,,
