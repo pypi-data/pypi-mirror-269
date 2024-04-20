@@ -1,0 +1,3 @@
+[console_scripts]
+RUN = mytot.main:RUN
+TASK = mytot.main:TASK
