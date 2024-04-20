@@ -1,0 +1,10 @@
+numerical_pde_solver/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numerical_pde_solver/euler.py,sha256=lfyL8fzKA8JbkszEorpOp1i6KdYcWUn2lXzgjALIk-s,1106
+numerical_pde_solver/milstein.py,sha256=ua2oX_2Tw3qK6WSl_1ldu_31YnG0kWW3gko2yeko4W0,1225
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_euler.py,sha256=e1kItl1QUhgZs8_ATRaxHJ1BfIfVwyW62yuVtPoP5QE,1044
+tests/test_milstein.py,sha256=Cm2_4MCR3doTEIPSQQWWrOvLbddXY2PmE6YYrXyczjc,1201
+numerical_pde_solver-0.1.4.dist-info/METADATA,sha256=hl9D3rWrV8zC9vDBdlriMXmlNG34-Q2l4ppm8Kf8zLQ,2233
+numerical_pde_solver-0.1.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+numerical_pde_solver-0.1.4.dist-info/top_level.txt,sha256=LI8Bdqfs4YNIp6n8BWBA6dHsvJRdLbRxBHULTnDmu7g,21
+numerical_pde_solver-0.1.4.dist-info/RECORD,,
