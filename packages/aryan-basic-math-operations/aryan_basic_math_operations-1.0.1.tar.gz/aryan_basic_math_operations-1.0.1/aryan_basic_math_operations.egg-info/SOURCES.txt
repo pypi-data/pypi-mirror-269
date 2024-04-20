@@ -1,0 +1,7 @@
+setup.py
+aryan_basic_math_operations.egg-info/PKG-INFO
+aryan_basic_math_operations.egg-info/SOURCES.txt
+aryan_basic_math_operations.egg-info/dependency_links.txt
+aryan_basic_math_operations.egg-info/top_level.txt
+basic_math_operations/__init__.py
+basic_math_operations/operations.py
