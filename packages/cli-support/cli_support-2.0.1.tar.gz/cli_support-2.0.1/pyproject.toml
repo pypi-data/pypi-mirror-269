@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "cli_support"
+version = "2.0.1"
+description = "Support component license information (CLI) files"
+authors = ["Thomas Graf <thomas.graf@siemens.com>"]
+license = "MIT"
+readme="Readme.md"
+include = ["LICENSE.md"]
+repository = "https://github.com/sw360/clipython"
+homepage = "https://github.com/sw360/clipython"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+colorama = "^0.4.3"
+flake8 = ">=3.9.2"
+pytest = ">=7.2.0"
+coverage = ">=6.5.0"
+mypy = "^1.8.0"
+isort = "^5.13.2"
+types-colorama = "^0.4.15.12"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.mypy]
+exclude = [
+    '/tests',
+]
+show_error_codes = true
+pretty = true
+
+warn_unreachable = true
+allow_redefinition = false
+
+### Strict mode ###
+warn_unused_configs         = true
+disallow_subclassing_any    = true
+disallow_any_generics       = true
+disallow_untyped_calls      = true
+disallow_untyped_defs       = true
+disallow_incomplete_defs    = true
+check_untyped_defs          = true
+disallow_untyped_decorators = true
+no_implicit_optional        = true
+warn_redundant_casts        = true
+warn_unused_ignores         = true
+no_implicit_reexport        = true
