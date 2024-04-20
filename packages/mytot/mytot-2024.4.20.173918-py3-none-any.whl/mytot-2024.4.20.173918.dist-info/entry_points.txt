@@ -1,0 +1,4 @@
+[console_scripts]
+KILL = mytot.main:KILL
+RUN = mytot.main:RUN
+TASK = mytot.main:TASK
