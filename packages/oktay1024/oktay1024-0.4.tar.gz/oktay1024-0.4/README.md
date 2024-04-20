@@ -1,0 +1,36 @@
+
+```
+# Oktay1024
+
+Oktay1024 is a Python package developed for blacktea024 to integrate it with PyPI.
+
+## Installation
+
+You can install Oktay1024 using pip:
+
+```
+pip install oktay1024
+```
+
+## Usage
+
+```python
+import oktay1024
+
+# Example usage here
+```
+
+## Dependencies
+
+Oktay1024 depends on the following:
+- pip
+
+## Author
+
+flechemano
+
+## License
+
+This project is licensed under the MIT License.
+```
+
