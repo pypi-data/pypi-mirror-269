@@ -1,0 +1,10 @@
+Berechnung von Gleichstrommotoren.ipynb,sha256=tA1JoEet9ANW4kDbwTPMlT1nv3sMiGDEm-2LIxgUylo,15021
+motorcalc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+motorcalc/dcmotor.py,sha256=Whv3e984vrOzFr51L5sCDoT65RYaKvepX0m4fN5iaUY,15276
+motorcalc/dcmotorexport.py,sha256=lsnWQYALVGZL3kN9aLvlLp_HhwRHQp6VQuT_K4u77ac,5396
+motorcalc/dcmotorplot.py,sha256=OxW0oAc4Xf9iTDjsVfW3dM5Z9cgb0uu54qTQj_OIyBQ,5367
+motorcalc/load_dynamics.py,sha256=8QlmWUW4Qxvwr-j8DY_ulU2sg8Yf_acDjkxw4ttzDL8,4072
+motorcalc-0.2.0.dist-info/LICENSE.md,sha256=qxD27arFQM841y1FRuKi1yKIsLzhCzKWYttBotvE8Ps,1073
+motorcalc-0.2.0.dist-info/METADATA,sha256=_egwA4GYhCIvjCqsz7jKHjn2wdnSopXyjQHG0e8414U,6140
+motorcalc-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+motorcalc-0.2.0.dist-info/RECORD,,
