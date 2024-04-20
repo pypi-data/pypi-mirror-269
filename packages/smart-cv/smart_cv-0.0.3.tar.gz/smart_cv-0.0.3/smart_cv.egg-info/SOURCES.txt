@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+smart_cv/VectorDB.py
+smart_cv/__init__.py
+smart_cv/base.py
+smart_cv/interface.py
+smart_cv/resume_parser.py
+smart_cv/st_interface.py
+smart_cv/util.py
+smart_cv.egg-info/PKG-INFO
+smart_cv.egg-info/SOURCES.txt
+smart_cv.egg-info/dependency_links.txt
+smart_cv.egg-info/not-zip-safe
+smart_cv.egg-info/requires.txt
+smart_cv.egg-info/top_level.txt
