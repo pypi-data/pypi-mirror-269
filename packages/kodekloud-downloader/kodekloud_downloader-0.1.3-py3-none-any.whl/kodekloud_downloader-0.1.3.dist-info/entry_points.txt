@@ -1,0 +1,3 @@
+[console_scripts]
+kodekloud=kodekloud_downloader.cli:kodekloud
+
