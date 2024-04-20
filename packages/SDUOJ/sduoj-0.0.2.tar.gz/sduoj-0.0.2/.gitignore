@@ -1,0 +1,9 @@
+# editor settings for vscode
+.vscode/
+__pycache__/
+*.xml
+*.pyc
+*.json
+```
+.venv
+dist/
