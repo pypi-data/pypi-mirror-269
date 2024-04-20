@@ -1,0 +1,151 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    # Required to support dynmamic version
+    "girder~=3.1.20",
+    "girder-hashsum-download~=3.1.20",
+    "html-sanitizer>=2.4.1",
+    'tomli; python_version<"3.11"',
+    "versioneer",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slicer-package-manager"
+description = "Manage Slicer application and extension packages."
+authors = [
+    {name = "Pierre Assemat", email = "pierre.assemat@kitware.com"},
+    {name = "Jean-Christophe Fillion-Robin", email = "jchris.fillionr@kitware.com"},
+]
+maintainers = [
+    {name = "Jean-Christophe Fillion-Robin", email = "jchris.fillionr@kitware.com"},
+]
+readme = "README.rst"
+keywords = ["girder-plugin", "slicer_package_manager"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.8"
+dynamic = ["version"]
+dependencies = [
+    "girder~=3.1.20",
+    "girder-hashsum-download~=3.1.20",
+    "html-sanitizer>=2.4.1",
+]
+
+[project.entry-points."girder.plugin"]
+slicer_package_manager = "slicer_package_manager:GirderPlugin"
+
+[project.optional-dependencies]
+test = [
+    "pytest~=7.4.0", # See https://github.com/TvoroG/pytest-lazy-fixture/issues/63
+    "pytest-girder~=3.1.20",
+    "pytest-lazy-fixture",
+    "tox",
+    "virtualenv",
+    # lint
+    "ruff",
+]
+
+[project.urls]
+Documentation = "https://slicer-package-manager.readthedocs.io"
+Source = "https://github.com/girder/slicer_package_manager"
+
+[tool.setuptools]
+packages = [
+    "slicer_package_manager",
+    "slicer_package_manager.api",
+    "slicer_package_manager.models",
+    "tests",
+]
+py-modules = [
+    "slicer_package_manager._version",
+]
+zip-safe = false
+
+[tool.setuptools.dynamic]
+version = {attr = "slicer_package_manager.__version__"}
+
+[tool.versioneer]
+VCS = "git"
+versionfile_source = "slicer_package_manager/_version.py"
+versionfile_build = "slicer_package_manager/_version.py"
+style = "pep440-post"
+tag_prefix = ""
+
+[tool.ruff]
+select = [
+  "A",           # flake8-builtins
+  "ARG",         # flake8-unused-arguments
+  "B",           # flake8-bugbear
+  "BLE",         # flake8-blind-except
+  "C4",          # flake8-comprehensions
+  "COM",         # flake8-commas
+  "D",           # pydocstyle (aka flake8-docstrings)
+  "E", "F", "W", # flake8
+  "EXE",         # flake8-executable
+  "EM",          # flake8-errmsg
+  "G",           # flake8-logging-format
+  "ICN",         # flake8-import-conventions
+  "ISC",         # flake8-implicit-str-concat
+  "N",           # pep8-naming
+  "PIE",         # flake8-pie
+  "PGH",         # pygrep-hooks
+  "PL",          # pylint
+  "PT",          # flake8-pytest-style
+  "Q",           # flake8-quotes
+  "RSE",         # flake8-raise
+  "RUF",         # Ruff-specific
+  "S",           # flake8-bandit
+  "SIM",         # flake8-simplify
+  "SLF",         # flake8-self
+  "YTT",         # flake8-2020
+]
+extend-exclude = [
+  "*/_vendor/bson/*.py",
+  "slicer_package_manager/_version.py",
+]
+force-exclude = true
+extend-ignore = [
+  "B904",  # raise-without-from-inside-except
+  "D10",  # Missing docstring in *
+  "D200",  # One-line docstring should fit on one line with quotes (fits-on-one-line)
+  "D203",  # 1 blank line required before class docstring
+  "D205",  # 1 blank line required between summary line and description
+  "D211",  # No blank lines allowed before class docstring
+  "D212",  # Multi-line docstring summary should start at the first line
+  "D213",  # Multi-line docstring summary should start at the second line
+  "D400",  # First line should end with a period
+  "D401",  # First line should be in imperative mood; try rephrasing
+  "D415",  # First line should end with a period, question mark, or exclamation point
+  "N802",  # Function name should be lowercase.
+  "N803",  # Argument name should be lowercase.
+  "N806",  # Variable in function should be lowercase.
+  "N816",  # mixedCase variable in global scope
+  "PLR0912",  # Too many branches
+  "PLR0913",  # Too many arguments to function call
+  "PLR2004",  # agic value used in comparison, consider replacing 2 with a constant variable
+  "PLR5501",  # Consider using `elif` instead of `else` then `if` to remove one indentation level
+  "Q000",  # Remove bad quotes (bad-quotes-inline-string)
+  "Q003",  # Change outer quotes to avoid escaping inner quotes
+  "S101",  # assert
+  "S105",  # hardcoded-password-string
+  "S310",  # Audit URL open for permitted schemes. Allowing use of `file:` or custom schemes is often unexpected.
+]
+target-version = "py38"
+line-length = 120
+
+[tool.ruff.flake8-builtins]
+builtins-ignorelist = ["copyright", "license"]
+
+[tool.ruff.flake8-pytest-style]
+fixture-parentheses = false
+
+[tool.ruff.flake8-unused-arguments]
+ignore-variadic-names = true
+
+[tool.ruff.per-file-ignores]
+"python_client/slicer_package_manager_client/__init__.py" = ["A002"]  # Argument `all` is shadowing a python builtin
