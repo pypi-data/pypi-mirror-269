@@ -1,0 +1,12 @@
+#word
+WORD=0x0101
+LETTER=0x0102#botton func
+SENTENCE=0x0105
+TEXT=0x0108
+
+LONG_TEXT=0x01ff#滑动
+#pic
+PIC=0x0201
+BOTTON=0x0202
+#draw things
+DRAW_BOARD=0x0301
