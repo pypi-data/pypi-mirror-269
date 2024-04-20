@@ -1,0 +1,3 @@
+[console_scripts]
+sierra=sierra.__cli__:main
+
