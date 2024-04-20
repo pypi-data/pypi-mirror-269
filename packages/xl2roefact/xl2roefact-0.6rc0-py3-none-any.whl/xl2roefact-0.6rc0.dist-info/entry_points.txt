@@ -1,0 +1,3 @@
+[console_scripts]
+xl2roefact = xl2roefact.app_cli:main
+
