@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+flake8_one_dot.py
+setup.cfg
+setup.py
+flake8_one_dot.egg-info/PKG-INFO
+flake8_one_dot.egg-info/SOURCES.txt
+flake8_one_dot.egg-info/dependency_links.txt
+flake8_one_dot.egg-info/entry_points.txt
+flake8_one_dot.egg-info/requires.txt
+flake8_one_dot.egg-info/top_level.txt
