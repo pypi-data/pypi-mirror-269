@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: mfs-styletts2
+Version: 1.0.0
+Summary: Unofficial pip package for StyleTTS 2
+Home-page: https://github.com/ml-for-speech/mfs-styletts2
+Author: ML for Speech
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: SoundFile
+Requires-Dist: torchaudio
+Requires-Dist: munch
+Requires-Dist: torch
+Requires-Dist: pydub
+Requires-Dist: pyyaml
+Requires-Dist: librosa
+Requires-Dist: matplotlib
+Requires-Dist: accelerate
+Requires-Dist: transformers
+Requires-Dist: einops
+Requires-Dist: einops-exts
+Requires-Dist: tqdm
+Requires-Dist: typing
+Requires-Dist: typing-extensions
+Requires-Dist: gradio
+Requires-Dist: openphonemizer
+Requires-Dist: cached-path
+Requires-Dist: txtsplit
+Requires-Dist: flask-cors
+
+# Packaged StyleTTS 2
+
+Packaged [StyleTTS 2](https://github.com/yl4579/StyleTTS2). Not intended for public use.
+
+## License
+
+MIT
