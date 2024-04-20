@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: numerical-pde-solver
+Version: 0.1.3
+Summary: A small package for solving PDEs using numerical methods
+Home-page: https://github.com/AIM-IT4/numerical-pde-solver
+Author: Amit Kumar Jha
+Author-email: jha.8@alumni.iitj.ac.in
+Project-URL: Bug Tracker, https://github.com/AIM-IT4/numerical-pde-solver/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# Numerical PDE Solver
+
+## Overview
+This package provides numerical solutions to Partial Differential Equations (PDEs) using Euler and Milstein methods, tailored for use in financial mathematics and other fields requiring the numerical solution of stochastic differential equations.
+
+## Installation
+Install this package by running:
+```bash
+pip install numerical-pde-solver
