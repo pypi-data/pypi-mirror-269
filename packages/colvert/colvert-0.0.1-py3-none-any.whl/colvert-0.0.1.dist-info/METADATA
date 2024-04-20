@@ -1,0 +1,87 @@
+Metadata-Version: 2.3
+Name: colvert
+Version: 0.0.1
+Summary: colvert is a Frontend for DuckDB a fast and lightweight in-memory database designed for analytical queries. It's design to be a simple and easy to use tool for data analysis and visualization.
+Project-URL: Documentation, https://github.com/julien-duponchelle/colvert#readme
+Project-URL: Issues, https://github.com/julien-duponchelle/colvert/issues
+Project-URL: Source, https://github.com/julien-duponchelle/colvert
+Author-email: Julien Duponchelle <julien@duponchelle.info>
+License-Expression: Apache-2.0
+License-File: LICENSE.txt
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: aiohttp-jinja2>=1.5.1
+Requires-Dist: aiohttp>=3.8.5
+Requires-Dist: click>=8.1.7
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: duckdb>=0.10.1
+Requires-Dist: pandas>=2.2.1
+Requires-Dist: plotly>=5.20.0
+Requires-Dist: rocher>=0.44.0
+Description-Content-Type: text/markdown
+
+# Colvert
+
+[![PyPI - Version](https://img.shields.io/pypi/v/colvert.svg)](https://pypi.org/project/colvert)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/colvert.svg)](https://pypi.org/project/colvert)
+
+![Logo](colvert/ui/static/logo.png)
+
+-----
+
+**Table of Contents**
+
+- [Colvert](#colvert)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [FAQ](#faq)
+    - [What does Colvert mean?](#what-does-colvert-mean)
+
+**THIS PROJECT IS IN EARLY DEVELOPMENT**
+
+`colvert` is a Frontend for DuckDB a fast and lightweight in-memory database designed for analytical queries. It's design to be a simple and easy to use tool for data analysis and visualization. 
+
+It's support loading data from CSV, Parquet, and JSON files.
+
+![Table screenshot](readme/table.png)
+![Pie chart screenshot](readme/pie.png)
+
+
+## Installation
+
+We recommend installing `colvert` using `pipx`:
+```console
+pipx install colvert
+```
+
+Pipx is a tool to install Python applications in isolated environments. It's a great way to install Python applications without cluttering your system Python environment.
+
+## Usage
+
+```console
+colvert  open samples/test.csv 
+```
+
+This will detect the type of the file and open it in a new browser tab.
+
+
+## License
+
+`colvert` is distributed under the terms of the Apache 2.0 license.
+
+## FAQ
+
+### What does Colvert mean?
+
+Colvert is the french name for the Mallard Duck. It's a reference to DuckDB the database engine used by Colvert and the fact the author is French and born in the region of France where Mallard Duck are important.
+
+https://en.wikipedia.org/wiki/Mallard
