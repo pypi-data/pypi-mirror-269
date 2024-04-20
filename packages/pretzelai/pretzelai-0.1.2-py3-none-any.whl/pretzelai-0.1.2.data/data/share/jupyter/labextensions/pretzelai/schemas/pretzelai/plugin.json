@@ -1,0 +1,14 @@
+{
+  "title": "Pretzel: The AI extension for JupyterLab",
+  "description": "Settings for the Pretzel extension.",
+  "jupyter.lab.shortcuts": [],
+  "type": "object",
+  "properties": {
+    "apiKey": {
+      "type": "string",
+      "title": "OpenAI API Key",
+      "default": ""
+    }
+  },
+  "additionalProperties": false
+}
