@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: webllama
+Version: 0.0.1rc1
+Summary: Llama-powered agents for automatic web browsing
+Home-page: https://github.com/McGill-NLP/webllama
+Author: Xing Han Lù
+Author-email: webllama@googlegroups.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: all
+License-File: LICENSE
+
+# webllama

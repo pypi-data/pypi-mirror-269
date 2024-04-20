@@ -1,0 +1,8 @@
+scipy
+numpy
+
+[all]
+black
+
+[dev]
+black

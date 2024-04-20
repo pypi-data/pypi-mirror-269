@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+webllama/__init__.py
+webllama/version.py
+webllama.egg-info/PKG-INFO
+webllama.egg-info/SOURCES.txt
+webllama.egg-info/dependency_links.txt
+webllama.egg-info/requires.txt
+webllama.egg-info/top_level.txt
