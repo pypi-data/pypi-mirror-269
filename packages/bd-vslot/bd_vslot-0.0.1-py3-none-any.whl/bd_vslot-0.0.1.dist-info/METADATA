@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: bd-vslot
+Version: 0.0.1
+Summary: A library of V-Slot linear rail components for build123d
+Author-email: James Keal <james@keal.au>
+Project-URL: Github, https://github.com/keeeal/bd-vslot
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: build123d >=0.5.0
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: sphinx ; extra == 'docs'
+
+# bd-vslot
+
+[![pypi](https://img.shields.io/pypi/v/bd-vslot)](https://pypi.org/project/bd-vslot/)
+[![docs](https://readthedocs.org/projects/bd-vslot/badge/?version=latest)](https://bd-vslot.readthedocs.io/)
+[![tests](https://github.com/keeeal/bd-vslot/actions/workflows/tests.yaml/badge.svg)](https://github.com/keeeal/bd-vslot/actions/workflows/tests.yaml)
+
+A library of V-Slot linear rail components for [Build123d](https://build123d.readthedocs.io/).
