@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: dslog
+Version: 0.1.0
+Summary: Dead-simple logging: just function composition
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/REPO.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Dslog
+
+> Dead-simple logging: just function composition
+
+```python
+from dslog import Logger
+
+logger = Logger.of(print) \
+  .limit('WARNING') \
+  .format(lambda *objs, level, (f'[green][{level}][/]', *objs))
+
+logger('My message', ..., level='INFO')
+# doesn't print anything
+logger('Oops!', { 'more': 'details' }, level='WARNING')
+# [WARNING] Oops! { 'more', 'details' }     ([WARNING] in green)
+```
