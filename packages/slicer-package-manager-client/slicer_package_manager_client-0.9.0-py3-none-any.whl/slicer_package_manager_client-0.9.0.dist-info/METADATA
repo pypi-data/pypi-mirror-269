@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: slicer-package-manager-client
+Version: 0.9.0
+Summary: Python client for interacting with the Slicer package manager endpoint.
+Author-email: Pierre Assemat <pierre.assemat@kitware.com>, Jean-Christophe Fillion-Robin <jchris.fillionr@kitware.com>
+Maintainer-email: Jean-Christophe Fillion-Robin <jchris.fillionr@kitware.com>
+Project-URL: Documentation, https://slicer-package-manager.readthedocs.io/en/latest/commands_shell.html#slicer-package-manager-client
+Project-URL: Source, https://github.com/girder/slicer_package_manager/tree/main/python_client
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Requires-Dist: click >=6.7
+Requires-Dist: girder-client ~=3.1.20
+Requires-Dist: tabulate
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-vcr ; extra == 'test'
+Requires-Dist: pytest-girder ~=3.1.20 ; extra == 'test'
+
+Slicer package manager Python Client
+====================================
+
+Python client for managing Slicer application and extension packages
+organized on a server with the corresponding Girder plugin installed.
+
+The documentation is accessible at https://slicer-package-manager.readthedocs.io/en/latest/commands_shell.html#slicer-package-manager-client.
+
+Installation
+------------
+
+Install with::
+
+    $ pip install slicer-package-manager-client
+
+or::
+
+    $ git clone https://github.com/girder/slicer_package_manager.git
+    $ cd slicer_package_manager/python_client
+    $ pip install -e .
+
+for development.
+
+Resources
+---------
+
+To learn more about the Slicer package manager server and associated client, check out the following resources.
+
+* https://slicer-package-manager.readthedocs.io/en/latest/commands_shell.html#slicer-package-manager-client
+* https://slicer-package-manager.readthedocs.io
+
+License
+-------
+
+This software is licensed under the terms of the `Apache Licence Version 2.0 <https://github.com/girder/slicer_package_manager/blob/main/LICENSE>`_.

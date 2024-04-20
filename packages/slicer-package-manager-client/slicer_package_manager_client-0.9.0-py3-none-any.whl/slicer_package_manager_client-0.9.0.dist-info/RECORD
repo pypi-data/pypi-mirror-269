@@ -1,0 +1,14 @@
+slicer_package_manager_client/__init__.py,sha256=0tgCjM6SirNdvH2ihHPpxrPh5a23C6luAgaNdZHBL1U,26004
+slicer_package_manager_client/__main__.py,sha256=3tBtRKxlbCXPraePHVQyVhBTE5g2gfPq-TFbQ74HdcA,70
+slicer_package_manager_client/cli.py,sha256=qq-qsceeaYkcoj3gK6LGMxegFHwmQqX356Aaa0Ciepg,26208
+slicer_package_manager_client/_vendor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slicer_package_manager_client/_vendor/bson/__init__.py,sha256=YKCEzw047hCSv0NnB-_Ek3Hg9NaqNJtFqpI618FG-Nc,631
+slicer_package_manager_client/_vendor/bson/errors.py,sha256=AkDIISytky_6NFP-U2ecdXooIr53yt0ZiAT42DmuoI8,1159
+slicer_package_manager_client/_vendor/bson/objectid.py,sha256=iorhucPjknyMy6_tHzGwwnBgJEFEmvJTnUYrxvtl8xc,9397
+slicer_package_manager_client/_vendor/bson/py3compat.py,sha256=nC6q-RwR7iCHN3NFVoiwO3s3Y6GeKe_qQAcIL4Gc9J4,2815
+slicer_package_manager_client/_vendor/bson/tz_util.py,sha256=Zy_bA8x2YWrTbIx08HQYYJVghKKwChcCkO4VSBwaNVU,1518
+slicer_package_manager_client-0.9.0.dist-info/METADATA,sha256=28eGMZxCmpTnA3wKbA9lLqss5ArSIUygHhkzQ7O-q_4,2153
+slicer_package_manager_client-0.9.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+slicer_package_manager_client-0.9.0.dist-info/entry_points.txt,sha256=TQHPamGmDF05J3l-wCVPxZ-qKc1I8B_vZr8aJ7XPk6o,89
+slicer_package_manager_client-0.9.0.dist-info/top_level.txt,sha256=NfrBAOwBe5meRiZ1O0HfNxtbBwh7fihB6GVcDEf8N2g,30
+slicer_package_manager_client-0.9.0.dist-info/RECORD,,
