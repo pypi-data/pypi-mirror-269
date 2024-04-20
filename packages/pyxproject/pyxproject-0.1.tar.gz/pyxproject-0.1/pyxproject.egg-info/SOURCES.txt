@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+pyxproject/__init__.py
+pyxproject/x.py
+pyxproject.egg-info/PKG-INFO
+pyxproject.egg-info/SOURCES.txt
+pyxproject.egg-info/dependency_links.txt
+pyxproject.egg-info/top_level.txt
