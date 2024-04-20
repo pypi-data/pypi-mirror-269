@@ -1,0 +1,3 @@
+[console_scripts]
+newdao-hello-tea = newdao_hello_tea.main:print_hello_tea
+
