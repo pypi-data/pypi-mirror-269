@@ -1,0 +1,14 @@
+pytask_r/__init__.py,sha256=N-23_hOE4ncuXUEj4O5BmsELQRxqtOP5RgplGmDXaAw,324
+pytask_r/_version.py,sha256=H6xAc33bJwmO0oYU-O7_wWInmGAifNGi6CO6khT0G1g,411
+pytask_r/collect.py,sha256=q6Q2L9crLgrqDomvLfBodubw722KxirCuaiIcQaxgBk,5875
+pytask_r/config.py,sha256=nKUyO8SQwQcHyC8qcs29PPW8aaevzjYtlCb1kE9fQcI,1104
+pytask_r/execute.py,sha256=w1J68TgFkporZJlKVTzs-9dh_pMvbG33cliMXq0hxW0,1946
+pytask_r/plugin.py,sha256=adxO0ia5laxO-rCjoD1euOI8YQLwAYeRNj5ERN5XLQ8,474
+pytask_r/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytask_r/serialization.py,sha256=nyRL6sWbt4dQvPic1DU2n6Rw73esjUKpEPraqknlkXU,1899
+pytask_r/shared.py,sha256=cAVhoL3OYy5bv3DkxPE-lhwTlzoJNzJAmF82wONn6JE,1814
+pytask_r-0.4.1.dist-info/METADATA,sha256=bu9B7rncrNlEva3leq4KrEAqY2zEigVzE0uvBRg3TPU,7971
+pytask_r-0.4.1.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+pytask_r-0.4.1.dist-info/entry_points.txt,sha256=U0agXXS-kj5SAlp93vrIi6r9gfNDWn-j8b9KVVmp4ww,36
+pytask_r-0.4.1.dist-info/licenses/LICENSE,sha256=RxB_V9PwkqN54TuemXxwTa5K9yHQCbD-sgg1pjmYSz0,1052
+pytask_r-0.4.1.dist-info/RECORD,,
