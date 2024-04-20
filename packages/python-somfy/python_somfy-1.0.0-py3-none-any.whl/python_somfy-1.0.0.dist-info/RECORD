@@ -1,0 +1,13 @@
+somfy/__init__.py,sha256=IOyZ2rC_MsJDPcQSVaqXY596baaXMPl8pPgR2eJ62o8,179
+somfy/connector.py,sha256=Mm6-hUvbBnKn0sytwQd7QDYHKOqfmdlpIasIO1CBZc0,10555
+somfy/enumutils.py,sha256=_WwKCeERhrd0KT9oKPfU0Vvk4V2dGmAouYqnsM34CxE,636
+somfy/messages.py,sha256=p94eFqyXph1Vwue8-y5K0fy640KXXDzzE4x8b0ix588,9505
+somfy/payloads.py,sha256=zMmLvHBHgqhYxY9Wip2hv1_LUEe7_gZS5DMDr9HLicQ,21577
+somfy/py.typed,sha256=8IgPMH5TzP3ixMte_ch0xto88A32aAAZpZ-sF1gQAV4,2
+somfy/recognizer.py,sha256=dKCt0CLk9OH9ZdvhcpTQRMJlVJFCtjEfeOJb9V-MzVE,3283
+somfy/serial.py,sha256=efBOmitiwF43r2mxlSjSfpVgbNsGLjYeh11tpQA0O3U,1379
+python_somfy-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+python_somfy-1.0.0.dist-info/METADATA,sha256=5vEB2JqURqOCDgeUVWE9tXkYqUa_uRiGKxt_gDmV3RY,6050
+python_somfy-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+python_somfy-1.0.0.dist-info/top_level.txt,sha256=U4l4ODXzsil4UKOuXYFjvA2qamjlA6SlNwlKZILIx5c,6
+python_somfy-1.0.0.dist-info/RECORD,,
