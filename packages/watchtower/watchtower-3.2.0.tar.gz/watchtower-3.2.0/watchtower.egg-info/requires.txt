@@ -1,0 +1,9 @@
+boto3<2,>=1.9.253
+
+[tests]
+pyyaml
+ruff
+coverage
+build
+wheel
+mypy

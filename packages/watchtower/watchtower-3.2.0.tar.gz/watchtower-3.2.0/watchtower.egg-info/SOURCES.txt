@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+test/test.py
+watchtower/__init__.py
+watchtower/py.typed
+watchtower.egg-info/PKG-INFO
+watchtower.egg-info/SOURCES.txt
+watchtower.egg-info/dependency_links.txt
+watchtower.egg-info/requires.txt
+watchtower.egg-info/top_level.txt
