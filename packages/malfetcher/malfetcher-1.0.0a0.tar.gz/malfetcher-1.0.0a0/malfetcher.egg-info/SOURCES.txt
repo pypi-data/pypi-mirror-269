@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+malfetcher/__init__.py
+malfetcher/mal_config_utils.py
+malfetcher/mal_fetcher.py
+malfetcher/utils.py
+malfetcher.egg-info/PKG-INFO
+malfetcher.egg-info/SOURCES.txt
+malfetcher.egg-info/dependency_links.txt
+malfetcher.egg-info/requires.txt
+malfetcher.egg-info/top_level.txt
