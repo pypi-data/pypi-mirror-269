@@ -1,0 +1,15 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "Jupyter Contents",
+  "description": "Jupyter Contents settings.",
+  "type": "object",
+  "properties": {
+    "showInLauncher": {
+      "title": "Show Jupyter Contents in the launcher",
+      "description": "Show Jupyter Contents in the launcher",
+      "default": false,
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}
