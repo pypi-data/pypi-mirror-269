@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: aiba_hello_world
+Version: 0.2
+Summary: Hello world test package for pypi
+Home-page: https://github.com/yourusername/your_package
+Author: Aiba B
+Author-email: test@test.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Hello World Package
+
+This Python package provides a simple demonstration of a "Hello World" program, designed to illustrate how to create and publish a Python package.
+
+## Installation
+
+Install this package using pip:
+
+```bash
+pip install aiba-hello-world
+```
