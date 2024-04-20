@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: newdao-hello-tea
+Version: 2.0.0
+Summary: Prints "hello tea" using NumPy
+Home-page: https://github.com/yourusername/newdao-hello-tea
+Author: Newdao
+Author-email: l0dx16@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# Hello Tea
+
+This is a Python package that prints "hello tea" using NumPy.
+
+
+
