@@ -1,0 +1,11 @@
+LICENSE
+PYPI-README.md
+README.md
+pyproject.toml
+aa_fastapi_template.egg-info/PKG-INFO
+aa_fastapi_template.egg-info/SOURCES.txt
+aa_fastapi_template.egg-info/dependency_links.txt
+aa_fastapi_template.egg-info/requires.txt
+aa_fastapi_template.egg-info/top_level.txt
+fastapi_template/__init__.py
+tests/test_pyproject_toml.py
