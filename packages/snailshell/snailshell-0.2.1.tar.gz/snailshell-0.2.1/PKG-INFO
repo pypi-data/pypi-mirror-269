@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: snailshell
+Version: 0.2.1
+Summary: 싱크대 자동 수전 절수 시스템
+Author-email: Janghoo Lee <dlwkdgn1@naver.com>, Subin Jang <subinaksl@naver.com>, Seokwoo Ahn <patrick0503@naver.com>, Dahyun Kim <builtforlove@naver.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: PyYAML
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: torchvision
+Requires-Dist: transformers
+Requires-Dist: opencv-python
+Requires-Dist: pyserial
+Requires-Dist: flit ; extra == "dev"
+Requires-Dist: pylint ; extra == "dev"
+Requires-Dist: yapf ; extra == "dev"
+Requires-Dist: python-dotenv ; extra == "dev"
+Requires-Dist: requests ; extra == "dev"
+Provides-Extra: dev
+
+# Snailshell for RPi
+
+![red-snail](docs/red-snail.png)
+
+## 필요 준비물
+
+- 릴레이
+- 아두이노 우노보드
+- 솔레노이드 밸브
+- 라즈베리파이 카메라
+- 라즈베리파이 > 4B+
+- 라즈비안 OS **64 Bit**
+
+## 구성도
+
+`TODO`
+
+## 사용 방법
+
+`TODO`
+
+## 라즈베리파이 세팅
+
+### 한글 설정
+
+```bash
+sudo apt-get install -y fonts-unfonts-core ibus ibus-hangul
+sudo reboot
+```
+
+## 개발 문서
+
+[Github repository](https://github.com/slink-to-unlock/rpi-snailshell)의 [docs/README-dev](docs/README-dev.md) 참고
+
