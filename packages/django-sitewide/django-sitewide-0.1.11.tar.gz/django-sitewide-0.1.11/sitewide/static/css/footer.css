@@ -1,0 +1,16 @@
+footer {
+    background: var(--footer-bg);
+    min-height: var(--footer-min-height);
+    padding-bottom: var(--mgns);
+    padding-top: var(--mgns);
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+/* Mobile Devices, Phones */
+
+@media screen and (max-width: 480px) {
+
+}
