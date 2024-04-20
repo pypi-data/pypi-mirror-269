@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/BookDB.egg-info/PKG-INFO
+src/BookDB.egg-info/SOURCES.txt
+src/BookDB.egg-info/dependency_links.txt
+src/BookDB.egg-info/top_level.txt
+src/bookdb/__init__.py
+src/bookdb/core.py
