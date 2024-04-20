@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: bleat
+Version: 0.0.1
+Summary: A CLI chatbot with Llama 3
+Project-URL: homepage, https://github.com/mhasanbulli/bleat
+Keywords: llama,command line,cli
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: build ~=1.0 ; extra == 'dev'
+Requires-Dist: pre-commit ~=3.5 ; extra == 'dev'
+Requires-Dist: pytest ~=8.0 ; extra == 'dev'
+Requires-Dist: ruff ~=0.4 ; extra == 'dev'
+Requires-Dist: twine ~=5.0 ; extra == 'dev'
+
+# Bleat - A CLI Chatbot with Llama 3
