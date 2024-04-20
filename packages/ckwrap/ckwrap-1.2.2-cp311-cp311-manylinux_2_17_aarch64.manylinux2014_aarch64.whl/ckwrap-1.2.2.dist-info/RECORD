@@ -1,0 +1,11 @@
+_ckwrap.cpython-311-aarch64-linux-gnu.so,sha256=K2wDgGUSnZVqrHlySWwyST5p8P7KvVzRUs2eaEfd1O8,322728
+ckwrap-1.2.2.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+ckwrap-1.2.2.dist-info/RECORD,,
+ckwrap-1.2.2.dist-info/top_level.txt,sha256=rz7_VuVX8xHp5oQUK7fuzwFp1LmsaoI9QA9bUg0YGz8,15
+ckwrap-1.2.2.dist-info/WHEEL,sha256=ed3MsZSfP7WA4bqDh80vpiM6Sl3rlBm19tmC2fNyJxY,154
+ckwrap-1.2.2.dist-info/METADATA,sha256=GDgUC6hk1ghcjcJD6v8AhhjM8wTx7Axz0Jf_MWlr2dM,9673
+ckwrap/result.py,sha256=aNqCxVwyanFMzNS3WiuXpc6rwYNYQZtnGJIcKRVqJ4E,1027
+ckwrap/__init__.py,sha256=6CvzbXRx28FRyX_zfWBxBy7htpfMj2igdwEAqFvPmdI,47
+ckwrap/_ckwrap.cpp,sha256=YgjhEBcDpWbV_pMuXaFi9J5IQYZ-2iTYxrQP9d-2xps,1069611
+ckwrap/ckwrap.py,sha256=SkQBUzArzjRai97sHRGAI09HE-AH5wqnF23a1HR_KuQ,3854
+ckwrap/_ckwrap.pyx,sha256=GWl_ZZXx6LuCw2zDaW8YowaBuRY1UtJp6lZsDeIhwxQ,1589
