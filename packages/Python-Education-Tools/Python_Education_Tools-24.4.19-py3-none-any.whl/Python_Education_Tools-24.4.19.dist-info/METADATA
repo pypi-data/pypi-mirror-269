@@ -1,0 +1,201 @@
+Metadata-Version: 2.1
+Name: Python_Education_Tools
+Version: 24.4.19
+Summary: Python Education Tools for Teaching
+Home-page: https://github.com/liluqun
+Author: Prof.Luqun Li
+Author-email: liluqun@gmail.com
+Project-URL: Bug Tracker, https://github.com/liluqun
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: pyttsx3
+Requires-Dist: openpyxl
+Requires-Dist: jieba
+Requires-Dist: requests-html
+Requires-Dist: pydub
+Requires-Dist: seaborn
+Requires-Dist: xlsxwriter
+Requires-Dist: importlib-metadata ; python_version > "3.5"
+
+<img src="https://imgservice.suning.cn/uimg1/b2c/image/gIH3lXgAHfqhSFy_QvLmpQ.jpg_800w_800h_4e" alt="Python与数据分析及可视化" style="zoom:25%;" />
+
+# Prof.Li's Python Education Tools
+
+###### Author: 道法自然  lilluqun@gmail.com success@shnu.edu.cn
+
+### **模块安装：pip install -U python-education-tools**
+
+* Python Education Tools模块为教材配套工具。该模块提供了教学相关代码工具、数据生成工具，以及所有教学案例等。
+* 模块简称“pet工具”。取Python Education Tools 首字母的缩写pet（英文意思：宠物），希望该工具成为大家学习的宠物！。
+* 所有工具包的根目录是pet。模块安装后对应的安装包为 pet.datasets.* 、pet.util.*等。
+* 模块安装后，可使用一行Python代码获取本书教学案例：import pet.textbook1.codes ，即可将教学案例下载到Windows用户桌面。
+* 其他教学资源可以参见GitHub：https://github.com/liluqun。
+* 模块由作者Prof.Luqun Li团队自主开发 。作者会对模块不断更新，确保为读者提供最佳的代码工具、教学案例与服务。
+* 如果您有好的建议，请发邮件到liluqun@gmail.com联系我。
+
+![hah](https://tse1-mm.cn.bing.net/th/id/OIP-C.1WzofyXU4XlVG1soFYMmpgHaEc?w=273&h=180&c=7&r=0&o=5&dpr=2&pid=1.7)
+
+------
+
+# Python Education Tools 相关功能介绍：
+
+## 1.提供“编程之道”论述。趣谈编程之道（运行以下1行Python代码）：
+
+```
+  import pet.this
+```
+
+​    与“晦涩难懂的”Python编程之禅import this对应，本模块从中国传统文化，心，术，道三个层次，引用古文阐述编程之道。请大家自己体会，道法自然，道不简则理不明！
+
+------
+
+## 2.提供教材配套案例下载。
+
+教材配套的案例下载（运行以下1行Python代码）：
+windows 用户直接在操作系统终端输入pet命令即可,如：c:pet 回车；
+或者使用python代码获取，代码为：
+```
+import pet.textbook1.codes
+```
+
+- 稍后(一般是瞬间），即可将教学案例下载到Windows桌面，目录为：Python与数据分析及可视化教学案例。
+
+  ------
+
+  
+
+## 3. 提供数据分析与可视化数据集。
+
+#### （1）快速装载数据集：factory.load_data(key='XXX')
+
+```
+  from pet.datasets import factory
+  factory.load_data(key='XXX',)      获取DataFrame或文本文件.
+```
+
+  通过设置key名称'XXX'，可以获得对应的数据集。  XXX的可选名称为：
+  ['中国大学', '学科专业分类', '上海师范大学教务处认定学科竞赛目录', '2023-2024-1上海师范大学课程表', 
+  '2022年上海师范大学通识课', '2022年上海师范大学优秀毕业论文', '2022年上海师范大学转专业-报名名单', 
+  '2023年上海师范大学转专业-报名名单', '2023年上海师范大学转专业-录取名单', '2019年研究生初试成绩', 
+  '上海地铁线路', '北京公交车', '北京地铁线路', 'ip地址分类', '双色球', '2023上海市二级程序员大赛名单', 'iris',
+   'Python二级考试大纲.txt', '道德经.txt', '心经.txt', '太乙金华宗旨.txt',
+    '重阳立教十五论.txt', '荷塘月色.txt', '微信接龙投票.txt']
+
+```
+如：factory.load_data(key='上海地铁线路')，可以获得上海地铁数据dataframe
+```
+
+
+####   (2).快速生成可定制随机数据集 factory.gen_XXX_XXX。
+  ```python
+    from pet.datasets import factory
+    
+    #生成干净的Series数据：
+    df=factory.gen_sample_series() #默认生成Series样本数据 40条，姓名，成绩
+    
+    #生成带噪声的Series数据：
+    df = factory.gen_sample_series(number=30, noise=0.1, repeat=2)
+    其中：number 为记录数，noise为随机产生None数据概率，repeat为允许重复数据项的最高次数。
+    
+    #生成干净DataFrame数据：
+    df=factory.gen_sample_dataframe() #默认生成dataframe样本数据 40条，姓名，成绩
+    
+    #生成带噪声的DataFrame数据：
+   factory.gen_sample_dataframe(sample_order=sample_order,
+                         number: int = 40,
+                         dst=f'{pet_home}/generated_sample_dataframe_{datetime.datetime.now().strftime("%Y-%m-%d %H-%M-%S")}.xlsx',
+                         noise=0,
+                         repeat=1):
+  ```
+
+即：按照订单格式产生数据。
+
+#####  核心函数：factory.gen_sample_dataframe( sample_order=sample_order,
+                         number: int = 40,  dst=‘xxx.xlsx',  noise=0,  repeat=1):
+
+- sample_order：订单(字典）；
+- number：数量；
+- dst：数据保存的目录；
+- noise：噪声，增加None数据字段概率；
+- repeat：产生重复数据。
+
+---------------------------------------
+   sample_orde 样本格式如下：
+---------------------------------------
+###### sample_order = {
+
+'学号.iid': 220151000,
+'考号.i': [151000, 789000],
+'姓名.n': '',  # ""生成默认的随机名字，也可以设置姓名字符串，['赵钱孙李','微甜地平天下'],
+'性别.c': ['男', '女'],
+'日期.d': ['2020-2-24', '2024-12-31'],
+'时间.t': ['00:00:00', '23:59:59'],
+'年龄.i': [18, 24],
+'政治面貌.c': ['党员', '团员', '群众'],
+'专业.c': ['计算机科学与技术', '人工智能', '软件工程', '自动控制', '机械制造', '自动控制'],
+'学校.c': ['清华大学', '北京大学', '复旦大学', '上海交通大学', '上海师范大学', '中国科技大学', '上海大学'],
+'政治.i': [19, 100],
+'英语.i': [29, 100],
+'英语类别.c': ['英语一', '英语二'],
+'高等数学.i': [30, 140],
+'数学类别.c': ['数学一', '数学二', '数学三'],
+'专业课.i': [30, 150],
+'净收入.f': [30.3, 150.55, 3]}
+
+#####  其中：{XX.YY：[ZZ...],
+
+XX为列名称；ZZ为列的数据；YY为列的数据类型，可选数据类型如下：
+
+1. .iid: 代表产生整数学号（字段名称.类型）
+2. .i:代表整数
+3. .n: 代表名字
+4. .c: 代表类别
+5. .d: 代表日期
+6. .t: 代表时间
+7. .f: 代表浮点数
+
+-----------------------
+   （3）获取其它动态数据。
+   ---------------------
+   提供获取本机操作系统相关的信息到DataFrame中：
+```python
+    get_directory_info_dataframe()：将某一目录文件信息记录到DataFrame
+    get_pid_info_dataframe()：获取进程信息
+    get_pid_info_dataframe()：获取进程详细信息
+    get_pid_network_info_dataframe():获取网络流量信息
+    get_local_packages_info_dataframe():获取本机安装的模块信息
+    get_nic_info_series()：获取网卡信息
+    get_wifi_password_info_dataframe()：获取登录过的wifi密码
+    get_reg_parameters(x, y, data)：获取线性回归模型参数。
+```
+
+
+
+<img src="https://pic.qtfm.cn/2018/07/26/partner_72d7e1f09c547f3659b373eff7ae1d4f.jpg!400" alt="hah" style="zoom:25%;" />
+
+### 《Python与数据分解及可视化》与《Python Education Tools》教研团队分工：
+
+（本教材开发自2019年开始组稿，经历5年多的不断迭代更新，推出了教材第一版、第二版，以及配套软件、教辅材料，2023年12月本课程《Python与数据分析》获得上海市一流本科课程）
+
+#### 教材编写：李鲁群  李晓丰  张波
+
+#### 教辅材料：
+
+- ##### 数据集整理、校验、测试（超过20个数据集）   ： 吴热军  王丽华
+
+- ##### 教材代码编写与测试： 吴迪 李晓丰
+
+- ##### 教材PPT、视频录制： 吴迪 吴热军  王丽华 李晓丰
+
+- ##### 其他：[《From Blockly To Python数据分析](https://blockly.chajiuqqq.cn/example.html)》https://blockly.chajiuqqq.cn/example.html 由 李鲁文负责运维
+
+- ##### 其他为本课程建设提供帮助的还有：胡天乐 张慎文 许崇海 陶霜霜 蔡佳辰 周莹
+
+- ###### （感谢：上海市教委、上海师范大学等为课程建设提供部分项目资金支持）
+
