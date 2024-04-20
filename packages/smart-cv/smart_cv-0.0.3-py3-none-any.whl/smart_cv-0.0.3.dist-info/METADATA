@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: smart-cv
+Version: 0.0.3
+Summary: Tools to retrieve and check information and generate information based on CVs
+Home-page: https://github.com/addaix/smart_cv/
+Platform: any
+Description-Content-Type: text/markdown
+Requires-Dist: pdfplumber
+Requires-Dist: pandas
+Requires-Dist: dol
+Requires-Dist: config2py
+Requires-Dist: meshed
+Requires-Dist: tiktoken
+Requires-Dist: pypdf
+Requires-Dist: docxtpl
+Requires-Dist: i2
+Requires-Dist: langchain
+Requires-Dist: msword
+Requires-Dist: oa
+Requires-Dist: docx2python
+
+# smart_cv
+Tool to retreave information from a document (pdf or word) in an json schema. These informations can be injected in a template using corresponding keys.
+
+Hence, one can take a raw CV as input and generate a custom CV with custom content and styles. 
