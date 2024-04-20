@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: discord_controler
+Version: 1
+Summary: A module for controlling a Discord bot via a web server.
+Home-page: https://github.com/yourusername/discord-control
+Author: mao
+Author-email: your@email.com
+Requires-Dist: Flask
