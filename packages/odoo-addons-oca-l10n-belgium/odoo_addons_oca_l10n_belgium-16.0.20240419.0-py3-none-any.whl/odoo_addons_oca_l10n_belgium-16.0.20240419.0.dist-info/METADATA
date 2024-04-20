@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-l10n-belgium
+Version: 16.0.20240419.0
+Summary: Meta package for oca-l10n-belgium Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 16.0
+Requires-Dist: odoo-addon-account-statement-import-coda <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-companyweb-base <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-companyweb-payment-info <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-be-antibiotic-tax <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-be-apb-tax <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-be-bpost-address-autocomplete <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-be-eco-tax <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-be-mis-reports <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-be-mis-reports-xml <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-be-partner-identification <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-be-partner-kbo-bce <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-be-vat-reports <16.1dev,>=16.0dev
+
+UNKNOWN
+
