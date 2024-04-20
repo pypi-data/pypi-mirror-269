@@ -1,0 +1,35 @@
+[build-system]
+requires = [
+    "setuptools",
+    "scipy",
+    "wheel",
+    "Cython",
+    "pybind11",
+    "numpy",
+    
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "UQPyL"
+version = "2.0.1"
+authors = [
+    {name = "wmtSky", email = "wmtsky@hhu.edu.cn"}
+]
+description = "A python package for parameter uncertainty quantification and optimization"
+readme = "README.md"
+dependencies = [
+  "numpy",
+  "scipy",
+]
+classifiers = [
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
