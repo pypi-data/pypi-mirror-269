@@ -1,0 +1,10 @@
+nonebot_plugin_dcqg_relay/__init__.py,sha256=MBo_b6W63U7oaR93oKQy78bKGo0iwa40SeFFQcsblDU,3682
+nonebot_plugin_dcqg_relay/config.py,sha256=lTlhtI10R02oBPbVv83Rl7KC-v2loPvEc9Ry4Q-Bi7Y,524
+nonebot_plugin_dcqg_relay/dc_to_qq.py,sha256=ynmoydeol7StalW3nTeqGUBm6hWpu4zaQ4Zy7PTmdNw,9268
+nonebot_plugin_dcqg_relay/qq_emoji_dict.py,sha256=H3v21KoM-bjPYQrQkTb4JaAKLdjtvm6IfIrjbSNcHUU,6949
+nonebot_plugin_dcqg_relay/qq_to_dc.py,sha256=ooivnLxK0r522V6HCCQ-NEpd9qnO6LBKU9dhFD1HuYg,8386
+nonebot_plugin_dcqg_relay/utils.py,sha256=9VJa_3bzEpl4lV_FQHZkFAkE9Q2pVQw0Sj50rff703A,3116
+nonebot_plugin_dcqg_relay-1.0.0.dist-info/LICENSE,sha256=JO1kneCgLzy3DDQGVUNAwfiylYmzNQHVi3KAbnTMZvc,1068
+nonebot_plugin_dcqg_relay-1.0.0.dist-info/METADATA,sha256=pagTR0xZmNVrptW13X2N1pvzof3c9L-IBUwHtm_h7SU,3979
+nonebot_plugin_dcqg_relay-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+nonebot_plugin_dcqg_relay-1.0.0.dist-info/RECORD,,
