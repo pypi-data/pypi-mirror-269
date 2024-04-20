@@ -1,0 +1,8 @@
+scipy
+numpy
+numba
+pandas
+matplotlib
+PyQt5
+pyqtgraph
+audioio>=2.1
