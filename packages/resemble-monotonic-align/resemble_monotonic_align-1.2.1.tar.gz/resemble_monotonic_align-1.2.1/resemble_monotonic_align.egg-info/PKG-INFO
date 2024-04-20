@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: resemble-monotonic-align
+Version: 1.2.1
+License-File: LICENSE
+Requires-Dist: numpy
+
+PyPI package for https://github.com/resemble-ai/monotonic_align
