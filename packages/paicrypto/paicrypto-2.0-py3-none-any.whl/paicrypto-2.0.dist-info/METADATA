@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: paicrypto
+Version: 2.0
+Summary: A collection of algorithms
+Home-page: UNKNOWN
+Author: Adithya Pai B
+Author-email: paiadithya26@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pycrypto
+Requires-Dist: pycryptodome
+
+## PaiCrypto
+
+PaiCrypto is a simple Python library for encrypting and decrypting files using the AES algorithm. It is a wrapper around the PyCrypto library.
+
+## Installation
+
+
