@@ -1,0 +1,3 @@
+[console_scripts]
+audian = audian.audian:run
+audiangui = audian.audiangui:run
