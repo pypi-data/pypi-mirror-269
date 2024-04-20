@@ -1,0 +1,14 @@
+kitsunekko_tools/__init__.py,sha256=avtN7NjJCKyXvVl7OklgMkdt3Dfsj9tg8-__uZ0IFcU,153
+kitsunekko_tools/__main__.py,sha256=s4O30zfMP6eDdZx_t98s-FDtevtad23qC2uGxA1-Xxc,3860
+kitsunekko_tools/__version__.py,sha256=NDHlyIcJZjLz8wKlmD1-pr6me5FHBAYwO_ynLG-37N8,411
+kitsunekko_tools/common.py,sha256=TMA_TIWxKtpCsDrUgbq94oVWXh07Kl9KEhHK9P18pTM,289
+kitsunekko_tools/config.py,sha256=wm0JLxhiKHzOmM9pLT7MIHE8MjH_FEEaqv7HGUCw59w,3151
+kitsunekko_tools/consts.py,sha256=BFol5tmwYsfI-P8PCVyT1qbGBC6cWlM_t4O_pCwAbCQ,477
+kitsunekko_tools/download.py,sha256=eCZ87KH4ZfbhAZo4eCSTCJ8aABKJh5_v1sYsCWa3o1E,5652
+kitsunekko_tools/ignore.py,sha256=mJWifffOybontFfF9j8Hpugrcxwy3Lyyo3zPmk30Q9c,1969
+kitsunekko_tools/mega_upload.py,sha256=bE3_FOn8hPWEDoXBJz9QnoEZCkvtKkg58QDKboM4avw,1091
+kitsunekko_tools-0.0.2.dist-info/METADATA,sha256=JU1Y0Q5VCUqY6yVL3SpBm0yricz5kH35twUochuLl8I,41485
+kitsunekko_tools-0.0.2.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+kitsunekko_tools-0.0.2.dist-info/entry_points.txt,sha256=wi_VQADcSt3l9LLtwiE2Pnh1feqYy1HDCnJqJfNJaqM,58
+kitsunekko_tools-0.0.2.dist-info/licenses/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+kitsunekko_tools-0.0.2.dist-info/RECORD,,
