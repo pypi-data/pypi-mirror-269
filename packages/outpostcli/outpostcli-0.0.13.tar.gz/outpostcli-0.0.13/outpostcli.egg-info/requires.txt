@@ -1,0 +1,9 @@
+outpostkit>=0.0.49
+click
+rich
+requests
+loguru
+
+[dev]
+ruff
+black
