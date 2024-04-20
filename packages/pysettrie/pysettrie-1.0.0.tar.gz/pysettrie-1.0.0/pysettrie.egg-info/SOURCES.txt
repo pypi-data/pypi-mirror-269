@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pysettrie.egg-info/PKG-INFO
+pysettrie.egg-info/SOURCES.txt
+pysettrie.egg-info/dependency_links.txt
+pysettrie.egg-info/top_level.txt
+settrie/settrie.cpp
+settrie/settrie.pyx
+tests/test_settrie.py
