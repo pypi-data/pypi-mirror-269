@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bd-vslot"
+version = "0.0.1"
+authors = [
+  { name="James Keal", email="james@keal.au" },
+]
+description = "A library of V-Slot linear rail components for build123d"
+readme = "README.md"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "build123d>=0.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "isort",
+  "mypy",
+  "pip-tools",
+  "pytest",
+]
+docs = [
+  "sphinx-rtd-theme",
+  "sphinx",
+]
+
+[project.urls]
+Github = "https://github.com/keeeal/bd-vslot"
