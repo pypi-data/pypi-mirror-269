@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: async-mojang
+Version: 1.0.0
+Summary: An async Python wrapper for the Mojang API.
+Home-page: https://github.com/FroostySnoowman/Async-Mojang
+Author: FroostySnoowman
+License: MIT
+Keywords: mojang,minecraft,api,mojang api,minecraft api,async mojang,async minecraft
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+
+```Async-Mojang``` is a Python package for accessing Mojang's services. This library can be used to convert UUIDs, get a profile's information, change your Minecraft username or skin, and much more. 
+
+There is one component to this package:
+
+- **Public API** - Used to parse information about Minecraft profiles and more. Authentication is not required.
+
+## Installation
+**Python 3.7 or higher is required.**
+
+The easiest way to install the library is using `pip`. Just run the following console command:
+
+```
+pip install -U git+https://github.com/FroostySnoowman/Async-Mojang
+```
+
+## **Public API Quickstart**
+All Public API usage is found in the `tests.py` file.
