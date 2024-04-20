@@ -1,0 +1,12 @@
+pgnote/__init__.py,sha256=JgiFo3jEB4ZsmvvziIE3oTDMnz_bz1-WugeokkJuB2g,2744
+pgnote/event/__init__.py,sha256=QKWW5ruGZHP6qzWlOPPYK3VgjSBAux8iMPdXslZClQ4,273
+pgnote/event/exam_event.py,sha256=uIfNZvJVdkiN2Sacsc3u-PChbqeG0ZQ_BfqfM2-J2kQ,124
+pgnote/log/__init__.py,sha256=Xa5gZ7JbQV-ymKEk-6_OrI1yc9xCTq-_8ithvEFJHtk,813
+pgnote/obj/__init__.py,sha256=aBkRcaCLWymK8qUsC89ZmqQcwT20L4lMq08JTny3yVs,599
+pgnote/obj/types.py,sha256=LlZbXWH-0Eo2xyZPVfe179GU8uekZ2L-KmbH0xbqbPk,157
+pgnote/page/__init__.py,sha256=weeN3uIrKm-ZPttH60njS9z4E7sxB7XT3bSnNQ7ExTQ,589
+pgnote-0.0.4.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+pgnote-0.0.4.dist-info/METADATA,sha256=RfqIz6X4IXzfBCQiveNYMW3mt0X4qd3aQatSonuUeU4,613
+pgnote-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pgnote-0.0.4.dist-info/top_level.txt,sha256=oCBA07VZ2-4yaXLfYrxX04NyRwGsSkk5s9kycz6tYTU,7
+pgnote-0.0.4.dist-info/RECORD,,
