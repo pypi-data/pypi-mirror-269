@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: xrpl-helpers
+Version: 1.0.6
+Summary: 
+Author: Denis Angell
+Author-email: dangell@transia.co
+Requires-Python: >=3.9.6,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: google-cloud-core (>=2.3.2,<3.0.0)
+Requires-Dist: google-cloud-storage (>=2.7.0,<3.0.0)
+Requires-Dist: pytest (>=7.2.1,<8.0.0)
+Requires-Dist: xrpl-py (>=2.4.0,<3.0.0)
