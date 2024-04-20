@@ -1,0 +1,50 @@
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+
+[project]
+name = "kvix"
+dynamic = ["version"]
+dependencies = [
+	"funcy==1.17",
+	"pynput==1.7.6",
+	"pystray==0.19.4",
+	"pygobject==3.46.0",
+	"pkgconfig==1.5.5",
+	"pyclip==0.7.0",
+	"PyYAML==6.0.1",
+	"Jinja2==3.1.2",
+	"tk==0.1.0"
+]
+readme = "README.md"
+
+[project.scripts]
+kvix = "kvix.app:main"
+
+[build-system]
+requires = [ "setuptools==68.2.2", "setuptools-git-versioning==1.13.5", ]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-dir]
+kvix = "src/kvix"
+
+[tool.setuptools-git-versioning]
+enabled = true
+
+[tool.pyproject-appimage]
+script = "kvix"
+icon = "src/kvix/logo.jpg"
+output = "dist/kvix.AppImage"
+
+[tool.pytest]
+testpaths="test"
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.coverage.paths]
+source =["src/kvix/", "*/site-packages/kvix/"]
+
+[tool.black]
+line-length = 99
