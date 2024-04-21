@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/michi.egg-info/PKG-INFO
+src/michi.egg-info/SOURCES.txt
+src/michi.egg-info/dependency_links.txt
+src/michi.egg-info/top_level.txt
+src/minim_michi/__init__.py
+src/minim_michi/main.py
