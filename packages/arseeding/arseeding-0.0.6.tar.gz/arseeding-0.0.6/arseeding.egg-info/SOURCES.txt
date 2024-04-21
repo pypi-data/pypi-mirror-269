@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+arseeding/__init__.py
+arseeding/bundleitem.py
+arseeding/tags.py
+arseeding.egg-info/PKG-INFO
+arseeding.egg-info/SOURCES.txt
+arseeding.egg-info/dependency_links.txt
+arseeding.egg-info/requires.txt
+arseeding.egg-info/top_level.txt
+bin/arseed
