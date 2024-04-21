@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: asyncpraw-stubs
+Version: 0.0.2
+Summary: Python stubs for AsyncPRAW, a python package that allows for simple access to Reddit's API asynchronously.
+License: MIT
+Author: Yoshikage Kira
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: asyncpraw (>=7.7.1,<8.0.0)
+Requires-Dist: asyncprawcore (>=2.4.0,<3.0.0)
+Requires-Dist: asyncprawcore-stubs (>=0.0.1,<0.0.2)
+Requires-Dist: typing-extensions (>=4.10.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# asyncpraw-stubs
+
+Python stubs for [asyncpraw](https://github.com/praw-dev/asyncpraw), a python package that allows for simple access to Reddit's API asynchronously.
+
+
+## Installation
+
+You can install `asyncpraw-stubs` via pip:
+
+```bash
+pip install asyncpraw-stubs
+```
+
+

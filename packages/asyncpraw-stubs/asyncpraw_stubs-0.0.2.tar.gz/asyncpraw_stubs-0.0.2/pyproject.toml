@@ -1,0 +1,80 @@
+[tool.poetry]
+name = "asyncpraw-stubs"
+version = "0.0.2"
+description = "Python stubs for AsyncPRAW, a python package that allows for simple access to Reddit's API asynchronously."
+authors = ["Yoshikage Kira"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "asyncpraw-stubs", from = "src" }]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/isFakeAccount/asyncpraw-stubs"
+Repository = "https://github.com/isFakeAccount/asyncpraw-stubs.git"
+Issues = "https://github.com/isFakeAccount/asyncpraw-stubs/issues"
+Readme = "https://github.com/isFakeAccount/asyncpraw-stubs/blob/master/README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+asyncpraw = "^7.7.1"
+asyncprawcore = "^2.4.0"
+typing-extensions = "^4.10.0"
+asyncprawcore-stubs = "^0.0.1"
+
+
+[tool.poetry.group.typing.dependencies]
+pyright = "^1.1.356"
+mypy = "^1.9.0"
+
+[tool.poetry.group.linting.dependencies]
+black = "^23.3.0"
+ruff = "^0.3.4"
+docstrfmt = "^1.6.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+strict = true
+check_untyped_defs = true
+disallow_any_generics = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
+ignore_missing_imports = true
+exclude = [".venv", "venv"]
+
+[tool.pyright]
+exclude = [".venv", "venv"]
+pythonVersion = "3.9"
+typeCheckingMode = "strict"
+reportPrivateUsage = false
+reportImportCycles = false
+reportIncompatibleMethodOverride = false
+reportWildcardImportFromLibrary = false
+
+[tool.black]
+line-length = 160
+
+[tool.ruff]
+line-length = 160
+
+[tool.ruff.lint]
+select = ["E", "F", "I001", "I002", "TID252"]
