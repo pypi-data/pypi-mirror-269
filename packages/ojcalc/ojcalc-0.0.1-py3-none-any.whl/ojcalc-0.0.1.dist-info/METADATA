@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ojcalc
+Version: 0.0.1
+Summary: nice calculator
+Home-page: https://github.com/Kwon-Oh-Jae/package.git
+Download-URL: https://github.com/Kwon-Oh-Jae/package.git
+Author: ojkwon
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+
