@@ -1,0 +1,46 @@
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'
+
+[project]
+name = 'midiscripter'
+version = '0.1.1'
+description = 'Framework for scripting MIDI, keyboard and Open Sound Control input and output'
+readme = 'README.md'
+requires-python = '>=3.11'
+license = {file = "LICENSE"}
+keywords = ['MIDI', 'OSC', 'scripting', 'automation', 'input']
+authors = [
+  {name = 'Maboroshy'},
+]
+classifiers = [
+  'Development Status :: 4 - Beta',
+  'Programming Language :: Python',
+  'Programming Language :: Python :: 3.11',
+  'Programming Language :: Python :: 3.12',
+  'Programming Language :: Python :: Implementation :: CPython',
+  'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+  'Operating System :: Microsoft :: Windows',
+  'Topic :: Multimedia :: Sound/Audio',
+  'Topic :: Multimedia :: Sound/Audio :: MIDI',
+  'Topic :: Software Development :: Libraries :: Python Modules',
+]
+dependencies = [ 
+  'colorama ~=0.4.6',
+  'python-rtmidi ~=1.5.0',
+  'python-osc ~=1.7.6',
+  'pynput ~=1.7.5',
+  'watchdog ~=4.0',
+  'PySide6 ~=6.4',
+]
+
+[tool.hatch.build.targets.sdist]
+only-include = ['midiscripter']
+
+#[tool.hatch.build.targets.wheel]
+#only-include = ['midiscripter']
+
+[project.urls]
+Documentation = 'https://github.com/Maboroshy/midi-scripter#readme'
+Issues = 'https://github.com/Maboroshy/midi-scripter/issues'
+Source = 'https://github.com/Maboroshy/midi-scripter'

@@ -1,0 +1,4 @@
+/.pytest_cache/
+/.gitignore
+/test_scripts/
+/tests/
