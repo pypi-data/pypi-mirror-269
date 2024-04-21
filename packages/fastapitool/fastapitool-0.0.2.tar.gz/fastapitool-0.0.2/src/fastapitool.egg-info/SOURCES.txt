@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+src/fastapitool/__init__.py
+src/fastapitool/common.py
+src/fastapitool/exceptions.py
+src/fastapitool/model_api.py
+src/fastapitool/rest_api.py
+src/fastapitool/service_io_types.py
+src/fastapitool/simple.py
+src/fastapitool.egg-info/PKG-INFO
+src/fastapitool.egg-info/SOURCES.txt
+src/fastapitool.egg-info/dependency_links.txt
+src/fastapitool.egg-info/top_level.txt
