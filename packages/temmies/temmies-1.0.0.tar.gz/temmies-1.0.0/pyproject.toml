@@ -1,0 +1,20 @@
+[project]
+name = "temmies"
+version = "1.0.0"
+authors = [
+  { name="Boyan K", email="boyan@confest.im" },
+]
+description = "Themis Python library. Aims to automate the retrieval and submission of data from and to the platform."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "requests",
+    "bs4",
+    "urllib3",
+]
