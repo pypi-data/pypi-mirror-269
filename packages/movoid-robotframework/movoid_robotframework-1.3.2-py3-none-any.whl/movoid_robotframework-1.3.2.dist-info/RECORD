@@ -1,0 +1,12 @@
+RobotFrameworkBasic/__init__.py,sha256=uaCmJ6o8MHvyhrVHZZAT2BXDqJeGXdvvblCcFopbcQU,451
+RobotFrameworkBasic/common.py,sha256=2XhX1LeP45Gv1e4Kkw2smP5doPNR26t7hZN9fZ_LKpc,3715
+RobotFrameworkBasic/decorator.py,sha256=K7uDKmSD31L8TygpGHeQxhirP5GHluJknoJGAM7eIwg,14138
+RobotFrameworkBasic/error.py,sha256=18vMEzDUAaQ4p0_PqX-C_xRkgsXvJHAazRaucxFWLTc,497
+RobotFrameworkBasic/main.py,sha256=OeaFE0Mxfbn9qZR14nY9ptafQKhZ71DsnyIxg5loxoU,260
+RobotFrameworkBasic/version.py,sha256=BBPJ1hzkZxxTHHhQL5kFojOe4qXu_QO6DXqB1ew9RlQ,911
+RobotFrameworkBasic/action/__init__.py,sha256=nrlpen_eNIV3u2meIssAOBY-a8upIwsifP1-lO6qCgU,220
+RobotFrameworkBasic/action/calculate.py,sha256=Fg-NAVODJG5-phDmq6YJfrLaKAHcFkqt_hYoa4n19sk,7070
+movoid_robotframework-1.3.2.dist-info/METADATA,sha256=uyyAuhSVW9wdQ3Ga65DGyjx3Pjv8KK1MrzyVQe1B0pk,282
+movoid_robotframework-1.3.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+movoid_robotframework-1.3.2.dist-info/top_level.txt,sha256=-Q5hpm29SbJpMactx9qt9ofO9XuTwCpVfUnycWGHCTo,20
+movoid_robotframework-1.3.2.dist-info/RECORD,,
