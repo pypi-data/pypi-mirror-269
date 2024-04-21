@@ -1,0 +1,27 @@
+import setuptools
+
+with open("README.md", "r", encoding = "utf-8") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name = "ProActiveChatBot",
+    version = "0.0.1",
+    author = "TienHN",
+    author_email = "tienhn8@fpt.com",
+    description = "make your chatbot become proactive",
+    long_description = long_description,
+    long_description_content_type = "text/markdown",
+    classifiers = [
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    # package_dir = {"": "src"},
+    # packages = setuptools.find_packages(where="src"),
+    python_requires = ">=3.9",
+    entry_points = {
+        "console_scripts": [
+            "ProActiveChatBot = ProActiveChatBot:hello_world",
+        ],
+    }
+)
