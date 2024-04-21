@@ -1,0 +1,30 @@
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+src_paths = ["grafana_wtf", "tests"]
+
+[tool.pytest.ini_options]
+addopts = """
+  -ra -q --verbosity=3 --doctest-modules
+  --cov --cov-report=term-missing --cov-report=xml
+"""
+minversion = "2.0"
+log_level = "DEBUG"
+log_cli_level = "DEBUG"
+testpaths = [
+  "grafana_wtf",
+  "tests",
+]
+xfail_strict = true
+
+[tool.coverage.run]
+branch = false
+source = ["grafana_wtf"]
+
+[tool.coverage.report]
+fail_under = 0
+show_missing = true
+omit = [
+]
