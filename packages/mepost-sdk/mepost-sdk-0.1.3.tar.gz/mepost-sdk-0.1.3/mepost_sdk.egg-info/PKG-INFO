@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: mepost-sdk
+Version: 0.1.3
+Summary: A Python SDK for interacting with the Mepost API.
+Home-page: https://github.com/mepost-io/python-sdk
+Author: mepost
+Author-email: info@mepost.io
+License: MIT
+Keywords: mepost,email,sdk,api
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# mepost-sdk
+
+## Overview
+The `mepost-sdk` is a Python library designed to simplify interactions with the Mepost API for sending and managing emails.
+
+## Installation
+Install this package using pip:
+```bash
+pip install mepost-sdk
+```
+
+## Usage
+Here is a quick example:
+
+```python
+Copy code
+from mepost.client import MepostClient
+
+client = MepostClient(api_key="your_api_key")
+response = client.send_email(email_data)
+print(response)
+```
