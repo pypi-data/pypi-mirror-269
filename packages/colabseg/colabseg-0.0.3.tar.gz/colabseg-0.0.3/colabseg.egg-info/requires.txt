@@ -1,0 +1,14 @@
+py3Dmol>2.0
+numpy
+h5py
+scipy
+tqdm
+scipy
+matplotlib
+pandas
+open3d
+ipython
+jupyter
+future
+pyntcloud
+napari
