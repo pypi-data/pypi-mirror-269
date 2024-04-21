@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: gettake
+Version: 0.1.0
+Summary: Get and save images from webcomicgamma
+Home-page: https://github.com/eggplants/gettake
+License: MIT
+Keywords: downloader,cli,manga
+Author: eggplants
+Author-email: w10776e8w@yahoo.co.jp
+Requires-Python: >=3.9,<4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: pillow (>=10.3.0,<11.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Project-URL: Repository, https://github.com/eggplants/gettake
+Description-Content-Type: text/markdown
+
+# gettake
+
+Get and save images from [webcomicgamma](https://webcomicgamma.takeshobo.co.jp)
+
+_Note: Redistribution of downloaded image data is prohibited. Please keep it to private use._
+
+## Install
+
+```bash
+pip install gettake
+```
+
+OR:
+
+```bash
+pipx install gettake
+```
+
+## Run
+
+## Help
+
+```shellsession
+$ gettake -h
+usage: gettake [-h] [-d DIR] [-o] [-V] url
+
+Get and save images from webcomicgamma.
+
+positional arguments:
+  url                    target url
+
+options:
+  -h, --help             show this help message and exit
+  -d DIR, --save-dir DIR
+                         directory to save downloaded images (default: .)
+  -o, --overwrite        overwrite (default: False)
+  -V, --version          show program's version number and exit
+
+available urls:
+  - https://webcomicgamma.takeshobo.co.jp
+```
+
+## License
+
+MIT
+
