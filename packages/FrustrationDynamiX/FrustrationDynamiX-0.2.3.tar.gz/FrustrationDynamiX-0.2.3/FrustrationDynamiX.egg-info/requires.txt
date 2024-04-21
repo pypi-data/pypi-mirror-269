@@ -1,0 +1,8 @@
+numpy
+pandas
+matplotlib
+networkx
+scipy
+ortools
+tqdm
+pyEDM==1.14.3
