@@ -1,0 +1,12 @@
+[build-system]
+requires = ["biopython==1.83", "degenerate-dna==0.0.9", "six==1.10.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="seqrecord_expanded"
+version="0.2.13"
+authors=[{name = "Carlos Peña", email = "mycalesis@gmail.com"}]
+description="Another SeqRecord class with methods: degenerate seqs, codon positions based on reading frames, etc."
+
+[project.urls]
+Home = "https://github.com/carlosp420/seqrecord-expanded"
