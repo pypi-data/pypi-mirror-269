@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bytecorecompiler"
+version = "1.0.0"
+authors = [
+  { name="Joakim Winum Lien", email="joakim@winum.xyz" },
+]
+description = "A compiler that transforms ByteCore assembly code into executable memory bytes, seamlessly bridging the gap between high-level assembly instructions and the ByteCore Emulator's low-level functionality."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/joakimwinum/bytecorecompiler"
+"Bug Tracker" = "https://github.com/joakimwinum/bytecorecompiler/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bytecore = ["py.typed"]
