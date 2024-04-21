@@ -1,0 +1,56 @@
+[project]
+name = "compars"
+description = "DataFrame comparison done right (AKA the Bear-agnostic DataFrame comparison library)"
+version = "0.0.0"
+authors = [
+    { name = "Hadar Sharon", email = "hadar.sharon94@gmail.com" },
+]
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["python", "rust", "spark", "pandas", "pyspark", "data-engineering", "dataframe", "dataframes", "data-quality", "data-profiling", "koalas", "polars"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Rust",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing"
+]
+
+[project.urls]
+Documentation = "https://github.com/hadarsharon/compars/wiki"
+Repository = "https://github.com/hadarsharon/compars"
+Changelog = "https://github.com/hadarsharon/compars/releases"
+
+[tool.setuptools.packages]
+find = { }
+
+[tool.ruff]
+line-length = 120
+fix = true
+
+[tool.ruff.lint]
+exclude = [
+    "*.md",
+    ".git",
+    ".idea",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    "CODEOWNERS",
+    "venv"
+]
+
+[tool.ruff.format]
+quote-style = "double"
+skip-magic-trailing-comma = false
+preview = true
