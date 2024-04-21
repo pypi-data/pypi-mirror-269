@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+simple_neural_works/__init__.py
+simple_neural_works/main.py
+simple_neural_works.egg-info/PKG-INFO
+simple_neural_works.egg-info/SOURCES.txt
+simple_neural_works.egg-info/__init__.py
+simple_neural_works.egg-info/dependency_links.txt
+simple_neural_works.egg-info/main.py
+simple_neural_works.egg-info/requires.txt
+simple_neural_works.egg-info/top_level.txt
+simple_neural_works.egg-info/simple_neural_works/__init__.py
+simple_neural_works.egg-info/simple_neural_works/main.py
