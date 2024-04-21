@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fitdown"
+version = "0.0.1"
+authors = [
+  { name="Luca Grippa", email="luca@pypi.lucagrippa.io" },
+]
+description = "Parser for weightlifting logs"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Text Processing :: Markup",
+]
+
+[project.urls]
+Homepage = "https://github.com/lucagrippa/fitdown-py"
+Issues = "https://github.com/lucagrippa/fitdown-py/issues"

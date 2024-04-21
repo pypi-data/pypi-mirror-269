@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/fitdown/__init__.py
+src/fitdown/parse.py
+src/fitdown.egg-info/PKG-INFO
+src/fitdown.egg-info/SOURCES.txt
+src/fitdown.egg-info/dependency_links.txt
+src/fitdown.egg-info/top_level.txt
+tests/test_fitdown_parser.py
