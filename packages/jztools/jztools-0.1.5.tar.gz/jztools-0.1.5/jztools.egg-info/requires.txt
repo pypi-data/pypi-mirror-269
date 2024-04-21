@@ -1,0 +1,10 @@
+pygments
+numpy
+climax
+tqdm
+coloredlogs
+SQLAlchemy
+xerializer
+plotly
+freezegun
+torch
