@@ -1,0 +1,2 @@
+[console_scripts]
+mychef = mychef.cli:mychef
