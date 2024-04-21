@@ -1,0 +1,10 @@
+
+[dev]
+build
+httpx
+mypy
+pytest
+pytest-asyncio
+pytest-cov
+ruff
+twine
