@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import thriftify
+print('lets thriftify')
+thriftify.main()
+print('dunn thriftify')
