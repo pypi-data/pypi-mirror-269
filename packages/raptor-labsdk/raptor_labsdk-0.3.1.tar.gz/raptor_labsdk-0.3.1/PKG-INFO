@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: raptor-labsdk
+Version: 0.3.1
+Home-page: https://raptor.ml
+Author: Almog Baku
+Author-email: almog@raptor.ml
+Project-URL: Documentation, https://raptor.ml/
+Project-URL: Source, https://github.com/raptor-ml/raptor
+Project-URL: Tracker, https://github.com/raptor-ml/raptor/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: redbaron>=0.9.2
+Requires-Dist: typing-extensions
+Requires-Dist: PyYAML>=5.0
+Requires-Dist: pydantic
+Requires-Dist: BentoML>=1.0.13
+Requires-Dist: attrs>=21.1.0
+Requires-Dist: Jinja2>=3.1.0
+
+# Raptor LabSDK
+
+The LabSDK is a package that helps you to develop Raptor-compatible features and models directly from Python.
+It's usually used inside your notebook or IDE, and allows you to build features without any further installation.
+
+This way, you can build your features and models in Raptor, and then deploy them to the cloud later on.
+
+### For more information, please visit [Raptor](https://raptor.ml/).
