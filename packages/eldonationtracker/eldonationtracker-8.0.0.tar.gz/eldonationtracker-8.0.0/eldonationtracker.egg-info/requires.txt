@@ -1,0 +1,6 @@
+xdgenvpy==2.3.5
+pyqt6==6.6.1
+semver==3.0.2
+requests==2.28.1
+rich==12.6.0
+donordrivepython==1.6.0
