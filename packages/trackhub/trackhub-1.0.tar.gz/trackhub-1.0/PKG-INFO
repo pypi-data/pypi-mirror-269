@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: trackhub
+Version: 1.0
+Summary: Create and manage UCSC track hubs from Python
+Home-page: http://github.com/daler/trackhub
+Author: Ryan Dale
+Author-email: ryan.dale@nih.gov
+License: MIT
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE.txt
+Requires-Dist: docutils
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: html5lib
+Requires-Dist: openpyxl
+
+
+Create and manage UCSC track hubs from Python
