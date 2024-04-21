@@ -1,0 +1,8 @@
+source_yahoo_finance_price/__init__.py,sha256=gYDrdKQdFYOnCGENwMMhDp09mqAqYIEyfWLrm0fGehY,146
+source_yahoo_finance_price/manifest.yaml,sha256=T15qkVn90AzmTybyjOgt2iYeoCZkjWQ2LLEXSjIMhPs,15036
+source_yahoo_finance_price/run.py,sha256=iJHTh_HlKDq-nB0YCTZjx8VM7SqWiUITnfkHxvCPE_0,265
+source_yahoo_finance_price/source.py,sha256=DUZh7a47b2snYfFHqjRvf31jLPgnGX1AjpdwfYhmip0,486
+airbyte_source_yahoo_finance_price-0.2.4.dist-info/METADATA,sha256=qh43qM2IRGYOMjhWB6m4DjXMDqmhSkz87wMmlNzM36Y,5473
+airbyte_source_yahoo_finance_price-0.2.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airbyte_source_yahoo_finance_price-0.2.4.dist-info/entry_points.txt,sha256=nS_I2YuUHuRC0jEDbuAKgG6EC3hUHWbtwS8sFPNKHDM,81
+airbyte_source_yahoo_finance_price-0.2.4.dist-info/RECORD,,
