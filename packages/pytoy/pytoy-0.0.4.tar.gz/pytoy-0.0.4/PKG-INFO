@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: pytoy
+Version: 0.0.4
+Summary: PyToy package
+Project-URL: Homepage, https://github.com/WitonAI/PyToy
+Project-URL: Issues, https://github.com/WitonAI/PyToy/issues
+Author: WitonAI
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: fire
+Description-Content-Type: text/markdown
+
+#

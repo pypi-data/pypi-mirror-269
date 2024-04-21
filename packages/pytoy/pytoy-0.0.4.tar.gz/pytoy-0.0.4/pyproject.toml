@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pytoy"
+version = "0.0.4"
+authors = [{ name = "WitonAI" }]
+description = "PyToy package"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["fire"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+pytoy = "pytoy:PyToy"
+
+[project.urls]
+Homepage = "https://github.com/WitonAI/PyToy"
+Issues = "https://github.com/WitonAI/PyToy/issues"
+
+[tool.hatch.envs.docs]
+dependencies = ["mkdocs"]
+[tool.hatch.envs.docs.scripts]
+build = "mkdocs build --clean --strict"
+serve = "mkdocs serve --dev-addr localhost:8000"

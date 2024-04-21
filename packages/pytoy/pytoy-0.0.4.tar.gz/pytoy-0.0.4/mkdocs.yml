@@ -1,0 +1,17 @@
+site_name: PyToy
+
+theme:
+  name: "material"
+
+plugins:
+- search
+- gen-files:
+    scripts:
+    - scripts/gen_ref_pages.py
+- literate-nav:
+    nav_file: SUMMARY.md
+- section-index
+- mkdocstrings
+
+nav:
+- Code Reference: reference/

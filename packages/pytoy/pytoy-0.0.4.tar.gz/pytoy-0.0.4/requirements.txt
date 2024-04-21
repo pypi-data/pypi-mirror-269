@@ -1,0 +1,9 @@
+build
+fire
+hatch
+mkdocs
+mkdocs-gen-files
+mkdocs-literate-nav
+mkdocs-material
+mkdocs-section-index
+mkdocstrings[crystal,python]

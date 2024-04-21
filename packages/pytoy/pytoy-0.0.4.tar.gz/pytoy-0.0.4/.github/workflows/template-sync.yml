@@ -1,0 +1,48 @@
+name: Sync with template repository
+
+on: workflow_dispatch
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      workflow-sync-pat-exists: ${{ steps.workflow-sync-pat-check.outputs.defined }}
+      template-repository-exists: ${{ steps.template-repository-check.outputs.template_repository }}
+    steps:
+      - name: Check for WORKFLOW_SYNC_PAT Secret availability
+        id: workflow-sync-pat-check
+        shell: bash
+        run: |
+          if [ "${{ secrets.WORKFLOW_SYNC_PAT }}" != '' ]; then
+            echo "defined=true" >> $GITHUB_OUTPUT;
+          else
+            echo "defined=false" >> $GITHUB_OUTPUT;
+          fi
+
+      - name: Get template repository
+        id: template-repository-check
+        run: |
+          response=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }})
+          template_repository=$(echo $response | jq -r '.template_repository.full_name // empty')
+          echo "Template repository: $template_repository"
+          echo "template_repository=$template_repository" >> $GITHUB_OUTPUT
+
+  sync:
+    runs-on: ubuntu-latest
+    needs: [check]
+    if: needs.check.outputs.workflow-sync-pat-exists == 'true' && needs.check.outputs.template-repository-exists
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.WORKFLOW_SYNC_PAT }}
+
+      - name: actions-template-sync
+        uses: AndreasAugustin/actions-template-sync@v1
+        with:
+          github_token: ${{ secrets.WORKFLOW_SYNC_PAT }}
+          source_repo_path: ${{ needs.check.outputs.template-repository-exists }}
