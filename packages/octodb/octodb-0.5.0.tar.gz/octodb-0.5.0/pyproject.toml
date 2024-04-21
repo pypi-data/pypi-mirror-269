@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[build_ext]
+include_dirs = ["/usr/local/include", "."]
+library_dirs = ["/usr/local/lib", "C:\\Windows\\System32"]
+
+[tool.cibuildwheel]
+build = "cp37* cp38* cp39* cp310* cp311* cp312*"
+build-verbosity = 3
+
+[tool.cibuildwheel.linux]
+before-build = """
+curl -O https://octodb.io/download/octodb-free-linux-x86_64.tar.gz
+tar -xzvf octodb-free-linux-x86_64.tar.gz
+./install
+"""
+build = "cp37-manylinux_x86_64 cp38-manylinux_x86_64 cp39-manylinux_x86_64 cp310-manylinux_x86_64 cp311-manylinux_x86_64 cp312-manylinux_x86_64"
+#skip = "*_ppc64le *_s390x"
+repair-wheel-command = "auditwheel repair --exclude liboctodb.so -w {dest_dir} {wheel}"
+
+[tool.cibuildwheel.windows]
+before-build = """
+curl -O https://octodb.io/download/octodb-free-windows-x86_64.tar.gz
+tar -xzvf octodb-free-windows-x86_64.tar.gz
+install.bat
+"""
+skip = "*-win32"
+
+[tool.cibuildwheel.macos]
+before-build = """
+ARCH=$(uname -m)
+if [ "$ARCH" == "x86_64" ]; then
+  curl -O https://octodb.io/download/octodb-free-mac-x86_64.tar.gz
+  tar -xzvf octodb-free-mac-x86_64.tar.gz
+  ./install
+elif [ "$ARCH" == "arm64" ]; then
+  curl -O https://octodb.io/download/octodb-free-mac-arm64.tar.gz
+  tar -xzvf octodb-free-mac-arm64.tar.gz
+  sudo ./install
+else
+  echo "Unknown architecture: $ARCH"
+  exit 1
+fi
+"""
+repair-wheel-command = "delocate-wheel --require-archs {delocate_archs} --exclude liboctodb.0.dylib -w {dest_dir} -v {wheel}"
