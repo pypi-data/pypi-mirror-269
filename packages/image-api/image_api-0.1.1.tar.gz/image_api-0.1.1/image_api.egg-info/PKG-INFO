@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: image-api
+Version: 0.1.1
+Summary: A local and lightweight image search API
+Home-page: https://github.com/lkaijie/image-api
+Author: lkaijie
+Author-email: 
+License: MIT
+Keywords: api,myanimelist,bing image,google image,images,google
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4

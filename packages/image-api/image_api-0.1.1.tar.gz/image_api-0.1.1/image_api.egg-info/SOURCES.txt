@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+image_api/__init__.py
+image_api/_base.py
+image_api/_image_api.py
+image_api/_image_item.py
+image_api/config.py
+image_api.egg-info/PKG-INFO
+image_api.egg-info/SOURCES.txt
+image_api.egg-info/dependency_links.txt
+image_api.egg-info/requires.txt
+image_api.egg-info/top_level.txt
