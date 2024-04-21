@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: denpy
+Version: 0.2.1
+Summary: Simple? Fast? Easy to use? DENPY!
+Author: Discord: denflash
+Requires-Dist: rich
+Requires-Dist: psutil
+Requires-Dist: py-cord
+Requires-Dist: mysql-connector-python
+Requires-Dist: requests
+
