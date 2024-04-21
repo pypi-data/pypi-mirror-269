@@ -1,0 +1,10 @@
+lxml
+pillow
+paragraphs
+types-lxml
+
+[dev]
+pytest
+commitizen
+pre-commit
+tox
