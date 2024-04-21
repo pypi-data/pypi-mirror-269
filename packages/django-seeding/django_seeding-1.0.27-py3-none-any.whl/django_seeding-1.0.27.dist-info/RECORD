@@ -1,0 +1,17 @@
+django_seeding/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_seeding/admin.py,sha256=JLKd6T5n6PHriHYV1WF6JbV7AS_6k61M37v3koDDkSQ,153
+django_seeding/apps.py,sha256=9o9f8IxyhPEGqXSqFA3-NoYsRMS9FOYzU8FcIh1TrDE,296
+django_seeding/models.py,sha256=H6y6OCWf_xFyIzGwdmkRqEyh615Qs72JtopiHJNoZUI,180
+django_seeding/seeder_registry.py,sha256=VPn9axtv7hXevmdUj-qf34beVgKRPYmLSoGOxYiOxsY,3196
+django_seeding/seeders.py,sha256=aS3GvHdmm-u2_yh-IgK2Ow5u0fYQSMOx0eOa_iTUOI0,14775
+django_seeding/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_seeding/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_seeding/management/commands/runserver.py,sha256=6BsgGEMn41CXbJMl8qCuNFLfMm8aWJXE7CLPaJUA4QY,556
+django_seeding/management/commands/seed.py,sha256=8BzwYyDyINT89mzf1aAQKH9ifF48ZU8dPc8YNpFsy5E,251
+django_seeding/migrations/0001_initial.py,sha256=usixld_mVURywN5dYSHtH8nhE5eM1YmgUJsYCXaotJ4,411
+django_seeding/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_seeding-1.0.27.dist-info/LICENSE,sha256=_FFpsRxctw4Qv7ZNXgY0x_zrESmz8dMRdOycjh4_mCM,1069
+django_seeding-1.0.27.dist-info/METADATA,sha256=QaHi2DbXSzDkAoJTKcTec1d8JmVIGLxT8KJrI03YXaw,17690
+django_seeding-1.0.27.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_seeding-1.0.27.dist-info/top_level.txt,sha256=3xfpEyqL4Db-w5NlezDP0Fs0uh9-bqjAedDkMVxfmGQ,15
+django_seeding-1.0.27.dist-info/RECORD,,
