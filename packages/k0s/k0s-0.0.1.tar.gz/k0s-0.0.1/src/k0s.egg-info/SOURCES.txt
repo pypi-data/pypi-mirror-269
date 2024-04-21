@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/k0s.egg-info/PKG-INFO
+src/k0s.egg-info/SOURCES.txt
+src/k0s.egg-info/dependency_links.txt
+src/k0s.egg-info/entry_points.txt
+src/k0s.egg-info/requires.txt
+src/k0s.egg-info/top_level.txt
+src/sdk/__init__.py
+src/sdk/package.dat
+src/sdk/simple.py
+src/sdk/version.py
+tests/test_simple.py

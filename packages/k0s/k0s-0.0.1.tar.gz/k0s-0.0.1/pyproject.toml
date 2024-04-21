@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "k0s"
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+# version = "0.0.1"
+# readme = "README.md"
+# dynamic = ["version"]
+dynamic = ["version","readme"]
+authors = [
+  {name = "A. Random Developer", email = "author@example.com" }
+]
+description = "A sample Python project k0s"
+
+# dependencies = [
+#   "requests"
+# ]
+
+requires-python = ">=3.0"
+
+license = {file = "LICENSE.txt"}
+keywords = ["sample", "setuptools", "development"]
+
+maintainers = [
+  {name = "A. Great Maintainer", email = "maintainer@example.com" }
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  "License :: OSI Approved :: MIT License",
+
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+
+[tool.setuptools.dynamic]
+version = {attr = "sdk.version.__version__"}
+readme = {file = ["README.md"]}
+
+[project.optional-dependencies]
+dev = ["check-manifest"]
+test = ["coverage"]
+
+[project.urls]
+"Homepage" = "https://github.com/pypa/sampleproject"
+"Bug Reports" = "https://github.com/pypa/sampleproject/issues"
+"Funding" = "https://donate.pypi.org"
+"Say Thanks!" = "http://saythanks.io/to/example"
+"Source" = "https://github.com/pypa/sampleproject/"
+
+[project.scripts]
+k0s= "sdk:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]  # list of folders that contain the packages (["."] by default)
+include = ["sdk"]
+
+[tool.setuptools.package-data]
+sdk = ["*.dat"]
