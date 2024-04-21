@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: lawcord
+Version: 0.1.0
+Summary: A simple Discord bot library made by law
+Home-page: https://github.com/lawlol/lawcord
+Author: law
+License: MIT
+Keywords: discord bot library asyncio
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: AsyncIO
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: websockets>=10.4
+Requires-Dist: requests>=2.31.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.2.1; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: black>=23.3.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=5.3.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.3.0; extra == "docs"
+
+# Lawcord
+
+Lawcord is a simple Discord bot library that allows you to create and run Discord bots using all intents. It provides a simple API for managing and running your bot, as well as defining and handling commands.
+
+## Features
+
+- Easy-to-use API for managing and running Discord bots
+- Support for all Discord intents
+- Command handling using decorators
+- Simple message sending function
+
+## Installation
+
+You can install the Lawcord library using pip:
+
+```shell
+pip install lawcord
