@@ -1,0 +1,3 @@
+[console_scripts]
+regidi = regidi.__main__:main
+

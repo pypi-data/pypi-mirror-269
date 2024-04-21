@@ -1,0 +1,12 @@
+regidi-0.1.0.dist-info/METADATA,sha256=5WnPgspSQLIoT30y-vQqCE9Bf4CD6l43QNA4TGmJ5Cc,3084
+regidi-0.1.0.dist-info/WHEEL,sha256=7sv5iXvIiTVJSnAxCz2tGBm9DHsb2vPSzeYeT7pvGUY,90
+regidi-0.1.0.dist-info/entry_points.txt,sha256=fHpWydRJ8HhYEy24v3nvTJY2naINWwyY_qj0ToZhzx8,49
+regidi-0.1.0.dist-info/licenses/LICENSE,sha256=Qj8qyjUUJkpbHqnGVbqf7uMZKHMNsoigSbzlvqTzk3M,1068
+regidi/__init__.py,sha256=fx1DPfsaIsPQHKAck4pMIIdaQ4364TYNH9IsZgxffZM,2542
+regidi/__main__.py,sha256=bRpr3-62k3eIxzzkT1VwbLi1Sl-rkWzhdRtYywMs2wo,768
+regidi/reverse.py,sha256=8Rowcjcm5vnswPKAYHtQvUoarOnxHh5szLAMuUQ7mQY,2507
+regidi/substitution/__init__.py,sha256=87TV9j6e9W5p-Tk7zY12T1JLXlXwtNp-gbcnueWt0aU,1159
+regidi/substitution/aux5-mapping.csv,sha256=TrgDcIlCvKVjKQLGR5PNxZawhPOGe20VMHIcehbvTag,154124
+regidi/substitution/base6-blocklist.bin,sha256=t93I2n4xOZEPdm3g_ZPpJxiGy5nzlOLuwJ4DLvg9E0w,32768
+regidi/utils.py,sha256=RnbwE4TlDrUw5BRb6bAf0116VXFhfKgQlMEne2-6ECg,748
+regidi-0.1.0.dist-info/RECORD,,
