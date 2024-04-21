@@ -1,0 +1,12 @@
+image: alpine/edge
+packages:
+  - pipx
+sources:
+  - https://git.sr.ht/~loges/mychef
+tasks:
+  - lint: |
+      cd mychef
+      pipx run hatch run types:check
+  - test: |
+      cd mychef
+      pipx run hatch run test
