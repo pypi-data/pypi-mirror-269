@@ -1,0 +1,12 @@
+met_annot_unifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+met_annot_unifier/aligner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+met_annot_unifier/aligner/aligner.py,sha256=F-0CI25YME-qj-a7g83pW3Q5OJvPNuTCE7j7gqu895Y,7307
+met_annot_unifier/aligner/parser.py,sha256=3bjZ62YIPClQIQ1lygVmAhi-2XDnaqlfQI8mIWstgKo,8044
+met_annot_unifier/aligner/utils.py,sha256=8imeKL_WH58pbY1L59gBHNz_UQoZohOyWsH3mjwXg0o,845
+met_annot_unifier/cli.py,sha256=e6aq0ubdn4SvuqKkfr_VGbU_tB8LdljF4qsdLW25VTU,2700
+met_annot_unifier/foo.py,sha256=h8_wq9mYRSrZvOX4QirlaFHzNlBx8Yk3xvL2twF2qpI,267
+met_annot_unifier-0.0.1.dist-info/LICENSE,sha256=8CF9UTVBw09cUxSx9z3Ju-qJy0xrGXt8GUm-b6_p6w8,1077
+met_annot_unifier-0.0.1.dist-info/METADATA,sha256=04wM_tRziW1UNyGzxBDLnQxiyFeLrL7blXX6D-vgGMY,5768
+met_annot_unifier-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+met_annot_unifier-0.0.1.dist-info/entry_points.txt,sha256=oJJxPxvYroLE1phwWkMBwX0GCeZ2qSURXsEP3vtva_4,118
+met_annot_unifier-0.0.1.dist-info/RECORD,,
