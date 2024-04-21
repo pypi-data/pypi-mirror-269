@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: datamana
+Version: 0.0.8
+Summary: Dataset Manager
+Author-email: Jiau Zhang <jiauzhang@163.com>
+Project-URL: Homepage, https://github.com/jiauzhang/datamana
+Keywords: Deep Learning,Dataset Manager,Artificial Intelligence
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
