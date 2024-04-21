@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: FlutterFinder
+Version: 1.0.1
+Summary: A command-line interface (CLI) tool to find Flutter apps in a directory.
+Home-page: https://github.com/chan27-2/flutter-finder
+Author: Sai Chandan Kadarla
+Author-email: chandankadarla2722002@gmail.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Here is a description for PyPI:
+
+**FlutterFinder**
+
+FlutterFinder is a command-line interface (CLI) tool that helps you find Flutter apps in a directory. It's a simple yet powerful tool that saves you time and effort when searching for Flutter projects.
+
+**Features:**
+
+- Quickly find Flutter apps in a directory
+- Supports searching for apps in subdirectories
+- Easy to use and intuitive command-line interface
+
+**Installation:**
+
+`pip install FlutterFinder`
+
+**Usage:**
+
+`flutter_finder <root_dir>`
+
+Replace `<root_dir>` with the directory you want to search for Flutter apps.
+
+**Example:**
+
+`flutter_finder /path/to/root/directory`
+
+This will search for Flutter apps in the specified directory and its subdirectories.
+
+**License:**
+
+MIT License
+
+**Author:**
+
+Sai Chandan Kadarla
+
+**Version:**
+
+1.0
+
+**Requires:**
+
+Python 3.7+
+
+**Classifier:**
+
+- Development Status :: 5 - Production/Stable
+- Intended Audience :: Developers
+- License :: OSI Approved :: MIT License
+- Natural Language :: English
+- Programming Language :: Python :: 3.7
+- Topic :: Utilities
