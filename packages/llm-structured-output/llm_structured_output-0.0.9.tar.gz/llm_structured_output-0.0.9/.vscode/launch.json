@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "JSON schema: Number array",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src",
+            "module": "examples.json_schema_cli",
+            "args": [
+                "{\"type\": \"array\", \"items\": { \"type\": \"number\" }}",
+                "[5, 10, 15, 20, 25]"
+            ]
+        },
+        {
+            "name": "LLM: Parse address",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src",
+            "module": "examples.llm_schema",
+            "args": [
+                "--model-path",
+                "mlx-community/Meta-Llama-3-8B-Instruct-8bit",
+                "--max-tokens",
+                "1000",
+                "--repeat-prompt",
+                "--temp",
+                "0.8",
+                "--prompt",
+                "[INST] Parse the following address into a JSON object: \"27 Barrow St, New York, NY 10014\". Your answer should be only a JSON object according to this schema: {\"type\": \"object\", \"properties\": {\"streetNumber\": {\"type\": \"number\"}, \"streetName\": {\"type\": \"string\"}, \"city\": {\"type\": \"string\"}, \"state\": {\"type\": \"string\"}, \"zipCode\": {\"type\": \"number\"}}}. Do not explain the result, just output it. Do not add any additional information. [/INST]",
+                "--schema",
+                "{\"type\": \"object\", \"properties\": {\"streetNumber\": {\"type\": \"number\"}, \"streetName\": {\"type\": \"string\"}, \"city\": {\"type\": \"string\"}, \"state\": {\"type\": \"string\"}, \"zipCode\": {\"type\": \"number\"}}}",
+            ]
+        }
+    ]
+}
