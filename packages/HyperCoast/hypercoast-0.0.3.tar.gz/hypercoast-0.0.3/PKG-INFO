@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: HyperCoast
+Version: 0.0.3
+Summary: A Python package for processing hyperspectral data in coastal regions
+Author-email: Qiusheng Wu <giswqs@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/opengeos/HyperCoast
+Keywords: HyperCoast
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: geopandas
+Requires-Dist: hvplot
+Requires-Dist: leafmap
+Requires-Dist: localtileserver
+Requires-Dist: netcdf4
+Requires-Dist: numpy
+Requires-Dist: xarray
+Provides-Extra: all
+Requires-Dist: HyperCoast[extra]; extra == "all"
+Provides-Extra: extra
+Requires-Dist: pandas; extra == "extra"
+
+# HyperCoast
+
+[![image](https://img.shields.io/pypi/v/HyperCoast.svg)](https://pypi.python.org/pypi/HyperCoast)
+[![image](https://static.pepy.tech/badge/hypercoast)](https://pepy.tech/project/hypercoast)
+[![image](https://img.shields.io/conda/vn/conda-forge/hypercoast.svg)](https://anaconda.org/conda-forge/hypercoast)
+[![Conda Recipe](https://img.shields.io/badge/recipe-hypercoast-green.svg)](https://github.com/conda-forge/hypercoast-feedstock)
+[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/hypercoast.svg)](https://anaconda.org/conda-forge/hypercoast)
+
+**A Python package for visualizing and analyzing hyperspectral data in coastal regions**
+
+-   Free software: MIT License
+-   Documentation: <https://hypercoast.org>
+
+## Features
+
+-   Visualize hyperspectral data
+-   Analyze hyperspectral data

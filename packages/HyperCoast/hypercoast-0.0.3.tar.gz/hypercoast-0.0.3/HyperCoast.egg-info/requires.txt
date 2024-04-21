@@ -1,0 +1,13 @@
+geopandas
+hvplot
+leafmap
+localtileserver
+netcdf4
+numpy
+xarray
+
+[all]
+HyperCoast[extra]
+
+[extra]
+pandas
