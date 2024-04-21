@@ -1,0 +1,10 @@
+google-maps-routing
+numpy
+shapely
+polyline
+
+[dev]
+coverage
+mypy
+pytest
+ruff
