@@ -1,0 +1,78 @@
+[tool.poetry]
+name = "src2txt"
+version = "0.5.0"
+description = "A command-line tool to convert documents and web pages to text."
+authors = ["Simon Engwerda <simon@engwerda.net>"]
+readme = "README.md"
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/engwerda/src2txt"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = "^0.12.3"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.3"
+readability-lxml = "^0.8.1"
+lxml-html-clean = "^0.1.1"
+pymupdf = "^1.24.1"
+python-magic = "^0.4.27"
+pathspec = "^0.12.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+src2txt = "src2txt.main:app"
+
+# ==== black ====
+[tool.black]
+line-length = 120
+target-version = ['py311']
+
+# ==== Ruff ====
+[tool.ruff]
+target-version = "py311"
+
+line-length = 120 # Same as Black.
+
+lint.select = [
+  "A",   # flake8-builtins
+  "E",   # pycodestyle errors
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "UP",  # pyupgrade
+  "I",   # Isort
+  "N",   # pep8-naming
+  "S",   # flake8-bandit
+  "T10", # flake8-debugger
+  "T20", # flake8-print
+  "RUF", # ruff specific rulles
+  "PYI", # flake8-pytest-style
+  "ERA", # eradicate
+  "PD",  # Pandas Vet
+  "PL",  # Pylint
+]
+
+lint.ignore = [
+  "S101",
+  "PLR2004",
+  "PD901",
+  "RUF005",
+  "RUF012",
+  "RUF013",
+  "PLR0913",
+]
+lint.unfixable = ["SIM", "TRY", "RUF", "T20", "PTH", "S", "ERA001"]
+
+extend-exclude = [".github", ".idea", ".ipython"]
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 120
+
+[tool.ruff.lint.pylint]
+max-branches = 9
