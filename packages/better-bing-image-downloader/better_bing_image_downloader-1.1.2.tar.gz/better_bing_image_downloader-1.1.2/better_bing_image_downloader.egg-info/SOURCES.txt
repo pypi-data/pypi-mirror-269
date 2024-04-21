@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+better_bing_image_downloader/__init__.py
+better_bing_image_downloader/bing.py
+better_bing_image_downloader/crawler.py
+better_bing_image_downloader/download.py
+better_bing_image_downloader/helperdownload.py
+better_bing_image_downloader/multidownloader.py
+better_bing_image_downloader/utils.py
+better_bing_image_downloader.egg-info/PKG-INFO
+better_bing_image_downloader.egg-info/SOURCES.txt
+better_bing_image_downloader.egg-info/dependency_links.txt
+better_bing_image_downloader.egg-info/top_level.txt
+tests/test_bing.py
+tests/test_download.py
