@@ -1,0 +1,3 @@
+[console_scripts]
+deshima-rawdata=deshima_rawdata.cli:main
+
