@@ -1,0 +1,15 @@
+colorcet
+fastkml
+h5py
+latloncalc
+matplotlib
+netCDF4
+numpy
+pandas
+pint
+pytest
+pytest-cov
+python-dateutil
+scipy
+seaborn
+statsmodels

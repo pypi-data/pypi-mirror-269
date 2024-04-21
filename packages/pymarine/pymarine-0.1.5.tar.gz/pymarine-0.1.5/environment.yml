@@ -1,0 +1,23 @@
+name: pymarine
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python
+  - pip
+  - python-dateutil
+  - fastkml
+  - numpy
+  - pandas
+  - pint
+  - colorcet
+  - h5py
+  - netCDF4
+  - scipy
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - importlib_metadata
+  - setuptools
+  - pip:
+      - latloncalc
