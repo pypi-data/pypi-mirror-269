@@ -1,0 +1,45 @@
+# This is a TOML document
+title = "GeneScape Configuration"
+
+# This directory will host the data files
+store = "~/.genescape"
+
+# A versioned directory for the data files
+tag = "v3"
+
+# A listing of the files used by GeneScape
+
+[[files]]
+target = "genescape.hs.json.gz"
+package = 'genescape.data'
+
+[[files]]
+target = "go-basic.obo.gz"
+package = "genescape.data"
+
+[[files]]
+target = "goa_human.gaf.gz"
+package = "genescape.data"
+
+[[files]]
+target = "test_goids.txt"
+package = "genescape.data"
+
+[[files]]
+target = "test_genes.txt"
+package = "genescape.data"
+
+[[files]]
+target = "genescape.js"
+subdir = [ "js" ]
+package = "genescape.data.js"
+
+[[files]]
+target = "viz-standalone.js"
+subdir = [ "js" ]
+package = "genescape.data.js"
+
+[[files]]
+target = "genescape.css"
+subdir = [ "css" ]
+package = "genescape.data.css"

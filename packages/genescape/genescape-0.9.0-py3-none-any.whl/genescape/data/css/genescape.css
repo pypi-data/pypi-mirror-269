@@ -1,0 +1,21 @@
+:root {
+    --border-color: #77ddaa;
+    --input-back-color: #fcfcfc;
+}
+
+#terms {
+    min-height:250px;
+    border: var(--border-color) solid 1px;
+}
+
+#annot_elem {
+    height: 250px;
+}
+
+#dot_elem {
+    height: 250px;
+}
+
+#main {
+    min-width: 100%;
+}
