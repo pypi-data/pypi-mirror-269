@@ -1,0 +1,21 @@
+[tool.poetry]
+authors     = ["9FS <pray4spam@googlemail.com>"]
+description = ""
+license     = "MIT"
+name        = "KFSconfig"
+packages    = [{ include = "KFSconfig" }]
+readme      = "readme.md"
+repository  = "https://github.com/9-FS/2023-09-20-KFSconfig"
+version     = "1.2.0"
+
+[tool.poetry.dependencies]
+KFSlog = "^1.0.0"
+python = "^3.11.0"
+
+[tool.poetry.group.dev.dependencies]
+hypothesis = "^6.87.0"
+pytest     = "^7.4.2"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires      = ["poetry-core"]
