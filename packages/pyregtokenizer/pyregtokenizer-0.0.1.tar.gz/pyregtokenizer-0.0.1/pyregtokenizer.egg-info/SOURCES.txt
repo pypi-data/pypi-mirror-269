@@ -1,0 +1,8 @@
+setup.py
+pyregtokenizer.egg-info/PKG-INFO
+pyregtokenizer.egg-info/SOURCES.txt
+pyregtokenizer.egg-info/dependency_links.txt
+pyregtokenizer.egg-info/requires.txt
+pyregtokenizer.egg-info/top_level.txt
+tokenizer/__init__.py
+tokenizer/regextokenizer.py
