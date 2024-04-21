@@ -1,0 +1,5 @@
+[console_scripts]
+ffs=flask_file_share.main:main
+ffs-app=flask_file_share.app:main
+ffs-cli=flask_file_share.cli:main
+
