@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: HSS.py
+Version: 1.1.1
+Summary: Easy to use HSS API.
+Home-page: https://github.com/HSS-Project/HSS.py
+Author: HSS-Project
+Author-email: kazuma1112@munesky.net
+License: MIT
+Keywords: HSS Schedule School
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+## HSSAPI-Python
+
+
+
+## 目的
+
+HSSAPIをPythonで簡単にしようできるようにしたAPIラッパー
+
+
+
+## 開発途中
+
+PRお待ちしております♡
+
