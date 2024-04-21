@@ -1,0 +1,3 @@
+[console_scripts]
+astroscript = astroscript.astroscript:main
+astroscript_gui = astroscript.main:main
