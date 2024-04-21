@@ -1,0 +1,17 @@
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/raven_formats/__init__.py
+src/raven_formats/adpcm.py
+src/raven_formats/fb.py
+src/raven_formats/xmlb.py
+src/raven_formats/zsnd.py
+src/raven_formats.egg-info/PKG-INFO
+src/raven_formats.egg-info/SOURCES.txt
+src/raven_formats.egg-info/dependency_links.txt
+src/raven_formats.egg-info/entry_points.txt
+src/raven_formats.egg-info/top_level.txt
+src/raven_formats/data/__init__.py
+src/raven_formats/data/zsnd_hashes.json
