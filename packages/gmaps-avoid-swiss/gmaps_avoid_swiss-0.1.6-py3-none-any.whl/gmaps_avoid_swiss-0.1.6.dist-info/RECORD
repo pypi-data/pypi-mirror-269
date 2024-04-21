@@ -1,0 +1,11 @@
+gmaps_avoid_swiss/__init__.py,sha256=3spRHwa0ettOzZ7wu-noAf8lffnYpTmiZCYvZ1DkGNk,307
+gmaps_avoid_swiss/client.py,sha256=V3ZjPDWo4aPfadUBZ8C_mLic2yAfwxcs6MbBDjJKMYU,674
+gmaps_avoid_swiss/geo_check.py,sha256=2EHiLYenZ_zDlRC2mXdjjToV9yii0CWoBy14UyYycQ8,4030
+gmaps_avoid_swiss/routes.py,sha256=fMCmRftGxzXSU95B3EgpgWwfbFlt6NraR80kxqlCGB0,7470
+gmaps_avoid_swiss/waypoints.py,sha256=d4oX_mNcLVj5XLinauv6EOxw7PJeFKJIWkTcSLI0f70,2540
+gmaps_avoid_swiss-0.1.6.dist-info/AUTHORS.rst,sha256=GGIbwIbKkXIOEzRS-sF-TNYJH5IyFOmoIAL1ccHwwUE,162
+gmaps_avoid_swiss-0.1.6.dist-info/LICENSE,sha256=3Sc72j5JS0HnCjmNCDXIrbp3SxE2LgiqTYiqqi3K1Yw,1072
+gmaps_avoid_swiss-0.1.6.dist-info/METADATA,sha256=OJVIicK8CIVqAbV0QXysvYP3gfi7fIqbs4H-etrATmY,2900
+gmaps_avoid_swiss-0.1.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+gmaps_avoid_swiss-0.1.6.dist-info/top_level.txt,sha256=glPXaViN283e4t-zz62o3zLzuMVjEutyoEBlmQgKAdo,18
+gmaps_avoid_swiss-0.1.6.dist-info/RECORD,,
