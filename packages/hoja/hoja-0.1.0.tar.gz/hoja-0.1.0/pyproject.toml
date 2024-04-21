@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "hoja"
+version = "0.1.0"
+description = "A tool for file indexing and retrieval within a project."
+authors = ["Matt Christie <christiemj09@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
