@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: miraie-ac
+Version: 1.0.0
+Summary: MirAIe-AC API for Python
+License: MIT
+Author: Raj Kishore
+Author-email: 40551183+rkzofficial@users.noreply.github.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.9.5,<4.0.0)
+Requires-Dist: aiomqtt (>=2.0.1,<3.0.0)
+Requires-Dist: asyncio (>=3.4.3,<4.0.0)
+Requires-Dist: certifi (>=2024.2.2,<2025.0.0)
+Description-Content-Type: text/markdown
+
+# MirAIe API for Python
+
+# Medium multiply
+
+A small demo library for a Medium publication about publishing libraries.
+
+### Installation
+
+```
+pip install miraie-ac
+```
+
+### Get started
+
+```Python
+from miraie-ac import MirAIeHub, MirAIeBroker
+
+# Instantiate a MirAIeHub object
+broker = MirAIeBroker()
+
+# Instantiate a MirAIeHub object
+hub = MirAIeHub()
+
+# Intialize the hub (+91xxxxxxxxxx, password, broker)
+hub.init(mobile, password, broker)
+```
+
