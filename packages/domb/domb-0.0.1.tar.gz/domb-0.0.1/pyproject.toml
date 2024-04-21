@@ -1,0 +1,44 @@
+[project]
+name = "domb"
+description = "DoMB Tools: Python Toolkit of Department of Molecular Biophysics"
+
+version = "0.0.1"
+authors = [{name = "Borys Olifirov", email = "omnia.fatum@gmail.com"}]
+
+readme = "README.md"
+license = {file = "LICENSE"}
+
+requires-python = ">=3.8"
+
+dependencies = [
+    "dipy",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scikit-image",
+    "scikit-learn",
+    "scikit-posthocs",
+    "scipy"
+]
+
+classifiers=[
+    'Development Status :: 3 - Alpha',  # 4 - Beta, 5 - Production/Stable
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 3.8',
+    'Operating System :: OS Independent',
+
+    'Topic :: Scientific/Engineering :: Bio-Informatics',
+    'Topic :: Scientific/Engineering :: Image Processing',
+    'Topic :: Scientific/Engineering :: Image Recognition',
+    'Topic :: Utilities'
+]
+
+
+[project.urls]
+Documentation = "https://domb.bio/"
+Repository = "https://github.com/wisstock/domb-tools"
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
