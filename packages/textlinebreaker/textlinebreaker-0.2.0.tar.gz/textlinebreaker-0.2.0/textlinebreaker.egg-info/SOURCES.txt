@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+pyproject.toml
+textlinebreaker/__init__.py
+textlinebreaker/textlinebreaker.py
+textlinebreaker.egg-info/PKG-INFO
+textlinebreaker.egg-info/SOURCES.txt
+textlinebreaker.egg-info/dependency_links.txt
+textlinebreaker.egg-info/top_level.txt
