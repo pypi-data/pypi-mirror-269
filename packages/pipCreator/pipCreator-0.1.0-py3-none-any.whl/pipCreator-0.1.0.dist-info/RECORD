@@ -1,0 +1,15 @@
+pipcreator/__init__.py,sha256=M6fqZDHrK-nZmhi3R40OJDTFzbwsyUH-efFxExtAtM8,946
+pipcreator/color.py,sha256=suP3gsaQ6K-Dxu9WUE7RQV-Ndi6bpUpgLQQrnlCC1Qk,252
+pipcreator/constants.py,sha256=OIiCFkKGPLwsLEdJWk6ZWiQrF--XwfpvnCrX_ARmesU,8911
+pipcreator/convert.py,sha256=okK5wtBvjtet9fqvwRUnKjUXK6Ho5eLAGbHTD22hlYk,2267
+pipcreator/createtest.py,sha256=mtcCCj5qqc7_uK0pZj3J7xda1K29f7u8-TqSWcxEZcY,3053
+pipcreator/guide.py,sha256=7eGGXqsohk8Zk3Svn681RFLiFPqG36aBYOdmSpB5DnE,1289
+pipcreator/main.py,sha256=1mTgJ8gnK05p_egk-HsCyi_XykidabjqirnIAnkOQns,807
+pipcreator/upload.py,sha256=KtwNER4l-T2J5J3SBmVdQxsq5iVpm0CstyfWXk-VVP0,2925
+pipcreator/writer.py,sha256=dLYdA3INnAuf8wFcSwgSoNfM4Xmb3YUfDeewwQCclZw,8040
+pipCreator-0.1.0.dist-info/LICENSE,sha256=ZeOfCjAhAZbrrU6sqIR62rW3Ls2SviaBxJbmiXw1jGc,1088
+pipCreator-0.1.0.dist-info/METADATA,sha256=hZg5Q7SWVFbjFUrs1UorTKua2ktMpv7QLifhzn-ZpvE,10694
+pipCreator-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pipCreator-0.1.0.dist-info/entry_points.txt,sha256=oOAT2A6yjw69sE5QCRSJJKGL822hOKZ4qfQFguiYOSQ,46
+pipCreator-0.1.0.dist-info/top_level.txt,sha256=RvfaIttmMHBU-95S-_CrKUd_RmT-qsGEGn-wvtaWzHk,11
+pipCreator-0.1.0.dist-info/RECORD,,
