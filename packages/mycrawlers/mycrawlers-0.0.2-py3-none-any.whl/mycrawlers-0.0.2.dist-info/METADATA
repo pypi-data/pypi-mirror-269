@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mycrawlers
+Version: 0.0.2
+Summary: oss easily myCrawler
+Home-page: https://github.com/JeonChaeHwan/myCrawler
+Download-URL: https://github.com/JeonChaeHwan/myCrawler/
+Author: ChaeHwanJeon
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: bs4
+Requires-Dist: requests
+
