@@ -1,0 +1,5 @@
+[project]
+name = "auden"
+version = "0.0.0-dev"
+description = "Coming soon!"
+authors = [{name = "Suzen Fylke", email = "codesue@users.noreply.github.com"}]

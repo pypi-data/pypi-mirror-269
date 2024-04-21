@@ -1,0 +1,6 @@
+pyproject.toml
+auden/__init__.py
+auden.egg-info/PKG-INFO
+auden.egg-info/SOURCES.txt
+auden.egg-info/dependency_links.txt
+auden.egg-info/top_level.txt
