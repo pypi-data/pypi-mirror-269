@@ -1,0 +1,10 @@
+flask
+ipython
+model-explorer-adapter==0.3.8
+packaging
+portpicker
+requests
+termcolor
+typing-extensions
+torch
+numpy
