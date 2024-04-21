@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+crypto_dot_com/__init__.py
+python_crypto_dot_com_sdk.egg-info/PKG-INFO
+python_crypto_dot_com_sdk.egg-info/SOURCES.txt
+python_crypto_dot_com_sdk.egg-info/dependency_links.txt
+python_crypto_dot_com_sdk.egg-info/requires.txt
+python_crypto_dot_com_sdk.egg-info/top_level.txt
