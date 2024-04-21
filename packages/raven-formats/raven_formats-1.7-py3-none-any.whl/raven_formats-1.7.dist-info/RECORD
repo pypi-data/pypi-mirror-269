@@ -1,0 +1,13 @@
+raven_formats/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+raven_formats/adpcm.py,sha256=stRkuSzxvpS3ebOa-qQT3xb4_rXZc1InVna29whU3zo,3070
+raven_formats/fb.py,sha256=eVyv1ExzdjXf0MjNhOWlRx3myaQZxJN2_I37YIQzXoM,2514
+raven_formats/xmlb.py,sha256=9S6u5YWb7P_krwDkaZRbRsQScHA244-2jo28AZ6-Meg,8321
+raven_formats/zsnd.py,sha256=_8_JBTaRmd6nZtFyeVKebByByx1-V2muP-cXn6dMx1U,16927
+raven_formats/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+raven_formats/data/zsnd_hashes.json,sha256=tiMvro_VJj-mZ3UUprkcJlHpLaUxyHGedFTDnKqyA08,730800
+raven_formats-1.7.dist-info/LICENSE.md,sha256=OZ-iuN2sBVTBta7fS_FiBVvNp-1Z_B-jr4mamLeUiNs,1093
+raven_formats-1.7.dist-info/METADATA,sha256=RhtycUjbAcaCwaSa9w06Vykf9ncx7SEFQ3bf-7aD3TA,2301
+raven_formats-1.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+raven_formats-1.7.dist-info/entry_points.txt,sha256=woRueDidEpR1aER4FkT-V3jiCzy0A76sx0VnwHUutDI,107
+raven_formats-1.7.dist-info/top_level.txt,sha256=e8j1i-BWgGG9Mf5IBvsURXzz4swB27s0QXX9yhLknBc,14
+raven_formats-1.7.dist-info/RECORD,,

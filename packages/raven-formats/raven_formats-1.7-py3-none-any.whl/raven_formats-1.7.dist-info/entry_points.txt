@@ -1,0 +1,4 @@
+[console_scripts]
+fb = raven_formats.fb:main
+xmlb = raven_formats.xmlb:main
+zsnd = raven_formats.zsnd:main
