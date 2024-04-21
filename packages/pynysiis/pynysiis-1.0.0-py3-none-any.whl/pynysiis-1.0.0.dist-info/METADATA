@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: pynysiis
+Version: 1.0.0
+Summary: NYSIIS phonetic encoding algorithm.
+Home-page: https://finbarrs.eu/
+Author: Finbarrs Oketunji
+Author-email: f@finbarrs.eu
+License: MIT
+Project-URL: Bug Tracker, https://github.com/0xnu/nysiis/issues
+Project-URL: Changes, https://github.com/0xnu/nysiis/blob/main/CHANGELOG.md
+Project-URL: Documentation, https://github.com/0xnu/nysiis/blob/main/README.md
+Project-URL: Source Code, https://github.com/0xnu/nysiis
+Keywords: nysiis,phonetic,encoding,algorithm
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=2.7, !=3.8.*, !=3.9.*, !=3.10.*
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: pydantic
+
+nysiis
+=======
+
+.. image:: https://badge.fury.io/py/nysiis.svg
+    :target: https://badge.fury.io/py/nysiis
+    :alt: NYSIIS Python Package Version
+
+
+The `nysiis` package provides a Golang implementation of the `New York State Identification and Intelligence System`_ (NYSIIS) phonetic encoding algorithm. NYSIIS encodes names based on pronunciation, which is helpful in name-matching and searching applications.
+
+.. _New York State Identification and Intelligence System: https://en.wikipedia.org/wiki/New_York_State_Identification_and_Intelligence_System
+
+
+Requirements
+-------------
+
+Python 2.7 and later.
+
+
+Setup
+------
+
+You can install this package by using the pip tool and installing:
+
+.. code-block:: bash
+
+	$ pip install pynysiis
+
+Or:
+
+.. code-block:: bash
+
+	$ easy_install pynysiis
+
+
+Usage Example
+-------------
+
+.. code-block:: python
+
+  from nysiis import nysiis
+
+  name = "John Smith"
+  coded_name = nysiis(name)
+  print(coded_name)
+
+
+Reference
+----------
+
+.. code-block:: bibtex
+
+    @inproceedings{Rajkovic2007,
+      author    = {Petar Rajkovic and Dragan Jankovic},
+      title     = {Adaptation and Application of Daitch-Mokotoff Soundex Algorithm on Serbian Names},
+      booktitle = {XVII Conference on Applied Mathematics},
+      editors   = {D. Herceg and H. Zarin},
+      pages     = {193--204},
+      year      = {2007},
+      publisher = {Department of Mathematics and Informatics, Novi Sad},
+      url       = {https://jmp.sh/hukNujCG}
+    }
+
+
+Additional References
+----------------------
+
++ `Commission Implementing Regulation (EU) 2016/480`_
++ `Commission Implementing Regulation (EU) 2023/2381`_
+
+.. _Commission Implementing Regulation (EU) 2016/480: https://www.legislation.gov.uk/eur/2016/480/contents
+.. _Commission Implementing Regulation (EU) 2023/2381: https://eur-lex.europa.eu/eli/reg_impl/2023/2381/oj
+
+
+License
+--------
+
+This project is licensed under the `MIT License`_.  
+
+.. _MIT License: https://gist.github.com/0xnu/d11da49c85eeb7272517a9010bbdf1ab
+
+
+Copyright
+----------
+
+Copyright |copy| 2024 `Finbarrs Oketunji`_. All Rights Reserved.
+
+.. |copy| unicode:: 0xA9 .. copyright sign
+.. _Finbarrs Oketunji: https://finbarrs.eu/
