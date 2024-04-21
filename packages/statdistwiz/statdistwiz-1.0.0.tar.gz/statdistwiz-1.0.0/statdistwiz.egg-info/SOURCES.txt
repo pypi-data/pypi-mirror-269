@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+statdistwiz/Binomialdistribution.py
+statdistwiz/Gaussiandistribution.py
+statdistwiz/Generaldistribution.py
+statdistwiz/__init__.py
+statdistwiz.egg-info/PKG-INFO
+statdistwiz.egg-info/SOURCES.txt
+statdistwiz.egg-info/dependency_links.txt
+statdistwiz.egg-info/requires.txt
+statdistwiz.egg-info/top_level.txt
