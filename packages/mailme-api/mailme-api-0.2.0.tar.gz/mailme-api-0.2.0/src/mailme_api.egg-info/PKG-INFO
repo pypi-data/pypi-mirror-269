@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: mailme-api
+Version: 0.2.0
+Summary: Mailme API Client
+Home-page: http://mailme-api.hive.pt
+Author: Hive Solutions Lda.
+Author-email: development@hive.pt
+License: Apache License, Version 2.0
+Description: # [Mailme API](http://mailme-api.hive.pt)
+        
+        API Python client for the Mailme service.
+        
+        ## Configuration
+        
+        | Name | Type | Description |
+        | ----- | ----- | ----- |
+        | **MAILME_BASE_URL** | `str` | The base URL for the Mailme API requests (defaults to `https://mailme.bemisc.com/api/`). |
+        | **MAILME_KEY** | `str` |  The secret key to be used to authenticate API requests (defaults to `None`). |
+        
+        ## Installation
+        
+        ```bash
+        pip install mailme-api
+        ```
+        
+        ## Usage
+        
+        ```bash
+        RECEIVERS="receiver@domain.com" \
+        CONTENTS="Hello World" \
+        python -m mailme.scripts.sender
+        ```
+        
+        ## License
+        
+        Mailme API is currently licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/).
+        
+        ## Build Automation
+        
+        [![Build Status](https://app.travis-ci.com/hivesolutions/mailme-api.svg?branch=master)](https://travis-ci.com/github/hivesolutions/mailme-api)
+        [![Coverage Status](https://coveralls.io/repos/hivesolutions/mailme-api/badge.svg?branch=master)](https://coveralls.io/r/hivesolutions/mailme-api?branch=master)
+        [![PyPi Status](https://img.shields.io/pypi/v/mailme-api.svg)](https://pypi.python.org/pypi/mailme-api)
+        [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/)
+        
+Keywords: mailme api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
