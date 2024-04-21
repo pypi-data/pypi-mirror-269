@@ -1,0 +1,9 @@
+local_attention/__init__.py,sha256=VKCSHOJ6IMT7nMzWPFnPBAhRURGi4dJuezbRIrr0NLE,147
+local_attention/local_attention.py,sha256=BsamZ658zpTXB1kbNRGKKfzT2eS9dJFvCJrI0XHK194,7513
+local_attention/rotary.py,sha256=EXkFGSTfcXfl0FYvpVI63TcdGFD08qDJMXGy3nMpeVk,1921
+local_attention/transformer.py,sha256=XXqLWs3kUA432Gwk5NgBMf5QU2WFnfhIxjg2iTnK1eE,7477
+local_attention-1.9.1.dist-info/LICENSE,sha256=As9u198X-U-vph5noInuUfqsAG2zX_oXPHDmdjwlPPY,1066
+local_attention-1.9.1.dist-info/METADATA,sha256=eKc5IlFXMABlBxXwdsIf46wdHZORst6_bHnTxh0HBy8,682
+local_attention-1.9.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+local_attention-1.9.1.dist-info/top_level.txt,sha256=tEZ1ubd8Io3SSiH8Z5PXKr_KLSISWvnzcsKr2TzhiGI,16
+local_attention-1.9.1.dist-info/RECORD,,
