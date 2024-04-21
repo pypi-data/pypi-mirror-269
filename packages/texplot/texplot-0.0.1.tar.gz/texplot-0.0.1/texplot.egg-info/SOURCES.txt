@@ -1,0 +1,16 @@
+AUTHORS.txt
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+texplot/__init__.py
+texplot/__main__.py
+texplot/display_utilities.py
+texplot/plot_utilities.py
+texplot.egg-info/PKG-INFO
+texplot.egg-info/SOURCES.txt
+texplot.egg-info/dependency_links.txt
+texplot.egg-info/top_level.txt

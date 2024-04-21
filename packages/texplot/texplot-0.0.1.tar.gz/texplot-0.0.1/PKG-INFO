@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: texplot
+Version: 0.0.1
+Summary: Enhance your matplotlib plots with publication-quality style
+Author: Siavash Ameli
+Author-email: sameli@berkeley.edu
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+License-File: AUTHORS.txt
+
+texplot
