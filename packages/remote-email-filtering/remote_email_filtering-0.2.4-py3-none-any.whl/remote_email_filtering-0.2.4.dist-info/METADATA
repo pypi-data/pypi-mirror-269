@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: remote-email-filtering
+Version: 0.2.4
+Summary: Email client library for automation
+Home-page: https://github.com/gauravjuvekar/remote-email-filtering
+License: MIT
+Author: Gaurav Juvekar
+Author-email: gauravjuvekar@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Communications :: Email :: Email Clients (MUA)
+Classifier: Topic :: Communications :: Email :: Filters
+Requires-Dist: IMAPClient (>=2.3.1,<3.0.0)
+Requires-Dist: exchangelib (>=4.7.6,<5.0.0)
+Project-URL: Bug Tracker, https://github.com/gauravjuvekar/remote-email-filtering/issues
+Project-URL: Repository, https://github.com/gauravjuvekar/remote-email-filtering
+Description-Content-Type: text/x-rst
+
+======================
+remote-email-filtering
+======================
+
+Python library to filter email remotely over IMAP/EWS
+

@@ -1,0 +1,11 @@
+remote_email_filtering/__init__.py,sha256=ZULQxJqkS4l_RyeUY882kjQdiYyykMIegTszyuXpoRc,132
+remote_email_filtering/action.py,sha256=Ad_iVjfj-kwS9C8yvnY0yp7yx1RSV_78Hn0_JirRcD4,2470
+remote_email_filtering/auth.py,sha256=VMxDIaiaJOUpoTrISbJA_Wdpqi7-rg0h0pJhQuPCfOU,295
+remote_email_filtering/main.py,sha256=RAj9xJc-qMAGiIT0jZzwEdimtlsBWrnjA3wBhXObEbU,2235
+remote_email_filtering/message.py,sha256=zDjCZjELtm3FZKWrkBZvxtCgVQxgn5TQ8kWd8EF_ipE,3262
+remote_email_filtering/remote.py,sha256=VSCvzElmO4qBftsa-4NEjXpCAd7xuNRg0tl2qss6w08,9915
+remote_email_filtering/types.py,sha256=nm1u3wW7KAw2HOQBxiAW0dvptyLNn4NY8qzW9roE9bg,1305
+remote_email_filtering-0.2.4.dist-info/COPYING,sha256=TqpxMXv-3uDNh9nGZnZu9FeLBT3f49_KsRoEUD20NZk,1072
+remote_email_filtering-0.2.4.dist-info/METADATA,sha256=7hsL36r-7jZ7_Yo1VxEzmeqU7HSRzE3WYvyiTnKHKck,1261
+remote_email_filtering-0.2.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+remote_email_filtering-0.2.4.dist-info/RECORD,,
