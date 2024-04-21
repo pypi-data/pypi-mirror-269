@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: stock-lab
+Version: 0.0.2
+Summary: A package for stock analysis and visualization
+Home-page: https://https://github.com/Ddangkwon/stock_lab/
+Author: Ddangkwon
+Author-email: semi109502@gmail.com
+Keywords: stocklab
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+License-File: LICENSE
+
+
+stock-lab is a Python package for stock analysis and visualization. 
+It provides tools for downloading stock data, calculating various technical indicators, 
+implementing trading strategies, and visualizing the results.
