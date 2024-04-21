@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: bodysnatcher
+Version: 0.1.0
+Summary: Save objects when an exception occurs using pickle.
+Author-email: Tom Kuson <mail@tjkuson.me>
+License: MIT
+License-File: LICENCE
+Requires-Python: >=3.9
+Requires-Dist: typing-extensions>=4.11.0
+Description-Content-Type: text/markdown
+
+# bodysnatcher
+
+Describe your project here.
