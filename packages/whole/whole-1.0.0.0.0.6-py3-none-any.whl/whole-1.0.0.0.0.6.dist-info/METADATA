@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: whole
+Version: 1.0.0.0.0.6
+Requires-Dist: mysql-connector
+Requires-Dist: xlrd ==1.2.0
+
