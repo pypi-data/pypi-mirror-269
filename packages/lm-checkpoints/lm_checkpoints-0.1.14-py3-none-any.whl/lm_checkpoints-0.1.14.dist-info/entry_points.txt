@@ -1,0 +1,3 @@
+[console_scripts]
+evaluate_checkpoints=lm_checkpoints.evaluator:main
+
