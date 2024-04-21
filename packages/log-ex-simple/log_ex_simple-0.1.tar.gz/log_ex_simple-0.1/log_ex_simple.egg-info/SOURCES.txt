@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+log_ex_simple.egg-info/PKG-INFO
+log_ex_simple.egg-info/SOURCES.txt
+log_ex_simple.egg-info/dependency_links.txt
+log_ex_simple.egg-info/top_level.txt
+src/__init__.py
+src/example.py
+src/log_ex.py
