@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+textile/__init__.py
+textile/textile.py
+textile_metric.egg-info/PKG-INFO
+textile_metric.egg-info/SOURCES.txt
+textile_metric.egg-info/dependency_links.txt
+textile_metric.egg-info/requires.txt
+textile_metric.egg-info/top_level.txt
