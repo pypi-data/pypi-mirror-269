@@ -1,0 +1,10 @@
+source_zendesk_sunshine/__init__.py,sha256=xfWq_hKRBccXieJYb8kOob3enw9Llzu6Kzq-09T7BhY,142
+source_zendesk_sunshine/components.py,sha256=yu21S4h9sSKL4vWTDsQdGeP95FZcH7bWc3uHkIsXGEo,706
+source_zendesk_sunshine/manifest.yaml,sha256=xJNdBLQ_7VWrrP4eM1dlcsm1GHdxTxyHWCgdpJgO_yc,18818
+source_zendesk_sunshine/run.py,sha256=nqPL26Q6I6c6_8J2RJDwc8t94h__Q1rqdZGdxPzKiE8,258
+source_zendesk_sunshine/schemas/jobs.json,sha256=DFzFdw5r6P69QjDClDP8V6MRuIGnlKzKB2sneM730iE,766
+source_zendesk_sunshine/source.py,sha256=f-AVpKQ2d3Z4FUgMsMxzNfr-gIPhR-8zUaWcOFXETYk,484
+airbyte_source_zendesk_sunshine-0.2.4.dist-info/METADATA,sha256=kzE3In6rJzYzOAiwVog1RDfd-eAMDijuFNxQ_TAKtp8,5410
+airbyte_source_zendesk_sunshine-0.2.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airbyte_source_zendesk_sunshine-0.2.4.dist-info/entry_points.txt,sha256=Qf_L29IXDVK6ZfUPbK46MoU9CiWdyx9pP_NoFQi2HcU,75
+airbyte_source_zendesk_sunshine-0.2.4.dist-info/RECORD,,
