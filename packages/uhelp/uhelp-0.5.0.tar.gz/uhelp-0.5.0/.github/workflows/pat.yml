@@ -1,0 +1,23 @@
+name: checkout private repository ( pat )
+# from https://zenn.dev/kou_pg_0131/articles/gh-actions-checkout-private-repo
+# edited
+
+on:
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v3
+        with:
+          # Specify a private repository
+          repository: Suletta-Majo/uhelp
+          # checkout dir path
+          path: ./uhelp
+          # Specify a Personal Access Token
+          token: ${{ secrets.PERSONAL_PRIV_TOKEN }}
+
+      # Try to view private repositories
+      - run: ls ./uhelp

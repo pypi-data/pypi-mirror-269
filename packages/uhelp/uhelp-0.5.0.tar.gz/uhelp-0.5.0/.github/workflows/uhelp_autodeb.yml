@@ -1,0 +1,81 @@
+name: uhelp_deb_pack
+
+on:
+  release:
+    types: [published]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v3
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF:11}" >> $GITHUB_ENV
+      - name: Test
+        run: |
+          echo $RELEASE_VERSION
+          echo ${{ env.RELEASE_VERSION }}
+
+
+       # Setup Python
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+
+
+      - name: requir modules
+        run: |
+          pip install ConfigUpdater
+          pip install rich
+          pip install rich-theme-manager
+
+      - name: create deb package build directory
+        run: |
+          mkdir compile
+          mkdir -p autodeb/uhelp${{ env.RELEASE_VERSION }}/
+
+      - name: Copy Necessary items from repository
+        run: |
+          cp -a ./devdeb/* autodeb/uhelp*/
+          cp -p uhelp/uhelp.py compile/
+
+      - name: change section pathstyle in uhelp.py to deb
+        run: sed -i -n -E 's/(pathtype[[:blank:]]*=[[:blank:]]*).*/\1"deb"/' ./compile/uhelp.py
+
+
+      # Build python script into a stand-alone binary file
+      - uses: Nuitka/Nuitka-Action@main
+        with:
+          nuitka-version: main
+          script-name: ./compile/uhelp.py
+          onefile: true
+
+      # identify the architecture of binary file
+      - name: identify the architecture of binary file
+        run: |
+          sudo apt update && sudo apt install file
+          file ./build/uhelp.bin
+
+      - name: Move the binary file to the deb package build directory
+        run: |
+          cd build/
+          mv uhelp.bin uh
+          cd ..
+          mv ./build/uh ./autodeb/uhelp*/opt/uhelp/
+
+      # --root-owner-group is Instead fakeroot
+      - name: dpkg deb  build
+        run: dpkg-deb --root-owner-group --build autodeb/uhelp*/ .
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: uhelp_${{ env.RELEASE_VERSION }}_x64
+          path: |
+            uh*.deb
+
