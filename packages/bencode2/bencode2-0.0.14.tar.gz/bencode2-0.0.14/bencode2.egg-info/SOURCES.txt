@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+pyproject.toml
+setup.py
+bencode2/__init__.py
+bencode2/_decoder.py
+bencode2/_encoder.py
+bencode2/_exceptions.py
+bencode2/py.typed
+bencode2.egg-info/PKG-INFO
+bencode2.egg-info/SOURCES.txt
+bencode2.egg-info/dependency_links.txt
+bencode2.egg-info/top_level.txt
+tests/test_decode.py
+tests/test_encode.py
+tests/test_torrent.py
