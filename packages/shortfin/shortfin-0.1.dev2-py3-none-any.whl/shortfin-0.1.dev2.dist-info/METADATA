@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: shortfin
+Version: 0.1.dev2
+Summary: SHARK Shortfin Machine Learning Deployment Tools
+Home-page: https://github.com/nod-ai/sharktank
+Author: SHARK Authors
+Author-email: stella@nod.ai
+License: Apache-2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: sharktank ==0.1.dev2
+Requires-Dist: fastapi
+Requires-Dist: iree-runtime
+Requires-Dist: uvicorn
+Requires-Dist: requests
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-xdist ; extra == 'testing'
+
+# Sharkfin Serving Infrastructure
+
+**WARNING: This is an early preview that is in progress. It is not ready for
+general use.**
+
+This sub-project contains components and infrastructure for serving various
+forms of sharktank compiled models. Instead of coming with models, it defines
+ABIs that compiled models should adhere to in order to be served. It then
+allows them to be delivered as web endpoints via popular APIs.
+
+As emulation can be the sincerest form of flattery, this project derives
+substantial inspiration from vllm and the OpenAI APIs, emulating and
+interopping with them where possible. It is intended to be the lightest
+weight possible reference implementation for serving models with an
+opinionated compiled form, built elsewhere in the project.
