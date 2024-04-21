@@ -1,0 +1,14 @@
+compars/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+compars/assertions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+compars/assertions/dataframe.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+compars/dataframe/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+compars/dataframe/types.py,sha256=iOaGKhIEUXHb1nNFaCFgGsQDUWk1VUUlg0JdxUjhvrA,1052
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_frame.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+venv/bin/activate_this.py,sha256=fvPzMbbVJWNOv7QziL9ekbJ118JbxvK4JxXtdylsMzI,1337
+venv/bin/find_spark_home.py,sha256=3hI4N5xZTYyJEsUTAvmUDEFhujJYEwA6pZfk_Gny89I,4106
+compars-0.0.0.dist-info/LICENSE,sha256=8teSoSuG3l4eKBRMJQ58IP1P6SnIBbcpbWoUVbagL4w,1069
+compars-0.0.0.dist-info/METADATA,sha256=ynBJqkOF7RfKjIM5pN8-ATmq2NBYgnNYM81xFiBPPxo,3243
+compars-0.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+compars-0.0.0.dist-info/top_level.txt,sha256=tt8129igOW45FinPWw7YpNBNmrLxKgIBQ3LKlb9WNAQ,19
+compars-0.0.0.dist-info/RECORD,,
