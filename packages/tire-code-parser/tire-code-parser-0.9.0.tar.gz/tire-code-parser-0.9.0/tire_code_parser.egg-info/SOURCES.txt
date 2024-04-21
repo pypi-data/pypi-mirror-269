@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+tire_code_parser/__init__.py
+tire_code_parser/parser.py
+tire_code_parser.egg-info/PKG-INFO
+tire_code_parser.egg-info/SOURCES.txt
+tire_code_parser.egg-info/dependency_links.txt
+tire_code_parser.egg-info/top_level.txt
