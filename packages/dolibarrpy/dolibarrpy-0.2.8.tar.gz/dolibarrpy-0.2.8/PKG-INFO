@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: dolibarrpy
+Version: 0.2.8
+Summary: Python wrapper for Dolibarr API
+Home-page: https://github.com/JonBendtsen/dolibarrpy.git
+Author: Jon Bendtsen
+Author-email: jon.bendtsen.github@jonb.dk
+License: MIT
+Description: Python wrapper for Dolibarr
+Keywords: Dolibarr,python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
