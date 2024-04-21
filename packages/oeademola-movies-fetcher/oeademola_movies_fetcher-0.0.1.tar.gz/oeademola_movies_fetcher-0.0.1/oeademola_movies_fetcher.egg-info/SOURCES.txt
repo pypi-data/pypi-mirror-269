@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+oeademola_movies_fetcher.egg-info/PKG-INFO
+oeademola_movies_fetcher.egg-info/SOURCES.txt
+oeademola_movies_fetcher.egg-info/dependency_links.txt
+oeademola_movies_fetcher.egg-info/requires.txt
+oeademola_movies_fetcher.egg-info/top_level.txt
+tmdb_movies_fetcher_pkg/__init__.py
+tmdb_movies_fetcher_pkg/tmdb_movies_fetcher.py
