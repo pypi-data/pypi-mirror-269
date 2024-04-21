@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: vaso
+Version: 0.1.0
+Summary: A simple packaging mechanism for arbitrary files.
+Author: Matt Christie
+Author-email: christiemj09@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Vaso
+
+A simple packaging mechanism for arbitrary files.
+
