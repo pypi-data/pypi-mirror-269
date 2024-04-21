@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ParendumLib
+Version: 0.2.2
+Summary: Parendum Official Library
+Home-page: UNKNOWN
+Author: Parendum
+Author-email: info@parendum.com
+License: UNKNOWN
+Keywords: logger
+Platform: UNKNOWN
+Requires-Dist: fastapi
+Requires-Dist: jinja2
+Requires-Dist: requests
+Requires-Dist: motor
+Requires-Dist: python-multipart
+Requires-Dist: fastapi-sessions
+
+UNKNOWN
+
