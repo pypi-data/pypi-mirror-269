@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: stackNqueue
+Version: 0.1
+Summary: simple stack, and queue using DoublyCircularLinkedList
+Home-page: https://github.com/dudasdaily/stackNqueue
+Author: dudasdaily
+Author-email: dudasdaily@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/dudasdaily/stackNqueue/releases/tag/0.1
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+packages for Stack and Queue made up DoublyCircularLinkedList
+
