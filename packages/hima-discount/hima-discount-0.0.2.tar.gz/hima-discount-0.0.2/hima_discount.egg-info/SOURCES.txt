@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+discount_properties_pkg/__init__.py
+discount_properties_pkg/discount_properties.py
+hima_discount.egg-info/PKG-INFO
+hima_discount.egg-info/SOURCES.txt
+hima_discount.egg-info/dependency_links.txt
+hima_discount.egg-info/top_level.txt
