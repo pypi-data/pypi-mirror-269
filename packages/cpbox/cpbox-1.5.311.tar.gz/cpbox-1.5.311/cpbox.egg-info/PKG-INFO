@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cpbox
+Version: 1.5.311
+Summary: cp tool box
+Home-page: 
+Author: https://www.liaohuqiu.com
+Author-email: liaohuqiu@gmail.com
+Keywords: cpbox
+Platform: any
+Requires-Dist: six
+Requires-Dist: ruamel.yaml==0.18.5
+Requires-Dist: Jinja2
+Requires-Dist: netaddr
+Requires-Dist: requests
+Requires-Dist: tzlocal==2.1
+Requires-Dist: redis
+Requires-Dist: configparser==3.7.4
+Requires-Dist: oss2
