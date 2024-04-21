@@ -1,0 +1,2 @@
+[console_scripts]
+install_cerbogen = cerbogen.mod.install_location:install_location
