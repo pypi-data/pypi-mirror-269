@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: lukasdata
+Version: 1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: json
+Requires-Dist: matplotlib
+Requires-Dist: os
+
+UNKNOWN
+
+
