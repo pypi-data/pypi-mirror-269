@@ -1,0 +1,28 @@
+numpy
+websockets
+requests
+
+[:platform_system == "Linux"]
+python-xlib
+
+[:platform_system == "Windows"]
+pywinauto
+
+[automation_linting]
+playwright
+botright
+selenium
+selenium_driverless
+webdriver-manager
+
+[testing]
+pytest
+mypy
+flake8
+tox
+types-requests
+playwright
+botright
+selenium
+selenium_driverless
+webdriver-manager
