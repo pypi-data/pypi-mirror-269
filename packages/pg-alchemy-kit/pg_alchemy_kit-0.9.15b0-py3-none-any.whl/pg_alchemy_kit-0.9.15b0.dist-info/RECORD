@@ -1,0 +1,12 @@
+pg_alchemy_kit/PG.py,sha256=DNzZrgmNAMaHnHfVkPuL8L5we_7TukFYkS-OAmivKmc,3361
+pg_alchemy_kit/PGUtils.py,sha256=YMlAGQ2ZaZR-T9SgAJKHe6mtcDOto1ZWVzzNAn335FQ,12877
+pg_alchemy_kit/PGUtilsBase.py,sha256=nXQ1rj6Jg5X_68911lad71jGCzjcQXz1-_cnu-S7nlg,6323
+pg_alchemy_kit/PGUtilsORM.py,sha256=I6hoobERLbcRMqOp6gYCuUttvapi3_YdbuCQlqqCeRM,5512
+pg_alchemy_kit/__init__.py,sha256=eUkNOTymPs4eDyy7IjYd8LEZzS0Y68KBBYRdgR_O3V0,353
+pg_alchemy_kit/asyncio/AsyncPG.py,sha256=ULrTSmKGgKz0Ze83Be5g0YkskfejGTeayMhzme-EOoo,2780
+pg_alchemy_kit/asyncio/AsyncPGUtilsORM.py,sha256=daoFtW-I3eACyi59UFVihZx54RSiUmm318XsILxzUzU,9386
+pg_alchemy_kit/asyncio/__init__.py,sha256=HTHbPiavyGtjOSacRCbzKSlDQpyDs4vuYd4_ZIh5s4Q,402
+pg_alchemy_kit/cacheStrategies.py,sha256=WZQT2HSjqnD_KJGefiwmPCaKZ2c6IJv9JCrmGfeOkHs,5840
+pg_alchemy_kit-0.9.15b0.dist-info/METADATA,sha256=ZuUksSqxMXLwGbuxGAYiYzSMHbmipgJ88_T5y_W5luw,5927
+pg_alchemy_kit-0.9.15b0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+pg_alchemy_kit-0.9.15b0.dist-info/RECORD,,
