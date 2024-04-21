@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+README.rst
+setup.py
+bin/thriftify
+thriftify/__init__.py
+thriftify/thriftify.py
+thriftify.egg-info/PKG-INFO
+thriftify.egg-info/SOURCES.txt
+thriftify.egg-info/dependency_links.txt
+thriftify.egg-info/entry_points.txt
+thriftify.egg-info/not-zip-safe
+thriftify.egg-info/requires.txt
+thriftify.egg-info/top_level.txt

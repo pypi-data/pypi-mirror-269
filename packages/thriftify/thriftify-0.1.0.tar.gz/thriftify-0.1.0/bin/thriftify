@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import thriftify
+print('wtf')
+thriftify.main()
+print('wtf2')

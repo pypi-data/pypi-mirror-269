@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: thriftify
+Version: 0.1.0
+Summary: Converts xlsx files into thrift binary or json blobs
+Home-page: http://github.com/ohthepain/thriftify
+Author: Paul Wilkinson
+Author-email: paul@thisco.co
+License: MIT
+Keywords: thrift config
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+Uses thrift-generated python reflection classes to match spreadsheet data with your thrift file. You can then load the resulting blob in any language supported by thrift.
+
