@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+labelme2coco/__init__.py
+labelme2coco/cli.py
+labelme2coco/labelme2coco.py
+labelme2coco/utils.py
+labelme2coco.egg-info/PKG-INFO
+labelme2coco.egg-info/SOURCES.txt
+labelme2coco.egg-info/dependency_links.txt
+labelme2coco.egg-info/entry_points.txt
+labelme2coco.egg-info/requires.txt
+labelme2coco.egg-info/top_level.txt
+tests/__init__.py
+tests/test_unit.py
