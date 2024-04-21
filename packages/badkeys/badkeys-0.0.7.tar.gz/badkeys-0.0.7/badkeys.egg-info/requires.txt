@@ -1,0 +1,8 @@
+gmpy2
+cryptography
+
+[ssh]
+paramiko
+
+[urllookup]
+binary-file-search
