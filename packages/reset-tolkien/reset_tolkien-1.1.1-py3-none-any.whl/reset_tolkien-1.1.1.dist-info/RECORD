@@ -1,0 +1,17 @@
+run.py,sha256=bO3rRlHU_65WRF4jRx70Nc6XWbqvETR3_jj-D8o8z_Y,72
+test.py,sha256=_UJoTqf6eP2S4y00SeZ-kEf98uCwn7VV9tnUXJd0SrE,15201
+resetTolkien/__init__.py,sha256=HH-X3TanJIToFbpcroeCn-lFOttjkQ_uLiF4ujA_gpA,221
+resetTolkien/__main__.py,sha256=bO3rRlHU_65WRF4jRx70Nc6XWbqvETR3_jj-D8o8z_Y,72
+resetTolkien/cli.py,sha256=xtSdxX7JWmeC8bEPLYvfUMrEx-m8lCIh8fFct4TwBO0,13573
+resetTolkien/constants.py,sha256=VZTw0y95Ea0QOkVhx4D5RVfE2sOhQdJ5sdzduOir5_U,2394
+resetTolkien/format.py,sha256=tjr2c9WiR7ckk7rLOCzwRuqDv2cjI8fIZ5Gxk8qVmsA,24743
+resetTolkien/hashes.py,sha256=iiQTmzWguNy7YuwwTU0Tdg_-cRGtlXqmxbtX0ye2bEc,1525
+resetTolkien/resetTolkien.py,sha256=pISU1smauK4mqNX-yAZQVYUHUFSKqaaa7jFRA6D3fXo,16200
+resetTolkien/utils.py,sha256=CkXIQKZKfp6fF4kFcIgLOApZoMJQQGcW8aIf0H9KmY4,15513
+resetTolkien/config/default.yml,sha256=73EaxfiOT3SAI3X8tODU3fuqb9qZ8sIbQMbIZdzuUDg,739
+reset_tolkien-1.1.1.dist-info/LICENSE,sha256=LGS2ShDhOlRVGKnf4aiolkLfWoqwEe7OPQnQtMN6ITs,1073
+reset_tolkien-1.1.1.dist-info/METADATA,sha256=ufsA8Ja5gNg8V232bHs5OXxPVBVWM9bm_hMGVV3jpf4,16847
+reset_tolkien-1.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+reset_tolkien-1.1.1.dist-info/entry_points.txt,sha256=-jNZOk9E5cdavy0Qq4h7aTZfpbAxLKomgBEcfzrw8a4,52
+reset_tolkien-1.1.1.dist-info/top_level.txt,sha256=Cjl17iPLbe2vyleGOGQD4n1OFKq1xDIx7vBTXux1HOI,22
+reset_tolkien-1.1.1.dist-info/RECORD,,
