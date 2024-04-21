@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: rttm_manager
+Version: 0.1.6
+Summary: Add your description here
+Author-email: kittchy <drums.radwimps203@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# RTTM Exporter and Importer
+
+## Example
+
+```python
+
+```
+
+## Installation
+
+```bash
+
+```
