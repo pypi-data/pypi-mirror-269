@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+DistributionalPrincipalAutoencoder.egg-info/PKG-INFO
+DistributionalPrincipalAutoencoder.egg-info/SOURCES.txt
+DistributionalPrincipalAutoencoder.egg-info/dependency_links.txt
+DistributionalPrincipalAutoencoder.egg-info/requires.txt
+DistributionalPrincipalAutoencoder.egg-info/top_level.txt
+dpa/__init__.py
+dpa/dpa_fit.py
+dpa/model.py
+dpa/utils.py
