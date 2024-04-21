@@ -1,0 +1,11 @@
+colorama
+numpy
+
+[all]
+wandb
+openai
+anthropic
+tiktoken
+
+[logging]
+wandb
