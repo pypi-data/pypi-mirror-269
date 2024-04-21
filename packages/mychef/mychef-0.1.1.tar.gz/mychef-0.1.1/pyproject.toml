@@ -1,0 +1,95 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mychef"
+dynamic = ["version"]
+description = "A libre recipe recommendation app."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "AGPL-3.0-or-later"
+authors = [
+  { name = "Logan Connolly", email = "me@loganconnolly.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "aiosqlite",
+    "alembic",
+    "click",
+    "fastapi",
+    "passlib[argon2]",
+    "pydantic-settings",
+    "python-jose",
+    "python-multipart",
+    "sqlalchemy[asyncio,mypy]",
+    "uvicorn[standard]",
+]
+
+[project.urls]
+Homepage = "https://sr.ht/~loges/mychef"
+Source = "https://git.sr.ht/~loges/mychef"
+Issues = "https://todo.sr.ht/~loges/mychef"
+
+[project.scripts]
+mychef = "mychef.cli:mychef"
+
+[tool.hatch.version]
+path = "src/mychef/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "debugpy",
+  "httpx",
+  "pytest",
+  "pytest-asyncio",
+  "pytest-env",
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+dev = "uvicorn --reload --host '0.0.0.0' --port 8000 src.mychef.app:app"
+debug = "python -u -m debugpy --listen localhost:5678 -m uvicorn --host '0.0.0.0' --port 8000 src.mychef.app:app"
+
+[tool.hatch.envs.db.scripts]
+migration = "alembic -c ./src/mychef/migrations/alembic.ini revision --autogenerate"
+upgrade = "alembic -c ./src/mychef/migrations/alembic.ini upgrade head"
+fixtures = "python ./scripts/load-fixtures.py"
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+  "ruff",
+]
+[tool.hatch.envs.types.scripts]
+check = [
+  "ruff check {args:src/mychef}",
+  "mypy --install-types --non-interactive {args:src/mychef}"
+]
+
+[tool.mypy]
+strict = true
+plugins = 'sqlalchemy.ext.mypy.plugin'
+
+[tool.ruff]
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "PIE"]
+ignore = []
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+env = [
+    "DB_PATH=/:memory:",
+    "SECRET_KEY=super-secure-key",
+]

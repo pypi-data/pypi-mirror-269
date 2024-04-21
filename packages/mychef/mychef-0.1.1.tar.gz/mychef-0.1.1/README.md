@@ -1,0 +1,120 @@
+# mychef
+
+---
+
+[![builds.sr.ht status](https://builds.sr.ht/~loges/mychef.svg)](https://builds.sr.ht/~loges/mychef?)
+[![PyPI - Version](https://img.shields.io/pypi/v/mychef.svg)](https://pypi.org/project/mychef)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+
+> Minimal, libre recipe recommendation app.
+
+The goal is simple: enter in ingredients you have and get back tasty recipes.
+
+## Features
+
+- JSON API for adding recipes with an authenticated user.
+- Offer CLI for managing users and app state.
+- Expose configuration options through environment variables.
+
+## Roadmap
+
+- Web interface for managing recipes.
+- Filtering of recipes based on ingredient input.
+- Sample web scraper for uploading recipes.
+
+## Quickstart
+
+Install package:
+
+```console
+pip install mychef
+```
+
+Initialize application:
+
+```console
+mychef init
+```
+
+Add a user:
+
+```console
+mychef users add
+```
+
+Launch application server:
+
+```console
+mychef run
+```
+
+## Configuration
+
+You can configure parts of the application in the shell environment. Here's an example `.env`:
+
+```shell
+# Logging
+LOG_LEVEL="info"
+
+# Database
+DB_PATH="/./mychef.db"
+
+# Security
+SECRET_ALGORITHM="HS256"
+SECRET_KEY="<generated-when-initializing-app>"
+SECRET_KEY_N_BYTES=32
+```
+
+## Development
+
+The easiest way to develop locally with `mychef` is to use [hatch](https://hatch.pypa.io/latest/). With `hatch`, you will have access to important helper scripts for running locally, linting, type-checks, testing, etc.
+
+### Testing
+
+Lint and check types with:
+
+```console
+hatch run types:check
+```
+
+Run test suite:
+
+```console
+hatch run test
+```
+
+### Database Management
+
+To upgrade the local database to latest schema, run:
+
+```console
+hatch run db:upgrade
+```
+
+Now that the tables are created, you can add fixtures:
+
+```console
+hatch run db:fixtures
+```
+
+If you add or update a table, you can generate a migration script by running:
+
+```console
+hatch run db:migration
+```
+
+If the migration script wasn't generated, check to see if you imported the model to [env.py](src/mychef/migrations/env.py).
+
+### Local Server
+
+Run the application server locally with:
+
+```console
+hatch run dev
+```
+
+The server should reload on changes to the source code.
+
+## License
+
+`mychef` is distributed under the terms of the [AGPLv3](https://spdx.org/licenses/AGPL-3.0-or-later.html) license.
