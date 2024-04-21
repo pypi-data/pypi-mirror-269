@@ -1,0 +1,4 @@
+[console_scripts]
+galapy-download-database = galapy.internal.data:_entrypoint_download_database
+galapy-fit = galapy.sampling.Run:_run
+galapy-genparams = galapy.sampling.Run:_generate_parameter_file
