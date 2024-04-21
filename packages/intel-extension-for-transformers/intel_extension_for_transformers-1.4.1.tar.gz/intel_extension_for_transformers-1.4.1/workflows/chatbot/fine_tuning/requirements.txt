@@ -1,0 +1,9 @@
+datasets
+einops
+evaluate
+nltk
+peft
+rouge_score
+sentencepiece
+torch
+transformers>=4.32.0

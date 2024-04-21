@@ -1,0 +1,10 @@
+diffusers==0.8.1
+fschat
+gradio
+huggingface_hub
+markdown2
+nh3
+pip
+requests
+torch
+transformers

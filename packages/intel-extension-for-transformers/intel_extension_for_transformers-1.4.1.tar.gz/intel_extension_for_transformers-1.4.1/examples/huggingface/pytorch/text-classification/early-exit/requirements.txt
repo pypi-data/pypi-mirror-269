@@ -1,0 +1,6 @@
+torch==2.2.0
+transformers
+datasets
+allennlp
+scipy
+sklearn

@@ -1,0 +1,12 @@
+datasets
+torch
+transformers
+jiwer
+optimum
+onnx
+onnxruntime==1.16.0
+evaluate
+neural-compressor
+librosa
+soundfile
+pydub
