@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: BTCoreSharedLibs
+Version: 0.0.3
+Summary: A package of functions that I keep writing over and over again, so I can stop doing that. Script based on seanh example.
+Home-page: https://github.com/Jtecx/Python-BTCoreSharedLibs
+Project-URL: Bug Tracker, https://github.com/Jtecx/Python-BTCoreSharedLibs/issues
+Project-URL: Changelog, https://github.com/Jtecx/Python-BTCoreSharedLibs/releases
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE

@@ -1,0 +1,27 @@
+name: Publish to PyPI.org
+on:
+  release:
+    types: [published]
+jobs:
+  pypi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create virtual environment
+        run: python -m venv venv
+
+      - name: Activate virtual environment and install dependencies
+        run: |
+          source venv/bin/activate
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade build
+          python3 -m build
+
+      - name: Publish package
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
