@@ -1,0 +1,28 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "django-utilsds"
+version = "0.5.0"
+description = "One of the my demiansoft apps"
+authors = [{name = "Hyungjin Kim", email = "hj3415@gmail.com"}]
+license = {file = "LICENSE"}
+readme = "README.md"
+classifiers = ["License :: OSI Approved :: MIT License"]
+dependencies = [
+    "Django >= 5.0.3",
+]
+
+[project.urls]
+Home = "https://www.demiansoft.com"
+
+[tool.flit.sdist]
+exclude = [
+    "_data/",
+    "_mytester/",
+    "_static/",
+    "media/",
+    "db.sqlite3",
+    "manage.py",
+]
