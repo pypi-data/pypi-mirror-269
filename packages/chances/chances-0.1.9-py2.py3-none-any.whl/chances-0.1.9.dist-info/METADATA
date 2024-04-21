@@ -1,0 +1,52 @@
+Metadata-Version: 2.3
+Name: chances
+Version: 0.1.9
+Summary: Chances
+Project-URL: Download, https://github.com/autonomio/randomizer/
+Project-URL: Homepage, http://autonom.io
+Author-email: Mikko Kotila <mailme@mikkokotila.com>
+Maintainer-email: Mikko Kotila <mailme@mikkokotila.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Dist: numpy
+Requires-Dist: requests
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+<img src=https://image.ibb.co/b1P0de/Screen_Shot_2018_09_30_at_4_36_27_PM.png align=left><br><br>
+
+A python package that implements several pseudo, quasi, and true, including quantum random methods into a unified single-line command interface.
+
+![Travis branch](https://img.shields.io/travis/autonomio/chances/master.svg)[![Coverage Status](https://coveralls.io/repos/github/autonomio/chances/badge.svg?branch=master)](https://coveralls.io/github/autonomio/chances?branch=master)
+
+## methods
+
+- Quantum
+- Ambient sound
+- Halton sequence
+- Korobov matrix
+- Latin hypercube
+- Latin hypercube with Sudoku style constraint
+- Improved Latin hypercube (very slow)
+- Uniform mersenne
+- Uniform cryptographically sound
+
+## visualization
+
+- 1d plot
+- 2d plot
+
+## todo
+
+- test degree of randomness for each method
+- add degree of randomness test methods
+- add more random methods
+- add shuffle function
+- add support for strings
