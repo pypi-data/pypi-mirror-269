@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+ArrowTextClassifier.egg-info/PKG-INFO
+ArrowTextClassifier.egg-info/SOURCES.txt
+ArrowTextClassifier.egg-info/dependency_links.txt
+ArrowTextClassifier.egg-info/requires.txt
+ArrowTextClassifier.egg-info/top_level.txt
+src/__init__.py
+src/classify_text.py
+src/main.py
+src/model.py
+src/summarize_model.py
+src/tokenizer.py
+src/train.py
