@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "drf-easily-auth"
+version = "0.1.1"
+description = "Votre description ici"
+authors = ["Alexandre Meline <alexandre.meline.dev@gmail.com>"]
+readme = "README.md"
+
+# Ajout d'URLs
+homepage = "https://github.com/alexandre-meline/drf_easily_auth"
+repository = "https://github.com/alexandre-meline/drf_easily_auth"
+documentation = "https://github.com/alexandre-meline/drf_easily_auth"
+
+keywords = ["django", "rest-framework", "firebase", "authentication"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.0.4"
+djangorestframework = "^3.15.1"
+firebase-admin = "^6.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
