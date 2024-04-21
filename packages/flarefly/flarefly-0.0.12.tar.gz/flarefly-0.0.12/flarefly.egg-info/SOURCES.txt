@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+flarefly/__init__.py
+flarefly/custom_pdfs.py
+flarefly/data_handler.py
+flarefly/fitter.py
+flarefly/utils.py
+flarefly.egg-info/PKG-INFO
+flarefly.egg-info/SOURCES.txt
+flarefly.egg-info/dependency_links.txt
+flarefly.egg-info/entry_points.txt
+flarefly.egg-info/requires.txt
+flarefly.egg-info/top_level.txt
