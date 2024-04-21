@@ -1,0 +1,10 @@
+{
+  "name": "GPL-3.0",
+  "description": "Rule to identify GNU General Public License version 3.0",
+  "include_identifiers": [
+    "GPL", "2007", "3"
+  ],
+  "exclude_identifiers": [
+    "Apache", "Exception to Section 3"
+  ]
+}

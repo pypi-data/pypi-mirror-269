@@ -1,0 +1,129 @@
+Metadata-Version: 2.1
+Name: xmonkey-curator
+Version: 0.1.12
+Summary: Automated OSS curation scanner
+Home-page: https://github.com/Xpertians/xmonkey-curator
+Author: Oscar Valenzuela
+Author-email: oscar.valenzuela.b@gmail.com
+License: Apache 2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: click>=7.0
+Requires-Dist: lief>=0.11.5
+Requires-Dist: python-magic
+Requires-Dist: libmagic
+Requires-Dist: pygments
+Requires-Dist: ssdeep
+Requires-Dist: tqdm
+Requires-Dist: rpmfile
+Requires-Dist: zstandard
+Requires-Dist: requests
+Requires-Dist: oslili
+Requires-Dist: tabulate
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+
+XMonkey Curator - Automated DESCAM tooling
+==========================================
+
+Summary
+-------
+
+XMonkey Curator is a tool that performs DESCAM (Decompose, Enumerate,
+Scanning, Catalog, Analysis, Merge) review to software for Open Source
+License Compliance.
+
+The tool can extract (DECOMPOSE) archive files like Jar, ZIP, Tarballs,
+RPM, Debian, etc., to recursively obtain the list of assets (Enumerate)
+contained.
+
+XMonkey Curator also performs a basic review (Scanning) of the assets to
+extract information as “features” for OSLC assessments. Scan types
+supported: 
+
+Alpha Version:
+* Literal Strings
+* Symbols Matching using predefined signatures.
+* License detection (using OSLiLi)
+* Regex Patterns
+
+Beta Version:
+* FuzzyHashing (using LSH or SSDeep)
+* Generate OSS Notices
+* Improve external rules for automatic classification
+
+The results of the review can be automatically processed (Catalog) using predefined rules and workflows (Analysis).
+
+The software currently supports the format listed below:
+* ELF
+* Mach-OS
+* Objective-C
+* Python
+* PHP
+* Java
+* Ruby
+* Rust
+* Perl
+* C++
+
+Usage
+-----
+
+::
+
+   $ pip install xmonkey-curator
+   $ xmonkey-curator scan --help
+   Usage: xmonkey-curator scan [OPTIONS] PATH
+
+     Scan target files using selected options
+
+   Options:
+     -t, --force-text      Force using StringExtract for all files.
+     -u, --unpack          Unpack archives files.
+     -s, --export-symbols  Include words in the final report.
+     -m, --match-symbols   Match symbols against signatures.
+     -r, --rule TEXT       Add optional rules to execute.
+     -n, --notes TEXT      Add optional notes to the report.
+     -o, --output TEXT     Export results to filename with specific name.
+     -l, --licenses        Identify SPDX licenses.
+     -p, --print-report    Print the report to screen.
+     --help                Show this message and exit.
+
+Scanning to identify files
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In order to perform a full scan, you must select the option “unpack”
+that will export the content of any archive file.
+
+::
+
+   $ xmonkey-curator scan ffmpeg-6.0.tar.xz -u -s -o ffmpeg-source.json
+
+Scanning to export symbols and match with signatures
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Using the option “match”, will attempt to identify packages by matching
+symbols with signatures.
+
+::
+
+   $ xmonkey-curator scan ffmpeg-6.0.tar.xz -u -s -m -p
+
+Generating signatures
+~~~~~~~~~~~~~~~~~~~~~
+
+You can create signatures by performing scans to source code and binary
+of a package, looking for signifcative symbols.
+
+Then you can use the included script to check what symbols from the
+source code has survived the compilation.
+
+::
+
+   $ xmonkey-curator scan ffmpeg-6.0.tar.xz -u -s -o ffmpeg-source.json
+   $ xmonkey-curator scan ffmpeg-4.4.1-linux-64.zip -u -s -o ffmpeg-binary.json
+   $ ./scripts/signature_generator.py ffmpeg-source.json ffmpeg-binary.json
