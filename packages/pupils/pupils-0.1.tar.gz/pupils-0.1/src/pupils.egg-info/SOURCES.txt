@@ -1,0 +1,9 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+src/pupils.egg-info/PKG-INFO
+src/pupils.egg-info/SOURCES.txt
+src/pupils.egg-info/dependency_links.txt
+src/pupils.egg-info/requires.txt
+src/pupils.egg-info/top_level.txt

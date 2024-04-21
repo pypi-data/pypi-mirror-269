@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pupils
+Version: 0.1
+Summary: From pupil functions to PSF and MTF
+Author-email: "L. Riegger" <lri@me.com>
+Project-URL: Homepage, https://github.com/himbeles/pupils
+Project-URL: Repository, https://github.com/himbeles/pupils.git
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.25
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: matplotlib; extra == "dev"
+
+# pupils

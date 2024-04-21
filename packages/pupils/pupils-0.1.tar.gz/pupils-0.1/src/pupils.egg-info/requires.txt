@@ -1,0 +1,7 @@
+numpy>=1.25
+
+[dev]
+pytest
+build
+twine
+matplotlib
