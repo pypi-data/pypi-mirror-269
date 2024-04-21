@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: django_commons_playground
+Version: 1.0.1
+Summary: A place to test things out
+Author-email: Tim Schilling <schillingt@better-simple.com>
+Project-URL: Homepage, https://github.com/django-commons/django-commons-playground
+Project-URL: Issues, https://github.com/django-commons/django-commons-playground/issues
+Keywords: django,django commons
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# django-commons-playground
+A sample project to test things out
+
+
+## Running tests
+
+```shell
+python -m unittest
+```
+
+## Manually building and uploading
+
+```shell
+python3 -m pip install -U twine build
+python3 -m build
+python3 -m twine upload --repository testpypi dist/*
+```
