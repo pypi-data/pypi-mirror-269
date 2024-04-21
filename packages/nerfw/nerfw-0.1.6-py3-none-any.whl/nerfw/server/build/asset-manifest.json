@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.361d15c9.css",
+    "main.js": "/static/js/main.d05212a9.js",
+    "static/js/787.4afdcc44.chunk.js": "/static/js/787.4afdcc44.chunk.js",
+    "static/media/github-mark-white.svg": "/static/media/github-mark-white.97ed8e7eef60d61ca469881dd6f34511.svg",
+    "static/media/PATREON_SYMBOL_1_WHITE_RGB.svg": "/static/media/PATREON_SYMBOL_1_WHITE_RGB.17310609229eef2df4c7c31535ee8843.svg",
+    "index.html": "/index.html",
+    "main.361d15c9.css.map": "/static/css/main.361d15c9.css.map",
+    "main.d05212a9.js.map": "/static/js/main.d05212a9.js.map",
+    "787.4afdcc44.chunk.js.map": "/static/js/787.4afdcc44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.361d15c9.css",
+    "static/js/main.d05212a9.js"
+  ]
+}
