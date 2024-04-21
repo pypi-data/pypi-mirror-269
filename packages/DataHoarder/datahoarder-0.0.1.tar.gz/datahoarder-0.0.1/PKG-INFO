@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: DataHoarder
+Version: 0.0.1
+Summary: This project allows people to pull and cache files from different sources.
+Project-URL: Homepage, https://github.com/jackcampbell19/DataHoarder
+Project-URL: Bug Tracker, https://github.com/jackcampbell19/DataHoarder/issues
+Author-email: Jack Campbell <jackcampbell19@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
