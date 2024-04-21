@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: jenkins-pysdk
+Version: 1.2
+Summary: 2024 Python SDK for Jenkins
+Home-page: https://github.com/KnownZero/JenkinsPythonSDK
+Author: KnownZero
+Author-email: gihjeefs@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: httpx
+Requires-Dist: orjson
+Requires-Dist: pydantic
+Requires-Dist: urllib3
+
+UNKNOWN
+
