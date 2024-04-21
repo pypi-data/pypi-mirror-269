@@ -1,0 +1,73 @@
+Metadata-Version: 2.3
+Name: airflow-provider-sapiq
+Version: 0.2.0
+Summary: SAP IQ provider for Apache Airflow
+Project-URL: Documentation, https://github.com/ask1/airflow-provider-sapiq#readme
+Project-URL: Issues, https://github.com/ask1/airflow-provider-sapiq/issues
+Project-URL: Source, https://github.com/ask1/airflow-provider-sapiq
+Author: Anatoli Skovpen
+License-Expression: Apache-2.0
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: apache-airflow>=2.3.0
+Requires-Dist: sqlalchemy-sqlany>=1.0.4
+Requires-Dist: sqlanydb>=1.0.13
+Provides-Extra: common-sql
+Requires-Dist: apache-airflow-providers-common-sql; extra == 'common-sql'
+Description-Content-Type: text/markdown
+
+# SAP IQ Provider for Apache Airflow
+
+[![PyPI - Version](https://img.shields.io/pypi/v/airflow-provider-sapiq.svg)](https://pypi.org/project/airflow-provider-sapiq)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/airflow-provider-sapiq.svg)](https://pypi.org/project/airflow-provider-sapiq)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [License](#license)
+
+## Installation
+
+```console
+pip install airflow-provider-sapiq
+```
+
+## Configuration
+
+In the Airflow user interface, configure a connection with the `Conn Type` set to SAP IQ.
+Configure the following fields:
+
+- `Conn Id`: How you wish to reference this connection.
+    The default value is `sapiq_default`.
+- `userid`: Login for the SAP IQ server.
+- `password`: Password for the SAP IQ server.,
+- `port`: Port for the SAP IQ server, typically 2638.
+- `host`: Host of the SAP IQ server.
+
+## Modules
+
+### SAP IQ Operator
+
+The `SapIqOperator` exequtes SQL query on SAP IQ server.
+
+Import into your DAG using:
+
+```Python
+from sapiq_provider.operators.SapIqOperator import SapIqOperator
+```
+
+## License
+
+`airflow-provider-sapiq` is distributed under the terms of the [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) license.
