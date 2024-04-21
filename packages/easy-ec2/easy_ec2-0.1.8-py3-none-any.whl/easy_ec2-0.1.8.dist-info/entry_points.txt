@@ -1,0 +1,3 @@
+[console_scripts]
+easy_ec2=easy_ec2.main:main
+
