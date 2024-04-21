@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: pubmed2pdf
+Version: 0.0.4
+Summary: A Python package to download PDFs from OA publications in PubMed
+Home-page: https://github.com/ddomingof/PubMed2PDF
+Download-URL: https://github.com/ddomingof/PubMed2PDF
+Author: Daniel Domingo-Fernández
+Author-email: ddomingof@gmail.com
+Maintainer: Daniel Domingo-Fernández
+Maintainer-email: ddomingof@gmail.com
+License: MIT License
+Project-URL: Bug Tracker, https://github.com/ddomingof/PubMed2PDF/issues
+Project-URL: Source Code, https://github.com/ddomingof/PubMed2PDF
+Project-URL: Documentation, https://github.com/ddomingof/PubMed2PDF
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: click==7.0
+Requires-Dist: requests==2.22.0
+Requires-Dist: requests3
+Requires-Dist: beautifulsoup4==4.7.1
+Requires-Dist: lxml
+
+PubMed2PDF
+==========
+
+A Python package to download PDFs from OA publications in PubMed. The underlying code is forked from
+https://github.com/billgreenwald/Pubmed-Batch-Download. Downloaded files are located  by default in your personal folder under the 'pubmed2pdf' directory.
+
+
+Installation
+------------
+``pubmed2pdf`` can be installed from `PyPI <https://pypi.org/project/pubmed2pdf>`_
+with the following command in your terminal:
+
+.. code-block:: sh
+
+    $ python3 -m pip install pubmed2pdf
+
+The latest code can be installed from `GitHub <https://github.com/ddomingof/PubMed2PDF>`_
+with:
+
+.. code-block:: sh
+
+    $ python3 -m pip install git+https://github.com/ddomingof/PubMed2PDF.git
+
+For developers, the code can be installed with:
+
+.. code-block:: sh
+
+    $ git clone https://github.com/ddomingof/PubMed2PDF.git
+    $ cd PubMed2PDF
+    $ python3 -m pip install -e .
+
+How to Use
+----------
+
+PubMed2PDF works by simply typing the list of PubMed identifiers in your command line interface or reading them from a
+file.
+
+Example from file:
+
+.. code-block:: sh
+
+    $ python3 -m pubmed2pdf pdf --pmidsfile="/my/path/to/the/file"
+
+.. code-block:: sh
+
+    $ python3 -m pubmed2pdf pdf --pmids="123, 1234, 12345"
+
+Run the help command to see all functionalities
+
+.. code-block:: sh
+
+    $ python3 -m pubmed2pdf pdf --help
