@@ -1,0 +1,14 @@
+README.md
+setup.py
+./numpyneuron/__init__.py
+./numpyneuron/activation.py
+./numpyneuron/loss.py
+./numpyneuron/nn.py
+numpyneuron.egg-info/PKG-INFO
+numpyneuron.egg-info/SOURCES.txt
+numpyneuron.egg-info/dependency_links.txt
+numpyneuron.egg-info/requires.txt
+numpyneuron.egg-info/top_level.txt
+test/test_activation.py
+test/test_loss.py
+test/test_nn.py
