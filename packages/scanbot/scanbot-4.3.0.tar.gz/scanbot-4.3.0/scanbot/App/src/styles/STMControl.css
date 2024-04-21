@@ -1,0 +1,81 @@
+.control-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.control-sidebar-container {
+    width: 30%; /* Adjust as needed */
+    min-width: 25em;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.control-main-content {
+    display: flex;
+    justify-content: center; /* Align images in the center */
+    align-items: center; /* Align images vertically */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.autoinit-content {
+    text-align: center; /* Center content */
+    padding: 20px;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background for the content area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    max-width: 600px; /* Maximum width of the content */
+    width: 100%; /* Full width */
+
+}
+
+.autoinit-content img, .autoinit-content video {
+    max-width: 100%; /* Make image and video responsive */
+    height: auto;
+    border-radius: 4px; /* Slightly rounded corners for the media */
+    margin-bottom: 20px; /* Spacing between media and button */
+}
+
+.init-button {
+    background-color: #61dafb; /* React blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.init-button:hover {
+    background-color: #21a1f1; /* Darker shade on hover */
+}
+
+.autotipshape-content {
+    display: flex;
+    justify-content: center; /* Align images in the center */
+    align-items: center; /* Align images vertically */
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    border: 3px;
+    border-style: dashed;
+    border-color: green;
+}
+
+.autotipshape-content img {
+    width: 50%;
+    height: auto;
+    margin: 10px;
+}
+
+.imprint-score {
+    color: white;
+    text-align: center;
+    font-size: large;
+}
