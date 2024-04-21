@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: OmniGenome
+Version: 0.0.1b1
+Summary: OmniGenome: A comprehensive toolkit for genome analysis.
+Home-page: https://github.com/yangheng95/OmniGenome
+Author: Yang, Heng
+Author-email: hy345@exeter.ac.uk
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: findfile (>=2.0.0)
+Requires-Dist: autocuda (>=0.16)
+Requires-Dist: metric-visualizer (>=0.9.6)
+Requires-Dist: tqdm
+Requires-Dist: termcolor
+Requires-Dist: gitpython
+Requires-Dist: transformers (>=4.37.0)
+Requires-Dist: torch (>=1.0.0)
+Requires-Dist: sentencepiece
+Requires-Dist: protobuf (<4.0.0)
+Requires-Dist: pandas
+Requires-Dist: viennarna
+Provides-Extra: dev
+Requires-Dist: dill ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
+# OmniGenome: A Comprehensive Toolkit of Genomic Modeling and Benchmarking 
