@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: blues-lib
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: Pillow >=10.3.0
+Requires-Dist: Requests >=2.31.0
+
+## Description
+Python library writed by Blues Liu.
+
+### Install
+```
+pip install blues_lib
+```
+
+### Usage
+```py
+from blues_lib.BluesFiler import BluesFiler
+
+print(BluesFiler.exists('dir'))
+```
+
