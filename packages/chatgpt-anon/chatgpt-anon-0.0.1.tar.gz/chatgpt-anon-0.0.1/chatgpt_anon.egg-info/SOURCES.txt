@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+chatgpt_anon/__init__.py
+chatgpt_anon/__main__.py
+chatgpt_anon/console.py
+chatgpt_anon/errors.py
+chatgpt_anon/main.py
+chatgpt_anon/utils.py
+chatgpt_anon.egg-info/PKG-INFO
+chatgpt_anon.egg-info/SOURCES.txt
+chatgpt_anon.egg-info/dependency_links.txt
+chatgpt_anon.egg-info/entry_points.txt
+chatgpt_anon.egg-info/requires.txt
+chatgpt_anon.egg-info/top_level.txt
+tests/test_chatgpt_anon.py

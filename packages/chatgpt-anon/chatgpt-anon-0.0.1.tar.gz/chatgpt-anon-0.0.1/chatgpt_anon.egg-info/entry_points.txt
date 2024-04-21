@@ -1,0 +1,3 @@
+[console_scripts]
+cga = chatgpt_anon.console:main
+chatgpt-anon = chatgpt_anon.console:main
