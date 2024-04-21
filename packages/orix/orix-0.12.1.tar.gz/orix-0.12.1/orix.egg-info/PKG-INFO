@@ -1,0 +1,180 @@
+Metadata-Version: 2.1
+Name: orix
+Version: 0.12.1
+Summary: orix is an open-source Python library for handling crystal orientation mapping data.
+Home-page: https://orix.readthedocs.io
+Author: orix developers
+Author-email: pyxem.team@gmail.com
+License: GPLv3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: dask[array]
+Requires-Dist: diffpy.structure>=3.0.2
+Requires-Dist: h5py
+Requires-Dist: matplotlib>=3.5
+Requires-Dist: matplotlib-scalebar
+Requires-Dist: numba
+Requires-Dist: numpy
+Requires-Dist: numpy-quaternion
+Requires-Dist: pooch>=0.13
+Requires-Dist: scipy
+Requires-Dist: tqdm
+Provides-Extra: doc
+Requires-Dist: ipykernel; extra == "doc"
+Requires-Dist: memory_profiler; extra == "doc"
+Requires-Dist: nbsphinx>=0.7; extra == "doc"
+Requires-Dist: numpydoc; extra == "doc"
+Requires-Dist: pydata-sphinx-theme; extra == "doc"
+Requires-Dist: scikit-image; extra == "doc"
+Requires-Dist: scikit-learn; extra == "doc"
+Requires-Dist: sphinx>=3.0.2; extra == "doc"
+Requires-Dist: sphinx-codeautolink[ipython]; extra == "doc"
+Requires-Dist: sphinx-copybutton>=0.2.5; extra == "doc"
+Requires-Dist: sphinx-design; extra == "doc"
+Requires-Dist: sphinx-gallery; extra == "doc"
+Requires-Dist: sphinxcontrib-bibtex>=1.0; extra == "doc"
+Provides-Extra: tests
+Requires-Dist: coverage>=5.0; extra == "tests"
+Requires-Dist: numpydoc; extra == "tests"
+Requires-Dist: pytest>=5.4; extra == "tests"
+Requires-Dist: pytest-cov>=2.8.1; extra == "tests"
+Requires-Dist: pytest-rerunfailures; extra == "tests"
+Requires-Dist: pytest-xdist; extra == "tests"
+Provides-Extra: dev
+Requires-Dist: black[jupyter]; extra == "dev"
+Requires-Dist: isort>=5.10; extra == "dev"
+Requires-Dist: manifix; extra == "dev"
+Requires-Dist: outdated; extra == "dev"
+Requires-Dist: pre-commit>=1.16; extra == "dev"
+Requires-Dist: ipykernel; extra == "dev"
+Requires-Dist: memory_profiler; extra == "dev"
+Requires-Dist: nbsphinx>=0.7; extra == "dev"
+Requires-Dist: numpydoc; extra == "dev"
+Requires-Dist: pydata-sphinx-theme; extra == "dev"
+Requires-Dist: scikit-image; extra == "dev"
+Requires-Dist: scikit-learn; extra == "dev"
+Requires-Dist: sphinx>=3.0.2; extra == "dev"
+Requires-Dist: sphinx-codeautolink[ipython]; extra == "dev"
+Requires-Dist: sphinx-copybutton>=0.2.5; extra == "dev"
+Requires-Dist: sphinx-design; extra == "dev"
+Requires-Dist: sphinx-gallery; extra == "dev"
+Requires-Dist: sphinxcontrib-bibtex>=1.0; extra == "dev"
+Requires-Dist: coverage>=5.0; extra == "dev"
+Requires-Dist: numpydoc; extra == "dev"
+Requires-Dist: pytest>=5.4; extra == "dev"
+Requires-Dist: pytest-cov>=2.8.1; extra == "dev"
+Requires-Dist: pytest-rerunfailures; extra == "dev"
+Requires-Dist: pytest-xdist; extra == "dev"
+
+orix is an open-source Python library for analysing orientations and crystal symmetry.
+
+The package defines objects and functions for the analysis of orientations represented
+as quaternions and 3D rotation vectors, accounting for crystal symmetry.
+Functionality builds primarily on `NumPy <https://www.numpy.org>`_ and `Matplotlib
+<https://matplotlib.org>`_.
+Initiation of the package was inspired by `MTEX <https://mtex-toolbox.github.io>`_.
+
+orix is released under the GPL v3 license.
+
+.. |pypi_version| image:: https://img.shields.io/pypi/v/orix.svg?style=flat
+   :target: https://pypi.python.org/pypi/orix
+
+.. |conda| image:: https://img.shields.io/conda/vn/conda-forge/orix.svg?logo=conda-forge&logoColor=white
+   :target: https://anaconda.org/conda-forge/orix
+
+.. |build_status| image:: https://github.com/pyxem/orix/workflows/build/badge.svg
+   :target: https://github.com/pyxem/orix/actions/workflows/build.yml
+
+.. |python| image:: https://img.shields.io/badge/python-3.8+-blue.svg
+   :target: https://www.python.org/downloads/
+
+.. |Coveralls| image:: https://coveralls.io/repos/github/pyxem/orix/badge.svg?branch=develop
+   :target: https://coveralls.io/github/pyxem/orix?branch=develop
+
+.. |pypi_downloads| image:: https://img.shields.io/pypi/dm/orix.svg?label=PyPI%20downloads
+   :target: https://pypi.org/project/orix/
+
+.. |conda_downloads| image:: https://img.shields.io/conda/dn/conda-forge/orix.svg?label=Conda%20downloads
+   :target: https://anaconda.org/conda-forge/orix
+
+.. |doi| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.3459662.svg
+   :target: https://doi.org/10.5281/zenodo.3459662
+
+.. |GPLv3| image:: https://img.shields.io/github/license/pyxem/orix
+   :target: https://opensource.org/license/GPL-3.0
+
+.. |GH-discuss| image:: https://img.shields.io/badge/GitHub-Discussions-green?logo=github
+   :target: https://github.com/pyxem/orix/discussions
+
+.. |binder| image:: https://mybinder.org/badge_logo.svg
+   :target: https://mybinder.org/v2/gh/pyxem/orix/HEAD
+
+.. |docs| image:: https://readthedocs.org/projects/orix/badge/?version=latest
+   :target: https://orix.readthedocs.io/en/latest
+
+.. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+
++----------------------+------------------------------------------------+
+| Deployment           | |pypi_version| |conda|                         |
++----------------------+------------------------------------------------+
+| Build status         | |build_status| |docs| |python|                 |
++----------------------+------------------------------------------------+
+| Metrics              | |Coveralls|                                    |
++----------------------+------------------------------------------------+
+| Activity             | |pypi_downloads| |conda_downloads|             |
++----------------------+------------------------------------------------+
+| Citation             | |doi|                                          |
++----------------------+------------------------------------------------+
+| License              | |GPLv3|                                        |
++----------------------+------------------------------------------------+
+| Community            | |GH-discuss|                                   |
++----------------------+------------------------------------------------+
+| Formatter            | |black|                                        |
++----------------------+------------------------------------------------+
+
+Documentation
+-------------
+
+Refer to the `documentation <https://orix.readthedocs.io>`__ for detailed installation
+instructions, a user guide, and the `changelog
+<https://orix.readthedocs.io/en/latest/changelog.html>`_.
+
+Installation
+------------
+
+orix can be installed with ``pip``::
+
+    pip install orix
+
+or ``conda``::
+
+    conda install orix -c conda-forge
+
+The source code is hosted in `GitHub <https://github.com/pyxem/orix>`_, and can also be
+downloaded from `PyPI <https://pypi.org/project/orix>`_ and
+`Anaconda <https://anaconda.org/conda-forge/orix>`_.
+
+Further details are available in the
+`installation guide <https://orix.readthedocs.io/en/latest/user/installation.html>`_.
+
+Citing orix
+-----------
+
+If analysis using orix forms a part of published work please cite the paper (`journal
+<https://doi.org/10.1107/S1600576720011103>`_, `arXiv
+<https://arxiv.org/abs/2001.02716>`_) and `the software
+<https://doi.org/10.5281/zenodo.3459662>`_.
