@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: travertine
+Version: 0.46.0
+Requires-Dist: xotless >=4.0.0
+Requires-Dist: ply
+Requires-Dist: immutables
+Requires-Dist: xotl.tools >=3.0.0
+Requires-Dist: babel >=2.6.0, <3
+Requires-Dist: importlib-resources ~=6.1.1 ; python_version < '3.9'
+Requires-Dist: hypothesis ==6.50.1 ; extra == 'test'
+Requires-Dist: pytest >=7.4.4 ; extra == 'test'
+Requires-Dist: coverage ~=6.3.2 ; extra == 'test'
+Requires-Dist: pytz >=2024.1 ; extra == 'test'
+Provides-Extra: test
+License-File: LICENSE
+Summary: Add your description here
+Author: Manuel Vázquez Acosta <manuel@merchise.org>, Merchise Autrement [~º/~] and Contributors
+Author-email: Merchise Autrement <info@merchise.de>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst; charset=UTF-8
+Project-URL: documentation, https://merchise-autrement.gitlab.io/travertine/
+Project-URL: repository, https://gitlab.merchise.org/mercurio-2018/travertine/
+
+=================================================
+ Generating pricing tables from pricing programs
+=================================================
+
+Travertine tries to solve the problem of generating price tables fast enough
+for our xhg2 project.  This Rust runtime **is not a replacement** of the
+Python runtime because there are still types of procedures which are not
+implemented in Rust.
+
