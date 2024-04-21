@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Ticket Booking Confirmation</title>
+  </head>
+  <body style="font-family: Arial, sans-serif; margin: 0; padding: 0">
+    <div
+      style="
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <h2 style="margin: 0; color: #333; font-size: 24px; line-height: 1.4">
+        Event Ticket Booking Confirmation
+      </h2>
+      <p style="font-size: 16px; line-height: 1.6; margin: 16px 0">Hello,</p>
+      <p style="font-size: 16px; line-height: 1.6; margin: 16px 0">
+        We're delighted to confirm your booking for the following event:
+      </p>
+      <ul
+        style="
+          font-size: 16px;
+          line-height: 1.6;
+          margin: 16px 0;
+          padding-left: 20px;
+        "
+      >
+        <li>
+          <strong>Event:</strong> {{ context.event | default:'Music Concert' }}
+        </li>
+        <li>
+          <strong>Venue:</strong> {{ context.venue | default:'Concert Hall' }}
+        </li>
+        <li>
+          <strong>Date:</strong> {{ context.date | default:'January 1, 2025' }}
+        </li>
+        <li><strong>Time:</strong> {{ context.time | default:'8:00 PM' }}</li>
+        <li>
+          <strong>Number of Tickets:</strong> {{ context.tickets | default:'2' }}
+        </li>
+      </ul>
+      <p style="font-size: 16px; line-height: 1.6; margin: 16px 0">
+        Thank you for choosing to attend our event. We look forward to seeing
+        you there!
+      </p>
+      <p style="font-size: 16px; line-height: 1.6; margin: 16px 0">
+        Best regards,
+      </p>
+      <p style="font-size: 16px; line-height: 1.6; margin: 16px 0">
+        {{ context.company | default:'[Your Name]' }}
+      </p>
+    </div>
+  </body>
+</html>
