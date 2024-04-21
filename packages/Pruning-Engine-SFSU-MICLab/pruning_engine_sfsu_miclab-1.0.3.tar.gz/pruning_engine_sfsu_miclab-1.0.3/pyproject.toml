@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Pruning_Engine_SFSU_MICLab"
+version = "1.0.3"
+authors = [
+  { name="Zhenyu Lin", email="zlin4@mail.sfsu.edu" },
+]
+description = "Pruning Engine for CNN"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies =[
+    "numpy",
+    "Pillow",
+    "PyYAML",
+    "scikit_learn",
+    "thop",
+    "torch",
+    "torchvision",
+    "tqdm",
+]
+license = {text = "MIT License"}
+
+[project.urls]
+Homepage = "https://github.com/MIC-Laboratory/CNN-Pruning-Engine"
+Issues = "https://github.com/MIC-Laboratory/CNN-Pruning-Engine/issues"
