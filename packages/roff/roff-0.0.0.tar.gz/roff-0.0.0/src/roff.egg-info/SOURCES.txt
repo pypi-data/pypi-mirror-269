@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/roff/__init__.py
+src/roff.egg-info/PKG-INFO
+src/roff.egg-info/SOURCES.txt
+src/roff.egg-info/dependency_links.txt
+src/roff.egg-info/top_level.txt
