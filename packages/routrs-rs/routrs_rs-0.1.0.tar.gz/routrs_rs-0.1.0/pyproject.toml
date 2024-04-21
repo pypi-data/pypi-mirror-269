@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "routrs-py"
+packages = [{ include = "routrs" }]
+version = "0.1.0"
+description = "Geograph-based shortest distance calculation for Python. 100% in Rust."
+authors = ["Carlo Casorzo <carlo@deepblu.dev>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poe.tasks]
+test = "pytest"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+poethepoet = "^0.25.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.7"
+maturin = "^1.5.1"
+pytest = "^8.1.1"
+mypy = "^1.9.0"
+
+[build-system]
+requires = ["maturin>=0.12"]
+build-backend = "maturin"
