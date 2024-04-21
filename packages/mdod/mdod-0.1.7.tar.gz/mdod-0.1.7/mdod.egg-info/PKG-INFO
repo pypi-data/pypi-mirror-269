@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mdod
+Version: 0.1.7
+Summary: MDOD, Multi-Dimensional data Outlier Detection
+Home-page: https://github.com/mddod/mdod
+Author: Z Shen
+Author-email: 626456708@qq.com
+License: BSD 3-Clause License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+
+Python library for Multi-Dimensional data Outlier/Anomaly Detection algorithm. For details please read README.md ,  or visit https://github.com/mddod/mdod
