@@ -1,0 +1,6 @@
+.gitattributes export-ignore
+.gitignore export-ignore
+.pylintrc export-ignore
+/.github export-ignore
+/.vscode export-ignore
+/docs export-ignore

@@ -1,0 +1,77 @@
+[build-system]
+requires = ["hatchling~=1.21"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "glang"
+version = "0.4.0"
+authors = [
+  { name = "Antros Economides", email = "antroseconomides@hotmail.co.uk" },
+  { name = "Tom Grant", email = "thomas.grant.mail@gmail.com" },
+]
+description = "A Graphene front-end for LLVM"
+# TODO readme = "README.md"
+license = "AGPL-3.0-only"
+requires-python = ">=3.12"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: GNU Affero General Public License v3",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Compilers",
+]
+dependencies = ["PyYAML~=6.0", "typed-argument-parser~=1.8"]
+
+[project.urls]
+"Homepage" = "https://github.com/DaveDuck321/GrapheneLang/"
+"Bug Tracker" = "https://github.com/DaveDuck321/GrapheneLang/issues"
+
+[project.scripts]
+glang = "glang.driver:main"
+
+
+# Development environment to be used with your IDE. Just set the venv path to
+# the output of `hatch env find dev`.
+[tool.hatch.envs.dev]
+dependencies = ["interegular~=0.3", "lark~=1.1"]
+
+[tool.hatch.envs.dev.scripts]
+bootstrap = "./bootstrap.sh"
+parser = "glang ./src/glang/parser/parser.c3 -o ./dist/parser -O3"
+test = "python tests/run_tests.py {args}"
+
+
+# Style environment. Does not depend on the project.
+[tool.hatch.envs.style]
+detached = true
+skip-install = true
+dependencies = ["black", "isort"]
+
+[tool.hatch.envs.style.scripts]
+check = [
+  "black --check --diff .",
+  "isort --check-only --diff --profile black .",
+]
+fmt = ["isort --profile black .", "black ."]
+
+
+# Build configuration. Need a bunch of dependencies because the build process
+# bootstraps the compiler.
+[tool.hatch.build]
+# Exclude symlinks used for editable installs.
+exclude = ["src/glang/bin"]
+dependencies = ["lark~=1.1", "PyYAML~=6.0", "typed-argument-parser~=1.8"]
+
+[tool.hatch.build.targets.sdist]
+exclude = [".github", "docs", "tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/glang"]
+hooks.custom.path = "hatch_build.py"
+
+[tool.ruff]
+# hatch sets this to 120 by default. 88 is what black uses.
+line-length = 88
+# Disable all rules without automatic fixes.
+fix-only = true
