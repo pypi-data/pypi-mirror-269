@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: WPEMPhase
+Version: 0.1.0
+Summary: Crystallographic Phase Identifier of Convolutional self-Attention Neural Network
+Home-page: https://github.com/Bin-Cao/Bgolearn
+Author: CaoBin
+Author-email: bcao@shu.edu.com
+Maintainer: CaoBin
+Maintainer-email: binjacobcao@gmail.com
+License: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Requires-Dist: torch
+Requires-Dist: plot
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: art
+Requires-Dist: pymatgen
+Requires-Dist: wget
+
+Crystallographic Phase Identifier of Convolutional self-Attention Neural Network (CPICANN)
+
+
+Maintained by Bin Cao. Please feel free to open issues in the Github or contact Bin Cao
+(binjacobcao@gmail.com) in case of any problems/comments/suggestions in using the code. 
+
