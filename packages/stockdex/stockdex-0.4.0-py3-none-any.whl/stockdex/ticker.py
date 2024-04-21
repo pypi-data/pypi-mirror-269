@@ -1,0 +1,41 @@
+"""
+Moduel for the Ticker class
+"""
+
+from stockdex.config import VALID_SECURITY_TYPES
+from stockdex.digrin_interface import Digrin_Interface
+from stockdex.justetf import JustETF
+from stockdex.nasdaq_interface import NASDAQInterface
+from stockdex.ticker_api import TickerAPI
+from stockdex.yahoo_web import YahooWeb
+
+
+class Ticker(TickerAPI, JustETF, NASDAQInterface, Digrin_Interface, YahooWeb):
+    """
+    Class for the Ticker
+    """
+
+    def __init__(
+        self,
+        ticker: str = "",
+        isin: str = "",
+        security_type: VALID_SECURITY_TYPES = "stock",
+    ) -> None:
+        """
+        Initialize the Ticker class
+
+        Args:
+        ticker (str): The ticker of the stock
+        isin (str): The ISIN of the etf
+        security_type (str): The security type of the ticker
+            default is "stock"
+        """
+
+        self.ticker = ticker
+        self.isin = isin
+        self.security_type = security_type if security_type else "stock"
+
+        if not ticker and not isin:
+            raise Exception("Please provide either a ticker or an ISIN")
+
+        super().__init__(ticker=ticker, isin=isin, security_type=security_type)
