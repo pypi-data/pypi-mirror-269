@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: star-alchemy
+Version: 0.6.0
+Summary: 
+Author: Daniel Bradburn
+Author-email: moagstar@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: sqlalchemy (>=2,<3)
+Requires-Dist: toolz (>=0.12.0,<0.13.0)
