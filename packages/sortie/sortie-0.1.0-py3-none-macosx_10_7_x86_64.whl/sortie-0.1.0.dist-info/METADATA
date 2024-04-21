@@ -1,0 +1,49 @@
+Metadata-Version: 2.3
+Name: sortie
+Version: 0.1.0
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Rust
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# Sortie
+
+An opinionated way to formatting your pyproject.toml files. Built in rust, ontop of
+[taplo](https://github.com/tamasfe/taplo).
+
+**Should you use this?**
+
+In general, using [taplo](https://github.com/tamasfe/taplo) will probably be more suitable for typical
+workflow. The primary purpose of this python package is for easy integration with Python-based CICD pipelines
+for the sole purpose of formatting `pyproject.toml` files.
+
+## Usage
+
+```
+$ sortie
+pyproject.toml left unchanged.
+```
+
+Or with the `--check` argument as part of your CICD pipeline
+
+```
+$ sortie --check
+pyproject.toml would be formatted!
+```
+
+## Options
+
+You may modify the behaviour of the formatter by setting the configuration in your `pyproject.toml`
+file. _Sortie_ uses the `[tool.sortie]` section of your file. For full options refer to
+[formatter options](https://taplo.tamasfe.dev/configuration/formatter-options.html). Compared with
+taplo, by default `reorder_arrays = true` and `reorder_keys = true` are automatically set.
+
+An example `pyproject.toml` file is shown below.
+
+```toml
+[tool.sortie]
+reorder_arrays = true
+reorder_keys = true
+```
+
