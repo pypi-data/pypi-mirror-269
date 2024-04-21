@@ -1,0 +1,3 @@
+This package aims to analyze time series of dynamical models by looking at their underlying matrix of interaction (i.e. the matrix of Jacobian coefficients).
+The package has methods to preprocess and plot time series, infer their time-evolving matrices of Jacobian coefficients, treat those matrices as the adjacency matrix of a signed directed graph, compute the triadic and global balance of the time series, and plot the evolution of balance/frustration in the network.
+A detailed user manual has been uploaded to the github repository https://github.com/abadreddine/FrustrationDynamiX/tree/main
