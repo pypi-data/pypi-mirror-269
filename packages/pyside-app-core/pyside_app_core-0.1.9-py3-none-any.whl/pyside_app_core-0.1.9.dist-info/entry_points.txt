@@ -1,0 +1,2 @@
+[console_scripts]
+compile-pyside-theme = pyside_app_core.generator_utils.__main__:main
