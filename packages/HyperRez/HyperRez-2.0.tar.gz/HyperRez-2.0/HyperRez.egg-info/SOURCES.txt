@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+HyperRez/__init__.py
+HyperRez/inference_realesrgan.py
+HyperRez.egg-info/PKG-INFO
+HyperRez.egg-info/SOURCES.txt
+HyperRez.egg-info/dependency_links.txt
+HyperRez.egg-info/not-zip-safe
+HyperRez.egg-info/requires.txt
+HyperRez.egg-info/top_level.txt
