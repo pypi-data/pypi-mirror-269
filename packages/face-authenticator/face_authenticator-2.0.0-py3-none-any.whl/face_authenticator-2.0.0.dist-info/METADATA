@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: face-authenticator
+Version: 2.0.0
+Summary: FaceAuthenticator package for face recognition and authentication
+Author: Немтырев Алексей Валерьевич
+Author-email: art.net82@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: face-recognition
+Requires-Dist: numpy
+Requires-Dist: sqlite3
+
+ 
+# Face Authenticator
+
+**Face Authenticator** - это библиотека для аутентификации лиц на основе библиотеки `face_recognition`. Она обеспечивает простой интерфейс для обучения модели на изображениях лиц и проверки подлинности лица на основе сохраненных данных.
+
+## Установка
+
+1. Убедитесь, что у вас установлен Python версии 3.6 или выше.
+
+2. Установите необходимые зависимости, запустив следующую команду:
+
+   
+shell
+   pip install face_recognition numpy sqlite3
+  
+
+3. Установите библиотеку `face_authenticator`, используя один из следующих способов:
+
+   - **Установка из PyPI**:
+
+     
+shell
+     pip install face-authenticator
+    
+
+   - **Установка из локального установочного файла**:
+
+     Скачайте последний релиз `face_authenticator` из раздела "Releases" на GitHub. Затем выполните следующую команду:
+
+     
+shell
+     pip install path/to/face_authenticator-X.X.X.tar.gz
+    
+
+     Замените `path/to/face_authenticator-X.X.X.tar.gz` на путь к скачанному файлу.
+
+## Использование
+
+### 1. Обучение модели
+
+python
+import face_authenticator
+
+# Создание экземпляра класса FaceAuthenticator
+authenticator = face_authenticator.FaceAuthenticator(database_file='faces.db')
+
+# Загрузка изображений лиц и соответствующих меток
+images = [...]  # список изображений лиц (numpy arrays)
+labels = [...]  # список меток для каждого лица
+
+# Обучение модели на изображениях лиц
+authenticator.train(images, labels)
+
+Метод `train` принимает список изображений лиц (`images`) и соответствующих меток (`labels`). Он обучает модель, извлекая векторы признаков для каждого лица и сохраняет их в базе данных для будущей аутентификации.
+
+### 2. Аутентификация лица
+
+python
+import face_authenticator
+import cv2
+
+# Создание экземпляра класса FaceAuthenticator
+authenticator = face_authenticator.FaceAuthenticator(database_file='faces.db')
+
+# Загрузка изображения для аутентификации
+image = cv2.imread('test_image.jpg')
+
+# Аутентификация лица на изображении
+is_authenticated, label = authenticator.authenticate(image)
+
+if is_authenticated:
+    print(f"Лицо аутентифицировано. Метка: {label}")
+else:
+    print("Лицо не аутентифицировано.")
+
+Метод `authenticate` принимает изображение лица (`image`) и возвращает флаг `is_authenticated`, указывающий, было ли лицо аутентифицировано, и метку (`label`), если аутентификация была успешной. Внутри метода используется сравнение векторов признаков лица с сохраненными данными, чтобы определить, соответствует ли лицо одному из известных лиц.
+
+### Примеры использования
+
+- Аутентификация пользователей на основе лица для входа в систему или разблокировки устройства.
+- Создание системы контроля доступа на основе лица для ограничения входа в определенные помещения.
+- Реализация функции распознавания лиц при организации событий или встреч.
+
+## Зависимости
+
+- face_recognition: библиотека для распознавания и сравнения лиц.
+- numpy: библиотекадля работы с массивами и матрицами.
+- sqlite3: модуль для работы с SQLite базами данных.
+
+## Вклад и обратная связь
+
+Если вы обнаружили ошибку, имеете предложения по улучшению или хотите внести свой вклад в проект, пожалуйста, создайте issue или pull request на [GitHub](https://github.com/your_username/face_authenticator).
+
+Если у вас есть вопросы или требуется помощь в использовании библиотеки, пожалуйста, свяжитесь со мной по электронной почте [your_email@example.com](mailto:your_email@example.com).
+
+---
+
+**Уведомление об авторских правах:** Face Authenticator является открытым исходным кодом и распространяется под лицензией MIT. См. файл `LICENSE` для получения дополнительной информации.
+Убедитесь, что в инструкции указаны правильные пути и зависимости, и добавьте свой собственный контактный адрес электронной почты в разделе "Вклад и обратная связь".
