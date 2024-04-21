@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+nysiis/__init__.py
+nysiis/nysiis.py
+nysiis/six.py
+nysiis/version.py
+pynysiis.egg-info/PKG-INFO
+pynysiis.egg-info/SOURCES.txt
+pynysiis.egg-info/dependency_links.txt
+pynysiis.egg-info/not-zip-safe
+pynysiis.egg-info/requires.txt
+pynysiis.egg-info/top_level.txt
