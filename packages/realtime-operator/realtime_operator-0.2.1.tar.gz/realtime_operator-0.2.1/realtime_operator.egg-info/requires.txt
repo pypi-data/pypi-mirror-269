@@ -1,0 +1,6 @@
+matplotlib
+numba
+numpy
+pytest
+pytest-benchmark
+python-dateutil
