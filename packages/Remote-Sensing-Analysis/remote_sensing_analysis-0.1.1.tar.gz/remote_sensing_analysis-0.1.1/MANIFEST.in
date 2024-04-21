@@ -1,0 +1,7 @@
+include LICENSE
+include README.md
+recursive-include src/mylibrary *.py
+recursive-include src/mylibrary *.yaml
+recursive-exclude src/mylibrary *.ipynb
+recursive-include assets *
+
