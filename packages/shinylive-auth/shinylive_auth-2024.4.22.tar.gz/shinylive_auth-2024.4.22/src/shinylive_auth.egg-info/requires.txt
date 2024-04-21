@@ -1,0 +1,11 @@
+shiny
+pydantic<2.0
+python_version<=3.8
+
+[tests]
+fastapi
+loguru
+pyfetch_mimic==0.0.3
+httpx
+shinylive
+shinyswatch
