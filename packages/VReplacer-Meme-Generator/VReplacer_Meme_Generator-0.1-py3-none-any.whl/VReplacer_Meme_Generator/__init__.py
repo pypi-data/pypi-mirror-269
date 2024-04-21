@@ -1,0 +1,1 @@
+from VReplacer_Meme_Generator.Generator import *
