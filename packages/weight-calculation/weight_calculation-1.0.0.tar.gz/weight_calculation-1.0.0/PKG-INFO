@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: weight_calculation
+Version: 1.0.0
+Summary: Package for calculating the total weight of items based on individual weight and quantity
+Author: Ailin
+Author-email: ailin.yar@yahoo.com
+Keywords: weight calculation,packaging
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
