@@ -1,0 +1,100 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-02-18 18:07+0100\n"
+"PO-Revision-Date: 2024-01-13 16:19+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: python/travertine/structs.py:290 python/travertine/structs.py:308
+msgid "Procedure {name}"
+msgstr "Procedimiento «{name}»"
+
+#: python/travertine/structs.py:291
+msgid "{title} was optimized away"
+msgstr "El procedimiento «{title}» fue optimizado"
+
+#: python/travertine/structs.py:309
+msgid "<p>{title} was optimized away<p>"
+msgstr "<p>El procedimiento «{title}» fue optimizado</p>"
+
+#: python/travertine/procedures.py:163
+msgid "Price is not defined"
+msgstr "Le precio no ha sido definido"
+
+#: python/travertine/procedures.py:182
+msgid "Constant price"
+msgstr "Precio fijo"
+
+#: python/travertine/procedures.py:218
+#, python-format
+msgid "The value of %s"
+msgstr "El valor del atributo «%s»"
+
+#: python/travertine/procedures.py:252
+#, python-format
+msgid "Value of %s"
+msgstr "El valor de la variable «%s»"
+
+#: python/travertine/procedures.py:485 python/travertine/procedures.py:559
+msgid "Aggregated over items"
+msgstr "Consolidación de los resultados"
+
+#. i18n: title of the branching procedures (with/out backtracking)
+#: python/travertine/procedures.py:616
+msgid "Matched from sub-procedures"
+msgstr "Correspondiente a un sub-procedimiento"
+
+#: python/travertine/procedures.py:902 python/travertine/procedures.py:957
+#, python-format
+msgid "Undefined because not branch matched in \"%s\""
+msgstr "Indefinido porque ninguna condición fue verdadera en «%s»"
+
+#: python/travertine/procedures.py:1060
+msgid "Undefined because the formula contained errors"
+msgstr "Indefinido porque la fórmula tenía errores"
+
+#: python/travertine/procedures.py:1153
+msgid "Undefined because the procedure was ill-typed"
+msgstr "Indefinido porque el procedimiento está mal formado (tipo incorrecto)"
+
+#: python/travertine/predicates.py:83
+msgid "Demand date since {start} and before {end}"
+msgstr "La fecha de la solicitud está entre {start} y {end} (excluído)"
+
+#: python/travertine/predicates.py:130
+msgid "Execution date since {start} and before {end}"
+msgstr "La fecha de ejecución está entre {start} y {end} (excluído)"
+
+#: python/travertine/predicates.py:169
+msgid "Attribute '{attr.name}' has value {value}"
+msgstr "El atributo «{attr.name}» tiene el valor {valor}"
+
+#: python/travertine/predicates.py:212
+msgid "Attribute '{attr.name}' is in the range of {range}"
+msgstr "El atributo «{attr.name}» está en el intervalo {range}"
+
+#: python/travertine/predicates.py:261
+msgid "Quantity is greater or equal to {min} and less that {upperbound}"
+msgstr "La cantidad solicitada es mayor igual que {min} y menor que {upperbound}"
+
+#: python/travertine/tables.py:466
+msgid "Price"
+msgstr "Precio"
+
+#: python/travertine/types.py:199
+msgid "Undefined"
+msgstr "Indefinido"
+
