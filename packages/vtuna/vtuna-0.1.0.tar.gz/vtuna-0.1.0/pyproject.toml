@@ -1,0 +1,69 @@
+# ---- All project specifications ---- #
+[project]
+name = "vtuna"
+description = "A library for tuning adapters for visual generation models"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [{ name = "Ray Wang" }]
+keywords = ["pytorch", "finetuning", "adapting", "diffusion"]
+dependencies = [
+    # Hugging Face integrations
+    "datasets",
+    "huggingface_hub",
+    "safetensors",
+    "diffusers",
+
+    # Miscellaneous
+    "fire",
+    "loguru",
+    "tqdm",
+    "omegaconf",
+]
+dynamic = ["version"]
+
+[project.urls]
+GitHub = "https://github.com/budui/vtuna"
+Issues = "https://github.com/budui/vtuna/issues"
+
+[project.scripts]
+vtuna = "vtuna._cli.vtuna:main"
+
+[project.optional-dependencies]
+dev = ["tensorboard"]
+
+[tool.setuptools.dynamic]
+version = { attr = "vtuna.__version__" }
+
+
+# ---- Tooling specifications ---- #
+[tool.usort]
+first_party_detection = false
+
+[tool.black]
+target-version = ["py38"]
+
+[tool.pydoclint]
+style = 'google'
+check-return-types = 'False'
+
+[tool.pytest.ini_options]
+addopts = [
+    "--showlocals",
+    "--import-mode=prepend",
+    "--without-integration",
+    "--without-slow-integration",
+]
+# --showlocals will show local variables in tracebacks
+# --import-mode=prepend will add the root (the parent dir of vtuna/, tests/, recipes/)
+# to `sys.path` when invoking pytest, allowing us to treat `tests` as a package within the tests.
+# --without-integration and --without-slow-integration: default to running unit tests only
+
+[tool.setuptools.packages.find]
+where = [""]
+include = ["vtuna*"] # alternatively: `exclude = ["additional*"]`
+namespaces = true
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

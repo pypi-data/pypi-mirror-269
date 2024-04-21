@@ -1,0 +1,11 @@
+datasets
+huggingface_hub
+safetensors
+diffusers
+fire
+loguru
+tqdm
+omegaconf
+
+[dev]
+tensorboard
