@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: BJSCP
+Version: 0.0.3
+Summary: Helper for competitive programming
+Home-page: https://github.com/hashilyze/CompetitiveProgramming
+Download-URL: https://github.com/hashilyze/CompetitiveProgramming
+Author: JUNSU BAE
+Author-email: jsbae1023@gmail.com
+Keywords: BJS,CP,BJSCP,Competitive,CompetitiveProgramming
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+
