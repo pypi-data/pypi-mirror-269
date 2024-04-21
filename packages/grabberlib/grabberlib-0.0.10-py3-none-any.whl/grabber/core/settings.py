@@ -1,0 +1,19 @@
+import pathlib
+
+from environs import Env
+
+env = Env()
+env.read_env()
+APP_ROOT = pathlib.Path(__file__).parent.parent.parent
+USER_MEDIA_ROOT_PATH = env.str("USER_MEDIA_ROOT", None)
+MEDIA_ROOT = APP_ROOT / "media"
+KEY = env.str("KEY", "default")
+
+
+def get_media_root() -> pathlib.Path:
+    if USER_MEDIA_ROOT_PATH is not None:
+        media_root = pathlib.Path(USER_MEDIA_ROOT_PATH)
+    else:
+        media_root = MEDIA_ROOT
+
+    return media_root
