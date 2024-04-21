@@ -1,0 +1,4 @@
+[console_scripts]
+single_board_plugin=provisioner_single_board_plugin.main_dev:main
+test_runner=provisioner_single_board_plugin.main_fake:main
+
