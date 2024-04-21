@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: bioomics
+Version: 0.2.0
+Summary: Download, retrieve and process omics data for further bioinformatics
+Home-page: https://github.com/Tiezhengyuan/bio_omics
+Author: Tiezheng Yuan
+Author-email: tiezhengyuan@hotmail.com
+Keywords: pypi,cicd,python
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Bio
+Requires-Dist: biosequtils
+Requires-Dist: lxml
+Requires-Dist: redis
+Requires-Dist: sh
+
+\n# bio_omics
+Download, retrieve and process omics data, or biological informatics data from public database
+
+Comprehensive databases
+- NCBI
+
+Sepecific databases
+- miRBase: mircoRNA database, https://www.mirbase.org/
+- RNACentral: non-coding RNA squence database, https://rnacentral.org/
+- IEDB: immune epitope database, https://www.iedb.org/
+
+
+See the help documents of example coding at https://www.fbridges.com/pipeline/bio_omics.
+
+https://www.iedb.org/downloader.php?file_name=doc/epitope_full_v3.zip
