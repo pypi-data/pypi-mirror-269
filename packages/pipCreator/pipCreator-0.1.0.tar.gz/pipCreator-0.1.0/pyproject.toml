@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pipCreator"
+version = "0.1.0"
+description = "This creates all the necessary files for creating a python package."
+authors = ["Rakesh Kanna <rakeshkanna0108@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/rakeshkanna-rk/pipCreator"
+repository = "https://github.com/rakeshkanna-rk/pipCreator"
+keywords = ["pip", "package", "python", "setup", "create", "creator"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+click = "^8.1.7"
+colorama = "^0.4.6"
+
+
+[tool.poetry.scripts]
+pipcreator = "pipcreator:cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
