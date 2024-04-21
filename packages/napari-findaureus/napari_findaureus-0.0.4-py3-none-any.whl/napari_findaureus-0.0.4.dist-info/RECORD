@@ -1,0 +1,21 @@
+findaureus/Module_Class.py,sha256=Opi_dgTUCs5fQ27ZF1oIhRTMJy4WdKq-u0c6N25j5P8,19596
+findaureus/__init__.py,sha256=4xc90tR_QQOnQ6MC0YuYbBQkRxHZuwfvSjsggbaALPE,290
+findaureus/_reader.py,sha256=932AlsMsz5ToEQp2GyN6WtcHdgISH-cLz66w4_seO64,1425
+findaureus/_sample_data.py,sha256=xH1frjJRRlEdtBxJsebIYJ1FHq1hN53bMlL_--HaYfE,644
+findaureus/_widget.py,sha256=U5_61zqnfDUDmMnhP79S8FvwQ0s784Si8D9u0Gvf6cY,10551
+findaureus/_writer.py,sha256=iqoyFgN-IWctf3UrLp7RtvA0e9oaHfUNxk16qMuJh_A,923
+findaureus/napari.yaml,sha256=ir2-_kkmsPKtXddty7Db6TYARJp_yloNJBy9g3q4Xxo,596
+findaureus/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+findaureus/_tests/test_reader.py,sha256=-hK602Z1kMDoN_weNhWBbbAZfzEV5UxZtDsd4l9fGP8,972
+findaureus/_tests/test_sample_data.py,sha256=hAKDbnWbsTKVxcQEbmXlwTBpMGjWDJnJ1m5h8m_VX9A,101
+findaureus/_tests/test_widget.py,sha256=GRctJNNSxzTdazalPVRDVx3IIgn44Mfun21CKNXUsrw,1243
+findaureus/_tests/test_writer.py,sha256=B5FngZBtMqvRxlEOgfWcRVAvRjw4lTWHpWMbBNaPbuc,119
+findaureus/resources/Findaureus icon.svg,sha256=VKCvnn7zXOS3-ZQWMgYIccx-JXwYOvJWzO9zIQyGYGE,34121
+findaureus/resources/GitHub-Mark-Light-32px.png,sha256=a0WCztPFsDlCMkMgf0cNy6coiRgTFlf4npvcrab6ikA,1571
+findaureus/resources/application_icon.png,sha256=CXs0Ksg3dKZ-VgmCiN3L5ZGmLzvvfTlDOP1z42Tgnf4,68644
+napari_findaureus-0.0.4.dist-info/LICENSE,sha256=7meVJdA1_HVfKx_qX9VIj8rpfFCBiso41nSEtkUJLA0,1084
+napari_findaureus-0.0.4.dist-info/METADATA,sha256=zrCNRztrG_KHlx-yUxokdLI4Ja0YDONcr7O1QuMcSts,6169
+napari_findaureus-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+napari_findaureus-0.0.4.dist-info/entry_points.txt,sha256=a-VChEmznw5zTr1TRjZ4ffD3U7PKiI5zyypNIup9Ypw,61
+napari_findaureus-0.0.4.dist-info/top_level.txt,sha256=OYoHqfmC-TIQcIiHlHYT0G-apVaaWqz6poY4rzICPsQ,11
+napari_findaureus-0.0.4.dist-info/RECORD,,
