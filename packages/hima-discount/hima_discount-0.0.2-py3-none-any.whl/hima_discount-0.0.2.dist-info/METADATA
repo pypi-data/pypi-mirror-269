@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: hima-discount
+Version: 0.0.2
+Summary: This is simple Discount calculator
+Home-page: UNKNOWN
+Author: Hima Shree 
+Author-email: X23189851@student.ncirl.ie
+License: MIT
+Keywords: Discount,Discount calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: MacOS
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+# Discount Calculator Library
+
+This Python package provides a simple utility for calculating discounts on prices.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install discount
+
+
