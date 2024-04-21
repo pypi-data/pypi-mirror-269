@@ -1,0 +1,6 @@
+requests
+requests_toolbelt
+
+[dev]
+pytest
+pytest-mock
