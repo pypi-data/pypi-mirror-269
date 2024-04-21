@@ -1,0 +1,26 @@
+{
+    
+    "to" : { "type" : "str" , "units" : { "u" : { } } } ,
+    "subject" : { "type" : "str" , "units" : { "u" : { } } } ,
+    "body" : { "type" : "str" , "units" : { "u" : {  } } } ,
+
+    "startDate" : { "type" : "str" , "units" : { "u" : { } } } ,
+    "duration" : { "type" : "int" , "units" : { "u" : { } } } ,
+    "missionDuration" : { "type" : "int" , "units" : { "u" : { } } } ,
+    "perigeeAltitude" : { "type" : "int" , "units" : { "u" : { } } } ,
+    "apogeeAltitude" : { "type" : "int" , "units" : { "u" : { } } } ,
+    "timeSteps" : { "type" : "list" , "units" : { "u" : { }  } } ,
+    "altitudeSteps" : { "type" : "list" , "units" : { "u" : { } } } ,
+
+    "fp_json" : { "type" : ".json" , "units" : { "u" : { } } } ,
+    "fp_xlsx" : { "type" : ".xlsx" , "units" : { "u" : { } } } ,
+    "fp_csv" : { "type" : ".csv" , "units" : { "u" : { } } } ,
+
+    "fp_png" : { "type" : ".png" , "units" : { "u" : { } } } ,
+
+    "xs" : { "type" : "list" , "units" : { "u" : { } } } ,
+    "ys" : { "type" : "list" , "units" : { "u" : { } } } 
+
+}
+
+
