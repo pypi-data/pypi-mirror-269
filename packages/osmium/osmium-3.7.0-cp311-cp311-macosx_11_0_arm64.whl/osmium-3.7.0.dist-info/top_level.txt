@@ -1,0 +1,6 @@
+cmake_example
+osmium
+osmium/area
+osmium/filter
+osmium/osm
+osmium/replication
