@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: lightningtoolkit
+Version: 1.0.1
+Summary: A toolkit that combines many functions
+Home-page: https://github.com/BinaryGuo/Lightning_Toolkit
+Author: GQX
+Author-email: kill114514251@outlook.com
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+License-File: LICENSE
+
+# Lightning Toolkit
+
+## English
+### Project Description
+- 
+###### tips: you need anaconda,miniconda or other Python3.10 Interpreter to run in shell.
+
+## 中文
+
+### 项目说明
+- 此项目是一个工具包
+- github：https://github.com/BinaryGuo/Lightning_Toolkit/
+- 问题反馈：https://github.com/BinaryGuo/Lightning_Toolkit/issues
+- 联系邮箱（GQX）：kill114514251@outlook.com
+- testPyPI：同名
+
+### 开发环境
+- Ubuntu Linux 22.04
+- Python 3.10.12
+
+### 改动说明
+- 此版本是第一个版本
+
+### 问题修复
+- 无
+
+### 程序说明
+#### 安装方法
+在shell上执行
+> pip3 install lightningtoolkit
+
+###### 提示：你需要Python3.10解释器才能在shell上运行。
+#
