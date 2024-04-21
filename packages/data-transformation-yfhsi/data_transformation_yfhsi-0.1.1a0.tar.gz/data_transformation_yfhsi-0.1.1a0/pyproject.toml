@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "data-transformation-yfhsi"
+version = "0.1.1a0"
+description = ""
+authors = ["skaival <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
