@@ -1,0 +1,9 @@
+numpy>=1.22.4
+
+[dev]
+Cython>=3.0.0
+pytest
+pillow
+opencv-python-headless
+build
+twine
