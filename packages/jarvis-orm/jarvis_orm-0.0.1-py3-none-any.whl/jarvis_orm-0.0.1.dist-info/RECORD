@@ -1,0 +1,12 @@
+jarvis_orm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jarvis_orm/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jarvis_orm/commands/commands.py,sha256=WtHFraAFgJazcacgWSKD40Qza0W4ZeLQ_N8rxhVRFFQ,2881
+jarvis_orm/commands/parse.py,sha256=1F2arHxgM7_XwkmE_SL_x4oX-p5TCTZOxYPZuGqQMIg,744
+jarvis_orm/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jarvis_orm/core/engine.py,sha256=5zZ80lRLgq3KF9bTcCt3-Or3cGmMyBAIh4x3t9A03II,2607
+jarvis_orm/core/model.py,sha256=ZYsX-SZQQ394uhTaStsYFnEY_uAdMKNtvxhHkDL9Ils,7564
+jarvis_orm/core/utilities.py,sha256=MDxV8L2PcGzLyhGv6FDxWECs7qhtTurRlEINnz8Zjaw,1146
+jarvis_orm-0.0.1.dist-info/METADATA,sha256=4QU_VCD2v4TqYxaoLMwpjQwq6iOo8xSGwX1pU35XDT4,2081
+jarvis_orm-0.0.1.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+jarvis_orm-0.0.1.dist-info/licenses/LICENSE,sha256=1PEqTybcs9P51B6C086axDxWT0KfigeEbf69r_sniN4,1087
+jarvis_orm-0.0.1.dist-info/RECORD,,
