@@ -1,0 +1,11 @@
+picox/__init__.py,sha256=PCd1YnxXKA54YezaVb1HMEjppsgU-hEBhCbpVvLSDFs,21
+picox/cli.py,sha256=K6DtCefcPqdQLxa_arRxAoNCXYKgD_-loOIryR_Ir5w,3055
+picox/detect.py,sha256=KpcLBTQw63FSrWxgypubms2XNMwXlN3gexTvEnSUgxk,2083
+picox/logconfig.py,sha256=-f5pGzvE1UiUvQt3dbNNsvoRjDIcI1cEIU0KnwnX-To,54
+picox/upy.py,sha256=bUs4Y9DiitM1Zxf_RHyPwxCkzZ_5G2wnxIvdwCPYklM,11198
+picox-1.1.4.dist-info/LICENCE,sha256=GLi-S_OiKkGwLWQapqhIAjUSnOv_DrTGU7rXDOwujjc,1075
+picox-1.1.4.dist-info/METADATA,sha256=X2neNxc7dJpW_Gb3eWvewMB6INM8QeHPRTkKMBZJxa4,4995
+picox-1.1.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+picox-1.1.4.dist-info/entry_points.txt,sha256=L9ob7IZ8P9PMGsr7vCpqDrLM_W5vKYdImVZZZuGLMrM,41
+picox-1.1.4.dist-info/top_level.txt,sha256=FR0RvazAIko5S3rDET8_It8eWdh7dSZ3EG4hRPOox-s,6
+picox-1.1.4.dist-info/RECORD,,
