@@ -1,0 +1,16 @@
+{
+    "message" : { "pins" : { "to" : { } , "subject" : { } , "body" : { } } } ,
+
+    "trajx" : { "pins" : { "startDate" : { } , "duration" : { } , "missionDuration" : { } , "perigeeAltitude" : { } , "apogeeAltitude" : { } , "timeSteps" : { } , "altitudeSteps" : { } } } ,
+
+    "trajectory" : { "pins" : { "fp_json" : { } } } ,
+    "trappedParticleSpectrum" : { "pins" : { "fp_json" : { } } } ,
+    "DoseDepthCurve" : { "pins" : { "fp_json" : { } } } ,
+    "csv" : { "pins" : { "fp_csv" : { } } } ,
+    "excel_workbook" : { "pins" : { "fp_xlsx" : { } } } ,
+    "image" : { "pins" : { "fp_png" : { } } } ,
+    "points" : { "pins" : { "xs" : { } , "ys" : { } , "zs" : { } } } 
+
+}
+
+
