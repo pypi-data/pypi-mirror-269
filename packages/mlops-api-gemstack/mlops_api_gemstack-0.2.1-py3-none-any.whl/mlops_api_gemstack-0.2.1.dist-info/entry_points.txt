@@ -1,0 +1,3 @@
+[console_scripts]
+mlops = mlops_api_gemstack:cli
+

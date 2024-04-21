@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mlops-api-gemstack
+Version: 0.2.1
+Summary: An API package connect to a MLops server relating to the GEMstack project.
+Home-page: https://github.com/krishauser/GEMstack/tree/s2024_MLops/MLops/mlops_api_gemstack
+Author: Haoming Sun
+Author-email: ricardosun990122@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: pprintpp
+Requires-Dist: urllib3
+Requires-Dist: click
+
+UNKNOWN
+
