@@ -1,0 +1,15 @@
+extensible/__init__.py,sha256=XL1jrQLksNZlMYOTQL0EURl-3CZcWLl0dR-ZI2PrLqw,232
+extensible/defs.py,sha256=lBko1ShGO-MqIeVomAvtF2PesNFVcq2RKJJPCOSPVSc,339
+extensible/extensible.py,sha256=dN9EyfuR6OL6R6phtCasUM0xICTrylsi16f-w0ldcA4,9310
+extensible/train_manager.py,sha256=eF1Bjtn73bp7NINOkLz6ohMkWcI_pvPKKDZlRKWxw4s,10668
+extensible/extensions/__init__.py,sha256=2tzFPiNamaprMDwMIOCIqaQfKyDZOzjSNrXFWDJPBJY,206
+extensible/extensions/checkpoints.py,sha256=jsG62iBsgM8nSJdqy0t_F58aJXh7urbWbk8eW8wbSro,6216
+extensible/extensions/default.py,sha256=jnVVmH5OtQTNWa3Tob2XeTckrH7KAulc19NQQ6vcYLI,2482
+extensible/extensions/extension.py,sha256=Sk4v97kD9ofAA0-h7ia24l16jpsrCkoz5jGzlLpiFXc,26
+extensible/extensions/gradient_visualizer.py,sha256=MN6kLgPdVEi05Sdu5FUSKqA4hcR0q-JJw9axP6iQn70,1660
+extensible/extensions/soleil.py,sha256=0D44qaKHISanBSnN8efRswAF-9amS1nwwz7gmcRQIiE,4937
+extensible/extensions/utils.py,sha256=Wpa1mk5EKIuPdGpvavSXys5FsNN1o6VcqU6G8b44Ylc,2741
+extensible-0.1.0.dist-info/METADATA,sha256=eWWMLezxDmZjGAL2uGgurFjYCzYHQdfuT8wczqpNdoc,662
+extensible-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+extensible-0.1.0.dist-info/top_level.txt,sha256=ilt79DeBCXfohIdHOrioIf9bFtaL4eBm8eR6E_3fAS8,11
+extensible-0.1.0.dist-info/RECORD,,
