@@ -1,0 +1,12 @@
+__pycache__/
+.DS_Store
+.mypy_cache/
+.pytest_cache/
+.thx/
+.yarn/
+*.egg-info/
+coverage/
+dist/
+node_modules/
+venv/
+yarn-error.log
