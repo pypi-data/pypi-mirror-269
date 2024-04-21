@@ -1,0 +1,68 @@
+[tool.coverage.run]
+branch = true
+omit = [
+  "*/.venv/*",
+  "runtests.py",
+  "makemigrations.py"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  "pragma: no cover",
+  "def __str__"
+]
+omit = [
+  "*/.venv/*",
+  "runtests.py",
+  "makemigrations.py"
+]
+show_missing = true
+skip_covered = true
+skip_empty = true
+precision = 2
+
+[tool.poetry]
+name = "django-user-email"
+version = "1.1.1"
+description = "Custom, simple Django User model with email as username"
+authors = ["Khasbilegt.TS <khasbilegt.ts@gmail.com>"]
+license = "MIT"
+homepage = "https://github.com/khasbilegt/django-user-email"
+repository = "https://github.com/khasbilegt/django-user-email"
+keywords = ["django", "model", "user", "email", "username", "custom"]
+readme = "README.md"
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",   
+]
+packages = [
+    { include = "user_email"},
+]
+include = [
+    "LICENSE",
+    "README.md"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+factory-boy = "^3.3.0"
+nox = "^2023.4.22"
+ruff = "^0.4.1"
+coverage = {extras = ["toml"], version = "^7.3.4"}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
