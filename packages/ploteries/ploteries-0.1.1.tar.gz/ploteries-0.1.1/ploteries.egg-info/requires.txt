@@ -1,0 +1,12 @@
+pytest
+sphinx
+enum_tools
+numpy
+sqlalchemy==1.4.46
+climax
+dash
+dash_daq
+gunicorn
+jztools>=0.1.5
+pandas
+rich
