@@ -1,0 +1,11 @@
+huffify/__init__.py,sha256=Eegza4TuxvJ97AFVNjUwKJvnYaLNHjoV5ufKkc9tKHg,65
+huffify/abstract.py,sha256=0Ot5PzI0dNpxz9qDeuDjXIO5JL6J50u2RJhzFK5MGWs,654
+huffify/annotations.py,sha256=yxHOqLsXSx2848DQe7g34IL5VZEO4aIz7LMieNkqIU8,111
+huffify/encoders.py,sha256=FBltBsKRTuwhuu93TGV1m7ZZlprIBDdRcddD1nwELk4,2691
+huffify/fileManger.py,sha256=JJLxVZXWRnQ4WI6_7n9CRwp36jd2l_LuV8Fd934ETHo,765
+huffify/heapNodes.py,sha256=F7ffIemxSkx31yl9raT8GnZbL5_3wjnzM-AbpLeE5iA,909
+huffify/huffify.py,sha256=wWHeB-qSHYlPAE2IG-l4b4Kc0-sIgZ78OjdazNwbZDw,2578
+huffify-0.1.1.dist-info/LICENSE,sha256=I2UI-obrfAqii8Y_4_u-5mmBSFkhi7hcfNoHqsO53sY,1072
+huffify-0.1.1.dist-info/METADATA,sha256=d8slHZKHGH12KYXmnYdu4ruTy1xHl1hDv-KHvnWTaEU,547
+huffify-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+huffify-0.1.1.dist-info/RECORD,,

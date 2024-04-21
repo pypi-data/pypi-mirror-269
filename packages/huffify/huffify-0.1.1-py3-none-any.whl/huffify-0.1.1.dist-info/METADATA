@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: huffify
+Version: 0.1.1
+Summary: Simple Huffman algotithm implementation
+Home-page: https://github.com/munwriter/Huffify
+License: MIT
+Keywords: huffman,compression,encoding,decoding
+Author: munwriter
+Author-email: glebvysokov3@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Repository, https://github.com/munwriter/Huffify
+Description-Content-Type: text/markdown
+
+
