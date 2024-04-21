@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: llmt
+Version: 0.0.5
+Summary: LLMT aims to make it easy to programatically connect OpenAI and HuggingFace models to your data pipelines, CI/CD, or personal workspaces.
+Author-email: Artem Golub <artem@outermeasure.com>
+Project-URL: Homepage, https://github.com/omhq/llmt
+Project-URL: Bug Tracker, https://github.com/omhq/llmt/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai ==1.14.1
+Requires-Dist: requests ==2.31.0
+Requires-Dist: watchdog ==4.0.0
+Requires-Dist: halo ==0.0.31
+Requires-Dist: inquirer ==3.2.4
+Requires-Dist: Jinja2 ==3.1.3
+Requires-Dist: PyYAML ==6.0.1
+Requires-Dist: docstring-parser ==0.16
+Requires-Dist: typing-extensions ==4.10.0
+Requires-Dist: numpy ==1.26.4
+Requires-Dist: pandas ==2.2.1
+Requires-Dist: psycopg2-binary ==2.9.9
+Requires-Dist: SQLAlchemy ==2.0.28
+Requires-Dist: pydantic ==2.6.4
+
+# LLMT
+
+[![PyPI version](https://badge.fury.io/py/llmt.svg)](https://badge.fury.io/py/llmt)
+
+## What is this good for?
+
+LLMT aims to make it easy to programatically connect OpenAI and HuggingFace models to your data pipelines, CI/CD, or personal workspaces.
+
+Supports function calling, chat and context history retention. Python 3.12 and up.
+
+### Usage
+
+Use the package in directly in your python code (`pip install llmt`), or as a local workspace running a container to interact with ChatGPT.
+
+### Module import
+
+```python
+from llmt import LLMT
+
+
+llmt = LLMT()
+llmt.init_assistant(
+    "snowflake",
+    api_key="...",
+    model="gpt-3.5-turbo",
+    assistant_description="You are a snowflake expert. Answer questions briefly in a sentence or less."
+)
+
+llmt.init_functions(["./helper_functions.py"])
+llmt.init_context("snowflake")
+response = llmt.run("generate an example merge dml")
+
+print(response)
+```
+
+### Local workspace
+
+Install Docker and make command. Make is not required since you can use docker compose.
+
+- Clone this repo.
+- If using custom functions, create your functions in the udf/ directory and import them in cli.py.
+- Update the default configuration file, or create a new one in configs/.
+- Run `make run`. Default config will let you use input and output files.
+- Use files/input.md to send messages.
+- Use files/output.md to receive messages.
+- CTRL + C to quit out of the container and clean up orphans.
+
+### Configuration file
+
+If both (input_file, output_file) are ommited, then the default terminal will be used.
+Using the input and output files to converse with an LLM is easier than using the terminal.
+
+- **input_file**: specify a file for user input
+- **output_file**: specify a file for LLM response
+- **assistants**:
+    - **type**: Assistant type, currently only OpenAI.
+    - **assistant_name**: Assistant name.
+    - **assistant_description**: Assistant description which OpenAI will use for assistant context.
+    - **api_key**: OpenAI API key.
+    - **model**: OpenAI model.
+    - **tools**: Function definitions. For now, in addition to creating functions, functions must be also defined in a format which OpenAI API can understand. Functions take one object argument which must be unpacked to extract arguments within each function. Hopefully this changes in the future.
+
+The image used for running this code has some common tools installed which I use daily in my custom functions:
+
+- awscli
+- cloudquery
+- numpy
+- pandas
+- psycopg2-binary
+- SQLAlchemy
+
+Build and use your own image with additional tools for whatever your functions need.
+
+## Need help?
+
+I help organizations build data pipelines with AI integrations. If your organization needs help building or exploring solutions, feel free to reach me at artem at outermeasure.com. The general workflow is:
+
+1. **Fine tune** a curated model with proprietary data to perform tasks specific to your pipeline.
+2. **Deploy** the model in your cloud environment.
+3. **Connect your pipeline** to the deployment via an API.
+4. **Iterate and improve** the model.
