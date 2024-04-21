@@ -1,0 +1,77 @@
+# deflate API
+
+This is a very thin Python wrapper Eric Biggers' excellent
+[libdeflate](https://github.com/ebiggers/libdeflate).
+
+Currently, it only handles:
+
+## Compression and decompression of gzip data, with a very basic API
+
+```python
+import deflate
+level = 6  # The default; may be 1-12 for libdeflate.
+compressed = deflate.gzip_compress(b"hello world!" * 1000, level)
+original = deflate.gzip_decompress(compressed)
+```
+
+## Compression and decompression of raw DEFLATE or zlib data
+
+The size of the decompressed file needs to be kept through additional logic. Ditto for checksums.
+
+```python
+import deflate
+level = 6  # The default; may be 1-12 for libdeflate.
+data = b"hello world!" * 1000
+# DEFLATE
+compressed = deflate.deflate_compress(data, level)
+original = deflate.deflate_decompress(compressed, len(data))
+# zlib
+compressed = deflate.zlib_compress(data, level)
+original = deflate.zlib_decompress(compressed, len(data))
+```
+
+## CRC32 computation
+
+```python
+import deflate
+crc32 = deflate.crc32(b"hello world! ")  # initial
+crc32 = deflate.crc32(b"hello universe!", crc32)  # continued
+```
+
+
+## Adler-32 computation
+
+```python
+import deflate
+adler32 = deflate.adler32(b"hello world! ")  # initial
+adler32 = deflate.adler32(b"hello universe!", adler32)  # continued
+```
+
+# Installation
+
+Installing `deflate` will either link to or compile `libdeflate`, depending on the
+following:
+
+1. If a `LIBDEFLATE_PREFIX` environment variable is set, it will always be used to look
+   for a system-installed `libdeflate`.
+2. If the `pkgconfig` package is installed, it will be used to automatically find (and
+   link to) a system-installed `libdeflate` if available.
+3. Falls back to compiling the bundled libdeflate code. This behavior can be triggered
+   manually by setting `USE_BUNDLED_DEFLATE=1`.
+
+
+```
+export USE_BUNDLED_DEFLATE=no  # default is no
+export LIBDEFLATE_PREFIX=/path/to/lib/deflate  # default: no path given
+pip install pkgconfig  # optional, you also need pkg-config cli tool
+pip install deflate
+```
+
+
+# Testing
+
+```
+pip install pytest
+pip install pytest-benchmark
+pytest
+```
