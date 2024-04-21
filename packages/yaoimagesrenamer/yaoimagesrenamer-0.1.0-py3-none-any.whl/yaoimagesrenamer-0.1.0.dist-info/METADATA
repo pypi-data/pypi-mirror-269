@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: yaoimagesrenamer
+Version: 0.1.0
+Summary: images renamer
+Home-page: https://github.com/BladeRunnerYao/yaoimagesrenamer
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Requires-Dist: numpy
+
+UNKNOWN
+
+
