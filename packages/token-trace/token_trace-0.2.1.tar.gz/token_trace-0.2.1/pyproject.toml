@@ -1,0 +1,104 @@
+[project]
+name = "token-trace"
+version = "0.2.1"
+description = "Transformer token flow visualizer"
+dependencies = [
+    "transformers>=4.39.3",
+    "transformer-lens>=1.15.0",
+    "sae-lens>=0.2.0",
+    "pandera>=0.18.3",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+[[project.authors]]
+name = "Seongho Son, Liza Karmannaya, Daniel Tan, David Chanin"
+email = "chanindav@gmail.com"
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+client = [
+    "streamlit>=1.33.0",
+    "st-annotated-text>=4.0.1",
+    "pytest>=8.1.1",
+    "graphviz>=0.20.3",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=8.1.1",
+    "ruff>=0.3.3",
+    "pyright>=1.1.354",
+    "notebook>=7.1.2",
+]
+
+[tool.pdm.scripts]
+run_app = "streamlit run app/token_trace_app.py"
+
+[tool.pyright]
+typeCheckingMode = "strict"
+reportMissingTypeStubs = "none"
+reportUnknownMemberType = "none"
+reportUnknownArgumentType = "none"
+reportUnknownVariableType = "none"
+reportUntypedFunctionDecorator = "none"
+reportUnnecessaryIsInstance = "none"
+reportUnnecessaryComparison = "none"
+reportConstantRedefinition = "none"
+reportUnknownLambdaType = "none"
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+exclude = [
+    "dist",
+    "docs",
+]
+
+[tool.ruff.lint]
+ignore = [
+    "E203",
+    "E501",
+    "E731",
+]
+extend-select = [
+    "UP",
+    "TID",
+    "I",
+    "F",
+    "E",
+    "ARG",
+]
+
+[tool.semantic_release]
+logging_use_named_masks = true
+commit_parser = "angular"
+major_on_zero = true
+version_variables = [
+    "token_trace/__init__.py:__version__",
+]
+version_toml = [
+    "pyproject.toml:project.version",
+]
+
+[tool.semantic_release.changelog]
+exclude_commit_patterns = [
+    "chore(?:\\([^)]*?\\))?: .+",
+    "ci(?:\\([^)]*?\\))?: .+",
+    "refactor(?:\\([^)]*?\\))?: .+",
+    "style(?:\\([^)]*?\\))?: .+",
+    "test(?:\\([^)]*?\\))?: .+",
+    "build\\((?!deps\\): .+)",
+    "Merged? .*",
+    "Initial Commit.*",
+    "^\\d+\\.\\d+\\.\\d+",
+]
