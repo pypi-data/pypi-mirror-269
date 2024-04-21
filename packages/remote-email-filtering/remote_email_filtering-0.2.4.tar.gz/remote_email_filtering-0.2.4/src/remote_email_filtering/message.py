@@ -1,0 +1,107 @@
+# Copyright 2022, Gaurav Juvekar
+# SPDX-License-Identifier: MIT
+import email
+import email.header
+import email.policy
+import typing
+
+from . import types
+
+
+class Message(object):
+    """
+    An email message with convenient properties
+    """
+    def __init__(self, uid: types.Uid,
+                 envelope, remote, dir_=None, rfc822_bytes=None):
+        """
+        :param uid: A unique identifier for a message within ``dir_``
+        :param envelope: The envelope structure parsed from headers
+        :param remote: A :class:`~.remote.Remote` used to lazy-load the body
+        :param tuple[str] dir_: the mailbox directory that this email is in
+        """
+        self.uid = uid
+        self.envelope = envelope._asdict()
+        for field in ('cc', 'bcc', 'from_', 'reply_to', 'sender', 'to'):
+            if not self.envelope[field]:
+                self.envelope[field] = []
+            self.envelope[field] = tuple((types.Address.from_imapclient(x)
+                                          for x in self.envelope[field]))
+
+        self._flags = None
+        self.remote = remote
+        self.dir_ = dir_
+        self.raw = rfc822_bytes
+        self._body = None
+        if rfc822_bytes is not None:
+            self._body = email.message_from_bytes(self.raw,
+                                                  policy=email.policy.default)
+
+    @property
+    def body(self):
+        if self._body is None:
+            self.raw = self.remote.fetch_body(self.uid)
+            self._body = email.message_from_bytes(self.raw,
+                                                  policy=email.policy.default)
+        return self._body
+
+    @property
+    def flags(self):
+        if self._flags is None:
+            self._flags = self.remote.fetch_flags(self.uid)
+        return self._flags
+
+    @property
+    def To(self):
+        return self.envelope['to']
+
+    @property
+    def Cc(self):
+        return self.envelope['cc']
+
+    @property
+    def From(self):
+        return self.envelope['from_']
+
+    @property
+    def Recipients(self):
+        return self.To + self.Cc
+
+    @property
+    def Subject(self):
+        return self.envelope['subject']
+
+    @property
+    def Time(self):
+        return self.envelope['date']
+
+    @property
+    def SaneSubject(self):
+        ascii_header = self.Subject.decode('ascii', errors='ignore')
+
+        def fragment_to_str(maybe_encoded, charset):
+            if isinstance(maybe_encoded, str):
+                return maybe_encoded
+            else:
+                if charset is None:
+                    charset = 'ascii'
+                return maybe_encoded.decode(charset, errors='replace')
+
+        return ''.join((fragment_to_str(e, c)
+                        for (e, c) in
+                            email.header.decode_header(ascii_header)))
+
+    @property
+    def BodyText(self):
+        body = self.body.get_body(preferencelist=('plain',))
+        if not body:
+            return None
+        text = body.get_content()
+        return text
+
+    @property
+    def Attachments(self):
+        for attachment in self.body.iter_attachments():
+            yield {'name': attachment.get_filename(),
+                   'content_type': attachment.get_content_type(),
+                   'bytes': attachment.get_content()}
