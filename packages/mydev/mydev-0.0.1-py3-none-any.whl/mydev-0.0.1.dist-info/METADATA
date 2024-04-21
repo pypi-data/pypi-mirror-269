@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mydev
+Version: 0.0.1
+Summary: Personal dev tools
+Author-Email: Jianglong Ye <jianglong.yeh@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: fastapi>=0.110.0
+Requires-Dist: typer>=0.12.0
+Requires-Dist: uvicorn>=0.29.0
+Requires-Dist: sqlmodel>=0.0.16
+Requires-Dist: pytest>=8.1.1
+Requires-Dist: ipython>=8.23.0
+Requires-Dist: psutil>=5.9.8
+Requires-Dist: gpustat>=1.1.1
+Requires-Dist: alembic>=1.13.1
+Requires-Dist: fabric>=3.2.2
+Description-Content-Type: text/markdown
+
+# MyDev
+
+Personal development tools.
