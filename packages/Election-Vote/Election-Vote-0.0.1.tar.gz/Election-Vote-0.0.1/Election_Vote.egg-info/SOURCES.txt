@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+Election_Vote.egg-info/PKG-INFO
+Election_Vote.egg-info/SOURCES.txt
+Election_Vote.egg-info/dependency_links.txt
+Election_Vote.egg-info/requires.txt
+Election_Vote.egg-info/top_level.txt
+libelection/__init__.py
+libelection/election.py
