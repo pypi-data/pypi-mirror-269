@@ -1,0 +1,3 @@
+[console_scripts]
+saygoodbye = xproject.main:say_goodbye
+sayhello = xproject.main:say_hello

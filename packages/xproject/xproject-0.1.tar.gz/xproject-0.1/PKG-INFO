@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: xproject
+Version: 0.1
+Summary: This is my first package
+Home-page: https://github/alaamer12/package_t
+Author: Alaamer
+Author-email: alaamerthefirst@gmail.com
+License: MIT
+Keywords: hello,name
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+
+This is my first package printing only hello 'name' function
