@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: moniza
+Version: 0.0.1
+Summary: moniza server monitoring
+Home-page: https://github.com/ohm89/pip-moniza
+Author: ohm89
+Author-email: moniza.dev@gmail.com
+Maintainer: ohm89
+Maintainer-email: moniza.dev@gmail.com
+License: BSD-3-Clause
+Keywords: moniza system monitoring agent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: System :: Monitoring
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psutil
+Requires-Dist: netifaces
+Requires-Dist: configparser
+Requires-Dist: future
+Requires-Dist: distro
+Requires-Dist: certifi
+
+# pip-moniza
+Moniza PIP Package
