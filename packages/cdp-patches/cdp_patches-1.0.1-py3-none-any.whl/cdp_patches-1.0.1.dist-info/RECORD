@@ -1,0 +1,15 @@
+cdp_patches/__init__.py,sha256=CgzuhaYhTI9lxfvrhggQ6srxLErYRmQPYoy_yUDyyME,333
+cdp_patches/input/__init__.py,sha256=gLxL6WjokBnCMfLR9VqjXXR5lpSmy_ALID2mTPdPyxk,5171
+cdp_patches/input/async_input.py,sha256=QhWNzwzAr--ykNvHlZGt3m6Yy1JF2K6ErcsuIMAksRA,7910
+cdp_patches/input/browsers.py,sha256=vjOyLasCtcE3m87-LuhNgFjfxUxREvSlypJYRwZ-rjs,13234
+cdp_patches/input/exceptions.py,sha256=hLjOZMXYo-_Iwfl36rSKbLKeagrtAiIx8IRMk3nKOBw,437
+cdp_patches/input/mouse_trajectory.py,sha256=8rgYgVyPM_NK97qkHgjnHFQzvHXAHXI4p3P1mC3zLbI,8789
+cdp_patches/input/sync_input.py,sha256=_s_JbPIfVu5AwBlOXLbYs-8NVMrHf5sfG8-xH3L5QyA,7601
+cdp_patches/input/os_base/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cdp_patches/input/os_base/linux.py,sha256=HpSPyorpmttOZwvKlr3xfkmB3hUgoCu3UPyxFzam8FQ,11846
+cdp_patches/input/os_base/windows.py,sha256=jCV7gf_O2-l4MUK62OxX9XllI2V0yPYfStcMUhWyZ20,6591
+cdp_patches-1.0.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+cdp_patches-1.0.1.dist-info/METADATA,sha256=e1g8wFmEipWwi8_uurY26U40tTyLqV4lleN9IxN3ZOI,7382
+cdp_patches-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cdp_patches-1.0.1.dist-info/top_level.txt,sha256=xZlRyu9LibTG0WzETg8gRa5ThWH-itEHUOZtv_ukFN4,12
+cdp_patches-1.0.1.dist-info/RECORD,,
