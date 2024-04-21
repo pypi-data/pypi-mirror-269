@@ -1,0 +1,20 @@
+ragtime/__init__.py,sha256=rqhHWsK2alQabc2nSfA7Q31ETNaB2OjjuyZXUh89XcQ,765
+ragtime/api.py,sha256=Q07dhMQzOVhRc93kLuKtEOXQfBKAQS4obv0kCnMIqMo,1522
+ragtime/config.py,sha256=kW7feqDuJwXjEAZLO0UBQSpOWm1Gm8seVubjxd12r5c,8839
+ragtime/expe.py,sha256=__CZTnwcILydxlDVoSwFITRCUWbtRPoOQN5Ims7Soro,19134
+ragtime/generators.py,sha256=_EN_9pIkgjY-l6a7Y8jvrxdB10HLlEvzuR58pbelxYs,38999
+ragtime/base_folder/.gitignore,sha256=Xmqwjt3L-0gj_HU9XjWLBiVYqvWBzXZgiXaln3rzqD4,752
+ragtime/base_folder/LICENSE,sha256=2hZm7EVurTktmjzzkNSjg2_4gBPGqSPUXupSju2n9RU,1098
+ragtime/base_folder/README.md,sha256=5WZg2D7gQsIFxbNbPwLn9fijTI0YdtL_34tbyrb92CQ,26
+ragtime/base_folder/classes.py,sha256=NEvqsQzaDIxorotu99elADDWjZosJH9avcWkYxjoons,2439
+ragtime/base_folder/main.py,sha256=tTSqtf6CSucttSS_mcs5_m-GFZVsylFJNbLZpII3T70,811
+ragtime/base_folder/expe/01. Questions/json_helper.xlsx,sha256=V6yKsOY21CD_Mr-mKZXtM9D1TfNyjpSqNJgYJ7_SxIA,15410
+ragtime/base_folder/res/html_templates/basic_template.jinja,sha256=W4-Kv7qFwuVi1gjC116EaDLwHvIHHA8pjrGNnVKiC_o,4329
+ragtime/base_folder/res/spreadsheet_templates/MCQ.xlsx,sha256=woiFk9LqZ02mTGiXUOdaz-V9FOZ0qpFYZ5H3VVQs7Lg,91060
+ragtime/base_folder/res/spreadsheet_templates/basic_template.xlsx,sha256=av_uXgzqaZPc7K0qwaMWC-F8JMKFQdiEOMC7hBQzjVQ,31095
+ragtime/base_folder/res/spreadsheet_templates/first_questions.xlsx,sha256=QzZYOPWTar2RsOttNOpGtOd5qQ3b1XWUWM-96T33Drk,9987
+ragtime/base_folder/res/spreadsheet_templates/spreadsheet_rich_template.xlsx,sha256=RMLZC9WMJ5EizwsugG872_QeDmw6TkkQTZGHeD13x4Y,33387
+ragtime-0.0.29.dist-info/METADATA,sha256=eLZRF2lQV3MOpmx8NEwKw8hxdsBNpUkIHvxr2ThzqoY,7067
+ragtime-0.0.29.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+ragtime-0.0.29.dist-info/licenses/LICENSE,sha256=gNc6I3mUVnUswMZhnhJ2Dju-zN0vAulIMCm49y35YBk,1083
+ragtime-0.0.29.dist-info/RECORD,,
