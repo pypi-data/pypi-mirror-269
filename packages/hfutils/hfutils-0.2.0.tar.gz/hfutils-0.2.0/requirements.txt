@@ -1,0 +1,6 @@
+hbutils>=0.9.0
+huggingface_hub>=0.22
+tqdm
+requests
+click>=7
+tzlocal
