@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: SmJaAi
+Version: 0.4
+Summary: By This Lib You Can Talk With ChatGPT And You can benefit from many tools in this library, so what are you waiting for? Go explore the library, bro  ,
+Author: Ali-Mahmoud-Fadhil
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE.txt
+Requires-Dist: requests
