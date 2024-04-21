@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+flutter_finder.1
+setup.py
+FlutterFinder.egg-info/PKG-INFO
+FlutterFinder.egg-info/SOURCES.txt
+FlutterFinder.egg-info/dependency_links.txt
+FlutterFinder.egg-info/entry_points.txt
+FlutterFinder.egg-info/top_level.txt
+flutter_finder/__init__.py
+flutter_finder/flutter_finder.py
+flutter_finder/main.py
+flutter_finder/utils.py
