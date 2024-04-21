@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: updrytwist-UpDryTwist
+Version: 0.0.26
+Summary: My common utilities
+Home-page: https://github.com/tathamg/updrytwist
+Author: Greg Tatham
+Author-email: tathamg@gmail.com
+Project-URL: Bug Tracker, https://github.com/tathamg/updrytwist/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+This project is a collection of the utilities that I use all the time in different projects,
+most of which are around home automation-type activities, or kiosk screens, or tinkering
+with a Raspberry Pi.  
+
+How to Install
+--------------
+    pip install updrytwist
+
+How to Use
+----------
+
+Maybe at some point this will be filled in.  But for now, just read the source.
+
+Contact Information
+-------------------
+
+Please contact through github (UpDryTwist).
