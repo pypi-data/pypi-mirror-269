@@ -1,0 +1,140 @@
+Metadata-Version: 2.1
+Name: intellipandora
+Version: 1.0.3
+Summary: Generic automation framework for system testing and model evaluation
+Home-page: https://www.python.org/doc/
+Author: Shao Feng
+Author-email: just.shao.007@gmail.com
+License: Apache License 2.0
+Keywords: intellipandora
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: Acceptance
+Classifier: Topic :: Software Development :: Testing :: BDD
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Framework :: Robot Framework
+Classifier: Framework :: Pytest
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: twine
+Requires-Dist: setuptools
+Requires-Dist: six
+Requires-Dist: pendulum
+Requires-Dist: tabulate
+Requires-Dist: retrying
+Requires-Dist: assertpy
+Requires-Dist: bs4
+Requires-Dist: pluggy
+Requires-Dist: pyyaml
+Requires-Dist: pycryptodome
+Requires-Dist: urllib3
+Requires-Dist: requests
+Requires-Dist: httpretty
+Requires-Dist: websockets
+Requires-Dist: pytest
+
+# FusionPandora
+
+## 一、概要
+
+> IntelliPandora 是Python开发以提供通用能力测试框架
+>
+> 框架提供API、UI、算法等业务自动化测试的能力
+>
+> 同时提供数据上报、开元测试框架(工具)适配、工程(代码)自动生成等基础功能
+> 
+> 可适配Pytest、RobotFramework等执行框架
+>
+> 长远规划提供测试智能化的能力
+
+## 二、使用
+
+### 安装下载
+
+- 下载、安装
+```shell script
+# 先按照[Python_Dev_Configuration] 完成本地pypi私服配置
+pip install intellipandora
+# 若未配置，按以下命令安装
+pip install intellipandora -i http://<user_name>:<your_personal_token>@<ip>/api/v4/projects/43/packages/pypi/simple --trusted-host <ip>
+```
+
+- 测试执行
+> 可保持原执行框架的执行方式 ***pytest、robot***  etc.
+```shell script
+pytest -svl testcases/test_demo.py  --source=2 --job-name=demo-api-test --upload-report=True
+```
+
+### 脚手架能力
+- 基础能力使用(命令行)
+```shell script
+intellipandora -h
+```
+
+### 使用手册(待添加)
+> 包含了框架使用，例如http如何调用，用于接口自动化测试
+* [FusionPandora使用手册](docs/usr/user_guider.md)
+
+
+## 三、开发
+
+### 基础
+- **语言**
+> **PYTHON3.7+**
+
+- **版本管理**
+> ***CHANGELOG*** 内按格式添加版本内容
+
+- **编译发布**
+> 本地deploy需配置pypirc, 或者通过ci发布
+  - 编译打包
+    ```shell script
+    python3 setup.py bdist_wheel
+    ```
+  - 
+    ```shell script
+    twine upload -r local dist/*.whl
+    ```
+
+### 开发规范
+* **目录结构**
+```shell
+.
+├── src
+│   └── intellipandora
+│       ├── CHANGELOG
+│       ├── __init__.py
+│       ├── common
+│       ├── conf
+│       ├── core
+│       ├── run
+│       ├── utils
+│       └── version.py
+└── test
+    └── __init__.py
+```
+
+* **说明**
+    > 代码都在***src/intellipandora***
+  * **core**: 提供自动化核心能力接口
+  * **common**: 基础方法封装，提供自动化
+  * **run**: 框架的命令行模块
+  * **utils**: 框架基础功能，如log、error...
+  * **conf**: 配置文件
+
+* **开发手册**
+  * [Python_Dev_Configuration](./docs/dev/Python_Dev_Configuration.md)
+  * [FusionPandora开发手册——待添加](docs/dev/Python_Dev_Standard.md)
