@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "rtrie"
+version = "1.0.1"
+description = ""
+authors = ["alexgagnon <alex@monad.media>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "rtrie"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rapidfuzz = "^3.1.1"
+argparse = "^1.4.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.0"
+deepdiff = "^7.0.1"
+
+[tool.poetry.group.dev.dependencies]
+bumpver = "^2023.1124"
+pympler = "^1.0.1"
+sortedcontainers = "^2.4.0"
+pandas = "^2.2.2"
+objsize = "^0.7.0"
+
+[build-system]
+requires = ["poetry-core>=1.2.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.bumpver]
+current_version = "1.0.1"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+    'version = "{version}"'
+]
+"rtrie/__init__.py" = [
+    '__version__ = "{version}"',
+]
+
