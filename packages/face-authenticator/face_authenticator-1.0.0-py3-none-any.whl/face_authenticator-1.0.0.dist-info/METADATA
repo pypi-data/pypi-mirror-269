@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: face-authenticator
+Version: 1.0.0
+Summary: FaceAuthenticator package for face recognition and authentication
+Author: Немтырев Алексей Валерьевич
+Author-email: art.net82@gmail.com
+License-File: LICENSE
+Requires-Dist: face-recognition
+Requires-Dist: numpy
+Requires-Dist: sqlite3
+
