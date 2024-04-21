@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: invariant-client
+Version: 1.1.2
+Summary: Invariant: manage ACLs in an entirely new way
+Author: Rob Ankeny
+Author-email: ankenyr@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: attrs (>=21.3.0)
+Requires-Dist: httpx (>=0.20.0,<0.26.0)
+Requires-Dist: pandas (>=2.2.0,<3.0.0)
+Requires-Dist: pyarrow (>=13.0.0,<14.0.0)
+Requires-Dist: pydantic (>=2.4.2,<3.0.0)
+Requires-Dist: python-dateutil (>=2.8.0,<3.0.0)
+Requires-Dist: retry (>=0.9.2,<0.10.0)
+Requires-Dist: tabulate (>=0.9.0,<0.10.0)
+Description-Content-Type: text/markdown
+
+# Invariant CLI and Python SDK
+
+## Installation
+
+The Invariant client is available as a Python package. You can install it through pip or pipx like so:
+
+```bash
+pip install invariant-client
+
+# Or using pipx
+pipx install invariant-client
+```
+
+The Invariant CLI can be used to run Invariant from your test automation workflow. This example shows one way to install it for Github Actions:
+
+```yaml
+steps:
+- uses: actions/checkout@v4
+- uses: actions/setup-python@v4
+  with:
+    python-version: '3.11'
+    cache: 'pip'
+- name: Install dependencies
+  run: python -m pip install --upgrade pip invariant-client
+- name: Evaluate current directory using Invariant
+  run: |
+    python -m invariant-client run
+```
+
+## Usage: Command Line Interface
+
+The Invariant CLI can analyize local changes to network configuration files.
+
+```bash
+$ invariant login
+Open this link in your browser to log in:
+https://invariant.tech/login?code=320664
+Login successful.
+
+$ invariant run
+Uploading snapshot...
+Processing... (51643c3e-9a08-47b9-968e-1d2d7e2ca42e)
+Analysis complete.
+
++---------------+----------+
+| File          | RowCount |
++---------------+----------+
+| exposed_ports |       15 |
++---------------+----------+
+
+$ invariant show exposed_ports --json
+# JSON report here
+```
+
+
