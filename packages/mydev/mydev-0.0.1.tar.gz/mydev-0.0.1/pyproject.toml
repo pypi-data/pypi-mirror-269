@@ -1,0 +1,36 @@
+[project]
+name = "mydev"
+version = "0.0.1"
+description = "Personal dev tools"
+authors = [
+    { name = "Jianglong Ye", email = "jianglong.yeh@gmail.com" },
+]
+dependencies = [
+    "fastapi>=0.110.0",
+    "typer>=0.12.0",
+    "uvicorn>=0.29.0",
+    "sqlmodel>=0.0.16",
+    "pytest>=8.1.1",
+    "ipython>=8.23.0",
+    "psutil>=5.9.8",
+    "gpustat>=1.1.1",
+    "alembic>=1.13.1",
+    "fabric>=3.2.2",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+dev = "mydev.cli.main:run"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
