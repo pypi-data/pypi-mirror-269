@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "fiblat"
+version = "0.5.0"
+description = "A package for generating evenly distributed points on a sphere"
+repository = "https://github.com/erikbrinkman/fibonacci_lattice"
+authors = ["Erik Brinkman <erik.brinkman@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.pytest.ini_options]
+addopts = "--cov fiblat --cov-report term-missing -m 'not long'"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numba = "^0.59.1"
+numpy = "^1.26.4"
+pytest-benchmark = "^4.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.1"
+pytest-cov = "^5.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
