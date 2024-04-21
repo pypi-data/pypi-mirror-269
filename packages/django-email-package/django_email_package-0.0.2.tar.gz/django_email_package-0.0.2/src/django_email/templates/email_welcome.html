@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body
+    style="
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+    "
+  >
+    <div style="max-width: 37.5em; margin: 0 auto; padding: 20px 0 48px">
+      <img
+        height="50"
+        src="{{ context.image | default:'https://media.designrush.com/inspiration_images/134802/conversions/_1511456315_653_apple-desktop.jpg' }}"
+        alt="Apple Logo"
+        style="display: block; margin: 0 auto; max-width: 100%"
+      />
+      <p style="font-size: 16px; line-height: 26px; margin: 16px 0">
+        Hi {{ context.name | default:'Apple' }},
+      </p>
+
+      {% if context.body %} {% for body in context.body %}
+      <p style="font-size: 16px; line-height: 26px; margin: 16px 0">
+        {{ body }}
+      </p>
+      {% endfor %} {% else %}
+      <p style="font-size: 16px; line-height: 26px; margin: 16px 0">
+        {{ context.body | default:'Welcome to Apple, the sales intelligence platform that helps you uncover qualified leads and close deals faster.'}}
+      </p>
+      {% endif %}
+      <a
+        href="{{ context.link | default:'' }}"
+        style="
+          background-color: #5f51e8;
+          border-radius: 3px;
+          color: #fff;
+          font-size: 16px;
+          text-decoration: none;
+          text-align: center;
+          display: inline-block;
+          padding: 12px;
+          line-height: 100%;
+          max-width: 100%;
+        "
+      >
+        <span>Get started</span>
+      </a>
+      <p style="font-size: 16px; line-height: 26px; margin: 16px 0">
+        Best,<br />The {{ context.company | default:'Apple' }} team
+      </p>
+    </div>
+  </body>
+</html>

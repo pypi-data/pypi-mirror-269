@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body style="font-family: Arial, sans-serif; margin: 0; padding: 0">
+    <div
+      style="
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px">
+        Hello,
+      </p>
+      {% if context.body %} {% for body in context.body %}
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px">
+        {{ body }}
+      </p>
+      {% endfor %} {% else %}
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px">
+        I hope this email finds you well. I wanted to reach out to express my
+        interest in adopting a pet from your shelter.
+      </p>
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px">
+        Could you please provide me with more information about the adoption
+        process, including any requirements or paperwork needed? Additionally, I
+        would love to learn more about the pets currently available for
+        adoption.
+      </p>
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px">
+        Thank you for considering me as a potential adopter. I am looking
+        forward to hearing from you and hopefully welcoming a new furry friend
+        into my home.
+      </p>
+      {% endif %}
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px">
+        Best regards,
+      </p>
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px">
+        {{ context.name | default:'[Your Name]' }}
+      </p>
+    </div>
+  </body>
+</html>

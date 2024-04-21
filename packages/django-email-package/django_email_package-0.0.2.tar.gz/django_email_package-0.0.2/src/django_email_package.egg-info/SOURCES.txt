@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/django_email/__init__.py
+src/django_email/email_utils.py
+src/django_email/templates/email_interest.html
+src/django_email/templates/email_login.html
+src/django_email/templates/email_ticket.html
+src/django_email/templates/email_welcome.html
+src/django_email_package.egg-info/PKG-INFO
+src/django_email_package.egg-info/SOURCES.txt
+src/django_email_package.egg-info/dependency_links.txt
+src/django_email_package.egg-info/top_level.txt

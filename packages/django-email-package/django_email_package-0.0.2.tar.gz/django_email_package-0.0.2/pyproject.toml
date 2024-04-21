@@ -1,0 +1,18 @@
+[project]
+name = "django_email_package"
+version = "0.0.2"
+authors = [
+  { name="Didheemose", email="sebastiandidheemose2002@gmail.com" },
+]
+description = "A Python package for sending HTML-formatted emails in Django"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/DidheemosePS/django_email_package"
+Issues = "https://github.com/DidheemosePS/django_email_package/issues"
