@@ -1,0 +1,2 @@
+[console_scripts]
+pip = replace_pip_with_uv_pip:pip

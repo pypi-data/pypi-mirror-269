@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+replace_pip_with_uv_pip.py
+replace_pip_with_uv_pip.egg-info/PKG-INFO
+replace_pip_with_uv_pip.egg-info/SOURCES.txt
+replace_pip_with_uv_pip.egg-info/dependency_links.txt
+replace_pip_with_uv_pip.egg-info/entry_points.txt
+replace_pip_with_uv_pip.egg-info/requires.txt
+replace_pip_with_uv_pip.egg-info/top_level.txt
