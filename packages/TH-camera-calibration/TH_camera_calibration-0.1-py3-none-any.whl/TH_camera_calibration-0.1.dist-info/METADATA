@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: TH-camera-calibration
+Version: 0.1
+Requires-Dist: numpy ==1.26.4
+Requires-Dist: opencv-contrib-python ==4.8.1.78
+Requires-Dist: opencv-python ==4.9.0.80
+Requires-Dist: PyYAML ==6.0.1
+
