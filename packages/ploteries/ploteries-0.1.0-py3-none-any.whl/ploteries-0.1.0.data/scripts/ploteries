@@ -1,0 +1,6 @@
+#!python
+# -*- coding: utf-8 -*-
+from ploteries._bin_helpers import main
+
+if __name__ == '__main__':
+    main()
