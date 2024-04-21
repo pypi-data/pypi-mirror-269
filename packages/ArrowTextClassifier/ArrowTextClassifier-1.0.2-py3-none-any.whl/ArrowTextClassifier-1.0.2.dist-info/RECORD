@@ -1,0 +1,12 @@
+ArrowTextClassifier/__init__.py,sha256=oVPYNvB1P_7s6mucagByRiaA7ELADP_CQ2Kyndcn_Hk,307
+ArrowTextClassifier/classify_text.py,sha256=rs48S03zjjm49lgc2nHC9M5zW7bOpvxBgTeK_jQCJLE,2505
+ArrowTextClassifier/main.py,sha256=6wqQKQDkZXk5LUEl8mW-L8ba_ahr2HBXc1pm-DYJedY,1772
+ArrowTextClassifier/model.py,sha256=7meGW_kGESxezTjyXOr38ndin1URcI1CNm6VE-JNQ2I,1317
+ArrowTextClassifier/summarize_model.py,sha256=bjABgJw2jXDFBfvnTVAQp2Azfk2dO8Rhjmwsvq2ICRw,1628
+ArrowTextClassifier/tokenizer.py,sha256=CR7RnCinM2QxfIGbXq21a5w_RsuWrmByqbhPjuwTRcg,718
+ArrowTextClassifier/train.py,sha256=9Solrtq0CkjDbMifvB3pz22IaIHLydPjWK8GWbwbOKA,6955
+ArrowTextClassifier-1.0.2.dist-info/LICENSE,sha256=aaRnzXdpGixiOfCUaDyq7n5ueUFNfclpDtYyVBwX6-E,1094
+ArrowTextClassifier-1.0.2.dist-info/METADATA,sha256=3Z3ah4YvNgoOPgJXi9HNUPfxWb82xCvOsE3iuewaq5g,4031
+ArrowTextClassifier-1.0.2.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+ArrowTextClassifier-1.0.2.dist-info/top_level.txt,sha256=qEWNwV1ZL1YOr6HQEXEy6QwSX-eGJWGFfYv4PuDNX4o,20
+ArrowTextClassifier-1.0.2.dist-info/RECORD,,
