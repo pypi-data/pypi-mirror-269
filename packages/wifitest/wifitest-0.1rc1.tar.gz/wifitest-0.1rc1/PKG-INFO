@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: wifitest
+Version: 0.1rc1
+Summary: Python 3 library for wifi testing.
+Author-email: Juan Bindez <juanbindez780@gmail.com>
+License: GPLv2 license
+Project-URL: Homepage, https://github.com/juanbindez/wifitest
+Project-URL: Bug Reports, https://github.com/juanbindez/wifitest/issues
+Project-URL: Read the Docs, http://wifitest.readthedocs.io/
+Keywords: bruteforce,wifi,tools,cli,scan
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pywifi
+
+# wifitest
+
+## Python 3 library for wifi testing.
+
+### Install
+
+    sudo pip install wifitest
+
+
+### usage
+
+```python
+
+from wifitest import WifiTest
+
+SSID = "wifi"
+WORDLIST = "wordlist.txt"
+
+wifi = WifiTest()
+wifi.bruteforce(SSID, WORDLIST)
+
+```
