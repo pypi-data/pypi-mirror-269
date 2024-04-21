@@ -1,0 +1,15 @@
+fb4e1adfff48b50d8c9d__mypyc.cpython-312-darwin.so,sha256=bBZsfHtC2Mze3kCFqUJ4efQbAlYAJSKzmeb7_ni7YFo,184624
+bencode2-0.0.12.dist-info/RECORD,,
+bencode2-0.0.12.dist-info/LICENSE,sha256=WraLL2GWym7_6EnkH1Zi8kU_-2iPhXGv7yegTIEX3E8,1085
+bencode2-0.0.12.dist-info/WHEEL,sha256=KYtn_mzb_QwZSHwPlosUO3fDl70znfUFngLlrLVHeBY,111
+bencode2-0.0.12.dist-info/top_level.txt,sha256=7p8BnU5xR4IlQmD4NmR-Utq31gxTVB37Lgc2BZtxjzI,37
+bencode2-0.0.12.dist-info/METADATA,sha256=zhtkd-8drOuXMt-51dmBD8cJUHbo0uFROuhAv0-0yuU,763
+bencode2/__init__.cpython-312-darwin.so,sha256=EFJUM2Fa6pJ3sPIWovY4rkeEIwvNKKUG4N17QfRyHE4,33696
+bencode2/_decoder.py,sha256=xN1jMbWXd-jkXBvg7sNPzisQ7ejIHRCGbDu8faWXjq4,3595
+bencode2/__init__.py,sha256=eBkqG_7xwCWRFLdTZIZ5R11LSeLP5q7UsGhoA3UCrB0,568
+bencode2/_encoder.py,sha256=yCeEm42Aab-I5eZ1WC8_J5ImH6_p-8rmoOPrtp_AvPw,2546
+bencode2/_encoder.cpython-312-darwin.so,sha256=KpADc1v__3DzY8Lti-coGP-rtKxMUewe08QLlBjIJSU,33720
+bencode2/_exceptions.cpython-312-darwin.so,sha256=eJ2_7lgFn7ANChPqxOYCT4ji2J-5aG93nRZpRWHQQGA,33736
+bencode2/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bencode2/_decoder.cpython-312-darwin.so,sha256=gmjsXZ0qw5TCOZeBi1KF6_by1INvkdZHU24oXLP3UaU,33720
+bencode2/_exceptions.py,sha256=ot-s-KmlTUoj9316ZE2Pjj4SCbVRd01mzo3zRWotMUc,169
