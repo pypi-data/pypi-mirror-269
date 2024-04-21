@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: michi
+Version: 0.0.2
+Summary: A python package to manage the way of data io, configuration, catalogs and registries
+Author-email: Javier Bosch <michipython@gmail.com>
+Project-URL: Homepage, https://github.com/javierabosch/michi
+Project-URL: Issues, https://github.com/javierabosch/michi/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Michi - "the way"
+
+A Python package to manage the "way" of data io, configuration, catalogs, and registries. 
