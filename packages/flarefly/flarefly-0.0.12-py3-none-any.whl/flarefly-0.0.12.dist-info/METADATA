@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: flarefly
+Version: 0.0.12
+Summary: FLexible And REliable Fitting LibrarY for particle physics analysis
+Home-page: https://github.com/flarefly/flarefly
+Author: flarefly-developers
+Author-email: flarefly@googlegroups.com
+License: GPL
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psutil
+Requires-Dist: dutil
+Requires-Dist: prophet >=1.0.1
+Requires-Dist: numpy <1.25
+Requires-Dist: pandas >=2.2
+Requires-Dist: uproot >=5.0
+Requires-Dist: ipython >=7.16.1
+Requires-Dist: jedi >=0.17.2
+Requires-Dist: zfit >=0.20.2
+Requires-Dist: mplhep >=0.3.46
+Requires-Dist: matplotlib >=3.8
+Requires-Dist: particle >=0.23
+Requires-Dist: scipy >=1.13
+Provides-Extra: dev
+Requires-Dist: pylint >=2.6.2 ; extra == 'dev'
+Requires-Dist: flake8 >=3.8.4 ; extra == 'dev'
+Requires-Dist: pytest >=6.2.2 ; extra == 'dev'
+Requires-Dist: twine >=3.3.0 ; extra == 'dev'
+Requires-Dist: setuptools >=53.0.0 ; extra == 'dev'
+Requires-Dist: wheel >=0.36.2 ; extra == 'dev'
+
+<img src="./flarefly_logo.png" width="200" /> <sub><sup>Logo by Andrea Sofia Triolo</sup></sub>
+
+
+
+![](https://github.com/hipe4ml/flarefly/actions/workflows/pythonpackage.yml/badge.svg?branch=main)
+
+![](https://github.com/hipe4ml/flarefly/actions/workflows/pythonpublish.yml/badge.svg)
+
+
+
+# Introduction
+
+FLexible And REliable Fitting LibrarY is a library to perform fits to distributions for particle physics analysis
+
+
+
+# Documentation
+
+
+
+[https://flarefly.github.io/flarefly/index.html](https://flarefly.github.io/flarefly/index.html)
+
+
+
+# Install in-development package
+
+
+
+To install the in-development package, from the repository base directory:
+
+
+
+```bash
+
+pip install -e .[dev]
+
+```
+
+
+
+# Tutorial
+
+
+
+If you want to get familiar with flarefly, the following tutorial is available:
+
+
+
+| Type | Link |
+
+| -------------- | ------------- |
+
+| Binned invariant mass fit |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/flarefly/flarefly/blob/main/tutorials/flarefly_tutorial_Bzero.ipynb) |
