@@ -1,0 +1,3 @@
+[console_scripts]
+matricula-online-scraper=matricula_online_scraper.main:app
+
