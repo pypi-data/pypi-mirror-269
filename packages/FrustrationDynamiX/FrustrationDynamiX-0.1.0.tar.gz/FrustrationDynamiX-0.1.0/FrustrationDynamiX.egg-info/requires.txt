@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+networkx
+scipy
+python-ortools
+tqdm
+pyEDM==1.14.3
+shutilwhich
+warnings
