@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: FrustrationDynamiX
+Version: 0.1.0
+Summary: A package for handling computing frustration in dynamical systems
+Home-page: https://github.com/asb24repo/FrustrationDynamiX
+Author: Ali S. Badereddine
+Author-email: asb24@mail.aub.edu
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: networkx
+Requires-Dist: scipy
+Requires-Dist: python-ortools
+Requires-Dist: tqdm
+Requires-Dist: pyEDM ==1.14.3
+Requires-Dist: shutilwhich
+Requires-Dist: warnings
+
+This package aims to analyze time series of dynamical models by looking at their underlying matrix of interaction (i.e. the matrix of Jacobian coefficients).
+The package has methods to preprocess and plot time series, infer their time-evolving matrices of Jacobian coefficients, treat those matrices as the adjacency matrix of a signed directed graph, compute the triadic and global balance of the time series, and plot the evolution of balance/frustration in the network.
+A detailed user manual has been uploaded to the github repository https://github.com/abadreddine/FrustrationDynamiX/tree/main
