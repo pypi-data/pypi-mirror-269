@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fa1115d7.css",
+    "main.js": "/static/js/main.ba6f0b6f.js",
+    "static/media/sts-grid.gif": "/static/media/sts-grid.4c1bd440ae8bf5ae89b1.gif",
+    "static/media/bias-dep.gif": "/static/media/bias-dep.9e85394bfa0e71bf366e.gif",
+    "static/media/bias-dep.png": "/static/media/bias-dep.8f585512aeae3c340ab3.png",
+    "static/media/config.png": "/static/media/config.33b944d6fdbd70a5eaeb.png",
+    "static/media/survey.png": "/static/media/survey.48de6afabfe2873fcb3c.png",
+    "static/media/documentation.png": "/static/media/documentation.e87545e894909a5262ec.png",
+    "static/media/data-acq.png": "/static/media/data-acq.63d47148f940fe1d6efd.png",
+    "static/media/automation.png": "/static/media/automation.5a69804e14d581caf24b.png",
+    "static/media/sts-grid.png": "/static/media/sts-grid.0800ad76eced278cebc5.png",
+    "static/media/back-button.png": "/static/media/back-button.dbc159fe14d62ee6c8fa.png",
+    "static/media/frame.png": "/static/media/frame.a31c6d0e53f2e658cc9f.png",
+    "static/media/up.png": "/static/media/up.9ed6fd33df214c3cd235.png",
+    "index.html": "/index.html",
+    "main.fa1115d7.css.map": "/static/css/main.fa1115d7.css.map",
+    "main.ba6f0b6f.js.map": "/static/js/main.ba6f0b6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa1115d7.css",
+    "static/js/main.ba6f0b6f.js"
+  ]
+}

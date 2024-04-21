@@ -1,0 +1,3 @@
+[console_scripts]
+scanbot=scanbot.server:app_
+
