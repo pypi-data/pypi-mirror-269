@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/nonebot_plugin_sanyao/__init__.py
+src/nonebot_plugin_sanyao/config.py
+src/nonebot_plugin_sanyao/sanyao.py
+src/nonebot_plugin_sanyao.egg-info/PKG-INFO
+src/nonebot_plugin_sanyao.egg-info/SOURCES.txt
+src/nonebot_plugin_sanyao.egg-info/dependency_links.txt
+src/nonebot_plugin_sanyao.egg-info/requires.txt
+src/nonebot_plugin_sanyao.egg-info/top_level.txt
