@@ -1,0 +1,9 @@
+README.md
+setup.py
+lappu_sa_venom.egg-info/PKG-INFO
+lappu_sa_venom.egg-info/SOURCES.txt
+lappu_sa_venom.egg-info/dependency_links.txt
+lappu_sa_venom.egg-info/requires.txt
+lappu_sa_venom.egg-info/top_level.txt
+wearevenom/__init__.py
+wearevenom/main.py
