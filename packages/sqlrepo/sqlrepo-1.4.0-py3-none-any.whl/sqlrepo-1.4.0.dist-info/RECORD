@@ -1,0 +1,11 @@
+sqlrepo-1.4.0.dist-info/METADATA,sha256=nXtV6hJubf-_EvCnOJj5FHIGDA2p9CEeP2EZL1QUz-s,10597
+sqlrepo-1.4.0.dist-info/WHEEL,sha256=7sv5iXvIiTVJSnAxCz2tGBm9DHsb2vPSzeYeT7pvGUY,90
+sqlrepo/__init__.py,sha256=6b6wBr-SiG0Uu1mqcBCAOUooy7xnit_XPjmQJq5BakM,463
+sqlrepo/exc.py,sha256=BKdy2H8dPrualfPe7479c2VqSXfPGwMaQVXZA3KlDko,828
+sqlrepo/logging.py,sha256=FaHpVcXEl3jlvlo6jIfW-Gh_0k6ZH3lepxZvWQiP7AY,798
+sqlrepo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlrepo/queries.py,sha256=xM49BFjIzxX4PijvgDKSYyUqjafnnDADHPCQIvjTK1M,32880
+sqlrepo/repositories.py,sha256=8rY4Bev8C1bsXaIMFKtfjn0cd5ZAecOG77hztgt2aOk,23853
+sqlrepo/uow.py,sha256=k2hmeZTIDvkkAczEOjMXnXZoJFnVvKbgAASka4qvzcQ,4696
+sqlrepo/wrappers.py,sha256=z98tj03rd52itkunZr5fWMk1xxqmKDxTqre8HlHQqh8,1057
+sqlrepo-1.4.0.dist-info/RECORD,,
