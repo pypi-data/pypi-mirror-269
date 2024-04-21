@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+scriptime/__init__.py
+scriptime/alert.wav
+scriptime/main.py
+scriptime.egg-info/PKG-INFO
+scriptime.egg-info/SOURCES.txt
+scriptime.egg-info/dependency_links.txt
+scriptime.egg-info/requires.txt
+scriptime.egg-info/top_level.txt
