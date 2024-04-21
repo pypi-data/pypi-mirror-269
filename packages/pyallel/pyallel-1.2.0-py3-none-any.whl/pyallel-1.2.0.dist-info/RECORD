@@ -1,0 +1,15 @@
+pyallel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyallel/colours.py,sha256=zxTz4wR2UzqXr1R82RUcJG6kzg1Md6SGJ1DnYhL9S74,893
+pyallel/constants.py,sha256=gnnIR5dGunk6q3frR_k5DLW0fHhgX4QTYiO52wLEGFg,564
+pyallel/errors.py,sha256=Y-ETaHnG69e0QE0qz7AiFRndQKixkTlPt2-TnLPy63o,368
+pyallel/main.py,sha256=7RlPhb0y1kR-7Ky2Aiq4-bVv1k0Hh7zmzfkV9Z4kNXs,2190
+pyallel/parser.py,sha256=0iuRHrt_4BgE8loMpZ7hgkqTBNOYeY1CWKmlgZv48QA,2799
+pyallel/process.py,sha256=2Q-DQQptpdlUlO3EwTDuN9oPJhhUo_x5yJhuFR3vMNw,1952
+pyallel/process_group.py,sha256=ZyPrS-Mls_IEXpEO-1rGIoYT5_PD47p95qcr-z8slG0,10871
+pyallel/process_group_manager.py,sha256=r2VYEpPlio0gAnIey1HEcZPBmerWVQqHvzkg3iITrlw,2919
+pyallel/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyallel-1.2.0.dist-info/LICENSE,sha256=OC5x5NCgrwLKf3OOacir7vDYIUr4u6W3sxQjYtNBG0g,1069
+pyallel-1.2.0.dist-info/METADATA,sha256=oTmnmB8wJOMEkWCoTIzC-34fGchCOHpDvKryKNRqxPI,5242
+pyallel-1.2.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+pyallel-1.2.0.dist-info/entry_points.txt,sha256=0vqMYmzYIZe-sRW5wu5lJdSfZsB0y3KC7HeTTwDpnEc,52
+pyallel-1.2.0.dist-info/RECORD,,
