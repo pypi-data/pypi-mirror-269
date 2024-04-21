@@ -1,0 +1,2 @@
+[console_scripts]
+asgebsmanager = asgebsmanager.__main__:main
