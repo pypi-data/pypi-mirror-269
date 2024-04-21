@@ -1,0 +1,3 @@
+prune .idea
+prune .gitlab-ci.yml
+global-exclude __pycache__/*
