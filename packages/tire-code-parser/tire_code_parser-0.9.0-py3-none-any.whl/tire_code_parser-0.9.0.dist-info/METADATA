@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tire-code-parser
+Version: 0.9.0
+Summary: A package to parse tire codes
+Author: Stefior
+Author-email: contact@stefior.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+
