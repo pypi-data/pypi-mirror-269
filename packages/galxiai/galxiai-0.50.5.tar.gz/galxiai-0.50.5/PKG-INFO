@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: galxiai
+Version: 0.50.5
+Summary: A Python package to manage all my cash in one hand
+Home-page: https://github.com/djsola/galxiai/
+Author: Jun-You MIT & Solomon
+Author-email: solomon@tmp.o66p.com
+License: MIT
+Keywords: ssh galxiai room
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8,<4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: SQLiteAsJSON
+Requires-Dist: tls-client
+Requires-Dist: pyjwt
+
+# galxiai
+=========
+
+This is the answer for the solution
