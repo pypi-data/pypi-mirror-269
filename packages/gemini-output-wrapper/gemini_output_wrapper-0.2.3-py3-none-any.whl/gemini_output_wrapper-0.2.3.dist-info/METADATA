@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: gemini-output-wrapper
+Version: 0.2.3
+Summary: Library for wrapping Gemini API output with Json and Python objects
+Home-page: https://github.com/Osbertt-19/gemini-output-wrapper.git
+Author: Min Htet Naing
+Author-email: minhtetnaing25mhn@gmail.com
+Requires-Python: >=3.8
+Requires-Dist: google-generativeai
+
