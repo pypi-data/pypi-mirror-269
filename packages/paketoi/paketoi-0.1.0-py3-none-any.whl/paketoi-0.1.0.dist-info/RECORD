@@ -1,0 +1,17 @@
+paketoi/__init__.py,sha256=bYzXds-ShZH0n_p_FVJCFcvGilWfQt4SVlb1yXQZSxc,4366
+paketoi/__main__.py,sha256=IWPiqzLvs5hrUoh2kS3zk09HClzrktFWFIRwFCd5IfQ,60
+paketoi/resources/cp-python3.10-arm64.json,sha256=rsOWC48iLawCMhU_VvoMSvDedeFR-XTbdotJ99TyOGA,11667
+paketoi/resources/cp-python3.10-x86_64.json,sha256=ynLud09JI-gQzJCvV3cjDheFGGIbnXrOZA4XNaV5MmE,23773
+paketoi/resources/cp-python3.11-arm64.json,sha256=hvaPY0F5avHqvcbFUwbVMd3bX1b2WsnGzIvWgTNlXuk,12651
+paketoi/resources/cp-python3.11-x86_64.json,sha256=HRGvFPWexZ1lou86KYM94aj53L7mdrzmink-ns2lCHY,25833
+paketoi/resources/cp-python3.12-arm64.json,sha256=dvFIv39OerammMPjTMX7JNAWJGM_2UDhNDDO5eu9UvQ,22341
+paketoi/resources/cp-python3.12-x86_64.json,sha256=2_yEsbrQs36cW61h8nmpupep0EqvW0o2jsTa3SaE2y0,36383
+paketoi/resources/cp-python3.8-arm64.json,sha256=VSXEwV7VXiQcbKfCbuA5W4v20uGVP1F7JHmiumLLWhk,9679
+paketoi/resources/cp-python3.8-x86_64.json,sha256=Hz_eeR4z2jJsiwpWSAF6yE7uPq7B_QsD-j50cMwjKC0,19619
+paketoi/resources/cp-python3.9-arm64.json,sha256=D2Yyrb7QyxodNjC-hpO5kT8u4RgLlqsA1vRCfYk_00o,10640
+paketoi/resources/cp-python3.9-x86_64.json,sha256=uBVYs0UxUiz_c8hB26kypTFjZX3ZGcqriu7yjpW0hxM,21628
+paketoi-0.1.0.dist-info/LICENSE,sha256=v4IcfZBYR-Sz6xxAnrHdYqJtnaFMOET02USGBckeC7I,1059
+paketoi-0.1.0.dist-info/METADATA,sha256=2Ud8oJSgBL29u25McSny7SWxvCemeqMl9joXxn3ZKB4,2396
+paketoi-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+paketoi-0.1.0.dist-info/entry_points.txt,sha256=HPAU2bDBka9PzoIzA-3fKBuy9kWtzZSU-SanAUqdk2Y,41
+paketoi-0.1.0.dist-info/RECORD,,
