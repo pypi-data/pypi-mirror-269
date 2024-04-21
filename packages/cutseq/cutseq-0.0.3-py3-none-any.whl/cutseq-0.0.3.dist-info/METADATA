@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: cutseq
+Version: 0.0.3
+Summary: Automatically cut adapter / barcode / UMI from NGS data
+Home-page: https://github.com/y9c/cutseq
+License: MIT
+Keywords: bioinformatics,NGS,adapter,barcode,UMI
+Author: Ye Chang
+Author-email: yech1990@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cutadapt (>=4.8,<5.0)
+Project-URL: Repository, https://github.com/y9c/cutseq
+Description-Content-Type: text/markdown
+
+#✂️ CutSeq
+
+## How to use?
+
+`cutseq -a "ACACGACGCTCTTCCGATCTX<XXXAGATCGGAAGAGCACACGTC" test_R1.fq.gz test_R2.fq.gz`
+
