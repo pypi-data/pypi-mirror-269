@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "huffify"
+version = "0.1.0"
+description = "Simple Huffman algotithm implementation"
+authors = ["munwriter <glebvysokov3@gmail.com>"]
+keywords = ["huffman", "compression", "encoding", "decoding"]
+repository = "https://github.com/munwriter/Huffify"
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+setuptools = "^69.0.3"
+wheel = "^0.42.0"
+twine = "^4.0.2"
+pytest = "^8.0.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.1"
+mypy = "^1.8.0"
+isort = "^5.13.2"
+ruff = "^0.3.5"
+
+[tool.mypy]
+python_version = "3.12"
+strict = false
+mypy_path = "./src"
+exclude = "tests"
+
+[tool.black]
+line-length=95
+
+[tool.isort]
+profile = "black"
+skip = [
+    ".mypy_cache/*",
+    ".git/*",
+]
+
+[tool.ruff]
+line-length=95
+target-version = "py312"
+show-fixes = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
