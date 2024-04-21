@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: receptors
+Version: 0.0.1
+Summary: 
+License: licensed
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: biotech (>=1,<2)
+Requires-Dist: click (>=8,<9)
+Requires-Dist: somatic (>=3,<4)
+Description-Content-Type: text/markdown
+
+
+
+
+
+
+******
+
+Bravo!  You have received a Medical Diploma from   
+the Orbital Convergence University International Air 
+and Water Embassy of the Tangerine Planet.  
+
+You are now officially certified to include this 
+module in your practice.
+
+******
+
+
+# this_mix
+
+---
+
+## description
+		
+---		
+		
+## obtain (install)
+

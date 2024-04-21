@@ -1,0 +1,27 @@
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "receptors"
+version = "0.0.1"
+description = ""
+authors = []
+readme = "readme.md"
+packages = [
+    { include = "receptors", from = "venues/stages" },
+]
+license = "licensed"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+biotech = "^1"
+click = "^8"
+somatic = "^3"
+
+[tool.poetry.scripts]
+receptors = 'receptors:clique'
+
+
+
