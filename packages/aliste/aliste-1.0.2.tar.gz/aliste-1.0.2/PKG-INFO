@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: aliste
+Version: 1.0.2
+Summary: Aliste Smart Home SDK for Python
+License: MIT
+Author: Raj Kishore
+Author-email: 40551183+rkzofficial@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp
+Requires-Dist: aiomqtt (>=2.0.1,<3.0.0)
+Requires-Dist: asyncio (>=3.4.3,<4.0.0)
+Requires-Dist: aws-signv4-mqtt (>=0.2.0,<0.3.0)
+Requires-Dist: boto3 (>=1.34.88,<2.0.0)
+Requires-Dist: certifi
+Description-Content-Type: text/markdown
+
+# Aliste Smart Home SDK for Python
+
+### Installation
+
+```
+pip install aliste
+```
+
+### Get started
+
+```Python
+from aliste import AlisteHub, AlisteBroker
+
+# Instantiate a MirAIeHub object
+broker = AlisteBroker()
+
+# Instantiate a MirAIeHub object
+hub = AlisteHub()
+
+# Intialize the hub (+91xxxxxxxxxx, password, broker)
+hub.init(mobile, password, broker)
+```
+
