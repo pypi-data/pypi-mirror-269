@@ -1,0 +1,10 @@
+snailshell/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snailshell/main.py,sha256=cxQH6bHqPPcLKYdSJO3MwOYQWB8tsTVgVgVS3B7WRfA,2965
+snailshell/main_test.py,sha256=ho2xoV7Z64sCghTzCPbu10qGSGAYsW31WBzGxMGUo7w,3231
+snailshell/model_class.py,sha256=EEEatY1UN0nAX-cr_Iim01CvNmhA8npW5OeE786-kPk,944
+snailshell/model_loader.py,sha256=ZrQcbaDkpfm9E5tvGrkSQi6umOzm6rQXV3E31pCPEm4,2719
+snailshell/pipeline.py,sha256=XqHdmN5mSdMb58dP7dk42VPls2-G2E1GghKIkCpZc2U,2777
+snailshell-0.2.10.dist-info/entry_points.txt,sha256=glwtszTOWymb316B-wuvPdByw42WQGEXoS7uiVsPYEw,51
+snailshell-0.2.10.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+snailshell-0.2.10.dist-info/METADATA,sha256=GRCVax6CA6irWRsQBIazi3Z9E-PgKUCjhtUFdtJoXXs,1317
+snailshell-0.2.10.dist-info/RECORD,,
