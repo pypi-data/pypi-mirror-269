@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "factorial-nhk"
+version = "0.1.0"
+description = ""
+authors = ["nguyenhoangkhang <nguyenhoangkhang040904@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.33.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
