@@ -1,0 +1,40 @@
+packaging>=20.7
+setuptools>=59.6
+
+[all]
+configupdater<4,>=3.0.1
+tomlkit<2,>=0.10.0
+tomli-w<2,>=0.4.0
+
+[experimental]
+
+[experimental:python_version >= "3.7"]
+pyproject-fmt>=0.4.0
+
+[full]
+configupdater<4,>=3.0.1
+tomlkit<2,>=0.10.0
+
+[full:python_version < "3.8"]
+importlib-metadata
+
+[lite]
+tomli-w<2,>=0.4.0
+
+[lite:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+isort
+setuptools
+tomli
+pytest
+pytest-cov
+pytest-xdist
+pytest-randomly
+validate-pyproject<2,>=0.6
+
+[typechecking]
+
+[typechecking:python_version < "3.8"]
+typing-extensions
