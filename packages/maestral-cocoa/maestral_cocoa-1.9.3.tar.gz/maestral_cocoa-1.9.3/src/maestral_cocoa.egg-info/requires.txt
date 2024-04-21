@@ -1,0 +1,16 @@
+click
+maestral>=1.9.3
+markdown2
+toga==0.4.2
+rubicon-objc>=0.4.5
+
+[dev]
+black
+bump2version
+flake8
+mypy
+pre-commit
+pytest
+pytest-cov
+types-pkg_resources
+types-requests
