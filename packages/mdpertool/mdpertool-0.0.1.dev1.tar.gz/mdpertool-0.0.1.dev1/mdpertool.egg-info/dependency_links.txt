@@ -1,0 +1,3 @@
+git+https://github.com/conda-forge/mdtraj-feedstock
+git+https://github.com/conda-forge/openmm-feedstock
+git+https://github.com/conda-forge/pymol-open-source-feedstock
