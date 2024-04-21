@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: robotframework-confluentkafkalibrary
+Version: 2.3.0.post1
+Summary: Confluent Kafka library for Robot Framework
+Home-page: https://github.com/robooo/robotframework-ConfluentKafkaLibrary
+Author: Robert Karasek
+Author-email: <robo.karasek@gmail.com>
+License: Apache License 2.0
+Keywords: robotframework confluent kafka
+Platform: any
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
+License-File: LICENSE
+Requires-Dist: robotframework>=3.2.1
+Requires-Dist: confluent-kafka==2.3.0
+Requires-Dist: requests>=2.25.1
+Provides-Extra: all
+Requires-Dist: fastavro>=1.3.2; extra == "all"
+Requires-Dist: avro>=1.11.1; extra == "all"
+Requires-Dist: fastavro>=1.3.2; extra == "all"
+Requires-Dist: avro-python3>=1.10.1; extra == "all"
+Requires-Dist: jsonschema>=3.2.0; extra == "all"
+Requires-Dist: protobuf>=4.22.0; extra == "all"
+Provides-Extra: avro
+Requires-Dist: fastavro>=1.3.2; extra == "avro"
+Requires-Dist: avro>=1.11.1; extra == "avro"
+Provides-Extra: legacyavro
+Requires-Dist: fastavro>=1.3.2; extra == "legacyavro"
+Requires-Dist: avro-python3>=1.10.1; extra == "legacyavro"
+Provides-Extra: json
+Requires-Dist: jsonschema>=3.2.0; extra == "json"
+Provides-Extra: protobuf
+Requires-Dist: protobuf>=4.22.0; extra == "protobuf"
+
+Confluent Kafka wrapped in Robot Framework.
