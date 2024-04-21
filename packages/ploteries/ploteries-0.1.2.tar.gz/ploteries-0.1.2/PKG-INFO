@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: ploteries
+Version: 0.1.2
+Summary: Plotting for ML training
+Home-page: https://github.com/zepedaj/soleil
+Author: Joaquin Zepeda
+Keywords: plots,tensorboard,machine learning,training
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest
+Requires-Dist: sphinx
+Requires-Dist: enum_tools
+Requires-Dist: numpy
+Requires-Dist: sqlalchemy==1.4.46
+Requires-Dist: climax
+Requires-Dist: dash
+Requires-Dist: dash_daq
+Requires-Dist: gunicorn
+Requires-Dist: jztools>=0.1.5
+Requires-Dist: pandas
+Requires-Dist: rich
+
+
+
+* See [Ploteries's full documentation](https://ploteries.readthedocs.io/en/latest/) for more information
+
+
+* Contribute at [Ploteries's github page](https://github.com/zepedaj/ploteries)
+
+Installation:
+--------------
+
+```
+pip install ploteries
+```
+
+Benefits:
+--------- 
+- Can use any name for tags, the actual name will be displayed.
+- Uses plotly plots, full flexibility.
+
+Aims:
+---------
+- A clear separation between data and storage.
+- Separates data storage and display code - can define and re-style display post computations/storage.
+
+Transparent computations:
+- What is Tensorboard's wall time? How is smoothign computed? How are histograms computed?
+
+Things to do:
+---------
+- Better separation between data and display.
+- Common interface to add new plots by user used to create histograms.
+
