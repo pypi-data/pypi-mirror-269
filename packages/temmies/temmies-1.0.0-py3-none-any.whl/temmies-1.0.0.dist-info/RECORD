@@ -1,0 +1,14 @@
+temmies/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+temmies/course.py,sha256=pcTs1JOo9pm_R4QpuQmir00F1BOe1CtOJDoMVoPOSpU,2371
+temmies/exercise_group.py,sha256=dfnNeeqfX-M9OBrdxv_bcumrFO6mbnp-3KG8jsAgghg,13094
+temmies/submission.py,sha256=d3eGbxmjiFYmN9qb8PjRwnVPv5_Ib57zyyWrRSCL9q0,3458
+temmies/test.py,sha256=ev4mo8q6xtR_6EnayE_MehafvPK1a8HuZf7-ucTbUvc,1122
+temmies/themis.py,sha256=66484kHdg6Lznm3TEKBXlpu36k0DXxPEhoVk6MNO-yI,2754
+temmies/year.py,sha256=NGhBV_06jhPW14ScsyvrnCMegqOzwqDsu_-ttNq9-4A,2218
+temmies/exceptions/course_unavailable.py,sha256=ZHoJRh4b7NNQWzJYqbYeVw_MkqbvadeQe30e16fY6Lc,239
+temmies/exceptions/illegal_action.py,sha256=dcSmLk_rVJbwBlomgXAyXfTEH05hAjbHkYqz-oSjkT8,200
+temmies-1.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+temmies-1.0.0.dist-info/METADATA,sha256=bHqoSG-22RvLMjJHAILTgazKLPM2kBBFKsJbdJfe150,1327
+temmies-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+temmies-1.0.0.dist-info/top_level.txt,sha256=2IT0-8NOc1g_-q1G_TYUxb3IkBQ134WsCRHan9ABj9w,8
+temmies-1.0.0.dist-info/RECORD,,
