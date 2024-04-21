@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+notfunny/__init__.py
+notfunny/command_line.py
+notfunny/joke.py
+notfunny.egg-info/PKG-INFO
+notfunny.egg-info/SOURCES.txt
+notfunny.egg-info/dependency_links.txt
+notfunny.egg-info/entry_points.txt
+notfunny.egg-info/not-zip-safe
+notfunny.egg-info/top_level.txt

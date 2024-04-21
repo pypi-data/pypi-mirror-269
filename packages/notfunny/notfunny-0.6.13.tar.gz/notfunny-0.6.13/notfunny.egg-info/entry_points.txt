@@ -1,0 +1,2 @@
+[console_scripts]
+funniest-joke = funniest.command_line:main
