@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: greyhorse-elasticsearch
+Version: 0.2.1
+Summary: Greyhorse ElasticSearch library
+Home-page: https://gitlab.com/max-plutonium/greyhorse
+License: MIT
+Author: Max Plutonium
+Author-email: plutonium.max@gmail.com
+Maintainer: Max Plutonium
+Maintainer-email: plutonium.max@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Typing :: Typed
+Provides-Extra: async
+Requires-Dist: elasticsearch[async] (>=8.13.0,<9.0.0) ; extra == "async"
+Requires-Dist: greyhorse (==0.4.2)
+Requires-Dist: pydantic-settings (>=2.2.1,<3.0.0)
+Requires-Dist: pydantic[dotenv] (>=2.0,<3.0)
+Project-URL: Repository, https://gitlab.com/max-plutonium/greyhorse
