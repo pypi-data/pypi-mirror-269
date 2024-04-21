@@ -1,0 +1,3 @@
+[206. 631.]
+[157.69986 192.00366]
+DescribeResult(nobs=10000, minmax=(array([1.4600577e-05, 2.4008237e-05], dtype=float32), array([1000., 1000.], dtype=float32)), mean=array([147.97733, 154.53426], dtype=float32), variance=array([20360.193, 25176.15 ], dtype=float32), skewness=array([1.9112209, 2.037033 ], dtype=float32), kurtosis=array([7.5195007, 6.2426825], dtype=float32))
