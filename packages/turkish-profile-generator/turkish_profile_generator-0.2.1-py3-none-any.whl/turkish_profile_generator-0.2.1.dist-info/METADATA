@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: turkish-profile-generator
+Version: 0.2.1
+Summary: Example PyPI (Python Package Index) Package
+Home-page: https://github.com/bossturk/turkish-profile-generator
+Author: Mustafa Buyruk
+Author-email: bossturk@hotmail.com
+Project-URL: Documentation, https://github.com/bossturk/turkish-profile-generator
+Project-URL: Bug Reports, https://github.com/bossturk/turkish-profile-generator/issues
+Project-URL: Source Code, https://github.com/bossturk/turkish-profile-generator
+Keywords: example,pypi,package
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+
+# Turkish Profile Generator
+
+Turkish Profile Generator is a Python package used to generate random Turkish user profiles. This package creates realistic Turkish user profiles using random names and other attributes.
+
+## Installation
+
+You can easily install the package using pip:
+
+```bash
+pip install turkish-profile-generator
+
+
+from turkish_profile_generator import UserProfileGenerator
+
+# Create an instance of UserProfileGenerator class
+generator = UserProfileGenerator(min_age=18, max_age=50)
+#generator = UserProfileGenerator(min_age=18, max_age=50, gender='Female')
+#generator = UserProfileGenerator(min_age=18, max_age=50, gender='Male')
+
+# Generate a random user profile
+profile = generator.generate_profile()
+
+# Print the generated profile attributes
+print("Generated Profile:")
+print("First Name:", profile['firstname'])
+print("Last Name:", profile['lastname'])
+print("Age:", profile['age'])
+print("Birthday:", profile['birthday'])
+print("Email:", profile['email'])
+print("Password:", profile['password'])
+print("Gender:", profile['gender'])
+
+profile.reset()
+
+Features
+Generates random Turkish names.
+Generates random age, birth date, email address, and password.
+Generates names compatible with the Turkish alphabet.
+Can generate user profiles in the desired age range.
+Contributing
+If you'd like to contribute to this project, please visit the GitHub repository: https://github.com/bossturk/turkish-profile-generator
+
+We welcome any feedback, suggestions, or contributions!
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
