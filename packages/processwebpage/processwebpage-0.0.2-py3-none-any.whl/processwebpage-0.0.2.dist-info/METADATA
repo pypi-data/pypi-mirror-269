@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: processwebpage
+Version: 0.0.2
+Summary: ProcessWebpage is python module used for indexing HTML code and make changes to the HTML page dynamically while updating HTML attributes, HTML tag content etc. Support of Javascript processing is currenly under development.
+Project-URL: Homepage, https://github.com/lalit1029/applications
+Project-URL: Issues, https://github.com/lalit1029/applications/issues
+Author-email: Lalit Jagotra <lalit.jagotra@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
