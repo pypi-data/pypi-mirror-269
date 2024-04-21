@@ -1,0 +1,45 @@
+# COPYING
+
+The software in this project is available under your choice of
+any of the following licenses:
+
+  - The BSD Zero Clause License (or `0BSD`)
+  - The MIT License (or `MIT`)
+  - The Apache License 2.0 (or `Apache-2.0`)
+
+It is available under multiple licenses because I couldn't decide
+which I liked best.
+
+If you're copying code from this project into your project, the
+BSD Zero Clause License is probably the license you want. No
+attribution necessary.
+
+If you're not familiar with the BSD Zero Clause License and you
+don't want to have to read up or do research on some license you've
+never heard of just to copy/edit my code, the MIT License is
+probably for you. You've probably copied/edited code from other
+projects using the MIT License, so you know the rules. Attribution
+is necessary. 
+
+If you like reading software licenses, or if you have investors to
+protect, or if you simply might find yourself in a situation where
+a lawyer is asking you questions about your software licenses, the 
+Apache License 2.0 is probaby the license for you.
+
+You can view the full text of any of these licenses in the LICENSES
+directory. The full text of the BSD Zero Clause License is also
+present in this repository's root directory since GitHub (as of
+early 2024) does not auto-discover licenses outside of the root
+directory, and I wanted to at least make it clear what this 
+software's most permissive license was.
+
+You can find more information on our use of SPDX headers to provide
+machine-readable information for each file in this project in
+the REUSE file.
+
+<!--
+SPDX-FileCopyrightText: 2024 Alex Lemna
+SPDX-License-Identifier: CC0-1.0
+
+This file is released with a CC0 public domain dedication. 
+-->
