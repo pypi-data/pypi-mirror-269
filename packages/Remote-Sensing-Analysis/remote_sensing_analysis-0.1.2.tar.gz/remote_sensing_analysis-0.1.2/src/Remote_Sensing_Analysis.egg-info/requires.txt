@@ -1,0 +1,6 @@
+pillow==10.3.0
+ultralytics==8.2.2
+transformers==4.40.0
+sentence_transformers==2.7.0
+sentencepiece==0.2.0
+timm==0.9.16
