@@ -1,0 +1,21 @@
+[build-system]
+requires=["hatchling"]
+build-backend="hatchling.build"
+[project]
+name= "processwebpage"
+version = "0.0.2"
+authors= [
+{"name"= "Lalit Jagotra", "email"= "lalit.jagotra@gmail.com"},
+]
+description= "ProcessWebpage is python module used for indexing HTML code and make changes to the HTML page dynamically while updating HTML attributes, HTML tag content etc. Support of Javascript processing is currenly under development."
+requires-python= ">=3.8"
+classifiers=[
+"Programming Language :: Python :: 3",
+"License :: OSI Approved :: MIT License",
+"Operating System :: Microsoft :: Windows",
+]
+[project.urls]
+Homepage="https://github.com/lalit1029/applications"
+Issues="https://github.com/lalit1029/applications/issues"
+[tool.hatch.build.targets.wheel]
+packages = ["src/processwebpagepkg"]
