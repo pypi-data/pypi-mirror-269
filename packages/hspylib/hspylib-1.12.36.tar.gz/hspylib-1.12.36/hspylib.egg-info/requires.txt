@@ -1,0 +1,14 @@
+retry
+urllib3
+cryptocode
+cryptography
+emoji
+get-key
+keyring
+pyparsing
+pyperclip
+PyYAML
+toml
+requests
+urllib3<2.0.0
+pyparsing<3.1
