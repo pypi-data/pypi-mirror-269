@@ -1,0 +1,8 @@
+numpyneuron/__init__.py,sha256=_nduGkUZMUaeGS6AjRJMSB2l8ZqNFblwurnM1vFuz9E,64
+numpyneuron/activation.py,sha256=KFrzfLZEc9-1wOyizmYssU9L2zBuHil_Sn4sjn6jFmA,1339
+numpyneuron/loss.py,sha256=vbakHkoGk6GemcEB4tHQjUmXsuyoNGce2DB3nFUpV3o,2483
+numpyneuron/nn.py,sha256=DETu5cldRhImlAR9OSmzcNw1Lte9cVRLDo1_LCRvGzQ,6451
+numpyneuron-0.6.dist-info/METADATA,sha256=Gd6ssl1iTDegGXG-ESlqCEXqbERp7DZpXtQlMXzXNDA,2530
+numpyneuron-0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+numpyneuron-0.6.dist-info/top_level.txt,sha256=UxutnaJwTo79D0Boozer3pilaIQwr7S_m4bbRQJEp04,12
+numpyneuron-0.6.dist-info/RECORD,,
