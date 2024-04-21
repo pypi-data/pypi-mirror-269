@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: tire-code-parser
+Version: 1.0.0
+Summary: A package to parse tire codes
+Author: Stefior
+Author-email: contact@stefior.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Usage
+
+```python
+from tire_code_parser import parse_tire_code
+
+result = parse_tire_code("ST205/75R14D")
+print(result)
+
+# Output:
+# {
+#     "tire_code": "ST205/75R14D",
+#     "vehicle_class": "Special Trailer",
+#     "section_width_mm": "205",
+#     "section_width_in": "8.1",
+#     "aspect_ratio": "0.75",
+#     "construction": "Radial",
+#     "wheel_diameter_in": "14",
+#     "tire_diameter_in": "26.1",
+#     "load_range": "D",
+#     "ply_rating": "8",
+# }
+```
