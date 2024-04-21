@@ -1,0 +1,14 @@
+LICENCE
+README.md
+pyproject.toml
+src/picox/__init__.py
+src/picox/cli.py
+src/picox/detect.py
+src/picox/logconfig.py
+src/picox/upy.py
+src/picox.egg-info/PKG-INFO
+src/picox.egg-info/SOURCES.txt
+src/picox.egg-info/dependency_links.txt
+src/picox.egg-info/entry_points.txt
+src/picox.egg-info/requires.txt
+src/picox.egg-info/top_level.txt
