@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+
+name = "vtktonumpy"
+description = "Read VTK rectilinear grid files and output as N-dimensional NumPy arrays"
+readme = "README.md"
+requires-python = ">=3.6"
+license = { file = "LICENSE" }
+authors = [
+  { name="Declan B. Gaylo" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+
+dependencies = [
+  "numpy",
+  "vtk>=9.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dgaylo/VTKToNumpy"
+"Bug Tracker" = "https://github.com/dgaylo/VTKToNumpy/issues"
+"Documentation" = "https://dgaylo.github.io/VTKToNumpy"
+
+[tool.setuptools_scm]
