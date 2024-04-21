@@ -1,0 +1,2 @@
+[console_scripts]
+logki = logki.app:launch
