@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+few_shot_learning_nlp/__init__.py
+few_shot_learning_nlp/utils.py
+few_shot_learning_nlp.egg-info/PKG-INFO
+few_shot_learning_nlp.egg-info/SOURCES.txt
+few_shot_learning_nlp.egg-info/dependency_links.txt
+few_shot_learning_nlp.egg-info/requires.txt
+few_shot_learning_nlp.egg-info/top_level.txt
+few_shot_learning_nlp/fewShotTextClassification/SetFit.py
+few_shot_learning_nlp/fewShotTextClassification/SetFitDataset.py
+few_shot_learning_nlp/fewShotTextClassification/__init__.py
