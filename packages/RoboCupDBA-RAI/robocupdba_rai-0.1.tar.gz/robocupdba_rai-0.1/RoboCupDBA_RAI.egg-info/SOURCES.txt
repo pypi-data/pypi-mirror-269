@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+RoboCupDBA_RAI/__init__.py
+RoboCupDBA_RAI/config.py
+RoboCupDBA_RAI/insert.py
+RoboCupDBA_RAI/query.py
+RoboCupDBA_RAI.egg-info/PKG-INFO
+RoboCupDBA_RAI.egg-info/SOURCES.txt
+RoboCupDBA_RAI.egg-info/dependency_links.txt
+RoboCupDBA_RAI.egg-info/requires.txt
+RoboCupDBA_RAI.egg-info/top_level.txt
