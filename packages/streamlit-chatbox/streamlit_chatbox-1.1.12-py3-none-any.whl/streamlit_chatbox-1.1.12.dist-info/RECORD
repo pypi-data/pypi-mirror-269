@@ -1,0 +1,10 @@
+streamlit_chatbox/__init__.py,sha256=SZ0T5v2lIqTp-RaYbXuSq5aTy2aCzUq97SlKph11D1A,401
+streamlit_chatbox/elements.py,sha256=Q0uObeDuSKSVros8880QYEWgcQC5jDB2i7tO0L_C0B0,8175
+streamlit_chatbox/flows.py,sha256=RvtStf1em9vGPp_sj8V7xHKbBiI5_p58RAFuvEMq2-c,323
+streamlit_chatbox/messages.py,sha256=ue3g060EVvVUb2_C06hQcmJWc3_dV0I7pzNFUW4TRK8,17119
+streamlit_chatbox/inputs/__init__.py,sha256=I2GD3fXp6FDP6sSFkEELX7A2D5hrGgZw7t2npoTkYJI,4628
+streamlit_chatbox/inputs/example.py,sha256=DaUJ3D4g2A35ZAFJhABBpk5Vk6meWYdIwKr1JFqiIwA,2620
+streamlit_chatbox-1.1.12.dist-info/METADATA,sha256=JsTyK9pMmXVyXlAKjTw5E2OoFqUK51UAnfU7YFfqktM,8342
+streamlit_chatbox-1.1.12.dist-info/WHEEL,sha256=Xo9-1PvkuimrydujYJAjF7pCkriuXBpUPEjma1nZyJ0,92
+streamlit_chatbox-1.1.12.dist-info/top_level.txt,sha256=YX62-ytEEAz8BjRqwDQAYXyMt85LDTHatfKhx178XKs,18
+streamlit_chatbox-1.1.12.dist-info/RECORD,,
