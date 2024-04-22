@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+django_eventify/Booking.py
+django_eventify/Event.py
+django_eventify/__init__.py
+django_eventify.egg-info/PKG-INFO
+django_eventify.egg-info/SOURCES.txt
+django_eventify.egg-info/dependency_links.txt
+django_eventify.egg-info/requires.txt
+django_eventify.egg-info/top_level.txt
