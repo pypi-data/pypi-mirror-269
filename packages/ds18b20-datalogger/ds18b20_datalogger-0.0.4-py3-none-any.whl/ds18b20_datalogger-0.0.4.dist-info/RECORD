@@ -1,0 +1,13 @@
+ds18b20_datalogger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ds18b20_datalogger/cli.py,sha256=yhVBZtBX6ruEocr2uGguATDpjOmsejkF4g49q2Up15Q,1734
+ds18b20_datalogger/core.py,sha256=gZNkhZ6wQanFgM8FXmAJVQOJL19IbnPLo1L4j1k-GvQ,2408
+ds18b20_datalogger/datalogger.yaml,sha256=W5c2loWz0h2I2AhhrmlvtIkXgzZN_ni5OtYpp_yrktg,979
+ds18b20_datalogger/grafana-dashboard.json,sha256=fBVLJ-8eC0adQSGiN9HvFlGG-1SCWn3BzyneoldBJB8,145013
+ds18b20_datalogger/model.py,sha256=MU1t2icmiD8R0ATt3ZWB-FuyYPCjKYooAgA0XzBKtxg,2824
+ds18b20_datalogger/util.py,sha256=cadjBkbuceFkkq76H971hruC5HL3o2BkloHWLhL0mW0,559
+ds18b20_datalogger-0.0.4.dist-info/LICENSE,sha256=GzeCzK17hhQQDNow0_r0L8OfLpeTKQjFQwBQU7ZUymg,32473
+ds18b20_datalogger-0.0.4.dist-info/METADATA,sha256=eaMszdigFxQMVpxEsuZ959aZFomdHj6b3PlDABsUULQ,46369
+ds18b20_datalogger-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ds18b20_datalogger-0.0.4.dist-info/entry_points.txt,sha256=2EQoNjmdy7hVKsypLWgf4WVehQ6XSCcW5icIzP1GjtE,67
+ds18b20_datalogger-0.0.4.dist-info/top_level.txt,sha256=Rbk5xMz3FWVpWgMn5aaWwkYWvVs6oN2aQXzoXek3g2U,19
+ds18b20_datalogger-0.0.4.dist-info/RECORD,,
