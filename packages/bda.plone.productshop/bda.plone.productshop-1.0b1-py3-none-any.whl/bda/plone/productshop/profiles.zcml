@@ -1,0 +1,18 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+           xmlns:zcml="http://namespaces.zope.org/zcml"
+           i18n_domain="bda.plone.productshop">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="bda.plone.productshop"
+      directory="profiles/default"
+      description="Product shop extension for bda.plone.shop"
+      provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="bda.plone.productshop-hiddenprofiles" />
+
+
+</configure>

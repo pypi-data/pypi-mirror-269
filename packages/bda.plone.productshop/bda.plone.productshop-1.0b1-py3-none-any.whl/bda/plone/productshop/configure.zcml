@@ -1,0 +1,149 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:five="http://namespaces.zope.org/five"
+           xmlns:plone="http://namespaces.plone.org/plone"
+           xmlns:i18n="http://namespaces.zope.org/i18n"
+           i18n_domain="bda.plone.productshop">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <include package="plone.app.dexterity" />
+  <include package="plone.app.relationfield" />
+  <include package="bda.plone.shop" />
+  <include package="collective.instancebehavior" />
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <include package=".browser" />
+  <include package=".upgrades" />
+  <include file="profiles.zcml" />
+
+  <!-- vocabularies -->
+  <utility
+    component=".vocabularies.AvailableVariantAspectsVocabulary"
+    name="bda.plone.productshop.AvailableVariantAspectsVocabulary" />
+
+  <utility
+    component=".vocabularies.SizeAspectVocabularyFactory"
+    name="bda.plone.productshop.sizeaspects" />
+
+  <utility
+    component=".vocabularies.MateriaAspectVocabularyFactory"
+    name="bda.plone.productshop.materialaspects" />
+
+  <!-- DX behaviors -->
+  <plone:behavior
+    name="bda.productshop.tilesviewsettings"
+    title="Product Shop: Product Tiles View Settings"
+    description="Extend content with product tiles view specific settings."
+    provides=".behaviors.IProductTilesViewSettingsBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.productmanual"
+    title="Product Shop: Product Manual"
+    description="Extend content with product manual file."
+    provides=".behaviors.IProductManualBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.productdatasheet"
+    title="Product Shop: Product Data Sheet"
+    description="Extend content with product datasheet text."
+    provides=".behaviors.IProductDatasheetBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.product"
+    title="Product Shop: Product (DEPRECATED)"
+    name_only="true"
+    description="Deprecated: Extend content with product details text (same as bda.productshop.productdetails)."
+    provides=".behaviors.IProductBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.productdetails"
+    title="Product Shop: Product Details"
+    description="Extend content with product details text."
+    provides=".behaviors.IProductDetailsBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.productgroup"
+    title="Product Shop: Product group"
+    description="Extend content with product specific information."
+    provides=".behaviors.IProductGroupBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.variant"
+    title="Product Shop: Variant"
+    description="Extend content being a variant."
+    provides=".behaviors.IVariantBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.color"
+    title="Product Shop: Variant Aspect Color"
+    description="Extend content with product color variant."
+    provides=".behaviors.IColorBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.weight"
+    title="Product Shop: Variant Aspect Weight"
+    description="Extend content with product weight."
+    provides=".behaviors.IWeightBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.size"
+    title="Product Shop: Variant Aspect Size"
+    description="Extend content with product size."
+    provides=".behaviors.ISizeBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.demand"
+    title="Product Shop: Variant Aspect Demand"
+    description="Extend content with product demand."
+    provides=".behaviors.IDemandBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.length"
+    title="Product Shop: Variant Aspect Length"
+    description="Extend content with product length."
+    provides=".behaviors.ILengthBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.width"
+    title="Product Shop: Variant Aspect Width"
+    description="Extend content with product width."
+    provides=".behaviors.IWidthBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.height"
+    title="Product Shop: Variant Aspect Height"
+    description="Extend content with product height."
+    provides=".behaviors.IHeightBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.ipcode"
+    title="Product Shop: Variant Aspect IP Code"
+    description="Extend content with international protection code."
+    provides=".behaviors.IIPCodeBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.angle"
+    title="Product Shop: Variant Aspect Angle"
+    description="Extend content with angle."
+    provides=".behaviors.IAngleBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.material"
+    title="Product Shop: Variant Aspect Material"
+    description="Extend content with material."
+    provides=".behaviors.IMaterialBehavior" />
+
+  <!-- indexing -->
+  <adapter name="color_aspect" factory=".indexer.color_aspect" />
+  <adapter name="weight_aspect" factory=".indexer.weight_aspect" />
+  <adapter name="size_aspect" factory=".indexer.size_aspect" />
+  <adapter name="demand_aspect" factory=".indexer.demand_aspect" />
+  <adapter name="length_aspect" factory=".indexer.length_aspect" />
+  <adapter name="width_aspect" factory=".indexer.width_aspect" />
+  <adapter name="height_aspect" factory=".indexer.height_aspect" />
+  <adapter name="ip_code_aspect" factory=".indexer.ip_code_aspect" />
+  <adapter name="angle_aspect" factory=".indexer.angle_aspect" />
+  <adapter name="material_aspect" factory=".indexer.material_aspect" />
+
+</configure>

@@ -1,0 +1,484 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-05-10 09:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./profiles/default/actions.xml
+msgid "Add IP Code"
+msgstr "Add IP Code"
+
+#: ./profiles/default/actions.xml
+msgid "Add IP Code to product variant"
+msgstr "Add IP Code to product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Add angle"
+msgstr "Add angle"
+
+#: ./profiles/default/actions.xml
+msgid "Add angle to product variant"
+msgstr "Add angle to product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Add color"
+msgstr "Add color"
+
+#: ./profiles/default/actions.xml
+msgid "Add color to product variant"
+msgstr "Add color to product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Add demand"
+msgstr "Add demand"
+
+#: ./profiles/default/actions.xml
+msgid "Add demand to product variant"
+msgstr "Add demand to product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Add height"
+msgstr "Add height"
+
+#: ./profiles/default/actions.xml
+msgid "Add height to product variant"
+msgstr "Add height to product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Add length"
+msgstr "Add length"
+
+#: ./profiles/default/actions.xml
+msgid "Add length to product variant"
+msgstr "Add length to product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Add material"
+msgstr "Add material"
+
+#: ./profiles/default/actions.xml
+msgid "Add material to product variant"
+msgstr "Add material to product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Add size"
+msgstr "Add size"
+
+#: ./profiles/default/actions.xml
+msgid "Add size to product variant"
+msgstr "Add size to product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Add weight"
+msgstr "Add weight"
+
+#: ./profiles/default/actions.xml
+msgid "Add weight to product variant"
+msgstr "Add weight to product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Add width"
+msgstr "Add width"
+
+#: ./profiles/default/actions.xml
+msgid "Add width to product variant"
+msgstr "Add width to product variant"
+
+#: ./profiles/default/types/bda.plone.productshop.product.xml
+msgid "Product"
+msgstr "Product"
+
+#: ./profiles/default/types/bda.plone.productshop.product.xml
+msgid "Product for bda.plone.shop"
+msgstr "Product for bda.plone.shop"
+
+#: ./profiles/default/types/bda.plone.productshop.productgroup.xml
+msgid "Product Group"
+msgstr "Product Group"
+
+#: ./profiles/default/types/bda.plone.productshop.productgroup.xml
+msgid "Productgroup to hold variations"
+msgstr "Productgroup to hold variations"
+
+#: ./profiles/default/actions.xml
+msgid "Remove IP Code"
+msgstr "Remove IP Code"
+
+#: ./profiles/default/actions.xml
+msgid "Remove IP Code from product variant"
+msgstr "Remove IP Code from product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Remove angle"
+msgstr "Remove angle"
+
+#: ./profiles/default/actions.xml
+msgid "Remove angle from product variant"
+msgstr "Remove angle from product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Remove color"
+msgstr "Remove color"
+
+#: ./profiles/default/actions.xml
+msgid "Remove color from product variant"
+msgstr "Remove color from product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Remove demand"
+msgstr "Remove demand"
+
+#: ./profiles/default/actions.xml
+msgid "Remove demand from product variant"
+msgstr "Remove demand from product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Remove height"
+msgstr "Remove heigh"
+
+#: ./profiles/default/actions.xml
+msgid "Remove height from product variant"
+msgstr "Remove height from product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Remove length"
+msgstr "Remove length"
+
+#: ./profiles/default/actions.xml
+msgid "Remove length from product variant"
+msgstr "Remove length from product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Remove material"
+msgstr "Remove material"
+
+#: ./profiles/default/actions.xml
+msgid "Remove material from product variant"
+msgstr "Remove material from product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Remove size"
+msgstr "Remove size"
+
+#: ./profiles/default/actions.xml
+msgid "Remove size from product variant"
+msgstr "Remove size from product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Remove weight"
+msgstr "Remove weight"
+
+#: ./profiles/default/actions.xml
+msgid "Remove weight from product variant"
+msgstr "Remove weight from product variant"
+
+#: ./profiles/default/actions.xml
+msgid "Remove width"
+msgstr "Remove width"
+
+#: ./profiles/default/actions.xml
+msgid "Remove width from product variant"
+msgstr "Remove width from product variant"
+
+#. Default: "Angle of the product"
+#: ./behaviors.py:268
+msgid "angle_description"
+msgstr "Angle of the product"
+
+#. Default: "Angle"
+#: ./behaviors.py:267
+msgid "angle_title"
+msgstr "Angle"
+
+#. Default: "Angle"
+#: ./browser/actions.py:104
+msgid "aspect_angle"
+msgstr "Angle"
+
+#. Default: "Color"
+#: ./browser/actions.py:56
+msgid "aspect_color"
+msgstr "Color"
+
+#. Default: "Demand"
+#: ./browser/actions.py:74
+msgid "aspect_demand"
+msgstr "Demand"
+
+#. Default: "Height"
+#: ./browser/actions.py:92
+msgid "aspect_height"
+msgstr "Height"
+
+#. Default: "IP Code"
+#: ./browser/actions.py:98
+msgid "aspect_ip_code"
+msgstr "IP Code"
+
+#. Default: "Length"
+#: ./browser/actions.py:80
+msgid "aspect_length"
+msgstr "Length"
+
+#. Default: "Material"
+#: ./browser/actions.py:110
+msgid "aspect_material"
+msgstr "Material"
+
+#. Default: "Size"
+#: ./browser/actions.py:68
+msgid "aspect_size"
+msgstr "Size"
+
+#. Default: "Weight"
+#: ./browser/actions.py:62
+msgid "aspect_weight"
+msgstr "Weight"
+
+#. Default: "Width"
+#: ./browser/actions.py:86
+msgid "aspect_width"
+msgstr "Width"
+
+#. Default: "Aspects"
+#: ./behaviors.py:135
+msgid "aspects"
+msgstr "Aspects"
+
+#. Default: "Color of the product"
+#: ./behaviors.py:140
+msgid "color_description"
+msgstr "Color of the product"
+
+#. Default: "Color"
+#: ./behaviors.py:139
+msgid "color_title"
+msgstr "Color"
+
+#. Default: "Datasheet of the product"
+#: ./behaviors.py:96
+msgid "datasheet_description"
+msgstr "Datasheet of the product"
+
+#. Default: "Datasheet"
+#: ./behaviors.py:95
+msgid "datasheet_title"
+msgstr "Datasheet"
+
+#. Default: "Variant aspects enabled by default when adding new variants"
+#: ./behaviors.py:113
+msgid "default_variant_aspects_description"
+msgstr "Variant aspects enabled by default when adding new variants"
+
+#. Default: "Default variant aspects"
+#: ./behaviors.py:111
+msgid "default_variant_aspects_title"
+msgstr "Default variant aspects"
+
+#. Default: "Demand of the product"
+#: ./behaviors.py:188
+msgid "demand_description"
+msgstr "Demand of the product"
+
+#. Default: "Demand"
+#: ./behaviors.py:187
+msgid "demand_title"
+msgstr "Demand"
+
+#. Default: "Description"
+#: ./browser/templates/product.pt:26
+msgid "description"
+msgstr "Description"
+
+#. Default: "Details about the product"
+#: ./behaviors.py:90
+msgid "details_description"
+msgstr "Details about the product"
+
+#. Default: "Details"
+#: ./behaviors.py:89
+msgid "details_title"
+msgstr "Details"
+
+#. Default: "Removed ${aspect} from object."
+#: ./browser/actions.py:42
+msgid "disabled_aspect"
+msgstr "Removed ${aspect} from object."
+
+#. Default: "Download Manual"
+#: ./browser/templates/product.pt:44
+msgid "download_manual"
+msgstr "Download Manual"
+
+#. Default: "Added ${aspect} to object."
+#: ./browser/actions.py:32
+msgid "enabled_aspect"
+msgstr "Added ${aspect} to object."
+
+#. Default: "Height of the product"
+#: ./behaviors.py:236
+msgid "height_description"
+msgstr "Height of the product"
+
+#. Default: "Height"
+#: ./behaviors.py:235
+msgid "height_title"
+msgstr "Height"
+
+#. Default: "Preview image of Product"
+#: ./behaviors.py:84
+msgid "image_description"
+msgstr "Preview image of Product"
+
+#. Default: "Product Image"
+#: ./behaviors.py:83
+msgid "image_title"
+msgstr "Product Image"
+
+#. Default: "International protection code of the product"
+#: ./behaviors.py:252
+msgid "ip_code_description"
+msgstr "International protection code of the product"
+
+#. Default: "IP Code"
+#: ./behaviors.py:251
+msgid "ip_code_title"
+msgstr "IP Code"
+
+#. Default: "Length of the product"
+#: ./behaviors.py:204
+msgid "length_description"
+msgstr "Length of the product"
+
+#. Default: "Length"
+#: ./behaviors.py:203
+msgid "length_title"
+msgstr "Length"
+
+#. Default: "Manual of Product"
+#: ./behaviors.py:72
+msgid "manual_description"
+msgstr "Manual of Product"
+
+#. Default: "Product Manual"
+#: ./behaviors.py:71
+msgid "manual_title"
+msgstr "Product Manual"
+
+#. Default: "Material of the product"
+#: ./behaviors.py:284
+msgid "material_description"
+msgstr "Material of the product"
+
+#. Default: "Material"
+#: ./behaviors.py:283
+msgid "material_title"
+msgstr "Material"
+
+#. Default: "No product with selected criteria. Change selection or"
+#: ./browser/templates/aspects.pt:37
+msgid "no_product_by_criteria"
+msgstr "No product with selected criteria. Change selection or"
+
+#. Default: "Sorry. No Products found."
+#: ./browser/templates/listing.pt:19
+msgid "no_products_found"
+msgstr "Sorry. No Products found."
+
+#. Default: "Number of columns shown in product tiles view"
+#: ./behaviors.py:53
+#: ./interfaces.py:61
+msgid "product_tiles_view_columns_description"
+msgstr "Number of columns shown in product tiles view"
+
+#. Default: "Product tiles view Columns"
+#: ./behaviors.py:51
+#: ./interfaces.py:59
+msgid "product_tiles_view_columns_title"
+msgstr "Product tiles view Columns"
+
+#. Default: "Image scale used for product tiles"
+#: ./behaviors.py:60
+#: ./interfaces.py:68
+msgid "product_tiles_view_image_scale_description"
+msgstr "Image scale used for product tiles"
+
+#. Default: "Product tiles image scale"
+#: ./behaviors.py:58
+#: ./interfaces.py:66
+msgid "product_tiles_view_image_scale_title"
+msgstr "Product tiles image scale"
+
+#. Default: "Products"
+#: ./interfaces.py:54
+msgid "products"
+msgstr "Products"
+
+#. Default: "read more..."
+#: ./browser/templates/listing.pt:41
+msgid "read_more"
+msgstr "read more..."
+
+#. Default: "Related"
+#: ./browser/templates/product.pt:32
+msgid "related"
+msgstr "Related"
+
+#. Default: "reset filter"
+#: ./browser/templates/aspects.pt:40
+msgid "reset_filter"
+msgstr "reset filter"
+
+#. Default: "Size of the product"
+#: ./behaviors.py:172
+msgid "size_description"
+msgstr "Size of the product"
+
+#. Default: "Size"
+#: ./behaviors.py:171
+msgid "size_title"
+msgstr "Size"
+
+#. Default: "Specifications"
+#: ./browser/templates/product.pt:29
+msgid "specifications"
+msgstr "Specifications"
+
+#: ./profiles/default/types/bda.plone.productshop.variant.xml
+msgid "Product Variant"
+msgstr "Product Variant"
+
+#: ./profiles/default/types/bda.plone.productshop.variant.xml
+msgid "variant to use within a Productgroup"
+msgstr "variant to use within a Productgroup"
+
+#. Default: "Weight of the product"
+#: ./behaviors.py:156
+msgid "weight_description"
+msgstr "Weight of the product"
+
+#. Default: "Weight"
+#: ./behaviors.py:155
+msgid "weight_title"
+msgstr "Weight"
+
+#. Default: "Width of the product"
+#: ./behaviors.py:220
+msgid "width_description"
+msgstr "Width of the product"
+
+#. Default: "Width"
+#: ./behaviors.py:219
+msgid "width_title"
+msgstr "Width"
+
