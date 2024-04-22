@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+celery_starter/__init__.py
+celery_starter/apps.py
+celery_starter.egg-info/PKG-INFO
+celery_starter.egg-info/SOURCES.txt
+celery_starter.egg-info/dependency_links.txt
+celery_starter.egg-info/requires.txt
+celery_starter.egg-info/top_level.txt
+celery_starter/management/__init__.py
+celery_starter/management/commands/__init__.py
+celery_starter/management/commands/_localization.py
+celery_starter/management/commands/runcelery.py
