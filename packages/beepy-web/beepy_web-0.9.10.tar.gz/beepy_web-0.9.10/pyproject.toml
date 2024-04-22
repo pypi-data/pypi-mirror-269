@@ -1,0 +1,124 @@
+[project]
+name = "beepy-web"
+authors = [{ name = "kor0p", email = "3.kor0p@gmail.com" }]
+description = "The modern frontend web framework for Python"
+dynamic = ["version"]
+requires-python = ">=3.10.10"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "python-dotenv==1.0.0", # .env file to os.environ
+    "boltons==23.1.1", # Better builtins
+]
+
+[project.urls]
+"Homepage" = "https://beepy-web-ba63e5a12994.herokuapp.com/e/"
+"Repository" = "https://github.com/kor0p/BeePy"
+"Docs" = "https://bee-py.readthedocs.io/en/latest/"
+"Community" = "https://t.me/bee_py/"
+"Sandbox" = "https://kor0p.github.io/BeePy-examples/sandbox"
+"NPM" = "https://www.npmjs.com/package/@kor0p/beepy"
+
+[project.optional-dependencies]
+dev = [
+    "pyodide-py==0.25.1", # Pyodide package
+    "micropip==0.3.0", # A lightweight Python package installer for the web
+    "watchdog==3.0.0", # watcher for files that changes for Hot reload
+    "websockets==11.0.3", # Hot reload is working using simple WebSockets server
+    "requests==2.31.0", # HTTP synchronous requests lib
+]
+docs = [
+    "mkdocs-material==9.5.17",
+]
+contributing = [
+    "pre-commit", # for pre-commit git hooks
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "beepy/framework.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "/.github",
+    "/.idea",
+    "mkdocs.yml",
+    "/docs",
+    "/backend",
+    "/examples",
+    "app.json",
+    "Procfile",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["beepy"]
+
+[tool.refurb]
+ignore = [124, 126]
+quiet = true
+
+[tool.black]
+line-length = 120
+target-version = ["py311"]
+skip-string-normalization = true
+
+[tool.isort]
+line_length = 120
+profile = "black"
+
+[tool.ruff]
+fix = true
+line-length = 120
+show-fixes = true
+target-version = "py311"
+extend-exclude = ["*tests*", "beepy/utils/js.py"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "ANN", # Typing annotations         TODO: Enable after adding typing
+    "RET", # Implicit returns
+    "D", # Docstrings                   TODO: Enable before release
+    "FIX", # Todos
+    "TD", # Todos
+    "N8", # Naming of classes
+    "EM", # Exceptions
+    "T20", # Usage of print             So, yea... Use logger instead? In Web?))
+    "SLF", # Private member accessed    It's a framework, baby ¯\_(ツ)_/¯
+    "DJ", # Django issues               It's not what this project really cares about :)
+    "S", # Security issues              Random is ok for us
+
+    "TRY003", # Avoid specifying long messages outside the exception class    TODO: Consider using custom Exceptions
+    "COM812", # Missing trailing comma
+    "RUF012", # Mutable class attribute should be ClassVar    Common usage of "children = ..." ¯\_(ツ)_/¯
+
+    "I001", # Conflicts with isort
+]
+ignore-init-module-imports = true
+
+
+[tool.ruff.lint.flake8-builtins]
+builtins-ignorelist = ["id", "type", "vars"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = "single"
+
+[tool.ruff.lint.pycodestyle]
+ignore-overlong-task-comments = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.pylint]
+max-args = 7
+
+[tool.ruff.lint.mccabe]
+# Flag errors (`C901`) whenever the complexity level exceeds 11.
+max-complexity = 11
