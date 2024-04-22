@@ -1,0 +1,2 @@
+[console_scripts]
+kungfupanda_installed = kungfupanda.kungfupanda:print_message
