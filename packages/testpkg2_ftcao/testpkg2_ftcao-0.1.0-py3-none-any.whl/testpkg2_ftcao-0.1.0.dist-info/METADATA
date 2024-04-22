@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: testpkg2_ftcao
+Version: 0.1.0
+Summary: Testing package in clean environment
+License: MIT
+Author: Frank Cao
+Requires-Python: >=3.12.2,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# testpkg2_ftcao
+
+Testing package in clean environment
+
+## Installation
+
+```bash
+$ pip install testpkg2_ftcao
+```
+
+## Usage
+
+- TODO
+
+## Contributing
+
+Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
+
+## License
+
+`testpkg2_ftcao` was created by Frank Cao. It is licensed under the terms of the MIT license.
+
+## Credits
+
+`testpkg2_ftcao` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+
