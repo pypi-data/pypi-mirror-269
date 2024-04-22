@@ -1,0 +1,2 @@
+[console_scripts]
+deep_export = deep_training.tools.export_transformers:export
