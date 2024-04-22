@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+extractStructuresWithMC/__init__.py
+extractStructuresWithMC/extractStructuresWithMC.py
+extractStructuresWithMC/runTests.py
+extractStructuresWithMC/testData.bin
+extractstructuresMC.egg-info/PKG-INFO
+extractstructuresMC.egg-info/SOURCES.txt
+extractstructuresMC.egg-info/dependency_links.txt
+extractstructuresMC.egg-info/top_level.txt
