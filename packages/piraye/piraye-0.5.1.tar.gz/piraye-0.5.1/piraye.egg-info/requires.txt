@@ -1,0 +1,10 @@
+nltk
+spacy
+lingua-language-detector
+
+[dev]
+tqdm
+pytest
+pylint==2.17.7
+flake8
+spacy
