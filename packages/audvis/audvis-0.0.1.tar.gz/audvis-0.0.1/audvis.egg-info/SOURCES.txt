@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+audvis.egg-info/PKG-INFO
+audvis.egg-info/SOURCES.txt
+audvis.egg-info/dependency_links.txt
+audvis.egg-info/top_level.txt
