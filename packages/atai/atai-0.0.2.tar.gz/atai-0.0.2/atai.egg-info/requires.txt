@@ -1,0 +1,10 @@
+math
+matplotlib
+numpy
+torch
+torcheval
+torchmetrics
+fastcore
+fastprogress
+
+[dev]
