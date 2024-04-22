@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nicknames"
+dynamic = ["version"]
+authors = [
+  { name="Carlton Northern", email="carlton.northern@gmail.com" },
+]
+description = "Hand-curated dataset of English given names and nicknames"
+readme = "../README.md"
+license = "Apache-2.0"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Sociology :: Genealogy",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Text Processing",
+    "Topic :: Text Processing :: Linguistic",
+    "Typing :: Typed",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/carltonnorthern/nicknames"
+"Bug Tracker" = "https://github.com/carltonnorthern/nicknames/issues"
+
+[tool.hatch.version]
+path = "src/nicknames/_version.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "pytest==7.4.4",  # The last version that supports pythoh 3.7
+  "ruff==0.4.1",
+]
+
+[tool.hatch.envs.default.scripts]
+# Run these in the repo root to get ALL python files
+lint = "python -m ruff format --check .. && python -m ruff check .."
+fmt = "python -m ruff check --fix .. && python -m ruff format .."
+test = "pytest"
+test-CI = "pytest -Werror"
+sync = "python ../normalize.py && python ../sql/generate_sql.py"
+
+# Instructs hatch to call hatch_build.py during build step
+[tool.hatch.build.hooks.custom]
+
+[tool.ruff]
+lint.select = [
+  "E",  # pyflakes
+  "F",  # pyflakes
+  "I",  # isort
+]
