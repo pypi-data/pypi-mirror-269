@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: chainhashing
+Version: 0.0.1
+Summary: A package for closed addressing hashing tables that require chaining with link lists.
+Project-URL: Homepage, https://github.com/Ruxton07/chainhashing
+Project-URL: Issues, https://github.com/Ruxton07/chainhashing/issues
+Author-email: Ruxton <rt.kellar@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+An example package/library for python that I made to prepare for deploying my first real package. This package does not actually do anything.
