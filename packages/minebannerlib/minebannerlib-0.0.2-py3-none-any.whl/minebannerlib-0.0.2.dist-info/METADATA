@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: minebannerlib
+Version: 0.0.2
+Summary: Lib for create minecraft banner image
+Home-page: https://github.com/saddydead1/minebannerlib
+Author: saddydead1
+Author-email: saddydead1@gmail.com
+Project-URL: GitHub, https://github.com/saddydead1/minebannerlib
+Keywords: minecraft banner python pil
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: requests >=2.25.1
+Requires-Dist: nbtlib
+Requires-Dist: pillow
+
+# MineBannerLib
+
+Python library for drawing banners.
+
+## How it works?
+
+Draws a banner image from the received nbts. The flag will be saved to the _**buildbanner**_ root folder.
+
+## Installation
+
+```
+pip install minebannerlin
+```
+
+or
+
+```
+python -m pip install minebannerlib
+```
+
+## Create a banner
+
+To do this, call the `create_banner()` function, to which you need to pass the _**NBTS**_ and the _**name of the flag**_
+
+## Example
+
+```python
+from minebannerlib import CreateBanner
+
+def main()
+  create_banner('test', '{BlockEntityTag:{Patterns:[{Color:14,Pattern:"cre"},{Color:4,Pattern:"sku"}]}}'
+
+if __name__ == '__main__':
+  main()
+```
