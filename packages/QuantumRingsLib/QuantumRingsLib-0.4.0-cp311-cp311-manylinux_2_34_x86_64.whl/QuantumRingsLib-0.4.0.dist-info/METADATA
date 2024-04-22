@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: QuantumRingsLib
+Version: 0.4.0
+Summary: A Quantum Development Library
+Author-email: "Quantum Rings Inc." <contact@quantumrings.com>
+Project-URL: Homepage, https://www.quantumrings.com/docs
+Project-URL: Documentation, https://www.quantumrings.com/docs
+Project-URL: API Reference, https://quantumrings.com/doc/modules.html
+Keywords: quantum,quantum circuit,quantum computing,quantum programming language,quantum register,quantum tools,tools,sdk
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: ==3.11.*
+Description-Content-Type: text/x-rst
+
