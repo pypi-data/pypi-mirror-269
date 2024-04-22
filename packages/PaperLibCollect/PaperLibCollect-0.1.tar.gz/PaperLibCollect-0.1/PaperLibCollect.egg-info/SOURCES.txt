@@ -1,0 +1,12 @@
+README.md
+setup.py
+PaperLibCollect.egg-info/PKG-INFO
+PaperLibCollect.egg-info/SOURCES.txt
+PaperLibCollect.egg-info/dependency_links.txt
+PaperLibCollect.egg-info/entry_points.txt
+PaperLibCollect.egg-info/top_level.txt
+paper/__init__.py
+paper/cli.py
+paper/hypergraph_binning_main/__init__.py
+paper/hypergraph_binning_main/functions.py
+tests/__init__.py
