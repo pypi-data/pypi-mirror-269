@@ -1,0 +1,10 @@
+cloth_tools/__init__.py,sha256=bUQedjftSJohx-EBK00F7suHsqDpGMb4Cv9Jw7BLBaQ,360
+cloth_tools/bounding_boxes.py,sha256=z9Pc3uWiCxvWauP2xyUwBxoEmBnElwuCDqxgdA7IlB0,764
+cloth_tools/config.py,sha256=BeJOImhQZ32_jobCZiRJtA3PtMR004qwc3LQYlOldPw,2622
+cloth_tools/motion_blur_detector.py,sha256=i8xVLl8XGBA0pII13soKbqq_gVoJZ6vw7S1cGmsNYU8,4091
+cloth_tools/trajectory_execution.py,sha256=0VUg-RNbXWlKTCg5v1q_5skna9Vwkox1KgU6UOo7P5I,2894
+cloth_tools/wrench_smoother.py,sha256=u_Q69PeyL7Zwz9qG0wI0MRlIjervbSOeN0eHxEMqQ6I,1218
+cloth_tools-0.3.0.dist-info/METADATA,sha256=NRxFYJJos9dAebkynP3Qthlh-21cRGA4izTxfBTXMU4,684
+cloth_tools-0.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cloth_tools-0.3.0.dist-info/top_level.txt,sha256=V_Sh9_1vWSMhB6l5CQ2pcNrFdU0cXah_uaMfpv9Mz08,12
+cloth_tools-0.3.0.dist-info/RECORD,,
