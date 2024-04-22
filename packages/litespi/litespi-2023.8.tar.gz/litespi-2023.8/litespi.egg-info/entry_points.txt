@@ -1,0 +1,2 @@
+[console_scripts]
+litespi_gen = litespi.gen:main
