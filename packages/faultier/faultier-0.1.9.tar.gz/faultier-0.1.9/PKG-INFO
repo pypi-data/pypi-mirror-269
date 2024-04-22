@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: faultier
+Version: 0.1.9
+Summary: A library to control the Faultier glitcher.
+Author-email: Thomas 'stacksmashing' Roth <code@stacksmashing.net>
+Requires-Dist: pyserial
+Requires-Dist: plotly
+Requires-Dist: google
