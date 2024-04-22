@@ -1,0 +1,12 @@
+doctor/__init__.py,sha256=32Meqsm5YR_P22z_CrU4AwgcEOSCbBQilu6L6eQD7w8,25
+doctor/consts.py,sha256=U8KOzdPFgMuf_nMul1Vw9qtAvKtZbu8WLwkiYD49IAs,1754
+doctor/doctor.py,sha256=hBYDHNmk8xQ3E1emVWjZOuaeDkJRYt9GTH_x82bXBaE,81750
+doctor/reference/prefixes.tsv,sha256=_1hW0wBl6K1YvcM8stdiEdD4elzST_ecJqQEvhD9Auk,134314
+doctor/reference/refine-class-uris.tsv,sha256=pd_nOSjR7bia96u9hhcjhBg9J6LUAuDFlyy-JE9tsys,90
+doctor/reference/refine-prefix-uris.tsv,sha256=KY5PZ4WCaLeB0APNBjAWq7_Q5Whc6FLg9ncX7BSPeuw,577
+rdf_doctor-1.1.0rc4.dist-info/LICENSE,sha256=e5qMQtuffizvdi23h6MoQ37f3xmNY0VBq8V0tgWuZNg,1061
+rdf_doctor-1.1.0rc4.dist-info/METADATA,sha256=p2agE6jqOBMOQhX1yyFb02ZOc2nKI66Y-cCdx-F-iUc,10653
+rdf_doctor-1.1.0rc4.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+rdf_doctor-1.1.0rc4.dist-info/entry_points.txt,sha256=1vHyYdY5pMK7zOINHh2ymwU_Uid1YzZx7Vte5tjHCls,52
+rdf_doctor-1.1.0rc4.dist-info/top_level.txt,sha256=8awHkjBkPxJ8N_ygAwmuUTUz5ZKfy9aqNcWTSI_Ma_8,7
+rdf_doctor-1.1.0rc4.dist-info/RECORD,,
