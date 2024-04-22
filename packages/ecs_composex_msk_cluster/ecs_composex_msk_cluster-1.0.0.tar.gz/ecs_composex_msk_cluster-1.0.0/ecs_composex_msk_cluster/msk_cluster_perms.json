@@ -1,0 +1,15 @@
+{
+  "MSKCluster": {
+    "RO": {
+      "Effect": "Allow",
+      "Action": [
+        "kafka:Describe*",
+        "kafka:List*",
+        "kafka:Get*"
+      ],
+      "Resource": [
+        "${ARN}"
+      ]
+    }
+  }
+}
