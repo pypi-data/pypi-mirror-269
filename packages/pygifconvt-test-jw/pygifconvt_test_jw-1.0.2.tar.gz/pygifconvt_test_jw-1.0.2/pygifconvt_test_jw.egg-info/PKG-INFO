@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pygifconvt_test_jw
+Version: 1.0.2
+Summary: Test package for distribution
+Home-page: 
+Download-URL: 
+Author: swat018
+Author-email: swat018@gmail.com
+Keywords: GIFCONVERTER,gifconverter
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+License-File: LICENSE
+Requires-Dist: pillow
