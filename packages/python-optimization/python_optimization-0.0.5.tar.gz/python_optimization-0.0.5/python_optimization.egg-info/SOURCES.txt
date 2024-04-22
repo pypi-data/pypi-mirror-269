@@ -1,0 +1,7 @@
+setup.py
+python_optimization/__init__.py
+python_optimization/python_optimization.py
+python_optimization.egg-info/PKG-INFO
+python_optimization.egg-info/SOURCES.txt
+python_optimization.egg-info/dependency_links.txt
+python_optimization.egg-info/top_level.txt
