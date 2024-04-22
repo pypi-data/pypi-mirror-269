@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: nlp-tir
+Version: 0.1.0a0
+Summary: Tir is the god of written language, schooling, rhetoric, wisdom, and the arts in Armenian mythology.
+Author-Email: Manoel Vilela <manoel_vilela@engineer.com>
+License: MIT
+Requires-Python: <3.12,>=3.10
+Requires-Dist: nltk>=3.8.1
+Requires-Dist: pyenchant>=3.2.2
+Requires-Dist: scikit-learn>=1.4.0
+Requires-Dist: plot-keras-history>=1.1.38
+Requires-Dist: tensorflow>=2.15.1
+Requires-Dist: pandas>=2.2.1
+Requires-Dist: keras>=2.15.0
+Requires-Dist: scikeras>=0.12.0
+Description-Content-Type: text/markdown
+
+# nlp-tir
+
+NLP oriented tasks for ITA NLP 2024 Course.
+
+# How to use
+
+Requirements:
+
+- Python3.10 or Python3.11
+- [pdm] package manager (pip is not enough)
+
+[pdm]: https://pdm-project.org/
+
+## Prepare environment
+
+Git clone the repository and run:
+
+```bash
+pdm install
+```
+
+Then:
+
+```bash
+pdm notebook
+```
+
+Now you will have the jupyter lab running with the right packages
+installed to run the notebooks and the project.
