@@ -1,0 +1,3 @@
+[console_scripts]
+display-colors=display_colors.__main__:main
+
