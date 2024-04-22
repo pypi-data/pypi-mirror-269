@@ -1,0 +1,275 @@
+from sqlton.ast import All, Alias, Operation, Column, Select, SelectCore, Values, Insert, Update, Table
+from sqlton import parse
+from tinydb_sql.scope import lookup, Scope, Entry
+from tinydb_sql.expression import Evaluator
+
+class CommonTable:
+    def __init__(self, engine, name, columns, select):
+        self.engine = Engine(engine.database | {name:self})
+        self.name = name
+        self.columns = columns
+        self.select = select
+
+    def iterage(self, scope):
+        yield from self.engine(scope, iterable).iterate({}, self.select)
+
+class Engine:
+    def __init__(self, database):
+        self.database = database
+        self.iterator = None
+        self.description = ()
+        self.rowcount = 0
+
+
+    def __iter__(self):
+        if self.iterator:
+            while entry := self.fetchone():
+                yield entry
+            self.iterator = None
+        else:
+            raise StopIteration()
+        
+    def execute(self, statement):
+        statement = parse(statement)
+
+        print('statement:', statement)
+        
+        if isinstance(statement, Select): 
+            self.iterator = self.iterate({}, statement)
+        elif isinstance(statement, Insert):
+            self.execute_insert(statement)
+        elif isinstance(statement, Update):
+            self.execute_update(statement)
+        else:
+            raise NotImplementedError()
+
+    def execute_insert(self, statement):
+        entries = (self.scope_to_entry((All(),), scope)
+                   for _, scope
+                   in self.iterate({}, statement.values))
+
+        if not (len(statement.columns) == 1 and isinstance(statement.columns[0], All)):
+            entries = (dict(zip(statement.columns, entry.values())) for entry in entries)
+        
+        self.database.tables[statement.target.name].extend(entries)
+
+    def execute_update(self, statement):
+        if isinstance(statement.target, Alias):
+            table = statement.target.original.name
+            alias = statement.target.replacement
+        else:
+            table = statement.target.name
+            alias = statement.target.name
+
+        for entry in self.database.tables[table]:
+            scope = {alias:entry}
+            
+            if statement.tables:
+                tables = self.iterate_table_list(scope, statement.tables)
+            else:
+                tables = ((None, scope),)
+
+            for _, scope in tables:
+                if statement.where:
+                    evaluation = Evaluator(scope)(statement.where)
+                else:
+                    evaluation = True
+
+                if evaluation:
+                    for columns, expression in statement.assignments:
+                        value = Evaluator(scope)(expression)
+
+                        for column in columns:
+                            entry[column] = value
+
+                elif statement.alternative:
+                    raise NotImplementedError("Alternative feature was not yet implemented !")
+        
+    def fetchone(self):
+        try:
+            name, scope = next(self.iterator)
+        except StopIteration:
+            return None
+        
+        entry = self.scope_to_entry((All(),), scope)
+        
+        self.description = tuple((key, type(value), None, None, None, None, None)
+                                 for key, value
+                                 in entry.items())
+        self.rowcount = len(self.description)
+        
+        return tuple(entry.values())
+
+    def fetchmany(self, size):
+        for _ in range(size):
+            yield self.fetchone()
+
+    def fetchall(self):
+        return [entry for entry in self]
+        
+    def scope_to_entry(self, columns, scope:Scope) -> Entry:
+        entry = {}
+        evaluator = Evaluator(scope)
+        
+        for index, column in enumerate(columns):
+            if isinstance(column, Alias):
+                entry[column.replacement] = evaluator(column.original)
+            elif isinstance(column, Column):
+                entry[column.name] = evaluator(column)
+            elif isinstance(column, All):
+                if column.table is None:
+                    tables = scope.values()
+                else:
+                    tables = (scope[column.table],)
+                
+                for table in tables:
+                    if table == CommonTable:
+                        continue
+                    
+                    for key, value in table.items():
+                        if key not in entry:
+                            entry[key] = evaluator(value)            
+            else:
+                entry[index] = evaluator(column)
+
+        return entry
+
+    def iterate_select(self, scope, select:Select):
+        if hasattr(select, 'with_clause'):
+            scope[CommonTable] = {select.with_clause.cte.name: CommonTable(self,
+                                                                           select.with_clause.cte.name,
+                                                                           (column.name
+                                                                            for colum in select.with_clause.result_column_list),
+                                                                           select.with_clause.cte.select)}
+            
+        yield from self.iterate(scope, select.select_core)
+
+
+    def iterate_values(self, scope, values:Values):
+        for columns in values.values:
+            yield None, scope | {None:self.scope_to_entry(columns, scope)}
+        
+    def iterate_selectcore(self, scope, core:SelectCore):
+        hashes = set()
+
+        distinct = hasattr(core, 'reduction') and core.reduction == 'DISTINCT'
+        
+        for _name, _scope in self.iterate_selectcore_scope(scope, core):
+            entry = self.scope_to_entry(core.result_column_list, _scope)
+            
+            if distinct:
+                hsh = hash(frozenset(entry.items()))
+                
+                if not hsh in hashes:
+                    yield None, {None:entry}
+                    hashes.add(hsh)
+            else:
+                yield None, {None:entry}
+
+    def iterate_selectcore_scope(self, scope, core:SelectCore):
+        for _, _scope in self.iterate_table_list(scope, core.table_list):
+            if hasattr(core, 'where'):
+                if Evaluator(_scope)(core.where):
+                    yield None, _scope
+            else:
+                yield None, _scope
+
+
+    def iterate_table_list(self, scope, table_list:list[Table|Alias|Operation]):
+        head, *remainder = table_list
+
+        for name, scope in self.iterate(scope, head):
+            if len(remainder):
+                yield from self.iterate_table_list(scope, remainder)
+            else:
+                yield name, scope
+                
+
+    def iterate(self, scope, element):
+        yield from getattr(self, f"iterate_{type(element).__name__}".lower())(scope, element)
+
+    def iterate_alias(self, scope, alias: Alias):
+        name = alias.replacement
+        for _name, _scope in self.iterate(scope, alias.original):
+            yield name, {name: _scope[_name]} | scope
+
+    def iterate_table(self, scope, table: Table):
+        if table.name in table:
+            collection = self.database.table(table.name)
+        else:
+            raise KeyError(f'Found no such {table.name} table neither common table')
+        
+        for entry in collection:
+            yield table.name, scope | {table.name:entry}
+
+    def iterate_commontable(self, scope, commontable):
+        yield from commontable.iterate(scope)
+            
+    def iterate_operation(self, scope, operation):
+        for index in range(len(operation.operator), 0, -1):
+            method_name = 'iterate_operation_' + '_'.join(part
+                                                          for part in operation.operator[:index]
+                                                          if isinstance(part, str)).lower()
+            if hasattr(self, method_name):
+                yield from getattr(self, method_name)(scope, operation.operator, operation.a, operation.b)
+                return
+        
+        raise NotImplementedError(f"no method found for operator: {operation.operator}")
+    
+    def iterate_operation_join(self, scope, operator, a, b):
+        for name_a, scope_a in self.iterate(scope, a):
+            for name_b, scope_b in self.iterate(scope_a, b):
+                method, constraint = operator[-1]
+
+                if operator == ('JOIN',) or 'CROSS' in operator:
+                    yield name_b, scope_b
+                    continue
+
+                if method == 'ON':
+                    evaluation = Evaluator(scope_b)(constraint)
+                elif method == 'USING':
+                    evaluation = True
+                    
+                    for column in constraint:
+                        if lookup(scope_a, (name_a, column)) != lookup(scope_b, (name_b, column)):
+                            break
+                    else:
+                        evaluation = False
+                else:
+                    raise NotImplementedError(f"No such {method} method for inner join ")
+
+                if evaluation:
+                    yield name_b, scope_b
+                else:
+                    if 'LEFT' in operator:
+                        yield name_b, scope_a | {name_b: None}
+                    elif 'RIGHT' in operator:
+                        yield name_b, scope | {name_a: None} | {name_b: scope_b[name_b]}
+                    elif 'FULL' in operator and 'OUTER' in operator:
+                        yield name_b, scope | {name_a: None} | {name_b: None}
+
+    def iterate_operation_union_all(self, scope, operator, a, b):
+        yield from self.iterate(scope, a)
+        yield from self.iterate(scope, b)
+
+    def iterate_operation_union(self, scope, operator, a, b):
+        hashes = set()
+        
+        for name, scope in self.iterate_operation_union_all(scope, None, a, b):
+            entry = hash(frozenset(scope[name].items()))
+            if not entry in hashes:
+                yield None, scope
+                hashes.add(entry)
+
+    def iterate_operation_intersect(self, scope, operator, a, b):
+        hashes = set()
+        
+        for name_a, scope_a in self.iterate(scope, a):
+            hash_a = hash(frozenset(scope_a[name_a].items()))
+            for name_b, scope_b in self.iterate(scope_a, b):
+                hash_b = hash(frozenset(scope_b[name_b].items()))
+                
+                if hash_a == hash_b and hash_a not in hashes:
+                    yield None, scope_b
+                    
+                    hashes.add(hash_a)

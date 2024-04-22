@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "sqletic"
+version = "0.1.4"
+description = ""
+authors = ["Charles Bajeux <charles.bajeux@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlton = "^0.1.17"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+test_expression = "tests.test_expression:main"
+test_map = "tests.test_map:main"
+test_create_drop = "tests.test_create_drop:main"
+test_select = "tests.test_select:main"
+test_insert = "tests.test_insert:main"
+test_update = "tests.test_update:main"
+test_delete = "tests.test_delete:main"
