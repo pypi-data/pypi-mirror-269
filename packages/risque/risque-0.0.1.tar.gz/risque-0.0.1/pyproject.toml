@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "risque"
+authors = [{name = "Sarthak Gambhir", email = "sarthak.gambhir@outlook.com"}]
+readme = "readme.md"
+license = {file = "LICENSE.txt"}
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
+dynamic = ["version", "description"]
