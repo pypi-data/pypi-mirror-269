@@ -1,0 +1,12 @@
+claspin-0.0.1.dist-info/METADATA,sha256=iZchkvvhL3OT0X9P7iidnbQ1yzT-2cfudl7_ToAM37I,973
+claspin-0.0.1.dist-info/WHEEL,sha256=7sv5iXvIiTVJSnAxCz2tGBm9DHsb2vPSzeYeT7pvGUY,90
+claspin-0.0.1.dist-info/entry_points.txt,sha256=a6yWt4fRMqx4J3ktP70NTknfvlhZwvKR7CnkUVpARHM,46
+claspin-0.0.1.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+claspin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+claspin/cli/__init__.py,sha256=VEx3lZy7j335DHmX9npa1HsYdO8Za-KYaOj5oxOPiOY,53
+claspin/cli/main.py,sha256=AH3N2jsrgSyvpMKweIbW1xiPN8BD2w8XhwV7P4M31sI,128
+claspin/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+claspin/model/common.py,sha256=F_wxHfMqj5Xn9kh37W0iYQUmb5nd4a2bwcF7hz0x11k,583
+claspin/model/metric.py,sha256=iGJT9u1igA7i4Z6UMqxhzz-n4aC8I9JfqAE7AGRE7bE,2056
+claspin/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+claspin-0.0.1.dist-info/RECORD,,

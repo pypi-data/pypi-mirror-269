@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: claspin
+Version: 0.0.1
+Summary: A catalog of metrics for DevOps engineers
+Author: Vincent Primault
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: System :: Monitoring
+Classifier: Typing :: Typed
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: <3.13,>=3.11
+Requires-Dist: pydantic>=2.6.4
+Requires-Dist: PyYAML>=6.0.1
+Requires-Dist: click>=8.1.7; extra == "cli"
+Requires-Dist: promql-parser>=0.3.3; extra == "prometheus"
+Requires-Dist: opendal>=0.45.1; extra == "db"
+Requires-Dist: PythonMonkey>=0.4.0; extra == "plot"
+Provides-Extra: cli
+Provides-Extra: prometheus
+Provides-Extra: db
+Provides-Extra: plot
+Description-Content-Type: text/markdown
+
+# claspin
+
+A catalog of metrics for DevOps engineers.
