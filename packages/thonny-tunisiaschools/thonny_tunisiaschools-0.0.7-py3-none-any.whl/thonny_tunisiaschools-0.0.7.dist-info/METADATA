@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: thonny-tunisiaschools
+Version: 0.0.7
+Summary: A Thonny IDE plug-in that offers PyQt / QT / Python support for Tunisian computer science secondary teachers / students .
+Home-page: https://github.com/selmen2004/thonny-tunisiaschools
+Author: Selmen Arous
+Author-email: Selmen Arous <selmen.arous@gmail.com>
+License: GPL version 3
+Keywords: PyQt,QT,Tunisia,School,Teaching,Education
+Platform: Windows
+Platform: macOS
+Platform: Linux
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: Freeware
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Education
+Classifier: Topic :: Software Development
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: thonny >=3.2.1
+
+# thonny-tunisiaschools
+
+A Thonny plug-in which offers Tunisian computer science secondary teachers / students some help creating Python & PyQt Applications:
+
+- loads QT UI file and :
+
+  - adds needed code to load that file to current document
+
+  - creates empty functions binded to buttons’ clicks
+ 
+  - Adds a view that displays the UI inside Thonny (currently supporting Labels , Text inputs and ttons only )
+
+  - adds on new menu (PyQt5) commands to insert call to usual functions ( text , setText , clear , show ) if widget is Label or LineEdit ( as in Tunisian Curriculum )
+
+- changes save location to c:/bac2024 as needed for final exams (baccalaureat)
+
+- disables opening last open files (to reduce risks of students overwriting other students work)
