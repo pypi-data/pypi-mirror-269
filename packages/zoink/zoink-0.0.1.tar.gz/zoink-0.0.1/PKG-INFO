@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: zoink
+Version: 0.0.1
+Summary: Annoyingly pin one application on MacOS for a period of time
+License: MIT
+Author: John B Nelson
+Author-email: jbn@abreka.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: pyobjc (>=10.2,<11.0)
+Requires-Dist: tqdm (>=4.66.2,<5.0.0)
+Description-Content-Type: text/markdown
+
+# `zoink`
+
+## Install
+
+```bash
+pipx install zoink
+```
+
+## Usage
+
+```
+Usage: zoink [OPTIONS] [APP_NAME]
+
+Options:
+  --duration TEXT  Duration to keep the application in focus. Format: 1h2m,
+                   20m, 30s etc.
+  --delay FLOAT    Delay between checks for focus change.
+  --help           Show this message and exit.
+```
+
+`APP_NAME` is optional. If not provided, the application will be chosen based on the currently focused window after a delay of 3 seconds.
