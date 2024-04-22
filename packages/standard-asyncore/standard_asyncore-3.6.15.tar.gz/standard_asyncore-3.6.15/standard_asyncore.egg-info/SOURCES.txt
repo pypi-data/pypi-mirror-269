@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+pyproject.toml
+asyncore/__init__.py
+standard_asyncore.egg-info/PKG-INFO
+standard_asyncore.egg-info/SOURCES.txt
+standard_asyncore.egg-info/dependency_links.txt
+standard_asyncore.egg-info/top_level.txt
+tests/test_asyncore.py
