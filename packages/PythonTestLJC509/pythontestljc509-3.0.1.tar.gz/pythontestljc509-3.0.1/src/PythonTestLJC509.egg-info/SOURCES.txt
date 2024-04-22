@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/PythonTestLJC509.egg-info/PKG-INFO
+src/PythonTestLJC509.egg-info/SOURCES.txt
+src/PythonTestLJC509.egg-info/dependency_links.txt
+src/PythonTestLJC509.egg-info/entry_points.txt
+src/PythonTestLJC509.egg-info/requires.txt
+src/PythonTestLJC509.egg-info/top_level.txt
+src/sample/__init__.py
+src/sample/package_data.dat
+src/sample/simple.py
+tests/test_simple.py
