@@ -1,0 +1,3 @@
+[console_scripts]
+fuconv = fuconv.__main__:main
+
