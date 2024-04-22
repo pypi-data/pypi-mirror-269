@@ -1,0 +1,5 @@
+[console_scripts]
+gfa2fasta=graphbin2.support.gfa2fasta:main
+graphbin2=graphbin2.cli:main
+prepResult=graphbin2.support.prepResult:main
+
