@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: celery_starter
+Version: 1.0.0
+Summary: Django command to launch celery worker, beat, flower
+Home-page: https://github.com/Friskes/celery-starter
+Author: Friskes
+Author-email: friskesx@gmail.com
+License: MIT
+Keywords: Django Celery Beat Flower Autoreload
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Framework :: Django
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django >=4.2.11
+Requires-Dist: celery >=5.3.6
+Requires-Dist: python-dotenv >=1.0.1
+
+## Django command to run `celery (worker, beat, flower)` with automatically reboot server after changing files
+
+## Requirements
+- django>=4.2.11
+celery>=5.3.6
+python-dotenv>=1.0.1
+
+## Install
+1. `pip install celery-starter`
+2. Add app name to `INSTALLED_APPS`
+```python
+INSTALLED_APPS = [
+    'celery_starter',
+]
+```
+
+#### Command to run the program:
+```
+python manage.py runcelery
+```
+
+Arguments can be passed in any order, it doesn't matter.
+
+#### Positional Arguments:
+`<celery app name>`
+or
+`<"full command to run celery worker">`
+
+#### Optional Arguments:
+`-h` or `--help` Show help message.<br/>
+`-b` or `--beat` Excludes the beat server at startup.<br/>
+`-f` or `--flower` Excludes the flower server at startup.<br/>
+`-d` or `--debug` Displays information about successful/unsuccessful completion of processes.<br/>
+`-ll` or `--loglevel` Defines the logging level for celery worker/beat
+`-lf` or `--logfile` Redirects the output to the console by default to a log file for celery worker/beat
+
+##### To stopped program pressing the keyboard shortcut `CTRL+C`
+
+### Examples of Commands
+The command enclosed in quotation marks gets into the positional arguments and replaces the command to run the default celery worker.
+The `--beat` `--flower` commands fall into the optional arguments and turn off the beat and flower of the server.
+```shell script
+python manage.py runcelery "celery --app=${CELERY_APP} worker -E \
+--hostname=worker-example@%h
+--uid=nobody --gid=nogroup \
+--loglevel=INFO" --beat --flower
+```
