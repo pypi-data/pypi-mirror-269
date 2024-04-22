@@ -1,0 +1,12 @@
+LICENSE
+Readme.md
+pyproject.toml
+setup.cfg
+./yamlcore/__init__.py
+./yamlcore/dumper.py
+./yamlcore/loader.py
+tests/test-schema.py
+yamlcore.egg-info/PKG-INFO
+yamlcore.egg-info/SOURCES.txt
+yamlcore.egg-info/dependency_links.txt
+yamlcore.egg-info/top_level.txt
