@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ossStudy
+Version: 0.0.4
+Summary: oss dev study
+Home-page: https://github.com/bluefrog1413/oss-2024
+Download-URL: https://github.com/bluefrog1413/oss-2024
+Author: hangyeolkim
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# 패키지 설명 이 패키지는 자주사용하는 **numpy, pandas, matplotlib 라이브러리** 3개가 들어가 있습니다. 
+또한, **today 함수**와 **lmsSite 함수**가 들어 있습니다.
+**today 함수**는 **today(a,b)**로 사용하며 a : 월 , b : 일 을 넣어 오늘 코딩한 날짜를 출력할 수 있습니다.
+**lmsSite 함수**는 코딩중에 모르는 잊어버린 개념을 매번 구글에서 동아대 lms를 칠 필요 없이 **lmsSite()** 만 치면 바로 접속할 수 있습니다.
