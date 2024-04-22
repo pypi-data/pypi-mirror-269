@@ -1,0 +1,13 @@
+cutseq/debug_short_R1.fastq.gz,sha256=ToECyFfmGowtlLT9_MG3el-kFU-uX0VOUMx-0f03ufo,15347
+cutseq/debug_short_R2.fastq.gz,sha256=CtHa5yhHip_2kmjYkYm7gNgE7iEepqn-zai53OP63B4,10950
+cutseq/debug_trimmed_R1.fastq.gz,sha256=bC95zyXyK-zHeRSN2iHhYZx5_nY1bJZ4_2mKeOgpruc,137000
+cutseq/debug_trimmed_R2.fastq.gz,sha256=mq5ss18pAeMT7etBh8zVBSgBX7M4U7nVoUQPlaUuWik,139136
+cutseq/debug_untrimmed_R1.fastq.gz,sha256=svlwqsLo4365Fm3SG3nLZhpWWaaLo-sIR7wkS_nXXG0,502130
+cutseq/debug_untrimmed_R2.fastq.gz,sha256=Gzo0Kx9Fa6v8_HAMTlHWZrbgNJ93z92a8hlVHfSeMMM,512793
+cutseq/run.py,sha256=sasjm65KitvtkKdISlooLmffc2uXzdEr7geTBx20Dro,23742
+cutseq/run_cmd.py,sha256=d5fSQGTOF22LCVEBBDrYhIvAUJmtsu1AdtZCOYbq6sY,14395
+cutseq/test.json,sha256=vJkTu_RTS-hNMyr3fhYOAhy1nCbrml6_424dFe68a6Q,10737
+cutseq-0.0.15.dist-info/METADATA,sha256=1YaR_Q-QNcL0ydUKcHEWfGvsaQCBI5uNBkOIEwzVku0,1145
+cutseq-0.0.15.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cutseq-0.0.15.dist-info/entry_points.txt,sha256=cz5WcGOzPAtTCE9mFfyDna3ofZv0NOeGtqE50rROBFU,42
+cutseq-0.0.15.dist-info/RECORD,,
