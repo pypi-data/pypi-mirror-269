@@ -1,0 +1,28 @@
+from typing import Any
+
+Entry = dict[str, Any]
+Scope = dict[str, Entry]
+
+def merge(scope: Scope, table: str, entry: Entry) -> Scope:
+    return scope | {table:entry}
+
+def lookup(scope: Scope, reference:str | tuple[str, str]):
+    if isinstance(reference, str):
+        for entry in scope.values():
+            if reference in entry:
+                return entry[reference]
+        else:
+            raise KeyError(f'No such column found {reference} !')
+    else:
+        table, column = reference
+
+        if not table in scope:
+            raise KeyError(f"No such table {table} in current scope {scope.keys()}")
+        
+        if scope[table] is None:
+            return None
+        
+        if not column in scope[table] :
+            raise KeyError(f"No such column {column} in {table} table {scope[table].keys()}")
+        
+        return scope[table][column]

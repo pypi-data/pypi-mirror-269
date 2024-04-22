@@ -1,0 +1,9 @@
+[console_scripts]
+test_create_drop=tests.test_create_drop:main
+test_delete=tests.test_delete:main
+test_expression=tests.test_expression:main
+test_insert=tests.test_insert:main
+test_map=tests.test_map:main
+test_select=tests.test_select:main
+test_update=tests.test_update:main
+

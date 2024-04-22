@@ -1,0 +1,12 @@
+sqletic/__init__.py,sha256=E3JARzanVvN0xLpaV988o1qT6Tc_3-7oAYAReEGZV8w,36
+sqletic/__init__.py~,sha256=Wc5rPRlZ92CsvH96sNDVFZ5yrBaj33iBXT7ETND6gcw,39
+sqletic/engine.py,sha256=qEJIZgtu8rQnPAraxi76vm1f_bled8Ovr8iTa3ESOk0,14227
+sqletic/engine.py~,sha256=NrdqIqPAEtGW96jzYiqleq_krHFqycrQGs2w9uk0fWI,10599
+sqletic/expression.py,sha256=taQmEOXkzt6E3Og6MUFQ4IxGgHlT9SE_9ezlVvkibcs,3108
+sqletic/expression.py~,sha256=Tk8fztkczyCilTbFAoT_uO3OcifM7iXgUr05F6_irYk,2947
+sqletic/scope.py,sha256=LpoYMXLi6UPHPvEMSKLkNT7upPdO_U7DN_vfFkPYFp8,1062
+sqletic/scope.py~,sha256=XNP6YBcdO6gVoZMlRu2tnEd2gJeR7G6H1Ff7Un9io0w,868
+sqletic-0.1.4.dist-info/METADATA,sha256=3_5TvJu8sJQsnIdedyEjehI_ijzSITp-vm3kma8Neyc,1580
+sqletic-0.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sqletic-0.1.4.dist-info/entry_points.txt,sha256=bZ0Jwo6mTV8bGBcSbOk3cBKVNCEEbu1D7aG802jnfeU,276
+sqletic-0.1.4.dist-info/RECORD,,
