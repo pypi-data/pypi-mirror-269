@@ -1,0 +1,20 @@
+[build-system]
+build-backend = "maturin"
+requires = ["maturin>=1.5,<2.0"]
+
+[project]
+classifiers = [
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Programming Language :: Rust",
+]
+dynamic = ["version"]
+name = "sortie"
+requires-python = ">=3.8"
+
+[tool.maturin]
+bindings = "bin"
+
+[tool.sortie]
+reorder_arrays = true
+reorder_keys = true
