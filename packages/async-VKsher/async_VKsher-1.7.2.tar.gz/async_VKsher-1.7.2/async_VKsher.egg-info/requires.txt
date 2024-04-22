@@ -1,0 +1,3 @@
+asyncio>=3
+aiohttp>=3
+aiofiles>=22
