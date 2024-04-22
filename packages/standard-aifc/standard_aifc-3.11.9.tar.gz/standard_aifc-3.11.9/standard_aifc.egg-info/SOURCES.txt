@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+pyproject.toml
+aifc/__init__.py
+standard_aifc.egg-info/PKG-INFO
+standard_aifc.egg-info/SOURCES.txt
+standard_aifc.egg-info/dependency_links.txt
+standard_aifc.egg-info/top_level.txt
+tests/test_aifc.py
