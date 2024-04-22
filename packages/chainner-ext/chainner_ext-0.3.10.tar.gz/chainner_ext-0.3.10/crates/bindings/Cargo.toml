@@ -1,0 +1,22 @@
+[package]
+name = "bindings"
+version = "0.0.0"
+
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "chainner_ext"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.20.0", features = ["extension-module"] }
+numpy = "0.20.0"
+arboard = "3.2.0"
+
+glam.workspace = true
+image-ops.workspace = true
+image-core.workspace = true
+regex-py.workspace = true
