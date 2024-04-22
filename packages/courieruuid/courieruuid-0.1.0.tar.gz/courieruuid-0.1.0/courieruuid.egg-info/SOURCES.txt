@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+courieruuid/__init__.py
+courieruuid/generator.py
+courieruuid.egg-info/PKG-INFO
+courieruuid.egg-info/SOURCES.txt
+courieruuid.egg-info/dependency_links.txt
+courieruuid.egg-info/top_level.txt
