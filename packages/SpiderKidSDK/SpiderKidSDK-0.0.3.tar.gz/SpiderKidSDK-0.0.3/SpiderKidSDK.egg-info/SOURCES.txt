@@ -1,0 +1,8 @@
+README.md
+setup.py
+SpiderKidSDK.egg-info/PKG-INFO
+SpiderKidSDK.egg-info/SOURCES.txt
+SpiderKidSDK.egg-info/dependency_links.txt
+SpiderKidSDK.egg-info/top_level.txt
+spiderkid/__init__.py
+spiderkid/spider_kid.py
