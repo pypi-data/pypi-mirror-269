@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+drf_spectacular_websocket/__init__.py
+drf_spectacular_websocket/apps.py
+drf_spectacular_websocket/decorators.py
+drf_spectacular_websocket/settings.py
+drf_spectacular_websocket.egg-info/PKG-INFO
+drf_spectacular_websocket.egg-info/SOURCES.txt
+drf_spectacular_websocket.egg-info/dependency_links.txt
+drf_spectacular_websocket.egg-info/requires.txt
+drf_spectacular_websocket.egg-info/top_level.txt
+drf_spectacular_websocket/schemas/__init__.py
+drf_spectacular_websocket/schemas/consumer_schema.py
+drf_spectacular_websocket/schemas/schema.py
+drf_spectacular_websocket/templates/drf_spectacular/swagger_ui.js
