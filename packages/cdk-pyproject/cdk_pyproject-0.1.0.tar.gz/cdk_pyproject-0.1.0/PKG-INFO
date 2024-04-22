@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: cdk-pyproject
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Masaki Kobayashi <bayashi.cl@gmail.com>
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: AWS CDK
+Classifier: Framework :: AWS CDK :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Requires-Dist: aws-cdk-lib>=2.138.0
+Description-Content-Type: text/markdown
+
+# cdk-pyproject
+
+Describe your project here.
