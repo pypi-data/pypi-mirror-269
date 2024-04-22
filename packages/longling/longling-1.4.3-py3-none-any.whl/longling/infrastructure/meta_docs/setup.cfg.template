@@ -1,0 +1,18 @@
+[coverage:run]
+source=$PROJECT
+[coverage:report]
+exclude_lines =
+    pragma: no cover
+    pass
+    raise NotImplementedError
+    if __name__ == '__main__':
+    if __name__ == "__main__":
+    def __str__
+    def __repr__
+[flake8]
+# Enable line length testing with maximum line length of 120
+max-line-length = 120
+
+# Ignore module level import not at top of file (E402)
+# Others can be found in https://flake8.pycqa.org/en/latest/user/error-codes.html
+extend-ignore = E402 F401 F403
