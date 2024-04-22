@@ -1,0 +1,16 @@
+LICENCE.txt
+README.md
+setup.py
+hsr_pic_parcer.egg-info/PKG-INFO
+hsr_pic_parcer.egg-info/SOURCES.txt
+hsr_pic_parcer.egg-info/dependency_links.txt
+hsr_pic_parcer.egg-info/requires.txt
+hsr_pic_parcer.egg-info/top_level.txt
+hsr_pic_parser/__init__.py
+hsr_pic_parser/character_picture.py
+hsr_pic_parser/cut_url.py
+hsr_pic_parser/get_cone.py
+hsr_pic_parser/get_picture_info.py
+hsr_pic_parser/get_relic.py
+hsr_pic_parser/picture_url.py
+hsr_pic_parser/prydwen.py
