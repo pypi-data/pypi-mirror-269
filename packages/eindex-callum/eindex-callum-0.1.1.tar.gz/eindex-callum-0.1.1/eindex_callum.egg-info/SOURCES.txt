@@ -1,0 +1,11 @@
+README.md
+setup.py
+eindex/__init__.py
+eindex/_parsing.py
+eindex/_utils.py
+eindex/indexing.py
+eindex_callum.egg-info/PKG-INFO
+eindex_callum.egg-info/SOURCES.txt
+eindex_callum.egg-info/dependency_links.txt
+eindex_callum.egg-info/requires.txt
+eindex_callum.egg-info/top_level.txt
