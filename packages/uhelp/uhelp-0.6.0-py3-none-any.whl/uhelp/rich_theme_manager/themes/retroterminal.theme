@@ -1,0 +1,39 @@
+[metadata]
+name = retroterminal
+description = retro terminal mode theme
+tags = retroterminal
+inherit = True
+
+[styles]
+codez = #000000 on green
+danger = bold red
+foot = #dddcd3
+info = dim cyan
+info2 = bold #22863a
+markdown.block_quote = green
+markdown.code = #000000 on green
+markdown.code_block = #000000 on green
+markdown.em = italic
+markdown.emph = italic
+markdown.h1 = bold
+markdown.h1.border = none
+markdown.h2 = bold underline
+markdown.h3 = bold
+markdown.h4 = bold dim
+markdown.h5 = underline
+markdown.h6 = italic
+markdown.h7 = dim italic
+markdown.hr = green
+markdown.item = none
+markdown.item.bullet = bold #a0fa20
+markdown.item.number = bold #a0fa20
+markdown.link = bright_green
+markdown.link_url = underline green
+markdown.list = green
+markdown.paragraph = none
+markdown.strong = bold
+markdown.text = none
+strong = bold red
+title = green
+usage = green
+warning = bold magenta

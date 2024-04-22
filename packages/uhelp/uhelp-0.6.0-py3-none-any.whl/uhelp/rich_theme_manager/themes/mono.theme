@@ -1,0 +1,33 @@
+[metadata]
+name = mono
+description = Monochromatic theme
+tags = mono, colorblind
+inherit = True
+
+[styles]
+danger = bold reverse
+info = italic
+markdown.block_quote = magenta
+markdown.code = #000000 on #bfc5ca
+markdown.code_block = cyan on black
+markdown.em = italic
+markdown.emph = italic
+markdown.h1 = bold
+markdown.h1.border = none
+markdown.h2 = bold underline
+markdown.h3 = bold
+markdown.h4 = bold dim
+markdown.h5 = underline
+markdown.h6 = italic
+markdown.h7 = dim italic
+markdown.hr = yellow
+markdown.item = none
+markdown.item.bullet = bold yellow
+markdown.item.number = bold yellow
+markdown.link = bright_blue
+markdown.link_url = underline blue
+markdown.list = cyan
+markdown.paragraph = none
+markdown.strong = bold
+markdown.text = none
+warning = bold
