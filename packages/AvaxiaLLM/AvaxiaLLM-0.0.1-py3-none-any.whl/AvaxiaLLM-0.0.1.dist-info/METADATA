@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: AvaxiaLLM
+Version: 0.0.1
+Summary: Langgraph quickstart package.
+Home-page: UNKNOWN
+Author: Avaxia-Group
+Author-email: <yan.seiji.nishiyama@avaxia-group.com>
+License: UNKNOWN
+Keywords: python,ML,LLM,openai,langchain,langgraph
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi (==0.110.1)
+Requires-Dist: grandalf
+Requires-Dist: langchain-chroma
+Requires-Dist: langchain-openai (==0.1.1)
+Requires-Dist: langchain (==0.1.14)
+Requires-Dist: langgraph (==0.0.32)
+Requires-Dist: matplotlib
+Requires-Dist: msal
+Requires-Dist: unstructured
+Requires-Dist: uvicorn (==0.29.0)
+
+
+# AvaxiaLLMquickstart
+
