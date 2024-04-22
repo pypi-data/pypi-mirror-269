@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: STC7-0
+Version: 0.0.3
+Summary: oss-dev STC7_0.ALL_Linkedlist_concat
+Download-URL: https://github.com/Choicode0895/lumi_oss/archive/refs/tags/v1.0.0.zip
+Author: Sun_Tack Choi
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pandas
+
