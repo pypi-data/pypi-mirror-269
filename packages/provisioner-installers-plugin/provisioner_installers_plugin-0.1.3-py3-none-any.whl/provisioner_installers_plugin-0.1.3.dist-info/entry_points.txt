@@ -1,0 +1,4 @@
+[console_scripts]
+installers_plugin=provisioner_installers_plugin.main_dev:main
+test_runner=provisioner_installers_plugin.main_fake:fake_app
+
