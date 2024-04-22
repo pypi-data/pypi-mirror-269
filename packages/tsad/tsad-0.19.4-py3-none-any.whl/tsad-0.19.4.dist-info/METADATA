@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: tsad
+Version: 0.19.4
+Summary: Time Series Analysis for Simulation of Technological Processes
+Home-page: https://github.com/waico/tsad
+Author: Viacheslav Kozitsin, Oleg Berezin, Iurii Katser, Ivan Maximov
+Author-email: rfptk2525@yandex.ru
+License: GNU GPLv3
+Requires-Python: >=3.10.0
+License-File: LICENSE
+Requires-Dist: ipykernel ==6.25.1
+Requires-Dist: ipython ==8.14.0
+Requires-Dist: matplotlib ==3.7.1
+Requires-Dist: missingno ==0.5.2
+Requires-Dist: numpy ==1.25.0
+Requires-Dist: pandas ==1.5.3
+Requires-Dist: plotly ==5.16.1
+Requires-Dist: plotly-resampler ==0.9.1
+Requires-Dist: pyarrow ==14.0.1
+Requires-Dist: scikit-learn ==1.1.2
+Requires-Dist: statsmodels ==0.14.1
+Requires-Dist: tsfel ==0.1.6
+Requires-Dist: tsflex ==0.3.0
+Requires-Dist: tsfresh ==0.20.1
+Requires-Dist: torch ==1.11.0
+Requires-Dist: xlrd ==2.0.1
+
+[![ru](https://img.shields.io/badge/lang-ru-red.svg)](README.ru.md)
+
+# Time Series Anomaly detection based on Deep Learning
+
+**TSAD** is a Python module created for solving Anomaly Detection problems with time series data. The module is based on deep learning techniques.
+
+The main meaning of this module are:
+
+1. Forecast a multivariate Time Series (TS) one point ahead (Also works for univariate TS)
+2. Compute residuals between forecast and true values
+3. Apply analysis of residuals (default is Hoteling Statics)
+4. Plot and return anomalies
+
+This module allows forecast multi-step ahead both multivariate and univariate time series also.
+
+As forecasting algorithms were implemented or will be implemented:
+
+- A simple one-layer LSTM network (LSTM) 
+- A two-layer LSTM network (DeepLSTM) 
+- A bi-directional LSTM network (BLSTM) 
+- LSTM encoder-decoder (EncDec-AD) 
+- LSTM autoencoder (LSTM-AE);
+- Convolutional LSTM network (ConvLSTM) 
+- Convolutional Bi-directional LSTM network (CBLSTM) 
+- Multi-Scale Convolutional Recurrent Encoder-Decoder (MSCRED) 
+
+Actually, the possibility of the module allows you to use any own forecasting algorithm, computer of residuals, or evaluator of residuals. 
+
+#### Documentation
+
+https://tsad.readthedocs.io/
