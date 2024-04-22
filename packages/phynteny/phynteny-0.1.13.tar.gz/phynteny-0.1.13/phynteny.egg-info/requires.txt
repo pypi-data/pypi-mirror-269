@@ -1,0 +1,10 @@
+biopython>=1.79
+scikit-learn<=1.2.2
+numpy
+pandas
+click
+joblib
+loguru
+tensorflow==2.9.1
+alive-progress>=3.0.1
+requests>=2.25.1
