@@ -1,0 +1,5 @@
+[console_scripts]
+sheeprl = sheeprl.cli:run
+sheeprl-agents = sheeprl.available_agents:available_agents
+sheeprl-eval = sheeprl.cli:evaluation
+sheeprl-registration = sheeprl.cli:registration
