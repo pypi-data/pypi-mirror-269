@@ -1,0 +1,2 @@
+[console_scripts]
+roff = roff.__main__:main
