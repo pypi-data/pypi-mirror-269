@@ -1,0 +1,13 @@
+pyseoanalyzer/__init__.py,sha256=PK-EyFwJoDdxb_KQBFWIMSYqDQsOrCuKTpBUZoTLP8w,79
+pyseoanalyzer/__main__.py,sha256=whK41sD9lKi-gJnhYgsPD_sa6XXBHFgg2yhxCilDQ7M,1962
+pyseoanalyzer/analyzer.py,sha256=I4aFiPTGBPlKFLK9vKYRV8HOhIkgRklnGkUdjg89jis,1913
+pyseoanalyzer/http.py,sha256=1TeNUdT6j64sgyM0FB35TOMJ2cl2UaIF_bly-s7At5o,455
+pyseoanalyzer/page.py,sha256=ciQxjTrGxAdowEpjO6uQWMGIvvN0cS-8gqEAsWWBSbM,19354
+pyseoanalyzer/stemmer.py,sha256=Dt08jlmAgpdNcaxV3VYxrfzjP9qeZbNQqJRDP52yATU,3971
+pyseoanalyzer/website.py,sha256=WalZDBzZ3YF85rIGp0MzqDQEdoyp_wAMVEB0CXL1WHA,2890
+pyseoanalyzer/templates/index.html,sha256=2Hf1YeILMNWhTHE4OlGobVkfHyXZDlNF9yktVQMPkrE,4937
+pyseoanalyzer-2024.4.21.dist-info/METADATA,sha256=KEMTOgKh8275qINNz_8QqxcyYzKpbdifo5dHrgXBPn8,5330
+pyseoanalyzer-2024.4.21.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+pyseoanalyzer-2024.4.21.dist-info/entry_points.txt,sha256=UbuWqwQU8PUWbWgPsELRFuO4rz_5S9UY0GiNvizNsfU,59
+pyseoanalyzer-2024.4.21.dist-info/licenses/LICENSE,sha256=AiPa-C2sie6AwnxRCktXRCCf4JiYmKhCKTYXirrbVpk,1479
+pyseoanalyzer-2024.4.21.dist-info/RECORD,,

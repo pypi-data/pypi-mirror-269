@@ -1,0 +1,2 @@
+[console_scripts]
+seoanalyze = pyseoanalyzer.__main__:main
