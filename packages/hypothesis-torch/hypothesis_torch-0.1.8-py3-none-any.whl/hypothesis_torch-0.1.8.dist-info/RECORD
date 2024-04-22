@@ -1,0 +1,13 @@
+hypothesis_torch/__init__.py,sha256=lBTAh97GgB-JGaCRwG1bnhwE-tkA8Gv7aD6rpnrm4qw,523
+hypothesis_torch/device.py,sha256=A03BqjGWmjYLx1LC-CP9XL9VdDSV7CqjI7fHPVpt0uU,1454
+hypothesis_torch/dtype.py,sha256=ZPjwDCS-5WdljHXhZzPCj_vS5Bu0jyNTt8qm380BiP4,2262
+hypothesis_torch/huggingface.py,sha256=NlsgK9w2WZV9drLafhS8jn6kV5PKRZidjdvB4e23390,3922
+hypothesis_torch/inspection_util.py,sha256=an5LgWE6Dnr0BpIRVMxS9sNymtJ0zhlYt939jiHj_HE,1977
+hypothesis_torch/module.py,sha256=LMPwSf4Jakv1Ic8E77D8rcwhZ_3pzsc_WjSQscxypkk,8347
+hypothesis_torch/tensor.py,sha256=sMPiqJ7t1D2yurCrYR-cJUSH7kf89cZHaytWDYrHbC4,2900
+hypothesis_torch/utils.py,sha256=-VqjuR0qESRS57K3i_ho2fo4zxNl98nSZWzwrvhSe-c,1422
+hypothesis_torch-0.1.8.dist-info/LICENSE,sha256=DBSaMTEjrmZkASvoC6TnEiHpYM5dovpuVXUfisJMkJg,1070
+hypothesis_torch-0.1.8.dist-info/METADATA,sha256=HsMPEsVUaWR8NjV0Iu3OiGxWNExSFwo77r-fySk8D6Q,8092
+hypothesis_torch-0.1.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hypothesis_torch-0.1.8.dist-info/top_level.txt,sha256=7WHVFneaOqBQsuv1gwbfFX4_9Eqdd-kiauJ0jlcmFFI,17
+hypothesis_torch-0.1.8.dist-info/RECORD,,
