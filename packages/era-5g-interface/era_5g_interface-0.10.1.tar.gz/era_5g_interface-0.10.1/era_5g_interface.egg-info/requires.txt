@@ -1,0 +1,10 @@
+av>=11.0.0
+lz4>=4.3.2
+numpy>=1.24.4
+opencv-python>=4.7
+psutil>=5.9.8
+python-socketio[client]>=5.10.0
+types-psutil>=5.9.5
+types-requests>=2.31.0.10
+types-ujson>=5.8.0.1
+ujson>=5.8.0
