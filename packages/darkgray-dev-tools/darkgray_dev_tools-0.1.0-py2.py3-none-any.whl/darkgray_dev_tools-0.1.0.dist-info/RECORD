@@ -1,0 +1,14 @@
+darkgray_dev_tools/__init__.py,sha256=C3wrdJtBV5O7_mkDZNLQ2khYaPD5upuGlEXOpRF-M-M,111
+darkgray_dev_tools/changelog.py,sha256=nKKD8qL-KNUgKBYa_JE7OUdZcE2s4on94fhetVNtWxM,1322
+darkgray_dev_tools/darkgray_bump_version.py,sha256=-reDS76D8oadaoq-8ZX42mjsRGrh9GiNZQ2FiYqID1s,3194
+darkgray_dev_tools/darkgray_update_contributors.py,sha256=0URqSrUsmUgkJT0UC-SjfkD1x4xGwjKOUrKPrJrujek,18698
+darkgray_dev_tools/exceptions.py,sha256=lZmoC78GT4_ckiysC84t4PdpXt9fJwQyDWDvSQblYZo,1579
+darkgray_dev_tools/milestones.py,sha256=Vw4H3plamG6Enqf3_6-Jbrf2O7ntu5DBoPYpDoQ-ATI,2197
+darkgray_dev_tools/package_metadata.py,sha256=xf0lMl2WG3r8w30ov_C66HFsMYUI4RgCnxnJ8w0QS7Y,787
+darkgray_dev_tools/version_replace.py,sha256=uoAxiMKnLdOTgVftSCPX1asvGyU7DfdjBIStQ0rjRVI,10046
+darkgray_dev_tools/versions.py,sha256=Y3kCk1DydbyCOW_8ZMjiC5s4QYjhNfnbI-tvcgrvrRk,1930
+darkgray_dev_tools-0.1.0.dist-info/entry_points.txt,sha256=0k6OzH0Hk6RwJHbGdZUgD_tHj1HsmBvKOcz6P7wPoJQ,179
+darkgray_dev_tools-0.1.0.dist-info/LICENSE,sha256=Rbyezz827uzjv-QjcX52OsPuPVLa7QYczDJdnANCOH4,1500
+darkgray_dev_tools-0.1.0.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+darkgray_dev_tools-0.1.0.dist-info/METADATA,sha256=Uwi-9UZiRKdwVFXwmcIiWKwO6kWmQ-bsBw0VnidNdbA,479
+darkgray_dev_tools-0.1.0.dist-info/RECORD,,

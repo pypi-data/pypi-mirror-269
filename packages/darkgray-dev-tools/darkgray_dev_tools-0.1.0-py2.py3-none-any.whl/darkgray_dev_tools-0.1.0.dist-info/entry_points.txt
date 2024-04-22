@@ -1,0 +1,4 @@
+[console_scripts]
+darkgray_bump_version=darkgray_dev_tools.darkgray_bump_version:bump_version
+darkgray_update_contributors=darkgray_dev_tools.darkgray_update_contributors:update
+
