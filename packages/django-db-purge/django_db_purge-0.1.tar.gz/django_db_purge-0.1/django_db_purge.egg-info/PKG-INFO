@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: django-db-purge
+Version: 0.1
+Summary: Clean up your Django database effortlessly with customizable record removal based on your retention policy
+Home-page: https://github.com/topunix/django-db-purge
+Author: topunix
+Author-email: topunixguy@gmail.com
+License: MIT
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+License-File: LICENSE
+Requires-Dist: Django>=2

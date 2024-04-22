@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+django_db_purge.egg-info/PKG-INFO
+django_db_purge.egg-info/SOURCES.txt
+django_db_purge.egg-info/dependency_links.txt
+django_db_purge.egg-info/requires.txt
+django_db_purge.egg-info/top_level.txt
+tests/__init__.py
+tests/test_db_purge.py
