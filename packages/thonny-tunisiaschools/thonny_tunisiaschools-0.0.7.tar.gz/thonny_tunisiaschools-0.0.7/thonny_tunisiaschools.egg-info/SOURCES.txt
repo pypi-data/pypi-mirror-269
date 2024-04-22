@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+thonny_tunisiaschools.egg-info/PKG-INFO
+thonny_tunisiaschools.egg-info/SOURCES.txt
+thonny_tunisiaschools.egg-info/dependency_links.txt
+thonny_tunisiaschools.egg-info/requires.txt
+thonny_tunisiaschools.egg-info/top_level.txt
+thonnycontrib/tunisiaschools/UIViewer.py
+thonnycontrib/tunisiaschools/__init__.py
+thonnycontrib/tunisiaschools/res/designer_16.png
+thonnycontrib/tunisiaschools/res/qt_16.png
+thonnycontrib/tunisiaschools/res/qt_32.png
