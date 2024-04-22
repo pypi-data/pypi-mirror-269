@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: LogGuard
+Version: 0.2.1
+Summary: A simple Python Logger
+Author: Charilaos Karametos
+Requires-Dist: astroid ==3.1.0
+Requires-Dist: colorama ==0.4.6
+Requires-Dist: dill ==0.3.8
+Requires-Dist: flake8 ==7.0.0
+Requires-Dist: flake8-commas ==2.1.0
+Requires-Dist: flake8-docstrings ==1.7.0
+Requires-Dist: isort ==5.13.2
+Requires-Dist: mccabe ==0.7.0
+Requires-Dist: pathlib ==1.0.1
+Requires-Dist: platformdirs ==4.2.0
+Requires-Dist: pycodestyle ==2.11.1
+Requires-Dist: pydocstyle ==6.3.0
+Requires-Dist: pyflakes ==3.2.0
+Requires-Dist: pylint ==3.1.0
+Requires-Dist: snowballstemmer ==2.2.0
+Requires-Dist: tomlkit ==0.12.4
+
