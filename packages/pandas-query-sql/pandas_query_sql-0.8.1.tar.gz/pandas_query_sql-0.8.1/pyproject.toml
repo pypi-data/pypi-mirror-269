@@ -1,0 +1,119 @@
+[project]
+name = "pandas_query_sql"
+version = "0.8.1"
+description = "sqldf for pandas"
+authors = [
+    { name = "Alexander Plavin", email = "alexander@plav.in" },
+    { name = "Greg Lamp", email = "lamp.greg@gmail.com" },
+    { name = "Michael Dempsey", email = "bluestealth@bluestealth.pw" },
+]
+dependencies = [
+    "numpy",
+    "packaging",
+    "pandas",
+    "sqlalchemy",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/bluestealth/pandasql/"
+
+[project.optional-dependencies]
+postgresql = [
+    "psycopg2",
+]
+postgresql-binary = [
+    "psycopg2-binary",
+]
+linters = [
+    "black",
+    "ruff",
+]
+testing = [
+    "pytest",
+    "psycopg2-binary",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.package-dir]
+pandasql = "pandasql"
+
+[tool.setuptools.package-data]
+pandasql = [
+    "data/births.csv",
+    "data/birth_by_months.csv",
+    "data/meat.csv",
+    "py.typed",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py38"
+
+[tool.ruff.lint]
+select = [
+    "ALL",
+]
+ignore = [
+    "FA100",
+    "ANN101",
+    "FBT001",
+    "FBT002",
+    "TRY003",
+    "EM101",
+    "PLR2004",
+    "N818",
+]
+
+[tool.ruff.lint.flake8-quotes]
+
+[tool.ruff.lint.isort]
+known-first-party = []
+
+[tool.ruff.lint.mccabe]
+max-complexity = 14
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"src/pandasql/__init__.py" = [
+    "D",
+]
+"examples/**/*.py" = [
+    "D",
+    "INP001",
+]
+"tests/**/*.py" = [
+    "D",
+]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"examples/**/*.py" = [
+    "T",
+]
+"tests/**/*.py" = [
+    "T",
+    "S101",
+    "PD901",
+    "PLR",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
