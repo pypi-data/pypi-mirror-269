@@ -1,0 +1,3 @@
+[console_scripts]
+yuyo=yuyo.__main__:main
+
