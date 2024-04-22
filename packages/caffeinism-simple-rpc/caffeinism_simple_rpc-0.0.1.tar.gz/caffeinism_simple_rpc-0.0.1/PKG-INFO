@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: caffeinism-simple-rpc
+Version: 0.0.1
+Summary: rpc using msgpack, httpx and fastapi
+Author: Kim Minjong
+Author-email: make.dirty.code@gmail.com
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: client
+Provides-Extra: server
+Requires-Dist: caffeinism_utils (>=0.0.5,<0.0.6) ; extra == "server"
+Requires-Dist: fastapi (>=0.109.0,<0.110.0) ; extra == "server"
+Requires-Dist: httpx (>=0.25.2,<0.26.0) ; extra == "client"
+Requires-Dist: msgpack (>=1.0.8,<2.0.0)
+Requires-Dist: msgpack-numpy (>=0.4.8,<0.5.0)
+Description-Content-Type: text/markdown
+
+# Simple RPC Server / Client using FastAPI, Msgpack, HTTPX

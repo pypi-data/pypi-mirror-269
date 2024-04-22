@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "caffeinism-simple-rpc"
+version = "0.0.1"
+description = "rpc using msgpack, httpx and fastapi"
+authors = ["Kim Minjong <make.dirty.code@gmail.com>"]
+readme = "README.md"
+packages = [
+  {include = "simple_rpc", from="src"}
+]
+
+[tool.poetry.dependencies]
+msgpack = "^1.0.8"
+msgpack-numpy = "^0.4.8"
+fastapi = { version = "^0.109.0", optional = true }
+caffeinism_utils = { version = "^0.0.5", optional = true }
+httpx = { version = "^0.25.2", optional = true }
+
+[tool.poetry.extras]
+client = ["httpx"]
+server = ["caffeinism_utils", "fastapi"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
