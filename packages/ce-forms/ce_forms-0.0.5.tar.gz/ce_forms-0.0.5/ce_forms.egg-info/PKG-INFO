@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ce-forms
+Version: 0.0.5
+Summary: A Python library for the CeForms API.
+Home-page: UNKNOWN
+Author: codeffekt
+Author-email: contact@codeffekt.com
+License: UNKNOWN
+Keywords: python,ceforms,api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Apache Software License
+License-File: LICENSE
+
+UNKNOWN
+
