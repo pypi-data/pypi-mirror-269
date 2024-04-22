@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pc-perf
+Version: 1.1.2
+Summary: pc 进程性能测试平台，支持 windows / mac / linux 平台进程cpu、memory、fps（仅支持windows下OpenGL  DirectX 引擎应用）、gpu、thread_num、handle_num 等指标的实时监控和可视化展示
+Home-page: https://github.com/15525730080/pc_perf
+Author: 范博洲
+Author-email: 15525730080@163.com
+License: MIT
+Keywords: pc fps cpu memory gpu monitor
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.9
+License-File: LICENSE
