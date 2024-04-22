@@ -1,0 +1,42 @@
+name: Pre-merge checks
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - ready_for_review
+      - synchronize
+
+jobs:
+  pre-merge-checks:
+    name: Pre-merge checks (Python ${{ matrix.python_version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python_version:
+          - '3.8'
+          - '3.9'
+          - '3.10'
+          - '3.11'
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "${{ matrix.python_version}}"
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    - name: Check formatting
+      run: black --check adr_viewer
+    - name: Run tests
+      run: pytest
+    - name: Run typecheck
+      run: |
+        mypy adr_viewer \
+          --install-types \
+          --non-interactive \
+          --ignore-missing-imports \
+          --pretty
