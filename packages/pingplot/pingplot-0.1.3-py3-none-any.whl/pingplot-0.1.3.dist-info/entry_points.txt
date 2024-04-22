@@ -1,0 +1,4 @@
+[console_scripts]
+pingplot=pingplot.plotping:main
+test=run_tests:start_tests
+
