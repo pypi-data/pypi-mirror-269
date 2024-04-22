@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "lisa-on-cuda"
+version = "1.0.6"
+description = ""
+authors = ["alessandro trinca tornidor <alessandro@trinca.tornidor.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+
+[metadata]
+name = "lisa-on-cuda"
+version = "1.0.6"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+einops = "^0.7.0"
+fastapi = "^0.110.0"
+gradio = "^4.21.0"
+gradio-client = "^0.12.0"
+markdown2 = "^2.4.13"
+nh3 = "^0.2.15"
+numpy = "1.25.2"
+openai = "^1.13.3"
+packaging = "^24.0"
+peft = "^0.9.0"
+pycocotools = "^2.0.7"
+ray = "^2.9.3"
+scipy = "^1.11.4"
+sentencepiece = "^0.2.0"
+shortuuid = "^1.0.12"
+torch = "^2.2.1"
+torchvision = "^0.17.1"
+tqdm = "^4.66.2"
+transformers = "4.31.0"
+uvicorn = "^0.28.0"
+opencv-python-headless = "4.8.1.78"
+bitsandbytes = "^0.42.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
