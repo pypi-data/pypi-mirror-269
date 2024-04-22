@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pyARdotless
+Version: 0.0.10
+Summary: ML utils library for predicting Arabic diacritics.
+Home-page: https://github.com/kaddu341/dotless
+Author: dot-ammar
+License: BSD-3-Clause
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: tashaphyne
+Requires-Dist: transformers
+Requires-Dist: tensorflow
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
+# DOTLESS UTILITIES
+
+ML utils library for predicting Arabic diacritics.
+
+## Documentation here
