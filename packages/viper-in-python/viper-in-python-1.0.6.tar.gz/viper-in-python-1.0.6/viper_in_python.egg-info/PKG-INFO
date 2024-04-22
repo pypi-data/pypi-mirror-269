@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: viper-in-python
+Version: 1.0.6
+Summary: A package for VIPER-based Protein Activity analysis of transcriptomic data in Python
+Home-page: https://github.com/alevax/pyviper
+Author: Alexander L.E. Wang & Zizhao Lin & Luca Zanella
+Author-email: aw3436@cumc.columbia.edu
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This Scanpy-compatible package provides the Interactome class to easily allow the user to both load and interact with gene regulatory networks. Once these networks have been loaded, the user has the option to filter regulators, filter targets, and prune the network. The user can then give their Interactome (or multiple Interactomes) and a gene expression signature to the viper function to run VIPER (aREA or NaRnEA enrichment methods) to infer protein activity. This package also provides the option to compute pathway enrichment with Interactomes built from sets of pathways from MSigDB and several modules for data processing.
