@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+shrinkcircle/__init__.py
+shrinkcircle/shrinkcircle.py
+shrinkcircle.egg-info/PKG-INFO
+shrinkcircle.egg-info/SOURCES.txt
+shrinkcircle.egg-info/dependency_links.txt
+shrinkcircle.egg-info/not-zip-safe
+shrinkcircle.egg-info/top_level.txt
