@@ -1,0 +1,12 @@
+MANIFEST.in
+setup.py
+pdf_tools_sdk/Streams.py
+pdf_tools_sdk/__init__.py
+pdf_tools_sdk/py_ctypes.py
+pdf_tools_sdk/utils.py
+pdf_tools_sdk.egg-info/PKG-INFO
+pdf_tools_sdk.egg-info/SOURCES.txt
+pdf_tools_sdk.egg-info/dependency_links.txt
+pdf_tools_sdk.egg-info/not-zip-safe
+pdf_tools_sdk.egg-info/top_level.txt
+pdf_tools_sdk/lib/win-x64/PdfToolsSdk.dll
