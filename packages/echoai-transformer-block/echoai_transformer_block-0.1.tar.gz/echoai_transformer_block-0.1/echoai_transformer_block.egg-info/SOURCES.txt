@@ -1,0 +1,11 @@
+README.md
+setup.py
+echoai_transformer_block.egg-info/PKG-INFO
+echoai_transformer_block.egg-info/SOURCES.txt
+echoai_transformer_block.egg-info/dependency_links.txt
+echoai_transformer_block.egg-info/requires.txt
+echoai_transformer_block.egg-info/top_level.txt
+gpt_2/__init__.py
+gpt_2/block.py
+gpt_2/feedforward.py
+gpt_2/multiheadattn.py
