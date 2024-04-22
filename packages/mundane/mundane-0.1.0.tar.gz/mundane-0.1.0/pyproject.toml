@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mundane"
+version = "0.1.0"
+description = ''
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+keywords = []
+authors = [{ name = "Linus Lewandowski", email = "linus@lew21.net" }]
+classifiers = [
+	"Development Status :: 4 - Beta",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3.12",
+	"Programming Language :: Python :: Implementation :: CPython",
+]
+dependencies = []
+
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[tool.isort]
+line_length = 99999
+
+[tool.yapf]
+use_tabs = true
+column_limit = 99999
+spaces_around_default_or_named_assign = true
+continuation_align_style = "fixed"
+
+[tool.hatch.build.targets.sdist]
+exclude = [".venv"]
