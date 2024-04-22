@@ -1,0 +1,11 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    >
+
+  <include package=".bookable_list" />
+  <include package=".bookings" />
+  <include package=".booking_schema" />
+
+
+</configure>
