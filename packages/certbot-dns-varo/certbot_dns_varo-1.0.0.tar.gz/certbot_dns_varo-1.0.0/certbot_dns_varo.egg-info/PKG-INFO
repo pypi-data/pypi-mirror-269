@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: certbot-dns-varo
+Version: 1.0.0
+Summary: A Certbot plugin for Varo
+Home-page: https://github.com/varodomains/certbot-dns-varo
+Author: eskimo
+Author-email: me@eskimo.dev
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: certbot
+Requires-Dist: requests
+Requires-Dist: zope.interface
+
+# certbot-dns-varo
+
+Varo DNS Authenticator plugin for [Certbot](https://certbot.eff.org/).
+
+Installation
+------------
+```
+pip install certbot-dns-varo
+```
+
+Configuration
+-------------
+Your credentials ini file should look like this:
+```
+dns_varo_api_key = r4n8pvj82q8bdn120y7uzp5yayebgpju
+```
+
+Usage
+-----
+```
+certbot certonly --authenticator dns-varo --dns-varo-credentials /path/to/your/varo.ini -d yourdomain.tld
+```

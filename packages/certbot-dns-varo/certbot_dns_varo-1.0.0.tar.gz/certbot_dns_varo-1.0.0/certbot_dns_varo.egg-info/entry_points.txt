@@ -1,0 +1,2 @@
+[certbot.plugins]
+dns-varo = certbot_dns_varo.dns_varo:Authenticator
