@@ -1,0 +1,8 @@
+LICENCE
+pyproject.toml
+src/pybetterloader/__init__.py
+src/pybetterloader/pybetterloader.py
+src/pybetterloader.egg-info/PKG-INFO
+src/pybetterloader.egg-info/SOURCES.txt
+src/pybetterloader.egg-info/dependency_links.txt
+src/pybetterloader.egg-info/top_level.txt
