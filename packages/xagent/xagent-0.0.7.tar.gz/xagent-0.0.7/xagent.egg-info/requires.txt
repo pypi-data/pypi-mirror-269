@@ -1,0 +1,10 @@
+python-snippets
+agit
+fastapi
+python-multipart==0.0.6
+uvicorn
+langchain
+faiss-cpu
+pdfplumber
+psutil
+python-docx
