@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: rentCalculationsUtility
+Version: 0.1.0
+Summary: A Python library for rental based system and perform important calculations
+Home-page: https://github.com/Ayush-NCI/rentaltility
+Author: Ayush Jadhav
+Author-email: jadhavayush2020@email.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This utlity is for rental systems
