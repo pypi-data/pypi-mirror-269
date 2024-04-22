@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+django_img_optimizer/__init__.py
+django_img_optimizer/apps.py
+django_img_optimizer/utils.py
+django_img_optimizer.egg-info/PKG-INFO
+django_img_optimizer.egg-info/SOURCES.txt
+django_img_optimizer.egg-info/dependency_links.txt
+django_img_optimizer.egg-info/requires.txt
+django_img_optimizer.egg-info/top_level.txt
+django_img_optimizer/management/__init__.py
+django_img_optimizer/management/commands/__init__.py
+django_img_optimizer/management/commands/optimize_images.py
+django_img_optimizer/templatetags/image_optimizer.py
+tests/test_build.py
