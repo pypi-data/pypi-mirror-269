@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+app/pyARdotless/__init__.py
+app/pyARdotless.egg-info/PKG-INFO
+app/pyARdotless.egg-info/SOURCES.txt
+app/pyARdotless.egg-info/dependency_links.txt
+app/pyARdotless.egg-info/not-zip-safe
+app/pyARdotless.egg-info/requires.txt
+app/pyARdotless.egg-info/top_level.txt
+app/pyARdotless/src/__init__.py
+app/pyARdotless/src/arwiki.wordlist
+app/pyARdotless/src/predictdots.py
+app/pyARdotless/src/roots.txt
+app/pyARdotless/src/utils.py
+app/pyARdotless/test/__init__.py

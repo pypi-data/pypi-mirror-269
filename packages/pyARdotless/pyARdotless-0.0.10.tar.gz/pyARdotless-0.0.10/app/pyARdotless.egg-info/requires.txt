@@ -1,0 +1,8 @@
+numpy
+tashaphyne
+transformers
+tensorflow
+
+[dev]
+pytest
+twine
