@@ -1,0 +1,16 @@
+ALGO = "ALGO"
+ADA = "ADA"
+BEARD = "BEARD"
+BOOK = "BOOK"
+ETH = "ETH"
+MATIC = "MATIC"
+
+
+CURRENCIES = [
+    ALGO,
+    ADA,
+    BEARD,
+    BOOK,
+    ETH,
+    MATIC,
+]
