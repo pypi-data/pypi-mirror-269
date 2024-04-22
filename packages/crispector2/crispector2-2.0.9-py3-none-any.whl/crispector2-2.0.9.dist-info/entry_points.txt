@@ -1,0 +1,2 @@
+[console_scripts]
+crispector = crispector2.cli:main
