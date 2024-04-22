@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pyneople
+Version: 0.2.1
+Summary: Neople Open API wrapper for data analyst
+Home-page: https://github.com/ippo252525/pyneople
+Author: ippo252525
+Author-email: ippo252525@gmail.com
+Project-URL: Bug Tracker, https://github.com/ippo252525/pyneople/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyneople
+Neople Open API wrapper for data analyst
+
+## Getting Started
+
+### Installation
+```bash
+pip install pyneople
+```
+
+## Simple Usage
+```python
+from pyneople.character import CharacterSearch
+api_key = "Neople Open API 에서 발급받은 API key"
+character_search = CharacterSearch(api_key)
+data = character_search.get_data("서버이름", "캐릭터이름")
+character_search.parse_data(data)
+
+print(character_search.server_id) 
+print(character_search.character_name)
+```
