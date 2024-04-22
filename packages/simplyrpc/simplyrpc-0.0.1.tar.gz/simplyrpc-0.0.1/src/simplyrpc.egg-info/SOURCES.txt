@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/simplyrpc/__init__.py
+src/simplyrpc/simplyrpc.py
+src/simplyrpc.egg-info/PKG-INFO
+src/simplyrpc.egg-info/SOURCES.txt
+src/simplyrpc.egg-info/dependency_links.txt
+src/simplyrpc.egg-info/top_level.txt
