@@ -1,0 +1,40 @@
+[metadata]
+name = terminal
+description = my terminal mode theme
+tags = terminal
+inherit = True
+
+[styles]
+codez = #000000 on #bfc5ca
+danger = bold red
+foot = #dddcd3
+info = dim cyan
+info2 = bold #22863a
+markdown.block_quote = blue
+markdown.code = #000000 on #bfc5ca
+markdown.code_block = cyan on black
+markdown.em = italic
+markdown.emph = italic
+markdown.h1 = bold
+markdown.h1.border = none
+markdown.h2 = bold underline
+markdown.h3 = bold
+markdown.h4 = bold dim
+markdown.h5 = underline
+markdown.h6 = italic
+markdown.h7 = dim italic
+markdown.hr = black
+markdown.item = none
+markdown.item.bullet = bold #23274f
+markdown.item.number = bold green
+markdown.link = bright_blue
+markdown.link_url = underline blue
+markdown.list = #395a5b
+markdown.paragraph = none
+markdown.strong = bold
+markdown.text = none
+oldusage = green
+strong = bold red
+title = bold cyan on blue
+usage = #000000 on #fffef6
+warning = bold magenta
