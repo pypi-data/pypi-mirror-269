@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: optionresult
+Version: 0.1.1
+Summary: Rust style option and result types for Python
+Author-email: sunfkny <sunfkny@google.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# optionresult
+Rust style option and result types for Python
