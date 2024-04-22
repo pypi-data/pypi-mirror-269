@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: embedding-techx
+Version: 1.0
+Requires-Dist: sentence-transformers
+Requires-Dist: torch
+Requires-Dist: pandas
+Requires-Dist: IPython
+Requires-Dist: langdetect
+Requires-Dist: pycountry
+Requires-Dist: time
+Requires-Dist: sklearn
+Requires-Dist: seaborn
+Requires-Dist: matplotlib

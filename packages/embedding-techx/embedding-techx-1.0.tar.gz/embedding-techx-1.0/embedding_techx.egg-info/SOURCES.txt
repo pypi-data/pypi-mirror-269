@@ -1,0 +1,12 @@
+setup.py
+embedding-techx/__init__.py
+embedding-techx/dataframe.py
+embedding-techx/domain_emb.py
+embedding-techx/embedding.py
+embedding-techx/evaluate.py
+embedding-techx/search.py
+embedding_techx.egg-info/PKG-INFO
+embedding_techx.egg-info/SOURCES.txt
+embedding_techx.egg-info/dependency_links.txt
+embedding_techx.egg-info/requires.txt
+embedding_techx.egg-info/top_level.txt
