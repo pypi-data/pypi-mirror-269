@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "autalac_de2v2"
+version = "0.1.0"
+description = "POC python library for Turing college"
+authors = ["AugTal <augustas.talacka@gmail.com>"]
+readme = "README.md"
+packages = [{include = "autalac_de2v2"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.26.4"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
