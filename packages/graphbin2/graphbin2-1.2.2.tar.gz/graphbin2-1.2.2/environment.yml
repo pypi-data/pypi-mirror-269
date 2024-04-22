@@ -1,0 +1,12 @@
+name: graphbin2
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python>=3.9
+  - flit
+  - biopython>=1.74
+  - python-igraph>=0.7.1
+  - tqdm>=4.36.1
+  - scipy
+  - click
