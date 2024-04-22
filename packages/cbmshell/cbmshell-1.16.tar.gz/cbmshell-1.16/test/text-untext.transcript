@@ -1,0 +1,55 @@
+(cbm) !mkdir -p output
+(cbm) !rm -f output/*
+(cbm) !cp data/colours.d64 output
+(cbm) attach output/colours.d64 
+Attached output\/colours.d64 to 0
+(cbm) text 0:GREEN 
+RED
+ORANGE
+YELLOW
+GREEN
+BLUE
+PURPLE
+WHITE
+BLACK
+BROWN
+(cbm) text 0:BLACK 
+RED
+ORANGE
+YELLOW
+GREEN
+BLUE
+PURPLE
+WHITE
+BLACK
+BROWN
+(cbm) text 0:GREEN output/green
+(cbm) text 0:GREEN 0:BLACK output
+(cbm) untext data/colours.txt 0:COLOURS
+Writing data\/colours.txt to ImagePath(0:b'COLOURS')
+(cbm) !cp data/colours.txt output/DATA
+(cbm) !cp data/days.txt output/DAYS
+(cbm) untext output/D* 0:
+Writing output\/DAYS to ImagePath(0:b'DAYS')
+Writing output\/DATA to ImagePath(0:b'DATA')
+(cbm) untext --type REL --record-len 12 output/DAYS 0:DATABASE
+Writing output\/DAYS to ImagePath(0:b'DATABASE')
+(cbm) detach 0
+Detached D64Image(output\/colours.d64)
+(cbm) !cp data/colours.tap output
+(cbm) attach output/colours.tap 
+Attached output\/colours.tap to 0
+(cbm) text 0:YELLOW
+RED
+ORANGE
+YELLOW
+GREEN
+BLUE
+PURPLE
+WHITE
+BLACK
+BROWN
+(cbm) untext data/colours.txt 0:COLOURS
+Writing data\/colours.txt to ImagePath(0:b'COLOURS')
+(cbm) detach 0
+Detached TapImage(output\/colours.tap)

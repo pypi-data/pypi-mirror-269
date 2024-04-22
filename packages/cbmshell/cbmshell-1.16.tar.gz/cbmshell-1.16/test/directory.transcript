@@ -1,0 +1,121 @@
+(cbm) !cp data/test.d64 output/test.d64
+(cbm) attach output/test.d64
+Attached output\/test.d64 to 0
+(cbm) directory
+0 "TEST            " T1 2A
+1    "SMALL1"           SEQ
+4    "LARGE1"           SEQ
+1    "SMALL2"           PRG
+1    "SMALL3"           PRG
+1    "SMALL4"           PRG
+1    "SMALL5"           PRG
+1    "SMALL6"           PRG
+1    "SMALL7"           PRG
+1    "SMALL8"           PRG
+1    "SMALL9"           PRG
+1    "SMALL10"          PRG
+1    "SMALL11"          PRG
+1    "SMALL12"          PRG
+1    "SMALL13"          PRG
+1    "SMALL14"          PRG
+1    "SMALL15"          PRG
+4    "LARGE2"           PRG
+4    "LARGE3"           PRG
+4    "LARGE4"           PRG
+4    "LARGE5"           PRG
+4    "LARGE6"           PRG
+4    "LARGE7"           PRG
+4    "LARGE8"           PRG
+4    "LARGE9"           PRG
+4    "LARGE10"          PRG
+4    "LARGE11"          PRG
+4    "LARGE12"          PRG
+4    "LARGE13"          PRG
+4    "LARGE14"          PRG
+4    "LARGE15"          PRG
+1    "SMALL16"          SEQ
+279  "DATABASE"         REL
+309 BLOCKS FREE.
+(cbm) directory 0
+0 "TEST            " T1 2A
+1    "SMALL1"           SEQ
+4    "LARGE1"           SEQ
+1    "SMALL2"           PRG
+1    "SMALL3"           PRG
+1    "SMALL4"           PRG
+1    "SMALL5"           PRG
+1    "SMALL6"           PRG
+1    "SMALL7"           PRG
+1    "SMALL8"           PRG
+1    "SMALL9"           PRG
+1    "SMALL10"          PRG
+1    "SMALL11"          PRG
+1    "SMALL12"          PRG
+1    "SMALL13"          PRG
+1    "SMALL14"          PRG
+1    "SMALL15"          PRG
+4    "LARGE2"           PRG
+4    "LARGE3"           PRG
+4    "LARGE4"           PRG
+4    "LARGE5"           PRG
+4    "LARGE6"           PRG
+4    "LARGE7"           PRG
+4    "LARGE8"           PRG
+4    "LARGE9"           PRG
+4    "LARGE10"          PRG
+4    "LARGE11"          PRG
+4    "LARGE12"          PRG
+4    "LARGE13"          PRG
+4    "LARGE14"          PRG
+4    "LARGE15"          PRG
+1    "SMALL16"          SEQ
+279  "DATABASE"         REL
+309 BLOCKS FREE.
+(cbm) directory 0:LARGE*
+0 "TEST            " T1 2A
+4    "LARGE1"           SEQ
+4    "LARGE2"           PRG
+4    "LARGE3"           PRG
+4    "LARGE4"           PRG
+4    "LARGE5"           PRG
+4    "LARGE6"           PRG
+4    "LARGE7"           PRG
+4    "LARGE8"           PRG
+4    "LARGE9"           PRG
+4    "LARGE10"          PRG
+4    "LARGE11"          PRG
+4    "LARGE12"          PRG
+4    "LARGE13"          PRG
+4    "LARGE14"          PRG
+4    "LARGE15"          PRG
+309 BLOCKS FREE.
+(cbm) directory 0:*=SEQ
+0 "TEST            " T1 2A
+1    "SMALL1"           SEQ
+4    "LARGE1"           SEQ
+1    "SMALL16"          SEQ
+309 BLOCKS FREE.
+(cbm) lock 0:LARGE7 
+Locking ImagePath(0:b'LARGE7')
+(cbm) directory 0:LARGE7
+0 "TEST            " T1 2A
+4    "LARGE7"           PRG<
+309 BLOCKS FREE.
+(cbm) unlock 0:LARGE7
+Unlocking ImagePath(0:b'LARGE7')
+(cbm) directory 0:LARGE7
+0 "TEST            " T1 2A
+4    "LARGE7"           PRG
+309 BLOCKS FREE.
+(cbm) lock 0:*=SEQ
+Locking ImagePath(0:b'SMALL1')
+Locking ImagePath(0:b'LARGE1')
+Locking ImagePath(0:b'SMALL16')
+(cbm) directory 0:*=SEQ
+0 "TEST            " T1 2A
+1    "SMALL1"           SEQ<
+4    "LARGE1"           SEQ<
+1    "SMALL16"          SEQ<
+309 BLOCKS FREE.
+(cbm) detach 0
+Detached D64Image(output\/test.d64)

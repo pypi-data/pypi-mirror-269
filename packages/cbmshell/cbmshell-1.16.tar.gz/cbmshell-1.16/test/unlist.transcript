@@ -1,0 +1,33 @@
+(cbm) !mkdir output -p
+(cbm) !rm -f output/*
+(cbm) format TEST TT output/test.d64
+Creating empty disk image as output\/test.d64, TEST:TT, type d64
+(cbm) attach output/test.d64
+Attached output\/test.d64 to 0
+(cbm) unlist data/dataread.txt 0:DATAREAD
+Writing data\/dataread.txt to ImagePath(0:b'DATAREAD')
+(cbm) file 0:DATAREAD
+DATAREAD: PRG, size=60 bytes, start=$1201
+(cbm) unlist --start 0x0401  data/dataread.txt 0:DATAREAD
+Writing data\/dataread.txt to ImagePath(0:b'DATAREAD')
+(cbm) file 0:DATAREAD
+DATAREAD: PRG, size=60 bytes, start=$0401
+(cbm) !cp data/dataread.txt output/DATAREAD
+(cbm) !cp data/datawrite.txt output/DATAWRITE
+(cbm) unlist output/DATA* 0:
+Writing output\/DATAWRITE to ImagePath(0:b'DATAWRITE')
+Writing output\/DATAREAD to ImagePath(0:b'DATAREAD')
+(cbm) detach 0
+Detached D64Image(output\/test.d64)
+(cbm) attach output/test.tap
+Attached output\/test.tap to 0
+(cbm) unlist data/dataread.txt 0:DATAREAD
+Writing data\/dataread.txt to ImagePath(0:b'DATAREAD')
+(cbm) file 0:DATAREAD
+DATAREAD: PRG_RELOC, size=60 bytes, start=$1201
+(cbm) unlist --type PRG data/datawrite.txt 0:DATAWRITE
+Writing data\/datawrite.txt to ImagePath(0:b'DATAWRITE')
+(cbm) file 0:DATAWRITE
+DATAWRITE: PRG, size=95 bytes, start=$1201
+(cbm) detach 0
+Detached TapImage(output\/test.tap)

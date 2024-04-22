@@ -1,0 +1,25 @@
+(cbm) !mkdir -p output
+(cbm) !rm -f output/*
+(cbm) format --type d81 TEST TT output/test.d81
+Creating empty disk image as output\/test.d81, TEST:TT, type d81
+(cbm) attach output/test.d81
+Attached output\/test.d81 to 0
+(cbm) mkdir 0:SUBDIR SD 10 400
+Creating ImagePath(0:b'SUBDIR')
+(cbm) attach 0:SUBDIR
+Attached ImagePath(0:b'SUBDIR') to 1
+(cbm) images
+    0  RW  D81Image(output\/test.d81)
+    1  RW  Subdirectory(b'SUBDIR')
+(cbm) unlist data/dataread.txt 1:DATAREAD
+Writing data\/dataread.txt to ImagePath(1:b'DATAREAD')
+(cbm) directory 1
+1 "SUBDIR          " SD 3D
+1    "DATAREAD"         PRG
+359 BLOCKS FREE.
+(cbm) detach 1
+Detached Subdirectory(b'SUBDIR')
+(cbm) images
+    0  RW  D81Image(output\/test.d81)
+(cbm) detach 0
+Detached D81Image(output\/test.d81)

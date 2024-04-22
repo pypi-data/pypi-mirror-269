@@ -1,0 +1,21 @@
+(cbm) !mkdir -p output
+(cbm) !rm -f output/*
+(cbm) !cp data/colours.d64 output
+(cbm) attach output/colours.d64 
+Attached output\/colours.d64 to 0
+(cbm) delete 0:RED
+Deleting ImagePath(0:b'RED')
+(cbm) delete 0:BL*
+Deleting ImagePath(0:b'BLUE')
+Deleting ImagePath(0:b'BLACK')
+(cbm) directory
+0 "COLOURS         " CS 2A
+1    "ORANGE"           PRG
+1    "YELLOW"           PRG
+1    "GREEN"            SEQ
+1    "PURPLE"           PRG
+1    "WHITE"            PRG
+1    "BROWN"            PRG
+658 BLOCKS FREE.
+(cbm) detach 0
+Detached D64Image(output\/colours.d64)

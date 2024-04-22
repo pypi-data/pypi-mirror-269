@@ -1,0 +1,66 @@
+(cbm) !mkdir -p output
+(cbm) !rm -f output/*
+(cbm) attach data/colours.d64 
+Attached data\/colours.d64 to 0
+(cbm) list 0:YELLOW
+10 OPEN2,8,2,"DATA,S,W"
+15 READA$
+20 IFA$=""THENCLOSE2:END
+25 PRINT#2,A$
+30 GOTO15
+40 DATAONE,TWO,THREE
+45 DATA""
+(cbm) list --start 22 --end 40 0:YELLOW
+25 PRINT#2,A$
+30 GOTO15
+40 DATAONE,TWO,THREE
+(cbm) list --start 30 0:YELLOW
+30 GOTO15
+40 DATAONE,TWO,THREE
+45 DATA""
+(cbm) list --end 22 0:YELLOW
+10 OPEN2,8,2,"DATA,S,W"
+15 READA$
+20 IFA$=""THENCLOSE2:END
+(cbm) detach 0
+Detached D64Image(data\/colours.d64)
+(cbm) !mkdir -p output
+(cbm) !rm -f output/*
+(cbm) attach data/colours.txt
+Attached data\/colours.txt to 0
+(cbm) detach 0
+Detached TapImage(data\/colours.txt)
+(cbm) attach data/colours.tap
+Attached data\/colours.tap to 0
+(cbm) list 0:ORANGE
+20 OPEN2,8,2,"DATA"
+30 INPUT#2,A$
+40 PRINTA$
+50 IFST=0GOTO30
+60 CLOSE2
+(cbm) detach 0
+Detached TapImage(data\/colours.tap)
+(cbm) attach data/test.t64 
+Attached data\/test.t64 to 0
+(cbm) list --start 100 0:LOADER 
+111 POKE780,2:POKE781,1:POKE782,0:SYS65466:POKE780,0:POKE781,251:POKE782,252:SYS65469
+112 POKE780,0:POKE781,0:POKE782,21:SYS65493
+115 PRINT"   {rvon}HIT F1 TO START."
+120 SYS4976
+(cbm) detach 0
+Detached T64Image(data\/test.t64)
+(cbm) unlist data/dataread.txt output/dataread.prg
+Writing data\/dataread.txt to output\/dataread.prg
+(cbm) list output/dataread.prg
+20 OPEN2,8,2,"DATA"
+30 INPUT#2,A$
+40 PRINTA$
+50 IFST=0GOTO30
+60 CLOSE2
+(cbm) list output/dataread.prg output/dataread.txt
+(cbm) !cat output/dataread.txt
+20 OPEN2,8,2,"DATA"
+30 INPUT#2,A$
+40 PRINTA$
+50 IFST=0GOTO30
+60 CLOSE2

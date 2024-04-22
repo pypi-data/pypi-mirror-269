@@ -1,0 +1,63 @@
+(cbm) !mkdir -p output
+(cbm) !rm -f output/*
+(cbm) unlist data/merge1.txt output/base.prg
+Writing data\/merge1.txt to output\/base.prg
+(cbm) unlist data/merge2.txt output/merge2.prg
+Writing data\/merge2.txt to output\/merge2.prg
+(cbm) unlist data/merge3.txt output/merge3.prg
+Writing data\/merge3.txt to output\/merge3.prg
+(cbm) merge output/base.prg output/merge2.prg
+Reading output\/base.prg
+Merging output\/merge2.prg
+Writing output\/base.prg
+(cbm) list output/base.prg
+200 REM
+210 REM
+220 REM
+230 REM
+240 REM
+250 REM
+500 REM
+510 REM
+520 REM
+530 REM
+540 REM
+(cbm) unlist data/merge1.txt output/base.prg
+Writing data\/merge1.txt to output\/base.prg
+(cbm) merge output/base.prg output/merge*.prg
+Reading output\/base.prg
+Merging output\/merge2.prg
+Merging output\/merge3.prg
+Writing output\/base.prg
+(cbm) list output/base.prg
+180 REM LAST
+190 REM LAST
+200 REM LAST
+205 REM LAST
+210 REM
+220 REM
+230 REM
+240 REM
+250 REM
+500 REM
+510 REM
+520 REM
+530 REM
+540 REM
+(cbm) format TEST TT output/merge.d64
+Creating empty disk image as output\/merge.d64, TEST:TT, type d64
+(cbm) attach output/merge.d64
+Attached output\/merge.d64 to 0
+(cbm) unlist data/merge1.txt 0:BASE
+Writing data\/merge1.txt to ImagePath(0:b'BASE')
+(cbm) unlist data/merge2.txt 0:MERGE2
+Writing data\/merge2.txt to ImagePath(0:b'MERGE2')
+(cbm) unlist data/merge3.txt 0:MERGE3
+Writing data\/merge3.txt to ImagePath(0:b'MERGE3')
+(cbm) merge 0:BASE 0:MERGE*
+Reading ImagePath(0:b'BASE')
+Merging ImagePath(0:b'MERGE2')
+Merging ImagePath(0:b'MERGE3')
+Writing ImagePath(0:b'BASE')
+(cbm) detach 0
+Detached D64Image(output\/merge.d64)

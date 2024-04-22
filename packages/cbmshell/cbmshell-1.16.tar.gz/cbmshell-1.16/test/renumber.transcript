@@ -1,0 +1,70 @@
+(cbm) !mkdir -p output
+(cbm) !rm -f output/*
+(cbm) unlist data/renumber.txt output/renumber.prg 
+Writing data\/renumber.txt to output\/renumber.prg
+(cbm) renumber output/renumber.prg 
+Reading output\/renumber.prg
+Renumbering starting at 10, increments of 10
+Writing output\/renumber.prg
+(cbm) list output/renumber.prg
+10 GOSUB90
+20 GOSUB70
+30 GOSUB50
+40 END
+50 REM
+60 RETURN
+70 REM
+80 RETURN
+90 REM
+100 RETURN
+(cbm) unlist data/renumber.txt output/renumber.prg 
+Writing data\/renumber.txt to output\/renumber.prg
+(cbm) renumber --start 400 --increment 8 output/renumber.prg
+Reading output\/renumber.prg
+Renumbering starting at 400, increments of 8
+Writing output\/renumber.prg
+(cbm) list output/renumber.prg
+400 GOSUB464
+408 GOSUB448
+416 GOSUB432
+424 END
+432 REM
+440 RETURN
+448 REM
+456 RETURN
+464 REM
+472 RETURN
+(cbm) unlist data/renumber.txt output/renumber.prg
+Writing data\/renumber.txt to output\/renumber.prg
+(cbm) renumber --start 1200  --region-start 2000 --region-end 2500 output/renumber.prg
+Reading output\/renumber.prg
+Renumbering lines 2000-2500 starting at 1200, increments of 10
+Writing output\/renumber.prg
+(cbm) list output/renumber.prg
+10 GOSUB3000
+11 GOSUB1200
+12 GOSUB1000
+50 END
+1000 REM
+1005 RETURN
+1200 REM
+1210 RETURN
+3000 REM
+3005 RETURN
+(cbm) unlist data/renumber.txt output/renumber.prg
+Writing data\/renumber.txt to output\/renumber.prg
+(cbm) renumber --start 100 --region-start 3000 output/renumber.prg
+Reading output\/renumber.prg
+Renumbering lines 3000-None starting at 100, increments of 10
+Writing output\/renumber.prg
+(cbm) list output/renumber.prg
+10 GOSUB100
+11 GOSUB2000
+12 GOSUB1000
+50 END
+100 REM
+110 RETURN
+1000 REM
+1005 RETURN
+2000 REM
+2005 RETURN

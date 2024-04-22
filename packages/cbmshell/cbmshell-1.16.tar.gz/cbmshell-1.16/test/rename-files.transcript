@@ -1,0 +1,23 @@
+(cbm) !mkdir -p output
+(cbm) !rm -f output/*
+(cbm) !cp data/colours.d64 output
+(cbm) attach output/colours.d64
+Attached output\/colours.d64 to 0
+(cbm) rename 0:PURPLE 0:PINK
+Renaming ImagePath(0:b'PURPLE') to b'PINK'
+(cbm) rename 0:WHITE GREY
+Renaming ImagePath(0:b'WHITE') to b'GREY'
+(cbm) directory
+0 "COLOURS         " CS 2A
+1    "RED"              PRG
+1    "ORANGE"           PRG
+1    "YELLOW"           PRG
+1    "GREEN"            SEQ
+1    "BLUE"             PRG
+1    "PINK"             PRG
+1    "GREY"             PRG
+2    "BLACK"            REL
+1    "BROWN"            PRG
+654 BLOCKS FREE.
+(cbm) detach 0
+Detached D64Image(output\/colours.d64)

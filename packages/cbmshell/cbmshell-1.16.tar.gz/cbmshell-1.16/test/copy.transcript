@@ -1,0 +1,72 @@
+(cbm) !mkdir output -p
+(cbm) !rm -f output/*
+(cbm) format TEST TT output/test.d64
+Creating empty disk image as output\/test.d64, TEST:TT, type d64
+(cbm) attach output/test.d64
+Attached output\/test.d64 to 0
+(cbm) copy data/echo.prg 0:ECHO
+Copying data\/echo.prg to ImagePath(0:b'ECHO')
+(cbm) copy 0:ECHO output/echo.prg
+Copying ImagePath(0:b'ECHO') to output\/echo.prg
+(cbm) unlist data/dataread.txt output/DATAREAD
+Writing data\/dataread.txt to output\/DATAREAD
+(cbm) unlist data/datawrite.txt output/DATAWRITE
+Writing data\/datawrite.txt to output\/DATAWRITE
+(cbm) copy output/DATA* 0:
+Copying output\/DATAWRITE to ImagePath(0:b'DATAWRITE')
+Copying output\/DATAREAD to ImagePath(0:b'DATAREAD')
+(cbm) untext data/colours.txt output/COLOURS
+Writing data\/colours.txt to output\/COLOURS
+(cbm) copy output/COLOURS 0:
+Copying output\/COLOURS to ImagePath(0:b'COLOURS')
+(cbm) copy --type REL --record-length 16 output/COLOURS 0:DATABASE
+Copying output\/COLOURS to ImagePath(0:b'DATABASE')
+(cbm) attach output/test.tap
+Attached output\/test.tap to 1
+(cbm) copy data/echo.prg 1:ECHO
+Copying data\/echo.prg to ImagePath(1:b'ECHO')
+(cbm) copy output/COLOURS 1:
+Copying output\/COLOURS to ImagePath(1:b'COLOURS')
+(cbm) copy 0:DATAWRITE 1:WRITE
+Copying ImagePath(0:b'DATAWRITE') to ImagePath(1:b'WRITE')
+(cbm) copy 0:DATAWRITE 1:
+Copying ImagePath(0:b'DATAWRITE') to ImagePath(1:b'DATAWRITE')
+(cbm) copy --type PRG_RELOC output/DATAREAD 1:
+Copying output\/DATAREAD to ImagePath(1:b'DATAREAD')
+(cbm) copy 1:DATA* output
+Copying ImagePath(1:b'DATAWRITE') to output\/DATAWRITE
+Copying ImagePath(1:b'DATAREAD') to output\/DATAREAD
+(cbm) directory 1
+1 <TAP image>
+1    "ECHO"             PRG
+1    "COLOURS"          PRG
+1    "WRITE"            PRG
+1    "DATAWRITE"        PRG
+1    "DATAREAD"         PRG_RELOC
+(cbm) copy 1: output
+Copying ImagePath(1:b'ECHO') to output\/ECHO
+Copying ImagePath(1:b'COLOURS') to output\/COLOURS
+Copying ImagePath(1:b'WRITE') to output\/WRITE
+Copying ImagePath(1:b'DATAWRITE') to output\/DATAWRITE
+Copying ImagePath(1:b'DATAREAD') to output\/DATAREAD
+(cbm) detach 1
+Detached TapImage(output\/test.tap)
+(cbm) attach data/test.t64
+Attached data\/test.t64 to 1
+(cbm) copy 1:LOADER 0:
+Copying ImagePath(1:b'LOADER') to ImagePath(0:b'LOADER')
+(cbm) copy 1:GUESS-WHO-MAN ouput
+Copying ImagePath(1:b'GUESS-WHO-MAN') to ouput
+(cbm) copy 0: 1: output
+Copying ImagePath(0:b'ECHO') to output\/ECHO
+Copying ImagePath(0:b'DATAWRITE') to output\/DATAWRITE
+Copying ImagePath(0:b'DATAREAD') to output\/DATAREAD
+Copying ImagePath(0:b'COLOURS') to output\/COLOURS
+Copying ImagePath(0:b'DATABASE') to output\/DATABASE
+Copying ImagePath(0:b'LOADER') to output\/LOADER
+Copying ImagePath(1:b'LOADER') to output\/LOADER
+Copying ImagePath(1:b'GUESS-WHO-MAN') to output\/GUESS-WHO-MAN
+(cbm) detach 1
+Detached T64Image(data\/test.t64)
+(cbm) detach 0
+Detached D64Image(output\/test.d64)

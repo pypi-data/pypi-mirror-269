@@ -1,0 +1,43 @@
+(cbm) file data/echo.prg 
+data\/echo.prg: PRG, start=$033c
+(cbm) attach data/colours.d64 
+Attached data\/colours.d64 to 0
+(cbm) file 0:RED
+RED: PRG, size=19 bytes, start=$033c
+(cbm) file 0:ORANGE
+ORANGE: PRG, size=60 bytes, start=$1201
+(cbm) file 0:GREEN
+GREEN: SEQ, size=54 bytes
+(cbm) file 0:BLACK
+BLACK: REL, size=248 bytes, record length=8 bytes, 31 records
+(cbm) file 0:
+Skipping drive 0
+(cbm) file 0:BL*
+BLUE: PRG, size=19 bytes, start=$033c
+BLACK: REL, size=248 bytes, record length=8 bytes, 31 records
+(cbm) detach 0
+Detached D64Image(data\/colours.d64)
+(cbm) attach data/colours.tap
+Attached data\/colours.tap to 0
+(cbm) file 0:RED
+RED: PRG, size=19 bytes, start=$033c
+(cbm) file 0:ORANGE
+ORANGE: PRG_RELOC, size=60 bytes, start=$1201
+(cbm) file 0:YELLOW
+YELLOW: SEQ, size=54 bytes
+(cbm) file 0:~
+: PRG_RELOC, size=95 bytes, start=$1201
+(cbm) file 0:RED~1
+RED: PRG_RELOC, size=95 bytes, start=$1201
+(cbm) file 0:~1
+: PRG_RELOC, size=60 bytes, start=$1201
+(cbm) detach 0
+Detached TapImage(data\/colours.tap)
+(cbm) attach data/test.t64
+Attached data\/test.t64 to 0
+(cbm) file 0:LOADER
+LOADER: PRG, size=521 bytes, start=$1001
+(cbm) file 0:GUESS-WHO-MAN 
+GUESS-WHO-MAN: PRG, size=2704 bytes, start=$1370
+(cbm) detach 0
+Detached T64Image(data\/test.t64)

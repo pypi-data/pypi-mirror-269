@@ -1,0 +1,34 @@
+(cbm) !mkdir -p output
+(cbm) !rm -f output/*
+(cbm) format TEST1 T1 output/test1.d64
+Creating empty disk image as output\/test1.d64, TEST1:T1, type d64
+(cbm) attach output/test1.d64
+Attached output\/test1.d64 to 0
+(cbm) format TEST2 T2 output/test2.d64
+Creating empty disk image as output\/test2.d64, TEST2:T2, type d64
+(cbm) attach output/test2.d64
+Attached output\/test2.d64 to 1
+(cbm) attach data/test1.tap 
+Attached data\/test1.tap to 2
+(cbm) attach data/test.t64
+Attached data\/test.t64 to 3
+(cbm) images
+    0  RW  D64Image(output\/test1.d64)
+    1  RW  D64Image(output\/test2.d64)
+    2  RW  TapImage(data\/test1.tap)
+    3  RO  T64Image(data\/test.t64)
+(cbm) detach 0
+Detached D64Image(output\/test1.d64)
+(cbm) images
+    1  RW  D64Image(output\/test2.d64)
+    2  RW  TapImage(data\/test1.tap)
+    3  RO  T64Image(data\/test.t64)
+(cbm) detach 1 3
+Detached D64Image(output\/test2.d64)
+Detached T64Image(data\/test.t64)
+(cbm) images
+    2  RW  TapImage(data\/test1.tap)
+(cbm) detach 2
+Detached TapImage(data\/test1.tap)
+(cbm) images
+No attached images
