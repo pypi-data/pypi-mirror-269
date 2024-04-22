@@ -1,0 +1,4 @@
+cmake
+
+[test]
+pytest>=6.0
