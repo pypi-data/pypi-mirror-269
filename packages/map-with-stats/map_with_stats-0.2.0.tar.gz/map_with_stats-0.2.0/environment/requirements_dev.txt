@@ -1,0 +1,7 @@
+black==22.3.*
+isort==5.12.*
+mypy
+pre-commit
+ruff==0.0.285
+pytest
+pytest-cov

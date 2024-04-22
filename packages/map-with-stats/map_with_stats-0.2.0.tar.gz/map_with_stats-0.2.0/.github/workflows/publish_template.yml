@@ -1,0 +1,42 @@
+name: "."
+
+on:
+  workflow_call:
+    inputs:
+      environment-name:
+        required: true
+        type: string
+      environment-url:
+        required: true
+        type: string
+      publish-url:
+        required: true
+        type: string
+
+# calling workflows must ensure to set `id-token: write` permissons either at the workflow or job level, according to
+# https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect#adding-permissions-settings
+
+# Job template was copied from https://github.com/marketplace/actions/pypi-publish
+jobs:
+  publish:
+    name: Upload release to PyPI
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.environment-name }}
+      url: ${{ inputs.environment-url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Needs all tags to compute dynamic version
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - name: 💻 Install dependencies
+        run: pip install build
+      - name: 🔨 Build distribution
+        run: python -m build
+      - name: 🚀 Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: ${{ inputs.publish-url }}
