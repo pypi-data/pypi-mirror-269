@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gravithon
+Version: 0.0.5
+Summary: Create multy-dimensional python spaces
+Author-email: Yehuda Elyasaf <30yehuda26@gmail.com>
+Maintainer-email: Yehuda Elyasaf <30yehuda26@gmail.com>
+Project-URL: Homepage, https://github.com/YehudaElyasaf/gravithon
+Project-URL: Issues, https://github.com/YehudaElyasaf/gravithon/issues
+Keywords: physics,2d,3d,engine
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: multipledispatch
+Requires-Dist: tkinter
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-C06524)](https://github.com/YehudaElyasaf/gravithon/blob/master/LICENSE)
+[![PyPI - Version](https://img.shields.io/pypi/v/gravithon.svg)](https://pypi.org/project/gravithon/)
+
+<!--
+TODO: readme
+-->
