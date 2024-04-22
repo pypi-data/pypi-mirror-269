@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: llama-index-readers-openapi
+Version: 0.1.0
+Summary: llama-index readers openapi integration
+License: MIT
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.8.1,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: llama-index-core (>=0.10.0,<0.11.0)
+Description-Content-Type: text/markdown
+
+# LlamaIndex Readers Integration: Open API Specification
+
+This module provides a reader for Open API Specification (OAS) JSON files. The reader is able to parse OAS files and split them at into atomic elements, such as paths, operations, parameters, etc.
+
+It also provides some basic customizations to the reader such as changing the depth of the split, and the ability to exclude certain elements.
+
+## Usage
+
+```python
+from llama_index.readers.openapi import OpenAPIReader
+
+openapi_reader = OpenAPIReader(discard=["info", "servers"])
+openapi_reader.load_data("path/to/openapi.json")
+```
+
