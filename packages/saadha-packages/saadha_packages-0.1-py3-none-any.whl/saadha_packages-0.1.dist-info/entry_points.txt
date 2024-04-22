@@ -1,0 +1,2 @@
+[console_scripts]
+saadha-package = saadha_packages:hello
