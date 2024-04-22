@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: phewgle
+Version: 0.1.1
+Summary: A custom-build version of the Fugle library `fugle-trade-python` with customized features.
+Author: Thomas Lin
+Author-email: thomaslin@tradinglab.app
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: fugle-trade-core (>=2.0.0,<3.0.0)
+Requires-Dist: keyring (>=25.1.0,<26.0.0)
+Requires-Dist: keyrings-cryptfile (>=1.3.9,<2.0.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# phewgle
+
+**A custom-build version of the Fugle library `fugle-trade-python` with customized features.**
+
+## Prerequisite
+1. Modify the `User` field in the `.ini` config file by adding `Password` and `CertPassword` sub-items.
+    ```
+    ...
+    [User]
+    Account = <account_id>
+    Password = <account_password>
+    CertPassword = <certificate_password>
+    ```
+
+2. Upload the `cert.p12` certificate file to your Google Cloud Storage bucket.
+
+## Usage
+
+#### _Initializing and authenticating the connector_
+
+```python
+from configparser import ConfigParser
+from phewgle.fugle import FugleTrader
+
+config: ConfigParser = ConfigParser()
+sdk = FugleTrader(config)
+sdk.login()
+```
+

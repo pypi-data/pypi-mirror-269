@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "phewgle"
+version = "0.1.1"
+description = "A custom-build version of the Fugle library `fugle-trade-python` with customized features."
+authors = ["Thomas Lin <thomaslin@tradinglab.app>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.26.4"
+keyring = "^25.1.0"
+keyrings-cryptfile = "^1.3.9"
+fugle-trade-core = "^2.0.0"
+python-dotenv = "^1.0.1"
+loguru = "^0.7.2"
+
+[tool.poetry.group.dev.dependencies]
+black = {extras = ["jupyter"], version = "^24.4.0"}
+build = "^1.2.1"
+bump-my-version = "^0.20.1"
+codespell = "^2.2.6"
+wheel = "^0.43.0"
+flake8 = "^7.0.0"
+twine = "^5.0.0"
+click = "^8.1.7"
+pytest = "^8.1.1"
+pytest-runner = "^6.0.1"
+ipykernel = "^6.29.4"
+livereload = "^2.6.3"
+nbconvert = "^7.16.3"
+nbformat = "^5.10.4"
+sphinx = "^7.3.7"
+watchdog = "^4.0.0"
+mkdocs = "^1.6.0"
+mkdocs-git-revision-date-plugin = "^0.3.2"
+mkdocs-git-revision-date-localized-plugin = "^1.2.4"
+mkdocs-jupyter = ">=0.24.0"
+mkdocs-material = ">=9.1.3"
+mkdocs-pdf-export-plugin = "^0.5.10"
+mkdocstrings = "^0.24.3"
+mkdocstrings-crystal = "^0.3.7"
+mkdocstrings-python-legacy = "^0.2.3"
+pygments = "^2.17.2"
+pymdown-extensions = "^10.8"
+jupyterlab = "^4.1.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.bumpversion]
+current_version = "0.1.1"
+commit = true
+tag = true
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "phewgle/__init__.py"
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
