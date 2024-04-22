@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+announcementlib/__init__.py
+announcementlib/electionannounce.py
+student_vote_electionn.egg-info/PKG-INFO
+student_vote_electionn.egg-info/SOURCES.txt
+student_vote_electionn.egg-info/dependency_links.txt
+student_vote_electionn.egg-info/requires.txt
+student_vote_electionn.egg-info/top_level.txt
