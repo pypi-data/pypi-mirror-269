@@ -1,0 +1,12 @@
+kv/api/__init__.py,sha256=9q1N0dbgvxC-O-99u8JXtzDpDRUbEtiXLFtP8fUTzYc,122
+kv/api/api.py,sha256=I18QeakEoUraTN4dzTk58aAbN69AZRBd3G0iGPJYICU,2421
+kv/api/simple.py,sha256=qpZosACxuA4u0E1OxNtYDtqWSdxhaTb_e9z1uU0s1IQ,1559
+kv/api/append/__init__.py,sha256=E41HiDFVFUlE2M07_EeA5E6KFyxhk4GtySBHpOd31ek,79
+kv/api/append/append.py,sha256=0bjtKjg8rx6MLLyltAyretG1hNSvRljN455Ymp5FJcM,775
+kv/api/append/simple.py,sha256=P6uO9hU1ph0SMe-ADMtLHS7-AnaToeZVr8abij8drHQ,616
+kv/api/errors/__init__.py,sha256=bEBzjh7Hq7kVjITwMuz27c45yBprFUhW54YNXfuS9zY,81
+kv/api/errors/errors.py,sha256=3Zr7wrCH63oe0Jy_jGDarnk5QeKDtZ98l0hxyup4PI0,791
+kv_api-0.1.7.dist-info/METADATA,sha256=BQ_KSgRWL6XeLcWyjwkMfwQaQD9aN-xbcqD-6T4atgA,416
+kv_api-0.1.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+kv_api-0.1.7.dist-info/top_level.txt,sha256=z85M-ICBi-OoWrXz-dZX8xL06idJqievlWlmDg07U0M,3
+kv_api-0.1.7.dist-info/RECORD,,
