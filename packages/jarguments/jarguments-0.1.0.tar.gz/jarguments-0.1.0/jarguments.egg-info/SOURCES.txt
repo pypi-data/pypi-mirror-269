@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+jarguments/__init__.py
+jarguments.egg-info/PKG-INFO
+jarguments.egg-info/SOURCES.txt
+jarguments.egg-info/dependency_links.txt
+jarguments.egg-info/top_level.txt
+jarguments.egg-info/zip-safe
