@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/LocalDataManager/__init__.py
+src/LocalDataManager/file_manager.py
+src/LocalDataManager.egg-info/PKG-INFO
+src/LocalDataManager.egg-info/SOURCES.txt
+src/LocalDataManager.egg-info/dependency_links.txt
+src/LocalDataManager.egg-info/requires.txt
+src/LocalDataManager.egg-info/top_level.txt
+src/LocalDataManager/db/__init__.py
+src/LocalDataManager/db/db_classes.py
+test/test_file_management.py
