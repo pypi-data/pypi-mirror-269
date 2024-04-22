@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: data-transformation-yfhsi
+Version: 0.4.1a0
+Summary: 
+Author: skaival
+Author-email: you@example.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Description-Content-Type: text/markdown
+
+The Data Transformation Libraries package contains three modules:
+transpose
+time_series_windowing
+cross_correlation
+
+The transpose module includes the "transpose2d" function, which switches the axes of a 2D tensor.
+The time_series_windowing module includes the "window1d" function for time series windowing.
+The cross_correlation module includes the "convolution2d" function for cross-correlation.
