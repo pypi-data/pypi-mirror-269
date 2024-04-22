@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: pandas-wizard
+Version: 1.1.0a0
+Summary: Utility Functions, Wrappers for pandas Module
+Home-page: https://github.com/sharkutilities/pandas-wizard
+Author: shark-utilities developers
+Author-email: sharkutilities <neuralNOD@outlook.com>
+License: MIT License        
+        Copyright (c) 2024 Debmalya Pramanik        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.        
+Project-URL: Homepage, https://github.com/sharkutilities/pandas-wizard
+Project-URL: Documentation, https://pandas-wizard.readthedocs.io/en/latest/index.html
+Project-URL: Issues, https://github.com/sharkutilities/pandas-wizard/issues
+Project-URL: Changelog, https://github.com/sharkutilities/pandas-wizard/blob/master/CHANGELOG.md
+Keywords: pandas,utility,utilities,util,utils,wrappers,data science,data analysis,data scientist,data analyst,statistics,percentile,quantile,probability
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<h1 align = "center">
+  <img alt = "favicon" src = "favicon.png" height = 250px><br>
+  pandas-wizard
+</h1>
+
+<div align = "justify">
+
+[**Pandas-Wizard (`pandaswizard`)**](https://github.com/sharkutilities/pandas-wizard) is a simple Python module for providing
+utility functions and wrappers for the `pandas` module. The module is kept simple and use of external dependencies is minimized
+unless needed to enhance performance.
+
+This is a relatively new repository, and if you find any performance or improvement scope please check the
+[contributing guidelines](https://github.com/sharkutilities/.github/blob/master/.github/CONTRIBUTING.md) for the organization.
+All help and criticism are appreciated. If you find any additional use cases please create a pull request or submit for a
+new feature.
+
+## Getting Started
+
+The source code is currently hosted at GitHub: [**sharkutilities/pandas-wizard**](https://github.com/sharkutilities/pandas-wizard).
+The binary installers for the latest release are available at the [Python Package Index (PyPI)](https://pypi.org/project/pandas-wizard/).
+
+```bash
+pip install -U pandas-wizard
+```
+
+The list of changes between each release is available [here](./CHANGELOG.md).
+
+The purpose of the below guide is to illustrate the main features of **pandas-wizard** and assume the working knowledge of
+the [`pandas`](https://pypi.org/project/pandas/) module and use cases. The below example calculates the percentile of
+`pandas.DataFrameGroupBy` object using [`np.percentile`](https://numpy.org/doc/stable/reference/generated/numpy.percentile.html).
+
+```python
+import pandaswizard as pdw # attempt to create an ubiquitous naming
+
+# let's calculate the 50th-percentile, i.e. the median for each group
+percentiles = df.groupby("group").agg({"A" : pdw.percentile(50)})
+percentiles.head()
+
+# or, preferred usage is to use in conjunture with other aggregation function like
+statistics = df.groupby("group").agg({"A" : [sum, pdw.percentile(50), pdw.quantile(0.95)]})
+statistics.head()
+```
+
+The above function calculates the 50th percentile, i.e., the median of the feature "A" based on the grouped column "group" from the data frame.
+
+---
+
+**Footnote:** The [favicon](./favicon.png) is designed from the original [`pandas`](https://pandas.pydata.org/static/img/pandas.svg) logo and no
+copyright infringement is intended. Since the main objective is to provide a utility function for `pandas` the logo is re-used and developed
+using [canva](https://www.canva.com/).
+
+</div>
