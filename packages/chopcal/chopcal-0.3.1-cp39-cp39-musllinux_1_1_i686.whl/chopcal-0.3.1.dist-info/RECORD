@@ -1,0 +1,8 @@
+chopcal-0.3.1.dist-info/METADATA,sha256=vjmWxYK9SnQD-9IYXq16GFphirggmydbYXOGy1_6CWY,1140
+chopcal-0.3.1.dist-info/RECORD,,
+chopcal-0.3.1.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chopcal-0.3.1.dist-info/WHEEL,sha256=KhIvfUVbq2UwdsWT1WVvfo2VzwEqRNmwCI8BSVv6PrQ,112
+chopcal-0.3.1.dist-info/licenses/LICENSE,sha256=sJDsg6BACRaUasbELacG6DW_N1b_sQhWI2QeaYOnlck,1524
+chopcal/__init__.py,sha256=a_7PAeMqxMRbfExaOWGsIKZ2SVDVMJaPNVjGtANK9VQ,302
+chopcal/_chopper_lib_impl.cpython-39-i386-linux-gnu.so,sha256=1fFSliIZn509Gl_EQA7Y8dW_Qzig-BYwfBW8CdN583Q,1140872
+chopcal/_chopcal_impl.cpython-39-i386-linux-gnu.so,sha256=ooOEzJXjAQR-oruQDzpbXkM-vtM5mlMm0vAUtJN6LWM,260048
