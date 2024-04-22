@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "gcp-pal"
+version = "0.1.2"
+description = ""
+authors = ["VitaminB16 <artemiy.nosov@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.3"
+pyarrow = "^15.0.2"
+pandas = "^2.2.1"
+protobuf3 = "^0.2.1"
+protobuf = "4.21.6"
+google-cloud-firestore = "^2.16.0"
+google-cloud-pubsub = "^2.21.1"
+google-cloud-bigquery = "^3.20.1"
+google-cloud-core = "^2.4.1"
+google-cloud-storage = "^2.16.0"
+gcsfs = "^2024.3.1"
+pandas-gbq = "^0.22.0"
+google-cloud-functions = "^1.16.3"
+pytest = "^8.1.1"
+pytest-xdist = "^3.5.0"
+fastavro = "^1.9.4"
+google-auth-oauthlib = "^1.2.0"
+docker = "^7.0.0"
+google-cloud-run = "^0.10.5"
+pyyaml = "^6.0.1"
+google-cloud-secret-manager = "^2.19.0"
+google-cloud-scheduler = "^2.13.3"
+google-cloud-logging = "^3.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
