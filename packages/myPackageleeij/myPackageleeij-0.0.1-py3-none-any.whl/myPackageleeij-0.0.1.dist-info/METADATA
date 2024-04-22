@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: myPackageleeij
+Version: 0.0.1
+Summary: Provides numpy, pandas, pyplot libraries and encryption function
+Home-page: https://github.com/leej1212/myPackage
+Download-URL: https://github.com/leej1212/myPackage/
+Author: leej1212
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
