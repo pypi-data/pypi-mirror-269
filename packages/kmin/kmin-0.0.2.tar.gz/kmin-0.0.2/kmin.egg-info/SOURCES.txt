@@ -1,0 +1,8 @@
+README
+setup.py
+kmin.egg-info/PKG-INFO
+kmin.egg-info/SOURCES.txt
+kmin.egg-info/dependency_links.txt
+kmin.egg-info/top_level.txt
+makingpassword/__init__.py
+makingpassword/password_make.py
