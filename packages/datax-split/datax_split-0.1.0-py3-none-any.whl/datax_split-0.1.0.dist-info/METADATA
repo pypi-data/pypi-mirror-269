@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: datax-split
+Version: 0.1.0
+Summary: test pip upload
+Home-page: https://github.com/854771076/datax_split
+Author: fiang
+Author-email: 854771076@qq.com
+License: MIT
+License-File: LICENSE.md
+Requires-Dist: pandas
+Requires-Dist: pymysql
+
+test
