@@ -1,0 +1,6 @@
+PyNomadBBO
+
+[test]
+ruff
+mypy
+pytest
