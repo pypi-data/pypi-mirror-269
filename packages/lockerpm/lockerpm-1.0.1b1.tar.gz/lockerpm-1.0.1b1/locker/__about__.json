@@ -1,0 +1,13 @@
+{
+  "version": "1.0.1b1",
+  "binary_version": "1.0.86",
+  "binary_checksum": {
+    "mac-arm64": "2e671c16e5e3d276d8f825b9a63d48c3cc9e4a2cb09636e861e36606f9585ed6",
+    "mac-x64": "f3f4b0b7d93d4a5f6dfb35c5b8241233df9b0fc0652c2c96e7a94c7024a9e135",
+    "linux": "aac0ee35042ca7b53be09c9d4e5d46ee2ff901c0dd80a09879336ca38931c98f",
+    "windows": "dbf00a371e7e2e77967b4d9da012d747c9d050536a6b3839f0da3d9190ee5bbf"
+  },
+  "author": "CyStack Corporation",
+  "copyright": "Copyright 2023, CyStack Corporation",
+  "license": ""
+}
