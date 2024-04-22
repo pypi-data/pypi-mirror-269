@@ -1,0 +1,2 @@
+[console_scripts]
+3dLitematica = t3dlitematica.__main__:cli
