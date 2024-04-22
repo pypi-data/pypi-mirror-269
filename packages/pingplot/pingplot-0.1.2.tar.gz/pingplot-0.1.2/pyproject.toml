@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pingplot"
+version = "0.1.2"
+description = "Create a graph depicting latency to arbitrary addresses over time"
+authors = ["DJ Stomp <85457381+djstompzone@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "pingplot"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+seaborn = ">=0.13.2,<0.14.0"
+netifaces = ">=0.11.0,<0.12.0"
+
+[tool.poetry.scripts]
+pingplot = "pingplot.plotping:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
