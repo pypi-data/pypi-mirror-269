@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+finprotest.egg-info/PKG-INFO
+finprotest.egg-info/SOURCES.txt
+finprotest.egg-info/dependency_links.txt
+finprotest.egg-info/top_level.txt
+iwanttest/__init__.py
+iwanttest/etc.py
+iwanttest/test1.py
+iwanttest/test2.py
