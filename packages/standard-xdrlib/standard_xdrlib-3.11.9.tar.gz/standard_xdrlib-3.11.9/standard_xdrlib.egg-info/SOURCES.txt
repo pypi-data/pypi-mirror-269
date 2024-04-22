@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+pyproject.toml
+standard_xdrlib.egg-info/PKG-INFO
+standard_xdrlib.egg-info/SOURCES.txt
+standard_xdrlib.egg-info/dependency_links.txt
+standard_xdrlib.egg-info/top_level.txt
+tests/test_xdrlib.py
+xdrlib/__init__.py
