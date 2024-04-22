@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: optionresult
+Version: 0.1.3
+Summary: Rust style option and result types for Python
+Project-URL: Homepage, https://github.com/sunfkny/optionresult
+Author-email: sunfkny <sunfkny@google.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# optionresult
+Rust style option and result types for Python
