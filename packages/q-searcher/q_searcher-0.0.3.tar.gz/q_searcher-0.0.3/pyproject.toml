@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "q_searcher"
+version = "0.0.3"
+authors = [
+    "UioSun <uiosun@outlook.com>",
+]
+description = ""
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.urls]
+Homepage = "https://github.com/freedom-island/q_searcher"
+Issues = "https://github.com/freedom-island/q_searcher/issues"
+Website = "https://www.uiosun.com/libs/q_searcher"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
