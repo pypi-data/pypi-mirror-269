@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: django-sqlite-object-storage
+Version: 0.1.0
+Summary: Store an sqlite database in object storage
+Home-page: https://github.com/lukewiwa/django_sqlite_object_storage
+License: MIT
+Author: lukewiwa
+Author-email: luke.wiwa@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: Django (>=4.2)
+Requires-Dist: boto3 (>=1.28.79,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Django Sqlite Object Storage
+
+Store sqlite database in an object storage service (eg. S3)
+
+## Usage
+
+Install the app in `settings.py`
+
+```python
+DATABASES = {
+    "default": {
+        "ENGINE": "django_sqlite_object_storage",
+        "NAME": Path("/tmp", "db.sqlite3"),
+        "SQLITE_OBJECT_STORAGE_BUCKET_NAME": "bucektname",
+        "SQLITE_OBJECT_STORAGE_ACCESS_KEY_ID": "key",
+        "SQLITE_OBJECT_STORAGE_ACCESS_SECRET": "secret",
+    }
+}
+```
+
