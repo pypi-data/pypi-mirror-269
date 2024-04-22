@@ -1,0 +1,13 @@
+drf_spectacular_websocket/__init__.py,sha256=I4nN2hpLbUSKm1V18bsyFIbJeUSFb-JcHvgsBy45doo,25
+drf_spectacular_websocket/apps.py,sha256=IZb9uGf5cZX2rzRU_fRjLUNPmhKUnIB5XDx84-fByzo,187
+drf_spectacular_websocket/decorators.py,sha256=C9g_R1APP0Yhsi7GA6Pu7n0mizD4dSnq1lHhGcQbq6s,906
+drf_spectacular_websocket/settings.py,sha256=E55NAKa4JGDhaA4zOxP1YP2gGa-zj6IAL3BLXgNX0Ew,643
+drf_spectacular_websocket/schemas/__init__.py,sha256=g-T3EluFSY_YOidTHtHlsP8sd6bHZl5CPPPOPZo_XMA,39
+drf_spectacular_websocket/schemas/consumer_schema.py,sha256=5YlGWYxU892AsZAuglbs21s-0to4hArQNeIihbjY24s,6076
+drf_spectacular_websocket/schemas/schema.py,sha256=45KEGIg4oE6gAbsOrSPRXUzGiJrmyy4ApITNY3NUoSM,3921
+drf_spectacular_websocket/templates/drf_spectacular/swagger_ui.js,sha256=fjRipneNJY2gkCEDzrSE6nVtRkXn3mTs0K6xNxL4_QI,21443
+drf_spectacular_websocket-1.0.0.dist-info/LICENSE,sha256=AM2Jf71GbklyV2KnlXeRAhkQy7AJqDacEf5Wtf5sHYY,1085
+drf_spectacular_websocket-1.0.0.dist-info/METADATA,sha256=iLiPjP5gWIy2uf-ki00LIr2VXaj018xfHaM00l4e1uY,5330
+drf_spectacular_websocket-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+drf_spectacular_websocket-1.0.0.dist-info/top_level.txt,sha256=v7Y_klYHe1FBaZ245YVivHo5QVwXWYwonErcAX-r-Vw,26
+drf_spectacular_websocket-1.0.0.dist-info/RECORD,,
