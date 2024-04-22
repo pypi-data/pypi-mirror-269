@@ -1,0 +1,189 @@
+image: registry.gitlab.com/adriandc/gitlabci-local/python:3.11-alpine
+
+stages:
+  - development
+  - prepare
+  - build
+  - deploy
+
+.local:
+  engine: docker,auto
+  real_paths: true
+  version: 9.0
+
+# =============================================================================
+# Stage: development
+
+clean:
+  stage: development
+  image: local
+  script:
+    - sudo rm -rf ./build ./dist ./*.egg-info ./.eggs
+  rules:
+    - if: $CI_LOCAL
+
+changelog:
+  stage: development
+  image: local:silent
+  script:
+    - mkdir -p ./.tmp/
+    - |
+      if ! ls ./.tmp/git-chglog.tar.gz >/dev/null 2>&1; then
+        wget -O ./.tmp/git-chglog.tar.gz -q https://github.com/git-chglog/git-chglog/releases/download/v0.15.4/git-chglog_0.15.4_linux_amd64.tar.gz
+        tar -xzf ./.tmp/git-chglog.tar.gz -C ./.tmp/
+        rm -f ./.tmp/git-chglog.tar.gz
+        chmod +x ./.tmp/git-chglog
+      fi
+    - 'echo -n " > Current commit : "'
+    - git describe --always
+    - echo ''
+    - 'read -p " > Release tag : " -r tag'
+    - echo ''
+    - git tag -f -m '' "${tag}"
+    - ./.tmp/git-chglog -o ./CHANGELOG.md
+    - sed -i "s#raw/[^/]*/docs#raw/${tag}/docs#g" ./README.md
+    - git add -v ./CHANGELOG.md ./README.md
+    - 'git commit -m "docs(changelog): regenerate release tag changes history" -s'
+    - git tag -f -m '' "${tag}"
+    - ./.tmp/git-chglog -o ./CHANGELOG.md
+    - sh ./.chglog/changelog.sh --clean
+    - git add -v ./CHANGELOG.md
+    - git commit --amend --no-edit
+    - git tag -f -m '' "${tag}"
+  rules:
+    - if: $CI_LOCAL
+
+# =============================================================================
+# Stage: prepare
+
+codestyle:
+  stage: prepare
+  image: registry.gitlab.com/adriandc/gitlabci-local/gitlabci-local:codestyle
+  script:
+    - yapf -i ./gitlab_projects_migrate/*.py ./gitlab_projects_migrate/*/*.py ./setup.py
+    - unify -i --quote "'" ./gitlab_projects_migrate/*.py ./gitlab_projects_migrate/*/*.py ./setup.py
+    - echo '' && git diff --name-status
+    - git diff --quiet
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "develop"
+      changes:
+        - 'CHANGELOG.md'
+        - 'gitlab_projects_migrate/**/*'
+        - 'requirements/**/*'
+        - 'setup.py'
+    - if: $CI_COMMIT_TAG || $CI_PIPELINE_SOURCE == "trigger" || $CI_PIPELINE_SOURCE == "web" || $CI_COMMIT_REF_NAME != "develop"
+      when: on_success
+  allow_failure: true
+
+lint:
+  stage: prepare
+  image: registry.gitlab.com/adriandc/gitlabci-local/gitlabci-local:codestyle
+  variables:
+    PIP_DISABLE_PIP_VERSION_CHECK: 1
+  before_script:
+    - pip3 install -q -r ./requirements/runtime.txt --upgrade
+  script:
+    - pylint --errors-only ./gitlab_projects_migrate/ ./setup.py
+    - pylint --disable=missing-docstring --load-plugins=pylint.extensions.no_self_use ./gitlab_projects_migrate/ ./setup.py
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "develop"
+      changes:
+        - 'CHANGELOG.md'
+        - 'gitlab_projects_migrate/**/*'
+        - 'requirements/**/*'
+        - 'setup.py'
+    - if: $CI_COMMIT_TAG || $CI_PIPELINE_SOURCE == "trigger" || $CI_PIPELINE_SOURCE == "web" || $CI_COMMIT_REF_NAME != "develop"
+      when: on_success
+  allow_failure: true
+
+typings:
+  stage: prepare
+  image: registry.gitlab.com/adriandc/gitlabci-local/gitlabci-local:codestyle
+  variables:
+    MYPY_FORCE_COLOR: 1
+    TERM: ansi
+  script:
+    - set +x
+    - |
+      if [ $(git rev-list --count HEAD) -gt 1 ]; then
+        mypy --follow-imports silent --pretty $(git diff --name-only $(git diff --exit-code >/dev/null && echo 'HEAD^' || echo 'HEAD') ./gitlab_projects_migrate/ ./setup.py) 2>/dev/null || true
+      fi
+    - sleep 1
+    - mypy --follow-imports silent --pretty ./gitlab_projects_migrate/ ./setup.py
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "develop"
+      changes:
+        - 'CHANGELOG.md'
+        - 'gitlab_projects_migrate/**/*'
+        - 'requirements/**/*'
+        - 'setup.py'
+    - if: $CI_COMMIT_TAG || $CI_PIPELINE_SOURCE == "trigger" || $CI_PIPELINE_SOURCE == "web" || $CI_COMMIT_REF_NAME != "develop"
+      when: on_success
+  allow_failure: true
+
+# =============================================================================
+# Stage: build
+
+build:
+  stage: build
+  image: registry.gitlab.com/adriandc/gitlabci-local/gitlabci-local:build
+  needs: []
+  script:
+    - rm -rf ./build ./dist ./*.egg-info ./.eggs
+    - python3 -m build
+  after_script:
+    - rm -rf ./build ./*.egg-info ./.eggs
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "develop"
+      changes:
+        - 'CHANGELOG.md'
+        - 'gitlab_projects_migrate/**/*'
+        - 'requirements/**/*'
+    - if: $CI_COMMIT_TAG || $CI_PIPELINE_SOURCE == "trigger" || $CI_PIPELINE_SOURCE == "web" || $CI_COMMIT_REF_NAME != "develop"
+      when: on_success
+  artifacts:
+    paths:
+      - dist/
+
+install:
+  stage: build
+  image: local:quiet
+  script:
+    - pipx uninstall $(ls -1 ./dist/*.whl | cut -d'/' -f3 | cut -d'-' -f1) || true
+    - pipx install --force ./dist/*.whl
+  rules:
+    - if: $CI_LOCAL
+
+# =============================================================================
+# Stage: deploy
+
+deploy:release:
+  stage: deploy
+  image: registry.gitlab.com/adriandc/gitlabci-local/gitlabci-local:deploy
+  needs:
+    - job: build
+  variables:
+    TWINE_PASSWORD: ${TWINE_PASSWORD}
+  before_script:
+    - if [ ! "${CI_COMMIT_REF_PROTECTED}" = 'true' ]; then echo '[ERROR] Please protect this tag...'; exit 1; fi
+  script:
+    - tag=${CI_COMMIT_REF_NAME:-$(git describe --always --abbrev=0)}
+    - description=$(sh ./.chglog/changelog.sh "${tag}" | sed -z 's/"/\\"/g')
+    - description="${description}"$'\n\n''### Download'$'\n'
+    - gitlab-release --description "${description}" --link-prefix '* ' ./dist/*
+    - twine upload -u '__token__' -p "${TWINE_PASSWORD}" ./dist/*
+  rules:
+    - if: $CI_COMMIT_TAG
+
+deploy:trial:
+  stage: deploy
+  image: registry.gitlab.com/adriandc/gitlabci-local/gitlabci-local:deploy
+  needs:
+    - job: build
+  variables:
+    TWINE_PASSWORD_TEST: ${TWINE_PASSWORD_TEST}
+  script:
+    - twine upload -u '__token__' -p "${TWINE_PASSWORD_TEST}" --repository testpypi ./dist/*
+  rules:
+    - if: $CI_LOCAL
+  when: manual
