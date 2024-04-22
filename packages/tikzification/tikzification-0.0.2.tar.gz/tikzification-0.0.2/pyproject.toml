@@ -1,0 +1,35 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.isort]
+profile = "black"
+
+[project]
+name = "tikzification"
+version = "0.0.2"
+authors = [{name = "Leander Kurscheidt", email = "Leander.Kurscheidt@gmx.de"}]
+description = "Convert matplotlib figures into TikZ/PGFPlots. Based on tikzplotlib"
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Framework :: Matplotlib",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+  "Topic :: Scientific/Engineering :: Visualization",
+]
+keywords = ["latex", "tikz", "matplotlib", "graphics"]
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib >= 3.8.4",
+  "numpy",
+  "Pillow",
+  "webcolors",
+]
+
+[project.urls]
+Code = "https://github.com/LeanderK/tikzification"
+Issues = "https://github.com/LeanderK/tikzification/issues"

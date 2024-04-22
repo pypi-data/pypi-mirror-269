@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: tikzification
+Version: 0.0.2
+Summary: Convert matplotlib figures into TikZ/PGFPlots. Based on tikzplotlib
+Keywords: latex,tikz,matplotlib,graphics
+Author-email: Leander Kurscheidt <Leander.Kurscheidt@gmx.de>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Matplotlib
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Multimedia :: Graphics :: Graphics Conversion
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: matplotlib >= 3.8.4
+Requires-Dist: numpy
+Requires-Dist: Pillow
+Requires-Dist: webcolors
+Project-URL: Code, https://github.com/LeanderK/tikzification
+Project-URL: Issues, https://github.com/LeanderK/tikzification/issues
+
+tikzification is based on https://github.com/nschloe/tikzplotlib
+
+
