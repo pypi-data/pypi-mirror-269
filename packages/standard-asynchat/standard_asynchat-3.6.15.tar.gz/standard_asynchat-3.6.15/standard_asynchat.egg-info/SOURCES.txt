@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+pyproject.toml
+asynchat/__init__.py
+standard_asynchat.egg-info/PKG-INFO
+standard_asynchat.egg-info/SOURCES.txt
+standard_asynchat.egg-info/dependency_links.txt
+standard_asynchat.egg-info/top_level.txt
+tests/test_asynchat.py
