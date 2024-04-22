@@ -1,0 +1,9 @@
+IISRapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+IISRapi/model/__init__.py,sha256=TQW77Sk9YyKK6RVUaysWU5zDoJuPQLExKYFDlS75Daw,26
+IISRapi/model/data.py,sha256=cYgt0TptxIhoy9_bAeK6GtcIFPwF3-vkUFlY6KXOBcs,202
+IISRapi/model/ner.py,sha256=jXoLUa-uoPmrrOm02Uavr3Q0ppk-c-wRDUEVTprhpb8,6182
+IISRapi/model/pun.py,sha256=OeH2lHM6aH_eo75WmPzIZDfSSXdJOD5-W4KFIlvsYeQ,5377
+IISRapi-1.0.dist-info/METADATA,sha256=d_YTNhnMSSZupu-oVr8ceVKoIPwXzjReeDVTBdYtQQk,140
+IISRapi-1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+IISRapi-1.0.dist-info/top_level.txt,sha256=cH3sPpIZFToiZ7371y8-gT0U5nICCksN93B_bo0mmWU,8
+IISRapi-1.0.dist-info/RECORD,,
