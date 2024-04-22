@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "NeuronLib"
+version = "0.0.0"
+authors = [
+  { name="Adam Authur", email="aauthur@tamu.edu" },
+]
+description = "This is a package I am developing to support the creation and training of neural networks in Python. It is currently not ready for release, but I hope to have an early version ready by May 2024."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/NeuralLib/neurallib.py"]
+
+[project.urls]
+Homepage = "https://github.com/aauthur/NeuronLib"

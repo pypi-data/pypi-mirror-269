@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: NeuronLib
+Version: 0.0.0
+Summary: This is a package I am developing to support the creation and training of neural networks in Python. It is currently not ready for release, but I hope to have an early version ready by May 2024.
+Project-URL: Homepage, https://github.com/aauthur/NeuronLib
+Author-email: Adam Authur <aauthur@tamu.edu>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# NeuronLib
+This is a library I am developing based on my linear algebra library for the purposes of instantiating, training, and saving neural networks in Python. Presently, the networks can be created and trained without any issue, but the efficacy of the networks is unclear. Linear regression functions perfectly, but networks involving a more complex architecture have demonstrated limited functionality at best. Quadratic regression and the capturing of even slightly more complex relationships, despite droves of training data has proved fruitless.
+
+At the moment it is unclear if this is a result of a disfunctional training algorithm or simply the result of poor network architecture. Consequently, further testing is demanded. If the networks can prove to be effective in classification applications, I will prepare the library to be released, ideally some time in May 2024. Before this package can be cleaned up and prepared for a first official release, it will be necessary to develop methods for saving and loading previously trained neural networks, revise the instantiation method to allow for more customizable and versatile network creation, and develop at least one optimizer for training. 
+
+Prior to a first release, an official documentation will be written. In the meantime feel free to look at the source code to see what I'm currently testing and working on!
