@@ -1,0 +1,14 @@
+tinysoundfont/synth.py,sha256=0oJha5OIYau1jJt1PEaKEPEoEzLfVdekB_0m4Pqg5Sg,16483
+tinysoundfont/sequencer.py,sha256=CS1womqcOIv5n3eVeysJ1AtITaurFiiuX8ZNwUYR0uA,6910
+tinysoundfont/_tinysoundfont.cpython-37m-i386-linux-gnu.so,sha256=hw9cRr3u_BTX9IsfcGx9ZQzbdxoXpBVdLRVZCiyJPoM,383005
+tinysoundfont/__init__.py,sha256=B9yq24bXTSXqUt8-sshGzzyRAzg_vdUviPMAKfGZ_1E,78
+tinysoundfont/__main__.py,sha256=ZiE0XDsDMnQOtA69BYR-OubVZtwkzasj6oD07wbXFC0,5587
+tinysoundfont/midi/__init__.py,sha256=cm6gcw0s0q-NEcKthHXeQB8ZCltJ01uzGU3RN_cJce0,6413
+tinysoundfont-0.3.5.dist-info/METADATA,sha256=m8A9SphCV60kcnb4CG6g9F8Dm_FaNwSXGbscqAf4Unk,4581
+tinysoundfont-0.3.5.dist-info/RECORD,,
+tinysoundfont-0.3.5.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tinysoundfont-0.3.5.dist-info/WHEEL,sha256=B0_wz_rsp0W5hyj9ydZgsvAcVLGgEWyFH-c-93M-aXU,113
+tinysoundfont-0.3.5.dist-info/licenses/LICENSE,sha256=9Vg1_UQFPD6zxGI50w8vCtFJ8CooPB6Cmw-tWYz2pN4,1061
+tinysoundfont-0.3.5.dist-info/licenses/NOTICE,sha256=WplOcvNBWBZYIglB7SX-w1Zcsk0cKZ-ccmpKLsfbFYQ,4366
+tinysoundfont.libs/libgcc_s-8b50eaaa.so.1,sha256=WXj_FYQE1MDIyb-nN8siUALdxit6NHma0p9UxemQV8o,101649
+tinysoundfont.libs/libstdc++-8baf04f9.so.6.0.28,sha256=yrzOxg1heyJ9Y-43YCLLn04Cpl_A68FN0D2Q1iBTMcY,2428961
