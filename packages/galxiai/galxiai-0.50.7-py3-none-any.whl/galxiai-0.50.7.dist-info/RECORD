@@ -1,0 +1,15 @@
+galxiai/__init__.py,sha256=Etf56cL55tfan6nQ0g5cwFYMqpD9_JGNQNAnHDe5zTg,1321
+galxiai/clasreq.py,sha256=GmvP1TaBc-igTkzO9JlKJ8IQzrKHfXfjSXBFfevDLyg,8647
+galxiai/const.py,sha256=tWBWUuqHeTIRqsf_-auUwEnQyHgP_Maip_8RqGYCQlU,2553
+galxiai/payload.py,sha256=s95AuwgYUUa_zlig7Cz044vChY6Tr8UM_Zg9iViFbLo,15573
+galxiai/ql.py,sha256=1FUVwJmMXXCxF6goigeKFIQp8SlHfmCtHhdUBsoT4ZU,35439
+galxiai/req.py,sha256=fD8-dg4PcFK18UgHI7zp8UyszC0bcrHD9lu_wHjh0ck,12894
+galxiai/reqbase.py,sha256=3lvD7VeOJuYpP5ysZYS14uOPGzm91bvZtUi7tbMMV_0,3265
+galxiai/sqlite_galxi.py,sha256=8jRhDv6weBSX8Zq8Hf3imQ6LT_A73vpiaoRj9M5kkhY,30753
+galxiai/ut.py,sha256=eZOl4u6l8dUbyroIRw2bDeAER6zgPUXYDqus4WhcfKI,2519
+galxiai/xxcl.py,sha256=trnxOauyOGyLld_v6sGH7eYPnZt4TehXbqWMeTAEwFA,5485
+galxiai-0.50.7.dist-info/LICENSE,sha256=0HJT2ahRLSeJGSqyjSCcgxsErG-DbPgp-cdZMY_Jxd8,1068
+galxiai-0.50.7.dist-info/METADATA,sha256=HZEvk_Myo6tspY-Q_KfiU-SepL5Zqr97e80SUZuvKGU,909
+galxiai-0.50.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+galxiai-0.50.7.dist-info/top_level.txt,sha256=GPq00G9BZRsjePp0n0IfSAOhlSEph01i_P3xWQ9F-No,8
+galxiai-0.50.7.dist-info/RECORD,,
