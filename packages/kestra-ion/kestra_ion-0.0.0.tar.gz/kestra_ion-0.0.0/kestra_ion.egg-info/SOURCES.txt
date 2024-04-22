@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+kestra_ion/__init__.py
+kestra_ion/reader.py
+kestra_ion.egg-info/PKG-INFO
+kestra_ion.egg-info/SOURCES.txt
+kestra_ion.egg-info/dependency_links.txt
+kestra_ion.egg-info/requires.txt
+kestra_ion.egg-info/top_level.txt
+tests/__init__.py
+tests/test_reader.py
