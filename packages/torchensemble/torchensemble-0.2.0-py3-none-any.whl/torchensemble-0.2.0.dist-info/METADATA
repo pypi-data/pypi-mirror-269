@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: torchensemble
+Version: 0.2.0
+Summary: A unified ensemble framework for PyTorch to improve the performance and robustness of your deep learning model
+Home-page: https://github.com/TorchEnsemble-Community/Ensemble-Pytorch
+Maintainer: Yi-Xuan Xu
+Maintainer-email: xuyx@lamda.nju.edu.cn
+License: BSD 3-Clause
+Project-URL: Bug Tracker, https://github.com/TorchEnsemble-Community/Ensemble-Pytorch/issues
+Project-URL: Documentation, https://ensemble-pytorch.readthedocs.io
+Project-URL: Source Code, https://github.com/TorchEnsemble-Community/Ensemble-Pytorch
+Keywords: Deep Learning,PyTorch,Ensemble Learning
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: torch (>=1.4.0)
+Requires-Dist: torchvision (>=0.2.2)
+Requires-Dist: scikit-learn (>=0.23.0)
+
+A unified ensemble framework for pytorch to easily improve the performance and robustness of your deep learning model.
+
