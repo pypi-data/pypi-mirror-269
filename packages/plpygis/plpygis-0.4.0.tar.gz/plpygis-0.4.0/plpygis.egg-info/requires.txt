@@ -1,0 +1,8 @@
+
+[shapely_support]
+Shapely>=2.0.2
+
+[test]
+pytest
+pyshp
+Shapely>=2.0.2
