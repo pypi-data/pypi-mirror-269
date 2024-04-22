@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "data-transformation-yfhsi"
+version = "0.10.1a0"
+description = "Data Transfomation Libraries. Transpose. Time Series Windowing. Cross Correlation"
+authors = ["skaival <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.26.4"
+
+[[tool.poetry.source]]
+name = "fpho"
+url = "https://files.pythonhosted.org"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
