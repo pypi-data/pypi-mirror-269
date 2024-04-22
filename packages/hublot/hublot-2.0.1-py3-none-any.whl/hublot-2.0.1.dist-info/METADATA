@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hublot
+Version: 2.0.1
+Summary: A thin wrapper around Requests that adds caching and throttling
+Home-page: https://github.com/saintamh/hublot
+Author: Hervé Saint-Amand
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: chardet <5,>=3.0.2
+Requires-Dist: requests <3,>=2.25
+Requires-Dist: dataclasses <1,>=0.8 ; python_version < "3.7"
+Provides-Extra: pycurl
+Requires-Dist: pycurl <8,>=7 ; extra == 'pycurl'
+
