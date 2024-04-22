@@ -1,0 +1,94 @@
+/*
+ * The internal definitions
+ *
+ * Copyright (C) 2019-2024, Joachim Metz <joachim.metz@gmail.com>
+ *
+ * Refer to AUTHORS for acknowledgements.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+#if !defined( _LIBGZIPF_INTERNAL_DEFINITIONS_H )
+#define _LIBGZIPF_INTERNAL_DEFINITIONS_H
+
+#include <common.h>
+#include <byte_stream.h>
+
+#define LIBGZIPF_ENDIAN_BIG					_BYTE_STREAM_ENDIAN_BIG
+#define LIBGZIPF_ENDIAN_LITTLE					_BYTE_STREAM_ENDIAN_LITTLE
+
+/* Define HAVE_LOCAL_LIBGZIPF for local use of libgzipf
+ */
+#if !defined( HAVE_LOCAL_LIBGZIPF )
+#include <libgzipf/definitions.h>
+
+/* The definitions in <libgzipf/definitions.h> are copied here
+ * for local use of libgzipf
+ */
+#else
+#define LIBGZIPF_VERSION					@VERSION@
+
+/* The libgzipf version string
+ */
+#define LIBGZIPF_VERSION_STRING					"@VERSION@"
+
+/* The libgzipf file access
+ * bit 1        set to 1 for read access
+ * bit 2        set to 1 for write access
+ * bit 3-8      not used
+ */
+enum LIBGZIPF_ACCESS_FLAGS
+{
+	LIBGZIPF_ACCESS_FLAG_READ				= 0x01,
+/* Reserved: not supported yet */
+	LIBGZIPF_ACCESS_FLAG_WRITE				= 0x02
+};
+
+/* The libgzipf file access macros
+ */
+#define LIBGZIPF_OPEN_READ					( LIBGZIPF_ACCESS_FLAG_READ )
+/* Reserved: not supported yet */
+#define LIBGZIPF_OPEN_WRITE					( LIBGZIPF_ACCESS_FLAG_WRITE )
+/* Reserved: not supported yet */
+#define LIBGZIPF_OPEN_READ_WRITE				( LIBGZIPF_ACCESS_FLAG_READ | LIBGZIPF_ACCESS_FLAG_WRITE )
+
+#endif /* !defined( HAVE_LOCAL_LIBGZIPF ) */
+
+/* The compression methods
+ */
+enum LIBGZIPF_COMPRESSION_METHODS
+{
+	LIBGZIPF_COMPRESSION_METHOD_DEFLATE			= 1,
+};
+
+/* The file flags
+ */
+enum LIBGZIPF_FILE_FLAGS
+{
+	/* The file is corrupted
+	 */
+	LIBGZIPF_FILE_FLAG_IS_CORRUPTED			= 0x01
+};
+
+#define LIBGZIPF_MAXIMUM_DEFLATE_BLOCK_SIZE			64 * 1024
+#define LIBGZIPF_MAXIMUM_DEFLATE_DISTANCE			32 * 1024
+#define LIBGZIPF_COMPRESSED_SEGMENT_SIZE			4 * 1024 * 1024
+#define LIBGZIPF_UNCOMPRESSED_BLOCK_SIZE			16 * 1024 * 1024
+
+#define LIBGZIPF_MAXIMUM_CACHE_ENTRIES_COMPRESSED_BLOCKS	16
+
+#define LIBGZIPF_MAXIMUM_RECURSION_DEPTH			256
+
+#endif /* !defined( _LIBGZIPF_INTERNAL_DEFINITIONS_H ) */
+

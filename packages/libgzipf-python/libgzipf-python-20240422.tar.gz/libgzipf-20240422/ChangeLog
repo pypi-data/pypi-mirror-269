@@ -1,0 +1,10 @@
+To do:
+* debug print operating system
+
+* gzipfinfo
+** print operating system
+** print compressed and uncompressed size
+
+20190716
+* see `git log' for more recent change log
+* initial version based on liblnk
