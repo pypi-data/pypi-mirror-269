@@ -1,0 +1,13 @@
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+mtc_cli/__init__.py
+mtc_cli/__main__.py
+mtc_cli.egg-info/PKG-INFO
+mtc_cli.egg-info/SOURCES.txt
+mtc_cli.egg-info/dependency_links.txt
+mtc_cli.egg-info/entry_points.txt
+mtc_cli.egg-info/requires.txt
+mtc_cli.egg-info/top_level.txt
