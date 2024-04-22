@@ -1,0 +1,3 @@
+[console_scripts]
+tsico2 = tsico2:main
+
