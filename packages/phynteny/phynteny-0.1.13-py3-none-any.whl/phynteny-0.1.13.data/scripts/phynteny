@@ -1,0 +1,120 @@
+#!python
+
+"""
+Phynteny: synteny-based annotation of phage genes
+"""
+
+import datetime
+import sys
+import time
+
+import click
+import pkg_resources
+from loguru import logger
+
+from phynteny_utils import format_data, handle_genbank, predictor
+
+__author__ = "Susanna Grigson"
+__maintainer__ = "Susanna Grigson"
+__license__ = "MIT"
+__version__ = "0"
+__email__ = "susie.grigson@gmail.com"
+__status__ = "development"
+
+
+@click.command()
+@click.argument("infile", type=click.Path(exists=True))
+@click.option(
+    "-o",
+    "--out",
+    type=click.STRING,
+    default="",
+    help="output directory",
+)
+@click.option("-f", "--force", is_flag=True, help="Overwrite output directory")
+@click.option(
+    "-m",
+    "--models",
+    type=click.Path(exists=True),
+    help="Path to directory containing phynteny models",
+    default=pkg_resources.resource_filename("phynteny_utils", "models"),
+)
+@click.option(
+    "-c",
+    "--confidence_path",
+    type=click.Path(exists=True),
+    help="Dictionary of kernel desnity estimators to use for predicting confidence",
+    default=pkg_resources.resource_filename(
+        "phynteny_utils", "phrog_annotation_info/confidence_kde.pkl"
+    ),
+)
+@click.version_option(version=__version__)
+def main(infile, out, force, models, confidence_path):
+    """
+    Phynteny: synteny-based annotation of phage genes
+    """
+
+    # get the start time
+    start_time = time.time()
+
+    # generate the output directory
+    format_data.instantiate_dir(out, force)
+
+    # generate the logging object
+    logger.add(out + "/phynteny.log", level="DEBUG")
+    logger.info("Starting Phynteny")
+
+    # get the absolute paths to phrog annotation files, model and confidence_kde
+    phrog_categories = pkg_resources.resource_filename(
+        "phynteny_utils", "phrog_annotation_info/phrog_integer.pkl"
+    )
+    logger.info(f"PHROG integer information located at: {phrog_categories}")
+    category_names = pkg_resources.resource_filename(
+        "phynteny_utils", "phrog_annotation_info/integer_category.pkl"
+    )
+    logger.info(f"PHROG category information located at: {category_names}")
+    categories = format_data.get_dict(category_names)
+    phrog_integer = format_data.get_dict(phrog_categories)
+
+    # get entries in the genbank file
+    logger.info("Reading genbank file!")
+    gb_dict = handle_genbank.get_genbank(infile)
+    if not gb_dict:
+        click.echo("Error: no sequences found in genbank file")
+        logger.critcal("No sequences found in genbank file. Nothing to annotate")
+        sys.exit()
+
+    # create predictor object
+    gene_predictor = predictor.Predictor(
+        models, phrog_categories, confidence_path, category_names
+    )
+
+    # generate predictions
+    logger.info(f"Confidence object located at {confidence_path}")
+    genbank_file = out + "/phynteny.gbk"
+    phynteny_dict = predictor.run_phynteny(
+        genbank_file, gene_predictor, gb_dict, categories
+    )
+    logger.info(f"Finished predicting. Genbank file located at {genbank_file}")
+
+    # output to a table
+    logger.info("Generating table...")
+    table_file = out + "/phynteny.tsv"
+    found = predictor.generate_table(
+        table_file, phynteny_dict, categories, phrog_integer
+    )
+    logger.info(f"Generated table. Table located at {table_file}")
+    logger.info(
+        "Phynteny was able to add annotations for "
+        + str(found)
+        + " genes with a confidence of at least 90%"
+    )
+    logger.info("Done :)")
+
+    # show the time elapsed
+    elapsed_time = round(time.time() - start_time, 2)
+    logger.info(f"Elpased time: {elapsed_time} seconds")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,5 @@
+[console_scripts]
+compute_confidence = train_phynteny.compute_confidence:main
+generate_training_data = train_phynteny.generate_training_data:main
+install_models = phynteny_utils.install_models:main
+train_model = train_phynteny.train_phyntenty:main
