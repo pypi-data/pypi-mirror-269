@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: queue-api
+Version: 0.1.2
+Summary: API for an asynchronous, point-readable queue
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/python-kv.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: haskellian
+Requires-Dist: lazy-loaded
+
+# Queue Api
+
+> API for an asynchronous, point-readable queue
