@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+.github/scripts/release.py
+.github/workflows/publish.yml
+.github/workflows/release.yml
+src/BTCoreSharedLibs.egg-info/PKG-INFO
+src/BTCoreSharedLibs.egg-info/SOURCES.txt
+src/BTCoreSharedLibs.egg-info/dependency_links.txt
+src/BTCoreSharedLibs.egg-info/entry_points.txt
+src/BTCoreSharedLibs.egg-info/top_level.txt
+src/CoreSharedLibs/__init__.py
+src/CoreSharedLibs/app.py
+src/CoreSharedLibs/csl.py
