@@ -1,0 +1,2 @@
+[console_scripts]
+google-flights = flights_cli:main
