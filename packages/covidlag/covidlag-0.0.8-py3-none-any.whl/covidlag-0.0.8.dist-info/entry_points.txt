@@ -1,0 +1,3 @@
+[console_scripts]
+covidlag = covidlag:main
+
