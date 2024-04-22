@@ -1,0 +1,8 @@
+README.md
+setup.py
+shittycorn/__init__.py
+shittycorn/__main__.py
+shittycorn.egg-info/PKG-INFO
+shittycorn.egg-info/SOURCES.txt
+shittycorn.egg-info/dependency_links.txt
+shittycorn.egg-info/top_level.txt
