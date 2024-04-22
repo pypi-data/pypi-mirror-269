@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+pyproject.toml
+nntplib/__init__.py
+standard_nntplib.egg-info/PKG-INFO
+standard_nntplib.egg-info/SOURCES.txt
+standard_nntplib.egg-info/dependency_links.txt
+standard_nntplib.egg-info/top_level.txt
+tests/test_nntplib.py
