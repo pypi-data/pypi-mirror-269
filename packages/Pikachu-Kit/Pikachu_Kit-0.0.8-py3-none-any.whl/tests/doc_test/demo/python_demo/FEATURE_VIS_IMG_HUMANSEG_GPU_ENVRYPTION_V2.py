@@ -1,0 +1,172 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+################################################################################
+#
+# Copyright (c) 2019 Baidu.com, Inc. All Rights Reserved
+#
+################################################################################
+"""
+Brief:
+@Author: yuanruiting
+@Date:   2020-02-14 14:12:58
+@Filename: FEATURE_VIS_IMG_HUMANSEG_GPU_ENVRYPTION_V2.py
+"""
+
+import os
+import sys
+import json
+import base64
+import random
+from util import Util
+from xvision_demo import XvisionDemo
+from proto.FEATURE_VIS_IMG_HUMANSEG_GPU_ENVRYPTION_V2 import parseservice_pb2
+from proto.protobuf_to_dict import protobuf_to_dict
+import requests
+
+host = 'http://cp01-rd-dongdong01.epc.baidu.com:8126'
+
+
+def bdes_encode(data):
+    """
+    功能：bds加密
+    输入：
+        data: 待加密数据
+    输出：
+        加密数据
+    """
+    url = host + '/bdes/encode?binary=1'
+    res = requests.post(url, data=data, headers={'Content-Type': 'application/octet-stream'})
+    return res.content, res.headers['X-MIPS-BDES-META']
+
+
+def bdes_decode(dataEncode, dataEncodeMeta):
+    """
+    功能：bds解密
+    输入：
+        dataEncode: 待解密数据
+        dataEncodeMeta：加密方式
+    输出：
+        解密数据
+    """
+    url = host + '/bdes/decode?binary=1'
+    res = requests.post(url, data=dataEncode,
+                        headers={'Content-Type': 'application/octet-stream', 'X-MIPS-BDES-META': dataEncodeMeta})
+    return res.content
+
+
+class FeatureReq(XvisionDemo):
+    """
+    FEATURE_VIS_IMG_HUMANSEG_GPU_ENVRYPTION_V2 demo
+    """
+
+    def prepare_request(self, imgData):
+        """ prepare data for request
+        Args:
+            conf: conf file
+        Returns:
+            data: protobuf
+        """
+        proto_data = parseservice_pb2.ParseServiceRequest()
+        proto_data.image = imgData
+        proto_data.threshold = 0.5
+        data = proto_data.SerializeToString()
+        data, meta = bdes_encode(data)
+        req_json = json.dumps({
+            'appid': '123456',
+            'logid': random.randint(1000000, 100000000),
+            'format': 'json',
+            'from': 'xvision',
+            'cmdid': '123',
+            'client': '0.0.0.0',
+            'data': base64.b64encode(data)
+        })
+        return req_json, meta
+
+
+def feature_calculate(input_data):
+    """
+    功能：特征计算
+    输入：
+        input_data:本地图片文件
+    输出：
+        图片特征
+    """
+    featureDemo = FeatureReq()
+    # 生成算子输入
+    feature_data, meta = featureDemo.prepare_request(Util.read_file(input_data))
+
+    job_name = ""  # 申请的作业名
+    token = ""  # 作业的token
+    headers = {
+        'Content-Type': 'application/json; charset=UTF-8',
+        'X-VIS-DATA-ENCRYPTED': 'BDES_BINARY',
+        'X-VIS-ENCRYPT-METAINFO': "BAkAAAAAAAA=",
+        'X-VIS-RESPONSE-ENCRYPTED': 'BDES_BINARY',
+        'resource_key': 'test.jpg',
+        'auth_key': token,
+        'business_name': job_name,
+        'feature_name': 'FEATURE_VIS_IMG_HUMANSEG_GPU_ENVRYPTION_V2',
+        'X_BD_LOGID': str(random.randint(1000000, 100000000))
+    }
+    # 高可用型、均衡型作业：xvision_online_url，高吞吐型作业：xvision_offline_url，测试作业：xvision_test_url
+    url = featureDemo.xvision_online_url + featureDemo.xvision_sync_path
+
+    # 高可用型、均衡型作业将job_name、feature_name放到 url 中
+    if featureDemo.xvision_online_url in url:
+        params = {
+            "business_name": headers["business_name"],
+            "feature_name": headers["feature_name"]
+        }
+    else:
+        params = {}
+
+    res_data = featureDemo.request_feat_new(params, feature_data, url, headers)
+    res_data = json.loads(res_data)
+    if (("code" in res_data)
+            and (res_data["code"] == 0)
+            and ("feature_result" in res_data)
+            and ("value" in res_data['feature_result'])):
+        res_json = json.loads(res_data['feature_result']['value'])
+        # 解pb
+        proto_result = parseservice_pb2.ParseServiceResponse()
+        parse_data = base64.decodestring(res_json['result'])
+        parse_data = bdes_decode(parse_data, meta)
+
+        proto_result.ParseFromString(parse_data)
+        res_json['result'] = protobuf_to_dict(proto_result)
+        res_data['feature_result']['value'] = res_json
+    # 打印输出
+    featureDemo.parse_result(res_data)
+
+
+def gen_stress_data(input_dir):
+    """
+    功能：生成压测数据
+    输入：
+        input_data:（视频/图片/音频）
+    输出：
+        压测数据
+    """
+    featureDemo = FeatureReq()
+    # 压测数据生成demo
+    img_file_list = sorted(os.listdir(input_dir))  # image_dir里边是图片列表，用于生成压测词表
+    for image_file in img_file_list:
+        data = Util.read_file(input_dir + '/' + image_file)
+        print featureDemo.prepare_request(data)  # 压测词表数据
+
+
+if __name__ == '__main__':
+    """
+    main
+    特征计算执行：
+        python FEATURE_VIS_IMG_HUMANSEG_GPU_ENVRYPTION_V2.py
+    生成压测数据：
+        python FEATURE_VIS_IMG_HUMANSEG_GPU_ENVRYPTION_V2.py GEN_STRESS_DATA
+    """
+    op_type = sys.argv[1] if len(sys.argv) == 2 else 'FEATURE_CALCULATE'
+    if op_type == 'GEN_STRESS_DATA':
+        # 生成压测词表
+        gen_stress_data("./image_dir/")  # ./image_dir 是本地的图片数据
+    else:
+        # 特征计算Demo
+        feature_calculate("./image_dir/img_file")  # ./image_dir/img_file 本地图片
