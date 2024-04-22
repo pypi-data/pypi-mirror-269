@@ -1,0 +1,37 @@
+name: QualityChecks
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11"]
+      fail-fast: false
+
+    name: Python-${{ matrix.python-version }}
+    steps:
+      #----------------------------------------------
+      #       check-out repo and set-up python
+      #----------------------------------------------
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+      #----------------------------------------------
+      #       install
+      #----------------------------------------------
+    - name: Install dependencies
+      run: GK_REQUIREMENTS=test_requirements-${{ matrix.python-version }}.txt make install
+      #----------------------------------------------
+      #       Lint and test
+      #----------------------------------------------
+    - name: Run lint
+      run: make lint
+    - name: Run tests
+      run: make test
