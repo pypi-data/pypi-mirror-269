@@ -1,0 +1,10 @@
+lichesspy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lichesspy/api.py,sha256=3GInoU5hXl9K37V1hK3DjnUoC5nUgbr6VmS58hRAzDA,14355
+lichesspy/auth.py,sha256=vYBujjgXNADs6yxuzvUuTe68P8jANOJRoxjuYOMYASY,425
+lichesspy/format.py,sha256=CVvUiKDGsZUin-f1LcPY7I5ogjMZUvtou-6oxOsElTA,4039
+lichesspy/pgn.py,sha256=2nyLILI9Nps8KGVIvP0sU0k9WUaFm2zvt7XC7y_Osxg,5129
+lichesspy-6.0.4.dev4.dist-info/LICENSE,sha256=7VuoireYaKNdPNTst5ksEo81yBmfHKqluchwifqVpGg,1067
+lichesspy-6.0.4.dev4.dist-info/METADATA,sha256=EiHyDXXqr_Uqs3kujF12UY3ElAZII0aA5dUZz3vXQIo,1941
+lichesspy-6.0.4.dev4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+lichesspy-6.0.4.dev4.dist-info/top_level.txt,sha256=p7GJm7w7lElk8S9cV9KPMDbywre9BESWdovPLi4CdTU,10
+lichesspy-6.0.4.dev4.dist-info/RECORD,,
