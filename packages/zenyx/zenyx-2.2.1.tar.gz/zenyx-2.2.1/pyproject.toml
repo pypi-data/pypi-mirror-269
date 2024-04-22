@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zenyx"
+version = "2.2.1"
+authors = [
+  { name="zewenn", email="zc.fallens@gamil.com" },
+]
+description = "A multitool python object notation package"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/zewenn/zenyx"
+Issues = "https://github.com/zewenn/zenyx/issues"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
