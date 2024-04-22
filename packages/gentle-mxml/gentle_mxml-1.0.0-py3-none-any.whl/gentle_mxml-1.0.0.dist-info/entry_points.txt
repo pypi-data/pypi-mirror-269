@@ -1,0 +1,3 @@
+[console_scripts]
+gentle=gentle.__main__:main
+
