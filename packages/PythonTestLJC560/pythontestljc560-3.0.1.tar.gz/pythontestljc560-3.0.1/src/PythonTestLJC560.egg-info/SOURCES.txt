@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/PythonTestLJC560.egg-info/PKG-INFO
+src/PythonTestLJC560.egg-info/SOURCES.txt
+src/PythonTestLJC560.egg-info/dependency_links.txt
+src/PythonTestLJC560.egg-info/entry_points.txt
+src/PythonTestLJC560.egg-info/requires.txt
+src/PythonTestLJC560.egg-info/top_level.txt
+src/sample/__init__.py
+src/sample/package_data.dat
+src/sample/simple.py
+tests/test_simple.py
