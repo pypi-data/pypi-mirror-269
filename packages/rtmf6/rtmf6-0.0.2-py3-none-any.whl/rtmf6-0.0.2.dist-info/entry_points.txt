@@ -1,0 +1,2 @@
+[console_scripts]
+rtmf6 = rtmf6.main:main
