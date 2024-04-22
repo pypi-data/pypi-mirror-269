@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: memory-machine
+Version: 0.0.1
+Summary: State machine enhancing the memory function of Abstract Intellect.
+Author-email: Alexander Fedotov <alex.fedotov@aol.com>
+Project-URL: Homepage, https://github.com/memory-machine/memory-machine
+Project-URL: Bug Tracker, https://github.com/memory-machine/memory-machine/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Memory Machine
+State machine enhancing the memory function of Abstract Intellect.
+<pre>
+  pip install memory-machine
+</pre>
+Then:
+```Python
+  import memory_machine
+```
