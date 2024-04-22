@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<object name="bda.plone.productshop.variant"
+        meta_type="Dexterity FTI"
+        i18n:domain="bda.plone.productshop"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+  <!-- Basic metadata -->
+  <property name="title" i18n:translate="">Product Variant</property>
+  <property name="description"
+    i18n:translate="">variant to use within a Productgroup</property>
+  <property name="icon_expr">string:layers-half</property>
+  <property name="factory">bda.plone.productshop.variant</property>
+  <property name="global_allow">False</property>
+  <property name="filter_content_types">False</property>
+  <property name="allowed_content_types" />
+  <property name="allow_discussion">False</property>
+
+  <!-- schema and class used for content items -->
+  <property name="schema">bda.plone.productshop.interfaces.IVariant</property>
+  <property name="klass">bda.plone.productshop.content.Variant</property>
+
+  <property name="behaviors">
+    <!-- basic -->
+    <element value="plone.namefromtitle"/>
+    <element value="plone.basic"/>
+    <element value="plone.categorization"/>
+
+    <!-- shop related -->
+    <element value="bda.shop.buyable"/>
+    <element value="bda.shop.stock"/>
+    <element value="bda.shop.shipping"/>
+    <element value="bda.shop.notificationtext.item" />
+    <element value="bda.shop.notificationtext.global" />
+    <element value="bda.shop.buyableperiod" />
+    <element value="bda.shop.trading" />
+
+    <!-- shop view related -->
+    <element value="plone.richtext" />
+    <element value="plone.leadimage" />
+    <element value="bda.productshop.productdetails" />
+    <element value="bda.productshop.productmanual" />
+    <element value="bda.productshop.productdatasheet" />
+    <element value="plone.relateditems" />
+  </property>
+
+  <!-- View information -->
+  <property name="link_target"></property>
+  <property name="immediate_view">product_view</property>
+  <property name="default_view">product_view</property>
+  <property name="view_methods">
+    <element value="product_view"/>
+  </property>
+  <property name="default_view_fallback">False</property>
+  <property name="add_permission">cmf.AddPortalContent</property>
+
+  <!-- Method aliases -->
+  <alias from="(Default)" to="(dynamic view)" />
+  <alias from="view" to="(selected layout)" />
+  <alias from="edit" to="@@edit" />
+  <alias from="sharing" to="@@sharing" />
+
+  <!-- Actions -->
+  <action title="View" action_id="view" category="object" condition_expr=""
+    url_expr="string:${object_url}/"
+    icon_expr="string:toolbar-action/view" visible="True">
+    <permission value="View" />
+  </action>
+  <action title="Edit" action_id="edit" category="object" condition_expr=""
+    url_expr="string:${object_url}/edit"
+    icon_expr="string:toolbar-action/edit" visible="True">
+    <permission value="Modify portal content" />
+  </action>
+</object>

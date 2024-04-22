@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="context/main_template/macros/master"
+      lang="en"
+      i18n:domain="bda.plone.productshop">
+
+<body>
+
+  <metal:block fill-slot="main">
+    <metal:main define-macro="main">
+      <tal:variant replace="structure context/@@bda.plone.productshop.tiles" />
+    </metal:main>
+  </metal:block>
+
+</body>
+</html>

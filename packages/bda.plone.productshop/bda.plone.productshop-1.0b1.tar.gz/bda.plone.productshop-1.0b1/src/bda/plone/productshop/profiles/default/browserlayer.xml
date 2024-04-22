@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layers>
+
+  <layer
+    name="bda.plone.productshop"
+    interface="bda.plone.productshop.interfaces.IProductShopExtensionLayer" />
+
+</layers>

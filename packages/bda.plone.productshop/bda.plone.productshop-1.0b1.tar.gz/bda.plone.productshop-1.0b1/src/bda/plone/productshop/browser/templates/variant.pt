@@ -1,0 +1,36 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xml:lang="en"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     i18n:domain="bda.plone.productshop"
+     class="variant_view">
+
+  <header>
+
+    <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+    <h1 class="documentFirstHeading" tal:content="context/Title">
+      Title
+    </h1>
+
+    <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+  </header>
+
+  <tal:aspects replace="structure context/@@bda.plone.productshop.aspects" />
+
+  <div class="documentDescription" tal:content="context/Description">
+    Description
+  </div>
+
+  <div tal:replace="structure provider:plone.abovecontentbody" />
+
+  <div id="content-core">
+    <tal:product replace="structure context/@@bda.plone.productshop.product" />
+  </div>
+
+  <div class="visualClear"><!--  --></div>
+
+  <div tal:replace="structure provider:plone.belowcontentbody" />
+
+</div>

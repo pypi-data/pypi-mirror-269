@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="context/main_template/macros/master"
+      lang="en"
+      i18n:domain="bda.plone.productshop">
+
+<body>
+
+  <metal:block fill-slot="main">
+    <metal:main define-macro="main">
+      <tal:content define="rendered_variant view/rendered_variant">
+        <tal:variant replace="structure rendered_variant" />
+      </tal:content>
+    </metal:main>
+  </metal:block>
+
+</body>
+</html>

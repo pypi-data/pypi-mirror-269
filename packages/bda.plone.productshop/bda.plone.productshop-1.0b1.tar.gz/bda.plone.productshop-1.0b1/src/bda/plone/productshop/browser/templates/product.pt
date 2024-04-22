@@ -1,0 +1,66 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xml:lang="en"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:ajax="http://namesspaces.bluedynamics.eu/ajax"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     xmlns:ajax="http://namesspaces.bluedynamics.eu/ajax"
+     i18n:domain="bda.plone.productshop"
+     tal:omit-tag=""
+     tal:define="image view/image;
+                 details view/details;
+                 manual view/manual;
+                 datasheet view/datasheet;
+                 related_items view/related_items">
+  <span tal:condition="image"
+        tal:attributes="ajax:target context/absolute_url">
+    <img src=""
+         alt=""
+         class="product_image product_image_uploaded"
+         tal:condition="image"
+         tal:replace="structure image" />
+  </span>
+
+  <ul class="shopview_tabs">
+    <li tal:condition="details|manual" class="first">
+      <a href="#" i18n:translate="description">Description</a>
+    </li>
+    <li tal:condition="datasheet">
+      <a href="#" i18n:translate="specifications">Specifications</a>
+    </li>
+    <li tal:condition="related_items">
+      <a href="#" i18n:translate="related">Related</a>
+    </li>
+  </ul>
+
+  <div class="shopview_panes">
+
+    <div tal:condition="details|manual">
+      <div class="product_description"
+           tal:content="structure details/output"
+           tal:condition="details" />
+      <div class="manual"
+           tal:condition="manual">
+        <strong i18n:translate="download_manual">Download Manual</strong>
+        <a href=""
+           tal:attributes="href manual/url"
+           tal:content="manual/title">Filename</a>
+      </div>
+    </div>
+
+    <div tal:content="structure datasheet/output"
+         tal:condition="datasheet"/>
+
+    <div tal:condition="related_items">
+      <ul tal:repeat="item related_items">
+        <li>
+          <a href="" tal:attributes="href item/absolute_url">
+            <span tal:content="item/Title" />
+          </a>
+          <span tal:content="item/Description" />
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,8 @@
+setuptools
+Products.CMFPlone>=6.0.0
+bda.plone.shop
+collective.instancebehavior
+
+[test]
+plone.app.testing
+plone.app.robotframework[debug]

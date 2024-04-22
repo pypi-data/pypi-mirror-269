@@ -1,0 +1,5 @@
+[console_scripts]
+update_locale = bda.plone.productshop.locales.update:update_locale
+
+[z3c.autoinclude.plugin]
+target = plone

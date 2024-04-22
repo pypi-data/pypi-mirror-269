@@ -1,0 +1,299 @@
+<?xml version="1.0"?>
+<object name="portal_actions"
+        meta_type="Plone Actions Tool"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+  <object name="object_buttons" meta_type="CMF Action Category">
+
+    <!-- color -->
+    <object name="enable_color"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Add color</property>
+      <property name="description" i18n:translate="">Add color to product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@enable_color</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_enable_color</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <object name="disable_color"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Remove color</property>
+      <property name="description" i18n:translate="">Remove color from product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@disable_color</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_disable_color</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <!-- weight -->
+    <object name="enable_weight"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Add weight</property>
+      <property name="description" i18n:translate="">Add weight to product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@enable_weight</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_enable_weight</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <object name="disable_weight"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Remove weight</property>
+      <property name="description" i18n:translate="">Remove weight from product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@disable_weight</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_disable_weight</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <!-- size -->
+    <object name="enable_size"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Add size</property>
+      <property name="description" i18n:translate="">Add size to product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@enable_size</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_enable_size</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <object name="disable_size"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Remove size</property>
+      <property name="description" i18n:translate="">Remove size from product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@disable_size</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_disable_size</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <!-- demand -->
+    <object name="enable_demand"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Add demand</property>
+      <property name="description" i18n:translate="">Add demand to product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@enable_demand</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_enable_demand</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <object name="disable_demand"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Remove demand</property>
+      <property name="description" i18n:translate="">Remove demand from product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@disable_demand</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_disable_demand</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <!-- length -->
+    <object name="enable_length"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Add length</property>
+      <property name="description" i18n:translate="">Add length to product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@enable_length</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_enable_length</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <object name="disable_length"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Remove length</property>
+      <property name="description" i18n:translate="">Remove length from product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@disable_length</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_disable_length</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <!-- width -->
+    <object name="enable_width"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Add width</property>
+      <property name="description" i18n:translate="">Add width to product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@enable_width</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_enable_width</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <object name="disable_width"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Remove width</property>
+      <property name="description" i18n:translate="">Remove width from product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@disable_width</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_disable_width</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <!-- height -->
+    <object name="enable_height"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Add height</property>
+      <property name="description" i18n:translate="">Add height to product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@enable_height</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_enable_height</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <object name="disable_height"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Remove height</property>
+      <property name="description" i18n:translate="">Remove height from product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@disable_height</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_disable_height</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <!-- ip_code -->
+    <object name="enable_ip_code"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Add IP Code</property>
+      <property name="description" i18n:translate="">Add IP Code to product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@enable_ip_code</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_enable_ip_code</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <object name="disable_ip_code"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Remove IP Code</property>
+      <property name="description" i18n:translate="">Remove IP Code from product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@disable_ip_code</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_disable_ip_code</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <!-- angle -->
+    <object name="enable_angle"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Add angle</property>
+      <property name="description" i18n:translate="">Add angle to product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@enable_angle</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_enable_angle</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <object name="disable_angle"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Remove angle</property>
+      <property name="description" i18n:translate="">Remove angle from product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@disable_angle</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_disable_angle</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <!-- material -->
+    <object name="enable_material"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Add material</property>
+      <property name="description" i18n:translate="">Add material to product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@enable_material</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_enable_material</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+    <object name="disable_material"
+            meta_type="CMF Action"
+            i18n:domain="bda.plone.productshop">
+      <property name="title" i18n:translate="">Remove material</property>
+      <property name="description" i18n:translate="">Remove material from product variant</property>
+      <property name="url_expr">string:${object/absolute_url}/@@disable_material</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">object/@@can_disable_material</property>
+      <property name="permissions">
+        <element value="Modify portal content" />
+      </property>
+      <property name="visible">True</property>
+    </object>
+
+  </object>
+</object>
