@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: profanity-api
+Version: 0.1.0
+Summary: A complete Python client for the profanity.dev API
+Home-page: https://github.com/nwithan8/profanity-python
+Download-URL: https://github.com/nwithan8/profanity-python/archive/refs/tags/0.1.0.tar.gz
+Author: Nate Harris
+Author-email: n8gr8gbln@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Keywords: profanity,curse,language,swear,moderation,API,client,JSON
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: objectrest==2.0.*
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: pytest-cov==3.*; extra == "dev"
+Requires-Dist: pytest-vcr==1.*; extra == "dev"
+Requires-Dist: pytest==7.*; extra == "dev"
+Requires-Dist: types-requests; extra == "dev"
+Requires-Dist: types-urllib3; extra == "dev"
+Requires-Dist: vcrpy==4.*; extra == "dev"
+
+# A Python client for profanity.dev's API
+
+[![PyPi](https://img.shields.io/pypi/dm/profanity-api?label=Downloads&logo=pypi)](https://pypi.org/project/profanity-api)
+[![License](https://img.shields.io/pypi/l/profanity-api?color=orange&style=flat-square)](https://github.com/nwithan8/profanity-python/blob/master/LICENSE)
+
+[![Open Issues](https://img.shields.io/github/issues-raw/nwithan8/profanity-python?color=gold&style=flat-square)](https://github.com/nwithan8/profanity-python/issues?q=is%3Aopen+is%3Aissue)
+[![Closed Issues](https://img.shields.io/github/issues-closed-raw/nwithan8/profanity-python?color=black&style=flat-square)](https://github.com/nwithan8/profanity-python/issues?q=is%3Aissue+is%3Aclosed)
+[![Latest Release](https://img.shields.io/github/v/release/nwithan8/profanity-python?color=red&label=latest%20release&logo=github&style=flat-square)](https://github.com/nwithan8/profanity-python/releases)
+
+[![Discord](https://img.shields.io/discord/472537215457689601?color=blue&logo=discord&style=flat-square)](https://discord.gg/7jGbCJQ)
+[![Twitter](https://img.shields.io/twitter/follow/nwithan8?label=%40nwithan8&logo=twitter&style=flat-square)](https://twitter.com/nwithan8)
+
+Interact with [profanity.dev](https://profanity.dev)'s API
+
+# Installation
+
+- From PyPi: ``python -m pip install profanity-api``
+
+# Usage
+
+This client allows you to send messages to profanity.dev's API for analysis. Results include a boolean value for whether
+the message contains profanity, and a confidence score for the prediction.
+
+Import the ``profanity_api`` package as initialize the API
+Example:
+
+```python
+import profanity_api
+
+results = profanity_api.is_profane(message="This is the message to test")
+
+print(results.is_profane)
+print(results.confidence)
+```

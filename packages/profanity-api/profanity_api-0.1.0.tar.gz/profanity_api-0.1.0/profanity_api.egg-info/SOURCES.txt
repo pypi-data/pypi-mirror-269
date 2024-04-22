@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+profanity_api/PYTHON_VERSIONS.json
+profanity_api/__init__.py
+profanity_api.egg-info/PKG-INFO
+profanity_api.egg-info/SOURCES.txt
+profanity_api.egg-info/dependency_links.txt
+profanity_api.egg-info/requires.txt
+profanity_api.egg-info/top_level.txt
+tests/test___init__.py
