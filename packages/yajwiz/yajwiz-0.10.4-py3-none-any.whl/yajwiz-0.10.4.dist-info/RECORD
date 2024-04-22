@@ -1,0 +1,15 @@
+yajwiz/__init__.py,sha256=02T-9d7-eIBvOD09nPBS2ba3lp0MnlCC4pQRtvCrBME,266
+yajwiz/analyzer.py,sha256=8ZNssm9W9bRndyLuGet423jrzrPMRXX9fydkoL92HEU,25623
+yajwiz/boqwiz.py,sha256=bCD6Cs65TpwscxBpDBNCLAb9V7dyDh39ItE2cL0vZSQ,5402
+yajwiz/cg.py,sha256=M2g9dR2XLpfoV0FjL0aCuCDVl4KbrAts4Qba2Ww2s8Y,556
+yajwiz/data.json,sha256=dq5nE5vsd873rODlcmVDphsJ3ZxH5VaRT41Sm2WlsWo,8637355
+yajwiz/grammar_check.py,sha256=MNZoNASKd5-Vt1uQ6220UZ46h9jv47pAVx3j57ZDgik,1991
+yajwiz/grammar_rules.py,sha256=-4XeyES-sJrqnSO0V0jL-6d2qhKpyxP_BQg98jYVtAQ,13144
+yajwiz/pos_tagger.py,sha256=0aJskc1exOCr1-hPt1E23pxgHIBvovf4r_kM0i6AM-E,5033
+yajwiz/tables.py,sha256=iCfLIVNxB6X17QxkhZvfJKxUwDwAM1Bi4VfQjdH_j_M,8970
+yajwiz/types.py,sha256=yj-Tu5xHZHXXDMWEp7j9IRoP_xKpMCXJ4UMU5d3Kg4Y,1237
+yajwiz-0.10.4.dist-info/LICENSE,sha256=y16Ofl9KOYjhBjwULGDcLfdWBfTEZRXnduOspt-XbhQ,11325
+yajwiz-0.10.4.dist-info/METADATA,sha256=wIQUTL_UauadblN6KxRAp8mfda5yzvpJ0xPvfmFNc0g,6374
+yajwiz-0.10.4.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+yajwiz-0.10.4.dist-info/top_level.txt,sha256=9ems-aHcsPJZj8EvFy1TKpZsr87QLgClDWrV35EOTOA,7
+yajwiz-0.10.4.dist-info/RECORD,,
