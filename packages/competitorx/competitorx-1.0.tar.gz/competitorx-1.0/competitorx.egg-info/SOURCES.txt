@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+competitorx/__init__.py
+competitorx/main.py
+competitorx.egg-info/PKG-INFO
+competitorx.egg-info/SOURCES.txt
+competitorx.egg-info/dependency_links.txt
+competitorx.egg-info/top_level.txt
