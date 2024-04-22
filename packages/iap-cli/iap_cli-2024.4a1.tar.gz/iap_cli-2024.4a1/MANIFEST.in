@@ -1,0 +1,4 @@
+graft iap_cli
+include pyproject.toml
+include setup.py
+global-exclude *.py[cod]
