@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: llm-axe
+Version: 0.0.1
+Summary: A toolkit for quicky implementing complex interactions for local LLMs
+Author: Emir Sahin
+Author-email: emirsah122@gmail.com
+License: MIT
+Keywords: python,llm axe,llm toolkit,local llm,local llm internet,function caller llm
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+A toolkit for quicky implementing complex interactions for local LLMs. Includes features such as function callers, online agents, pre-made generic agents, and more.
