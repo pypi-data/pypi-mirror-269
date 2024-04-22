@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: sqlton
+Version: 0.1.17
+Summary: Parse SQL statement into straight forward Syntax Tree.
+Author: Charles Bajeux
+Author-email: charles.bajeux@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: sly (>=0.5,<0.6)
+Description-Content-Type: text/markdown
+
+# SQLTOn
+
+SQLTOn parse sql statements (according to Sqlite3 gramar description) into a easily browseable/processable tree.
+
+```python
+from sqlton import parse
+from sqlton.ast import Select
+
+statement = parse('select Something from SomeTable whern SomethingElse=SomeValue')
+if not isinstance(statement, Select):
+	print('only select statement are accepted')
+	exit()
+	
+if not hasattr(statement, 'limit'):
+	print('select statement shall have a limit clause !')
+	exit()
+	
+def compute(expression):
+	...
+	
+if compute(statement.limit[0]) > 100:
+	print('too much entry requested !')
+```
+
