@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+animatebar/__init__.py
+animatebar/animate.py
+animatebar.egg-info/PKG-INFO
+animatebar.egg-info/SOURCES.txt
+animatebar.egg-info/dependency_links.txt
+animatebar.egg-info/requires.txt
+animatebar.egg-info/top_level.txt
