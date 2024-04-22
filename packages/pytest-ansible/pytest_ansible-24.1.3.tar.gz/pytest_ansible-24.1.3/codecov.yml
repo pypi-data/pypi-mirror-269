@@ -1,0 +1,6 @@
+---
+comment: false
+coverage:
+  range: 60..100
+  status:
+    patch: true # we want github annotations

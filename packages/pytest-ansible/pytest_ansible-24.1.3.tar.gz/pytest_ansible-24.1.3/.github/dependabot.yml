@@ -1,0 +1,31 @@
+---
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /.config/
+    schedule:
+      day: sunday
+      interval: weekly
+    labels:
+      - dependabot-deps-updates
+      - skip-changelog
+    groups:
+      runtime:
+        patterns:
+          - ansible-core
+          - pytest
+          - pytest-plus
+      dev:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - ansible-core
+          - pytest
+          - pytest-plus
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: daily
+    labels:
+      - "dependencies"
+      - "skip-changelog"

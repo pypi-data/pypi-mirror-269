@@ -1,0 +1,14 @@
+ansible-core>=2.14
+ansible-compat>=4.1.11
+pytest>=6
+packaging
+
+[docs]
+mkdocs-ansible>=0.2.0
+pipdeptree>=2.7.1
+
+[test]
+ansible-core
+coverage
+molecule
+pytest-plus>=0.6.1
