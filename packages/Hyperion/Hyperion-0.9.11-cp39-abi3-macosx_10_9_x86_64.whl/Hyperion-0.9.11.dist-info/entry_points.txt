@@ -1,0 +1,2 @@
+[pytest11]
+hyperion = hyperion.testing.pytest_plugin
