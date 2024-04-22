@@ -1,0 +1,91 @@
+[build-system]
+requires = ["hatchling==1.21.1"]
+build-backend = "hatchling.build"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ["pure_utils*"]
+exclude = ["tests*"]
+
+[project]
+name = "pure-utils"
+version = "0.7.0"
+authors = [
+  {name="Peter Bro", email="p3t3rbr0@gmail.com"},
+]
+description = "Yet another python utilities, with the goal of collecting useful bicycles and crutches in one place ;)."
+keywords = ["utilities", "bicycle", "crutches"]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/p3t3rbr0/py3-pure-utils"
+Documentation = "https://p3t3rbr0.github.io/py3-pure-utils/"
+Repository = "https://github.com/p3t3rbr0/py3-pure-utils.git"
+Issues = "https://github.com/p3t3rbr0/py3-pure-utils/issues"
+Changelog = "https://github.com/p3t3rbr0/py3-pure-utils/blob/master/.docs/source/changelog.rst"
+
+[project.optional-dependencies]
+build = ["build==1.2.1", "twine==5.0.0"]
+docs = ["Sphinx==7.2.6", "furo==2024.1.29"]
+dev = [
+    "mypy==1.9.0",
+    "isort==5.13.2",
+    "flake8==7.0.0",
+    "black==24.4.0",
+    "pydocstyle==6.3.0",
+    "pytest==8.1.1",
+    "pytest-cov==5.0.0",
+    "pytest-mock==3.14.0",
+]
+
+[tool.mypy]
+exclude = ["tests"]
+ignore_missing_imports = true
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+
+[tool.pydocstyle]
+inherit = false
+convention = "google"
+match-dir = "^(?!tests|.docs).+$"
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+pythonpath = "pure_utils"
+testpaths = "tests"
+python_files = "test_*.py"
+python_functions = "test_*"
+python_classes = "Test*"
+
+[tool.coverage.report]
+exclude_lines = [
+    "pass",
+    "\\.\\.\\.",
+    "def __str__",
+    "def __getattr__",
+]
+
+[tool.coverage.run]
+branch = true
+omit = ["pure_utils/_internal/*"]
+
+[tool.coverage.html]
+directory = "coverage_report"
