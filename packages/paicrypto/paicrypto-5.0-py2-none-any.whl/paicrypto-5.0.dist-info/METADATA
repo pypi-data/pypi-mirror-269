@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: paicrypto
+Version: 5.0
+Summary: A collection of algorithms
+Home-page: UNKNOWN
+Author: Adithya Pai B
+Author-email: paiadithya26@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pycryptodome
+
+# Paicrypto - Cryptographic Library
+
+Paicrypto is a Python library that provides various encryption and decryption methods using different cryptographic algorithms. This library aims to facilitate secure communication and data protection in Python applications.
+
+## Installation
+
+To install paicrypto, you can use pip:
+
+```
+pip install paicrypto
+```
+
+## Usage
+
+Once installed, you can import the `paicrypto` class from the library and utilize its methods for encryption, decryption, and hashing.
+
+```python
+from paicrypto import paicrypto
+
+# Create an instance of paicrypto
+crypto = paicrypto()
+
+# Encrypt data using DES3 algorithm
+cipher_text = crypto.desEncrypt3("Hello, World!", "secretkey")
+
+# Decrypt data using DES3 algorithm
+plain_text = crypto.desDecrypt3(cipher_text, "secretkey")
+
+print("Encrypted:", cipher_text)
+print("Decrypted:", plain_text)
+```
+
+## Available Methods
+
+The `paicrypto` class provides the following methods:
+
+- `desEncrypt3(data, key)`
+- `desDecrypt3(data, key)`
+- `desEncrypt(data, key)`
+- `desDecrypt(data, key)`
+- `desPaddedEncrypt(data, key)`
+- `desPaddedDecrypt(data, key)`
+- `aesEncrypt(data, key)`
+- `aesDecrypt(data, key)`
+- `aesPaddedEncrypt(data, key)`
+- `aesPaddedDecrypt(data, key)`
+- `rsaEncrypt(data, key)`
+- `rsaDecrypt(data, key)`
+- `rsaKeyGen()`
+- `elgamalKeyGen()`
+- `elgamalEncrypt(data, key)`
+- `elgamalDecrypt(data, key)`
+- `deffieHellmanKeyGen()`
+- `deffieHellmanEncrypt(data, key)`
+- `deffieHellmanDecrypt(data, key)`
+- `socketDeffieHellmanKeyGen()`
+- `socketDeffieHellmanEncryptServer(data, key, port)`
+- `socketDeffieHellmanDecryptClient(data, key, port)`
+- `socketDeffieHellmanDecryptServer(data, key, port)`
+- `socketDeffieHellmanEncryptClient(data, key, port)`
+- `sha256(data)`
+- `sha512(data)`
+- `sha1(data)`
+- `md5(data)`
+- `sha224(data)`
+- `caesar_encrypt(text, shift)`
+- `caesar_decrypt(text, shift)`
+- `vigenere_encrypt(plaintext, key)`
+- `vigenere_decrypt(ciphertext, key)`
+- `railfence_encrypt(lst, numrails)`
+- `Railencode(text, n)`
+- `raildecode(text, n)`
+- `columnar_transposition_encrypt(text, key)`
+- `columnar_transposition_decrypt(text, key)`
+- `playfair_encrypt(plaintext, key)`
+- `playfair_decrypt(ciphertext, key)`
+- `rc4_encrypt(plaintext, key)`
+- `rc4_decrypt(ciphertext, key)`
+
+
+For more detailed information on each method, refer to the `help()` function provided in the `paicrypto` class.
+
+## Contribution
+
+Contributions to CryptoLib are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or create a pull request on GitHub.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
