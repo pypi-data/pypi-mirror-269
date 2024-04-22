@@ -1,0 +1,11 @@
+LICENSE.TXT
+README.md
+setup.py
+elecu.egg-info/PKG-INFO
+elecu.egg-info/SOURCES.txt
+elecu.egg-info/dependency_links.txt
+elecu.egg-info/requires.txt
+elecu.egg-info/top_level.txt
+tests/__init__.py
+tests/test1.py
+tests/testin.py
