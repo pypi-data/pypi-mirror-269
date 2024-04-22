@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: simple_ascii_cards
+Version: 0.1
+Summary: A simple ASCII card display package
+Home-page: https://github.com/naivoder/ascii_cards
+Author: Cameron Redovian
+Author-email: naivoder@gmail.com
+Project-URL: Source, https://github.com/naivoder/ascii_cards
+Keywords: cards games ascii
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Games/Entertainment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ASCII Playing Cards
+
+This project provides a Python script to generate ASCII art representations of playing cards. The script is designed to print out cards with the rank and suit clearly visible, suitable for console-based card games or other educational purposes.
+
+## Features
+
+- Displays ASCII art of playing cards.
+- Supports all ranks from 2 to Ace and suits (Spades, Hearts, Diamonds, Clubs).
+- Can be easily integrated into other Python-based card games.
+
+## Requirements
+
+To run this script, you need Python 3.x. No external libraries are required as it only uses standard libraries.
+
+## Usage
+
+To use the ASCII card printer, simply import the function and call it with the rank and suit:
+
+```python
+from cards import print_card
+
+# Print an Ace of Spades
+print_card('A', '♠')
