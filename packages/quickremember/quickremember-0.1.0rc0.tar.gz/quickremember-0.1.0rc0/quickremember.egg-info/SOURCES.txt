@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+quickremember/__init__.py
+quickremember/consts.py
+quickremember/forget.py
+quickremember/remember.py
+quickremember.egg-info/PKG-INFO
+quickremember.egg-info/SOURCES.txt
+quickremember.egg-info/dependency_links.txt
+quickremember.egg-info/entry_points.txt
+quickremember.egg-info/requires.txt
+quickremember.egg-info/top_level.txt
