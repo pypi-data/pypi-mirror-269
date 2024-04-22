@@ -1,0 +1,7 @@
+cdk_pyproject/__init__.py,sha256=oKe0f2lt7fBZ47ubGNQ_Wn9pdeD_pbUXAkHrfS47YFI,82
+cdk_pyproject/py_project.py,sha256=v_iionEwaEw1rOwfPGYRhFNRyEKjoQuUZ1WXYHVbe8M,1204
+cdk_pyproject/dockerfiles/rye.Dockerfile,sha256=3xv4Izzzgkvft5CK5JSSTRNKKWYjI3Px5240A0LL_8Y,573
+cdk_pyproject-0.1.0.dist-info/METADATA,sha256=jiQ7X1NUikF1fH3Z0LitUqw_m3PK6xs-1PdFTcuHhiQ,585
+cdk_pyproject-0.1.0.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+cdk_pyproject-0.1.0.dist-info/licenses/LICENSE,sha256=qoTZ_HetbvFSvVq4d8WK_h9FGUzneuTX7m4TYQ6G2jQ,1073
+cdk_pyproject-0.1.0.dist-info/RECORD,,
