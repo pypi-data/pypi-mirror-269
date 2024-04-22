@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+my_avam_example.egg-info/PKG-INFO
+my_avam_example.egg-info/SOURCES.txt
+my_avam_example.egg-info/dependency_links.txt
+my_avam_example.egg-info/top_level.txt
