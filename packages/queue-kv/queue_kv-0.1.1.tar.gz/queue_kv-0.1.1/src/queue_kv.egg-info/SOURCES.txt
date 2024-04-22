@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/q/kv/__init__.py
+src/q/kv/__init__.pyi
+src/q/kv/api.py
+src/q/kv/append.py
+src/queue_kv.egg-info/PKG-INFO
+src/queue_kv.egg-info/SOURCES.txt
+src/queue_kv.egg-info/dependency_links.txt
+src/queue_kv.egg-info/requires.txt
+src/queue_kv.egg-info/top_level.txt

@@ -1,0 +1,10 @@
+queue-api
+kv-api
+pydantic
+lazy-loader
+
+[fs]
+kv-fs
+
+[sqlite]
+kv-sqlite-sync
