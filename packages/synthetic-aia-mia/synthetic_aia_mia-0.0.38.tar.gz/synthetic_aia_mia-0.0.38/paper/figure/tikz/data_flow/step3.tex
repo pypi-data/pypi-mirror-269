@@ -1,0 +1,23 @@
+\input{figure/tikz/data}
+
+\begin{tikzpicture}
+\node[database,label=left:$D_{\text{test}}$] (test) at (0,-1){};
+
+\node[rectangle,draw] (pred1) at (2,0) {Predictor 1};
+\node[rectangle,draw] (pred2) at (2,-1) {Predictor 2};
+\node[rectangle,draw] (pred3) at (2,-2) {Predictor 3};
+
+
+\node[database,label=right:$P_{1}$] (p1) at (4,0){};
+\node[database,label=right:$P_{2}$] (p2) at (4,-1){};
+\node[database,label=right:$P_{3}$] (p3) at (4,-2){};
+
+\draw[->] (test) to (pred1);
+\draw[->] (test) to (pred2);
+\draw[->] (test) to (pred3);
+
+\draw[->] (pred1) to (p1);
+\draw[->] (pred2) to (p2);
+\draw[->] (pred3) to (p3);
+
+\end{tikzpicture}

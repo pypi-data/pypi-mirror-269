@@ -1,0 +1,238 @@
+test_neural_network (utk_nn.TestUtkNN.test_neural_network)
+Test if the pytroch model trains and predicts. ... /home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 3 members, which is less than n_splits=5.
+  warnings.warn(
+ok
+test_predict_not_trained (utk_nn.TestUtkNN.test_predict_not_trained)
+Test if an exception is raised if predict is called but the model is not trained. ... ok
+test_predict_trained (utk_nn.TestUtkNN.test_predict_trained)
+Test if a trained model in the hyperparameter optimization interface can make a prediction. ... 2024-03-21 13:56:05,480	WARNING hyperopt_search.py:194 -- You passed a `space` parameter to <class 'ray.tune.search.hyperopt.hyperopt_search.HyperOptSearch'> that contained unresolved search space definitions. <class 'ray.tune.search.hyperopt.hyperopt_search.HyperOptSearch'> should however be instantiated with fully configured search spaces only. To use Ray Tune's automatic search space conversion, pass the space definition as part of the `param_space` argument to `tune.Tuner()` instead.
+/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/node.py:1309: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/ray/session_2024-03-21_13-56-05_503639_1508060/logs/gcs_server.out' mode='a' encoding='utf-8'>
+  self.start_gcs_server()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/node.py:1309: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/ray/session_2024-03-21_13-56-05_503639_1508060/logs/gcs_server.err' mode='a' encoding='utf-8'>
+  self.start_gcs_server()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/node.py:1314: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/ray/session_2024-03-21_13-56-05_503639_1508060/logs/monitor.out' mode='a' encoding='utf-8'>
+  self.start_monitor()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/node.py:1314: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/ray/session_2024-03-21_13-56-05_503639_1508060/logs/monitor.err' mode='a' encoding='utf-8'>
+  self.start_monitor()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/node.py:1325: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/ray/session_2024-03-21_13-56-05_503639_1508060/logs/dashboard.err' mode='a' encoding='utf-8'>
+  self.start_api_server(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/node.py:1367: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/ray/session_2024-03-21_13-56-05_503639_1508060/logs/raylet.out' mode='a' encoding='utf-8'>
+  self.start_raylet(plasma_directory, object_store_memory)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/node.py:1367: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/ray/session_2024-03-21_13-56-05_503639_1508060/logs/raylet.err' mode='a' encoding='utf-8'>
+  self.start_raylet(plasma_directory, object_store_memory)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/node.py:1369: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/ray/session_2024-03-21_13-56-05_503639_1508060/logs/log_monitor.err' mode='a' encoding='utf-8'>
+  self.start_log_monitor()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+2024-03-21 13:56:08,301	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+2024-03-21 13:56:08,948	INFO tune.py:220 -- Initializing Ray automatically. For cluster usage or custom Ray initialization, call `ray.init(...)` before `Tuner(...)`.
+2024-03-21 13:56:08,949	INFO tune.py:592 -- [output] This will use the new output engine with verbosity 1. To disable the new output and use the legacy output engine, set the environment variable RAY_AIR_NEW_OUTPUT=0. For more information, please see https://github.com/ray-project/ray/issues/36949
+[36m(func pid=1508832)[0m /home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 3 members, which is less than n_splits=5.
+[36m(func pid=1508832)[0m   warnings.warn(
+2024-03-21 13:56:13,222	ERROR tune_controller.py:1374 -- Trial task failed for trial _train_3ee30667
+Traceback (most recent call last):
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(FileNotFoundError): [36mray::ImplicitFunc.train()[39m (pid=1508832, ip=192.168.1.14, actor_id=c7c3a16932790a872dc61a0a01000000, repr=func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 115, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/synthetic/src/synthetic_aia_mia/predictor/utk.py", line 265, in _train
+    for i, batch_data in enumerate(train_loader, 0):
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1346, in _next_data
+    return self._process_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1372, in _process_data
+    data.reraise()
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/_utils.py", line 722, in reraise
+    raise exception
+FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/synthetic/src/synthetic_aia_mia/predictor/utk.py", line 48, in __getitem__
+    x = torch.from_numpy(self.data[idx][0]).float()
+                         ~~~~~~~~~^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/synthetic/src/synthetic_aia_mia/fetch_data/utk.py", line 62, in __getitem__
+    x = np.asarray(Image.open(self.x[i]))
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/PIL/Image.py", line 3247, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/jaalmoes/ray_results/_train_2024-03-21_13-56-05/_train_3ee30667_1_batch_size=128,c1=5,c2=40,l=2,lr=0.0000_2024-03-21_13-56-09/data_raw/UTK/utkface_aligned_cropped/crop_part1/8_1_0_20170109200918322.jpg.chip.jpg'
+2024-03-21 13:56:17,058	ERROR tune_controller.py:1374 -- Trial task failed for trial _train_5df826e0
+Traceback (most recent call last):
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(FileNotFoundError): [36mray::ImplicitFunc.train()[39m (pid=1508914, ip=192.168.1.14, actor_id=fbbf494727690beb3b57201501000000, repr=func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 115, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/synthetic/src/synthetic_aia_mia/predictor/utk.py", line 265, in _train
+    for i, batch_data in enumerate(train_loader, 0):
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1346, in _next_data
+    return self._process_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1372, in _process_data
+    data.reraise()
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/_utils.py", line 722, in reraise
+    raise exception
+FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/synthetic/src/synthetic_aia_mia/predictor/utk.py", line 48, in __getitem__
+    x = torch.from_numpy(self.data[idx][0]).float()
+                         ~~~~~~~~~^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/synthetic/src/synthetic_aia_mia/fetch_data/utk.py", line 62, in __getitem__
+    x = np.asarray(Image.open(self.x[i]))
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/PIL/Image.py", line 3247, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/jaalmoes/ray_results/_train_2024-03-21_13-56-05/_train_5df826e0_2_batch_size=16,c1=30,c2=40,l=32,lr=0.0420_2024-03-21_13-56-13/data_raw/UTK/utkface_aligned_cropped/crop_part1/8_1_0_20170109200918322.jpg.chip.jpg'
+2024-03-21 13:56:17,863	WARNING tune.py:186 -- Stop signal received (e.g. via SIGINT/Ctrl+C), ending Ray Tune run. This will try to checkpoint the experiment state one last time. Press CTRL+C (or send SIGINT/SIGKILL/SIGTERM) to skip. 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/lib/python3.11/unittest/__main__.py", line 18, in <module>
+    main(module=None)
+  File "/usr/lib/python3.11/unittest/main.py", line 102, in __init__
+    self.runTests()
+  File "/usr/lib/python3.11/unittest/main.py", line 274, in runTests
+    self.result = testRunner.run(self.test)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/unittest/runner.py", line 217, in run
+    test(result)
+  File "/usr/lib/python3.11/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/unittest/suite.py", line 122, in run
+    test(result)
+  File "/usr/lib/python3.11/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/unittest/suite.py", line 122, in run
+    test(result)
+  File "/usr/lib/python3.11/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/unittest/suite.py", line 122, in run
+    test(result)
+  File "/usr/lib/python3.11/unittest/case.py", line 678, in __call__
+    return self.run(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/unittest/case.py", line 623, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.11/unittest/case.py", line 579, in _callTestMethod
+    if method() is not None:
+       ^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/synthetic/test/predictor/utk_nn.py", line 38, in test_predict_trained
+    clf.fit(data)
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/synthetic/src/synthetic_aia_mia/predictor/utk.py", line 143, in fit
+    results = tuner.fit()
+              ^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/tuner.py", line 381, in fit
+    return self._local_tuner.fit()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/impl/tuner_internal.py", line 509, in fit
+    analysis = self._fit_internal(trainable, param_space)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/impl/tuner_internal.py", line 628, in _fit_internal
+    analysis = run(
+               ^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/tune.py", line 1027, in run
+    runner.cleanup()
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/execution/tune_controller.py", line 2017, in cleanup
+    self._cleanup_trials()
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/tune/execution/tune_controller.py", line 846, in _cleanup_trials
+    self._actor_manager.next(timeout=1)
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/air/execution/_internal/actor_manager.py", line 214, in next
+    ready, _ = ray.wait(all_futures, num_returns=1, timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/worker.py", line 2847, in wait
+    ready_ids, remaining_ids = worker.core_worker.wait(
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/ray/_raylet.pyx", line 3604, in ray._raylet.CoreWorker.wait
+  File "python/ray/_raylet.pyx", line 570, in ray._raylet.check_status
+KeyboardInterrupt
+Exception ignored in atexit callback: <function shutdown at 0x734f2da57100>
+Traceback (most recent call last):
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaalmoes/inria/these_2024/aia_synthetic/env/lib/python3.11/site-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+KeyboardInterrupt: 

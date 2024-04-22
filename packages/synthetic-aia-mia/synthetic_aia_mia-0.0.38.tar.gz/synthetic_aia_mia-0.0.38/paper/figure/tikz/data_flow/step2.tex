@@ -1,0 +1,16 @@
+\input{figure/tikz/data}
+
+\begin{tikzpicture}
+\node[database,label=left:$S_{1}$] (s1) at (0,0){};
+\node[database,label=left:$S_{2}$] (s2) at (0,-1){};
+\node[database,label=left:$S_{3}$] (s3) at (0,-2){};
+
+\node[rectangle,draw] (pred1) at (2,0) {Predictor 1};
+\node[rectangle,draw] (pred2) at (2,-1) {Predictor 2};
+\node[rectangle,draw] (pred3) at (2,-2) {Predictor 3};
+
+\draw[->] (s1) to (pred1);
+\draw[->] (s2) to (pred2);
+\draw[->] (s3) to (pred3);
+
+\end{tikzpicture}
