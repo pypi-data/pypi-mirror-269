@@ -1,0 +1,11 @@
+fastapi==0.104.1
+chromadb
+datasets
+faiss-cpu
+sentence-transformers
+pymorphy3
+scikit-learn
+spacy
+thefuzz
+torch
+torchvision

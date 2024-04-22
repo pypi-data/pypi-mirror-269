@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: recs-searcher
+Version: 0.0.9
+Summary: Search engine and registry error corrector
+Home-page: https://github.com/sheriff1max/recs-searcher
+Author: sheriff1max
+Author-email: kobelevmaxim48@gmail.com
+Project-URL: Bug tracker, https://github.com/sheriff1max/recs-searcher/issues
+Keywords: python searcher corrector faiss chroma-bd embeddings
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi==0.104.1
+Requires-Dist: chromadb
+Requires-Dist: datasets
+Requires-Dist: faiss-cpu
+Requires-Dist: sentence-transformers
+Requires-Dist: pymorphy3
+Requires-Dist: scikit-learn
+Requires-Dist: spacy
+Requires-Dist: thefuzz
+Requires-Dist: torch
+Requires-Dist: torchvision
+
+# recs-searcher (Registry error correction system - Searcher)
+
+    pip install recs-searcher
+
+Система способна решить следующие задачи:
+1. Исправление реестровых ошибок пользовательского ввода при сравнении с базой данных;
+2. Поиск схожих текстовых записей на пользовательский текст по базе данных.
+
+Функциональные возможности:
+1. обучение моделей для создания эмбеддингов (например, TfIDF, FastText, SentenceTransformer) на собственных данных;
+2. быстрый поиск по базе данных (например, KNN, Faiss, Chroma-DB, TheFuzzSearch);
+3. дообучение.
+
+Реализованные модули:
+1. api;
+2. augmentation;
+3. dataset;
+4. models;
+5. preprocessing;
+6. similarity_search.
+
+## Примеры применения
+Пример для быстрого использования: [пример API](https://github.com/sheriff1max/recs-searcher/blob/master/notebooks/tutorial_rus.ipynb)
