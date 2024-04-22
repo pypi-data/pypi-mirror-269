@@ -1,0 +1,15 @@
+doc/m.py,sha256=583vAKOjymBVii6dqTfrT_uhNFMkgiPq75BIM7KicFU,41435
+doc/p.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prodpadlm_client/__init__.py,sha256=VCV0GxMJv1LnIIrkAQgqv71rdyuVMw2pwhiLPGNsX30,49
+prodpadlm_client/client.py,sha256=wn1uOgkRJh6Wr-CO0k7KyrVDg_3TDSfuPsT-mS0iIn8,10775
+prodpadlm_client/client_types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prodpadlm_client/client_types/_types.py,sha256=HngwxGHIA3_ILm7rTQlhDnyNw0ywnzCxaEAyR9QZYbg,1091
+prodpadlm_client/client_types/messages.py,sha256=Tdw308rz5G9waK0epTF6WDupz610Br_kc0m8bUShIQM,3112
+prodpadlm_client/client_types/stream_messages.py,sha256=SavRiINh-jbO1a9bcaQQteo84Xba8zFSZbU6J854nv0,1994
+prodpadlm_client/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prodpadlm_client/resources/api.py,sha256=9rBfm0lRV1S8ChRYZR4ikpaGv5IR4tmsBwuajvHBknc,7532
+prodpadlm_client-0.1.1.5.1.dist-info/LICENSE.txt,sha256=WtjCEwlcVzkh1ziO35P2qfVEkLjr87Flro7xlHz3CEY,11556
+prodpadlm_client-0.1.1.5.1.dist-info/METADATA,sha256=GykEeu6eBAXx9XJeHv7VxjAoD-TX2YCbIFNtVNiZd9Q,15438
+prodpadlm_client-0.1.1.5.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+prodpadlm_client-0.1.1.5.1.dist-info/top_level.txt,sha256=_btYgQvbkEHZFcCkz1uoDIkvvYE4CuL52DI8fMsImQY,21
+prodpadlm_client-0.1.1.5.1.dist-info/RECORD,,
