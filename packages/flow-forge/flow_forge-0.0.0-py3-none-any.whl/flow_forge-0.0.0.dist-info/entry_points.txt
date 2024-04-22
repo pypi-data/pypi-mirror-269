@@ -1,0 +1,3 @@
+[console_scripts]
+flow-forge=flow_forge.__main__:main
+
