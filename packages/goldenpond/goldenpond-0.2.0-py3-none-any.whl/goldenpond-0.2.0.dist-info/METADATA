@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: goldenpond
+Version: 0.2.0
+Summary: GoldenPond is a little language for defining musical chord progressions in terms of 'functional harmony'.
+Home-page: https://github.com/interstar/golden-pond
+Author: Phil Jones (Mentufacturer)
+Author-email: interstar@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
