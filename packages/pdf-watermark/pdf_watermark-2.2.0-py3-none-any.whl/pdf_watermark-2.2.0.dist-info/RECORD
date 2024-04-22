@@ -1,0 +1,13 @@
+pdf_watermark/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdf_watermark/_version.py,sha256=pbL_Q6fDSZl5UbKP04ZFdzrJpd1PO1gH7IwJCwLV7mk,411
+pdf_watermark/draw.py,sha256=ZkBan88x5fpQiHuWkr4IOvBSL58U_FoFq-i7fxxRBo4,6030
+pdf_watermark/handler.py,sha256=P8FwVx25R50DgOgUooxK18x5HmS-Rj8ND66cX0fWCOQ,2607
+pdf_watermark/options.py,sha256=cvpBnxzqvtHyIhkjd9yo3NpEQSkn__x6yrzdt5LsZdw,4317
+pdf_watermark/utils.py,sha256=WAzjpcGJvpXPOoH2tV6kyQnVpo9-ay8pIas3meoghrg,2914
+pdf_watermark/watermark.py,sha256=r3lsONYz3asGwtC7lD-l7yMyNB8Lux6hMcyAlC-CAbs,6563
+pdf_watermark-2.2.0.dist-info/LICENSE,sha256=hdPg4ZV3LMUJuvXltqodgqduWv-AA94p_tVfmi1kTdw,1079
+pdf_watermark-2.2.0.dist-info/METADATA,sha256=4jP38TPN9p_q_JhPzmnlLfrRL6eSGHMA1VeFMEpXGGA,10778
+pdf_watermark-2.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pdf_watermark-2.2.0.dist-info/entry_points.txt,sha256=rP9IU4gPVo-W6bOoLDqs6gEb-gfFrY9gmRvWS1ZALiQ,58
+pdf_watermark-2.2.0.dist-info/top_level.txt,sha256=HK61OgOorxSQ6zKxcjSZmv29aq4d2W3_eai4DBURhTw,14
+pdf_watermark-2.2.0.dist-info/RECORD,,
