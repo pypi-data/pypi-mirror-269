@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: oss-song2
+Version: 0.0.1
+Summary: oss_song's first package
+Home-page: https://github.com/DoNalD-A/oss_song2
+Download-URL: https://github.com/DoNalD-A/oss_song2/archive/refs/heads/main.zip
+Author: minseoksong
+Author-email: thdlstjrj@naver.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest
+
+oss-class song's first python module
