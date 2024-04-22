@@ -1,0 +1,7 @@
+setup.py
+stockslibrary/__init__.py
+stockslibrary/invsystem.py
+stockslibrary.egg-info/PKG-INFO
+stockslibrary.egg-info/SOURCES.txt
+stockslibrary.egg-info/dependency_links.txt
+stockslibrary.egg-info/top_level.txt
