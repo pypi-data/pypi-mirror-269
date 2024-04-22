@@ -1,0 +1,13 @@
+assimpy_ext.cp312-win_amd64.pyd,sha256=0Jnao1eiO6ayLWD72WFbeiUZuoNBDUsH-fIP-wQY6UM,4091904
+assimpy/LICENSE,sha256=tX6XOpxXDmXtHNRCZxz9p5eQLwQ-IMJH_qMMJDNRjTg,1098
+assimpy/__init__.py,sha256=Il18Sd-S2aAGivBAYQFddbDc30gqomqaFkpVSx4ogfY,28
+assimpy/__pyinstaller/__init__.py,sha256=r60gSTBe1HeAsMiikMajL3laOsUDd6yOQ7nMMI3Z0Eg,106
+assimpy/__pyinstaller/hook-assimpy.py,sha256=dQE8c9pfshxU2x_P9YBJX7NqxXS-ZrlBxGDGuq854Ck,351
+assimpy/__pyinstaller/assimp/LICENSE,sha256=FHh0RD0kK04rrpcDbibsnWs39wYXTBvV7PzIwSlM71E,3791
+assimpy/__pyinstaller/pybind11/LICENSE,sha256=g5ZbhDuY9nDTqFvQQe1LNyyOxQ17SlmVqDrGl7pnXcs,1684
+assimpy-5.4.0.dist-info/LICENSE,sha256=tX6XOpxXDmXtHNRCZxz9p5eQLwQ-IMJH_qMMJDNRjTg,1098
+assimpy-5.4.0.dist-info/METADATA,sha256=-tQy-6Uk-kFEAa2OAye_qClmPaoZgKxm2XRKjBrOvaA,1623
+assimpy-5.4.0.dist-info/WHEEL,sha256=j9Aissza3750LQHFAQyYerNjmkEON1-8w_RaZNFtKSs,102
+assimpy-5.4.0.dist-info/entry_points.txt,sha256=c-Ba4FGKP-trMi2OX77k3fxdYkfL-nTRcCFNYNTLOZY,64
+assimpy-5.4.0.dist-info/top_level.txt,sha256=oBGToIf3sbvrooDjov2QlfrUO0Lv1w0qOJN3zbtPAkc,42
+assimpy-5.4.0.dist-info/RECORD,,
