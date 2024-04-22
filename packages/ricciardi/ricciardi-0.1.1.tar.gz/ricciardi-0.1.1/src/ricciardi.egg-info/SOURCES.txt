@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/ricciardi/__init__.py
+src/ricciardi/ricciardi.py
+src/ricciardi.egg-info/PKG-INFO
+src/ricciardi.egg-info/SOURCES.txt
+src/ricciardi.egg-info/dependency_links.txt
+src/ricciardi.egg-info/requires.txt
+src/ricciardi.egg-info/top_level.txt
+test/test_ricciardi.py
