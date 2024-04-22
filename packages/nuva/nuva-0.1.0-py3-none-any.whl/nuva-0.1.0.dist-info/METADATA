@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: nuva
+Version: 0.1.0
+Summary: Add your description here
+Author-email: AdamZou <yz725@cornell.edu>
+Requires-Python: >=3.8
+Requires-Dist: codeinterpreterapi-yayi>=0.1.15
+Requires-Dist: langchain>=0.1.15
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: pytest>=8.1.1
+Description-Content-Type: text/markdown
+
+# TET
+
+TET is an AI system that aims achieve super-human performance in ML problems, e.g., Kaggle Competitions. It is based on the 'AgentSession' class that supports multi-agent collaboration and RL training.
