@@ -1,0 +1,2 @@
+[console_scripts]
+sonagent = sonagent.main:main
