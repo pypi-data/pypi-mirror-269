@@ -1,0 +1,2 @@
+[console_scripts]
+geotils = geotils.module:function
