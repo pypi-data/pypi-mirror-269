@@ -1,0 +1,16 @@
+aec6s/AEC.py,sha256=balX61FDff_z44_KVrUSPq63RR1XZoH2559-jugso98,1514
+aec6s/__init__.py,sha256=j-YV0hINHr2l5hJ2F2dqaJRSxJxmxWxbB8odXGOgqmk,26
+aec6s/anci_download.py,sha256=Rsf1siXCp2MUSLRk1XQ7sDiU7Kk7XSYpNXgtyuWx5HU,1830
+aec6s/anci_get_AER.py,sha256=UmMJY7fEI6fbAv3seO0ACFMlVIxjWwDhYDyuTq4ebJA,3596
+aec6s/anci_get_OWV.py,sha256=dCfbfgkW22oBMxxUuzcKVaU6cVE2NWBJ5Y4ZlZeomnk,2383
+aec6s/anci_list_files.py,sha256=QPs7cMsSMjK5WcUVwBj9ZY0VfpdJGAa1Lly-TIIlwUs,1660
+aec6s/fillnan.py,sha256=EBM_1E4ncjKzmDE8Hmb03ntTsoJvbSyVD7FLGX24kTQ,338
+aec6s/get_ancillary.py,sha256=WCQ35WdBE-c74AqU6PA8f_jF-c0jKO6mp1Pdn8fdTbI,1722
+aec6s/get_parameters.py,sha256=mXYmSspjHz-dHjlD7doASF4N2aB-VU2KTKvFhPSuehk,4375
+aec6s/read_metadata.py,sha256=D9RZ80-hnmapQm_ttF96WvikdFCTnRSNoml7iYOUB8Y,11081
+aec6s/run.py,sha256=PWby9tYpN284qXNK0qr9N0Xi1_kADixFG6dh3fAEkNw,2460
+aec6s-1.0.0.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+aec6s-1.0.0.dist-info/METADATA,sha256=PnHrB6U3gLLcEtPOP_G1oYsczQKx3NDGsT-jTE7Gp4A,1020
+aec6s-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+aec6s-1.0.0.dist-info/top_level.txt,sha256=UUsa5OfQugoW7DYrIPcA8cVmA0Tu41UrJd5eRCnDDnE,6
+aec6s-1.0.0.dist-info/RECORD,,
