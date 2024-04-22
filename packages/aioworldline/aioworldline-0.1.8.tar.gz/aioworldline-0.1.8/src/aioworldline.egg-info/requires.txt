@@ -1,0 +1,7 @@
+aiohttp[speedups]==3.9.5
+pydantic==2.7.0
+pydantic_settings==2.2.1
+
+[testing]
+pytest
+pytest-cov
