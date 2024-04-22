@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: typedmongo
+Version: 0.0.0
+Summary: A modern Python MongoDB ODM
+Author-Email: abersheeran <me@abersheeran.com>
+License: Apache2.0
+Requires-Python: >=3.12
+Requires-Dist: pymongo>=4.6.3
+Requires-Dist: motor>=3.4.0
+Requires-Dist: marshmallow>=3.21.1
+Description-Content-Type: text/markdown
+
+# typedmongo
