@@ -1,0 +1,4 @@
+
+[full]
+mlpro[full]>=1.4.0
+stable_baselines3>=2.3.0
