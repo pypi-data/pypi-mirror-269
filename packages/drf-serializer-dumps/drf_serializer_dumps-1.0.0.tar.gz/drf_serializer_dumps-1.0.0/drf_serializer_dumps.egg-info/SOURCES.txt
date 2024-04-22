@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+drf_serializer_dumps/__init__.py
+drf_serializer_dumps/decorators.py
+drf_serializer_dumps.egg-info/PKG-INFO
+drf_serializer_dumps.egg-info/SOURCES.txt
+drf_serializer_dumps.egg-info/dependency_links.txt
+drf_serializer_dumps.egg-info/requires.txt
+drf_serializer_dumps.egg-info/top_level.txt
