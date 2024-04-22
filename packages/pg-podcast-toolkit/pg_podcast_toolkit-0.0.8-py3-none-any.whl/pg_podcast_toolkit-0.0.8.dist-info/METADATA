@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: pg-podcast-toolkit
+Version: 0.0.8
+Summary: Tools for managing podcasting 2.0 feeds
+Project-URL: Homepage, https://github.com/Really-Bad-Apps/pg-podcast-toolkit
+Project-URL: Issues, https://github.com/Really-Bad-Apps/pg-podcast-toolkit/issues
+Author-email: Jason Mazza <jason@reallybadapps.com>
+License: MIT License
+License-File: LICENSE
+Keywords: ipfs,parser,podcast,podcasting2.0,rss
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: aioipfs
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+# Installation
+
+```bash
+pip install pg-podcast-toolkit
+```
+
+# Warning
+
+This project should be considered alpha state.  There is no documentation as API's are still being tested and evolving.
+
