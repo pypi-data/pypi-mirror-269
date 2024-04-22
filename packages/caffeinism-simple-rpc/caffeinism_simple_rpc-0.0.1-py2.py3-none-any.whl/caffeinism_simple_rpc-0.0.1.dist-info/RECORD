@@ -1,0 +1,7 @@
+simple_rpc/.gitignore,sha256=XixnHdyeMB2vwkGtGnwHqoWpH-9WChdyG0GXe57duhc,3078
+simple_rpc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_rpc/client/__init__.py,sha256=_UU8NmIllG0ftRWQ13KyrCx77PmFRcza0xRiOQYgbyw,569
+simple_rpc/server/__init__.py,sha256=7GoXDWq9UbUwEeYSoPFt9Kjfs3oy2MDNHJ1JW23TrQI,1125
+caffeinism_simple_rpc-0.0.1.dist-info/METADATA,sha256=Rjly09HQkMl2ZyhJqAD_n_Dlma-O9OrMFlmSL-jNhYE,1195
+caffeinism_simple_rpc-0.0.1.dist-info/WHEEL,sha256=IrRNNNJ-uuL1ggO5qMvT1GGhQVdQU54d6ZpYqEZfEWo,92
+caffeinism_simple_rpc-0.0.1.dist-info/RECORD,,
