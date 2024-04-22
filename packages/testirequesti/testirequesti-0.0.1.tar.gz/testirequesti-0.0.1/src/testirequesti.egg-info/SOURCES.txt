@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/testirequesti/Requesti.py
+src/testirequesti/Responsi.py
+src/testirequesti/__init__.py
+src/testirequesti.egg-info/PKG-INFO
+src/testirequesti.egg-info/SOURCES.txt
+src/testirequesti.egg-info/dependency_links.txt
+src/testirequesti.egg-info/requires.txt
+src/testirequesti.egg-info/top_level.txt
