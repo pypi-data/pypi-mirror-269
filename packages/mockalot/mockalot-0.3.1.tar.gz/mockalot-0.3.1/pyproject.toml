@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "mockalot"
+version = "0.3.1"
+description = "Mockup data generator library."
+authors = ["Flávio Teixeira <flavio.mtps@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/flavsdotpy/mockalot"
+documentation = "https://flavsdotpy.github.io/mockalot/"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Faker = "^24.4.0"
+pandas = {version = "^2.2.1", optional = true}
+pyspark = {version = "^3.5.1", optional = true}
+pyarrow = {version = "^15.0.2", optional = true}
+
+[tool.poetry.extras]
+pandas = ["pandas"]
+pyspark = ["pyspark"]
+parquet = ["pyarrow"]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+pytest-cov = "^5.0.0"
+pytest-mock = "^3.14.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
