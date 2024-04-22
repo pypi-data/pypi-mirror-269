@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: basic-bar
+Version: 0.4
+Summary: A simple and efficient progress bar
+Home-page: https://github.com/splch/py-basic-bar
+Author: Spencer Churchill
+Author-email: spence@duck.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Basic Bar
+
+A basic and efficient progress bar in Python
+
+```python
+from basic_bar import bar
+
+for _ in bar(range(1000000)):
+    pass
+
+# ▕█████████████████████████████████▏ 100.00% 3.14s
+```
