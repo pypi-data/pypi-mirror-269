@@ -1,0 +1,10 @@
+README.md
+setup.py
+fmd5sum/__init__.py
+fmd5sum/fmd5sum.py
+fmd5sum.egg-info/PKG-INFO
+fmd5sum.egg-info/SOURCES.txt
+fmd5sum.egg-info/dependency_links.txt
+fmd5sum.egg-info/entry_points.txt
+fmd5sum.egg-info/requires.txt
+fmd5sum.egg-info/top_level.txt
