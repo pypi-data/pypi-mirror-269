@@ -1,0 +1,3 @@
+[console_scripts]
+comma-agents-cli=comma_agents.cli.main:cli
+
