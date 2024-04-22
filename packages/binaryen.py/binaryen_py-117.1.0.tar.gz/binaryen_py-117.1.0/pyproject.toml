@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools", "cffi>=1.15.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "binaryen.py"
+version = "117.1.0"
+description = "A Python wrapper for Binaryen"
+authors = [{ name = "Jonathan Hargreaves", email = "jhargreaves189@gmail.com" }]
+readme = "README.md"
+keywords = ["WebAssembly", "Wasm", "Binaryen", "binaryen.py"]
+classifiers = [
+    "Environment :: MacOS X",
+    "Environment :: WebAssembly",
+    "Environment :: WebAssembly :: WASI",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Assembly",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Compilers",
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = ['cffi >= 1.15.0']
+
+[project.urls]
+"Source Code" = "https://github.com/jonathanharg/binaryen.py"
+Issues = "https://github.com/jonathanharg/binaryen.py/issues"
+"Original Source Code" = "https://github.com/WebAssembly/binaryen"
+
+[project.optional-dependencies]
+dev = ["black", "isort", "cibuildwheel"]
+
+[tool.setuptools]
+packages = ["binaryen", "binaryen.type"]
+
+[tool.cibuildwheel]
+build = "cp312-*"
+skip = "pp*"
+# WARNING: If you update this also update it in the Github Action!!
+environment = { BINARYEN_VERSION = "117" }
+# WARNING: If you update this also update it in the Github Action!!
+before-all = ["bash ./scripts/build_libbinaryen.sh"]
+
+[tool.cibuildwheel.windows]
+archs = ["AMD64"]
+
+[tool.cibuildwheel.linux]
+archs = ["x86_64"]
+before-all = ["yum install wget -y", "bash ./scripts/build_libbinaryen.sh"]
+
+[[tool.cibuildwheel.overrides]]
+select = "*-musllinux*"
+before-all = ["apk add wget", "bash ./scripts/build_libbinaryen.sh"]
