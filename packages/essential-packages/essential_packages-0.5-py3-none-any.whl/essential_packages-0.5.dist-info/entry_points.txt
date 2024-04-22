@@ -1,0 +1,2 @@
+[console_scripts]
+essential_packages-hello = essential_packages:hello
