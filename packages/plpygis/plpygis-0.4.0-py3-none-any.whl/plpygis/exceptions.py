@@ -1,0 +1,66 @@
+class PlpygisError(Exception):
+    """
+    Basic exception for ``plpygis``.
+    """
+    def __init__(self, msg):
+        super().__init__(msg)
+
+
+class CoordinateError(PlpygisError):
+    """
+    Exception for problems in the coordinates of geometries.
+    """
+    def __init__(self, geom, msg=None):
+        if msg is None:
+            msg = f"Geometry has invalid coordinates: {geom}"
+        super().__init__(msg)
+
+
+class DependencyError(PlpygisError, ImportError):
+    """
+    Exception for a missing dependency.
+    """
+    def __init__(self, dep, msg=None):
+        if msg is None:
+            msg = f"Dependency '{dep}' is not available."
+        super().__init__(msg)
+
+
+class WkbError(PlpygisError):
+    """
+    Exception for problems in parsing WKBs.
+    """
+    def __init__(self, msg=None):
+        if msg is None:
+            msg = "Unreadable WKB."
+        super().__init__(msg)
+
+
+class DimensionalityError(PlpygisError):
+    """
+    Exception for problems in dimensionality of geometries.
+    """
+    def __init__(self, msg=None):
+        if msg is None:
+            msg = "Geometry has invalid dimensionality."
+        super().__init__(msg)
+
+
+class SridError(PlpygisError):
+    """
+    Exception for problems in dimensionality of geometries.
+    """
+    def __init__(self, msg=None):
+        if msg is None:
+            msg = "Geometry has invalid SRID."
+        super().__init__(msg)
+
+
+class GeojsonError(PlpygisError):
+    """
+    Exception for problems in GeoJSONs.
+    """
+    def __init__(self, msg=None):
+        if msg is None:
+            msg = "Invalid GeoJSON."
+        super().__init__(msg)
