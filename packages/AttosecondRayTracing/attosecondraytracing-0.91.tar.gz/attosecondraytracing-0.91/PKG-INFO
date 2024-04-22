@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: AttosecondRayTracing
+Version: 0.91
+Summary: Attosecond Ray Tracing visualisation package
+Author: Anthony Guillaume
+Author-email: Stefan Haessler <stefan.haessler@ensta-paris.fr>, André Kalouguine <andre.kalouguine@ensta-paris.fr>
+Project-URL: Homepage, https://github.com/mightymightys/AttosecondRaytracing
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: AttosecondRayTracing_core
+Requires-Dist: pyvista
+Requires-Dist: matplotlib
+Requires-Dist: pyvistaqt
+Requires-Dist: colorcet
