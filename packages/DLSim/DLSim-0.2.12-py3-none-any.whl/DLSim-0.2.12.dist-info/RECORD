@@ -1,0 +1,13 @@
+pydtalite_bin/DTALite.dll,sha256=AZEF90M0p3qqkzEQruJZ2l-T4Gt1H8m9YICb1wlZ5TM,181248
+pydtalite_bin/DTALite.so,sha256=Jyi0a-mb6VCe0ckE2kadhE_r5odGtYOdGOHVhyAXzkY,225704
+pydtalite_bin/DTALite_arm.dylib,sha256=-46i44MfJL43LieqBqHaAdlSPX83I2X5ZdFwvsNwnQg,250141
+pydtalite_bin/DTALite_x86.dylib,sha256=KthtgnUW6EvfvU6z01koyrAgqmhi8uLSe_wg-984WjM,269200
+pydtalite_bin/__init__.py,sha256=yuaxIopuM_N_lKLFZ1vU0XdNWpni3Sk86CIpDG-lcco,278
+pydtalite_bin/path_engine.dll,sha256=pC7ITAHkp-4QRRaYiXa5j83RL6uIVShqRLdv1nBnuxU,11776
+pydtalite_bin/path_engine.so,sha256=KUtoL12iTm-3nCcMS0oHGaksgp-R15ACMZPLT11Igok,12208
+pydtalite_bin/path_engine_arm.dylib,sha256=guPgzlxGxN9e1aphCIXdZ3TYGBwFcnSfVUm9wOEFukE,33553
+pydtalite_bin/path_engine_x86.dylib,sha256=b8_jk8zCotyE1mimCu6J6AN2T8Q2GUOXomnRNEbsqlo,49560
+DLSim-0.2.12.dist-info/METADATA,sha256=8bae1NinP8oZ61-RL6-WNWlcoKGxrZrteUEk5MlY-90,3693
+DLSim-0.2.12.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+DLSim-0.2.12.dist-info/top_level.txt,sha256=RA1pSkSE5F2nfj58aBtxPHx-j7yixeuM7E8-eaEG-nk,14
+DLSim-0.2.12.dist-info/RECORD,,
