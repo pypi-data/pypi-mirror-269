@@ -1,0 +1,2 @@
+[console_scripts]
+iap = iap_cli:iap
