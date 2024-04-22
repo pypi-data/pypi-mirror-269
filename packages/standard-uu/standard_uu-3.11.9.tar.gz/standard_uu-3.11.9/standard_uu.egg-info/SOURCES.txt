@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+pyproject.toml
+standard_uu.egg-info/PKG-INFO
+standard_uu.egg-info/SOURCES.txt
+standard_uu.egg-info/dependency_links.txt
+standard_uu.egg-info/top_level.txt
+tests/test_uu.py
+uu/__init__.py
