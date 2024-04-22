@@ -1,0 +1,58 @@
+<!-- Copyright 2024 Karlsruhe Institute of Technology
+   -
+   - Licensed under the Apache License, Version 2.0 (the "License");
+   - you may not use this file except in compliance with the License.
+   - You may obtain a copy of the License at
+   -
+   -     http://www.apache.org/licenses/LICENSE-2.0
+   -
+   - Unless required by applicable law or agreed to in writing, software
+   - distributed under the License is distributed on an "AS IS" BASIS,
+   - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   - See the License for the specific language governing permissions and
+   - limitations under the License. -->
+
+<template>
+  <div>
+    <div v-if="!disabled" class="d-flex justify-content-end">
+      <div class="btn-group btn-group-sm mb-1">
+        <button type="button" class="btn btn-small btn-light" @click="$emit('remove-row')">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+
+        <span class="sort-handle btn btn-small btn-light disabled">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+      </div>
+    </div>
+
+    <vue-draggable class="row"
+                   handle=".sort-handle"
+                   :list="columns"
+                   :group="id"
+                   :disabled="disabled">
+      <slot></slot>
+    </vue-draggable>
+  </div>
+</template>
+
+<script>
+import VueDraggable from 'vuedraggable';
+
+export default {
+  components: {
+    VueDraggable,
+  },
+  props: {
+    id: String,
+    columns: {
+      type: Array,
+      default: () => [],
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+  },
+};
+</script>
