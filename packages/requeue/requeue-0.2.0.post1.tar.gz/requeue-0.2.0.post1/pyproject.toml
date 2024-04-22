@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "requeue"
+version = "0.2.0.post1"
+description = "An asynchronous queue for requesting data"
+license = "GPL-3.0-or-later"
+readme = "README.md"
+authors = ["Maximillian Strand <maxi@millian.se>"]
+repository = "https://gitlab.com/deepadmax/requeue"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
