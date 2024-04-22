@@ -1,0 +1,9 @@
+README.md
+setup.py
+.github/README.md
+src/bugcount.py
+src/bugcount.egg-info/PKG-INFO
+src/bugcount.egg-info/SOURCES.txt
+src/bugcount.egg-info/dependency_links.txt
+src/bugcount.egg-info/entry_points.txt
+src/bugcount.egg-info/top_level.txt
