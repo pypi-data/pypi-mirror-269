@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: qrguide
+Version: 0.0.2
+Summary: QRguide: QR code representation of guide RNA for predicting CRISPR editings
+Home-page: https://github.com/StatBiomed/QRguide
+Author: ['QRguide Team']
+Author-email: 
+License: Apache-2.0
+Keywords: CRISPR editing prediction,multivariate regression,sequence model
+License-File: LICENSE
+Requires-Dist: numpy>=1.9.0
+Requires-Dist: scipy>=1.4.0
+Requires-Dist: matplotlib
+Requires-Dist: statsmodels>=0.13
+Provides-Extra: docs
+Requires-Dist: sphinx_bootstrap_theme; extra == "docs"
+
+# QRguide
+QR code representation of guide RNA for predicting CRISPR editing outcomes
