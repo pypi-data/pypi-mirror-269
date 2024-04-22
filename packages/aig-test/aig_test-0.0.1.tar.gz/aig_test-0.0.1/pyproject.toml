@@ -1,0 +1,18 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=46.4.0", "wheel>=0.36.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aig-test"
+version = "0.0.1"
+description = "test-test"
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = [
+    "aig_service.test",
+    "aig_service.test1",
+]

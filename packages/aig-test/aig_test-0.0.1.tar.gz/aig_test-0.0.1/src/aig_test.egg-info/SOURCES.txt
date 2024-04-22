@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+src/aig_service/test/__init__.py
+src/aig_service/test/service.py
+src/aig_service/test1/__init__.py
+src/aig_service/test1/service.py
+src/aig_test.egg-info/PKG-INFO
+src/aig_test.egg-info/SOURCES.txt
+src/aig_test.egg-info/dependency_links.txt
+src/aig_test.egg-info/top_level.txt
