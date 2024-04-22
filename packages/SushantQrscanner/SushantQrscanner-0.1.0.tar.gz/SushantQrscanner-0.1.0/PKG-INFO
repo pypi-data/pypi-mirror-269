@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: SushantQrscanner
+Version: 0.1.0
+Summary: An awesome QR code scanner.
+Home-page: https://github.com/its-sushant/Qrscanner
+Author: Sushant
+Author-email: example@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Qrscanner
+A simple python repo for scanning Qr code from images and writing its EAN code to a text file.
+## How to use
+For ubuntu the command to run the code is:
+`python /path/to/readbc.py /path/to/barcodes eancodes.txt`
+## Create Docker
+Use `sudo docker image build -t python:0.0.1` in Qrscanner folder to create docker image.
+## Run docker
+Use `sudo docker run python:0.0.1` 
+
+
