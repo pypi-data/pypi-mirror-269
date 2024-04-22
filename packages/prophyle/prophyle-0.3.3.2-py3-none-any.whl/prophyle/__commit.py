@@ -1,0 +1,4 @@
+BRANCH = "master"
+SHORTHASH = "ccf9987"
+REVCOUNT = 2000
+LATESTTAG = "0.3.3.2"
