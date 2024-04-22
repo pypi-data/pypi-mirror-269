@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+robotframework_parrot_usbswitchcontroller.egg-info/PKG-INFO
+robotframework_parrot_usbswitchcontroller.egg-info/SOURCES.txt
+robotframework_parrot_usbswitchcontroller.egg-info/dependency_links.txt
+robotframework_parrot_usbswitchcontroller.egg-info/requires.txt
+robotframework_parrot_usbswitchcontroller.egg-info/top_level.txt
+switch/USBSwitchController.py
+switch/__init__.py
