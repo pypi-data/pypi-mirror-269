@@ -1,0 +1,21 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"] 
+build-backend = "maturin" 
+
+[project]
+name = "preq" 
+version = "0.1.1"
+authors = [{"Antonio Braz"="antoniomtbraz@gmail.com"}]
+description = "Generates requirements.txt for Python projects." 
+requires-python = ">=3.10" 
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3.10"
+]
+
+[tool.maturin]
+name = "preq"
+kind = "bin"
+version = "0.1.1"
+bindings = "bin" 
+strip = true
