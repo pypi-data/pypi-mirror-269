@@ -1,0 +1,73 @@
+name: hpack
+version: 0.35.2
+synopsis: A modern format for Haskell packages
+description: See README at <https://github.com/sol/hpack#readme>
+maintainer: Simon Hengel <sol@typeful.net>
+github: sol/hpack
+category: Development
+extra-source-files:
+  - CHANGELOG.md
+  - resources/**/*
+
+ghc-options: -Wall -fno-warn-incomplete-uni-patterns
+
+dependencies:
+  - base >= 4.9 && < 5
+  - bytestring
+  - deepseq
+  - directory >= 1.2.5.0
+  - filepath
+  - Glob >= 0.9.0
+  - text
+  - containers
+  - unordered-containers
+  - yaml >= 0.10.0
+  - aeson >= 1.4.3.0
+  - scientific
+  - Cabal >= 3.0.0.0 && < 3.11
+  - pretty
+  - bifunctors
+  - cryptonite
+  - transformers
+  - http-types
+  - http-client
+  - http-client-tls
+  - vector
+  - infer-license >= 0.2.0 && < 0.3
+
+# See https://github.com/haskell/network/pull/552.
+when:
+  condition: impl(ghc >= 9.4.5) && os(windows)
+  dependencies: network >= 3.1.2.9
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Hpack
+    - Hpack.Config
+    - Hpack.Render
+    - Hpack.Yaml
+    - Hpack.Error
+
+executable:
+  main: Main.hs
+  source-dirs: driver
+  dependencies:
+    - hpack
+
+tests:
+  spec:
+    cpp-options: -DTEST
+    main: Spec.hs
+    source-dirs:
+      - test
+      - src
+    dependencies:
+      - hspec == 2.*
+      - QuickCheck
+      - temporary
+      - mockery >= 0.3
+      - interpolate
+      - template-haskell
+      - HUnit >= 1.6.0.0
+    build-tools: hspec-discover

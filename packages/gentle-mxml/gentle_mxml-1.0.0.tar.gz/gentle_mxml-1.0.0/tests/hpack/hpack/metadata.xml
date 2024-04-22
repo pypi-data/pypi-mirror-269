@@ -1,0 +1,10 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<maintainer>
+			<name>Simon Hengel</name>
+			<email>sol@typeful.net</email>
+		</maintainer>
+		<remote-id type="github">sol/hpack</remote-id>
+	</upstream>
+</pkgmetadata>

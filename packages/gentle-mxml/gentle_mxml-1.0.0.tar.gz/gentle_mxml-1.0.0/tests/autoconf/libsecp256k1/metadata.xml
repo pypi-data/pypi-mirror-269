@@ -1,0 +1,7 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<bugs-to>https://github.com/bitcoin-core/secp256k1/issues</bugs-to>
+		<remote-id type="github">bitcoin-core/secp256k1</remote-id>
+	</upstream>
+</pkgmetadata>

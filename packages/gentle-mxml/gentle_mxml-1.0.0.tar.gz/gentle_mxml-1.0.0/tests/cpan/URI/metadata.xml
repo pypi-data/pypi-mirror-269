@@ -1,0 +1,11 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<maintainer>
+			<name>Gisle Aas</name>
+			<email>gisle@activestate.com</email>
+		</maintainer>
+		<bugs-to>https://github.com/libwww-perl/URI/issues</bugs-to>
+		<remote-id type="github">libwww-perl/URI</remote-id>
+	</upstream>
+</pkgmetadata>

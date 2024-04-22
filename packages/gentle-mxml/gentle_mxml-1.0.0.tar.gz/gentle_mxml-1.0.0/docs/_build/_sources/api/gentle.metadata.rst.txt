@@ -1,0 +1,38 @@
+gentle.metadata
+===============
+
+.. automodule:: gentle.metadata
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      MetadataXML
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   gentle.metadata.types
+   gentle.metadata.utils
+

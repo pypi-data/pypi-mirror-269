@@ -1,0 +1,46 @@
+---
+abstract: 'Uniform Resource Identifiers (absolute and relative)'
+author:
+  - 'Gisle Aas <gisle@activestate.com>'
+build_requires:
+  ExtUtils::MakeMaker: '0'
+  File::Spec: '0'
+  File::Spec::Functions: '0'
+  File::Temp: '0'
+  Test::Fatal: '0'
+  Test::More: '0.96'
+  Test::Needs: '0'
+  Test::Warnings: '0'
+  utf8: '0'
+configure_requires:
+  ExtUtils::MakeMaker: '0'
+dynamic_config: 0
+generated_by: 'ExtUtils::MakeMaker version 7.70, CPAN::Meta::Converter version 2.150010'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: URI
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  Carp: '0'
+  Cwd: '0'
+  Data::Dumper: '0'
+  Encode: '0'
+  Exporter: '5.57'
+  MIME::Base64: '2'
+  Net::Domain: '0'
+  Scalar::Util: '0'
+  constant: '0'
+  integer: '0'
+  overload: '0'
+  parent: '0'
+  perl: '5.008001'
+  strict: '0'
+  utf8: '0'
+  warnings: '0'
+version: '5.19'
+x_serialization_backend: 'CPAN::Meta::YAML version 0.018'

@@ -1,0 +1,14 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<maintainer>
+			<name>Julian Sparber</name>
+			<email>julian.sparber@puri.sm</email>
+		</maintainer>
+		<maintainer>
+			<name>Evangelos Ribeiro Tzaras</name>
+			<email>evangelos.tzaras@puri.sm</email>
+		</maintainer>
+		<remote-id type="gnome-gitlab">GNOME/calls</remote-id>
+	</upstream>
+</pkgmetadata>

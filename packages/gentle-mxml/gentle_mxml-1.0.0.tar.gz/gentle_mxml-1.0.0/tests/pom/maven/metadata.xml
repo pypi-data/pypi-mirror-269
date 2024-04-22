@@ -1,0 +1,7 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<bugs-to>https://issues.apache.org/jira/browse/MNG</bugs-to>
+		<remote-id type="github">apache/maven</remote-id>
+	</upstream>
+</pkgmetadata>

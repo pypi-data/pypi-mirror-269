@@ -1,0 +1,33 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<maintainer status="inactive">
+			<name>Greg Beaver</name>
+			<email>cellog@php.net</email>
+		</maintainer>
+		<maintainer status="inactive">
+			<name>Pierre-Alain Joye</name>
+			<email>pierre@php.net</email>
+		</maintainer>
+		<maintainer status="inactive">
+			<name>Stig Bakken</name>
+			<email>stig@php.net</email>
+		</maintainer>
+		<maintainer status="inactive">
+			<name>Tomas V.V.Cox</name>
+			<email>cox@idecnet.com</email>
+		</maintainer>
+		<maintainer status="inactive">
+			<name>Helgi Thormar</name>
+			<email>dufuz@php.net</email>
+		</maintainer>
+		<maintainer status="inactive">
+			<name>Christian Weiske</name>
+			<email>cweiske@php.net</email>
+		</maintainer>
+		<maintainer status="active">
+			<name>Chuck Burgess</name>
+			<email>ashnazg@php.net</email>
+		</maintainer>
+	</upstream>
+</pkgmetadata>

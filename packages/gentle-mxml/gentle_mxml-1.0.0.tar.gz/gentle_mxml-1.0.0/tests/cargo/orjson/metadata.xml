@@ -1,0 +1,10 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<maintainer>
+			<name>ijl</name>
+			<email>ijl@mailbox.org</email>
+		</maintainer>
+		<remote-id type="github">ijl/orjson</remote-id>
+	</upstream>
+</pkgmetadata>

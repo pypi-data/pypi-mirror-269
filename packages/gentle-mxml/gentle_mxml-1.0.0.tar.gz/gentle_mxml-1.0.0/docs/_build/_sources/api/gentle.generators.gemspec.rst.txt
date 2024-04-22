@@ -1,0 +1,33 @@
+gentle.generators.gemspec
+=========================
+
+.. automodule:: gentle.generators.gemspec
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      DependencyTag
+      GemspecGenerator
+      RequirementTag
+      SpecificationTag
+      VersionTag
+   
+   
+
+   
+   
+   
+
+
+

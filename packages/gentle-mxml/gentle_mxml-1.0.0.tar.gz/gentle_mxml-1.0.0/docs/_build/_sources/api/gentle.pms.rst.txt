@@ -1,0 +1,31 @@
+gentle.pms
+==========
+
+.. automodule:: gentle.pms
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   gentle.pms.portagepm
+

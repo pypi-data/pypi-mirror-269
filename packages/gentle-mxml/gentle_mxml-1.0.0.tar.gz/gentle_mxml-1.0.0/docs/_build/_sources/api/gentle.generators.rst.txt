@@ -1,0 +1,49 @@
+﻿gentle.generators
+=================
+
+.. automodule:: gentle.generators
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AbstractGenerator
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   gentle.generators.autoconf
+   gentle.generators.bower
+   gentle.generators.cargo
+   gentle.generators.composer
+   gentle.generators.doap
+   gentle.generators.hpack
+   gentle.generators.npm
+   gentle.generators.nuspec
+   gentle.generators.pear
+   gentle.generators.pom
+   gentle.generators.pubspec
+   gentle.generators.python
+   gentle.generators.shards
+

@@ -1,0 +1,34 @@
+gentle.generators.python
+========================
+
+.. automodule:: gentle.generators.python
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   gentle.generators.python.pkg_info
+   gentle.generators.python.pyproject
+   gentle.generators.python.setuptools
+   gentle.generators.python.wheel
+

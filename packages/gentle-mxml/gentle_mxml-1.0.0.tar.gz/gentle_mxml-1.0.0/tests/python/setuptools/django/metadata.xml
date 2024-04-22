@@ -1,0 +1,9 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<doc>https://docs.djangoproject.com/</doc>
+		<changelog>https://docs.djangoproject.com/en/stable/releases/</changelog>
+		<remote-id type="github">django/django</remote-id>
+		<bugs-to>https://code.djangoproject.com/</bugs-to>
+	</upstream>
+</pkgmetadata>

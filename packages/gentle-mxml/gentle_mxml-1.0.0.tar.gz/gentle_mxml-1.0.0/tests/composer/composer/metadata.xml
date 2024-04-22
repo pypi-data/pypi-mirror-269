@@ -1,0 +1,14 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<maintainer>
+			<name>Nils Adermann</name>
+			<email>naderman@naderman.de</email>
+		</maintainer>
+		<maintainer>
+			<name>Jordi Boggiano</name>
+			<email>j.boggiano@seld.be</email>
+		</maintainer>
+		<bugs-to>https://github.com/composer/composer/issues</bugs-to>
+	</upstream>
+</pkgmetadata>

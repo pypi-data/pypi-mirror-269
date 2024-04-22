@@ -1,0 +1,32 @@
+gentle.metadata.types
+=====================
+
+.. automodule:: gentle.metadata.types
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      MaintainerStatus
+      Person
+      RemoteID
+      Upstream
+   
+   
+
+   
+   
+   
+
+
+

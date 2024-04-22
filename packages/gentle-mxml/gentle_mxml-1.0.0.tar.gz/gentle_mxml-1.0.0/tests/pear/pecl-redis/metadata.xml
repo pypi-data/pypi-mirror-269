@@ -1,0 +1,17 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<maintainer status="active">
+			<name>Michael Grunder</name>
+			<email>michael.grunder@gmail.com</email>
+		</maintainer>
+		<maintainer status="active">
+			<name>Pavlo Yatsukhnenko</name>
+			<email>p.yatsukhnenko@gmail.com</email>
+		</maintainer>
+		<maintainer status="inactive">
+			<name>Nicolas Favre-Felix</name>
+			<email>n.favrefelix@gmail.com</email>
+		</maintainer>
+	</upstream>
+</pkgmetadata>

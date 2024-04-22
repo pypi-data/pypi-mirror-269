@@ -1,0 +1,10 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<maintainer>
+			<name>Martin Donath</name>
+			<email>martin.donath@squidfunk.com</email>
+		</maintainer>
+		<bugs-to>https://github.com/squidfunk/mkdocs-material/issues</bugs-to>
+	</upstream>
+</pkgmetadata>

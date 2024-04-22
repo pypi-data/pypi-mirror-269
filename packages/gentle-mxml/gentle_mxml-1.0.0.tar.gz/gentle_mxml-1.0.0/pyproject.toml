@@ -1,0 +1,97 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: 2022-2023 Anna <cyber@sysrq.in>
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "gentle-mxml"
+authors = [
+    {name = "Anna", email = "cyber@sysrq.in"}
+]
+dynamic = ["version", "description"]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+dependencies = [
+    "portage",
+    "lxml"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: DFSG approved",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: System :: Software Distribution",
+    "Topic :: Utilities",
+    "Typing :: Typed"
+]
+keywords = ["gentoo", "ebuild", "metadata", "upstream", "maintainer"]
+
+[project.optional-dependencies]
+# PKG-INFO
+pkginfo = ["pkginfo"]
+# DOAP
+rdf = ["rdflib"]
+# Python packaging
+wheel = ["build>=1.2.0"]
+# package.yaml, pubspec.yaml, shard.yml
+yaml = ["PyYAML"]
+
+docs = [
+    "insipid-sphinx-theme",
+    "sphinx",
+    "sphinx-prompt"
+]
+test = [
+    "pytest",
+    "xmldiff"
+]
+
+[project.scripts]
+gentle = "gentle.__main__:main"
+
+[project.urls]
+Home = "https://gentle.sysrq.in"
+Source = "https://git.sysrq.in/gentle"
+Issues = "https://bugs.sysrq.in/enter_bug.cgi?product=Software&component=gentle"
+Changelog = "https://gentle.sysrq.in/release-notes.html"
+
+[tool.flit.module]
+name = "gentle"
+
+[tool.flit.sdist]
+include = [
+    "docs/",
+    "tests/"
+]
+exclude = [
+    "docs/api/"
+]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
+
+[tool.mypy]
+disallow_untyped_defs = true
+no_implicit_optional = true
+
+[[tool.mypy.overrides]]
+module = [
+    "tests.*",
+]
+# requiring explicit types for all test methods would be cumbersome
+disallow_untyped_defs = false
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = [
+    "_pytest.*",
+    "portage.*",
+    "xml.sax._exceptions",
+    "xmldiff.*"
+]
+ignore_missing_imports = true

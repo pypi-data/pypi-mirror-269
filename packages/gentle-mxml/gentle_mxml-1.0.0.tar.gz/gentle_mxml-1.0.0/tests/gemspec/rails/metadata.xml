@@ -1,0 +1,9 @@
+<pkgmetadata>
+	<!-- maintainer-needed -->
+	<upstream>
+		<bugs-to>https://github.com/rails/rails/issues</bugs-to>
+		<changelog>https://github.com/rails/rails/releases/tag/v7.0.6</changelog>
+		<doc>https://api.rubyonrails.org/v7.0.6/</doc>
+		<remote-id type="github">rails/rails</remote-id>
+	</upstream>
+</pkgmetadata>

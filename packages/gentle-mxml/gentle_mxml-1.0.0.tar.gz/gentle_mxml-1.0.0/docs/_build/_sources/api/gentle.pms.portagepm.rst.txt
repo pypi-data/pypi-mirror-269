@@ -1,0 +1,30 @@
+gentle.pms.portagepm
+====================
+
+.. automodule:: gentle.pms.portagepm
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      parse_mxml
+      src_unpack
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
