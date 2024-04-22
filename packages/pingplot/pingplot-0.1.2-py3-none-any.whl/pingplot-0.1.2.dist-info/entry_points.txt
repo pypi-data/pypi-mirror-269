@@ -1,0 +1,3 @@
+[console_scripts]
+pingplot=pingplot.plotping:main
+

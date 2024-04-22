@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pingplot
+Version: 0.1.2
+Summary: Create a graph depicting latency to arbitrary addresses over time
+License: MIT
+Author: DJ Stomp
+Author-email: 85457381+djstompzone@users.noreply.github.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: netifaces (>=0.11.0,<0.12.0)
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Description-Content-Type: text/markdown
+
+# pingplot
+Plot your pings
+
+## Usage
+uh
