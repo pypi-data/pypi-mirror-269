@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "etb-pg"
+version = "0.1.6"
+description = "Interface for PostgreSQL databases"
+authors = ["Tate Button <yg3bpwn0or679hau8fxi@duck.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/HFxLhT8JqeU5BnUG/etb-pg"
+exclude = ["exclude.py"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+psycopg = "^3.1.18"
+psycopg-binary = "^3.1.18"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
