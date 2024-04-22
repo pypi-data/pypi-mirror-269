@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: datable-ai
+Version: 0.0.1
+Summary: datable-ai
+License: MIT
+Author: datable
+Author-email: dev@datable.jp
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: langchain-anthropic (>=0.1.11,<0.2.0)
+Requires-Dist: langchain-openai (>=0.1.3,<0.2.0)
+Requires-Dist: openai (>=1.23.1,<2.0.0)
+Requires-Dist: pytest (>=8.1.1,<9.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# datable-ai
+datable-ai
+
