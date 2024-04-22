@@ -1,0 +1,10 @@
+setup.py
+kungfupanda/__init__.py
+kungfupanda/kungfupanda.py
+kungfupanda/post_install.py
+kungfupanda.egg-info/PKG-INFO
+kungfupanda.egg-info/SOURCES.txt
+kungfupanda.egg-info/dependency_links.txt
+kungfupanda.egg-info/entry_points.txt
+kungfupanda.egg-info/requires.txt
+kungfupanda.egg-info/top_level.txt
