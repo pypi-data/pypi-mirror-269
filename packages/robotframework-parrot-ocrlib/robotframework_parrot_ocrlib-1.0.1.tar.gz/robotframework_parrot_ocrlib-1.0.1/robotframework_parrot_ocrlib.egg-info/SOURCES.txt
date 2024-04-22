@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+ocr/OCRLib.py
+ocr/__init__.py
+robotframework_parrot_ocrlib.egg-info/PKG-INFO
+robotframework_parrot_ocrlib.egg-info/SOURCES.txt
+robotframework_parrot_ocrlib.egg-info/dependency_links.txt
+robotframework_parrot_ocrlib.egg-info/requires.txt
+robotframework_parrot_ocrlib.egg-info/top_level.txt
