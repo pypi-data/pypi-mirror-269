@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: cycling_nestedls
+Version: 1.2.0
+Summary: A light weight command line menu that supports Windows, MacOS, and Linux
+Author: aiop102
+Author-email: 3175454707@qq.com
+Keywords: list,nested,cycle
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: getch; sys_platform == "linux" or sys_platform == "darwin"
+Requires-Dist: getch; sys_platform == "win32"
+
+
+# cycling_nestedls
+
+**readme.md文件** .
+
+## Installation
+
+```
+pip install cycling_nestedls
+```
+
+## Usage
+
+example:
+
+```python
+import cycling_nestedls
+
+a=['wangzha','meiye',['zhuxiaomin','runtu','chengxiang',['qiuqiu','mixian']]]
+
+example=cycling_nestedls()
+
+test_copy=example.cycling_nestedls(a,True)
+
+#def cycling_nestedls(self,the_list,tab_switch=False,tab_levels=0)
+
+```
+
+## Get help
+
+Github地址（还没写好）
+Get help ➡️ [Github issue](https://github.com/sgys22/picture_url)
+
+## Update log
+
+`1.2.0`添加了tab缩进功能，且可导出为csv
+
+`1.0.2`修改了readme.md文件
+
+`1.0.1`第一次上传，但是代码不健全
+
+`1.0.0` first release(但是没有真正上传到PYPI，因为第一次！。)
+
+## how to upload a new version (for me)
+
+>pypi: https://packaging.python.org/tutorials/packaging-projects/
+>pypi: https://python-packaging-zh.readthedocs.io/zh_CN/latest/minimal.html#id2
+
+![png](https://raw.githubusercontent.com/cornradio/imgs/main/20230218220613.png)
+
+
+> make sure have twine installed first⭐⭐⭐
+1. change `setup.py`
+2. testing `python3 setup.py develop`
+3. `python3 setup.py sdist`
+4. `twine upload dist/*`
+![png](E:\ForDocument\Code_items\ForPython\cut_up_04-21_21-14-26.png)
+
+> 编译readme.md
+> 一级标题#，二级##
+>是高亮块(`xxx`)
+> 一级注释>
+>> 多级注释>>
+>>>代码'''python'''
+
