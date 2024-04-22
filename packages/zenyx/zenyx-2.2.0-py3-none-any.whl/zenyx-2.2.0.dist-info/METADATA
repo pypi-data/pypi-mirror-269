@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: zenyx
+Version: 2.2.0
+Summary: A multitool python object notation package
+Project-URL: Homepage, https://github.com/zewenn/zenyx
+Project-URL: Issues, https://github.com/zewenn/zenyx/issues
+Author-email: zewenn <zc.fallens@gamil.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Zenyx
+The best Python Object Notation library there is.
+
+*--- documentation coming soon ---*
+
+
+## Install
+```powershell
+python -m pip install --upgrade zenyx
+```
