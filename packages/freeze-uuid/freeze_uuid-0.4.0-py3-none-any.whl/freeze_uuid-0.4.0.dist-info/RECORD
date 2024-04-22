@@ -1,0 +1,10 @@
+freeze_uuid/__init__.py,sha256=eacK6Gp-Zp844FkA0vm7oISX80O0tVO6hTICI1kTmnk,112
+freeze_uuid/main.py,sha256=C2ascI9fxu6Btb3aq5U4to2AW48OgpSuy9fVOCK5N3E,2309
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_api.py,sha256=EYmJCt9_hIFaOR4XrMXlbPkKtrggqgrfQNYud8xvEFs,3287
+tests/testdata.py,sha256=NKJ45OaSJ5wuoZNTLd_JLv2DjxmlimlBo6gbFC4Qp6Y,422
+freeze_uuid-0.4.0.dist-info/LICENSE,sha256=-ZXqub-_VTevVY9wL4jX6-6SguGNYROcP4SSGaIENM4,1074
+freeze_uuid-0.4.0.dist-info/METADATA,sha256=A7UedJFpqAtPnkDfQ9j7I65qupozjyztNovP5FQqC-o,2577
+freeze_uuid-0.4.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+freeze_uuid-0.4.0.dist-info/top_level.txt,sha256=2iMX-SAKDVnrc8nKEpzAk0aaOK7mSPPS9PX0CrvMIoc,18
+freeze_uuid-0.4.0.dist-info/RECORD,,
