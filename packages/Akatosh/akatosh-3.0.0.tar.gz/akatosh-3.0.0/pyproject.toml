@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "Akatosh"
+version = "3.0.0"
+description = ""
+authors = ["Innovation Central Perth Maintainer <ryf0510@live.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+colorlog = "^6.8.2"
+tqdm = "^4.66.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
