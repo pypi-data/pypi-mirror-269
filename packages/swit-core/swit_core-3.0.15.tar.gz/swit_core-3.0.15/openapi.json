@@ -1,0 +1,4080 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/": {
+      "post": {
+        "summary": "Main",
+        "operationId": "main__post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SwitRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SettingsResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/SuggestionsResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BotResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/AttachmentsResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ViewsResponse"
+                    }
+                  ],
+                  "title": "Response Main  Post",
+                  "discriminator": {
+                    "propertyName": "callback_type",
+                    "mapping": {
+                      "settings.update": "#/components/schemas/SettingsResponse",
+                      "query.suggestions": "#/components/schemas/SuggestionsResponse",
+                      "bot.invite_prompt": "#/components/schemas/BotResponse",
+                      "attachments.share.channel": "#/components/schemas/AttachmentsResponse",
+                      "attachments.share.new_task": "#/components/schemas/AttachmentsResponse",
+                      "attachments.share.existing_task": "#/components/schemas/AttachmentsResponse",
+                      "views.update": "#/components/schemas/ViewsResponse",
+                      "views.initialize": "#/components/schemas/ViewsResponse",
+                      "views.open": "#/components/schemas/ViewsResponse",
+                      "views.push": "#/components/schemas/ViewsResponse",
+                      "views.close": "#/components/schemas/ViewsResponse"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AttachmentBody-Input": {
+        "properties": {
+          "elements": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/CollectionEntry-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/InfoCard-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/InteractiveImage"
+                },
+                {
+                  "$ref": "#/components/schemas/Divider"
+                },
+                {
+                  "$ref": "#/components/schemas/File"
+                },
+                {
+                  "$ref": "#/components/schemas/TextParagraph"
+                }
+              ]
+            },
+            "type": "array",
+            "maxItems": 30,
+            "title": "Elements",
+            "description": "A list of different types of objects displayed in the body."
+          }
+        },
+        "type": "object",
+        "required": [
+          "elements"
+        ],
+        "title": "AttachmentBody",
+        "description": "Houses various elements displayed in the body."
+      },
+      "AttachmentBody-Output": {
+        "properties": {
+          "elements": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/CollectionEntry-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/InfoCard-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/InteractiveImage"
+                },
+                {
+                  "$ref": "#/components/schemas/Divider"
+                },
+                {
+                  "$ref": "#/components/schemas/File"
+                },
+                {
+                  "$ref": "#/components/schemas/TextParagraph"
+                }
+              ]
+            },
+            "type": "array",
+            "maxItems": 30,
+            "title": "Elements",
+            "description": "A list of different types of objects displayed in the body."
+          }
+        },
+        "type": "object",
+        "required": [
+          "elements"
+        ],
+        "title": "AttachmentBody",
+        "description": "Houses various elements displayed in the body."
+      },
+      "AttachmentDestinationHint": {
+        "properties": {
+          "workspace_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Workspace Id",
+            "description": "The ID of the workspace where the attachment is shared.",
+            "examples": [
+              "220318163840UVCAkuZ"
+            ]
+          },
+          "channel_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Channel Id",
+            "description": "The ID of the channel where the attachment is shared.",
+            "examples": [
+              "220319082780j5qkr15"
+            ]
+          },
+          "project_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Project Id",
+            "description": "The ID of the project where the attachment is shared.",
+            "examples": [
+              "220626100212677TFKW"
+            ]
+          },
+          "task_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Task Id",
+            "description": "The ID of the task where the attachment is shared.",
+            "examples": [
+              "2311090618555579FYFN"
+            ]
+          }
+        },
+        "type": "object",
+        "title": "AttachmentDestinationHint",
+        "description": "Provides the user with preselected destinations for sharing the attachment. Based on the callback type, use the appropriate properties.\n\n- `attachments.share.channel`: If a valid `workspace_id` is provided, it leads to the preselection of the workspace. If both a valid `workspace_id` and a valid `channel_id` are provided, then both the workspace and channel are preselected.\n- `attachments.share.new_task`: If a valid `workspace_id` is provided, it leads to the preselection of the workspace. If both a valid `workspace_id` and a valid `project_id` are provided, then both the workspace and project are preselected.\n- `attachments.share.existing_task`: If a valid `workspace_id` is provided, it leads to the preselection of the workspace. If both a valid `workspace_id` and a valid `project_id` are provided, then both the workspace and project are preselected. If a valid `workspace_id`, `project_id`, and `task_id` are provided, then all three are preselected."
+      },
+      "AttachmentHeader": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "The title displayed in the header."
+          },
+          "subtitle": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Subtitle",
+            "description": "The subtitle displayed in the header."
+          },
+          "app_id": {
+            "type": "string",
+            "title": "App Id",
+            "description": "The ID of your app. This ID is used to display your app's icon in the attachment."
+          },
+          "icon": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Image"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The icon to display in the header. If not passed, the app icon registered in the Developer Console will appear."
+          }
+        },
+        "type": "object",
+        "required": [
+          "title",
+          "app_id"
+        ],
+        "title": "AttachmentHeader",
+        "description": "Holds the properties of the header section."
+      },
+      "AttachmentView-Input": {
+        "properties": {
+          "state": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "\n            Stores a string value persisting stateful user information.\n            This value is included in subsequent user action requests from the current view via the current_view parameter.\n            For more details on how to use the state parameter effectively, see the Using the state parameter guide.",
+                "examples": [
+                  "string"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "State"
+          },
+          "header": {
+            "$ref": "#/components/schemas/AttachmentHeader"
+          },
+          "footer": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Footer-Input"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "body": {
+            "$ref": "#/components/schemas/AttachmentBody-Input"
+          }
+        },
+        "type": "object",
+        "required": [
+          "header",
+          "body"
+        ],
+        "title": "AttachmentView",
+        "description": "Defines the structure of an attachment view with customizable sections—header, body, and footer—similar to a standard view but designed specifically for attachments."
+      },
+      "AttachmentView-Output": {
+        "properties": {
+          "state": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "\n            Stores a string value persisting stateful user information.\n            This value is included in subsequent user action requests from the current view via the current_view parameter.\n            For more details on how to use the state parameter effectively, see the Using the state parameter guide.",
+                "examples": [
+                  "string"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "State"
+          },
+          "header": {
+            "$ref": "#/components/schemas/AttachmentHeader"
+          },
+          "footer": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Footer-Output"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "body": {
+            "$ref": "#/components/schemas/AttachmentBody-Output"
+          }
+        },
+        "type": "object",
+        "required": [
+          "header",
+          "body"
+        ],
+        "title": "AttachmentView",
+        "description": "Defines the structure of an attachment view with customizable sections—header, body, and footer—similar to a standard view but designed specifically for attachments."
+      },
+      "AttachmentsResponse": {
+        "properties": {
+          "callback_type": {
+            "type": "string",
+            "enum": [
+              "attachments.share.channel",
+              "attachments.share.new_task",
+              "attachments.share.existing_task"
+            ],
+            "title": "Callback Type",
+            "description": "\n            Specifies the sharing destination of the attachment.\n            \n            - `attachments.share.channel`: Create a message with the attachment in the user-selected channel.\n            - `attachments.share.new_task`: Create a task with the attachment in the user-selected project.\n            - `attachments.share.existing_task`: Add the attachment to an existing task.\n        "
+          },
+          "attachments": {
+            "items": {
+              "$ref": "#/components/schemas/AttachmentView-Output"
+            },
+            "type": "array",
+            "maxItems": 1,
+            "minItems": 1,
+            "title": "Attachments"
+          },
+          "destination_hint": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AttachmentDestinationHint"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "callback_type",
+          "attachments"
+        ],
+        "title": "AttachmentsResponse",
+        "description": "This callback enables sharing an attachment to a specified location. As this callback prompts user confirmation, no unique user token is needed to post the data on behalf of the user."
+      },
+      "Background": {
+        "properties": {
+          "color": {
+            "type": "string",
+            "enum": [
+              "none",
+              "lightblue"
+            ],
+            "title": "Color",
+            "default": "none"
+          }
+        },
+        "type": "object",
+        "title": "Background",
+        "description": "CollectionEntry Background"
+      },
+      "Body-Input": {
+        "properties": {
+          "elements": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/CollectionEntry-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/Button"
+                },
+                {
+                  "$ref": "#/components/schemas/Divider"
+                },
+                {
+                  "$ref": "#/components/schemas/File"
+                },
+                {
+                  "$ref": "#/components/schemas/HtmlFrame"
+                },
+                {
+                  "$ref": "#/components/schemas/TextInput"
+                },
+                {
+                  "$ref": "#/components/schemas/Select-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/SignInPage-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/TextParagraph"
+                },
+                {
+                  "$ref": "#/components/schemas/Image"
+                },
+                {
+                  "$ref": "#/components/schemas/Textarea"
+                },
+                {
+                  "$ref": "#/components/schemas/Container-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/Tabs-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/DatePicker"
+                },
+                {
+                  "$ref": "#/components/schemas/InfoCard-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/ImageGrid-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/InteractiveImage"
+                }
+              ]
+            },
+            "type": "array",
+            "maxItems": 100,
+            "title": "Elements",
+            "description": "A list of different types of objects displayed in the body."
+          }
+        },
+        "type": "object",
+        "required": [
+          "elements"
+        ],
+        "title": "Body",
+        "description": "Houses various elements displayed in the body."
+      },
+      "Body-Output": {
+        "properties": {
+          "elements": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/CollectionEntry-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/Button"
+                },
+                {
+                  "$ref": "#/components/schemas/Divider"
+                },
+                {
+                  "$ref": "#/components/schemas/File"
+                },
+                {
+                  "$ref": "#/components/schemas/HtmlFrame"
+                },
+                {
+                  "$ref": "#/components/schemas/TextInput"
+                },
+                {
+                  "$ref": "#/components/schemas/Select-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/SignInPage-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/TextParagraph"
+                },
+                {
+                  "$ref": "#/components/schemas/Image"
+                },
+                {
+                  "$ref": "#/components/schemas/Textarea"
+                },
+                {
+                  "$ref": "#/components/schemas/Container-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/Tabs-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/DatePicker"
+                },
+                {
+                  "$ref": "#/components/schemas/InfoCard-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/ImageGrid-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/InteractiveImage"
+                }
+              ]
+            },
+            "type": "array",
+            "maxItems": 100,
+            "title": "Elements",
+            "description": "A list of different types of objects displayed in the body."
+          }
+        },
+        "type": "object",
+        "required": [
+          "elements"
+        ],
+        "title": "Body",
+        "description": "Houses various elements displayed in the body."
+      },
+      "BotResponse": {
+        "properties": {
+          "callback_type": {
+            "type": "string",
+            "enum": [
+              "bot.invite_prompt"
+            ],
+            "const": "bot.invite_prompt",
+            "title": "Callback Type",
+            "description": "Specifies the action to be performed by the bot user. Currently, it can prompt the user to invite the bot to a specific channel or project."
+          },
+          "destination": {
+            "$ref": "#/components/schemas/Destination"
+          }
+        },
+        "type": "object",
+        "required": [
+          "callback_type",
+          "destination"
+        ],
+        "title": "BotResponse",
+        "description": "This callback governs the behavior of the bot user associated with your app."
+      },
+      "Button": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "button"
+            ],
+            "const": "button",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "A label string for the button.",
+            "examples": [
+              "Click"
+            ]
+          },
+          "style": {
+            "type": "string",
+            "enum": [
+              "primary",
+              "secondary",
+              "primary_filled",
+              "danger_filled"
+            ],
+            "title": "Style",
+            "description": "Visual style for the button.",
+            "default": "secondary"
+          },
+          "disabled": {
+            "type": "boolean",
+            "title": "Disabled",
+            "description": "Determines whether the button is disabled. If `true`, the button is not active.",
+            "default": false
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "static_action": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/OpenOauthPopup"
+                  },
+                  {
+                    "$ref": "#/components/schemas/OpenLink"
+                  },
+                  {
+                    "$ref": "#/components/schemas/WriteToClipboard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CloseView"
+                  }
+                ],
+                "description": "Static Action",
+                "discriminator": {
+                  "propertyName": "action_type",
+                  "mapping": {
+                    "close_view": "#/components/schemas/CloseView",
+                    "open_link": "#/components/schemas/OpenLink",
+                    "open_oauth_popup": "#/components/schemas/OpenOauthPopup",
+                    "write_to_clipboard": "#/components/schemas/WriteToClipboard"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Static Action"
+          },
+          "icon": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Image"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "An Image object that replaces the label. Only applicable when this element is used in the header."
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "label"
+        ],
+        "title": "Button",
+        "description": "An element representing a button."
+      },
+      "CloseView": {
+        "properties": {
+          "action_type": {
+            "type": "string",
+            "enum": [
+              "close_view"
+            ],
+            "const": "close_view",
+            "title": "Action Type",
+            "description": "The action performed by this component.",
+            "default": "close_view",
+            "examples": [
+              "close_view"
+            ]
+          }
+        },
+        "type": "object",
+        "title": "CloseView",
+        "description": "Close the current view."
+      },
+      "CollectionEntry-Input": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "collection_entry"
+            ],
+            "const": "collection_entry",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "text_sections": {
+            "items": {
+              "$ref": "#/components/schemas/TextSection-Input"
+            },
+            "type": "array",
+            "maxItems": 3,
+            "minItems": 1,
+            "title": "Text Sections",
+            "description": "An array of text sections in the body of the collection entry."
+          },
+          "start_section": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Image"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The image to be displayed in the start section."
+          },
+          "vertical_alignment": {
+            "type": "string",
+            "enum": [
+              "top",
+              "middle",
+              "bottom"
+            ],
+            "title": "Vertical Alignment",
+            "description": "Specifies the vertical alignment of the content within the collection entry.",
+            "default": "top",
+            "examples": [
+              "middle"
+            ]
+          },
+          "background": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Background"
+              }
+            ],
+            "default": {
+              "color": "none"
+            }
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "static_action": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/OpenOauthPopup"
+                  },
+                  {
+                    "$ref": "#/components/schemas/OpenLink"
+                  },
+                  {
+                    "$ref": "#/components/schemas/WriteToClipboard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CloseView"
+                  }
+                ],
+                "description": "Static Action",
+                "discriminator": {
+                  "propertyName": "action_type",
+                  "mapping": {
+                    "close_view": "#/components/schemas/CloseView",
+                    "open_link": "#/components/schemas/OpenLink",
+                    "open_oauth_popup": "#/components/schemas/OpenOauthPopup",
+                    "write_to_clipboard": "#/components/schemas/WriteToClipboard"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Static Action"
+          },
+          "draggable": {
+            "type": "boolean",
+            "title": "Draggable",
+            "description": "Determines whether the element can be dragged and dropped onto channels when in a right panel view. When set to `true`, dropping this element triggers a user action request of type `view_actions.drop`.",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "text_sections"
+        ],
+        "title": "CollectionEntry",
+        "description": "An element representing a collection entry. An itemized list can be assembled by arranging multiple instances of this element."
+      },
+      "CollectionEntry-Output": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "collection_entry"
+            ],
+            "const": "collection_entry",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "text_sections": {
+            "items": {
+              "$ref": "#/components/schemas/TextSection-Output"
+            },
+            "type": "array",
+            "maxItems": 3,
+            "minItems": 1,
+            "title": "Text Sections",
+            "description": "An array of text sections in the body of the collection entry."
+          },
+          "start_section": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Image"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The image to be displayed in the start section."
+          },
+          "vertical_alignment": {
+            "type": "string",
+            "enum": [
+              "top",
+              "middle",
+              "bottom"
+            ],
+            "title": "Vertical Alignment",
+            "description": "Specifies the vertical alignment of the content within the collection entry.",
+            "default": "top",
+            "examples": [
+              "middle"
+            ]
+          },
+          "background": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Background"
+              }
+            ],
+            "default": {
+              "color": "none"
+            }
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "static_action": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/OpenOauthPopup"
+                  },
+                  {
+                    "$ref": "#/components/schemas/OpenLink"
+                  },
+                  {
+                    "$ref": "#/components/schemas/WriteToClipboard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CloseView"
+                  }
+                ],
+                "description": "Static Action",
+                "discriminator": {
+                  "propertyName": "action_type",
+                  "mapping": {
+                    "close_view": "#/components/schemas/CloseView",
+                    "open_link": "#/components/schemas/OpenLink",
+                    "open_oauth_popup": "#/components/schemas/OpenOauthPopup",
+                    "write_to_clipboard": "#/components/schemas/WriteToClipboard"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Static Action"
+          },
+          "draggable": {
+            "type": "boolean",
+            "title": "Draggable",
+            "description": "Determines whether the element can be dragged and dropped onto channels when in a right panel view. When set to `true`, dropping this element triggers a user action request of type `view_actions.drop`.",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "text_sections"
+        ],
+        "title": "CollectionEntry",
+        "description": "An element representing a collection entry. An itemized list can be assembled by arranging multiple instances of this element."
+      },
+      "CollectionEntryTextStyle": {
+        "properties": {
+          "bold": {
+            "type": "boolean",
+            "title": "Bold",
+            "default": false
+          },
+          "color": {
+            "type": "string",
+            "enum": [
+              "gray900",
+              "gray800",
+              "gray700"
+            ],
+            "title": "Color",
+            "default": "gray900"
+          },
+          "size": {
+            "type": "string",
+            "enum": [
+              "medium",
+              "large"
+            ],
+            "title": "Size",
+            "default": "medium"
+          },
+          "max_lines": {
+            "type": "integer",
+            "maximum": 2.0,
+            "minimum": 0.0,
+            "title": "Max Lines",
+            "default": 0
+          }
+        },
+        "type": "object",
+        "title": "CollectionEntryTextStyle",
+        "description": "An object that may contain styling properties depending on its usage within another element."
+      },
+      "Container-Input": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "container"
+            ],
+            "const": "container",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "elements": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Select-Input"
+                },
+                {
+                  "$ref": "#/components/schemas/Button"
+                },
+                {
+                  "$ref": "#/components/schemas/DatePicker"
+                }
+              ]
+            },
+            "type": "array",
+            "maxItems": 8,
+            "minItems": 1,
+            "title": "Elements",
+            "description": "The elements to include in the container."
+          }
+        },
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "title": "Container",
+        "description": "A container for placing multiple elements like buttons, datepickers, and dropdowns in a single horizontal row."
+      },
+      "Container-Output": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "container"
+            ],
+            "const": "container",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "elements": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Select-Output"
+                },
+                {
+                  "$ref": "#/components/schemas/Button"
+                },
+                {
+                  "$ref": "#/components/schemas/DatePicker"
+                }
+              ]
+            },
+            "type": "array",
+            "maxItems": 8,
+            "minItems": 1,
+            "title": "Elements",
+            "description": "The elements to include in the container."
+          }
+        },
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "title": "Container",
+        "description": "A container for placing multiple elements like buttons, datepickers, and dropdowns in a single horizontal row."
+      },
+      "Context": {
+        "properties": {
+          "workspace_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Workspace Id"
+          },
+          "channel_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Channel Id"
+          },
+          "project_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Project Id"
+          },
+          "task_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Task Id"
+          }
+        },
+        "type": "object",
+        "title": "Context"
+      },
+      "DatePicker": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "datepicker"
+            ],
+            "const": "datepicker",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "placeholder": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Placeholder",
+            "description": "A placeholder string for the datepicker field."
+          },
+          "trigger_on_input": {
+            "type": "boolean",
+            "title": "Trigger On Input",
+            "description": "If `true`, selecting a date triggers a user action request to your app server.",
+            "default": false
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value",
+            "description": "The date value entered in the field.",
+            "examples": [
+              "2022-11-23T00:00:00.000Z"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "title": "DatePicker",
+        "description": "An element representing a datepicker field."
+      },
+      "Destination": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "channel",
+              "project"
+            ],
+            "title": "Type"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "id"
+        ],
+        "title": "Destination",
+        "description": "BotResponse destination"
+      },
+      "Divider": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "divider"
+            ],
+            "const": "divider",
+            "title": "Type",
+            "description": "Type of the element."
+          }
+        },
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "title": "Divider",
+        "description": "An element representing a horizontal divider."
+      },
+      "File": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "file"
+            ],
+            "const": "file",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "file_type": {
+            "type": "string",
+            "enum": [
+              "image",
+              "video",
+              "document",
+              "pdf",
+              "presentation",
+              "spreadsheet",
+              "archive",
+              "psd",
+              "ai",
+              "other"
+            ],
+            "title": "File Type",
+            "description": "A sting representing the type of a file.",
+            "default": "other"
+          },
+          "file_size": {
+            "type": "integer",
+            "title": "File Size",
+            "description": "Size of the file in bytes"
+          },
+          "file_name": {
+            "type": "string",
+            "title": "File Name",
+            "description": "Name of the file.",
+            "examples": [
+              "membership.csv"
+            ]
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "static_action": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/OpenOauthPopup"
+                  },
+                  {
+                    "$ref": "#/components/schemas/OpenLink"
+                  },
+                  {
+                    "$ref": "#/components/schemas/WriteToClipboard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CloseView"
+                  }
+                ],
+                "description": "Static Action",
+                "discriminator": {
+                  "propertyName": "action_type",
+                  "mapping": {
+                    "close_view": "#/components/schemas/CloseView",
+                    "open_link": "#/components/schemas/OpenLink",
+                    "open_oauth_popup": "#/components/schemas/OpenOauthPopup",
+                    "write_to_clipboard": "#/components/schemas/WriteToClipboard"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Static Action"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "file_size",
+          "file_name"
+        ],
+        "title": "File",
+        "description": "An element representing a file item."
+      },
+      "Footer-Input": {
+        "properties": {
+          "buttons": {
+            "items": {
+              "$ref": "#/components/schemas/Button"
+            },
+            "type": "array",
+            "maxItems": 2,
+            "title": "Buttons",
+            "description": "A list of `Button` objects in the footer."
+          }
+        },
+        "type": "object",
+        "title": "Footer",
+        "description": "Contains buttons displayed in the footer."
+      },
+      "Footer-Output": {
+        "properties": {
+          "buttons": {
+            "items": {
+              "$ref": "#/components/schemas/Button"
+            },
+            "type": "array",
+            "maxItems": 2,
+            "title": "Buttons",
+            "description": "A list of `Button` objects in the footer."
+          }
+        },
+        "type": "object",
+        "title": "Footer",
+        "description": "Contains buttons displayed in the footer."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Header-Input": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "The title displayed in the header."
+          },
+          "subtitle": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Subtitle",
+            "description": "The subtitle displayed in the header."
+          },
+          "context_menu": {
+            "items": {
+              "$ref": "#/components/schemas/SelectItem"
+            },
+            "type": "array",
+            "maxItems": 30,
+            "title": "Context Menu",
+            "description": "A list of SelectItem objects appearing when the user opens the context menu."
+          },
+          "buttons": {
+            "items": {
+              "$ref": "#/components/schemas/Button"
+            },
+            "type": "array",
+            "maxItems": 1,
+            "title": "Buttons",
+            "description": "A list of Button objects in the header. Note that in the header, the icon field is used instead of label."
+          }
+        },
+        "type": "object",
+        "required": [
+          "title"
+        ],
+        "title": "Header",
+        "description": "Holds the properties of the header section."
+      },
+      "Header-Output": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "The title displayed in the header."
+          },
+          "subtitle": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Subtitle",
+            "description": "The subtitle displayed in the header."
+          },
+          "context_menu": {
+            "items": {
+              "$ref": "#/components/schemas/SelectItem"
+            },
+            "type": "array",
+            "maxItems": 30,
+            "title": "Context Menu",
+            "description": "A list of SelectItem objects appearing when the user opens the context menu."
+          },
+          "buttons": {
+            "items": {
+              "$ref": "#/components/schemas/Button"
+            },
+            "type": "array",
+            "maxItems": 1,
+            "title": "Buttons",
+            "description": "A list of Button objects in the header. Note that in the header, the icon field is used instead of label."
+          }
+        },
+        "type": "object",
+        "required": [
+          "title"
+        ],
+        "title": "Header",
+        "description": "Holds the properties of the header section."
+      },
+      "HtmlFrame": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "html_frame"
+            ],
+            "const": "html_frame",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "html_content": {
+            "type": "string",
+            "title": "Html Content",
+            "description": "The HTML content to be displayed in the frame.",
+            "examples": [
+              "<h1>Hello, Swit!</h1>"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "html_content"
+        ],
+        "title": "HtmlFrame",
+        "description": "An element to render custom HTML content in the view.\n> On mobile, using this element together with other elements in the same view may lead to unexpected changes in the height of this element."
+      },
+      "Image": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "image"
+            ],
+            "const": "image",
+            "title": "Type",
+            "description": "Type of the element.",
+            "default": "image",
+            "examples": [
+              "image"
+            ]
+          },
+          "image_url": {
+            "type": "string",
+            "title": "Image Url",
+            "description": "The URL of the image.",
+            "examples": [
+              "https://example.com/image.jpg"
+            ]
+          },
+          "alt": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Alt",
+            "description": "The alternative text that appears instead of an image when the image does not load due to issues like a network connection error or broken link.",
+            "examples": [
+              "image test"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "image_url"
+        ],
+        "title": "Image",
+        "description": "A reusable object that represents an image embedded in an element."
+      },
+      "ImageGrid-Input": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "image_grid"
+            ],
+            "const": "image_grid",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "images": {
+            "items": {
+              "$ref": "#/components/schemas/InteractiveImage"
+            },
+            "type": "array",
+            "maxItems": 48,
+            "minItems": 1,
+            "title": "Images",
+            "description": "An array of InteractiveImage objects organized into a grid structure."
+          },
+          "column_count": {
+            "type": "integer",
+            "maximum": 3.0,
+            "minimum": 2.0,
+            "title": "Column Count",
+            "description": "The number of images displayed in a single row.",
+            "examples": [
+              2
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "images",
+          "column_count"
+        ],
+        "title": "ImageGrid",
+        "description": "A grid of images with each row containing up to 3 images."
+      },
+      "ImageGrid-Output": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "image_grid"
+            ],
+            "const": "image_grid",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "images": {
+            "items": {
+              "$ref": "#/components/schemas/InteractiveImage"
+            },
+            "type": "array",
+            "maxItems": 48,
+            "minItems": 1,
+            "title": "Images",
+            "description": "An array of InteractiveImage objects organized into a grid structure."
+          },
+          "column_count": {
+            "type": "integer",
+            "maximum": 3.0,
+            "minimum": 2.0,
+            "title": "Column Count",
+            "description": "The number of images displayed in a single row.",
+            "examples": [
+              2
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "images",
+          "column_count"
+        ],
+        "title": "ImageGrid",
+        "description": "A grid of images with each row containing up to 3 images."
+      },
+      "InfoCard-Input": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "info_card"
+            ],
+            "const": "info_card",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/Item-Input"
+            },
+            "type": "array",
+            "maxItems": 30,
+            "minItems": 1,
+            "title": "Items"
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "draggable": {
+            "type": "boolean",
+            "title": "Draggable",
+            "description": "Determines whether the element can be dragged and dropped onto channels when in a right panel view. When set to `true`, dropping this element triggers a user action request of type `view_actions.drop`.",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "items"
+        ],
+        "title": "InfoCard",
+        "description": "An element representing an info card."
+      },
+      "InfoCard-Output": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "info_card"
+            ],
+            "const": "info_card",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/Item-Output"
+            },
+            "type": "array",
+            "maxItems": 30,
+            "minItems": 1,
+            "title": "Items"
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "draggable": {
+            "type": "boolean",
+            "title": "Draggable",
+            "description": "Determines whether the element can be dragged and dropped onto channels when in a right panel view. When set to `true`, dropping this element triggers a user action request of type `view_actions.drop`.",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "items"
+        ],
+        "title": "InfoCard",
+        "description": "An element representing an info card."
+      },
+      "IntegratedService": {
+        "properties": {
+          "icon": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Image"
+              }
+            ],
+            "description": "Icon image representing the partner service."
+          }
+        },
+        "type": "object",
+        "required": [
+          "icon"
+        ],
+        "title": "IntegratedService",
+        "description": "Information about the partner service to be integrated with Swit."
+      },
+      "InteractiveImage": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "interactive_image"
+            ],
+            "const": "interactive_image",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "image_url": {
+            "type": "string",
+            "title": "Image Url",
+            "description": "The URL of the image.",
+            "examples": [
+              "https://swit.io/assets/images/home/features/device"
+            ]
+          },
+          "alt": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Alt",
+            "description": "The alternative text that appears instead of an image when the image does not load due to issues like a network connection error or broken link.",
+            "examples": [
+              "image test"
+            ]
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "static_action": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/OpenOauthPopup"
+                  },
+                  {
+                    "$ref": "#/components/schemas/OpenLink"
+                  },
+                  {
+                    "$ref": "#/components/schemas/WriteToClipboard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CloseView"
+                  }
+                ],
+                "description": "Static Action",
+                "discriminator": {
+                  "propertyName": "action_type",
+                  "mapping": {
+                    "close_view": "#/components/schemas/CloseView",
+                    "open_link": "#/components/schemas/OpenLink",
+                    "open_oauth_popup": "#/components/schemas/OpenOauthPopup",
+                    "write_to_clipboard": "#/components/schemas/WriteToClipboard"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Static Action"
+          },
+          "draggable": {
+            "type": "boolean",
+            "title": "Draggable",
+            "description": "Determines whether the element can be dragged and dropped onto channels when in a right panel view. When set to `true`, dropping this element triggers a user action request of type `view_actions.drop`.",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "image_url"
+        ],
+        "title": "InteractiveImage",
+        "description": "An element representing an embedded image with interactivity capabilities such as triggering actions upon user actions."
+      },
+      "Item-Input": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "text": {
+            "$ref": "#/components/schemas/TextParagraph"
+          }
+        },
+        "type": "object",
+        "required": [
+          "label",
+          "text"
+        ],
+        "title": "Item",
+        "description": "InfoCard Item"
+      },
+      "Item-Output": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "text": {
+            "$ref": "#/components/schemas/TextParagraph"
+          }
+        },
+        "type": "object",
+        "required": [
+          "label",
+          "text"
+        ],
+        "title": "Item",
+        "description": "InfoCard Item"
+      },
+      "NoOptionsReason": {
+        "properties": {
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "description": "An explanatory message to display why no search results are returned.",
+            "examples": [
+              "No results found"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "message"
+        ],
+        "title": "NoOptionsReason",
+        "description": "Used to indicate the absence of search results. This takes precedence over `options` and `option_groups` if they're passed together."
+      },
+      "OpenLink": {
+        "properties": {
+          "action_type": {
+            "type": "string",
+            "enum": [
+              "open_link"
+            ],
+            "const": "open_link",
+            "title": "Action Type",
+            "description": "The action performed by this component.",
+            "default": "open_link",
+            "examples": [
+              "open_link"
+            ]
+          },
+          "link_url": {
+            "type": "string",
+            "title": "Link Url",
+            "description": "The URL to be opened in a new browser tab.",
+            "examples": [
+              "https://example.com"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "link_url"
+        ],
+        "title": "OpenLink",
+        "description": "Open a new browser tab with the URL provided in link_url."
+      },
+      "OpenOauthPopup": {
+        "properties": {
+          "action_type": {
+            "type": "string",
+            "enum": [
+              "open_oauth_popup"
+            ],
+            "const": "open_oauth_popup",
+            "title": "Action Type",
+            "description": "The action performed by this component.",
+            "default": "open_oauth_popup",
+            "examples": [
+              "open_oauth_popup"
+            ]
+          },
+          "link_url": {
+            "type": "string",
+            "title": "Link Url",
+            "description": "The URL to be opened in a popup window.",
+            "examples": [
+              "https://example.com"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "link_url"
+        ],
+        "title": "OpenOauthPopup",
+        "description": "Open a popup with the URL provided in link_url. When the popup is closed, it triggers a user action request which includes your specified `action_id` in the same element.\n\n**Cautions:**\n\n1. Ensure that an `action_id` is included with this object within the element. This is crucial for your server to correctly identify the user action request.\n1. This object is only compatible in a `View` context, and not in an `AttachmentView`."
+      },
+      "Option-Input": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "A label string for the selectable item.",
+            "examples": [
+              "Channels"
+            ]
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "static_action": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/OpenOauthPopup"
+                  },
+                  {
+                    "$ref": "#/components/schemas/OpenLink"
+                  },
+                  {
+                    "$ref": "#/components/schemas/WriteToClipboard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CloseView"
+                  }
+                ],
+                "description": "Static Action",
+                "discriminator": {
+                  "propertyName": "action_type",
+                  "mapping": {
+                    "close_view": "#/components/schemas/CloseView",
+                    "open_link": "#/components/schemas/OpenLink",
+                    "open_oauth_popup": "#/components/schemas/OpenOauthPopup",
+                    "write_to_clipboard": "#/components/schemas/WriteToClipboard"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Static Action"
+          },
+          "icon": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Image"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tag": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Tag"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "label"
+        ],
+        "title": "Option",
+        "description": "Select Option"
+      },
+      "Option-Output": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "A label string for the selectable item.",
+            "examples": [
+              "Channels"
+            ]
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "static_action": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/OpenOauthPopup"
+                  },
+                  {
+                    "$ref": "#/components/schemas/OpenLink"
+                  },
+                  {
+                    "$ref": "#/components/schemas/WriteToClipboard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CloseView"
+                  }
+                ],
+                "description": "Static Action",
+                "discriminator": {
+                  "propertyName": "action_type",
+                  "mapping": {
+                    "close_view": "#/components/schemas/CloseView",
+                    "open_link": "#/components/schemas/OpenLink",
+                    "open_oauth_popup": "#/components/schemas/OpenOauthPopup",
+                    "write_to_clipboard": "#/components/schemas/WriteToClipboard"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Static Action"
+          },
+          "icon": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Image"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tag": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Tag"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "label"
+        ],
+        "title": "Option",
+        "description": "Select Option"
+      },
+      "OptionGroup-Input": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "The heading, or category title, for the group of options it encompasses.",
+            "examples": [
+              "Channels"
+            ]
+          },
+          "options": {
+            "items": {
+              "$ref": "#/components/schemas/Option-Input"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Options",
+            "description": "Each group's array of selectable items."
+          }
+        },
+        "type": "object",
+        "required": [
+          "label",
+          "options"
+        ],
+        "title": "OptionGroup"
+      },
+      "OptionGroup-Output": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "The heading, or category title, for the group of options it encompasses.",
+            "examples": [
+              "Channels"
+            ]
+          },
+          "options": {
+            "items": {
+              "$ref": "#/components/schemas/Option-Output"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Options",
+            "description": "Each group's array of selectable items."
+          }
+        },
+        "type": "object",
+        "required": [
+          "label",
+          "options"
+        ],
+        "title": "OptionGroup"
+      },
+      "ResourceMessage": {
+        "properties": {
+          "resource_type": {
+            "type": "string",
+            "enum": [
+              "message"
+            ],
+            "const": "message",
+            "title": "Resource Type",
+            "default": "message"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "edited_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Edited At"
+          },
+          "content": {
+            "type": "string",
+            "title": "Content"
+          },
+          "content_formatted": {
+            "anyOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Content Formatted"
+          },
+          "attachments": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Attachments"
+          },
+          "files": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Files"
+          },
+          "creator": {
+            "type": "object",
+            "title": "Creator"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "created_at",
+          "content",
+          "creator"
+        ],
+        "title": "ResourceMessage"
+      },
+      "ResourceMessageComment": {
+        "properties": {
+          "resource_type": {
+            "type": "string",
+            "enum": [
+              "message_comment"
+            ],
+            "const": "message_comment",
+            "title": "Resource Type",
+            "description": "Type of the resource.",
+            "default": "message_comment"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "edited_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Edited At"
+          },
+          "content": {
+            "type": "string",
+            "title": "Content"
+          },
+          "content_formatted": {
+            "anyOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Content Formatted"
+          },
+          "attachments": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Attachments"
+          },
+          "files": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Files"
+          },
+          "creator": {
+            "type": "object",
+            "title": "Creator"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "created_at",
+          "content",
+          "creator"
+        ],
+        "title": "ResourceMessageComment",
+        "description": "The details of the selected comment, which are added when `user_action.type=user_commands.context_menus:message_comment`."
+      },
+      "ResourceQuery": {
+        "properties": {
+          "resource_type": {
+            "type": "string",
+            "enum": [
+              "query"
+            ],
+            "const": "query",
+            "title": "Resource Type",
+            "description": "Type of the resource.",
+            "default": "query"
+          },
+          "value": {
+            "type": "string",
+            "title": "Value",
+            "description": "The query keyword input by the user.",
+            "examples": [
+              "keyword"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "title": "ResourceQuery",
+        "description": "This parameter contains the search query input by the user."
+      },
+      "ResourceSettingsPresenceSync": {
+        "properties": {
+          "resource_type": {
+            "type": "string",
+            "enum": [
+              "settings.presence_sync"
+            ],
+            "const": "settings.presence_sync",
+            "title": "Resource Type",
+            "default": "settings.presence_sync"
+          },
+          "settings": {
+            "$ref": "#/components/schemas/Settings"
+          }
+        },
+        "type": "object",
+        "required": [
+          "settings"
+        ],
+        "title": "ResourceSettingsPresenceSync"
+      },
+      "Select-Input": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "select"
+            ],
+            "const": "select",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "placeholder": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Placeholder",
+            "description": "A placeholder string for the dropdown."
+          },
+          "multiselect": {
+            "type": "boolean",
+            "title": "Multiselect",
+            "description": "Determines whether multiple selections are allowed. If `true`, the `trigger_on_input` value is ignored.",
+            "default": false
+          },
+          "trigger_on_input": {
+            "type": "boolean",
+            "title": "Trigger On Input",
+            "description": "If `true`, selecting an item from the dropdown triggers a user action request to your app server.",
+            "default": false
+          },
+          "value": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Value",
+            "description": "List of the selected options’ `action_id` values."
+          },
+          "options": {
+            "items": {
+              "$ref": "#/components/schemas/Option-Input"
+            },
+            "type": "array",
+            "title": "Options",
+            "description": "An array of selectable items. When passed with `no_options_reason`, this is ignored."
+          },
+          "option_groups": {
+            "items": {
+              "$ref": "#/components/schemas/OptionGroup-Input"
+            },
+            "type": "array",
+            "title": "Option Groups",
+            "description": "An array of labeled groups, each containing selectable items. When passed with `options` or `no_options_reason`, this is ignored."
+          },
+          "no_options_reason": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/NoOptionsReason"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "style": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Style"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "query": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SelectQuery"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "title": "Select",
+        "description": "An element representing a dropdown."
+      },
+      "Select-Output": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "select"
+            ],
+            "const": "select",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "placeholder": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Placeholder",
+            "description": "A placeholder string for the dropdown."
+          },
+          "multiselect": {
+            "type": "boolean",
+            "title": "Multiselect",
+            "description": "Determines whether multiple selections are allowed. If `true`, the `trigger_on_input` value is ignored.",
+            "default": false
+          },
+          "trigger_on_input": {
+            "type": "boolean",
+            "title": "Trigger On Input",
+            "description": "If `true`, selecting an item from the dropdown triggers a user action request to your app server.",
+            "default": false
+          },
+          "value": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Value",
+            "description": "List of the selected options’ `action_id` values."
+          },
+          "options": {
+            "items": {
+              "$ref": "#/components/schemas/Option-Output"
+            },
+            "type": "array",
+            "title": "Options",
+            "description": "An array of selectable items. When passed with `no_options_reason`, this is ignored."
+          },
+          "option_groups": {
+            "items": {
+              "$ref": "#/components/schemas/OptionGroup-Output"
+            },
+            "type": "array",
+            "title": "Option Groups",
+            "description": "An array of labeled groups, each containing selectable items. When passed with `options` or `no_options_reason`, this is ignored."
+          },
+          "no_options_reason": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/NoOptionsReason"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "style": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Style"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "query": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SelectQuery"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "title": "Select",
+        "description": "An element representing a dropdown."
+      },
+      "SelectItem": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "A label string for the selectable item.",
+            "examples": [
+              "Channels"
+            ]
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "static_action": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/OpenOauthPopup"
+                  },
+                  {
+                    "$ref": "#/components/schemas/OpenLink"
+                  },
+                  {
+                    "$ref": "#/components/schemas/WriteToClipboard"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CloseView"
+                  }
+                ],
+                "description": "Static Action",
+                "discriminator": {
+                  "propertyName": "action_type",
+                  "mapping": {
+                    "close_view": "#/components/schemas/CloseView",
+                    "open_link": "#/components/schemas/OpenLink",
+                    "open_oauth_popup": "#/components/schemas/OpenOauthPopup",
+                    "write_to_clipboard": "#/components/schemas/WriteToClipboard"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Static Action"
+          }
+        },
+        "type": "object",
+        "required": [
+          "label"
+        ],
+        "title": "SelectItem",
+        "description": "'A reusable object that represents an item that can be selected. It is used across various components like `View`, `AttachmentView`, `Tabs`, and `Select`.'"
+      },
+      "SelectQuery": {
+        "properties": {
+          "query_server": {
+            "type": "boolean",
+            "title": "Query Server",
+            "description": "Determines the behavior of the search functionality. If set to true, the `Select` element queries the server for options based on user input. If false, it filters through the current set of options locally.",
+            "default": true,
+            "examples": [
+              true
+            ]
+          },
+          "disabled": {
+            "type": "boolean",
+            "title": "Disabled",
+            "description": "If set to true, the search field is disabled; if false, the search functionality is enabled.",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "placeholder": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Placeholder",
+            "description": "A placeholder text for the search field.",
+            "examples": [
+              "Search by member name"
+            ]
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value",
+            "description": "The current text input in the search field.",
+            "examples": [
+              "value"
+            ]
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          }
+        },
+        "type": "object",
+        "title": "SelectQuery",
+        "description": "This component introduces a search field to the `Select` element, allowing for dynamic filtering or querying."
+      },
+      "Settings": {
+        "properties": {
+          "presence_sync": {
+            "type": "boolean",
+            "title": "Presence Sync"
+          }
+        },
+        "type": "object",
+        "required": [
+          "presence_sync"
+        ],
+        "title": "Settings"
+      },
+      "SettingsResponse": {
+        "properties": {
+          "callback_type": {
+            "type": "string",
+            "enum": [
+              "settings.update"
+            ],
+            "const": "settings.update",
+            "title": "Callback Type",
+            "description": "The type of settings operation performed."
+          },
+          "result": {
+            "$ref": "#/components/schemas/SettingsResult"
+          }
+        },
+        "type": "object",
+        "required": [
+          "callback_type",
+          "result"
+        ],
+        "title": "SettingsResponse",
+        "description": "This callback represents the developer's app server response to a settings change request from the Swit client app."
+      },
+      "SettingsResult": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "title": "Success",
+            "description": "Indicates if the settings update was successful."
+          },
+          "error_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error Message",
+            "description": "The error message to display in a modal if the update was unsuccessful (`success=false`)."
+          }
+        },
+        "type": "object",
+        "required": [
+          "success"
+        ],
+        "title": "SettingsResult",
+        "description": "SettingsResponse result"
+      },
+      "SignInPage-Input": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "sign_in_page"
+            ],
+            "const": "sign_in_page",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "integrated_service": {
+            "$ref": "#/components/schemas/IntegratedService"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "Title text displayed on the sign-in page.",
+            "examples": [
+              "Connect to Google Calendar"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "title": "Description",
+            "description": "Additional descriptive or subtitle text displayed on the sign-in page providing context about the integration.",
+            "examples": [
+              "Integrate your Google Calendar to manage events and tasks within Swit."
+            ]
+          },
+          "button": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Button"
+              }
+            ],
+            "description": "A button that triggers the OAuth or another type of sign-in process for the integrated service."
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "integrated_service",
+          "title",
+          "description",
+          "button"
+        ],
+        "title": "SignInPage",
+        "description": "An element to render a sign-in page. It's uniquely tailored to facilitate the representation of an integration between Swit and a third-party service.\n> On mobile, using this element together with other elements in the same view may lead to unexpected changes in the height of this element."
+      },
+      "SignInPage-Output": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "sign_in_page"
+            ],
+            "const": "sign_in_page",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "integrated_service": {
+            "$ref": "#/components/schemas/IntegratedService"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "Title text displayed on the sign-in page.",
+            "examples": [
+              "Connect to Google Calendar"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "title": "Description",
+            "description": "Additional descriptive or subtitle text displayed on the sign-in page providing context about the integration.",
+            "examples": [
+              "Integrate your Google Calendar to manage events and tasks within Swit."
+            ]
+          },
+          "button": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Button"
+              }
+            ],
+            "description": "A button that triggers the OAuth or another type of sign-in process for the integrated service."
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "integrated_service",
+          "title",
+          "description",
+          "button"
+        ],
+        "title": "SignInPage",
+        "description": "An element to render a sign-in page. It's uniquely tailored to facilitate the representation of an integration between Swit and a third-party service.\n> On mobile, using this element together with other elements in the same view may lead to unexpected changes in the height of this element."
+      },
+      "Style": {
+        "properties": {
+          "variant": {
+            "type": "string",
+            "enum": [
+              "filled",
+              "outlined",
+              "ghost"
+            ],
+            "title": "Variant",
+            "default": "outlined"
+          }
+        },
+        "type": "object",
+        "title": "Style",
+        "description": "The style properties for the dropdown."
+      },
+      "SubText": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "subtext"
+            ],
+            "const": "subtext",
+            "title": "Type",
+            "description": "Specifies that the metadata item is a subtext.",
+            "default": "subtext",
+            "examples": [
+              "subtext"
+            ]
+          },
+          "content": {
+            "type": "string",
+            "title": "Content",
+            "description": "The content of the subtext.",
+            "examples": [
+              "Due today"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "content"
+        ],
+        "title": "SubText",
+        "description": "Defines the subtext to be displayed as a metadata item for the element."
+      },
+      "SuggestionsResponse": {
+        "properties": {
+          "callback_type": {
+            "type": "string",
+            "enum": [
+              "query.suggestions"
+            ],
+            "const": "query.suggestions",
+            "title": "Callback Type",
+            "description": "The type of operation to be performed as a response to a search query made by the user."
+          },
+          "result": {
+            "$ref": "#/components/schemas/SuggestionsResult"
+          }
+        },
+        "type": "object",
+        "required": [
+          "callback_type",
+          "result"
+        ],
+        "title": "SuggestionsResponse",
+        "description": "This callback is used for user action requests where `user_action.type=view_actions.query`. It provides query results based on user input."
+      },
+      "SuggestionsResult": {
+        "properties": {
+          "options": {
+            "items": {
+              "$ref": "#/components/schemas/Option-Output"
+            },
+            "type": "array",
+            "maxItems": 50,
+            "title": "Options",
+            "description": "An array of selectable items. When passed with `no_options_reason`, this is ignored."
+          },
+          "option_groups": {
+            "items": {
+              "$ref": "#/components/schemas/OptionGroup-Output"
+            },
+            "type": "array",
+            "maxItems": 10,
+            "title": "Option Groups",
+            "description": "An array of labeled groups, each containing selectable items. When passed with `options` or `no_options_reason`, this is ignored."
+          },
+          "no_options_reason": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/NoOptionsReason"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Used to indicate the absence of search results. This takes precedence over `options` and `option_groups` if they're passed together."
+          }
+        },
+        "type": "object",
+        "title": "SuggestionsResult"
+      },
+      "SwitRequest": {
+        "properties": {
+          "platform": {
+            "type": "string",
+            "enum": [
+              "Desktop",
+              "iOS",
+              "Android"
+            ],
+            "title": "Platform"
+          },
+          "time": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Time"
+          },
+          "app_id": {
+            "type": "string",
+            "title": "App Id"
+          },
+          "user_info": {
+            "$ref": "#/components/schemas/UserInfo"
+          },
+          "user_preferences": {
+            "$ref": "#/components/schemas/UserPreferences"
+          },
+          "context": {
+            "$ref": "#/components/schemas/Context"
+          },
+          "user_action": {
+            "$ref": "#/components/schemas/UserAction"
+          },
+          "current_view": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/View-Input"
+              },
+              {
+                "$ref": "#/components/schemas/AttachmentView-Input"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Current View"
+          }
+        },
+        "type": "object",
+        "required": [
+          "platform",
+          "time",
+          "app_id",
+          "user_info",
+          "user_preferences",
+          "context",
+          "user_action"
+        ],
+        "title": "SwitRequest"
+      },
+      "Tabs-Input": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "tabs"
+            ],
+            "const": "tabs",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "tabs": {
+            "items": {
+              "$ref": "#/components/schemas/SelectItem"
+            },
+            "type": "array",
+            "maxItems": 30,
+            "minItems": 1,
+            "title": "Tabs",
+            "description": "An array of tabs."
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "tabs"
+        ],
+        "title": "Tabs",
+        "description": "An element representing an array of tabs."
+      },
+      "Tabs-Output": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "tabs"
+            ],
+            "const": "tabs",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "tabs": {
+            "items": {
+              "$ref": "#/components/schemas/SelectItem"
+            },
+            "type": "array",
+            "maxItems": 30,
+            "minItems": 1,
+            "title": "Tabs",
+            "description": "An array of tabs."
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "tabs"
+        ],
+        "title": "Tabs",
+        "description": "An element representing an array of tabs."
+      },
+      "Tag": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "tag"
+            ],
+            "const": "tag",
+            "title": "Type",
+            "description": "Specifies that the metadata item is a tag.",
+            "default": "tag",
+            "examples": [
+              "tag"
+            ]
+          },
+          "content": {
+            "type": "string",
+            "title": "Content",
+            "description": "The content of the tag.",
+            "examples": [
+              "Urgent"
+            ]
+          },
+          "style": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TagStyle"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The style properties for the tag.",
+            "examples": [
+              {
+                "color": "primary",
+                "shape": "rectangular"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "content"
+        ],
+        "title": "Tag",
+        "description": "Represents a tag used as metadata for the element."
+      },
+      "TagStyle": {
+        "properties": {
+          "color": {
+            "type": "string",
+            "enum": [
+              "primary",
+              "secondary",
+              "danger"
+            ],
+            "title": "Color",
+            "default": "secondary"
+          },
+          "shape": {
+            "type": "string",
+            "enum": [
+              "rectangular",
+              "rounded"
+            ],
+            "title": "Shape",
+            "default": "rectangular"
+          }
+        },
+        "type": "object",
+        "title": "TagStyle",
+        "description": "Tag Style"
+      },
+      "TaskBucket": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "title": "TaskBucket"
+      },
+      "TaskPeriod": {
+        "properties": {
+          "start_time": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start Time",
+            "description": "The date and time at which the task begins.",
+            "examples": [
+              "2023-02-14T05:01:00.452591Z"
+            ]
+          },
+          "due_time": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Due Time",
+            "description": "The date and time at which the task is due.",
+            "examples": [
+              "2023-02-14T05:01:00.452591Z"
+            ]
+          },
+          "include_time": {
+            "type": "boolean",
+            "title": "Include Time",
+            "description": "Whether or not time is included in the period.",
+            "examples": [
+              true
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "include_time"
+        ],
+        "title": "TaskPeriod",
+        "description": "The period of the task."
+      },
+      "TaskResource": {
+        "properties": {
+          "resource_type": {
+            "type": "string",
+            "enum": [
+              "task"
+            ],
+            "const": "task",
+            "title": "Resource Type",
+            "default": "task"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "The ID of the task.",
+            "examples": [
+              "23051106260551ZOVCPS"
+            ]
+          },
+          "parent_task_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Parent Task Id",
+            "description": "The ID of the parent task.",
+            "examples": [
+              "200302045745598izpK"
+            ]
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At",
+            "description": "The date and time when the task was created.",
+            "examples": [
+              "2022-07-07T12:41:18Z"
+            ]
+          },
+          "edited_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Edited At",
+            "description": "The date and time at which the task was last edited.",
+            "examples": [
+              "2022-07-07T12:41:18Z"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "The title of the task.",
+            "examples": [
+              "Developers documentation"
+            ]
+          },
+          "period": {
+            "$ref": "#/components/schemas/TaskPeriod"
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "highest",
+              "high",
+              "normal",
+              "low",
+              "lowest"
+            ],
+            "title": "Priority"
+          },
+          "color_label": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "red",
+                  "pink",
+                  "orange",
+                  "yellow",
+                  "light_green",
+                  "green",
+                  "cyan",
+                  "blue",
+                  "navy",
+                  "violet",
+                  "gray"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Color Label"
+          },
+          "assignees": {
+            "items": {
+              "$ref": "#/components/schemas/TaskUser"
+            },
+            "type": "array",
+            "title": "Assignees"
+          },
+          "collaborators": {
+            "items": {
+              "$ref": "#/components/schemas/TaskUser"
+            },
+            "type": "array",
+            "title": "Collaborators"
+          },
+          "status": {
+            "$ref": "#/components/schemas/TaskStatus"
+          },
+          "bucket": {
+            "$ref": "#/components/schemas/TaskBucket"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "created_at",
+          "title",
+          "period",
+          "priority",
+          "assignees",
+          "collaborators",
+          "status",
+          "bucket"
+        ],
+        "title": "TaskResource"
+      },
+      "TaskStatus": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "not_started",
+              "in_progress",
+              "done"
+            ],
+            "title": "Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type"
+        ],
+        "title": "TaskStatus"
+      },
+      "TaskUser": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "title": "TaskUser"
+      },
+      "TextInput": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "text_input"
+            ],
+            "const": "text_input",
+            "title": "Type",
+            "description": "Type of the element.",
+            "default": "text_input"
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "placeholder": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Placeholder",
+            "description": "A placeholder string for the text input field.",
+            "examples": [
+              "Task name"
+            ]
+          },
+          "trigger_on_input": {
+            "type": "boolean",
+            "title": "Trigger On Input",
+            "description": "If `true`, pressing the **Enter** key with a value input triggers a user action request to your app server.",
+            "default": false
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value",
+            "description": "The text value entered in the field.",
+            "examples": [
+              "December release notes"
+            ]
+          }
+        },
+        "type": "object",
+        "title": "TextInput",
+        "description": "An element representing a text input field."
+      },
+      "TextParagraph": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "text"
+            ],
+            "const": "text",
+            "title": "Type",
+            "description": "Type of the element.",
+            "default": "text"
+          },
+          "markdown": {
+            "type": "boolean",
+            "title": "Markdown",
+            "description": "A boolean that determines the format of the content (either markdown or plaintext).",
+            "default": false
+          },
+          "content": {
+            "type": "string",
+            "title": "Content",
+            "description": "The content of the text paragraph.",
+            "examples": [
+              "Swit is where the magic happens."
+            ]
+          },
+          "style": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CollectionEntryTextStyle"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "content"
+        ],
+        "title": "TextParagraph",
+        "description": "An element representing a text paragraph."
+      },
+      "TextSection-Input": {
+        "properties": {
+          "text": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TextParagraph"
+              }
+            ],
+            "description": "The text content of a text section."
+          },
+          "metadata_items": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/SubText"
+                },
+                {
+                  "$ref": "#/components/schemas/Image"
+                },
+                {
+                  "$ref": "#/components/schemas/Tag"
+                }
+              ]
+            },
+            "type": "array",
+            "maxItems": 4,
+            "title": "Metadata Items",
+            "description": "Array of metadata elements that can be displayed next to the text."
+          }
+        },
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "title": "TextSection",
+        "description": "CollectionEntry TextSection"
+      },
+      "TextSection-Output": {
+        "properties": {
+          "text": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TextParagraph"
+              }
+            ],
+            "description": "The text content of a text section."
+          },
+          "metadata_items": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/SubText"
+                },
+                {
+                  "$ref": "#/components/schemas/Image"
+                },
+                {
+                  "$ref": "#/components/schemas/Tag"
+                }
+              ]
+            },
+            "type": "array",
+            "maxItems": 4,
+            "title": "Metadata Items",
+            "description": "Array of metadata elements that can be displayed next to the text."
+          }
+        },
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "title": "TextSection",
+        "description": "CollectionEntry TextSection"
+      },
+      "Textarea": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "textarea"
+            ],
+            "const": "textarea",
+            "title": "Type",
+            "description": "Type of the element."
+          },
+          "action_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "A unique identifier for an action that is performed on a component.",
+                "examples": [
+                  "action_id"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action Id"
+          },
+          "placeholder": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Placeholder",
+            "description": "A placeholder string for the text input field.",
+            "examples": [
+              "Provide a detailed description for this task"
+            ]
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value",
+            "description": "The text value entered in the field.",
+            "examples": [
+              "Fixed minor bugs."
+            ]
+          },
+          "height": {
+            "type": "string",
+            "enum": [
+              "small",
+              "medium",
+              "large"
+            ],
+            "title": "Height",
+            "description": "The height of the text area.",
+            "default": "small"
+          },
+          "disabled": {
+            "type": "boolean",
+            "title": "Disabled",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "title": "Textarea",
+        "description": "An element representing a multiline text input field."
+      },
+      "UserAction": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "right_panel_open",
+              "presence_sync",
+              "user_commands.extensions:chat",
+              "user_commands.extensions:chat_commenting",
+              "user_commands.context_menus:message",
+              "user_commands.context_menus:message_comment",
+              "user_commands.context_menus:task",
+              "user_commands.extensions:task",
+              "view_actions.drop",
+              "view_actions.input",
+              "view_actions.query",
+              "view_actions.submit",
+              "view_actions.oauth_complete"
+            ],
+            "title": "Type"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "slash_command": {
+            "type": "string",
+            "title": "Slash Command"
+          },
+          "resource": {
+            "anyOf": [
+              {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/ResourceMessage"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ResourceMessageComment"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ResourceSettingsPresenceSync"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ResourceQuery"
+                  },
+                  {
+                    "$ref": "#/components/schemas/TaskResource"
+                  }
+                ],
+                "discriminator": {
+                  "propertyName": "resource_type",
+                  "mapping": {
+                    "message": "#/components/schemas/ResourceMessage",
+                    "message_comment": "#/components/schemas/ResourceMessageComment",
+                    "query": "#/components/schemas/ResourceQuery",
+                    "settings.presence_sync": "#/components/schemas/ResourceSettingsPresenceSync",
+                    "task": "#/components/schemas/TaskResource"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Resource"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "id",
+          "slash_command"
+        ],
+        "title": "UserAction"
+      },
+      "UserInfo": {
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "title": "User Id"
+          },
+          "organization_id": {
+            "type": "string",
+            "title": "Organization Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "user_id",
+          "organization_id"
+        ],
+        "title": "UserInfo"
+      },
+      "UserPreferences": {
+        "properties": {
+          "language": {
+            "type": "string",
+            "title": "Language"
+          },
+          "time_zone_offset": {
+            "type": "string",
+            "title": "Time Zone Offset"
+          },
+          "color_theme": {
+            "type": "string",
+            "title": "Color Theme"
+          }
+        },
+        "type": "object",
+        "required": [
+          "language",
+          "time_zone_offset",
+          "color_theme"
+        ],
+        "title": "UserPreferences"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "View-Input": {
+        "properties": {
+          "view_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "View Id",
+            "description": "A unique ID for the view, specified by your app server. This value can be used to refer to this view when updating or closing it via a subsequent response from your app server.",
+            "examples": [
+              "test_modal"
+            ]
+          },
+          "state": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "\n            Stores a string value persisting stateful user information.\n            This value is included in subsequent user action requests from the current view via the current_view parameter.\n            For more details on how to use the state parameter effectively, see the Using the state parameter guide.",
+                "examples": [
+                  "string"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "State"
+          },
+          "header": {
+            "$ref": "#/components/schemas/Header-Input"
+          },
+          "footer": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Footer-Input"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "body": {
+            "$ref": "#/components/schemas/Body-Input"
+          }
+        },
+        "type": "object",
+        "required": [
+          "header",
+          "body"
+        ],
+        "title": "View",
+        "description": "Defines the structure of a view with customizable sections—header, body, and footer."
+      },
+      "View-Output": {
+        "properties": {
+          "view_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "View Id",
+            "description": "A unique ID for the view, specified by your app server. This value can be used to refer to this view when updating or closing it via a subsequent response from your app server.",
+            "examples": [
+              "test_modal"
+            ]
+          },
+          "state": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "\n            Stores a string value persisting stateful user information.\n            This value is included in subsequent user action requests from the current view via the current_view parameter.\n            For more details on how to use the state parameter effectively, see the Using the state parameter guide.",
+                "examples": [
+                  "string"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "State"
+          },
+          "header": {
+            "$ref": "#/components/schemas/Header-Output"
+          },
+          "footer": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Footer-Output"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "body": {
+            "$ref": "#/components/schemas/Body-Output"
+          }
+        },
+        "type": "object",
+        "required": [
+          "header",
+          "body"
+        ],
+        "title": "View",
+        "description": "Defines the structure of a view with customizable sections—header, body, and footer."
+      },
+      "ViewsResponse": {
+        "properties": {
+          "callback_type": {
+            "type": "string",
+            "enum": [
+              "views.update",
+              "views.initialize",
+              "views.open",
+              "views.push",
+              "views.close"
+            ],
+            "title": "Callback Type",
+            "description": "\n        The type of operation to be performed on the UI view. The operations simulate two types of behaviors: modal-like and stack-like (for the right panel).\n        - `views.update`: Modify the specified view.\n        - `views.initialize`: Refresh the specified view and remove all previously pushed views in the right panel.\n        - `views.open`: Launch a new modal view.\n        - `views.push`: Add a new view on top of the existing view in the right panel, creating a stack-like structure.\n        - `views.close`: Terminate the specified modal view.\n        "
+          },
+          "new_view": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/View-Output"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reference_view_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reference View Id",
+            "description": "The identifier for the view to be targeted. Required when `callback_type=view.update`, `callback_type=view.close`, or `callback_type=views.initialize`. If omitted, the topmost view is selected."
+          }
+        },
+        "type": "object",
+        "required": [
+          "callback_type"
+        ],
+        "title": "ViewsResponse",
+        "description": "This callback governs the creation or modification of a UI view in different contexts - modals or the right panel."
+      },
+      "WriteToClipboard": {
+        "properties": {
+          "action_type": {
+            "type": "string",
+            "enum": [
+              "write_to_clipboard"
+            ],
+            "const": "write_to_clipboard",
+            "title": "Action Type",
+            "description": "The action performed by this component.",
+            "default": "write_to_clipboard",
+            "examples": [
+              "write_to_clipboard"
+            ]
+          },
+          "content": {
+            "type": "string",
+            "title": "Content",
+            "description": "The content to be copied to the clipboard.",
+            "examples": [
+              "This is a channel to discuss the new product launch."
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "content"
+        ],
+        "title": "WriteToClipboard",
+        "description": "This component enables copying specified content directly to the user's clipboard."
+      }
+    }
+  }
+}

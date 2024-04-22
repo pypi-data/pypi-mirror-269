@@ -1,0 +1,2771 @@
+components:
+  schemas:
+    AttachmentBody-Input:
+      description: Houses various elements displayed in the body.
+      properties:
+        elements:
+          description: A list of different types of objects displayed in the body.
+          items:
+            anyOf:
+            - $ref: '#/components/schemas/CollectionEntry-Input'
+            - $ref: '#/components/schemas/InfoCard-Input'
+            - $ref: '#/components/schemas/InteractiveImage'
+            - $ref: '#/components/schemas/Divider'
+            - $ref: '#/components/schemas/File'
+            - $ref: '#/components/schemas/TextParagraph'
+          maxItems: 30
+          title: Elements
+          type: array
+      required:
+      - elements
+      title: AttachmentBody
+      type: object
+    AttachmentBody-Output:
+      description: Houses various elements displayed in the body.
+      properties:
+        elements:
+          description: A list of different types of objects displayed in the body.
+          items:
+            anyOf:
+            - $ref: '#/components/schemas/CollectionEntry-Output'
+            - $ref: '#/components/schemas/InfoCard-Output'
+            - $ref: '#/components/schemas/InteractiveImage'
+            - $ref: '#/components/schemas/Divider'
+            - $ref: '#/components/schemas/File'
+            - $ref: '#/components/schemas/TextParagraph'
+          maxItems: 30
+          title: Elements
+          type: array
+      required:
+      - elements
+      title: AttachmentBody
+      type: object
+    AttachmentDestinationHint:
+      description: 'Provides the user with preselected destinations for sharing the
+        attachment. Based on the callback type, use the appropriate properties.
+
+
+        - `attachments.share.channel`: If a valid `workspace_id` is provided, it leads
+        to the preselection of the workspace. If both a valid `workspace_id` and a
+        valid `channel_id` are provided, then both the workspace and channel are preselected.
+
+        - `attachments.share.new_task`: If a valid `workspace_id` is provided, it
+        leads to the preselection of the workspace. If both a valid `workspace_id`
+        and a valid `project_id` are provided, then both the workspace and project
+        are preselected.
+
+        - `attachments.share.existing_task`: If a valid `workspace_id` is provided,
+        it leads to the preselection of the workspace. If both a valid `workspace_id`
+        and a valid `project_id` are provided, then both the workspace and project
+        are preselected. If a valid `workspace_id`, `project_id`, and `task_id` are
+        provided, then all three are preselected.'
+      properties:
+        channel_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The ID of the channel where the attachment is shared.
+          examples:
+          - 220319082780j5qkr15
+          title: Channel Id
+        project_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The ID of the project where the attachment is shared.
+          examples:
+          - 220626100212677TFKW
+          title: Project Id
+        task_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The ID of the task where the attachment is shared.
+          examples:
+          - 2311090618555579FYFN
+          title: Task Id
+        workspace_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The ID of the workspace where the attachment is shared.
+          examples:
+          - 220318163840UVCAkuZ
+          title: Workspace Id
+      title: AttachmentDestinationHint
+      type: object
+    AttachmentHeader:
+      description: Holds the properties of the header section.
+      properties:
+        app_id:
+          description: The ID of your app. This ID is used to display your app's icon
+            in the attachment.
+          title: App Id
+          type: string
+        icon:
+          anyOf:
+          - $ref: '#/components/schemas/Image'
+          - type: 'null'
+          description: The icon to display in the header. If not passed, the app icon
+            registered in the Developer Console will appear.
+        subtitle:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The subtitle displayed in the header.
+          title: Subtitle
+        title:
+          description: The title displayed in the header.
+          title: Title
+          type: string
+      required:
+      - title
+      - app_id
+      title: AttachmentHeader
+      type: object
+    AttachmentView-Input:
+      description: Defines the structure of an attachment view with customizable sections—header,
+        body, and footer—similar to a standard view but designed specifically for
+        attachments.
+      properties:
+        body:
+          $ref: '#/components/schemas/AttachmentBody-Input'
+        footer:
+          anyOf:
+          - $ref: '#/components/schemas/Footer-Input'
+          - type: 'null'
+        header:
+          $ref: '#/components/schemas/AttachmentHeader'
+        state:
+          anyOf:
+          - description: "\n            Stores a string value persisting stateful\
+              \ user information.\n            This value is included in subsequent\
+              \ user action requests from the current view via the current_view parameter.\n\
+              \            For more details on how to use the state parameter effectively,\
+              \ see the Using the state parameter guide."
+            examples:
+            - string
+            type: string
+          - type: 'null'
+          title: State
+      required:
+      - header
+      - body
+      title: AttachmentView
+      type: object
+    AttachmentView-Output:
+      description: Defines the structure of an attachment view with customizable sections—header,
+        body, and footer—similar to a standard view but designed specifically for
+        attachments.
+      properties:
+        body:
+          $ref: '#/components/schemas/AttachmentBody-Output'
+        footer:
+          anyOf:
+          - $ref: '#/components/schemas/Footer-Output'
+          - type: 'null'
+        header:
+          $ref: '#/components/schemas/AttachmentHeader'
+        state:
+          anyOf:
+          - description: "\n            Stores a string value persisting stateful\
+              \ user information.\n            This value is included in subsequent\
+              \ user action requests from the current view via the current_view parameter.\n\
+              \            For more details on how to use the state parameter effectively,\
+              \ see the Using the state parameter guide."
+            examples:
+            - string
+            type: string
+          - type: 'null'
+          title: State
+      required:
+      - header
+      - body
+      title: AttachmentView
+      type: object
+    AttachmentsResponse:
+      description: This callback enables sharing an attachment to a specified location.
+        As this callback prompts user confirmation, no unique user token is needed
+        to post the data on behalf of the user.
+      properties:
+        attachments:
+          items:
+            $ref: '#/components/schemas/AttachmentView-Output'
+          maxItems: 1
+          minItems: 1
+          title: Attachments
+          type: array
+        callback_type:
+          description: "\n            Specifies the sharing destination of the attachment.\n\
+            \            \n            - `attachments.share.channel`: Create a message\
+            \ with the attachment in the user-selected channel.\n            - `attachments.share.new_task`:\
+            \ Create a task with the attachment in the user-selected project.\n  \
+            \          - `attachments.share.existing_task`: Add the attachment to\
+            \ an existing task.\n        "
+          enum:
+          - attachments.share.channel
+          - attachments.share.new_task
+          - attachments.share.existing_task
+          title: Callback Type
+          type: string
+        destination_hint:
+          anyOf:
+          - $ref: '#/components/schemas/AttachmentDestinationHint'
+          - type: 'null'
+      required:
+      - callback_type
+      - attachments
+      title: AttachmentsResponse
+      type: object
+    Background:
+      description: CollectionEntry Background
+      properties:
+        color:
+          default: none
+          enum:
+          - none
+          - lightblue
+          title: Color
+          type: string
+      title: Background
+      type: object
+    Body-Input:
+      description: Houses various elements displayed in the body.
+      properties:
+        elements:
+          description: A list of different types of objects displayed in the body.
+          items:
+            anyOf:
+            - $ref: '#/components/schemas/CollectionEntry-Input'
+            - $ref: '#/components/schemas/Button'
+            - $ref: '#/components/schemas/Divider'
+            - $ref: '#/components/schemas/File'
+            - $ref: '#/components/schemas/HtmlFrame'
+            - $ref: '#/components/schemas/TextInput'
+            - $ref: '#/components/schemas/Select-Input'
+            - $ref: '#/components/schemas/SignInPage-Input'
+            - $ref: '#/components/schemas/TextParagraph'
+            - $ref: '#/components/schemas/Image'
+            - $ref: '#/components/schemas/Textarea'
+            - $ref: '#/components/schemas/Container-Input'
+            - $ref: '#/components/schemas/Tabs-Input'
+            - $ref: '#/components/schemas/DatePicker'
+            - $ref: '#/components/schemas/InfoCard-Input'
+            - $ref: '#/components/schemas/ImageGrid-Input'
+            - $ref: '#/components/schemas/InteractiveImage'
+          maxItems: 100
+          title: Elements
+          type: array
+      required:
+      - elements
+      title: Body
+      type: object
+    Body-Output:
+      description: Houses various elements displayed in the body.
+      properties:
+        elements:
+          description: A list of different types of objects displayed in the body.
+          items:
+            anyOf:
+            - $ref: '#/components/schemas/CollectionEntry-Output'
+            - $ref: '#/components/schemas/Button'
+            - $ref: '#/components/schemas/Divider'
+            - $ref: '#/components/schemas/File'
+            - $ref: '#/components/schemas/HtmlFrame'
+            - $ref: '#/components/schemas/TextInput'
+            - $ref: '#/components/schemas/Select-Output'
+            - $ref: '#/components/schemas/SignInPage-Output'
+            - $ref: '#/components/schemas/TextParagraph'
+            - $ref: '#/components/schemas/Image'
+            - $ref: '#/components/schemas/Textarea'
+            - $ref: '#/components/schemas/Container-Output'
+            - $ref: '#/components/schemas/Tabs-Output'
+            - $ref: '#/components/schemas/DatePicker'
+            - $ref: '#/components/schemas/InfoCard-Output'
+            - $ref: '#/components/schemas/ImageGrid-Output'
+            - $ref: '#/components/schemas/InteractiveImage'
+          maxItems: 100
+          title: Elements
+          type: array
+      required:
+      - elements
+      title: Body
+      type: object
+    BotResponse:
+      description: This callback governs the behavior of the bot user associated with
+        your app.
+      properties:
+        callback_type:
+          const: bot.invite_prompt
+          description: Specifies the action to be performed by the bot user. Currently,
+            it can prompt the user to invite the bot to a specific channel or project.
+          enum:
+          - bot.invite_prompt
+          title: Callback Type
+          type: string
+        destination:
+          $ref: '#/components/schemas/Destination'
+      required:
+      - callback_type
+      - destination
+      title: BotResponse
+      type: object
+    Button:
+      description: An element representing a button.
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        disabled:
+          default: false
+          description: Determines whether the button is disabled. If `true`, the button
+            is not active.
+          title: Disabled
+          type: boolean
+        icon:
+          anyOf:
+          - $ref: '#/components/schemas/Image'
+          - type: 'null'
+          description: An Image object that replaces the label. Only applicable when
+            this element is used in the header.
+        label:
+          description: A label string for the button.
+          examples:
+          - Click
+          title: Label
+          type: string
+        static_action:
+          anyOf:
+          - description: Static Action
+            discriminator:
+              mapping:
+                close_view: '#/components/schemas/CloseView'
+                open_link: '#/components/schemas/OpenLink'
+                open_oauth_popup: '#/components/schemas/OpenOauthPopup'
+                write_to_clipboard: '#/components/schemas/WriteToClipboard'
+              propertyName: action_type
+            oneOf:
+            - $ref: '#/components/schemas/OpenOauthPopup'
+            - $ref: '#/components/schemas/OpenLink'
+            - $ref: '#/components/schemas/WriteToClipboard'
+            - $ref: '#/components/schemas/CloseView'
+          - type: 'null'
+          title: Static Action
+        style:
+          default: secondary
+          description: Visual style for the button.
+          enum:
+          - primary
+          - secondary
+          - primary_filled
+          - danger_filled
+          title: Style
+          type: string
+        type:
+          const: button
+          description: Type of the element.
+          enum:
+          - button
+          title: Type
+          type: string
+      required:
+      - type
+      - label
+      title: Button
+      type: object
+    CloseView:
+      description: Close the current view.
+      properties:
+        action_type:
+          const: close_view
+          default: close_view
+          description: The action performed by this component.
+          enum:
+          - close_view
+          examples:
+          - close_view
+          title: Action Type
+          type: string
+      title: CloseView
+      type: object
+    CollectionEntry-Input:
+      description: An element representing a collection entry. An itemized list can
+        be assembled by arranging multiple instances of this element.
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        background:
+          allOf:
+          - $ref: '#/components/schemas/Background'
+          default:
+            color: none
+        draggable:
+          default: false
+          description: Determines whether the element can be dragged and dropped onto
+            channels when in a right panel view. When set to `true`, dropping this
+            element triggers a user action request of type `view_actions.drop`.
+          title: Draggable
+          type: boolean
+        start_section:
+          anyOf:
+          - $ref: '#/components/schemas/Image'
+          - type: 'null'
+          description: The image to be displayed in the start section.
+        static_action:
+          anyOf:
+          - description: Static Action
+            discriminator:
+              mapping:
+                close_view: '#/components/schemas/CloseView'
+                open_link: '#/components/schemas/OpenLink'
+                open_oauth_popup: '#/components/schemas/OpenOauthPopup'
+                write_to_clipboard: '#/components/schemas/WriteToClipboard'
+              propertyName: action_type
+            oneOf:
+            - $ref: '#/components/schemas/OpenOauthPopup'
+            - $ref: '#/components/schemas/OpenLink'
+            - $ref: '#/components/schemas/WriteToClipboard'
+            - $ref: '#/components/schemas/CloseView'
+          - type: 'null'
+          title: Static Action
+        text_sections:
+          description: An array of text sections in the body of the collection entry.
+          items:
+            $ref: '#/components/schemas/TextSection-Input'
+          maxItems: 3
+          minItems: 1
+          title: Text Sections
+          type: array
+        type:
+          const: collection_entry
+          description: Type of the element.
+          enum:
+          - collection_entry
+          title: Type
+          type: string
+        vertical_alignment:
+          default: top
+          description: Specifies the vertical alignment of the content within the
+            collection entry.
+          enum:
+          - top
+          - middle
+          - bottom
+          examples:
+          - middle
+          title: Vertical Alignment
+          type: string
+      required:
+      - type
+      - text_sections
+      title: CollectionEntry
+      type: object
+    CollectionEntry-Output:
+      description: An element representing a collection entry. An itemized list can
+        be assembled by arranging multiple instances of this element.
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        background:
+          allOf:
+          - $ref: '#/components/schemas/Background'
+          default:
+            color: none
+        draggable:
+          default: false
+          description: Determines whether the element can be dragged and dropped onto
+            channels when in a right panel view. When set to `true`, dropping this
+            element triggers a user action request of type `view_actions.drop`.
+          title: Draggable
+          type: boolean
+        start_section:
+          anyOf:
+          - $ref: '#/components/schemas/Image'
+          - type: 'null'
+          description: The image to be displayed in the start section.
+        static_action:
+          anyOf:
+          - description: Static Action
+            discriminator:
+              mapping:
+                close_view: '#/components/schemas/CloseView'
+                open_link: '#/components/schemas/OpenLink'
+                open_oauth_popup: '#/components/schemas/OpenOauthPopup'
+                write_to_clipboard: '#/components/schemas/WriteToClipboard'
+              propertyName: action_type
+            oneOf:
+            - $ref: '#/components/schemas/OpenOauthPopup'
+            - $ref: '#/components/schemas/OpenLink'
+            - $ref: '#/components/schemas/WriteToClipboard'
+            - $ref: '#/components/schemas/CloseView'
+          - type: 'null'
+          title: Static Action
+        text_sections:
+          description: An array of text sections in the body of the collection entry.
+          items:
+            $ref: '#/components/schemas/TextSection-Output'
+          maxItems: 3
+          minItems: 1
+          title: Text Sections
+          type: array
+        type:
+          const: collection_entry
+          description: Type of the element.
+          enum:
+          - collection_entry
+          title: Type
+          type: string
+        vertical_alignment:
+          default: top
+          description: Specifies the vertical alignment of the content within the
+            collection entry.
+          enum:
+          - top
+          - middle
+          - bottom
+          examples:
+          - middle
+          title: Vertical Alignment
+          type: string
+      required:
+      - type
+      - text_sections
+      title: CollectionEntry
+      type: object
+    CollectionEntryTextStyle:
+      description: An object that may contain styling properties depending on its
+        usage within another element.
+      properties:
+        bold:
+          default: false
+          title: Bold
+          type: boolean
+        color:
+          default: gray900
+          enum:
+          - gray900
+          - gray800
+          - gray700
+          title: Color
+          type: string
+        max_lines:
+          default: 0
+          maximum: 2.0
+          minimum: 0.0
+          title: Max Lines
+          type: integer
+        size:
+          default: medium
+          enum:
+          - medium
+          - large
+          title: Size
+          type: string
+      title: CollectionEntryTextStyle
+      type: object
+    Container-Input:
+      description: A container for placing multiple elements like buttons, datepickers,
+        and dropdowns in a single horizontal row.
+      properties:
+        elements:
+          description: The elements to include in the container.
+          items:
+            anyOf:
+            - $ref: '#/components/schemas/Select-Input'
+            - $ref: '#/components/schemas/Button'
+            - $ref: '#/components/schemas/DatePicker'
+          maxItems: 8
+          minItems: 1
+          title: Elements
+          type: array
+        type:
+          const: container
+          description: Type of the element.
+          enum:
+          - container
+          title: Type
+          type: string
+      required:
+      - type
+      title: Container
+      type: object
+    Container-Output:
+      description: A container for placing multiple elements like buttons, datepickers,
+        and dropdowns in a single horizontal row.
+      properties:
+        elements:
+          description: The elements to include in the container.
+          items:
+            anyOf:
+            - $ref: '#/components/schemas/Select-Output'
+            - $ref: '#/components/schemas/Button'
+            - $ref: '#/components/schemas/DatePicker'
+          maxItems: 8
+          minItems: 1
+          title: Elements
+          type: array
+        type:
+          const: container
+          description: Type of the element.
+          enum:
+          - container
+          title: Type
+          type: string
+      required:
+      - type
+      title: Container
+      type: object
+    Context:
+      properties:
+        channel_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Channel Id
+        project_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Project Id
+        task_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Task Id
+        workspace_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Workspace Id
+      title: Context
+      type: object
+    DatePicker:
+      description: An element representing a datepicker field.
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        placeholder:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: A placeholder string for the datepicker field.
+          title: Placeholder
+        trigger_on_input:
+          default: false
+          description: If `true`, selecting a date triggers a user action request
+            to your app server.
+          title: Trigger On Input
+          type: boolean
+        type:
+          const: datepicker
+          description: Type of the element.
+          enum:
+          - datepicker
+          title: Type
+          type: string
+        value:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The date value entered in the field.
+          examples:
+          - '2022-11-23T00:00:00.000Z'
+          title: Value
+      required:
+      - type
+      title: DatePicker
+      type: object
+    Destination:
+      description: BotResponse destination
+      properties:
+        id:
+          title: Id
+          type: string
+        type:
+          enum:
+          - channel
+          - project
+          title: Type
+          type: string
+      required:
+      - type
+      - id
+      title: Destination
+      type: object
+    Divider:
+      description: An element representing a horizontal divider.
+      properties:
+        type:
+          const: divider
+          description: Type of the element.
+          enum:
+          - divider
+          title: Type
+          type: string
+      required:
+      - type
+      title: Divider
+      type: object
+    File:
+      description: An element representing a file item.
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        file_name:
+          description: Name of the file.
+          examples:
+          - membership.csv
+          title: File Name
+          type: string
+        file_size:
+          description: Size of the file in bytes
+          title: File Size
+          type: integer
+        file_type:
+          default: other
+          description: A sting representing the type of a file.
+          enum:
+          - image
+          - video
+          - document
+          - pdf
+          - presentation
+          - spreadsheet
+          - archive
+          - psd
+          - ai
+          - other
+          title: File Type
+          type: string
+        static_action:
+          anyOf:
+          - description: Static Action
+            discriminator:
+              mapping:
+                close_view: '#/components/schemas/CloseView'
+                open_link: '#/components/schemas/OpenLink'
+                open_oauth_popup: '#/components/schemas/OpenOauthPopup'
+                write_to_clipboard: '#/components/schemas/WriteToClipboard'
+              propertyName: action_type
+            oneOf:
+            - $ref: '#/components/schemas/OpenOauthPopup'
+            - $ref: '#/components/schemas/OpenLink'
+            - $ref: '#/components/schemas/WriteToClipboard'
+            - $ref: '#/components/schemas/CloseView'
+          - type: 'null'
+          title: Static Action
+        type:
+          const: file
+          description: Type of the element.
+          enum:
+          - file
+          title: Type
+          type: string
+      required:
+      - type
+      - file_size
+      - file_name
+      title: File
+      type: object
+    Footer-Input:
+      description: Contains buttons displayed in the footer.
+      properties:
+        buttons:
+          description: A list of `Button` objects in the footer.
+          items:
+            $ref: '#/components/schemas/Button'
+          maxItems: 2
+          title: Buttons
+          type: array
+      title: Footer
+      type: object
+    Footer-Output:
+      description: Contains buttons displayed in the footer.
+      properties:
+        buttons:
+          description: A list of `Button` objects in the footer.
+          items:
+            $ref: '#/components/schemas/Button'
+          maxItems: 2
+          title: Buttons
+          type: array
+      title: Footer
+      type: object
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          title: Detail
+          type: array
+      title: HTTPValidationError
+      type: object
+    Header-Input:
+      description: Holds the properties of the header section.
+      properties:
+        buttons:
+          description: A list of Button objects in the header. Note that in the header,
+            the icon field is used instead of label.
+          items:
+            $ref: '#/components/schemas/Button'
+          maxItems: 1
+          title: Buttons
+          type: array
+        context_menu:
+          description: A list of SelectItem objects appearing when the user opens
+            the context menu.
+          items:
+            $ref: '#/components/schemas/SelectItem'
+          maxItems: 30
+          title: Context Menu
+          type: array
+        subtitle:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The subtitle displayed in the header.
+          title: Subtitle
+        title:
+          description: The title displayed in the header.
+          title: Title
+          type: string
+      required:
+      - title
+      title: Header
+      type: object
+    Header-Output:
+      description: Holds the properties of the header section.
+      properties:
+        buttons:
+          description: A list of Button objects in the header. Note that in the header,
+            the icon field is used instead of label.
+          items:
+            $ref: '#/components/schemas/Button'
+          maxItems: 1
+          title: Buttons
+          type: array
+        context_menu:
+          description: A list of SelectItem objects appearing when the user opens
+            the context menu.
+          items:
+            $ref: '#/components/schemas/SelectItem'
+          maxItems: 30
+          title: Context Menu
+          type: array
+        subtitle:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The subtitle displayed in the header.
+          title: Subtitle
+        title:
+          description: The title displayed in the header.
+          title: Title
+          type: string
+      required:
+      - title
+      title: Header
+      type: object
+    HtmlFrame:
+      description: 'An element to render custom HTML content in the view.
+
+        > On mobile, using this element together with other elements in the same view
+        may lead to unexpected changes in the height of this element.'
+      properties:
+        html_content:
+          description: The HTML content to be displayed in the frame.
+          examples:
+          - <h1>Hello, Swit!</h1>
+          title: Html Content
+          type: string
+        type:
+          const: html_frame
+          description: Type of the element.
+          enum:
+          - html_frame
+          title: Type
+          type: string
+      required:
+      - type
+      - html_content
+      title: HtmlFrame
+      type: object
+    Image:
+      description: A reusable object that represents an image embedded in an element.
+      properties:
+        alt:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The alternative text that appears instead of an image when
+            the image does not load due to issues like a network connection error
+            or broken link.
+          examples:
+          - image test
+          title: Alt
+        image_url:
+          description: The URL of the image.
+          examples:
+          - https://example.com/image.jpg
+          title: Image Url
+          type: string
+        type:
+          const: image
+          default: image
+          description: Type of the element.
+          enum:
+          - image
+          examples:
+          - image
+          title: Type
+          type: string
+      required:
+      - image_url
+      title: Image
+      type: object
+    ImageGrid-Input:
+      description: A grid of images with each row containing up to 3 images.
+      properties:
+        column_count:
+          description: The number of images displayed in a single row.
+          examples:
+          - 2
+          maximum: 3.0
+          minimum: 2.0
+          title: Column Count
+          type: integer
+        images:
+          description: An array of InteractiveImage objects organized into a grid
+            structure.
+          items:
+            $ref: '#/components/schemas/InteractiveImage'
+          maxItems: 48
+          minItems: 1
+          title: Images
+          type: array
+        type:
+          const: image_grid
+          description: Type of the element.
+          enum:
+          - image_grid
+          title: Type
+          type: string
+      required:
+      - type
+      - images
+      - column_count
+      title: ImageGrid
+      type: object
+    ImageGrid-Output:
+      description: A grid of images with each row containing up to 3 images.
+      properties:
+        column_count:
+          description: The number of images displayed in a single row.
+          examples:
+          - 2
+          maximum: 3.0
+          minimum: 2.0
+          title: Column Count
+          type: integer
+        images:
+          description: An array of InteractiveImage objects organized into a grid
+            structure.
+          items:
+            $ref: '#/components/schemas/InteractiveImage'
+          maxItems: 48
+          minItems: 1
+          title: Images
+          type: array
+        type:
+          const: image_grid
+          description: Type of the element.
+          enum:
+          - image_grid
+          title: Type
+          type: string
+      required:
+      - type
+      - images
+      - column_count
+      title: ImageGrid
+      type: object
+    InfoCard-Input:
+      description: An element representing an info card.
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        draggable:
+          default: false
+          description: Determines whether the element can be dragged and dropped onto
+            channels when in a right panel view. When set to `true`, dropping this
+            element triggers a user action request of type `view_actions.drop`.
+          title: Draggable
+          type: boolean
+        items:
+          items:
+            $ref: '#/components/schemas/Item-Input'
+          maxItems: 30
+          minItems: 1
+          title: Items
+          type: array
+        type:
+          const: info_card
+          description: Type of the element.
+          enum:
+          - info_card
+          title: Type
+          type: string
+      required:
+      - type
+      - items
+      title: InfoCard
+      type: object
+    InfoCard-Output:
+      description: An element representing an info card.
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        draggable:
+          default: false
+          description: Determines whether the element can be dragged and dropped onto
+            channels when in a right panel view. When set to `true`, dropping this
+            element triggers a user action request of type `view_actions.drop`.
+          title: Draggable
+          type: boolean
+        items:
+          items:
+            $ref: '#/components/schemas/Item-Output'
+          maxItems: 30
+          minItems: 1
+          title: Items
+          type: array
+        type:
+          const: info_card
+          description: Type of the element.
+          enum:
+          - info_card
+          title: Type
+          type: string
+      required:
+      - type
+      - items
+      title: InfoCard
+      type: object
+    IntegratedService:
+      description: Information about the partner service to be integrated with Swit.
+      properties:
+        icon:
+          allOf:
+          - $ref: '#/components/schemas/Image'
+          description: Icon image representing the partner service.
+      required:
+      - icon
+      title: IntegratedService
+      type: object
+    InteractiveImage:
+      description: An element representing an embedded image with interactivity capabilities
+        such as triggering actions upon user actions.
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        alt:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The alternative text that appears instead of an image when
+            the image does not load due to issues like a network connection error
+            or broken link.
+          examples:
+          - image test
+          title: Alt
+        draggable:
+          default: false
+          description: Determines whether the element can be dragged and dropped onto
+            channels when in a right panel view. When set to `true`, dropping this
+            element triggers a user action request of type `view_actions.drop`.
+          title: Draggable
+          type: boolean
+        image_url:
+          description: The URL of the image.
+          examples:
+          - https://swit.io/assets/images/home/features/device
+          title: Image Url
+          type: string
+        static_action:
+          anyOf:
+          - description: Static Action
+            discriminator:
+              mapping:
+                close_view: '#/components/schemas/CloseView'
+                open_link: '#/components/schemas/OpenLink'
+                open_oauth_popup: '#/components/schemas/OpenOauthPopup'
+                write_to_clipboard: '#/components/schemas/WriteToClipboard'
+              propertyName: action_type
+            oneOf:
+            - $ref: '#/components/schemas/OpenOauthPopup'
+            - $ref: '#/components/schemas/OpenLink'
+            - $ref: '#/components/schemas/WriteToClipboard'
+            - $ref: '#/components/schemas/CloseView'
+          - type: 'null'
+          title: Static Action
+        type:
+          const: interactive_image
+          description: Type of the element.
+          enum:
+          - interactive_image
+          title: Type
+          type: string
+      required:
+      - type
+      - image_url
+      title: InteractiveImage
+      type: object
+    Item-Input:
+      description: InfoCard Item
+      properties:
+        label:
+          title: Label
+          type: string
+        text:
+          $ref: '#/components/schemas/TextParagraph'
+      required:
+      - label
+      - text
+      title: Item
+      type: object
+    Item-Output:
+      description: InfoCard Item
+      properties:
+        label:
+          title: Label
+          type: string
+        text:
+          $ref: '#/components/schemas/TextParagraph'
+      required:
+      - label
+      - text
+      title: Item
+      type: object
+    NoOptionsReason:
+      description: Used to indicate the absence of search results. This takes precedence
+        over `options` and `option_groups` if they're passed together.
+      properties:
+        message:
+          description: An explanatory message to display why no search results are
+            returned.
+          examples:
+          - No results found
+          title: Message
+          type: string
+      required:
+      - message
+      title: NoOptionsReason
+      type: object
+    OpenLink:
+      description: Open a new browser tab with the URL provided in link_url.
+      properties:
+        action_type:
+          const: open_link
+          default: open_link
+          description: The action performed by this component.
+          enum:
+          - open_link
+          examples:
+          - open_link
+          title: Action Type
+          type: string
+        link_url:
+          description: The URL to be opened in a new browser tab.
+          examples:
+          - https://example.com
+          title: Link Url
+          type: string
+      required:
+      - link_url
+      title: OpenLink
+      type: object
+    OpenOauthPopup:
+      description: 'Open a popup with the URL provided in link_url. When the popup
+        is closed, it triggers a user action request which includes your specified
+        `action_id` in the same element.
+
+
+        **Cautions:**
+
+
+        1. Ensure that an `action_id` is included with this object within the element.
+        This is crucial for your server to correctly identify the user action request.
+
+        1. This object is only compatible in a `View` context, and not in an `AttachmentView`.'
+      properties:
+        action_type:
+          const: open_oauth_popup
+          default: open_oauth_popup
+          description: The action performed by this component.
+          enum:
+          - open_oauth_popup
+          examples:
+          - open_oauth_popup
+          title: Action Type
+          type: string
+        link_url:
+          description: The URL to be opened in a popup window.
+          examples:
+          - https://example.com
+          title: Link Url
+          type: string
+      required:
+      - link_url
+      title: OpenOauthPopup
+      type: object
+    Option-Input:
+      description: Select Option
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        icon:
+          anyOf:
+          - $ref: '#/components/schemas/Image'
+          - type: 'null'
+        label:
+          description: A label string for the selectable item.
+          examples:
+          - Channels
+          title: Label
+          type: string
+        static_action:
+          anyOf:
+          - description: Static Action
+            discriminator:
+              mapping:
+                close_view: '#/components/schemas/CloseView'
+                open_link: '#/components/schemas/OpenLink'
+                open_oauth_popup: '#/components/schemas/OpenOauthPopup'
+                write_to_clipboard: '#/components/schemas/WriteToClipboard'
+              propertyName: action_type
+            oneOf:
+            - $ref: '#/components/schemas/OpenOauthPopup'
+            - $ref: '#/components/schemas/OpenLink'
+            - $ref: '#/components/schemas/WriteToClipboard'
+            - $ref: '#/components/schemas/CloseView'
+          - type: 'null'
+          title: Static Action
+        tag:
+          anyOf:
+          - $ref: '#/components/schemas/Tag'
+          - type: 'null'
+      required:
+      - label
+      title: Option
+      type: object
+    Option-Output:
+      description: Select Option
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        icon:
+          anyOf:
+          - $ref: '#/components/schemas/Image'
+          - type: 'null'
+        label:
+          description: A label string for the selectable item.
+          examples:
+          - Channels
+          title: Label
+          type: string
+        static_action:
+          anyOf:
+          - description: Static Action
+            discriminator:
+              mapping:
+                close_view: '#/components/schemas/CloseView'
+                open_link: '#/components/schemas/OpenLink'
+                open_oauth_popup: '#/components/schemas/OpenOauthPopup'
+                write_to_clipboard: '#/components/schemas/WriteToClipboard'
+              propertyName: action_type
+            oneOf:
+            - $ref: '#/components/schemas/OpenOauthPopup'
+            - $ref: '#/components/schemas/OpenLink'
+            - $ref: '#/components/schemas/WriteToClipboard'
+            - $ref: '#/components/schemas/CloseView'
+          - type: 'null'
+          title: Static Action
+        tag:
+          anyOf:
+          - $ref: '#/components/schemas/Tag'
+          - type: 'null'
+      required:
+      - label
+      title: Option
+      type: object
+    OptionGroup-Input:
+      properties:
+        label:
+          description: The heading, or category title, for the group of options it
+            encompasses.
+          examples:
+          - Channels
+          title: Label
+          type: string
+        options:
+          description: Each group's array of selectable items.
+          items:
+            $ref: '#/components/schemas/Option-Input'
+          minItems: 1
+          title: Options
+          type: array
+      required:
+      - label
+      - options
+      title: OptionGroup
+      type: object
+    OptionGroup-Output:
+      properties:
+        label:
+          description: The heading, or category title, for the group of options it
+            encompasses.
+          examples:
+          - Channels
+          title: Label
+          type: string
+        options:
+          description: Each group's array of selectable items.
+          items:
+            $ref: '#/components/schemas/Option-Output'
+          minItems: 1
+          title: Options
+          type: array
+      required:
+      - label
+      - options
+      title: OptionGroup
+      type: object
+    ResourceMessage:
+      properties:
+        attachments:
+          anyOf:
+          - items:
+              type: object
+            type: array
+          - type: 'null'
+          title: Attachments
+        content:
+          title: Content
+          type: string
+        content_formatted:
+          anyOf:
+          - type: object
+          - type: 'null'
+          title: Content Formatted
+        created_at:
+          format: date-time
+          title: Created At
+          type: string
+        creator:
+          title: Creator
+          type: object
+        edited_at:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Edited At
+        files:
+          anyOf:
+          - items:
+              type: object
+            type: array
+          - type: 'null'
+          title: Files
+        id:
+          title: Id
+          type: string
+        resource_type:
+          const: message
+          default: message
+          enum:
+          - message
+          title: Resource Type
+          type: string
+      required:
+      - id
+      - created_at
+      - content
+      - creator
+      title: ResourceMessage
+      type: object
+    ResourceMessageComment:
+      description: The details of the selected comment, which are added when `user_action.type=user_commands.context_menus:message_comment`.
+      properties:
+        attachments:
+          anyOf:
+          - items:
+              type: object
+            type: array
+          - type: 'null'
+          title: Attachments
+        content:
+          title: Content
+          type: string
+        content_formatted:
+          anyOf:
+          - type: object
+          - type: 'null'
+          title: Content Formatted
+        created_at:
+          format: date-time
+          title: Created At
+          type: string
+        creator:
+          title: Creator
+          type: object
+        edited_at:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Edited At
+        files:
+          anyOf:
+          - items:
+              type: object
+            type: array
+          - type: 'null'
+          title: Files
+        id:
+          title: Id
+          type: string
+        resource_type:
+          const: message_comment
+          default: message_comment
+          description: Type of the resource.
+          enum:
+          - message_comment
+          title: Resource Type
+          type: string
+      required:
+      - id
+      - created_at
+      - content
+      - creator
+      title: ResourceMessageComment
+      type: object
+    ResourceQuery:
+      description: This parameter contains the search query input by the user.
+      properties:
+        resource_type:
+          const: query
+          default: query
+          description: Type of the resource.
+          enum:
+          - query
+          title: Resource Type
+          type: string
+        value:
+          description: The query keyword input by the user.
+          examples:
+          - keyword
+          title: Value
+          type: string
+      required:
+      - value
+      title: ResourceQuery
+      type: object
+    ResourceSettingsPresenceSync:
+      properties:
+        resource_type:
+          const: settings.presence_sync
+          default: settings.presence_sync
+          enum:
+          - settings.presence_sync
+          title: Resource Type
+          type: string
+        settings:
+          $ref: '#/components/schemas/Settings'
+      required:
+      - settings
+      title: ResourceSettingsPresenceSync
+      type: object
+    Select-Input:
+      description: An element representing a dropdown.
+      properties:
+        multiselect:
+          default: false
+          description: Determines whether multiple selections are allowed. If `true`,
+            the `trigger_on_input` value is ignored.
+          title: Multiselect
+          type: boolean
+        no_options_reason:
+          anyOf:
+          - $ref: '#/components/schemas/NoOptionsReason'
+          - type: 'null'
+        option_groups:
+          description: An array of labeled groups, each containing selectable items.
+            When passed with `options` or `no_options_reason`, this is ignored.
+          items:
+            $ref: '#/components/schemas/OptionGroup-Input'
+          title: Option Groups
+          type: array
+        options:
+          description: An array of selectable items. When passed with `no_options_reason`,
+            this is ignored.
+          items:
+            $ref: '#/components/schemas/Option-Input'
+          title: Options
+          type: array
+        placeholder:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: A placeholder string for the dropdown.
+          title: Placeholder
+        query:
+          anyOf:
+          - $ref: '#/components/schemas/SelectQuery'
+          - type: 'null'
+        style:
+          anyOf:
+          - $ref: '#/components/schemas/Style'
+          - type: 'null'
+        trigger_on_input:
+          default: false
+          description: If `true`, selecting an item from the dropdown triggers a user
+            action request to your app server.
+          title: Trigger On Input
+          type: boolean
+        type:
+          const: select
+          description: Type of the element.
+          enum:
+          - select
+          title: Type
+          type: string
+        value:
+          description: List of the selected options’ `action_id` values.
+          items:
+            type: string
+          title: Value
+          type: array
+      required:
+      - type
+      title: Select
+      type: object
+    Select-Output:
+      description: An element representing a dropdown.
+      properties:
+        multiselect:
+          default: false
+          description: Determines whether multiple selections are allowed. If `true`,
+            the `trigger_on_input` value is ignored.
+          title: Multiselect
+          type: boolean
+        no_options_reason:
+          anyOf:
+          - $ref: '#/components/schemas/NoOptionsReason'
+          - type: 'null'
+        option_groups:
+          description: An array of labeled groups, each containing selectable items.
+            When passed with `options` or `no_options_reason`, this is ignored.
+          items:
+            $ref: '#/components/schemas/OptionGroup-Output'
+          title: Option Groups
+          type: array
+        options:
+          description: An array of selectable items. When passed with `no_options_reason`,
+            this is ignored.
+          items:
+            $ref: '#/components/schemas/Option-Output'
+          title: Options
+          type: array
+        placeholder:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: A placeholder string for the dropdown.
+          title: Placeholder
+        query:
+          anyOf:
+          - $ref: '#/components/schemas/SelectQuery'
+          - type: 'null'
+        style:
+          anyOf:
+          - $ref: '#/components/schemas/Style'
+          - type: 'null'
+        trigger_on_input:
+          default: false
+          description: If `true`, selecting an item from the dropdown triggers a user
+            action request to your app server.
+          title: Trigger On Input
+          type: boolean
+        type:
+          const: select
+          description: Type of the element.
+          enum:
+          - select
+          title: Type
+          type: string
+        value:
+          description: List of the selected options’ `action_id` values.
+          items:
+            type: string
+          title: Value
+          type: array
+      required:
+      - type
+      title: Select
+      type: object
+    SelectItem:
+      description: '''A reusable object that represents an item that can be selected.
+        It is used across various components like `View`, `AttachmentView`, `Tabs`,
+        and `Select`.'''
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        label:
+          description: A label string for the selectable item.
+          examples:
+          - Channels
+          title: Label
+          type: string
+        static_action:
+          anyOf:
+          - description: Static Action
+            discriminator:
+              mapping:
+                close_view: '#/components/schemas/CloseView'
+                open_link: '#/components/schemas/OpenLink'
+                open_oauth_popup: '#/components/schemas/OpenOauthPopup'
+                write_to_clipboard: '#/components/schemas/WriteToClipboard'
+              propertyName: action_type
+            oneOf:
+            - $ref: '#/components/schemas/OpenOauthPopup'
+            - $ref: '#/components/schemas/OpenLink'
+            - $ref: '#/components/schemas/WriteToClipboard'
+            - $ref: '#/components/schemas/CloseView'
+          - type: 'null'
+          title: Static Action
+      required:
+      - label
+      title: SelectItem
+      type: object
+    SelectQuery:
+      description: This component introduces a search field to the `Select` element,
+        allowing for dynamic filtering or querying.
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        disabled:
+          default: false
+          description: If set to true, the search field is disabled; if false, the
+            search functionality is enabled.
+          examples:
+          - false
+          title: Disabled
+          type: boolean
+        placeholder:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: A placeholder text for the search field.
+          examples:
+          - Search by member name
+          title: Placeholder
+        query_server:
+          default: true
+          description: Determines the behavior of the search functionality. If set
+            to true, the `Select` element queries the server for options based on
+            user input. If false, it filters through the current set of options locally.
+          examples:
+          - true
+          title: Query Server
+          type: boolean
+        value:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The current text input in the search field.
+          examples:
+          - value
+          title: Value
+      title: SelectQuery
+      type: object
+    Settings:
+      properties:
+        presence_sync:
+          title: Presence Sync
+          type: boolean
+      required:
+      - presence_sync
+      title: Settings
+      type: object
+    SettingsResponse:
+      description: This callback represents the developer's app server response to
+        a settings change request from the Swit client app.
+      properties:
+        callback_type:
+          const: settings.update
+          description: The type of settings operation performed.
+          enum:
+          - settings.update
+          title: Callback Type
+          type: string
+        result:
+          $ref: '#/components/schemas/SettingsResult'
+      required:
+      - callback_type
+      - result
+      title: SettingsResponse
+      type: object
+    SettingsResult:
+      description: SettingsResponse result
+      properties:
+        error_message:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The error message to display in a modal if the update was unsuccessful
+            (`success=false`).
+          title: Error Message
+        success:
+          description: Indicates if the settings update was successful.
+          title: Success
+          type: boolean
+      required:
+      - success
+      title: SettingsResult
+      type: object
+    SignInPage-Input:
+      description: 'An element to render a sign-in page. It''s uniquely tailored to
+        facilitate the representation of an integration between Swit and a third-party
+        service.
+
+        > On mobile, using this element together with other elements in the same view
+        may lead to unexpected changes in the height of this element.'
+      properties:
+        button:
+          allOf:
+          - $ref: '#/components/schemas/Button'
+          description: A button that triggers the OAuth or another type of sign-in
+            process for the integrated service.
+        description:
+          description: Additional descriptive or subtitle text displayed on the sign-in
+            page providing context about the integration.
+          examples:
+          - Integrate your Google Calendar to manage events and tasks within Swit.
+          title: Description
+          type: string
+        integrated_service:
+          $ref: '#/components/schemas/IntegratedService'
+        title:
+          description: Title text displayed on the sign-in page.
+          examples:
+          - Connect to Google Calendar
+          title: Title
+          type: string
+        type:
+          const: sign_in_page
+          description: Type of the element.
+          enum:
+          - sign_in_page
+          title: Type
+          type: string
+      required:
+      - type
+      - integrated_service
+      - title
+      - description
+      - button
+      title: SignInPage
+      type: object
+    SignInPage-Output:
+      description: 'An element to render a sign-in page. It''s uniquely tailored to
+        facilitate the representation of an integration between Swit and a third-party
+        service.
+
+        > On mobile, using this element together with other elements in the same view
+        may lead to unexpected changes in the height of this element.'
+      properties:
+        button:
+          allOf:
+          - $ref: '#/components/schemas/Button'
+          description: A button that triggers the OAuth or another type of sign-in
+            process for the integrated service.
+        description:
+          description: Additional descriptive or subtitle text displayed on the sign-in
+            page providing context about the integration.
+          examples:
+          - Integrate your Google Calendar to manage events and tasks within Swit.
+          title: Description
+          type: string
+        integrated_service:
+          $ref: '#/components/schemas/IntegratedService'
+        title:
+          description: Title text displayed on the sign-in page.
+          examples:
+          - Connect to Google Calendar
+          title: Title
+          type: string
+        type:
+          const: sign_in_page
+          description: Type of the element.
+          enum:
+          - sign_in_page
+          title: Type
+          type: string
+      required:
+      - type
+      - integrated_service
+      - title
+      - description
+      - button
+      title: SignInPage
+      type: object
+    Style:
+      description: The style properties for the dropdown.
+      properties:
+        variant:
+          default: outlined
+          enum:
+          - filled
+          - outlined
+          - ghost
+          title: Variant
+          type: string
+      title: Style
+      type: object
+    SubText:
+      description: Defines the subtext to be displayed as a metadata item for the
+        element.
+      properties:
+        content:
+          description: The content of the subtext.
+          examples:
+          - Due today
+          title: Content
+          type: string
+        type:
+          const: subtext
+          default: subtext
+          description: Specifies that the metadata item is a subtext.
+          enum:
+          - subtext
+          examples:
+          - subtext
+          title: Type
+          type: string
+      required:
+      - content
+      title: SubText
+      type: object
+    SuggestionsResponse:
+      description: This callback is used for user action requests where `user_action.type=view_actions.query`.
+        It provides query results based on user input.
+      properties:
+        callback_type:
+          const: query.suggestions
+          description: The type of operation to be performed as a response to a search
+            query made by the user.
+          enum:
+          - query.suggestions
+          title: Callback Type
+          type: string
+        result:
+          $ref: '#/components/schemas/SuggestionsResult'
+      required:
+      - callback_type
+      - result
+      title: SuggestionsResponse
+      type: object
+    SuggestionsResult:
+      properties:
+        no_options_reason:
+          anyOf:
+          - $ref: '#/components/schemas/NoOptionsReason'
+          - type: 'null'
+          description: Used to indicate the absence of search results. This takes
+            precedence over `options` and `option_groups` if they're passed together.
+        option_groups:
+          description: An array of labeled groups, each containing selectable items.
+            When passed with `options` or `no_options_reason`, this is ignored.
+          items:
+            $ref: '#/components/schemas/OptionGroup-Output'
+          maxItems: 10
+          title: Option Groups
+          type: array
+        options:
+          description: An array of selectable items. When passed with `no_options_reason`,
+            this is ignored.
+          items:
+            $ref: '#/components/schemas/Option-Output'
+          maxItems: 50
+          title: Options
+          type: array
+      title: SuggestionsResult
+      type: object
+    SwitRequest:
+      properties:
+        app_id:
+          title: App Id
+          type: string
+        context:
+          $ref: '#/components/schemas/Context'
+        current_view:
+          anyOf:
+          - $ref: '#/components/schemas/View-Input'
+          - $ref: '#/components/schemas/AttachmentView-Input'
+          - type: 'null'
+          title: Current View
+        platform:
+          enum:
+          - Desktop
+          - iOS
+          - Android
+          title: Platform
+          type: string
+        time:
+          format: date-time
+          title: Time
+          type: string
+        user_action:
+          $ref: '#/components/schemas/UserAction'
+        user_info:
+          $ref: '#/components/schemas/UserInfo'
+        user_preferences:
+          $ref: '#/components/schemas/UserPreferences'
+      required:
+      - platform
+      - time
+      - app_id
+      - user_info
+      - user_preferences
+      - context
+      - user_action
+      title: SwitRequest
+      type: object
+    Tabs-Input:
+      description: An element representing an array of tabs.
+      properties:
+        tabs:
+          description: An array of tabs.
+          items:
+            $ref: '#/components/schemas/SelectItem'
+          maxItems: 30
+          minItems: 1
+          title: Tabs
+          type: array
+        type:
+          const: tabs
+          description: Type of the element.
+          enum:
+          - tabs
+          title: Type
+          type: string
+        value:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Value
+      required:
+      - type
+      - tabs
+      title: Tabs
+      type: object
+    Tabs-Output:
+      description: An element representing an array of tabs.
+      properties:
+        tabs:
+          description: An array of tabs.
+          items:
+            $ref: '#/components/schemas/SelectItem'
+          maxItems: 30
+          minItems: 1
+          title: Tabs
+          type: array
+        type:
+          const: tabs
+          description: Type of the element.
+          enum:
+          - tabs
+          title: Type
+          type: string
+        value:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Value
+      required:
+      - type
+      - tabs
+      title: Tabs
+      type: object
+    Tag:
+      description: Represents a tag used as metadata for the element.
+      properties:
+        content:
+          description: The content of the tag.
+          examples:
+          - Urgent
+          title: Content
+          type: string
+        style:
+          anyOf:
+          - $ref: '#/components/schemas/TagStyle'
+          - type: 'null'
+          description: The style properties for the tag.
+          examples:
+          - color: primary
+            shape: rectangular
+        type:
+          const: tag
+          default: tag
+          description: Specifies that the metadata item is a tag.
+          enum:
+          - tag
+          examples:
+          - tag
+          title: Type
+          type: string
+      required:
+      - content
+      title: Tag
+      type: object
+    TagStyle:
+      description: Tag Style
+      properties:
+        color:
+          default: secondary
+          enum:
+          - primary
+          - secondary
+          - danger
+          title: Color
+          type: string
+        shape:
+          default: rectangular
+          enum:
+          - rectangular
+          - rounded
+          title: Shape
+          type: string
+      title: TagStyle
+      type: object
+    TaskBucket:
+      properties:
+        id:
+          title: Id
+          type: string
+      required:
+      - id
+      title: TaskBucket
+      type: object
+    TaskPeriod:
+      description: The period of the task.
+      properties:
+        due_time:
+          anyOf:
+          - format: date-time
+            type: string
+          - format: date
+            type: string
+          - type: 'null'
+          description: The date and time at which the task is due.
+          examples:
+          - '2023-02-14T05:01:00.452591Z'
+          title: Due Time
+        include_time:
+          description: Whether or not time is included in the period.
+          examples:
+          - true
+          title: Include Time
+          type: boolean
+        start_time:
+          anyOf:
+          - format: date-time
+            type: string
+          - format: date
+            type: string
+          - type: 'null'
+          description: The date and time at which the task begins.
+          examples:
+          - '2023-02-14T05:01:00.452591Z'
+          title: Start Time
+      required:
+      - include_time
+      title: TaskPeriod
+      type: object
+    TaskResource:
+      properties:
+        assignees:
+          items:
+            $ref: '#/components/schemas/TaskUser'
+          title: Assignees
+          type: array
+        bucket:
+          $ref: '#/components/schemas/TaskBucket'
+        collaborators:
+          items:
+            $ref: '#/components/schemas/TaskUser'
+          title: Collaborators
+          type: array
+        color_label:
+          anyOf:
+          - enum:
+            - red
+            - pink
+            - orange
+            - yellow
+            - light_green
+            - green
+            - cyan
+            - blue
+            - navy
+            - violet
+            - gray
+            type: string
+          - type: 'null'
+          title: Color Label
+        created_at:
+          description: The date and time when the task was created.
+          examples:
+          - '2022-07-07T12:41:18Z'
+          format: date-time
+          title: Created At
+          type: string
+        edited_at:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          description: The date and time at which the task was last edited.
+          examples:
+          - '2022-07-07T12:41:18Z'
+          title: Edited At
+        id:
+          description: The ID of the task.
+          examples:
+          - 23051106260551ZOVCPS
+          title: Id
+          type: string
+        parent_task_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The ID of the parent task.
+          examples:
+          - 200302045745598izpK
+          title: Parent Task Id
+        period:
+          $ref: '#/components/schemas/TaskPeriod'
+        priority:
+          enum:
+          - highest
+          - high
+          - normal
+          - low
+          - lowest
+          title: Priority
+          type: string
+        resource_type:
+          const: task
+          default: task
+          enum:
+          - task
+          title: Resource Type
+          type: string
+        status:
+          $ref: '#/components/schemas/TaskStatus'
+        title:
+          description: The title of the task.
+          examples:
+          - Developers documentation
+          title: Title
+          type: string
+      required:
+      - id
+      - created_at
+      - title
+      - period
+      - priority
+      - assignees
+      - collaborators
+      - status
+      - bucket
+      title: TaskResource
+      type: object
+    TaskStatus:
+      properties:
+        id:
+          title: Id
+          type: string
+        name:
+          title: Name
+          type: string
+        type:
+          enum:
+          - not_started
+          - in_progress
+          - done
+          title: Type
+          type: string
+      required:
+      - id
+      - name
+      - type
+      title: TaskStatus
+      type: object
+    TaskUser:
+      properties:
+        id:
+          title: Id
+          type: string
+      required:
+      - id
+      title: TaskUser
+      type: object
+    TextInput:
+      description: An element representing a text input field.
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        placeholder:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: A placeholder string for the text input field.
+          examples:
+          - Task name
+          title: Placeholder
+        trigger_on_input:
+          default: false
+          description: If `true`, pressing the **Enter** key with a value input triggers
+            a user action request to your app server.
+          title: Trigger On Input
+          type: boolean
+        type:
+          const: text_input
+          default: text_input
+          description: Type of the element.
+          enum:
+          - text_input
+          title: Type
+          type: string
+        value:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The text value entered in the field.
+          examples:
+          - December release notes
+          title: Value
+      title: TextInput
+      type: object
+    TextParagraph:
+      description: An element representing a text paragraph.
+      properties:
+        content:
+          description: The content of the text paragraph.
+          examples:
+          - Swit is where the magic happens.
+          title: Content
+          type: string
+        markdown:
+          default: false
+          description: A boolean that determines the format of the content (either
+            markdown or plaintext).
+          title: Markdown
+          type: boolean
+        style:
+          anyOf:
+          - $ref: '#/components/schemas/CollectionEntryTextStyle'
+          - type: 'null'
+        type:
+          const: text
+          default: text
+          description: Type of the element.
+          enum:
+          - text
+          title: Type
+          type: string
+      required:
+      - content
+      title: TextParagraph
+      type: object
+    TextSection-Input:
+      description: CollectionEntry TextSection
+      properties:
+        metadata_items:
+          description: Array of metadata elements that can be displayed next to the
+            text.
+          items:
+            anyOf:
+            - $ref: '#/components/schemas/SubText'
+            - $ref: '#/components/schemas/Image'
+            - $ref: '#/components/schemas/Tag'
+          maxItems: 4
+          title: Metadata Items
+          type: array
+        text:
+          allOf:
+          - $ref: '#/components/schemas/TextParagraph'
+          description: The text content of a text section.
+      required:
+      - text
+      title: TextSection
+      type: object
+    TextSection-Output:
+      description: CollectionEntry TextSection
+      properties:
+        metadata_items:
+          description: Array of metadata elements that can be displayed next to the
+            text.
+          items:
+            anyOf:
+            - $ref: '#/components/schemas/SubText'
+            - $ref: '#/components/schemas/Image'
+            - $ref: '#/components/schemas/Tag'
+          maxItems: 4
+          title: Metadata Items
+          type: array
+        text:
+          allOf:
+          - $ref: '#/components/schemas/TextParagraph'
+          description: The text content of a text section.
+      required:
+      - text
+      title: TextSection
+      type: object
+    Textarea:
+      description: An element representing a multiline text input field.
+      properties:
+        action_id:
+          anyOf:
+          - description: A unique identifier for an action that is performed on a
+              component.
+            examples:
+            - action_id
+            type: string
+          - type: 'null'
+          title: Action Id
+        disabled:
+          default: false
+          title: Disabled
+          type: boolean
+        height:
+          default: small
+          description: The height of the text area.
+          enum:
+          - small
+          - medium
+          - large
+          title: Height
+          type: string
+        placeholder:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: A placeholder string for the text input field.
+          examples:
+          - Provide a detailed description for this task
+          title: Placeholder
+        type:
+          const: textarea
+          description: Type of the element.
+          enum:
+          - textarea
+          title: Type
+          type: string
+        value:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The text value entered in the field.
+          examples:
+          - Fixed minor bugs.
+          title: Value
+      required:
+      - type
+      title: Textarea
+      type: object
+    UserAction:
+      properties:
+        id:
+          title: Id
+          type: string
+        resource:
+          anyOf:
+          - discriminator:
+              mapping:
+                message: '#/components/schemas/ResourceMessage'
+                message_comment: '#/components/schemas/ResourceMessageComment'
+                query: '#/components/schemas/ResourceQuery'
+                settings.presence_sync: '#/components/schemas/ResourceSettingsPresenceSync'
+                task: '#/components/schemas/TaskResource'
+              propertyName: resource_type
+            oneOf:
+            - $ref: '#/components/schemas/ResourceMessage'
+            - $ref: '#/components/schemas/ResourceMessageComment'
+            - $ref: '#/components/schemas/ResourceSettingsPresenceSync'
+            - $ref: '#/components/schemas/ResourceQuery'
+            - $ref: '#/components/schemas/TaskResource'
+          - type: 'null'
+          title: Resource
+        slash_command:
+          title: Slash Command
+          type: string
+        type:
+          enum:
+          - right_panel_open
+          - presence_sync
+          - user_commands.extensions:chat
+          - user_commands.extensions:chat_commenting
+          - user_commands.context_menus:message
+          - user_commands.context_menus:message_comment
+          - user_commands.context_menus:task
+          - user_commands.extensions:task
+          - view_actions.drop
+          - view_actions.input
+          - view_actions.query
+          - view_actions.submit
+          - view_actions.oauth_complete
+          title: Type
+          type: string
+        value:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Value
+      required:
+      - type
+      - id
+      - slash_command
+      title: UserAction
+      type: object
+    UserInfo:
+      properties:
+        organization_id:
+          title: Organization Id
+          type: string
+        user_id:
+          title: User Id
+          type: string
+      required:
+      - user_id
+      - organization_id
+      title: UserInfo
+      type: object
+    UserPreferences:
+      properties:
+        color_theme:
+          title: Color Theme
+          type: string
+        language:
+          title: Language
+          type: string
+        time_zone_offset:
+          title: Time Zone Offset
+          type: string
+      required:
+      - language
+      - time_zone_offset
+      - color_theme
+      title: UserPreferences
+      type: object
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          title: Location
+          type: array
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+      type: object
+    View-Input:
+      description: Defines the structure of a view with customizable sections—header,
+        body, and footer.
+      properties:
+        body:
+          $ref: '#/components/schemas/Body-Input'
+        footer:
+          anyOf:
+          - $ref: '#/components/schemas/Footer-Input'
+          - type: 'null'
+        header:
+          $ref: '#/components/schemas/Header-Input'
+        state:
+          anyOf:
+          - description: "\n            Stores a string value persisting stateful\
+              \ user information.\n            This value is included in subsequent\
+              \ user action requests from the current view via the current_view parameter.\n\
+              \            For more details on how to use the state parameter effectively,\
+              \ see the Using the state parameter guide."
+            examples:
+            - string
+            type: string
+          - type: 'null'
+          title: State
+        view_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: A unique ID for the view, specified by your app server. This
+            value can be used to refer to this view when updating or closing it via
+            a subsequent response from your app server.
+          examples:
+          - test_modal
+          title: View Id
+      required:
+      - header
+      - body
+      title: View
+      type: object
+    View-Output:
+      description: Defines the structure of a view with customizable sections—header,
+        body, and footer.
+      properties:
+        body:
+          $ref: '#/components/schemas/Body-Output'
+        footer:
+          anyOf:
+          - $ref: '#/components/schemas/Footer-Output'
+          - type: 'null'
+        header:
+          $ref: '#/components/schemas/Header-Output'
+        state:
+          anyOf:
+          - description: "\n            Stores a string value persisting stateful\
+              \ user information.\n            This value is included in subsequent\
+              \ user action requests from the current view via the current_view parameter.\n\
+              \            For more details on how to use the state parameter effectively,\
+              \ see the Using the state parameter guide."
+            examples:
+            - string
+            type: string
+          - type: 'null'
+          title: State
+        view_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: A unique ID for the view, specified by your app server. This
+            value can be used to refer to this view when updating or closing it via
+            a subsequent response from your app server.
+          examples:
+          - test_modal
+          title: View Id
+      required:
+      - header
+      - body
+      title: View
+      type: object
+    ViewsResponse:
+      description: This callback governs the creation or modification of a UI view
+        in different contexts - modals or the right panel.
+      properties:
+        callback_type:
+          description: "\n        The type of operation to be performed on the UI\
+            \ view. The operations simulate two types of behaviors: modal-like and\
+            \ stack-like (for the right panel).\n        - `views.update`: Modify\
+            \ the specified view.\n        - `views.initialize`: Refresh the specified\
+            \ view and remove all previously pushed views in the right panel.\n  \
+            \      - `views.open`: Launch a new modal view.\n        - `views.push`:\
+            \ Add a new view on top of the existing view in the right panel, creating\
+            \ a stack-like structure.\n        - `views.close`: Terminate the specified\
+            \ modal view.\n        "
+          enum:
+          - views.update
+          - views.initialize
+          - views.open
+          - views.push
+          - views.close
+          title: Callback Type
+          type: string
+        new_view:
+          anyOf:
+          - $ref: '#/components/schemas/View-Output'
+          - type: 'null'
+        reference_view_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: The identifier for the view to be targeted. Required when `callback_type=view.update`,
+            `callback_type=view.close`, or `callback_type=views.initialize`. If omitted,
+            the topmost view is selected.
+          title: Reference View Id
+      required:
+      - callback_type
+      title: ViewsResponse
+      type: object
+    WriteToClipboard:
+      description: This component enables copying specified content directly to the
+        user's clipboard.
+      properties:
+        action_type:
+          const: write_to_clipboard
+          default: write_to_clipboard
+          description: The action performed by this component.
+          enum:
+          - write_to_clipboard
+          examples:
+          - write_to_clipboard
+          title: Action Type
+          type: string
+        content:
+          description: The content to be copied to the clipboard.
+          examples:
+          - This is a channel to discuss the new product launch.
+          title: Content
+          type: string
+      required:
+      - content
+      title: WriteToClipboard
+      type: object
+info:
+  title: FastAPI
+  version: 0.1.0
+openapi: 3.1.0
+paths:
+  /:
+    post:
+      operationId: main__post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SwitRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                discriminator:
+                  mapping:
+                    attachments.share.channel: '#/components/schemas/AttachmentsResponse'
+                    attachments.share.existing_task: '#/components/schemas/AttachmentsResponse'
+                    attachments.share.new_task: '#/components/schemas/AttachmentsResponse'
+                    bot.invite_prompt: '#/components/schemas/BotResponse'
+                    query.suggestions: '#/components/schemas/SuggestionsResponse'
+                    settings.update: '#/components/schemas/SettingsResponse'
+                    views.close: '#/components/schemas/ViewsResponse'
+                    views.initialize: '#/components/schemas/ViewsResponse'
+                    views.open: '#/components/schemas/ViewsResponse'
+                    views.push: '#/components/schemas/ViewsResponse'
+                    views.update: '#/components/schemas/ViewsResponse'
+                  propertyName: callback_type
+                oneOf:
+                - $ref: '#/components/schemas/SettingsResponse'
+                - $ref: '#/components/schemas/SuggestionsResponse'
+                - $ref: '#/components/schemas/BotResponse'
+                - $ref: '#/components/schemas/AttachmentsResponse'
+                - $ref: '#/components/schemas/ViewsResponse'
+                title: Response Main  Post
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Main
