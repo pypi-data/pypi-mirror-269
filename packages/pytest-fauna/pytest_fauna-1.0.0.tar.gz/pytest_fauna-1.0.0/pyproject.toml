@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "pytest-fauna"
+version = "1.0.0"
+description = "A collection of helpful test fixtures for Fauna DB."
+authors = ["Ryan Causey <ryan.causey@munipal.io>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://gitlab.com/munipal-oss/pytest-fauna"
+homepage = "https://gitlab.com/munipal-oss/pytest-fauna"
+classifiers = [
+    "Framework :: Pytest"
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fauna = "^1.0.0"
+python-decouple = "^3.8"
+pytest-aws-fixtures = {version = "^1.2.0", optional = true}
+fluctuate = {version = "^2.0.0", optional = true}
+
+[tool.poetry.group.dev.dependencies]
+prospector = "^1.7.7"
+black = "^23.0.0"
+isort = "^5.10.1"
+pre-commit = "^3.0.0"
+
+[tool.poetry.extras]
+aws = ["pytest-aws-fixtures"]
+fluctuate = ["fluctuate"]
+
+[tool.poetry.plugins.pytest11]
+fauna = "pytest_fauna.plugin"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# Make isort play nice with black.
+[tool.isort]
+profile = "black"
+
+# Always check branch coverage and omit the test files.
+[tool.coverage.run]
+branch = true
+omit = ["*/tests/*"]
