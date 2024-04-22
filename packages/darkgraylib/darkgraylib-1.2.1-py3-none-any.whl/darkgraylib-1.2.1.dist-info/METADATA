@@ -1,0 +1,125 @@
+Metadata-Version: 2.1
+Name: darkgraylib
+Version: 1.2.1
+Summary: Common supporting code for Darker and Graylint
+Home-page: https://github.com/akaihola/darkgraylib
+Author: Antti Kaihola
+Author-email: 13725+akaihola@users.noreply.github.com
+License: BSD
+Project-URL: Source Code, https://github.com/akaihola/darkgraylib
+Project-URL: Change Log, https://github.com/akaihola/darkgraylib/blob/main/CHANGES.rst
+Project-URL: News, https://github.com/akaihola/darkgraylib/discussions/categories/announcements
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: toml >=0.10.0
+Provides-Extra: color
+Requires-Dist: Pygments >=2.4.0 ; extra == 'color'
+Provides-Extra: release
+Requires-Dist: darkgray-dev-tools ~=0.1.0 ; extra == 'release'
+Provides-Extra: test
+Requires-Dist: airium >=0.2.3 ; extra == 'test'
+Requires-Dist: click >=8.0.0 ; extra == 'test'
+Requires-Dist: cryptography >=3.3.2 ; extra == 'test'
+Requires-Dist: defusedxml >=0.7.1 ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: mypy ; extra == 'test'
+Requires-Dist: Pygments >=2.4.0 ; extra == 'test'
+Requires-Dist: pydocstyle ; extra == 'test'
+Requires-Dist: pylint ; extra == 'test'
+Requires-Dist: pytest >=6.2.0 ; extra == 'test'
+Requires-Dist: pytest-kwparametrize >=0.0.3 ; extra == 'test'
+Requires-Dist: requests-cache >=0.7 ; extra == 'test'
+Requires-Dist: ruamel.yaml >=0.17.21 ; extra == 'test'
+Requires-Dist: ruff >=0.0.292 ; extra == 'test'
+Requires-Dist: twine >=2.0.0 ; extra == 'test'
+Requires-Dist: types-requests >=2.27.9 ; extra == 'test'
+Requires-Dist: types-toml >=0.10.4 ; extra == 'test'
+Requires-Dist: urllib3 >=1.25.9 ; extra == 'test'
+Requires-Dist: wheel >=0.21.0 ; extra == 'test'
+
+=============
+ darkgraylib
+=============
+
+|build-badge| |license-badge| |pypi-badge| |downloads-badge| |black-badge| |changelog-badge|
+
+.. |build-badge| image:: https://github.com/akaihola/darkgraylib/actions/workflows/python-package.yml/badge.svg
+   :alt: main branch build status
+   :target: https://github.com/akaihola/darkgraylib/actions/workflows/python-package.yml?query=branch%3Amain
+.. |license-badge| image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg
+   :alt: BSD 3 Clause license
+   :target: https://github.com/akaihola/darkgraylib/blob/main/LICENSE
+.. |pypi-badge| image:: https://img.shields.io/pypi/v/darkgraylib
+   :alt: Latest release on PyPI
+   :target: https://pypi.org/project/darkgraylib/
+.. |downloads-badge| image:: https://pepy.tech/badge/darkgraylib
+   :alt: Number of downloads
+   :target: https://pepy.tech/project/darkgraylib
+.. |black-badge| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :alt: Source code formatted using Black
+   :target: https://github.com/psf/black
+.. |changelog-badge| image:: https://img.shields.io/badge/-change%20log-purple
+   :alt: Change log
+   :target: https://github.com/akaihola/darkgraylib/blob/main/CHANGES.rst
+.. |next-milestone| image:: https://img.shields.io/github/milestones/progress/akaihola/darkgraylib/7?color=red&label=release%201.3.0
+   :alt: Next milestone
+   :target: https://github.com/akaihola/darkgraylib/milestone/4
+
+
+What?
+=====
+
+This package is a placeholder for common supporting code for Darker_ and Graylint_.
+
+Such pieces of code have been moved from Darker_ to this new package.
+
+.. _Darker: https://pypi.org/project/darker
+.. _Graylint: https://pypi.org/project/graylint
+
+
+.. _#151: https://github.com/akaihola/darker/issues/151
+.. _community support channel: https://github.com/akaihola/darker/discussions
+
+
+Why?
+====
+
+Darker_ and Graylint_ originate from the same original Darker_ code base. In February
+2023, linter support was decided to be moved out from Darker_. Obviously, the two tools
+are still very similar and share a lot of under-the-hood functionality. For maintenance
+purposes, those common pieces are being moved into this package.
+
+
+License
+=======
+
+BSD. See ``LICENSE``.
+
+
+Contributors ✨
+===============
+
+See README.rst_ for the list of contributors.
+
+This project follows the all-contributors_ specification.
+Contributions of any kind are welcome!
+
+.. _README.rst: https://github.com/akaihola/darkgraylib/blob/main/README.rst
+.. _emoji key: https://allcontributors.org/docs/en/emoji-key
+.. _all-contributors: https://allcontributors.org
+
+
+GitHub stars trend
+==================
+
+|stargazers|_
+
+.. |stargazers| image:: https://starchart.cc/akaihola/darkgraylib.svg
+.. _stargazers: https://starchart.cc/akaihola/darkgraylib
