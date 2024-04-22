@@ -1,0 +1,10 @@
+dataclasses-json>=0.5.4
+google-api-core>=2.8.1
+googleapis-common-protos>=1.56.4
+grpcio-reflection>=1.47.0
+grpcio-tools>=1.47.0
+grpcio>=1.47.0
+mypy-protobuf==3.2.0
+polling>=0.3.2
+regex
+ondewo-client-utils>=1.0.0
