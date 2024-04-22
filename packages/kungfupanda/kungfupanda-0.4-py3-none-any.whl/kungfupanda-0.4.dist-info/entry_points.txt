@@ -1,0 +1,2 @@
+[console_scripts]
+kungfupanda_post_install = kungfupanda.post_install:main
