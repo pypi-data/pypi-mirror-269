@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+pyproject.toml
+sndhdr/__init__.py
+standard_sndhdr.egg-info/PKG-INFO
+standard_sndhdr.egg-info/SOURCES.txt
+standard_sndhdr.egg-info/dependency_links.txt
+standard_sndhdr.egg-info/top_level.txt
+tests/test_sndhdr.py
