@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: email-profile
+Version: 0.1.0
+Summary: 📩 Email Profile
+Author: Fernando Celmer
+Author-email: email@fernandocelmer.com
+Project-URL: Homepage, https://github.com/linux-profile/email-profile
+Project-URL: Repository, https://github.com/linux-profile/email-profile
+Project-URL: Documentation, https://github.com/linux-profile/email-profile/blob/master/README.md
+Project-URL: Issues, https://github.com/linux-profile/email-profile/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# email-profile
+
+![GitHub Org's stars](https://img.shields.io/github/stars/linux-profile?label=LinuxProfile&style=flat-square)
+
+---
+
+- **Documentation**: [Link](https://github.com/FernandoCelmer/email-profile)
+- **Source Code**: [Link](https://github.com/FernandoCelmer/email-profile)
+
+---
+
+## Commit Style
+
+- ⚙️ FEATURE
+- 📝 PEP8
+- 📌 ISSUE
+- 🪲 BUG
+- 📘 DOCS
+- 📦 PyPI
+- ❤️️ TEST
+- ⬆️ CI/CD
+- ⚠️ SECURITY
+
+## License
+
+This project is licensed under the terms of the MIT license.

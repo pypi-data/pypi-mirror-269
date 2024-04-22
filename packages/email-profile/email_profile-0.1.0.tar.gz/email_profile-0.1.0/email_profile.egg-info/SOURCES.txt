@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+email_profile/__init__.py
+email_profile/main.py
+email_profile.egg-info/PKG-INFO
+email_profile.egg-info/SOURCES.txt
+email_profile.egg-info/dependency_links.txt
+email_profile.egg-info/entry_points.txt
+email_profile.egg-info/top_level.txt
+email_profile.egg-info/zip-safe
