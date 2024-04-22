@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: clusterenv
+Version: 0.3.0
+Summary: ClusterEnv is a Python Gym environment designed to simulate and model the management and optimization of computing clusters. In the realm of distributed computing.
+License: MIT
+Author: Guy Arieli
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: gymnasium (>=0.29.1,<0.30.0)
+Requires-Dist: matplotlib (>=3.8.3,<4.0.0)
+Description-Content-Type: text/markdown
+
+# ClusterEnv
+ClusterEnv is a Python Gym environment designed to simulate and model the management and optimization of computing clusters. In the realm of distributed computing
+
