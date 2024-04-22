@@ -1,0 +1,8 @@
+chardet<5,>=3.0.2
+requests<3,>=2.25
+
+[:python_version < "3.7"]
+dataclasses<1,>=0.8
+
+[pycurl]
+pycurl<8,>=7
