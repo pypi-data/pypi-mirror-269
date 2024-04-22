@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+pyproject.toml
+crypt/__init__.py
+standard_crypt.egg-info/PKG-INFO
+standard_crypt.egg-info/SOURCES.txt
+standard_crypt.egg-info/dependency_links.txt
+standard_crypt.egg-info/top_level.txt
+tests/test_crypt.py
