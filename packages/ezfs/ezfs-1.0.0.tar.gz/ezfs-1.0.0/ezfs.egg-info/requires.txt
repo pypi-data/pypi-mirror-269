@@ -1,0 +1,9 @@
+
+[lz4]
+lz4
+
+[s3]
+boto3
+
+[zstd]
+zstandard
