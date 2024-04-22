@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: extractstructuresMC
+Version: 1.0.0.1
+Summary: This code is an extension of the neighbor scanning     procedure of Moisy & Jiménez (2004), used for the extraction (segmentation)    of coherent structures from 3D scalar fields
+Home-page: https://github.com/Phoenixfire1081/CoherentStructureExtraction
+Author: Abhishek Harikrishnan
+Author-email: abhishek.harikrishnan@fu-berlin.de
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# CoherentStructureExtraction
+
