@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: dyne
+Version: 0.1.0
+Summary: A light weight Python async framework with batteries included.
+Home-page: https://github.com/tabotkevin/dune
+Author: Tabot Kevin
+Author-email: tabot.kevin@gmail.com
+License: Apache License 2.0
+Project-URL: Bug Tracker, https://github.com/tabotkevin/dune/issues
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: Flask>=2.3.2
+
+# Dunesios
+
+[![Build status](https://github.com/tabotkevin/dune/actions/workflows/tests.yml/badge.svg)](https://github.com/tabotkevin/dune/actions)
+
+A light weight Python async framework with batteries included.

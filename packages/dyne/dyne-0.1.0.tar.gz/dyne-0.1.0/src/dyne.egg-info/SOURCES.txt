@@ -1,0 +1,15 @@
+AUTHORS
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/dyne/__init__.py
+src/dyne.egg-info/PKG-INFO
+src/dyne.egg-info/SOURCES.txt
+src/dyne.egg-info/dependency_links.txt
+src/dyne.egg-info/not-zip-safe
+src/dyne.egg-info/requires.txt
+src/dyne.egg-info/top_level.txt
+tests/__init__.py
