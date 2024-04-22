@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: min1129
+Version: 0.0.0.1
+Summary: hello world 패키지이다.
+Home-page: 
+Author: maminseo
+Author-email: 
+License: MIT
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+Requires-Dist: pymongo
+
