@@ -1,0 +1,7 @@
+mo-dots==9.594.24112
+
+[tests]
+mo-testing>=8.591.24112
+mo-times>=5.589.24111
+mo-json>=6.589.24111
+mo-threads>=6.589.24111
