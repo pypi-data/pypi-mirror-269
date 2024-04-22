@@ -1,0 +1,17 @@
+gridkit-0.10.0.dist-info/METADATA,sha256=o1YNmJ87Tbl_O8OPKZFeuZfd_CgJXZCc1O_CJr_eHvg,3048
+gridkit-0.10.0.dist-info/WHEEL,sha256=QZenLo7OSmfwUW2c_Vk5qXEqXnDJnzKN3ugR5oy0OyI,91
+gridkit-0.10.0.dist-info/license_files/LICENSE.txt,sha256=UHxdzIrFQ1FVDgRaudXrt3IETaizPINGubsYYI5t18E,1090
+gridkit/base_grid.py,sha256=4rz00lj1Ytbm_cwSTVLTAmyWEvmT1Da58XaIDLIy2cE,25021
+gridkit/bounded_grid.py,sha256=5uX1PjKrXQBAudNxRZWs2H0G4uaz3IGJZ8WfiRKw1qs,33426
+gridkit/doc_utils.py,sha256=88h6XlUZ6bsAe8foL1--Ft3PTRjcnw0kbqHBjTTyiqw,5951
+gridkit/errors.py,sha256=RpW7L5UdIftfGLrIXC3vW4zZ1uzDZ7VPDXsEmmSjDWI,166
+gridkit/hex_grid.py,sha256=GleWbYt5SA6bV0Fzv4YMziJgFGYOgU9YWLtZRa8-20E,38528
+gridkit/index.py,sha256=DSXV4PRJlx6LQ3Ss4zEiDUUhEJBVh8wWAECzhaA6590,17469
+gridkit/io.py,sha256=RbNkj69tuAK2gWbv4lj4J4cXoDK4ov0__iXcl-1S8JA,3847
+gridkit/rect_grid.py,sha256=tnJoCtYt1B0OMaJDr0nXh_g9f2Ma3r_Ib4-B8u9NiPM,35630
+gridkit/tri_grid.py,sha256=EQt-rshDB2gr-SaIiQcGcoa8bIOGxToqk54crlT4AsA,22290
+gridkit/version.py,sha256=3VdF1fGzF4AGTXbukWqpdLbfEx2c9HpgvMnGdvVLE4M,26
+gridkit/_statistical_functions.py,sha256=kVUUD46VdqMWX92PtTKQriuqwp5HGkxMgIU-eyW4rTU,2431
+gridkit/__init__.py,sha256=czptuViSLiuSi7dyC6OO8H_0wVnPGqztKS9BkFLPmUg,424
+gridkit/gridkit_rs.cp311-win32.pyd,sha256=A3zkP_mGayo2jvbXvE6EjnKhWbcpPdt_8zeaipDWNho,434688
+gridkit-0.10.0.dist-info/RECORD,,
