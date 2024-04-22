@@ -1,0 +1,34 @@
+---
+- name: Set default facts
+  set_fact:
+    dry_run: False
+  tags: ['define_static_ip']
+
+- name: Display facts values
+  debug:
+    msg: |
+      dry_run: {{ dry_run }}
+  tags: ['define_static_ip']
+
+- name: Copy shell scripts library to remote host
+  copy:
+    src: "{{ role_path }}/files/shell_lib.sh"
+    dest: "$HOME/.ansible/tmp/shell_lib.sh"
+  tags: ['define_static_ip']
+
+- name: Configure RPi node network (static IP and hostname)
+  tags: ['define_static_ip']
+  script: add_dhcp_entry.sh
+  register: scriptOut
+  async: 0
+  poll: 0
+  ignore_errors: false
+  become: "{{ not dry_run }}"
+  environment:
+    STATIC_IP: "{{ static_ip | mandatory }}"
+    GATEWAY_ADDRESS: "{{ gateway_address | mandatory }}"
+    DNS_ADDRESS: "{{ dns_address | mandatory }}"
+  tags: ['define_static_ip']
+
+- debug: msg={{ scriptOut.stdout }}
+  tags: ['define_static_ip']

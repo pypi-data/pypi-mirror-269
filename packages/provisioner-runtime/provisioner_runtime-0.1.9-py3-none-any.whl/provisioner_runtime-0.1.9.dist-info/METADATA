@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: provisioner-runtime
+Version: 0.1.9
+Summary: Provision Everything Anywhere
+Author: Zachi Nachshon
+Author-email: zachi.nachshon@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: ansible (>=7.3,<10.0)
+Requires-Dist: ansible-runner (>=2.3.2,<3.0.0)
+Requires-Dist: inquirer (>=2.10,<4.0)
+Requires-Dist: loguru (>=0.6,<0.8)
+Requires-Dist: python-hosts (>=1.0.3,<2.0.0)
+Requires-Dist: python-libnmap (>=0.7.3,<0.8.0)
+Requires-Dist: python3-nmap (>=1.5.4,<2.0.0)
+Requires-Dist: requests (>=2.28.1,<3.0.0)
+Requires-Dist: rich (>=12.5.1,<14.0.0)
+Requires-Dist: typer (>=0.6.1,<0.13.0)

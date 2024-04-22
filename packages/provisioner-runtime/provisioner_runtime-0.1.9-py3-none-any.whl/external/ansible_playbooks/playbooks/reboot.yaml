@@ -1,0 +1,37 @@
+---
+- name: Display facts values
+  debug:
+    msg: |
+      dry_run: {{ dry_run }}
+  tags: ['reboot']
+
+- name: Reboot a remote node
+  tags: ['reboot']
+  shell: 'sleep 2 && shutdown -r now "Ansible reboot triggered"'
+  async: 1
+  poll: 0
+  become: "{{ not dry_run }}"
+  become_method: sudo
+  ignore_errors: true
+  when: 
+    - not dry_run
+
+- name: Wait for the reboot to complete
+  tags: ['reboot']
+  when: 
+    - not dry_run
+  wait_for_connection:
+    connect_timeout: 10
+    sleep: 5
+    delay: 5
+    timeout: 300
+
+- name: Check the Uptime of the servers
+  tags: ['reboot']
+  shell: "uptime"
+  register: Uptime
+  when: 
+    - not dry_run
+
+- debug: var=Uptime
+  tags: ['reboot']
