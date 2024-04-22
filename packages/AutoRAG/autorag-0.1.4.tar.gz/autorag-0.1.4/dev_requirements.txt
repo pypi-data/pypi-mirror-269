@@ -1,0 +1,7 @@
+pytest
+pytest-env
+twine
+build
+setuptools-scm
+pytest-xdist
+pytest-asyncio
