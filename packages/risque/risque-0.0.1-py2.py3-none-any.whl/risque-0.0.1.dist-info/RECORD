@@ -1,0 +1,13 @@
+risque/__init__.py,sha256=5tzgcXyvYvtxE3xiso5UJUI-dn9t1REcpHj1avJ8Zmk,84
+risque/client/__init__.py,sha256=dl0LcIIa3DR5vmDdxeJoLQRcrZKozA6ZcAFhP8l2j4A,790
+risque/common/constants.py,sha256=O1-eWqgTTHMQfEON6ZjaX9ctLUiwWOp-DbPSuu9czAo,78
+risque/common/interfaces.py,sha256=_td5ThIDWCVZvUyW_sUkn_fCpeldyfOPLi3QS2vlc5U,1203
+risque/common/singleton.py,sha256=vSe7cKw0BtjfQ4HUElATsNjO13eSDuXS9LQlmlp1AuY,498
+risque/common/task.py,sha256=5e4saAiRd6n8HyRzaZwLrKLH5IQUXUkw_Vrwj9iQmDs,564
+risque/server/__init__.py,sha256=OrflP0G97E9qagHPvupBSGSEdXbb-Yp0BwMTUkTANBU,1432
+risque/server/handlers.py,sha256=Xk0v-daIrD5q9bBADDBTK1y6pA-ZcnrLCighAVfHr7M,562
+risque/task_manager/__init__.py,sha256=OmxcMqljIQ7a6ZBWM_PgA8kc6objk4Pen-m3LZ8re2U,656
+risque-0.0.1.dist-info/LICENSE.txt,sha256=0SAgqCl8RI6Vm7Rv5YC6CPyLA2MXedQM9tq17WMXl-o,33041
+risque-0.0.1.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+risque-0.0.1.dist-info/METADATA,sha256=TQ14aedLyfxkVcVTqmil3_nlO1GocWGGfAfYYIapGCQ,460
+risque-0.0.1.dist-info/RECORD,,
