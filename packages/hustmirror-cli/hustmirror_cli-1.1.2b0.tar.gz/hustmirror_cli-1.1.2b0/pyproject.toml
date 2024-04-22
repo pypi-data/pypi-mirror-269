@@ -1,0 +1,27 @@
+[project]
+name = "hustmirror-cli"
+version = "1.1.2b"
+description = "hustmirror-cli, hosted at PyPI"
+authors = [
+    { name = "jingfelix", email = "jingfelix@outlook.com" },
+]
+dependencies = []
+requires-python = ">=3.8"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.build.wheel-data]
+scripts = [
+    "hustmirror-cli/output/hustmirror-cli",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
