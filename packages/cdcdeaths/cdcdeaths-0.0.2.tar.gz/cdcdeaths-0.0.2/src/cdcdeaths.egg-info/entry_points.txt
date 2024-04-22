@@ -1,0 +1,3 @@
+[console_scripts]
+cdcdeaths = cdcdeaths:main
+
