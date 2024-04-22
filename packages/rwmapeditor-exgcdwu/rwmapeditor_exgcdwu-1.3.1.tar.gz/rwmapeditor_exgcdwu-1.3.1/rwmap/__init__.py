@@ -1,0 +1,11 @@
+from rwmap._core import RWmap
+import rwmap._frame as frame
+import rwmap._data.const as const
+import rwmap._data.tobject as object_useful
+import rwmap._data.tobject_group as object_group_useful
+import rwmap._data.tile_group_grid as tile_group_useful
+import rwmap._data.otgroup_grid as otgroup_useful
+import rwmap._tile as tile
+import rwmap._object as tobject
+import rwmap._otgroup as otgroup
+
