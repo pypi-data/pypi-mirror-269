@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+pyproject.toml
+cgitb/__init__.py
+standard_cgitb.egg-info/PKG-INFO
+standard_cgitb.egg-info/SOURCES.txt
+standard_cgitb.egg-info/dependency_links.txt
+standard_cgitb.egg-info/top_level.txt
+tests/test_cgitb.py
