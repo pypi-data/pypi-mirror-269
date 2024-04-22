@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+pyproject.toml
+vision_locator.egg-info/PKG-INFO
+vision_locator.egg-info/SOURCES.txt
+vision_locator.egg-info/dependency_links.txt
+vision_locator.egg-info/requires.txt
+vision_locator.egg-info/top_level.txt
+vl/__init__.py
+vl/__detect__/__detect__.py
+vl/__detect__/__info__.py
+vl/__exception__/__exception__.py
+vl/__module__/__config__.py
+vl/__module__/__module__.py
