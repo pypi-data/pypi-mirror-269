@@ -1,0 +1,8 @@
+llm_evals/__init__.py,sha256=1DHRaXDLXNaJoHGnvJLHU_3JdCJtg1sZIhPrF6HferM,1675
+llm_evals/checks.py,sha256=_zPzWXLyjdNvgW7g-xwxGRVK67fCd7rBcTtfZnTa6BQ,1133
+llm_evals/hookspecs.py,sha256=vgYOygjdzwzzJQ_J9XcBcIs4sXD99JUSsXAaHm1gxy0,155
+llm_evals_plugin-0.1a0.dist-info/METADATA,sha256=Pp6yQFLOlyYgy5o8rweAPEyGu0Lq1jI-h44xaAAEMvM,1832
+llm_evals_plugin-0.1a0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+llm_evals_plugin-0.1a0.dist-info/entry_points.txt,sha256=VXGEGAAaFUlm7bJvktMZ9SIrVLnaMvLxxyuFgsKNKtI,24
+llm_evals_plugin-0.1a0.dist-info/top_level.txt,sha256=PRczQ3iaf-CUgeC0pOpftTk7yGn-3LncsSNwHPDIbQE,10
+llm_evals_plugin-0.1a0.dist-info/RECORD,,

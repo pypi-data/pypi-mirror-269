@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: llm-evals-plugin
+Version: 0.1a0
+Summary: Run evals against prompts using LLM
+Author: Simon Willison
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/simonw/llm-evals-plugin
+Project-URL: Changelog, https://github.com/simonw/llm-evals-plugin/releases
+Project-URL: Issues, https://github.com/simonw/llm-evals-plugin/issues
+Project-URL: CI, https://github.com/simonw/llm-evals-plugin/actions
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
+Requires-Dist: llm
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# llm-evals-plugin
+
+[![PyPI](https://img.shields.io/pypi/v/llm-evals-plugin.svg)](https://pypi.org/project/llm-evals-plugin/)
+[![Changelog](https://img.shields.io/github/v/release/simonw/llm-evals-plugin?include_prereleases&label=changelog)](https://github.com/simonw/llm-evals-plugin/releases)
+[![Tests](https://github.com/simonw/llm-evals-plugin/actions/workflows/test.yml/badge.svg)](https://github.com/simonw/llm-evals-plugin/actions/workflows/test.yml)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/llm-evals-plugin/blob/main/LICENSE)
+
+Run evals against prompts using LLM
+
+**Very early alpha**: everything is likely to change.
+
+## Installation
+
+Install this plugin in the same environment as [LLM](https://llm.datasette.io/).
+```bash
+llm install llm-evals-plugin
+```
+## Usage
+
+See [issue 1](https://github.com/simonw/llm-evals-plugin/issues/1).
+
+## Development
+
+To set up this plugin locally, first checkout the code. Then create a new virtual environment:
+```bash
+cd llm-evals-plugin
+python3 -m venv venv
+source venv/bin/activate
+```
+Now install the dependencies and test dependencies:
+```bash
+llm install -e '.[test]'
+```
+To run the tests:
+```bash
+pytest
+```
