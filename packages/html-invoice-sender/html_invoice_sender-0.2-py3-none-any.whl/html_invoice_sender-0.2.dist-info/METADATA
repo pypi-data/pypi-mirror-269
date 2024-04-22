@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: html-invoice-sender
+Version: 0.2
+Requires-Dist: Jinja2
+
