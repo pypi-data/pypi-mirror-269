@@ -1,0 +1,34 @@
+Metadata-Version: 2.3
+Name: snk-cli
+Version: 0.2.0
+Project-URL: Documentation, https://github.com/unknown/snk-cli#readme
+Project-URL: Issues, https://github.com/unknown/snk-cli/issues
+Project-URL: Source, https://github.com/unknown/snk-cli
+Author-email: Wytamma Wirth <wytamma.wirth@me.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: art~=5.9
+Requires-Dist: datrie>=0.8.2
+Requires-Dist: gitpython~=3.1
+Requires-Dist: makefun~=1.15
+Requires-Dist: pulp<2.8
+Requires-Dist: snakemake>=7
+Requires-Dist: typer[all]~=0.9.0
+Description-Content-Type: text/markdown
+
+# snk-cli
+[![PyPI - Version](https://img.shields.io/pypi/v/snk-cli.svg)](https://pypi.org/project/snk-cli)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/snk-cli.svg)](https://pypi.org/project/snk-cli)
+[![write-the - docs](https://badgen.net/badge/write-the/docs/blue?icon=https://raw.githubusercontent.com/Wytamma/write-the/master/images/write-the-icon.svg)](https://write-the.wytamma.com/)
+
+Used internally by [snk](https://snk.wytamma.com/) to generate dynamic [snakemake](https://snakemake.github.io/) CLIs. You can use `snk-cli` to build self contained snakemake tools. See here for more details -> [https://snk.wytamma.com/workflow_packages](https://snk.wytamma.com/workflow_packages/)
