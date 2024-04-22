@@ -1,0 +1,40 @@
+[project]
+name = "nonebot-plugin-sanyao"
+dynamic = []
+authors = [
+    { name = "afterow", email = "afterow@163.com" },
+]
+description = "三爻易数排盘"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "cnlunar>=0.1.3",
+    "nonebot2>=2.2.0",
+]
+classifiers = [
+    "Framework :: Pydantic",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Natural Language :: Chinese (Simplified)",
+]
+version = "0.2.3"
+
+[project.license]
+text = "MIT License"
+
+[project.urls]
+Homepage = "https://github.com/afterow/nonebot-plugin-sanyao"
+"Bug Tracker" = "https://github.com/afterow/nonebot-plugin-sanyao/issues"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm.version]
+source = "file"
+path = "nonebot_plugin_sanyao/__init__.py"
