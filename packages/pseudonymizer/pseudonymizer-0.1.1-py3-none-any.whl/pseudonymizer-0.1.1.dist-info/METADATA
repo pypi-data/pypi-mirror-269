@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pseudonymizer
+Version: 0.1.1
+Summary: pseudonymizer-to-protect-private-personal-data
+Home-page: https://github.com/ksydata/pseudonymizer
+Author: ksydata
+Author-email: ksydata01@gmail.com
+Requires-Python: >3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (==1.4.4)
+Requires-Dist: PyMySQL (==1.1.0)
+Requires-Dist: numpy (==1.21.5)
+Requires-Dist: scipy (==1.9.1)
+Requires-Dist: matplotlib (==3.5.2)
+Requires-Dist: seaborn (==0.11.2)
+Requires-Dist: setuptools (==63.4.1)
+Requires-Dist: prettytable (==3.9.0)
+
+# pseudonymizer
+This is a Python module that pseudonyms personal and credit data.
