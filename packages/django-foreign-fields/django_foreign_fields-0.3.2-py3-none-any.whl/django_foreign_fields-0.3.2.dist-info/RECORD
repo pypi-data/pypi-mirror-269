@@ -1,0 +1,12 @@
+foreign_fields/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+foreign_fields/fields.py,sha256=ZnqD-ciKQu3twsLWyTVCl3t4TeCDpv06UOflJzWlcq8,2274
+foreign_fields/test_forms.py,sha256=zT1UMXZ63ertCuFc3PYhWJ2dZstRVblvOKLQyxXG9X4,1327
+foreign_fields/test_models.py,sha256=eiek8hiByLfaLL5GGZk2f_GpQ8jpsto3ULaprYLcz8g,507
+foreign_fields/tests.py,sha256=NViW9VOf8VvOLewvXbp1HKiZmNG-QlO6a6X2oe7OMEo,2196
+foreign_fields/migrations/0001_initial.py,sha256=MHn28Ao-22w6JBDeRlFwMFAa0d35rIZiJZjca4fGxmQ,1379
+foreign_fields/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_foreign_fields-0.3.2.dist-info/LICENSE,sha256=XZsc-wUE-s78SsVJS-PxkCNpwhKTF52x6aIfCwZwM4Y,1074
+django_foreign_fields-0.3.2.dist-info/METADATA,sha256=9G0vvcm5VD9H2_UGpQ8meRpKK5zdPIHe5Qj_9E-nZnY,4181
+django_foreign_fields-0.3.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_foreign_fields-0.3.2.dist-info/top_level.txt,sha256=dgs6nefstbNbcaho2gX_mZybhRIURIhYwqIXy479aZg,15
+django_foreign_fields-0.3.2.dist-info/RECORD,,
