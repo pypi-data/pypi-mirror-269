@@ -1,0 +1,27 @@
+- 0.2.12
+  - Fixed Brainweb phantom loading and generation
+  - Switched pre-pass kt precision from f32 to f64
+  - Made pre-pass state merging relative to sequence gradient moment and event time sizes
+- 0.2.11
+  - (re-)introduced return_mag_z parameter in pdg simulation
+- 0.2.10
+  - change default FOV in all notebooks to phantom size (200 mm)
+  - Use Open in Colab badges in the playground instead of links
+  - Documented how to run on GPU
+  - Added another pure mr0 flash DWI sequence to the playground
+  - Bugfix: normalized_grads setting was not passed in Sequence.cuda() and .cpu()
+  - Bugfix: removed wrong 2*pi factor from Diffusion b-value calculations
+- 0.2.9
+  - Change sign in gradient simulation - flips orientation of old reconstructions
+  - Included util file in mr0
+  - Improved plot function to support pypulseq 1.4.0-dev
+  - Add util to documentation
+- 0.2.8
+  - Updated playground notebook to use new FOV definitions
+  - Fixed SimData.recover()
+- 0.2.7
+  - Removed perlin-numpy from dependencies (git dependency not allowed by pypi)
+- 0.2.6
+  - New pulseq importer (correctly implements 1.2 - 1.4 spec)
+  - FOV / phantom size now in SI units per default
+  - Normalized gradients (when defining sequences in mr0) is now an explicit sequence flag
