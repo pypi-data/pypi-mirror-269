@@ -1,0 +1,17 @@
+The Data Transformation Libraries package contains three modules:<br>
+transpose<br>
+time_series_windowing<br>
+cross_correlation<br>
+
+
+**transpose**<br>
+The transpose module includes the "transpose2d" function, which switches the axes of a 2D tensor.<br>
+The transpose function has a signature: **transpose2d(input_matrix: list[list[float]]) -> list**<br>
+
+**time_series_windowing**<br>
+The time_series_windowing module includes the "window1d" function for time series windowing.<br>
+the time series windowing function has a signature: **window1d(input_array: list | np.ndarray, size: int, shift: int = 1, stride: int = 1) -> list[list | np.ndarray]**<br>
+
+**cross_correlation**<br>
+The cross_correlation module includes the "convolution2d" function for cross-correlation.<br>
+The cross correlation function has a signature: **convolution2d(input_matrix: np.ndarray, kernel: np.ndarray, stride : int = 1) -> np.ndarray**<br>
