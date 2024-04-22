@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "happyscript"
+description = "Framework for running scripts"
+version = "0.0.2"
+readme = "README.md"
+requires-python = ">=3.5"
+dependencies = [ ]
+
