@@ -1,0 +1,288 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id": "x-msk_cluster.spec.json",
+  "$id": "x-msk_cluster.spec.json",
+  "title": "x-msk_cluster",
+  "description": "x-msk_cluster specification",
+  "type": "object",
+  "additionalProperties": false,
+  "oneOf": [
+    {
+      "required": [
+        "Properties"
+      ]
+    },
+    {
+      "required": [
+        "Lookup"
+      ]
+    }
+  ],
+  "properties": {
+    "Lookup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["Cluster"],
+      "properties": {
+        "Cluster": {
+          "$ref": "x-resources.common.spec.json#/definitions/Lookup"
+        },
+        "ClientsSecurityGroup": {
+          "$ref": "x-resources.common.spec.json#/definitions/Lookup"
+        }
+      }
+    },
+    "Properties": {
+      "type": "object",
+      "description": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html"
+    },
+    "Settings": {
+      "$ref": "x-resources.common.spec.json#/definitions/Settings"
+    },
+    "MacroParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "CreateCMK": {
+          "type": "boolean",
+          "description": "Creates a new KMS Key for the cluster encryption"
+        },
+        "CreateLogGroup": {
+          "type": "boolean",
+          "description": "Creates a new CloudWatch Log Group for the Broker logs"
+        },
+        "CreateKafkaConfiguration": {
+          "description": "AWS::MSK::Configuration Properties or just the Kafka ``server.properties``",
+          "oneOf": [
+            {
+              "type": "object",
+              "description": "The Properties of https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-serverproperties"
+            },
+            {
+              "type": "string",
+              "description": "raw content for ``server.properties``"
+            },
+            {
+              "type": "array",
+              "uniqueItems": true,
+              "description": "Array representation of key=value of ``server.properties``",
+              "items": {
+                "type": "string",
+                "format": "(\\S+)=(\\S+)$"
+              }
+            }
+          ]
+        },
+        "StorageScaling": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "MaxInGB",
+            "Target"
+          ],
+          "properties": {
+            "MaxInGB": {
+              "type": "integer",
+              "description": "Maximum amount of storage for cluster EBS Storage"
+            },
+            "Target": {
+              "type": "number",
+              "maximum": 100.0,
+              "minimum": 10.0,
+              "description": "Target in percentage to maintain cluster capacity"
+            }
+          }
+        }
+      }
+    },
+    "Services": {
+      "type": "object",
+      "patternProperties": {
+        "[\\x20-\\x7E]+$": {
+          "description": "Object representation of the service to use.",
+          "additionalProperties": false,
+          "properties": {
+            "Access": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "object"
+                }
+              ]
+            },
+            "Scaling": {
+              "$ref": "x-resources.common.spec.json#/definitions/ScalingDefinition"
+            },
+            "ReturnValues": {
+              "type": "object",
+              "description": "Set the CFN Return Value and the environment variable name you want to expose to the service",
+              "additionalProperties": false,
+              "patternProperties": {
+                "[\\x20-\\x7E]+$": {
+                  "oneOf": [
+                    {
+                      "$ref": "x-resources.common.spec.json#/definitions/varNameDef"
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "EnvVarName": {
+                          "$ref": "x-resources.common.spec.json#/definitions/varNameDef"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "KafkaAccess": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "required": [
+                    "SaslScram"
+                  ]
+                },
+                {
+                  "required": [
+                    "Iam"
+                  ]
+                }
+              ],
+              "properties": {
+                "SaslScram": {
+                  "description": "SASL Scram kafka native settings. Do not work in combination with KafkaIamAccess",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "CreateNewScramUser": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "Iam": {
+                  "type": "object",
+                  "required": [
+                    "group"
+                  ],
+                  "properties": {
+                    "topic": {
+                      "type": "object",
+                      "$ref": "#/definitions/TopicsAccessDefinition"
+                    },
+                    "group": {
+                      "type": "object",
+                      "$ref": "#/definitions/GroupsAccessDefinition"
+                    },
+                    "cluster": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "IdempotentWrite": {
+                          "type": "boolean",
+                          "description": "Enables IdempotentWrite on the Kafka cluster"
+                        }
+                      }
+                    },
+                    "transactional-id": {
+                      "type": "object",
+                      "$ref": "#/definitions/TransactionsAccessDefinition"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "TopicsAccessDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "Producer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TopicName"
+          }
+        },
+        "Consumer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TopicName"
+          }
+        },
+        "ProducerConsumer": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Admin": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TopicName"
+          }
+        }
+      }
+    },
+    "GroupsAccessDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "Producer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GroupName"
+          }
+        },
+        "Admin": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GroupName"
+          }
+        }
+      }
+    },
+    "TransactionsAccessDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "Producer": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Admin": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "TopicName": {
+      "description": "Kafka Topic Name. Restrictions from latest source code. Added * for Pattern",
+      "type": "string",
+      "format": "^[a-zA-Z0-9._\\-\\*]+$",
+      "minLength": 1,
+      "maxLength": 249
+    },
+    "GroupName": {
+      "description": "Kafka Topic Name. Restrictions from latest source code. Added * for Pattern",
+      "type": "string",
+      "format": "^[a-zA-Z0-9._\\-\\*]+$",
+      "minLength": 1,
+      "maxLength": 249
+    }
+  }
+}

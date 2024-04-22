@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: ecs_composex_msk_cluster
+Version: 1.0.0
+Summary: msk_cluster - AWS MSK Cluster module for ECS Compose-X
+License: MPL-2.0
+Author: johnpreston
+Author-email: john@compose-x.io
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: compose-x-common (>=1.2,<2.0)
+Requires-Dist: ecs_composex (>=1.1,<2.0)
+Project-URL: Compose-X Labs, https://labs.compose-x.io/
+Project-URL: Compose-X Blog, https://blog.compose-x.io/
+Project-URL: ECS ComposeX, https://github.com/compose-x/ecs_composex/
+Description-Content-Type: text/x-rst
+
+
+.. meta::
+    :description: ECS Compose-X MSK Cluster
+    :keywords: AWS, ECS, docker, compose, MSK, kafka
+
+================
+msk_cluster
+================
+
+.. image:: https://img.shields.io/pypi/v/ecs_composex_msk_cluster.svg
+    :target: https://pypi.python.org/pypi/ecs_composex_msk_cluster
+
+
+This package is an extension to `ECS Compose-X`_ that manages Creation of new MSK clusters and automatically links
+to services to grant access and permissions.
+
+Install
+==========
+
+.. code-block:: bash
+
+    python3 -m venv venv
+    source venv/bin/activate
+    # With poetry
+
+    pip install pip poetry -U
+    poetry install
+
+    # Via pip
+    pip install pip -U
+    pip install ecs-composex-msk-cluster
+
+Syntax Reference
+==================
+
+.. code-block:: yaml
+
+    x-msk_cluster:
+          Properties: {}
+          Lookup: {}
+          Settings: {}
+          Services: {}
+
+`Full documentation <https://msk-cluster.docs.compose-x.io/>`_
+
+Examples can be found in ``use-cases`` in this repository.
+
+.. _ECS Compose-X: https://docs.compose-x.io
+.. _Properties for MSK Cluster: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html
+
