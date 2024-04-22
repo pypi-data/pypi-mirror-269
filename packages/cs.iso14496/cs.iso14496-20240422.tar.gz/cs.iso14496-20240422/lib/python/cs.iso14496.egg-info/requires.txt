@@ -1,0 +1,16 @@
+cs.binary>=20240422
+cs.buffer>=20240412
+cs.cmdutils>=20240422
+cs.fs>=20240422
+cs.fstags>=20240422
+cs.imageutils>=20240422.1
+cs.lex>=20240316
+cs.logutils>=20230212
+cs.pfx>=20240412
+cs.py.func>=20230331
+cs.tagset>=20240422.2
+cs.threads>=20240422
+cs.units
+cs.upd>=20240412
+icontract
+typeguard
