@@ -1,0 +1,46 @@
+"""Token Manager classes.
+
+There should be a 1-to-1 mapping between an instance of a subclass of
+:class:`.BaseTokenManager` and a :class:`.Reddit` instance.
+
+A few proof of concept token manager classes are provided here, but it is expected that
+Async PRAW users will create their own token manager classes suitable for their needs.
+
+.. deprecated:: 7.4.0
+
+    Tokens managers have been deprecated and will be removed in the near future.
+
+"""
+from __future__ import annotations
+
+from abc import ABC, abstractmethod
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    import aiosqlite
+    import asyncpraw
+    from asyncprawcore.auth import BaseAuthorizer
+
+class BaseTokenManager(ABC):
+    @abstractmethod
+    async def post_refresh_callback(self, authorizer: BaseAuthorizer) -> None: ...
+    @abstractmethod
+    async def pre_refresh_callback(self, authorizer: BaseAuthorizer) -> None: ...
+    @property
+    def reddit(self) -> asyncpraw.Reddit: ...
+    @reddit.setter
+    def reddit(self, value: asyncpraw.Reddit) -> None: ...
+
+class FileTokenManager(BaseTokenManager):
+    def __init__(self, filename: str) -> None: ...
+    async def post_refresh_callback(self, authorizer: BaseAuthorizer) -> None: ...
+    async def pre_refresh_callback(self, authorizer: BaseAuthorizer) -> None: ...
+
+class SQLiteTokenManager(BaseTokenManager):
+    def __init__(self, database: str, key: str) -> None: ...
+    async def close(self) -> None: ...
+    async def connection(self) -> "aiosqlite.Connection": ...
+    async def is_registered(self) -> bool: ...
+    async def post_refresh_callback(self, authorizer: BaseAuthorizer) -> None: ...
+    async def pre_refresh_callback(self, authorizer: BaseAuthorizer) -> None: ...
+    async def register(self, refresh_token: str) -> bool: ...
