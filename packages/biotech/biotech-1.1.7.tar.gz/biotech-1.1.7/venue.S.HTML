@@ -1,0 +1,75 @@
+
+
+
+<pre>
+
+	<h1>biotech</h1>
+		# neurons
+	
+	<h2>summary</h2>
+		
+		#
+		#	⚠️ ⚠️ ⚠️ ⚠️
+		#
+		#		Make sure that none of the stages that "biotech"
+		#		utilizes rely on "biotech".
+		#
+		#		For the sake of sanity, please keep the "reliability, testing, etc."
+		#		structure as a "tree, hierarchy, etc." etc. with no coodependencies.
+		#
+	
+	<h2>docker</h2>
+		docker network create --subnet=192.168.0.0/24 container_network
+		docker run --network container_network --ip 192.168.0.102 -v .:/biotech -it jumps:v2.1.0
+		docker exec -it a6599081a9fb bash 
+
+	<h2>install</h2>
+		python3 moves/install.py
+
+	<h2>source</h2>
+		source source.sh
+
+	<h2>git</h2>
+		git push --set-upstream git@gitlab.com:status600/climates/biotech.git performance
+
+	
+	
+	<h2>important</h2>
+		python3 /biotech/venues/warehouse/0.7.1_various_simultaneous/start.proc.py
+		
+	<h2>publishing</h2>
+		#
+		#	licenses
+		#
+		python3 -m venv /biotech/venues/warehouse/license_venv
+		source /biotech/venues/warehouse/license_venv/bin/activate
+
+		
+		#
+		#	statuses
+		#
+		python3 /biotech/venues/stages/biotech/_status/status.proc.py
+		
+		#
+		#	git push
+		#
+		#		if Circle CI is successful, then publish
+		#
+		
+		#
+		#	increase version
+		#
+		
+		#
+		#	poetry auth
+		#
+		rm -rf dist && poetry build --verbose && poetry publish --verbose;
+		
+
+	<h2>important</h2>
+		poetry show --tree
+
+
+	
+
+</pre>
