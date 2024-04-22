@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/rpcprotocolsimple/__init__.py
+src/rpcprotocolsimple/rpcprotocolsimple.py
+src/rpcprotocolsimple.egg-info/PKG-INFO
+src/rpcprotocolsimple.egg-info/SOURCES.txt
+src/rpcprotocolsimple.egg-info/dependency_links.txt
+src/rpcprotocolsimple.egg-info/top_level.txt
