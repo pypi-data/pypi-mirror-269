@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: notfunny
+Version: 0.6.16
+Summary: Only the worst
+Home-page: http://github.com/ohthepain/notfunny
+Author: Paul Wilkinson
+Author-email: paul@thisco.co
+License: MIT
+Keywords: joke
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Text Processing :: Linguistic
+Description-Content-Type: text/x-rst
+
+Really, the worst jokes around. Actually just the one worst. This is really just a test project for packaging python projects. But as an added bonus it really isnt funny.
