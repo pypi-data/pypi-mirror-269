@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+capture_db_queries/__init__.py
+capture_db_queries/decorators.py
+capture_db_queries.egg-info/PKG-INFO
+capture_db_queries.egg-info/SOURCES.txt
+capture_db_queries.egg-info/dependency_links.txt
+capture_db_queries.egg-info/requires.txt
+capture_db_queries.egg-info/top_level.txt
