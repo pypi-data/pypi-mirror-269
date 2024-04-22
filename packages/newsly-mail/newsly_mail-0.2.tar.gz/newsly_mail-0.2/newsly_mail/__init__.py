@@ -1,0 +1,1 @@
+from .newsletter_mail import send_email

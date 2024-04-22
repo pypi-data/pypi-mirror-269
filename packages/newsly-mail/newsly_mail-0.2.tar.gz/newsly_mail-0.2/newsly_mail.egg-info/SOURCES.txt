@@ -1,0 +1,8 @@
+README.md
+setup.py
+newsly_mail/__init__.py
+newsly_mail/newsletter_mail.py
+newsly_mail.egg-info/PKG-INFO
+newsly_mail.egg-info/SOURCES.txt
+newsly_mail.egg-info/dependency_links.txt
+newsly_mail.egg-info/top_level.txt
