@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: OrganisorAndLoginRequiredMixin
+Version: 1.0.0
+Summary: This package is to implement customized login operations on Django Framework.
+Author: Shayam Shah
+Author-email: shayamshah1999@gmail.com
+Description-Content-Type: text/markdown
+
+OrganisorAndLoginRequiredMixin is a module that can be implemented in Django framework. This module customizes the login functionality of the Django framework and enables admin to setup permissions based on the login.
+
+#Installation
+
+pip install OrganisorAndLoginRequiredMixin
