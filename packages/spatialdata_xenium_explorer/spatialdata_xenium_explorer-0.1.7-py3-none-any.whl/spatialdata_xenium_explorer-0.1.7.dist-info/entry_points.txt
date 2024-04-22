@@ -1,0 +1,3 @@
+[console_scripts]
+spatialdata_xenium_explorer=spatialdata_xenium_explorer.main:app
+
