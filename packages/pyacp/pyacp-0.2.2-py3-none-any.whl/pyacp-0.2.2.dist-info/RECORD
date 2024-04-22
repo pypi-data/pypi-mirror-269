@@ -1,0 +1,23 @@
+AcpHub.py,sha256=ezL-3HjTOxmtiqlvuNiYaTg-AxTxHnzoyswHe8LXQK0,2174
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acp_idl.py,sha256=BhHWtPr8ZwSZ2pcbpHrhOM0YfuuuzqIedWngsBTxGLQ,1993
+enumdef.py,sha256=8uW2wKQjyBpcxL-ochOTSb11zVH1TsByoqXX-whSHuQ,1798
+notify.py,sha256=b8U437hmeJrTaRpDVx2zpCNYRSKO3nwalNlsl-MPVTk,1054
+pyacp.py,sha256=Bi2JwodDS76d5N2fQ-oAtGDao8HSIbbcpGVdY8sb9ak,6307
+read.py,sha256=KmWr0sm90fb41IqQhhHUg8WrqbEIJJ90DFaTkWT0_dA,598
+read_state.py,sha256=P4iMdn2lqDeXX4hYjOOkvuTx3vZOXcfdKcZnnUiddLc,508
+readwrite.py,sha256=DdkfcTgQH7_0gnQIyme6WUAjq1hDQi0xGqaihfi9H7s,614
+resettime.py,sha256=VoZBcbTCYEMAL4OeyrZCLYdLpK7eRSOphgVIipFGemo,1057
+write.py,sha256=K8ftd0JcaVaJ_yzrtR4Rp3Ol6Ee7OkdaI6w4qKzVK28,555
+write_ctrl.py,sha256=jkFVTQauv7BurKP1pf7G3bRYmwnvO7U3VZeSdVr-QSI,638
+acp_libs/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acp_libs/lib/linux/__init__ .py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acp_libs/lib/linux/libacp-c.so,sha256=P55V1glPqVx1BWka8o4d7YjvyadcaYjmj9iQBsCdpzc,11777056
+acp_libs/lib/linux/libacp-core.so,sha256=lBIKs6ibiES-zAPmYT740feGBPyOpMedj3SJvRF_EOw,29288
+acp_libs/lib/win/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acp_libs/lib/win/acp-c.dll,sha256=MBAKSRqjsNNwNgoFZWyeauzc32e3JEviT1Laf1Wwpt0,6911488
+acp_libs/lib/win/acp-core.dll,sha256=F2JNY0QWeuMXVUNbUzlTCWil6wWD0pF6YUQ-1HNsOkk,111616
+pyacp-0.2.2.dist-info/METADATA,sha256=E2QaMAYuJMOKVk21lTWgYZ73EUkpl9kqCn9emmr8pwc,7936
+pyacp-0.2.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyacp-0.2.2.dist-info/top_level.txt,sha256=ErTBU6E3jQ3duZWnRdBEItTGFZWQmz65Q8aBzzpny_4,53
+pyacp-0.2.2.dist-info/RECORD,,
