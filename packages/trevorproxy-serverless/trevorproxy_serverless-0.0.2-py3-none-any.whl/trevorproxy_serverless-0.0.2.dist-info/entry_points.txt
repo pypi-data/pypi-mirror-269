@@ -1,0 +1,3 @@
+[console_scripts]
+trevorproxy_serverless=trevorproxy_serverless.cli:main
+
