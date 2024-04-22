@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pseudonymizer
+Version: 0.1.1
+Summary: pseudonymizer-to-protect-private-personal-data
+Home-page: https://github.com/ksydata/pseudonymizer
+Author: ksydata
+Author-email: ksydata01@gmail.com
+Requires-Python: >3.6
+Description-Content-Type: text/markdown
+
+# pseudonymizer
+This is a Python module that pseudonyms personal and credit data.
