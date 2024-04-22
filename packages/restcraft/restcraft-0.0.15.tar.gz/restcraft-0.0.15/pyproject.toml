@@ -1,0 +1,105 @@
+[project]
+name = "restcraft"
+dynamic = []
+description = "A minimalist Python WSGI framework for building RESTful APIs."
+authors = [
+    { name = "Lucas Santana", email = "lsfratel@gmail.com" },
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Internet :: WWW/HTTP :: WSGI",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Server",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Programming Language :: Python :: 3",
+]
+keywords = [
+    "wsgi",
+    "framework",
+    "rest",
+    "api",
+]
+version = "0.0.15"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+source = "https://github.com/lsfratel/restcraft"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.version]
+source = "file"
+path = "src/restcraft/__init__.py"
+
+[tool.pdm.scripts]
+dev = "gunicorn --reload --threads 2 tests.test_app.wsgi"
+test = "python -m coverage run -m unittest"
+coverage = "python -m coverage"
+
+[tool.pdm.scripts.tc]
+composite = [
+    "test",
+    "coverage html",
+]
+
+[tool.pdm.dev-dependencies]
+lint = [
+    "ruff",
+]
+test = [
+    "gunicorn",
+    "webtest",
+    "coverage",
+    "snakeviz",
+]
+
+[tool.ruff]
+line-length = 79
+select = [
+    "B",
+    "C4",
+    "E",
+    "F",
+    "PGH",
+    "RUF",
+    "W",
+    "YTT",
+]
+
+[tool.ruff.lint]
+ignore = [
+    "B006",
+    "B010",
+    "B009",
+    "B019",
+    "B018",
+    "B019",
+    "RUF012",
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 15
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+docstring-code-format = true
+docstring-code-line-length = 79
