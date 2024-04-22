@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: GirardProxy
+Version: 1.0.0
+Summary: Python module that scrape and retrive working proxy addresses
+Author: Girard
+Author-email: girardhappy.it@gmail.com
+License: MIT
+Keywords: proxy scraper
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Requires-Dist: requests[socks]
+
+A module that offer you the possibility to create an object that continuosly request proxies addresses, verify if they work using multithreading and retrive to you one of them <3
