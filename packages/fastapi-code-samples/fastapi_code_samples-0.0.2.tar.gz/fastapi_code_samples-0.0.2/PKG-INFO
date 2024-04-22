@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: fastapi_code_samples
+Version: 0.0.2
+Summary: Sample code generator for FastAPI OpenAPI schema
+Home-page: https://github.com/Sayanc2000/fastapi-code-samples
+Author: Sayan Chakraborty
+Author-email: sayanc20002@gmail.com
+License: MIT License
+Keywords: redoc,openapi,swagger,fastapi
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+"
+# Docs Sample Code
+
