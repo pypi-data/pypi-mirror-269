@@ -1,0 +1,43 @@
+Metadata-Version: 2.3
+Name: quickstall
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/unknown/quickstall#readme
+Project-URL: Issues, https://github.com/unknown/quickstall/issues
+Project-URL: Source, https://github.com/unknown/quickstall
+Author-email: drengskapur <service@drengskapur.com>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: click
+Description-Content-Type: text/markdown
+
+# quickstall
+
+[![PyPI - Version](https://img.shields.io/pypi/v/quickstall.svg)](https://pypi.org/project/quickstall)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/quickstall.svg)](https://pypi.org/project/quickstall)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install quickstall
+```
+
+## License
+
+`quickstall` is distributed under the terms of the [GPL-3.0-or-later](https://spdx.org/licenses/GPL-3.0-or-later.html) license.
