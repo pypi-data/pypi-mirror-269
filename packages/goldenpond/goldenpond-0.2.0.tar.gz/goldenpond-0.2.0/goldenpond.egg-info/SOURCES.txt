@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+goldenpond/__init__.py
+goldenpond/core.py
+goldenpond/parser.py
+goldenpond/timed_sequences.py
+goldenpond/voiceleading.py
+goldenpond.egg-info/PKG-INFO
+goldenpond.egg-info/SOURCES.txt
+goldenpond.egg-info/dependency_links.txt
+goldenpond.egg-info/top_level.txt
+tests/tests.py
