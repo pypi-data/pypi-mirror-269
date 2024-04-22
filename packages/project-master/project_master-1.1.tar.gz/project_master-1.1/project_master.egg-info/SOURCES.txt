@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+project_master/__init__.py
+project_master/core.py
+project_master/file_content.py
+project_master/main.py
+project_master.egg-info/PKG-INFO
+project_master.egg-info/SOURCES.txt
+project_master.egg-info/dependency_links.txt
+project_master.egg-info/top_level.txt
