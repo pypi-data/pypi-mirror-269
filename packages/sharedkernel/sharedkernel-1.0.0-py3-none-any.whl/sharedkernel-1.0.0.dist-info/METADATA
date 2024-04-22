@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: sharedkernel
+Version: 1.0.0
+Summary: sharekernel is an shared package between all python projects
+Author: Smilinno
+Requires-Dist: numpy
+Requires-Dist: requests
+Requires-Dist: pymongo
+Requires-Dist: fastapi ==0.89.1
+Requires-Dist: PyJWT
+
