@@ -1,0 +1,11 @@
+uacp/__init__.py,sha256=BhM3XKQEVCM_Z8ecJHcWyAQm1sx7O2vqOLlJ5Zgr9aY,127
+uacp/agent.py,sha256=xfnSCVKCzUV0pQ87j3437xdQMwUs6E-8KX6l3aWKakM,3090
+uacp/db.py,sha256=n4nYO3bfrKmsh9feEZv6wG1VPuCoFCFxxpRK_mDvESY,5736
+uacp/schema.py,sha256=V2MpGMJbP4sXPyNA9MGtcXdPoZ1FFsTjMLlP6uRc-CI,3184
+uacp/utils/__init__.py,sha256=F2FkmVoVgUiPUCtR2NUalCoE5nsHAaeWKXv_GeJ2Zzw,744
+uacp/utils/logger.py,sha256=8LrlS5tOzK5W-wrjgaJxWVfHddxFNFOdOp0CAxtxVJc,2154
+uacp/utils/singleton.py,sha256=vw8lSBTviMzaMuyEbI_QRchY7Ptggd3olyn6XHSbjd0,1311
+uacp-0.1.0.dist-info/LICENSE,sha256=kjQWSqPgt8RS05Y1q8uBAZMaRQKSzIbcGDPkRc9Dctk,1078
+uacp-0.1.0.dist-info/METADATA,sha256=pdkFYOpg-SqMHg4Gfd3K7XdG7jZ4G7W6iwubJqm9byI,32130
+uacp-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+uacp-0.1.0.dist-info/RECORD,,
