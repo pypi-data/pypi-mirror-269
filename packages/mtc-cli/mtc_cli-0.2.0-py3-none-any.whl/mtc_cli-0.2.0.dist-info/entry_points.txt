@@ -1,0 +1,2 @@
+[console_scripts]
+mtc_cli = mtc_cli.__main__:_main
