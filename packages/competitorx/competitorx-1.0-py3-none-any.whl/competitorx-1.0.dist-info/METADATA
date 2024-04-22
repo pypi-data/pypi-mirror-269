@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: competitorx
+Version: 1.0
+Author-email: Sike Brothers <sikebros@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# CompetitorX Library
+CompetitorX is a Python library designed for analyzing competitors using data from social media platforms. It provides a set of tools and functionalities to gather, process, and analyze social media data to gain insights into competitors' activities, audience engagement, content performance, and more.
+
+## Installation
+You can install CompetitorX using pip:
+```bash
+pip install competitorx
+```
+
+## Getting Started
+To start using CompetitorX, import it into your Python environment:
+```python
+import competitorx as cx
+```
+## Features
+- **Data Gathering**: CompetitorX facilitates the collection of social media data from platforms such as Twitter, Facebook, Instagram, and LinkedIn.
+- **Data Processing**: CompetitorX offers tools for processing and cleaning social media data to prepare it for analysis.
+-  **Competitor Analysis**: CompetitorX provides algorithms and metrics for analyzing competitors' social media performance, audience demographics, sentiment analysis, and more.
+-  **Visualization**: CompetitorX includes functions for visualizing social media data and analysis results.
+
+## Examples
+Here's a simple example of using CompetitorX to gather Twitter data and perform sentiment analysis:
+```python
+import competitorx as cx
+
+#Gather Twitter Data
+twitter_data = cx.gather_twitter_data(username='competitor_handle', since='2024-01-01', until='2024-03-01')
+
+#Gather Threads Data
+threads_data = cx.gather_threads_data(username='competitor_handle', since='2024-01-01', until='2024-03-01')
+
+#Perform sentiment analysis
+sentiment_analysis = cx.sentiment_analysis(twitter_data, threads_data)
+
+print(sentiment_analysis)
+```
+
+## Contributing
+If you'd like to contribute to CompetitorX, please refer to the [contributing guidelines](contributingguidelines).
+
+## License
+CompetitorX is distributed under the MIT License. See the [license](license) file for more information.
