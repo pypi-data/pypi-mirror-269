@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pure-cv
+Version: 0.1.8
+Summary: Purely functional tools for Python OpenCV 
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: ramda
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: lazy-loader
+Provides-Extra: plot
+Requires-Dist: matplotlib; extra == "plot"
+
+# Pure Cv
+
+> FP-style tools for Python OpenCV

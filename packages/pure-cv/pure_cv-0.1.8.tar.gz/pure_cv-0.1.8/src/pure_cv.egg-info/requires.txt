@@ -1,0 +1,7 @@
+ramda
+numpy
+opencv-python
+lazy-loader
+
+[plot]
+matplotlib
