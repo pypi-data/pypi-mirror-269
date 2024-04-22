@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bluegill
+Version: 0.0.1
+Summary: An opinionated high-level curses wrapper.
+Author: zettacache
+Project-URL: Homepage, https://github.com/zettacache/bluegill
+Project-URL: Issues, https://github.com/zettacache/bluegill/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+🐟 bluegill
+---
+An opinionated high-level curses wrapper.
