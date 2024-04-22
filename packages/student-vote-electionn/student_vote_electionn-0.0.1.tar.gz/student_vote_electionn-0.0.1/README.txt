@@ -1,0 +1,1 @@
+This is simple announcement that will show up on the screen.
