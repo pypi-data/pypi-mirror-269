@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: l4v1
+Version: 0.0.2
+Summary: Add your description here
+Author-email: Miro Lavi <mirolavi@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: plotly>=5.21.0
+Requires-Dist: polars>=0.20.21
+Description-Content-Type: text/markdown
+
+# l4v1
+Analyse your data conviniently using l4v1. This project is in development phase.
