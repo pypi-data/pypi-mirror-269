@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "drop2beets"
+version = "2.0.1"
+description = "Import singles to Beets as soon as they are dropped in a folder"
+authors = ["Martin Kirchgessner <martin.kirch@gmail.com>"]
+license = "WTFPL"
+readme = "README.md"
+homepage = "https://github.com/martinkirch/drop2beets"
+repository = "https://github.com/martinkirch/drop2beets.git"
+keywords = ["watch", "beets", "music", "import"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Multimedia :: Sound/Audio"
+]
+packages = [
+    { include = "beetsplug" },
+    { include = "examples" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+watchdog = "^3.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
