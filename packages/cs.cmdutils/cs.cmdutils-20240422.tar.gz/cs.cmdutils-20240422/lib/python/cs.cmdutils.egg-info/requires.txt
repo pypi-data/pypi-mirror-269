@@ -1,0 +1,12 @@
+cs.context>=20240412
+cs.deco>=20240412
+cs.lex>=20240316
+cs.logutils>=20230212
+cs.pfx>=20240412
+cs.py.doc>=20240422
+cs.resources>=20240422
+cs.result>=20240412
+cs.threads>=20240422
+cs.typingutils>=20230331
+cs.upd>=20240412
+typeguard
