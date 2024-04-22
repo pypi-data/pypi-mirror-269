@@ -1,0 +1,2 @@
+[console_scripts]
+email = email_profile.main:main
