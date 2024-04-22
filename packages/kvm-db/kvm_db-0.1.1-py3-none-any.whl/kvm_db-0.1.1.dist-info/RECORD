@@ -1,0 +1,8 @@
+kvm_db/__init__.py,sha256=oIQyj0fQAAe5pmasz0nIB7Z9rDUBs2-R2ImKykID774,226
+kvm_db/kv_db.py,sha256=zoTw3yKSUOQpoJwySzEkZrCxs9UOyXb1Uiy_w_J1f3o,4753
+kvm_db/model_db.py,sha256=uqKxEtdK2vZySYAqlq3NUgWvxMTdkO0VNeG6wgmSQQk,4620
+kvm_db/backends/base.py,sha256=O1JF6ZPoMy0K5Xvjzcp2nuuRwdDwQxA-mntsgwHfRsM,760
+kvm_db/backends/sqlite.py,sha256=Jx21R-aD5A4EqToCkm17iaGL-Hzy0igpegRJfaMMOfs,2684
+kvm_db-0.1.1.dist-info/METADATA,sha256=bZ-u0VCsB9YtjNyrdQevb1ehWVNaCYx6VFsunvoArUU,3402
+kvm_db-0.1.1.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+kvm_db-0.1.1.dist-info/RECORD,,
