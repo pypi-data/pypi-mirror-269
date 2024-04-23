@@ -1,0 +1,9 @@
+invariantkernels/__init__.py,sha256=1k0mvc1m-chYN4_enFarmLwteyUXEB4PBpASpBSsx6g,269
+invariantkernels/anisotropic_group_invariant_kernel.py,sha256=bZkCLHyPbBizLK19-ctRvWmNPtIxdQBifqnib9qBTF0,2863
+invariantkernels/isotropic_group_invariant_kernel.py,sha256=rPJ4PUqq0DGuv7d-HWsNrbt8by6xAMy2DLiMShzluAg,2786
+invariantkernels/transformation_groups.py,sha256=FdPiiszjk0XlGNFLPdr-0eTdU_DUQqzDXHgTUP0jbRQ,1477
+invariantkernels-0.0.8.dist-info/LICENSE,sha256=ma81oaTGIKih42eipROBopG5f_XvlJXpOnwuWzv3EsE,1071
+invariantkernels-0.0.8.dist-info/METADATA,sha256=Y8TFz6qvx_sF9UwKnR5ypeMjsK6_Y9o6pR8XaWUQCKA,1081
+invariantkernels-0.0.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+invariantkernels-0.0.8.dist-info/top_level.txt,sha256=ZSG0Ge4bJRuO0bHSdBloD8RhTj-MQOWyfSsIkCC5u2k,17
+invariantkernels-0.0.8.dist-info/RECORD,,
