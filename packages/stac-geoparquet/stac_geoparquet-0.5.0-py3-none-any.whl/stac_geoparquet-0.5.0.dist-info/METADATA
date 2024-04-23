@@ -1,0 +1,117 @@
+Metadata-Version: 2.3
+Name: stac_geoparquet
+Version: 0.5.0
+Dynamic: Summary
+Project-URL: Home, https://github.com/stac-utils/stac-geoparquet
+Author-email: Tom Augspurger <taugspurger@microsoft.com>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2022 Tom Augspurger
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Requires-Dist: ciso8601
+Requires-Dist: geopandas
+Requires-Dist: packaging
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: pystac
+Requires-Dist: shapely
+Provides-Extra: pc
+Requires-Dist: adlfs; extra == 'pc'
+Requires-Dist: azure-data-tables; extra == 'pc'
+Requires-Dist: psycopg[binary,pool]; extra == 'pc'
+Requires-Dist: pypgstac; extra == 'pc'
+Requires-Dist: tqdm; extra == 'pc'
+Provides-Extra: pgstac
+Requires-Dist: fsspec; extra == 'pgstac'
+Requires-Dist: psycopg[binary,pool]; extra == 'pgstac'
+Requires-Dist: pypgstac; extra == 'pgstac'
+Requires-Dist: python-dateutil; extra == 'pgstac'
+Requires-Dist: tqdm; extra == 'pgstac'
+Provides-Extra: test
+Requires-Dist: adlfs; extra == 'test'
+Requires-Dist: azure-data-tables; extra == 'test'
+Requires-Dist: fsspec; extra == 'test'
+Requires-Dist: mypy; extra == 'test'
+Requires-Dist: pre-commit; extra == 'test'
+Requires-Dist: psycopg[binary,pool]; extra == 'test'
+Requires-Dist: pypgstac; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: python-dateutil; extra == 'test'
+Requires-Dist: requests; extra == 'test'
+Requires-Dist: tqdm; extra == 'test'
+Requires-Dist: types-python-dateutil; extra == 'test'
+Requires-Dist: types-requests; extra == 'test'
+Description-Content-Type: text/markdown
+
+# STAC-geoparquet
+
+Convert STAC items to GeoParquet.
+
+## Purpose
+
+This library helps convert [STAC Items](https://github.com/radiantearth/stac-spec/blob/master/overview.md#item-overview) to [GeoParquet](https://github.com/opengeospatial/geoparquet). While STAC Items are commonly distributed as individual JSON files on object storage or through a [STAC API](https://github.com/radiantearth/stac-api-spec), STAC GeoParquet allows users to access a large number of STAC items in bulk without making repeated HTTP requests.
+
+## Usage
+
+`stac_geoparquet.to_dataframe` does it all. You give it a list of (STAC Item) dictionaries. It just converts them to a `geopandas.GeoDataFrame`, which can be written to parquet with `.to_parquet`.
+
+```python
+>>> import requests
+>>> import stac_geoparquet
+>>> item = requests.get("https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip/items/ia_m_4209150_sw_15_060_20190828_20191105").json()
+>>> df = stac_geoparquet.to_geodataframe([item])
+>>> df.to_parquet("naip.parquet")
+```
+
+Note that `stac_geoparquet` lifts the keys in the item `properties` up to the top level of the DataFrame, similar to `geopandas.GeoDataFrame.from_features`.
+
+```python
+>>> list(df.columns)
+['type',
+ 'stac_version',
+ 'stac_extensions',
+ 'id',
+ 'geometry',
+ 'bbox',
+ 'links',
+ 'assets',
+ 'collection',
+ 'gsd',
+ 'datetime',
+ 'naip:year',
+ 'proj:bbox',
+ 'proj:epsg',
+ 'naip:state',
+ 'proj:shape',
+ 'proj:transform']
+```
+
+We also provide `stac_geoparquet.to_dict` and `stac_geoparquet.to_item_collection` helpers that can be used to convert from DataFrames back to the original STAC items.
+
+## pgstac integration
+
+`stac_geoparquet.pgstac_reader` has some helpers for working with items coming from a `pgstac.items` table. It takes care of
+
+- Rehydrating the dehydrated items
+- Partitioning by time
+- Injecting dynamic links and assets from a STAC API

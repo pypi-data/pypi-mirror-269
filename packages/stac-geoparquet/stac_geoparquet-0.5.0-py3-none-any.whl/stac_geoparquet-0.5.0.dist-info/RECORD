@@ -1,0 +1,17 @@
+stac_geoparquet/__init__.py,sha256=S6HOC4Ens4-k2uXWdSmKw9B_imXU6EaNJielqyvTuSU,249
+stac_geoparquet/_compat.py,sha256=yHBRfblUeoP1BgVJlLOPRmbZsGNfpz1SAQowsgMX8fc,143
+stac_geoparquet/_version.py,sha256=aeBju2l8GTMwAhIRG_c2Q_oVPFacRkZZwGtxmvFCGPQ,411
+stac_geoparquet/cli.py,sha256=H4MBU-VUMdNFN80I_6-Zcinv7YDRHCDIL6q3lDx53nI,3975
+stac_geoparquet/from_arrow.py,sha256=k5mgZhGePND028yDAinnzhHYuS9Spxzb4AIXf-GSq1Y,5552
+stac_geoparquet/pc_runner.py,sha256=MhqY1KPzeiCApnRFF8WSSf3pC29j_OnDRTpoz5vqFOE,4710
+stac_geoparquet/pgstac_reader.py,sha256=LtRgkULLkg8H_8S5v1st4TXMYNLDeUKNQdm37CcEdwg,12213
+stac_geoparquet/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stac_geoparquet/stac_geoparquet.py,sha256=SrLwkaXDJx6qfTU9NA7FqVYM-Hzzlp737U36VRSPLgg,8159
+stac_geoparquet/to_arrow.py,sha256=A9g3IkrjRLKxfDRoMKyUVE4UIMyptadfM75ke2TQcbI,12547
+stac_geoparquet/to_parquet.py,sha256=lGaDsyoTzD3WwqQIt9OOQQLYZfx7wAQgLGItCDdKhUs,1262
+stac_geoparquet/utils.py,sha256=K4tVKaCxkEVVJW7EzoxSFbIvTHYsoh449u4GF3FMIsY,3296
+stac_geoparquet-0.5.0.dist-info/METADATA,sha256=jNJib7C45L2gLjsmM1RkN5Ct15hLvfQ7ADxaPhmHWAs,4688
+stac_geoparquet-0.5.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+stac_geoparquet-0.5.0.dist-info/entry_points.txt,sha256=MtNRJQ7n8Sk9T-V3opoo9C9DlLTPFbQGfadoLpec0b8,59
+stac_geoparquet-0.5.0.dist-info/licenses/LICENSE,sha256=y0NTSD0wStEdJmPcBE5zpuTfHAYMpU_VMGBvrQEOE-0,1081
+stac_geoparquet-0.5.0.dist-info/RECORD,,
