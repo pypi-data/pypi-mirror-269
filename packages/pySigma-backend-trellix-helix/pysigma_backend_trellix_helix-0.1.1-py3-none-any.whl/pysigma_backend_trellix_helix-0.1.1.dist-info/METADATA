@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pySigma-backend-trellix-helix
+Version: 0.1.1
+Summary: Sigma backend for Trellix Query Language (TQL)
+Home-page: https://github.com/sawwn23/pySigma-backend-trellix-helix
+License: MIT
+Author: Saw Win Naung
+Author-email: sawwinnnaung@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pysigma (>=0.11.2,<0.12.0)
+Project-URL: Repository, https://github.com/sawwn23/pySigma-backend-trellix-helix
