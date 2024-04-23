@@ -1,0 +1,6 @@
+jira
+requests
+argparse
+
+[:platform_system == "Windows"]
+windows-curses
