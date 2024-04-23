@@ -1,0 +1,16 @@
+Value Required LOCAL_PORT (\S+)
+Value Required CHASSIS_ID (\S+)
+Value Required REMOTE_PORT ([^\|]+?)
+Value SYSTEM_NAME ([^\|]+?)
+Value CAPABILITIES ([^\|]+?)
+Value TTL (\d+)
+
+Start
+  ^\s*$$
+  ^\s*Port\s+|\s+Device\s+ID\s+|\s+Port\s+ID\s+|\s+SysName\s+|\s+Capabilities\s+|\s+TTL\s*$$
+  ^\s*-+\s+\+\s+-+\s+\+\s+-+\s+\+\s+-+\s+\+\s+-+\s+\+\s+-+\s*$$ -> Lines
+
+Lines
+  ^\s*${LOCAL_PORT}\s+\|\s*${CHASSIS_ID}\s+\|\s*${REMOTE_PORT}\s+\|\s*${SYSTEM_NAME}\s+\|\s*${CAPABILITIES}\s+\|\s+${TTL}\s*$$ -> Record Lines
+  ^\s*$$ -> EOF
+  ^.*$$ -> Error
