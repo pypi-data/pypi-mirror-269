@@ -1,0 +1,166 @@
+Metadata-Version: 2.3
+Name: mosaik-mango
+Version: 0.2.0
+Summary: An adapter to integrate a mango simulation into mosaik
+Author-email: Eike Schulte <eike.schulte@offis.de>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: loguru~=0.6
+Requires-Dist: mango-agents~=1.1.3
+Requires-Dist: mosaik-api-v3~=3.0.4
+Description-Content-Type: text/markdown
+
+# mosaik-mango
+
+This is an adapter for using the agent framework [mango] in a [mosaik] simulation.
+
+This simulator is still work in progress.
+If you have need for a particular entity or attribute, leave an [issue here].
+
+[mango]: https://pypi.org/project/mango-agents/
+[mosaik]: https://mosaik.offis.de
+[issue here]: https://gitlab.com/mosaik/components/mosaik-mango/-/issues
+
+
+## Usage
+
+### Installation
+
+This package can be installed from PyPI as `mosaik-mango`.
+
+
+### The `AgentSetup`
+
+To configure this simulator, you need to create an agent setup.
+It is a dict mapping model names (i.e. what the user uses in their scenario script) to `AgentSpec`s, which describe which class of mango agents should be used for that model and its relevant properties.
+
+An example `AgentSetup` might look like this:
+
+```python
+from mosaik_components.mango import *
+
+AGENT_SETUP: AgentSetup = {
+    "Market": AgentSpec(
+        agent_class=MarketAgent,
+        inputs=["price"],
+        outputs=["total_volume"],
+    ),
+    "Trader": AgentSpec(
+        agent_class=TraderAgent,
+        params=["node"],
+        connection_params={"market": "Market"},
+        inputs=["max_amount"],
+    ),
+}
+```
+
+`AgentSpec` is a dataclass with the following fields:
+
+-   `agent_class`: The class of the mango agent represented by this model.
+    This must be a subclass of `MosaikAgent`, see below.
+-   `params`: The params that can be given to this agent upon creation in the scenario.
+    The user may provide values for these params in their scenario script, which will be passed to the constructor of your agent class.
+    (Optional, default is no params.)
+-   `connection_params`: It is often useful to allow the user to establish agent connections in their scenario.
+    `connection_params` is a dict mapping additional params to keys in the agent setup.
+    The user may supply the entity ID of a previously-created agent to one of these params.
+    mosaik-mango will translate this entity ID to the address of that agent and pass this address to the constructor.
+    This can be used to send messages to that agent.
+    (Optional, default is no such params.)
+-   `inputs`: The list of input attributes of this agent.
+-   `outputs`: The list of output attributes of this agent.
+
+### Starting the simulator
+
+Having created your agent setup, you can start the simulator like this
+
+```python
+import mosaik_api_v3
+
+if __name__ == "__main__":
+    sim = MangoSimulator(AGENT_SETUP, codec=codec)
+    mosaik_api_v3.start_simulation(sim)
+```
+
+Here, `codec` should be the mango codec used by your agents.
+If you use basic JSON, you don't need to specify this.
+
+For now, this simulator only supports running in a separate process.
+(In other words, it needs to be started using `"cmd"` or `"connect"` in the scenario's sim config.)
+If `my_mango_sim` is the Python module containing the above call to `start_simulation`, the sim config might contain
+
+```python
+    "Agents": {
+        "cmd": "%(python)s -m my_mango_sim %(addr)s",
+    },
+```
+
+The simulator can then be started using
+
+```python
+agents = world.start("Agents", addr=("localhost", "5556"), step_size=900)
+```
+
+where `addr` is the address for the mango container.
+
+### Creating entities
+
+With the agent setup as above, you might create agents like this
+
+```python
+market = agents.Market(id="EnergyMarket")
+traders = [
+    agents.Trader(node=node, market=market.eid)
+    for node in [3, 5, 42]
+]
+```
+
+This would result in the following constructor calls:
+```python
+MarketAgent(suggested_aid="EnergyMarket", container=container)
+TraderAgent(suggested_aid="Trader-0", container=container, node=3, market=market_addr)
+TraderAgent(suggested_aid="Trader-1", container=container, node=5, market=market_addr)
+TraderAgent(suggested_aid="Trader-2", container=container, node=42, market=market_addr)
+```
+
+Here, `container` is the mango container and `market_addr` is the address of the `MarketAgent` constructed in the first line, given as an `AgentAddress` object with the fields `container_addr` (the host-port pair for the container address)and `aid` (for the agent ID).
+
+### Mosaik agents
+
+`MosaikAgent` is an abstract subclass of mango's `Agent` class.
+It adds the following methods and property:
+
+-   `setup_done(self) -> None`: This is called once the simulation is about to start (all entities and connection have been set up).
+    After calling `setup_done` on each agent, the agent system is run, so messages can be exchanged here.
+    During this, the time is `-step_size`.
+    The run concludes once all agents idle.
+    This is optional, the default implementation does nothing.
+-   `start_mosaik_step(self, inputs: dict[str, dict[str, Any]]) -> None`: This is called for each agent when the simulator is stepped.
+    `inputs` is the part of the simulator's input intended for the entity corresponding to this agent.
+    After `start_mosaik_step` has been called for each agent, the agent system is run, so messages can be exchanged.
+    The step concludes once all agents idle.
+-   `get_mosaik_output(self, request: list[str]) -> dict[str, Any]`: This is called when mosaik calls `get_data`.
+    A `get_data` call from mosaik is not garuanteed, so this might not be called.
+    The agent system is **not** run after this.
+-   `time`: A property on the agent giving the current mosaik time.
+
+
+## Development
+
+For the development of this simulator, the following tools are employed:
+
+-   [Hatch](https://hatch.pypa.io/latest/) is used as a packaging manager.
+    This offers the following commands:
+
+    -   `hatch fmt` to format the code (using ruff)
+    -   `hatch run test:test` to run pytest in a test matrix consisting of Python versions 3.9 and 3.11 and mosaik versions 3.2 and 3.3.0b1.
+    -   `hatch run python` for running Python.
+    -   `hatch run` to run arbitrary commands in the managed virtualenv.
+
+    Also, we use `hatch-vcs` to automatically deduce version numbers from git tags.
+    Adding a new tag starting with v on the main branch should automatically release this on PyPI.
+
+
+-   [pre-commit](https://pre-commit.com/) is used to run hooks before committing and pushing.
+    Install pre-commit (I recommend `pipx`) and install the hooks using `pre-commit install`.
