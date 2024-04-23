@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: kalmoize
+Version: 0.0.5
+Summary: Rock solid memoize for Python/Tornado
+Home-page: https://github.com/pekoslaw/kalmoize
+Author: Piotr Czesław Kalmus
+Author-email: pckalmus@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: memcache,cache,tornado
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Polish
+Classifier: Environment :: Web Environment
+Classifier: Environment :: Other Environment
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Database
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Other/Nonlisted Topic
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
