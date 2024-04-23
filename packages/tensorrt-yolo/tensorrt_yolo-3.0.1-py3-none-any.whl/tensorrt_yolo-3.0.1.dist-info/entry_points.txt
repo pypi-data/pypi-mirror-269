@@ -1,0 +1,2 @@
+[console_scripts]
+trtyolo = tensorrt_yolo:trtyolo
