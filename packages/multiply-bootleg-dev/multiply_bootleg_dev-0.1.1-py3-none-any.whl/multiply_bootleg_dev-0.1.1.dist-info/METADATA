@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: multiply_bootleg_dev
+Version: 0.1.1
+Summary: Demo library
+Home-page: https://google.com
+Author: Adil Sarsenov
+Author-email: example@email.com
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# Multiply library
+A small demo library.
+
+### Installation
+```
+pip install multiply_bootleg_dev
+```
+
+### Run tests
+```
+python3 -m unittest -v tests/multiplication_tests.py
+```
+
+### Build Steps
+```
+pip3 install wheel
+pip3 install twine
+python3 -m build
+twine check dist/*
+python3 -m twine upload --repository pypi dist/*
+```
+
+
+
+
+### Get started
+How to multiply one number by another with this lib:
+
+```Python
+from multiply_bootleg_dev import Multiplication
+
+# Instantiate a Multiplication object
+multiplication = Multiplication(2)
+
+# Call the multiply_bootleg_dev method
+result = multiplication.multiply(5)
+```
