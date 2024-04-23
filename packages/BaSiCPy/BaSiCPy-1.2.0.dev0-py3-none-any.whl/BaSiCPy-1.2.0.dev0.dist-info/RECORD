@@ -1,0 +1,16 @@
+basicpy/__init__.py,sha256=vnlSTq4LFlZJ92NTzKIQjj2_HqI_R0MKcSQ_aEs820M,413
+basicpy/__main__.py,sha256=G95VjHk4Qyf2S9Yh7MWQWWoB8HVHCGc1-06iCfXdax0,3343
+basicpy/_jax_routines.py,sha256=HBCryvPsZJv_PwflsLNgMDF4I5xPfjI7fp6OPDY_aR4,16365
+basicpy/basicpy.py,sha256=87hTGSl9tzP30AM2a9SAnGHkpO4W8OTXCirakeMD6SE,32977
+basicpy/datasets.py,sha256=Pyb-eTDZQcJmhGa-JJwREkqnUqitnTud3vyeqcruUgo,4827
+basicpy/metrics.py,sha256=7UI2WSSva44SQpVH_Y6-4VsYyOOAJuUDcz67RP-MyMk,4009
+basicpy/types.py,sha256=K2T0lY3rDxMrzxJZDeVFEqpU6jCM6myCJjibF9F2UiY,225
+basicpy/tools/__init__.py,sha256=ghQjcYzY9ek18YScxMOKrzkYLN6TX9EPBHKJ2IyxZXQ,110
+basicpy/tools/_jax_idct.py,sha256=Ue6RGaZMETFGcLGRPeLLiELr2riPgpMq4ZluT0AVR0A,1886
+basicpy/tools/dct_tools.py,sha256=Hnne8axI6V9h71eT1XQzOCejMBJek3D2a54RGUiWDc0,2744
+BaSiCPy-1.2.0.dev0.dist-info/LICENSE,sha256=jQo8xjPEHFOEmZvuN6zkV7-9eDNKl4aELm2S33G8CPM,1078
+BaSiCPy-1.2.0.dev0.dist-info/METADATA,sha256=RAB4nTupSNEkcZhbeUc6sHqZpKI9prD4QtigOrf-nVI,12692
+BaSiCPy-1.2.0.dev0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+BaSiCPy-1.2.0.dev0.dist-info/entry_points.txt,sha256=G9Btet-wV_Af4OFKJXT2ze0BJeNFfjjkdAJuRnB3YfQ,50
+BaSiCPy-1.2.0.dev0.dist-info/top_level.txt,sha256=gO8wavyc7cCEEFJBzxyfQRU_wltlLO3j47RdKHCdlyk,8
+BaSiCPy-1.2.0.dev0.dist-info/RECORD,,
