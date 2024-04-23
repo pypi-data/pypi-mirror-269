@@ -1,0 +1,36 @@
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "ddcUtils"
+version = "1.0.24"
+description = "Few Utilities"
+readme = "README.md"
+license = "MIT"
+authors = ["Daniel Costa <danieldcsta@gmail.com>"]
+homepage = "https://github.com/ddc/ddcUtils"
+packages = [{include = "ddcUtils"}]
+package-mode = true
+
+[tool.poetry.dependencies]
+python = "^3.11.0"
+SQLAlchemy = "^2.0.29"
+urllib3 = "^2.2.1"
+requests = "^2.31.0"
+cryptography = "^42.0.5"
+bs4 = "^0.0.2"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+coverage = "^7.4.4"
+poethepoet = "^0.25.0"
+
+[tool.poe.tasks]
+test = "poetry run coverage run -m pytest -v"
+coverage = "poetry run coverage report"
+testPublish = "poetry publish -r test-pypi"
+_build = "poetry build"
+build  = ["test", "_build"]
+_publish = "poetry publish"
+publish = ["testPublish", "_publish"]
