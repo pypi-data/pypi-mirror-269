@@ -1,0 +1,11 @@
+LICENCE
+README.md
+setup.py
+aadharverify/__init__.py
+aadharverify/module.py
+aadharverify.egg-info/PKG-INFO
+aadharverify.egg-info/SOURCES.txt
+aadharverify.egg-info/dependency_links.txt
+aadharverify.egg-info/top_level.txt
+tests/__init__.py
+tests/test_module.py
