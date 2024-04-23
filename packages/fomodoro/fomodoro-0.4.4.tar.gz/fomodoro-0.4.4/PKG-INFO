@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: fomodoro
+Version: 0.4.4
+Summary: Stopwatch and timer to work and study with Flowtime technique.
+Author-email: LuisanaMTDev <luisanamartineztorres25@gmail.com>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: windows-curses==2.3.2
+
+# Fomodoro #
+Stopwatch and timer to work and study with Flowtime technique from your terminal.
