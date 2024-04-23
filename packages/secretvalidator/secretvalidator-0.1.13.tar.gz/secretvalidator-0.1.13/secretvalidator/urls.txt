@@ -1,0 +1,4 @@
+{
+    "sonarcloud": "https://sonarcloud.io/api/users/current",
+    "snyk": "https://snyk.io/api/v1/user"
+}
