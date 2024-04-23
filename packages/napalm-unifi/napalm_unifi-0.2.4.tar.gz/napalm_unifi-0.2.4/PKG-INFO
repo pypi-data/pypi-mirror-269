@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: napalm-unifi
+Version: 0.2.4
+Summary: 
+License: Apache 2.0
+Author: Andrew Bates
+Author-email: andrew.bates@networktocode.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: napalm (>=4.1.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# napalm_unifi
+Napalm drivers for Unifi switches, access points and security gateways
+
