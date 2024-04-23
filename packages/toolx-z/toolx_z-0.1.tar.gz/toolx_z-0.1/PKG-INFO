@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: toolx_z
+Version: 0.1
+Summary: A custom Python package
+Home-page: https://github.com/yourusername/my-package
+Author: Awan Z
+Author-email: zhangjysif@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+
+## Instructions
+1. Install
+```commandline
+pip install toolx_z
+```
+2.Generate
+```commandline
+from toolx_z import Address_to_lat_log
+```

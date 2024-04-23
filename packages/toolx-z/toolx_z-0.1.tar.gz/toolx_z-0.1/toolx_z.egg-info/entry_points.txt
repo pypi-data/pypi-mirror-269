@@ -1,0 +1,2 @@
+[console_scripts]
+myscript = my_package.scripts:main
