@@ -1,0 +1,315 @@
+Metadata-Version: 2.1
+Name: lango-cli-beta
+Version: 0.0.1rc0
+Summary: 
+License: MIT
+Requires-Python: >=3.9.0,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: fastapi (>=0.110.2,<0.111.0)
+Requires-Dist: langchain (>=0.1.16,<0.2.0)
+Requires-Dist: langchain-anthropic (>=0.1.9,<0.2.0)
+Requires-Dist: langchain-cohere (>=0.1.2,<0.2.0)
+Requires-Dist: langchain-core (>=0.1.43,<0.2.0)
+Requires-Dist: langchain-fireworks (>=0.1.2,<0.2.0)
+Requires-Dist: langchain-google-vertexai (>=1.0.1,<2.0.0)
+Requires-Dist: langchain-mistralai (>=0.1.2,<0.2.0)
+Requires-Dist: langchain-mongodb (>=0.1.3,<0.2.0)
+Requires-Dist: langchain-openai (>=0.1.3,<0.2.0)
+Requires-Dist: langchain-text-splitters (>=0.0.1,<0.0.2)
+Requires-Dist: langgraph (>=0.0.38,<0.1)
+Requires-Dist: langserve[all] (>=0.1.0,<0.2.0)
+Requires-Dist: motor (>=3.4.0,<4.0.0)
+Requires-Dist: pydantic (==1.10.13)
+Requires-Dist: pymongo (>=4.6.3,<5.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Requires-Dist: uvicorn (>=0.23.2,<0.24.0)
+Description-Content-Type: text/markdown
+
+# lango-cli-beta
+
+## Installation
+
+Run this command to add the CLI to your environment:
+
+```bash
+pip install lango-cli-beta
+```
+
+Verify the installation by running:
+
+```bash
+lango-cli --version
+```
+
+## MongoDB Setup
+
+This CLI is build around MongoDB Atlas, and the MongoDB LangChain integration. In order to use this CLI, you'll need to perform the following steps to create an account, cluster, database and search index.
+
+You can [create an account](https://www.mongodb.com/cloud/atlas/register) here, or [login](https://account.mongodb.com/account/login) to an existing account.
+
+If you're creating a new account, simply follow their onboarding flow to create a new cluster. If you have an existing account, follow [these steps](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster/) to deploy a new cluster.
+
+Once your cluster has been created, it should prompt you to create a new database user. Record the username and password, as you'll need it to connect to the database.
+
+After creating your cluster, database and collection, you'll need to create a search index.
+
+**IMPORTANT**
+Follow the steps on [this page](https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/#in---go-to-the-database-deployments-page-for-your-project.) to create a new search index, using the JSON configuration object defined below.
+
+```json
+{
+  "fields": [
+    {
+      "numDimensions": 1024,
+      "path": "embedding",
+      "similarity": "cosine",
+      "type": "vector"
+    },
+    {
+      "type": "filter",
+      "path": "_path"
+    },
+    {
+      "type": "filter",
+      "path": "_index"
+    }
+  ]
+}
+```
+
+Here, you can see two filters for `_path` and `_index`. These are automatically added when ingesting data using the CLI.
+
+- `_path` is the path to the file that the data was ingested from.
+- `_index` is the index of the chunk from the file that the data was ingested from.
+
+If you plan on adding more metadata, or want to filter on additional fields, you should add them to the `fields` array like so:
+
+```json
+{
+  "type": "filter",
+  "path": "metadata_field_name",
+}
+```
+
+Once your search index has finished building, you can use the CLI to ingest data and query the database.
+
+## Usage
+
+First, ensure you've set the required environment variables:
+
+```bash
+export MONGODB_URI=connection-string
+export MONGODB_VECTORSTORE_NAME=db-name
+export MONGODB_COLLECTION_NAME=-collection-name
+export MONGODB_VECTORSTORE_INDEX_NAME=search-index-name
+```
+
+Next, set the API keys for the language/embedding models to use. Cohere is required because it's used for embeddings & document re-ranking.
+
+The rest are optional, and only required if you plan to use that provider in your RAG model:
+
+*Required*
+```bash
+export COHERE_API_KEY=
+```
+
+*Optional*
+```bash
+export OPENAI_API_KEY=
+export ANTHROPIC_API_KEY=
+export MISTRAL_API_KEY=
+export FIREWORKS_API_KEY=
+export GOOGLE_APPLICATION_CREDENTIALS=
+```
+
+### `init`
+
+The first command you should run to setup is:
+
+```bash
+lango-cli init <project name>
+```
+
+By default this will create a new project with the following structure:
+
+```
+├── <project name>
+│   ├── _sample_data
+│   │   ├── ...txt files
+│   ├── lango_cli.config.json
+```
+
+The `lango_cli.config.json` file is where your RAG configuration will live. You will never need to edit this file directly, as the CLI will handle all configuration changes for you.
+
+The `_sample_data` directory contains sample data that you can use to test the CLI. These `.txt` files are blog posts from [Lilian Weng's blog](https://lilianweng.github.io/) on language models, and other interesting technical topics!
+
+You can replace this data with your own data, or use the CLI to ingest data from a different location. You may choose to not include this directory by passing the `--no-sample-data` flag when running `init`.
+
+```bash
+lango-cli init <project name> --no-sample-data
+```
+
+This will create a new directory with thr project name, and populate it with a default configuration file.
+
+Once initialized, navigate into the project directory:
+
+```bash
+cd <project name>
+```
+
+### `config`
+
+The `config` command has two modes: interactive and fast.
+
+Help:
+
+```bash
+lango-cli config --help
+```
+
+```bash
+ Usage: lango-cli config [OPTIONS]
+
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ --fast             --no-fast             Pass this flag to skip the interactive prompts.           │
+│                                          [default: no-fast]                                        │
+│ --data-path                     TEXT     The path to the data folder or file to ingest.            │
+│                                          [default: None]                                           │
+│ --rag-type                      TEXT     The type of RAG to create. Options: 'basic',              │
+│                                          'query_construction'                                      │
+│                                          [default: basic]                                          │
+│ --llm                           TEXT     The LLM to use. Options: [1]: Anthropic (Claude 3 Opus)   │
+│                                          [2]: OpenAI (GPT-4 Turbo) [3]: Cohere (Command R) [4]:    │
+│                                          Mistral (Mistral-Large) [5]: Google (Gemini Pro) [6]:     │
+│                                          Mixtral-8x7b                                              │
+│                                          [default: 1]                                              │
+│ --metadata                      TEXT     The path to the metadata JSON file, or a JSON string.     │
+│                                          [default: None]                                           │
+│ --chunk-size                    INTEGER  The size of the chunks to split the data into.            │
+│                                          [default: 500]                                            │
+│ --chunk-overlap                 INTEGER  The overlap between chunks. [default: 75]                 │
+│ --help                                   Show this message and exit.                               │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+```
+
+To use interactive prompt, run:
+
+```bash
+lango-cli config
+```
+
+During `config`, you'll be prompted to either ingest data now, or later. If you choose now, your MongoDB vectorstore database will be populate with whatever data you provide the CLI. If you choose later, you can run the `upsert` command to ingest data at a later time.
+
+Fast mode
+
+```bash
+lango-cli config --fast --data-path /this/is/required/when/using/fast/mode
+```
+
+### `upsert`
+
+The `upsert` command has two modes: interactive and fast.
+
+Help:
+
+```bash
+lango-cli upsert --help
+```
+
+```bash
+ Usage: lango-cli upsert [OPTIONS]
+
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ --fast             --no-fast             Pass this flag to skip the interactive prompts.           │
+│                                          [default: no-fast]                                        │
+│ --data-path                     TEXT     The path to the data folder or file to ingest.            │
+│                                          [default: None]                                           │
+│ --metadata                      TEXT     The path to the metadata JSON file, or a JSON string.     │
+│                                          [default: None]                                           │
+│ --chunk-size                    INTEGER  The size of the chunks to split the data into.            │
+│                                          [default: 500]                                            │
+│ --chunk-overlap                 INTEGER  The overlap between chunks. [default: 75]                 │
+│ --help                                   Show this message and exit.                               │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+```
+
+To use interactive prompt, run:
+
+```bash
+lango-cli upsert
+```
+
+To use fast mode, run:
+
+```bash
+lango-cli upsert --fast --data-path /this/is/required/when/using/fast/mode
+```
+
+### `chat`
+
+To use chat:
+
+```bash
+lango-cli chat
+```
+
+### `start`
+
+The Lango CLI also comes with build in support for LangServe where you can chat with your newly created RAG model.
+
+Simply run:
+
+```bash
+lango-cli start
+```
+
+And visit [`http://0.0.0.0:8000/chat/playground/`](http://0.0.0.0:8000/chat/playground/) to chat with your RAG model.
+
+### `export`
+
+The `lango-cli` comes with an `export` command to eaisily deploy your app. The `export` command creates a new `Dockerfile` which performs the following actions when run:
+
+1. Installs the `lango-cli` package.
+2. Copies your `lango_cli.config.json` file into the container.
+3. Starts the LangServe server via `lango-cli start`.
+
+To use the `export` command, simply run:
+
+```bash
+lango-cli export
+```
+
+Then, build your docker container via:
+
+```bash
+docker build -t lango-cli .
+```
+
+Then, start the container via:
+
+```bash
+docker run -p 8000:8000 -it --env-file .env lango-cli
+```
+
+After running this command, the first log you'll see will look like this:
+
+```bash
+Start the Docker container, then navigate to <your ip>:8000/docs to visit the server
+```
+
+Then, if you copy that URL into your browser, you'll be able to see all the available endpoints for your RAG model.
+
+This command automatically loads your `.env` file into the container. You can optionally pass the env vars via the `-e` flag:
+
+```bash
+docker run -p 8000:8000 -it -e MONGODB_URI=... lango-cli
+```
+
+> **NOTE**: The `Dockerfile` which is created as a result of running `lango-cli export` must be built inside the generated project directory since it copies a script file, and your `lango_cli.config.json` file into the container.
