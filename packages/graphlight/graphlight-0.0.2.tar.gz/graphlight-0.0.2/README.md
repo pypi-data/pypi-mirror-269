@@ -1,0 +1,46 @@
+# GraphLight: A Lightweight, Distributed Graph Database
+
+GraphLight is an innovative graph database designed for high performance and scalability, leveraging the power of Python for ease of use and flexibility. Built with a focus on in-memory data storage akin to Redis and incorporating the robust querying capabilities of OpenCypher, GraphLight aims to provide developers with a fast, efficient, and intuitive tool for managing graph-based data.
+
+## Key Features
+
+* In-Memory Data Storage: Optimized for speed, GraphLight stores your graph data entirely in RAM, ensuring rapid access and manipulation of data points.
+
+* OpenCypher Query Support: Utilize the power of the OpenCypher query language to interact with your graphs. From simple lookups to complex traversals, GraphLight brings you the flexibility of graph querying right at your fingertips.
+
+* Distributed Computing: GraphLight is designed from the ground up to support distributed operations. With its secure peer-to-peer (P2P) networking capabilities, it allows for clustering of data across multiple compute nodes, enhancing both the scalability and resilience of your database.
+
+* Multi-threaded Query Processing: To ensure maximum efficiency, GraphLight employs multi-threaded processing for handling queries, allowing for concurrent execution and reduced response times.
+
+* Easy Integration: As a Python-based solution, GraphLight integrates seamlessly into your existing Python ecosystem, enabling straightforward implementation and interaction within your projects.
+
+## Getting Started
+To get started with GraphLight, simply install the package via pip:
+
+```bash
+pip install graphlight
+```
+
+For detailed documentation on installation, configuration, and usage, please refer to our official documentation (Link to Documentation - ToDo).
+
+## Example Usage
+Here's a quick snippet to give you a taste of what working with GraphLight looks like:
+
+```python
+from graphlight import Graph
+
+# Initialize your graph
+my_graph = Graph()
+
+# Add nodes and edges
+my_graph.add_node("Alice")
+my_graph.add_node("Bob")
+my_graph.add_edge("Alice", "Bob", "knows")
+
+# Query your graph
+results = my_graph.query("MATCH (person)-[relation]->(friend) RETURN person, relation, friend")
+print(results)
+```
+
+## Contributing
+We welcome contributions from the community! Whether it's adding new features, improving documentation, or reporting bugs, your help makes GraphLight better for everyone. Check out our contributing guidelines for more information on how to get involved.
