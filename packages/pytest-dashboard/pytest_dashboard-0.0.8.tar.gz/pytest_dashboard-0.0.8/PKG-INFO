@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: pytest-dashboard
+Version: 0.0.8
+Summary: 
+Home-page: https://github.com/pyfemtet/pytest-dashboard
+License: BSD-3-Clause
+Author: kazuma.naito
+Author-email: kazuma.naito@murata.com
+Requires-Python: >=3.9,<4.0.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: dash (>=2.14.2,<3.0.0)
+Requires-Dist: dash-bootstrap-components (>=1.5.0,<2.0.0)
+Requires-Dist: fire (>=0.6.0,<0.7.0)
+Requires-Dist: plotly (>=5.18.0,<6.0.0)
+Requires-Dist: pytest (>=7.4.3,<8.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Project-URL: Repository, https://github.com/pyfemtet/pytest-dashboard
+Description-Content-Type: text/markdown
+
+# pytest-dashboard
+
+## usage
+`python -m pytest`
+by this command, you get `[datetime]-progress.yaml` file on working directory as realtime pytest progress report.
+
+`python -m pytest --progress-path=[path/to/some-progress.yaml]`
+by this command, you get `path/to/some-progress.yaml` file.
+
+`python -m pytest-dashboard.tally PROGRESSES_DIR --entire_progress_path=[path/to/entire-progress.yaml]`
+by this command, you get started to monitor changes of
+the progress files (ends with `-progress.yaml`)
+inside `PROGRESS_DIR` and save the state summary
+to `path/to/entire-progress.yaml`.
+
+So it is necessary to set `--progress-path` option of pytest
+ending with `-progress.yaml`.
+For example, `2024-04-22-progress.yaml`,
+
+> **Note**
+> if your `entire_progress_path` is ends with `-progress.yaml`,
+> you cannot save the entire progress file to
+> the same directory with each progress file.
+
+
+`python -m pytest_dashboard.tally PROGRESS_DIR --notification=True`
+By this command, you will get mail notification when entire progress is finished.
+> **Note**
+> Please make and implement pytest_dashboard.config
+> that contains information abaout mail address and SMTP server.
+
+
+`python -m pytest_dashboard.launch_pytest_dashboard`
+NOT IMPLEMENTED!
+
