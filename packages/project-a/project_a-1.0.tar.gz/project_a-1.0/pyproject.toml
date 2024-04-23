@@ -1,0 +1,10 @@
+[project]
+name = "project_a"
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = { attr = "src.__version__" }
+
+[project.urls]
+Homepage = "https://github.com/hearthfire12/playground"
+Issues = "https://github.com/hearthfire12/playground/issues"
