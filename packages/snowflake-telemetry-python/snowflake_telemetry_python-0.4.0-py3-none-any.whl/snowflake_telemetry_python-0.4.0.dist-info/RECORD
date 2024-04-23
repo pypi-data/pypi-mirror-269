@@ -1,0 +1,11 @@
+snowflake/telemetry/__init__.py,sha256=DGq6pTAwICcaPv9vZ8CH3llPaV3rwnz10OFGagfi0dw,860
+snowflake/telemetry/version.py,sha256=EtZnuWCyKr5MpSZqgkD0KbJ0A0EnPG2e5u8kb5q0HTk,154
+snowflake/telemetry/_internal/exporter/otlp/proto/logs/__init__.py,sha256=NAhQ7agbs0jJj1nAxlj0Vhi3VlAg2Ca40sf-NTDhq10,7039
+snowflake/telemetry/_internal/exporter/otlp/proto/metrics/__init__.py,sha256=RKDLht7fg0wnMN5oUq3Sa4StIfu2mdh5ENZjzRQqY9E,3085
+snowflake/telemetry/_internal/exporter/otlp/proto/traces/__init__.py,sha256=vXc9fR-lFagXjcwex7dZhA8_kyYWDEw6z3_hlHdvzTw,2501
+snowflake_telemetry_python-0.4.0.dist-info/LICENSE.txt,sha256=2kMhOwB-lvCj37GGT_JZuIleEEKUQ_341DBui_q9MP8,11365
+snowflake_telemetry_python-0.4.0.dist-info/METADATA,sha256=CqjrNx0HJox79ajyyvm2r7YaNk3SSvGfpuX6MwXEuGE,2196
+snowflake_telemetry_python-0.4.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+snowflake_telemetry_python-0.4.0.dist-info/top_level.txt,sha256=TY0gFSHKDdZy3THb0FGomyikWQasEGldIR1O0HGOHVw,10
+snowflake_telemetry_python-0.4.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+snowflake_telemetry_python-0.4.0.dist-info/RECORD,,
