@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: tantri
+Version: 1.0.1
+Summary: Python dipole model evaluator
+License: GPL-3.0-only
+Author: Deepak
+Author-email: dmallubhotla+github@gmail.com
+Requires-Python: >=3.8.1,<3.10
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: numpy (>=1.22.3,<2.0.0)
+Requires-Dist: scipy (>=1.10,<1.11)
+Requires-Dist: tqdm (>=4.66.2,<5.0.0)
+Description-Content-Type: text/markdown
+
+# tantri - generating telegraph noise 
+
+Named as an oblique half-pun on both tantri as a form of generating, and tantri as a telegraph or wire.
+
+## dev
+
+Build with `just`, preferred over `do.sh` I think.
+
+## CLI
+
+the json files for dots and dipoles have a specific format that ignores extraneous data but is sad about missing fields.

@@ -1,0 +1,16 @@
+tantri/__init__.py,sha256=qXQSTj4c-TVeSQ15jlkTQ4eMNtUzljf5obAQT7BKzEY,295
+tantri/cli/__init__.py,sha256=c-2Qj-3izdVfKlmFlSxmuEB4fcVOapfi52rdqcNW610,5467
+tantri/cli/file_importer.py,sha256=tDO7T02Xxs1z0HBKLP0r6veSw308ciwqCis-zOVliEQ,904
+tantri/cli/input_files/__init__.py,sha256=-Y8V1MHBm1_KWVrtUI9Q91spAumeP8cvaQ_ARZYv4vE,174
+tantri/cli/input_files/read_dipoles.py,sha256=eaTJiG227JV6eliXsiDd_3wBJY9RDp4X52Nmxz1dZvQ,573
+tantri/cli/input_files/read_dots.py,sha256=Y5eUvYX8mdHv5eyRje4okvKKigIaAmP0dLEISe1Ndh8,511
+tantri/cli/input_files/write_dipoles.py,sha256=Fb8Ijh_ECsk8ZaSC7fN1pEBviFtzn0B3abmAwcqGPSM,301
+tantri/dipoles/__init__.py,sha256=ZqXLjddrsbUPsan-sKdMxO7E96o7UDhNGfBd1liXGrY,3824
+tantri/dipoles/generation/__init__.py,sha256=kG3S5UF69X2mYtmo4XAr_UuoZkmMEt9Bj8k_xpHPSBo,2724
+tantri/dipoles/types.py,sha256=WGPiSDMjWFclzHxgBer5fUSDD_4hfYGPdjHa7GVfIuE,374
+tantri/meta.py,sha256=h4o2L_l4dHXwArZn1Hi8RrV0ARdx7aFOktzEBtGmUqM,72
+tantri/simple_telegraph/__init__.py,sha256=BIlfqkA_6aIhGuY-un5y2_jLaJUkEOp4JCHOuI-L7-A,675
+tantri-1.0.1.dist-info/METADATA,sha256=R2K9ve0VGzfWnAWDv2TounPrRhd86Ks1bt0MoP2mk0w,902
+tantri-1.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tantri-1.0.1.dist-info/entry_points.txt,sha256=jZV8Rez1hp8GwLuF4F6vkpSCXRxwYOvWHe-z3nVCeHE,41
+tantri-1.0.1.dist-info/RECORD,,
