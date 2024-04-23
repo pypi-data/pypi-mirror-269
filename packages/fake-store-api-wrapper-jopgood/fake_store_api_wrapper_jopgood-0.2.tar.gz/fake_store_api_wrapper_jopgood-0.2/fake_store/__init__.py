@@ -1,0 +1,1 @@
+from .fake_store import fake_store
