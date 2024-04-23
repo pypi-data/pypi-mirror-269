@@ -1,0 +1,6 @@
+[console_scripts]
+arctic3d=arctic3d.cli:maincli
+arctic3d-localise=arctic3d.cli_localise:maincli
+arctic3d-resclust=arctic3d.cli_resclust:maincli
+arctic3d-restraints=arctic3d.cli_restraints:maincli
+
