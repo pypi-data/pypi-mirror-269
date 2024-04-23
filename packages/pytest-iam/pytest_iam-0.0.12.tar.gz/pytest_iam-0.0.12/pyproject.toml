@@ -1,0 +1,86 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "pytest-iam"
+version = "0.0.12"
+description = "A fully functional OAUTH2 / OpenID Connect (OIDC) server to be used in your testsuite"
+authors = ["Yaal Coop <contact@yaal.coop>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "pytest_iam"}]
+keywords = ["oidc", "oauth", "oauth2", "openid", "identity", "pytest", "unit tests", "iam"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Web Environment",
+    "Programming Language :: Python",
+    "Operating System :: OS Independent",
+    "Framework :: Pytest",
+]
+
+repository = "https://github.com/pytest-dev/pytest-iam"
+documentation = "https://pytest-iam.readthedocs.io/en/latest/"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+canaille = {version = ">=0.0.53,<1", extras = ["oidc"] }
+portpicker = ">=1.6.0"
+pytest = ">=7.0.0"
+faker = ">=21.0.0"
+
+[tool.poetry.plugins.pytest11]
+iam = "pytest_iam"
+
+[tool.poetry.group.dev.dependencies]
+requests = "^2.31.0"
+authlib = "^1.2.1"
+pytest-cov = "^5.0.0"
+
+[tool.poetry.group.doc]
+optional = true
+
+[tool.poetry.group.doc.dependencies]
+myst-parser = "^2.0.0"
+sphinx = "^7.0.0"
+sphinx-issues = "^3.0.0"
+alabaster = "^0.7.13"
+
+[tool.ruff]
+ignore = ["E501", "E722"]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = true
+skipsdist = true
+envlist =
+    style
+    py39
+    py310
+    py311
+    doc
+
+[testenv]
+allowlist_externals = poetry
+commands =
+    poetry install
+    poetry run pytest {posargs}
+
+[testenv:doc]
+commands =
+    poetry install --with doc --without dev
+    poetry run sphinx-build doc build/sphinx/html
+
+[testenv:style]
+commands =
+    pip install pre-commit
+    pre-commit run --all-files
+"""
