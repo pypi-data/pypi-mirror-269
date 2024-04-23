@@ -1,0 +1,9 @@
+mo-dots==9.596.24113
+mo-future==7.584.24095
+mo-logs==8.597.24113
+mo-math==7.596.24113
+
+[tests]
+mo-testing>=7.587.24110
+mo-math>=7.584.24095
+mo-threads>=6.585.24095
