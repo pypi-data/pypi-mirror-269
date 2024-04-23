@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: gemi-python
+Version: 0.1.2
+Summary: Utilities for the Gemini protocol
+Author-email: Zoey Mae <admin@barkshark.xyz>
+License: CNPL 7+
+Project-URL: Homepage, https://git.barkshark.xyz/barkshark/gemi
+Project-URL: Bug Tracker, https://git.barkshark.xyz/barkshark/gemi/issues
+Project-URL: Documentation, https://git.barkshark.xyz/barkshark/gemi/wiki
+Project-URL: Source Code, https://git.barkshark.xyz/barkshark/gemi
+Keywords: gemini,gemtext
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: barkshark-lib >=0.1.2
+Requires-Dist: platformdirs ==4.2.0
+Requires-Dist: pyopenssl ==24.1.0
+Provides-Extra: dev
+Requires-Dist: flake8 ==6.1.0 ; extra == 'dev'
+Requires-Dist: mypy ==1.9.0 ; extra == 'dev'
+Requires-Dist: pyinstaller ==6.5.0 ; extra == 'dev'
+Requires-Dist: types-pyOpenSSL ==24.0.0.20240417 ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: furo ==2024.1.29 ; extra == 'doc'
+Requires-Dist: sphinx ==7.2.6 ; extra == 'doc'
+Requires-Dist: sphinx-external-toc ==1.0.1 ; extra == 'doc'
+
+# Gemi
+
+Utilities for the Gemini protocol
+
+## Client Example
+
+	import asyncio
+	import gemi
+
+	async def main():
+		client = gemi.AsyncClient()
+		response = await client.request("geminiprotocol.net")
+
+		for element in (await response.document()):
+			print(repr(element))
+
+	asyncio.run(main())
+
+## Server Example
+
+	import gemi
+
+	@gemi.route("Default", "/")
+	async def home(request: gemi.Request) -> gemi.Response:
+		return gemi.Response(20, "UvU", "text/plain")
+
+	server = gemi.AsyncServer("Default")
+	server.run()
+
+## Document Example
+
+	import gemi
+
+	doc = gemi.Document([
+		gemi.Header("Hewwo!", 1),
+		gemi.Text(""),
+		gemi.Text("im gay"),
+		gemi.Text(""),
+		gemi.Link("https://git.barkshark.xyz/barkshark/gemi", "Gemi")
+	])
+
+	doc.dump("/var/lib/gemi-server/static/text.gmi", gemi.OutputFormat.GEMTEXT)
+
+[Documentation](https://docs.barkshark.xyz/gemi)
+
+[Gemini Protocol](https://geminiprotocol.net/)
