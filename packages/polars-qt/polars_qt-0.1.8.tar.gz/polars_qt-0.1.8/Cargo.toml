@@ -1,0 +1,26 @@
+[package]
+name = "polars-qt"
+version = "0.1.8"
+edition = "2021"
+
+[lib]
+name = "polars_qt"
+crate-type= ["cdylib"]
+
+[features]
+default = ["equity", "strategy"]
+equity = []
+strategy = []
+
+[dependencies]
+itertools = "0.12.1"
+pyo3 = { version = "0.20.0", features = ["extension-module", "abi3-py38"] }
+pyo3-polars = { version = "0.12.0", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+polars = { version = "0.38", default-features = false, features=["rolling_window", "temporal"] }
+
+[dependencies.tea_strategy]
+git = "https://github.com/Teamon9161/tea_strategy.git"
+rev = "577932f"
+default-features = false
+features = ['pl']
