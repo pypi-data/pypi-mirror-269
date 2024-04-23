@@ -1,0 +1,2 @@
+recursive-include src/chargespot/templates *
+include src/chargespot/*.html
