@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: cuth
+Version: 1.0.0
+Summary: A great auth tools
+Author: CandyStar@HuangXudong
+License: Apache License 2.0
+Keywords: ceasylog
+Platform: any
+License-File: LICENSE
+Requires-Dist: ceasylog
