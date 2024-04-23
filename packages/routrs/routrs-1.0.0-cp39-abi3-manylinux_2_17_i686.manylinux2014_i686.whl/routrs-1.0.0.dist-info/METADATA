@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: routrs
+Version: 1.0.0
+Keywords: geography,routing,supply-chain,shortest-path
+License: MIT
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/routrs/pyroutrs
+
+# routrs
+Geograph-based shortest distance calculation for Python. 100% in Rust.
+Based on the [routrs](https://github.com/routrs/routrs) rust crate.
+
