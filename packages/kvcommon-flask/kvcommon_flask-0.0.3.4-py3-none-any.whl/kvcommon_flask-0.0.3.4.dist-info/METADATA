@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: kvcommon-flask
+Version: 0.0.3.4
+Summary: Library of various Flask utils that aren't worthy of their own dedicated libs.
+Author: Rob Voigt
+Author-email: code@ravoigt.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: metrics
+Provides-Extra: traces
+Requires-Dist: flask-apscheduler (>=1.13.1,<2.0.0)
+Requires-Dist: flask-http-middleware (>=0.4.2,<0.5.0)
+Requires-Dist: kvcommon (>=0.1.0,<0.2.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Description-Content-Type: text/markdown
+
+# KvCommon-Flask
+
+Library of various [Flask](https://flask.palletsprojects.com/en/3.0.x/) utils that aren't worthy of their own dedicated libs.
+
+This library isn't likely to be useful to anyone else; it's just a convenience to save me from copy/pasting between various projects I work on.
+
+## Configuration & Env Vars
+
+| Env Var | Default | Type | Description|
+|---|---|---|---|
+|`KVC_FLASK_METRICS_PORT`|`9090`|Int|Port on the server from which metrics can be scraped|
+|`KVC_FLASK_METRICS_ENABLED`|`False`|Boolean|Toggles prometheus metrics|
+|`KVC_FLASK_TRACES_ENABLED`|`False`|Boolean|Toggles OTLP traces|
+
+## Packages/Modules
+
+| Package | Description |
+|---|---|
+|`metrics`|Prometheus Metrics utils & boilerplate
+|`traces`|OTLP Traces utils & boilerplate
+|`context`|Convenience utils for manipulating Flask config and flask.g context
+|`middleware`|Basic middleware class using flask-http-middleware with metrics
+|`scheduler`|Utils for scheduling jobs on cron-like internvals with Flask-APScheduler and metrics + logging
+
