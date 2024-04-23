@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: streamlit-phone-number
+Version: 0.0.8
+Home-page: https://github.com/pragmatic-streamlit/streamlit-phone-number
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+
+# streamlit-phone-number
+
+
+
+![Screenshot](image.png)
+
+## Installation
+
+```bash
+pip install streamlit-phone-number
+```
+
+## Usage
+```python
+import streamlit as st
+
+event = st_phone_number("Phone", placeholder="ss", default_country="CN")
+st.text_input('Password here', type='password')
+
+st.write(event)
+```
