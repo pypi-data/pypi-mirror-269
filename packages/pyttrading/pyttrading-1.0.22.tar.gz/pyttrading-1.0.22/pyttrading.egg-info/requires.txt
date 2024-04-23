@@ -1,0 +1,13 @@
+pytest-runner
+stock-dataframe==0.1.0
+mlflow==2.9.2
+backtesting==0.3.3
+scipy==1.12.0
+Backtesting
+matplotlib==3.8.3
+plotly==5.19.0
+mlflow
+numba==0.59.0
+ta==0.11.0
+python-dotenv==1.0.1
+pydantic==2.6.2
