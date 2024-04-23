@@ -1,0 +1,14 @@
+kv/fs/__init__.py,sha256=0w3GQ11bcvE4_CidHnrHUsGv8ObXkXtyt-8JZ7f011E,150
+kv/fs/__init__.pyi,sha256=MVkQnVFcRXN5drPNN90YhAJC3a_X93RRGl9b76ztmxw,184
+kv/fs/api/__init__.py,sha256=K7m-9JiAThfJO4Ivx5wdAhiRGP7AzbY7Znat1D1wRrE,29
+kv/fs/api/api.py,sha256=UUHN0BNmQ9TWVPHFkSt0hch0flpdjmRCMwNrB37TFEI,4974
+kv/fs/append/__init__.py,sha256=wSfzqIsJxgnJat9_Xo81-CuSAUzn1AiDatXgh9a9R0U,38
+kv/fs/append/append.py,sha256=7I-4Brszzclyc4tRxtXmNVEnI8IFmQihyqTMRSXOJCU,1090
+kv/fs/append/ndjson.py,sha256=104eM_YF_VqI3R0P5bDRt73Tl6BI3fUvia-56UTy2hw,563
+kv/fs/ops/__init__.py,sha256=mF4M_d6EiHbB9U9W_oKlKXYIyh8ZFn3gxe_382VXiLI,95
+kv/fs/ops/__init__.pyi,sha256=-fTixSJ-YImrRheGtrk6B8OlPbMA73W-iBm8Ca3EuJE,214
+kv/fs/ops/ops.py,sha256=WHHCWp_nokYKV899dgqBPjJ_bqNAp_eVTTF2XmdOb5I,2762
+kv_fs-0.1.9.dist-info/METADATA,sha256=T082A6Ku9zQr7dD8CKNZUwaq38q6fl9VDcoxd9B9aqw,1190
+kv_fs-0.1.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+kv_fs-0.1.9.dist-info/top_level.txt,sha256=z85M-ICBi-OoWrXz-dZX8xL06idJqievlWlmDg07U0M,3
+kv_fs-0.1.9.dist-info/RECORD,,
