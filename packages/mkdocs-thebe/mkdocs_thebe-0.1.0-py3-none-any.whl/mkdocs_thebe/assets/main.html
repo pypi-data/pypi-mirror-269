@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block scripts %}
+
+
+{% if page is not none %}
+<div>{{page.meta.stuff}}</div>
+{% endif %}
+
+<script type="text/x-thebe-config">
+    {
+      requestKernel: true,
+      kernelOptions: {
+        name: "python3",
+        kernelName: "python3",
+        path: ".",
+         serverSettings: {
+              "baseUrl": "{{config.plugins['mkdocs-thebe'].config['baseUrl']}}",
+              "token": ""
+            }
+      },
+    }
+  </script>
+<script src="https://unpkg.com/thebe@0.8.2
+/lib/index.js"></script>
+
+
+{{ super() }}
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{{ super() }}
+{%endblock%}
