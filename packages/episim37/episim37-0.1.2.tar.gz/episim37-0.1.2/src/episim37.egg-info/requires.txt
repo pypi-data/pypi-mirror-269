@@ -1,0 +1,15 @@
+click
+platformdirs
+rich
+tree_sitter
+jinja2
+pygls
+platformdirs
+numpy
+scipy
+pandas
+pyarrow
+polars
+h5py
+typeguard
+pydantic
