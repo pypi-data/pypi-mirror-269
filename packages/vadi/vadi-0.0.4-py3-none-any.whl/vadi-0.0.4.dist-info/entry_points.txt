@@ -1,0 +1,3 @@
+[console_scripts]
+vadi=vadi.repl:main
+
