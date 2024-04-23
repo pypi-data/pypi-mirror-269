@@ -1,0 +1,2 @@
+[console_scripts]
+grs_driver = GRSdriver.run:main
