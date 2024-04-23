@@ -1,0 +1,263 @@
+import enum
+import json
+from typing import Union, Iterator
+
+import networkx as nx
+from networkx.readwrite import json_graph
+
+from hymir.job import Job
+from hymir.types import JobResultT, ContainerT
+
+
+class Group:
+    """
+    A group of jobs which can be executed in parallel.
+
+    May contain other chains or groups.
+    """
+
+    def __init__(self, *jobs: Union[JobResultT, "Chain", "Group"]):
+        self.jobs = list(jobs)
+
+
+class Chain:
+    """
+    A chain of jobs which must be executed in sequence.
+
+    May contain other chains or groups.
+    """
+
+    def __init__(self, *jobs: Union[JobResultT, "Chain", "Group"]):
+        self.jobs = list(jobs)
+
+
+class Workflow:
+    """
+    A Workflow class encapsulates a graph representing groups and chains
+    of jobs to run, along with settings that may control its execution.
+
+    :param workflow: The workflow to run.
+    """
+
+    class Callbacks(enum.Enum):
+        ON_FINISHED = "on_finished"
+
+    def __init__(self, workflow: Union[Chain, Group, nx.DiGraph]):
+        self.callbacks = {}
+        if isinstance(workflow, (Chain, Group)):
+            self.graph = build_graph_from_workflow(workflow)
+        else:
+            self.graph = workflow
+
+    def on(self, callback: Callbacks, j: JobResultT):
+        """
+        Register a job to run as a callback.
+
+        For example, you can register a job to run when the workflow has
+        finished executing, even if it failed:
+
+        .. code-block:: python
+
+            @job()
+            def send_status_email():
+                pass
+
+            workflow.on(Workflow.Callbacks.ON_FINISHED, send_status_email())
+
+        The result of a callback job is ignored and no outputs are set.
+        """
+        self.callbacks[callback] = j
+
+    def serialize(self) -> str:
+        """
+        Serialize the workflow to a JSON string.
+
+        :return: The JSON-serialized workflow.
+        """
+        copy = self.graph.copy()
+
+        # Iterate over the graph, replacing the "job" attribute on each node
+        # with the serialized form.
+        for node in copy.nodes:
+            copy.nodes[node]["job"] = copy.nodes[node]["job"].serialize()
+
+        data = json_graph.node_link_data(copy)
+        data["callbacks"] = {
+            callback.value: j.serialize()
+            for callback, j in self.callbacks.items()
+        }
+
+        return json.dumps(data, sort_keys=True)
+
+    @classmethod
+    def deserialize(cls, data: str) -> "Workflow":
+        """
+        Deserialize a JSON-serialized workflow back into a Workflow
+        object.
+
+        :param data: The JSON-serialized workflow.
+        """
+        j = json.loads(data)
+        graph = json_graph.node_link_graph(j)
+
+        # Replace the serialized job objects with the actual job objects.
+        for node in graph.nodes:
+            graph.nodes[node]["job"] = Job.deserialize(graph.nodes[node]["job"])
+
+        workflow = Workflow(graph)
+        workflow.callbacks = {
+            Workflow.Callbacks(callback): Job.deserialize(j)
+            for callback, j in j["callbacks"].items()
+        }
+
+        return workflow
+
+    @property
+    def dependencies(self) -> list[tuple[str, list[str]]]:
+        """
+        Get the dependencies for each node in the graph.
+
+        Returns a list of tuples, where the first element is the node, and the
+        second element is a list of the nodes that are dependencies of the
+        first node.
+
+        The nodes are returned in topological order.
+
+        Example:
+
+            >>> workflow = Workflow(
+            ...     Chain(
+            ...         dummy_job(),
+            ...         Group(
+            ...             dummy_job(),
+            ...             dummy_job(),
+            ...         ),
+            ...     )
+            ... )
+            >>> list(workflow.dependencies)
+            [
+                ('1', []),
+                ('2', ['1']),
+                ('3', ['1']),
+                ('4', ['2', '3']),
+            ]
+        """
+        return [
+            (node, list(self.graph.predecessors(node)))
+            for node in nx.topological_sort(self.graph)
+        ]
+
+    @property
+    def outputs(self) -> set[str]:
+        """
+        Get all the outputs that are provided by the jobs in the workflow.
+        """
+        return set(
+            self.graph.nodes[node]["job"].output
+            for node in nx.topological_sort(self.graph)
+            if self.graph.nodes[node]["job"].output
+        )
+
+    @property
+    def inputs(self) -> set[str]:
+        """
+        Get all the inputs that are requested by jobs in the workflow.
+        """
+        all_inputs = set()
+
+        for node in self.graph.nodes:
+            job = self.graph.nodes[node]["job"]
+            if job.inputs:
+                for input_ in job.inputs:
+                    if isinstance(input_, (list, tuple)):
+                        all_inputs.add(input_[0])
+                    else:
+                        all_inputs.add(input_)
+
+        return all_inputs
+
+    def __getitem__(self, job_id: str) -> Job:
+        return self.graph.nodes[job_id]["job"]
+
+    @property
+    def jobs(self) -> dict[str, Job]:
+        """
+        Get all jobs in the workflow.
+        """
+        return {
+            node: self.graph.nodes[node]["job"]
+            for node in self.graph.nodes
+            if not self.graph.nodes[node]["job"].is_a_callback
+        }
+
+
+def _terminal_nodes(node: ContainerT) -> Iterator["Job"]:
+    """
+    Given a node, return all terminal nodes that are descendants of that node.
+
+    These terminal nodes are the very last nodes in a chain, group, or any
+    combination of the two.
+
+    :param node: The node to get the terminal nodes for.
+    :return: Iterator[Job]
+    """
+    if isinstance(node, Group):
+        for j in node.jobs:
+            yield from _terminal_nodes(j)
+    elif isinstance(node, Chain):
+        yield from _terminal_nodes(node.jobs[-1])
+    elif isinstance(node, Job):
+        yield node
+    else:
+        raise ValueError(f"Unknown node type: {node!r}")
+
+
+def build_graph_from_workflow(workflow: Union[Group, Chain]) -> nx.DiGraph:
+    """
+    Build a directed graph representing the workflow, with each node
+    representing a job in the workflow. The edges represent the order in
+    which the jobs should be executed.
+    """
+    _last_used_identity = 0
+    graph = nx.DiGraph()
+
+    def get_node_identity(node: Job) -> str:
+        """
+        Get the unique identity for a node.
+
+        Functionally identical nodes can be added to the workflow, and this
+        function ensures that each node has a unique identity that can be used
+        to reference the node in the graph.
+
+        :param node: The node to get the identity for.
+        :return: int
+        """
+        if node.identity is None:
+            nonlocal _last_used_identity
+            _last_used_identity += 1
+            node.identity = _last_used_identity
+        return str(node.identity)
+
+    def add_node(node, parent=None):
+        if isinstance(node, Group):
+            for j in node.jobs:
+                add_node(j, parent=parent)
+        elif isinstance(node, Chain):
+            previous_in_chain = parent
+            for j in node.jobs:
+                add_node(j, parent=previous_in_chain)
+                previous_in_chain = j
+        elif isinstance(node, Job):
+            graph.add_node(get_node_identity(node), job=node)
+            if parent:
+                for terminal_job in _terminal_nodes(parent):
+                    graph.add_edge(
+                        get_node_identity(terminal_job),
+                        get_node_identity(node),
+                    )
+        else:
+            raise ValueError(f"Unknown node type: {node!r}")
+
+    add_node(workflow)
+
+    return graph
