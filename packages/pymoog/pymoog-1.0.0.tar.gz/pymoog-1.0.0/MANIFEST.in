@@ -1,0 +1,4 @@
+include MANIFEST.in
+include demo_sun
+recursive-include pymoog/files *
+recursive-include moog_nosm *
