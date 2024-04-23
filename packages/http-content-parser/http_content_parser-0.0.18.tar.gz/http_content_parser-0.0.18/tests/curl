@@ -1,0 +1,6 @@
+curl --location 'http://tocex-master-sg7-live.cluster.shopeemobile.com/apis/tocex/v1/machineset/node_provision/get' \
+--header 'Authorization: ApiToken eyJpZCI6IjNjNzk2MzFkLWJiZmYtNGE0NS1iMTVjLWY5MTFmMWNlZDE4NiIsImFjY291bnQiOiJlY3AuYm90QHNob3BlZS5jb20iLCJncm91cCI6IiIsInVzZXJfcm9sZSI6InJvb3QiLCJjcmVhdGVkX2F0IjoxNjQ2MDI1NTcxLCJleHBpcmVzX2F0IjoxOTU1NjI1NTcxLCJjb21tZW50IjoiKGxpdmUpIGVjcCBib3QgdG9rZW4iLCJzZXJ2aWNlcyI6W119.ffniWLZOLxvieccUbBuJus6lDsm6QzAf1OAf3EfRb3jRfhQ5XItVsWJEZ/cPulHSfn3gxdL7n/hPKYIBdubJpxK2jxFcUcplcHWiCKw93eWfZFj/+JtBKWmFBlxuXF+3tsXPwMIlUzgJRUr5dxqM6nKrB8aYRMmLkmSvUOu/O4lx5JgfMGqU1AqzYgtZy5RYtTcfV61pOE//kEJCsDVFHPVCTTkJYyDunCXR0pVd1BHIt7fd+bsaozdU2Ry9a1FAOFFxI+mQAG1gpg2bc+FqqC+YyMpQZiATI/B6dCkjoA2xLUm5eMmHIBO0QdOVVwAQpDNHbQyzLrqlbkiabERulw==' \
+--header 'Content-Type: application/json' \
+--data '{
+    "host_ip": "10.214.82.96"
+}'
