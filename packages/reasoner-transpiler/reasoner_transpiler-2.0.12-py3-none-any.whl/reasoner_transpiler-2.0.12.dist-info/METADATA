@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: reasoner-transpiler
+Version: 2.0.12
+Summary: TRAPI → Cypher transpiler
+Home-page: https://github.com/ranking-agent/reasoner-transpiler
+Author: Patrick Wang
+Author-email: patrick@covar.com
+Maintainer: Yaphet Kebede
+Maintainer-email: kebedey@renci.org
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.9
+Requires-Dist: bmt ==1.4.0
+
+UNKNOWN
+
