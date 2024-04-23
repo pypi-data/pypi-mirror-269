@@ -1,0 +1,7 @@
+Django>=4.2.10
+artd-location==1.0.2
+artd-partner==1.0.1
+django-admin==2.0.2
+django-autocomplete-light==3.11.0
+django-json-widget==1.1.1
+pillow==10.2.0
