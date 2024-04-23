@@ -1,0 +1,31 @@
+#include <typon/typon.hpp>
+#include <cstdio>
+
+
+using namespace typon;
+
+Join<void> fibo(int n, int & result) {
+  if (n < 2) {
+    result = n;
+    co_return;
+  }
+  // Danger !
+  // The memory for a and b could be freed before the forks complete
+  int a; co_await fork(fibo(n - 1, a));
+  int b; co_await fork(fibo(n - 2, b));
+  // This sync() ensures that the forks complete before a and b are freed
+  // As long as there are no exceptions...
+  co_await Sync();
+  result = a + b;
+}
+
+Root root() {
+  int result; co_await fibo(40, result);
+  printf("%d\n", result);
+}
+
+int main() {
+  root().call();
+  puts("done");
+  return 0;
+}

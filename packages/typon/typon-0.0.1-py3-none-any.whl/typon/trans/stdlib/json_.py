@@ -1,0 +1,3 @@
+# coding: utf-8
+
+def dump[T](obj: T, fp: file) -> Task[str]: ...
