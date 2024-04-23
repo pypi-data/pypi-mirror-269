@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: nlpknife
+Version: 0.0.4
+Summary: my nlpknife
+Home-page: https://github.com/zhpmatrix/nlpknife
+Author: zhpmatrix
+License: UNKNOWN
+Download-URL: https://pypi.tuna.tsinghua.edu.cn/simple
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools ==58.2.0
+Requires-Dist: wheel ==0.43.0
+Requires-Dist: pymysql
+Requires-Dist: py2neo
+Requires-Dist: pandas
+Requires-Dist: redis
+Requires-Dist: baidusearch
+Requires-Dist: gunicorn
+Requires-Dist: gevent
+
+<!--
+ * @Description: aka.zhp
+ * @Version: 0.0.1
+ * @Author: aka.zhp
+ * @Date: 2024-01-04 23:38:05
+ * @LastEditTime: 2024-04-23 09:51:19
+-->
+## 项目说明
+
+我的瑞士军刀
+
+## 安装与部署
+### 在线安装
+
+```shell
+pip install nlpknife
+```
+### 源码安装
+
+```shell
+python setup.py install
+```
+
+要求:setuptools=58.2.0
+
+
+## FAQ
+
+**Q:**  ModuleNotFoundError: No module named 'zope.event'
+
+**A:**
+```
+pip3 install --force-reinstall zope.event
+```
+
