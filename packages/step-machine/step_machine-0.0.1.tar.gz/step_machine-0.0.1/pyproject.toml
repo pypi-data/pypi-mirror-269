@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+exclude = [
+    "/.*",
+    "/dist",
+    "/tests",
+    "/utils",
+]
+
+
+[project]
+name = "step_machine"
+version = "0.0.1"
+authors = [
+    { name = "Hao Wu", email = "haowu@dataset.sh" },
+]
+description = ""
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic ~= 2.0.0",
+    'click ~= 8.1.7'
+]
+
+[project.scripts]
+"stepm" = "step_machine.cli:cli"
