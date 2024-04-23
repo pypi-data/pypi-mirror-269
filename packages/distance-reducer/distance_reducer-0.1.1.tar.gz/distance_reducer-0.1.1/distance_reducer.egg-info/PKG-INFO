@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: distance-reducer
+Version: 0.1.1
+Summary: Group dataframe elements by minimizing the distance between them using linear minimization
+Home-page: https://github.com/KevinBrd
+Author: Kevin Bourdon
+Author-email: kevin.bourdon@kedgebs.com
+License: MIT
+Download-URL: https://github.com/KevinBrd/distance_reducer/archive/refs/tags/v_0.1.1.tar.gz
+Keywords: GROUP,DISTANCE,MINIMIZING,LINEAR,OPTIMIZATION
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: System :: Clustering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+
+UNKNOWN
+

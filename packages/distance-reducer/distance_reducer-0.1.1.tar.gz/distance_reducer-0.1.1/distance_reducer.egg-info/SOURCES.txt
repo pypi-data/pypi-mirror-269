@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+distance_reducer/__init__.py
+distance_reducer/worldmap_grouping.py
+distance_reducer.egg-info/PKG-INFO
+distance_reducer.egg-info/SOURCES.txt
+distance_reducer.egg-info/dependency_links.txt
+distance_reducer.egg-info/requires.txt
+distance_reducer.egg-info/top_level.txt
