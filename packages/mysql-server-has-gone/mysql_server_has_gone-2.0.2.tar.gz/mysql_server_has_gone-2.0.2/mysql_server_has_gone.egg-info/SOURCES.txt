@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+mysql_server_has_gone.egg-info/PKG-INFO
+mysql_server_has_gone.egg-info/SOURCES.txt
+mysql_server_has_gone.egg-info/dependency_links.txt
+mysql_server_has_gone.egg-info/top_level.txt
+mysql_server_has_gone_away/__init__.py
+mysql_server_has_gone_away/base.py
