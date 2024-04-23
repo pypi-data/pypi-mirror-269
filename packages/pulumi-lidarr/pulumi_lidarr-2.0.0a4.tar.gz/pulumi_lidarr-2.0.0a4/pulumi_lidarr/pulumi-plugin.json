@@ -1,0 +1,5 @@
+{
+  "resource": true,
+  "name": "lidarr",
+  "server": "github://api.github.com/MaienM/pulumi-lidarr"
+}
