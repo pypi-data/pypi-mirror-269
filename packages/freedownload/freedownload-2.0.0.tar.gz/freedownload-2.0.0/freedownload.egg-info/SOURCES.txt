@@ -1,0 +1,10 @@
+README.md
+setup.py
+freedownload/__init__.py
+freedownload/version.py
+freedownload.egg-info/PKG-INFO
+freedownload.egg-info/SOURCES.txt
+freedownload.egg-info/dependency_links.txt
+freedownload.egg-info/requires.txt
+freedownload.egg-info/top_level.txt
+freedownload.egg-info/zip-safe
