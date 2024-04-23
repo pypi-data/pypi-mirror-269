@@ -1,0 +1,3 @@
+[console_scripts]
+demcli = roughness_calculator.cli_main:main
+demgui = roughness_calculator.gui_main:main
