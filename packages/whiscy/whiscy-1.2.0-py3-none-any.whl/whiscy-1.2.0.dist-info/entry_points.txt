@@ -1,0 +1,9 @@
+[console_scripts]
+whiscy=whiscy.cli:main
+whiscy_bfactor=whiscy.cli_bfactor:main
+whiscy_consadjust=whiscy.cli_consadjust:main
+whiscy_haddock=whiscy.cli_haddock:main
+whiscy_parasmooth=whiscy.cli_parasmooth:main
+whiscy_resdist=whiscy.cli_resdist:main
+whiscy_setup=whiscy.cli_setup:main
+
