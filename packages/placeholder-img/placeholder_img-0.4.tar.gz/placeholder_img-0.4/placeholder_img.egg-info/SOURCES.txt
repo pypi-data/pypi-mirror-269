@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+pyproject.toml
+placeholder/__init__.py
+placeholder/creator.py
+placeholder/public/NotoSansKR-Regular.ttf
+placeholder_img.egg-info/PKG-INFO
+placeholder_img.egg-info/SOURCES.txt
+placeholder_img.egg-info/dependency_links.txt
+placeholder_img.egg-info/requires.txt
+placeholder_img.egg-info/top_level.txt

@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: placeholder-img
+Version: 0.4
+Summary: Create a placeholder image to return an image object or save the file
+Author-email: Lee Ji-ho <search5@gmail.com>
+License: BSD-3-Clause
+Project-URL: Repository, https://github.com/search5/placeholder-img
+Project-URL: Issues, https://github.com/search5/placeholder-img/issues
+Keywords: one,two
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+Requires-Dist: pillow
+
+=================================
+Python Placeholder Image Creator
+=================================
+
+------
+Usage
+------
+
+.. code-block:: python
+
+    import placeholder
+    img = placeholder.makeplaceholder('100x100')
+
+
+----------------
+function header
+----------------
+
+.. code-block:: python
+
+    makeplaceholder(size, text=None, bgcolor="FFF", color="888", format='PNG', font_size=None)
