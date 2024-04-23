@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+iglu_py/__init__.py
+iglu_py/bridge.py
+iglu_py/df.py
+iglu_py/iglu_4.0.0.tar.gz
+iglu_py/metrics.py
+iglu_py.egg-info/PKG-INFO
+iglu_py.egg-info/SOURCES.txt
+iglu_py.egg-info/dependency_links.txt
+iglu_py.egg-info/requires.txt
+iglu_py.egg-info/top_level.txt
+iglu_py/data/example_data_1_subject.csv
+iglu_py/data/example_data_5_subject.csv
+iglu_py/data/example_data_hall.csv
+iglu_py/data/example_meals_hall.csv
