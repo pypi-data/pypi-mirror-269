@@ -1,0 +1,3 @@
+[console_scripts]
+gettake=gettake.main:main
+
