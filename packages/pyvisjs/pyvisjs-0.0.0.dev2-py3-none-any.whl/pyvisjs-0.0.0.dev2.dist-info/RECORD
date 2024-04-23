@@ -1,0 +1,12 @@
+pyvisjs/__init__.py,sha256=EnsX8TYJA7Od6Hf7Q-IWAU_MRmGNkAg-dXP0-L2paZw,75
+pyvisjs/_version.py,sha256=57_MjLiHhALekcGiQANJMvenSqT0dUJ14by_JJNVSjc,105
+pyvisjs/edge.py,sha256=n_0rr9gEdUXddTv9LjWUZ5WSdJFoVHVd3Rvf_XYQ3Do,181
+pyvisjs/network.py,sha256=ZqtIa_XIQsS7CfslMESD8AMasPdASK-Y7OSRXT1nZFY,1528
+pyvisjs/node.py,sha256=7C5XPWhSyefSPgWlO2HRthf0nti-EDwpr0k9chobpoI,232
+pyvisjs/utils.py,sha256=Z1r9CYZLrWUJX4Pn3f_KZHC_m8gKf8WomSKlK9jF4vs,1114
+pyvisjs/templates/basic.html,sha256=4XFvnFGq_Q6DKH9z05-Zo0kbIZtNNMSMXWKfnuRszqU,1075
+pyvisjs-0.0.0.dev2.dist-info/LICENSE,sha256=hJ2CYlp0n352dXNClXkNKZlRxb5PX1H2GbkpSdp9_zM,1091
+pyvisjs-0.0.0.dev2.dist-info/METADATA,sha256=RZlN81UqdWkCyO5FUXmo_Xk0twvky03U-7I6zT69MaA,3387
+pyvisjs-0.0.0.dev2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pyvisjs-0.0.0.dev2.dist-info/top_level.txt,sha256=yC6lot-4QCzCbG-G-rNadNOTuzUmna2YQbFSraHsHMg,8
+pyvisjs-0.0.0.dev2.dist-info/RECORD,,
