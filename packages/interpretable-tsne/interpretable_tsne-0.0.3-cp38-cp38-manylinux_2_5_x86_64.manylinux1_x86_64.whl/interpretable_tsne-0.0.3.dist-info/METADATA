@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: interpretable_tsne
+Version: 0.0.3
+Summary: Implementation of the gradient-based t-SNE sttribution method described in our GLBIO oral presentation: 'Towards Computing Attributions for Dimensionality Reduction Techniques'
+Author: Matthew Scicluna
+Author-email: Matthew Scicluna <mattcscicluna@gmail.com>
+Maintainer-email: Matthew Scicluna <mattcscicluna@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright 2023 Matthew Scicluna.
+        
+        Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Project-URL: Repository, https://github.com/MattScicluna/interpretable_tsne.git
+Project-URL: Bug Tracker, https://github.com/MattScicluna/interpretable_tsne/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: COPYING
+Requires-Dist: scikit-learn ==0.24.1
+Requires-Dist: scipy ==1.7.0
+Requires-Dist: numpy ==1.21
+
+Interpretable t-SNE
+===================
+
+[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+
+`interpretable_tsne` is an implementation of our gradient-based attributiont technique described in our GLBIO oral presentation: 'Towards Computing Attributions for Dimensionality Reduction Techniques'. 
+
+To replicate the experiments we performed in our presentation, go to: [MattScicluna/interpretable_tsne_experiment](https://github.com/MattScicluna/interpretable_tsne_experiment)
+
+Synthetic data experiment demonstrating that our t-SNE attributions can identify the ground truth significant features. See [our pre-print](https://www.biorxiv.org/content/10.1101/2023.05.12.540592v1) for more details.
+
+https://github.com/MattScicluna/interpretable_tsne/assets/19255250/789c075c-44fd-48ef-9264-e7dca60a59ce
+
+
+---
+
+Installation
+------------
+
+`interpretable_tsne` requires Python 3.8 or higher to run. It is only available on Linux operating systems.
+
+### PyPi
+
+This code can be installed via pip using the following command:
+
+    pip install interpretable_tsne
+
+### Source
+
+You can install `interpretable_tsne` from source. Just clone this repository and run the following line in the root directory:
+
+    pip install .
+
+Run the unittests
+
+    python -m unittest -v tests/*.py
+
+---
+
+Citation
+--------
+
+If you use `interpretable_tsne` in your work, please cite us:
+
+```
+    @article {Scicluna2023.05.12.540592,
+        author = {Matthew Crispin Scicluna and Jean-Christophe Grenier and Raphael Poujol and Sebastien Lemieux and Julie Hussin},
+        title = {Towards Computing Attributions for Dimensionality Reduction Techniques},
+        elocation-id = {2023.05.12.540592},
+        year = {2023},
+        doi = {10.1101/2023.05.12.540592},
+        publisher = {Cold Spring Harbor Laboratory},
+        URL = {https://www.biorxiv.org/content/early/2023/05/14/2023.05.12.540592},
+        eprint = {https://www.biorxiv.org/content/early/2023/05/14/2023.05.12.540592.full.pdf},
+        journal = {bioRxiv}
+    }
+```
+
+[def]: assets/synth_data_gradients.mp4
