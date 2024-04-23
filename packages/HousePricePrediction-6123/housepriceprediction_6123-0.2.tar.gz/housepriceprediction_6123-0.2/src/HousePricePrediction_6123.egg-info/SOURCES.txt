@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/HousePricePrediction/__init__.py
+src/HousePricePrediction/ingest_data.py
+src/HousePricePrediction/score.py
+src/HousePricePrediction/train.py
+src/HousePricePrediction_6123.egg-info/PKG-INFO
+src/HousePricePrediction_6123.egg-info/SOURCES.txt
+src/HousePricePrediction_6123.egg-info/dependency_links.txt
+src/HousePricePrediction_6123.egg-info/requires.txt
+src/HousePricePrediction_6123.egg-info/top_level.txt
