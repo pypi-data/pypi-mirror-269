@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+src/CoreStart.egg-info/PKG-INFO
+src/CoreStart.egg-info/SOURCES.txt
+src/CoreStart.egg-info/dependency_links.txt
+src/CoreStart.egg-info/entry_points.txt
+src/CoreStart.egg-info/top_level.txt
+src/corestart/__init__.py
+src/corestart/core_start.py
+src/corestart/core_start.sh
