@@ -1,0 +1,640 @@
+Metadata-Version: 2.1
+Name: quick_server
+Version: 0.9.4
+Summary: QuickServer is a quick to use and easy to set up server implementation.
+Author-email: Josua Krause <josua.krause@gmail.com>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: repository, https://github.com/JosuaKrause/quick_server
+Keywords: server,REST,file,quick,easy
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+QuickServer
+===========
+
+*quick\_server* is a quick to use and easy to set up server
+implementation. It has the following goals / features and is primarily
+meant to speed up back end implementation / iteration:
+
+-  serve local files as is with basic black- and white-listing
+-  provide functionality for dynamic requests
+-  provide easy access to worker threads (and caching)
+-  provide a basic command interpret loop for server commands
+
+Usage
+-----
+
+You can install *quick\_server* with pip:
+
+.. code:: sh
+
+    pip install quick_server
+
+Import it in python via:
+
+.. code:: python
+
+    from quick_server import create_server, msg, setup_restart
+
+Note that python 2 support is discontinued. Use version *0.6.x*:
+
+.. code:: sh
+
+    pip install quick_server<0.7
+
+Note that python 3.9 and lower support is discontinued. Use version *0.7.x*:
+
+.. code:: sh
+
+    pip install quick_server<0.8
+
+Setting up a basic file server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Following we will set up a basic *quick\_server*. Please refer to the
+`inline documentation <https://github.com/JosuaKrause/quick_server/blob/master/quick_server/quick_server.py>`__ of the methods for
+full information.
+
+.. code:: python
+
+    setup_restart()  # sets up restart functionality (if not called the `restart` command of the server needs external help to work)
+    # should be the first real executed command in the script
+    # some services, like heroku, don't play well with this command and it should not be called if in such an environment
+
+    addr = ""  # empty address is equivalent to "localhost"
+    port = 8080
+    server = create_server((addr, port), parallel=True)  # parallel is recommended unless your code is not thread-safe
+    server.bind_path("/", "www")  # binds the "www" directory to the server's root
+    server.add_default_white_list()  # adds typical file types to the list of files that will be served; you can use server.add_file_patterns to add more file types
+    server.favicon_fallback = "favicon.ico"  # sets the default favicon file to the given file on disk (you'll need a file called "favicon.ico")
+    # you can also use server.link_empty_favicon_fallback()
+
+    server.suppress_noise = True  # don't report successful requests (turn off if you want to measure performance)
+    server.report_slow_requests = True  # reports requests that take longer than 5s
+
+Starting the actual server:
+
+.. code:: python
+
+    msg(f"{' '.join(sys.argv)}")  # prints how the script was started
+    msg(f"starting server at {addr if addr else 'localhost'}:{port}")
+    try:
+        server.serve_forever()  # starts the server -- only returns when the server stops (e.g., by typing `quit`, `restart`, or `CTRL-C`)
+    finally:
+        msg("shutting down..")
+        msg(f"{' '.join(sys.argv)}")  # print how the script was called before exit -- this way you don't have to scroll up to remember when the server was running for a while
+        server.server_close() # make sure to clean up all resources
+
+Adding dynamic requests
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Dynamic requests can be set up by annotating a function. The annotation
+consists of *return-type* and *http-method*.
+
+A ``POST`` request in ``JSON`` format:
+
+.. code:: python
+
+    from quick_server import QuickServerRequestHandler, ReqArgs
+
+    @server.json_post("/json_request", 0)  # creates a request at http://localhost:8080/json_request -- 0 additional path segments are allowed
+    def _json_request(req: QuickServerRequestHandler, args: ReqArgs) -> dict:
+        return {
+            "post": args["post"],
+        }
+
+A ``GET`` request as ``plain text``:
+
+.. code:: python
+
+    @server.text_get("/text_request")  # creates a request at http://localhost:8080/text_request -- additional path segments are allowed
+    def _text_request(req: QuickServerRequestHandler, args: ReqArgs) -> str:
+        return "plain text"
+
+Other forms of requests are also supported, namely ``DELETE`` and ``PUT``.
+
+``args`` is an object holding all request arguments.
+``args["query"]`` contains URL query arguments.
+``args["fragment"]`` contains the URL fragment part.
+``args["paths"]`` contains the remaining path segments.
+``args["post"]`` contains the posted content.
+``args["files"]`` contains uploaded files.
+``args["meta"]`` starts as empty dict but allows to add additional
+info to a request without conflicting with the other fields.
+
+Adding Middleware
+~~~~~~~~~~~~~~~~~
+
+Middleware can be added for common operations that apply for many endpoints
+such as, e.g., login token verification. The request and argument objects are
+passed through the middleware and can be modified by it.
+
+.. code:: python
+
+    from quick_server import PreventDefaultResponse, Response, ReqNext
+
+    def check_login(req: QuickServerRequestHandler, args: ReqArgs, okay: ReqNext) -> ReqNext | dict:
+        if is_valid(args["post"].get("token")):
+            args["meta"]["username"] = ...  # we can manipulate the args object
+            return okay  # proceed with the next middleware / main request
+        # Response allows to return non-default status codes.
+        # It can be used in normal request functions as well.
+        return Response("Authentication Required", 401)
+        # Alternatively we could just return a normal response with details here
+        return {
+            "success": False,
+            "msg": ...,
+        }
+        # If a non-control flow response is needed the PreventDefaultResponse
+        # exception allows to return non-default status codes from anywhere.
+        # This also works in normal request functions as well.
+        raise PreventDefaultResponse(401, "Authentication Required")
+
+    @server.json_post("/user_details")
+    @server.middleware(check_login)
+    def _user_details(req: QuickServerRequestHandler, args: ReqArgs) -> dict:
+        return {
+            "success": True,
+            "username": args["meta"]["username"],
+        }
+
+Worker threads and caching
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Worker threads are long running server side computations.
+The client can start a request, gets an immediate response,
+and will check periodically if the computation has finished.
+From the client's perspective it looks like a normal request.
+
+Worker threads require support from the client side.
+
+First, provide the necessary JavaScript file via
+
+.. code:: python
+
+    server.link_worker_js("/js/worker.js")
+
+(use ``server.link_legacy_worker_js("/js/worker.js")`` if you are *not* using a transpiler)
+
+and load it on the client side:
+
+.. code:: html
+
+    <script src="js/worker.js" charset="utf-8"></script>
+
+A worker request can be set up on the server side with
+
+.. code:: python
+
+    from quick_server import WorkerArgs
+
+    @server.json_worker("/json_worker")
+    def _json_worker(post: WorkerArgs) -> dict:
+        # post contains all post arguments
+        # ...
+        # long, slow computation
+        return myresult  # myresult must be JSON convertible
+
+and accessed from the client. An instance of the ``Worker`` class is
+needed:
+
+.. code:: javascript
+
+    var work = new quick_server.Worker();
+    work.status((req) => {
+      ...
+      // req contains the number of currently active requests (-1 indicates an error state)
+      // it can be used to tell the user that something is happening
+    });
+
+Accessing the worker:
+
+.. code:: javascript
+
+    // the first argument identifies worker jobs
+    // jobs with the same name get replaced when a new one has been started
+    // the second argument is the URL
+    work.post('worker_name', 'json_worker', {
+      ... // this object will appear as args on the server side
+    }, (data) => {
+      ...
+      // data is the result of the worker function of the server side
+      // this function is only called if the request was successful
+    });
+
+A worker can be cancelled using its name:
+
+.. code:: javascript
+
+    work.cancel('worker_name');
+
+Note that all running workers are cancelled when the page is unloaded.
+
+Workers can automatically cache the server response using
+`quick\_cache <https://pypi.python.org/pypi/quick-cache>`__. The
+server needs to be set up for this:
+
+.. code:: python
+
+    cache = QuickCache(base_file, quota=500, ram_quota=100, warnings=msg)
+    server.cache = cache
+
+Then caching can be used for workers:
+
+.. code:: python
+
+    @server.json_worker("/json_worker", cache_id=lambda args: {
+            ...  # uniquely identify the task from its arguments (must be JSON convertible)
+        })
+    def _json_worker(post: WorkerArgs) -> dict:
+        # ...
+        # long, slow computation
+        return myresult  # myresult must be JSON convertible
+
+Note that caching can also be used for other types of requests.
+
+Using workers with babel or react
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you're using *babel* (e.g., with *react*) you can also
+mirror the file into your source folder:
+
+.. code:: python
+
+    server.mirror_worker_js("src/worker.js")
+
+and then import it:
+
+.. code:: javascript
+
+    import './worker.js';
+
+    const WORKER = new window.quick_server.Worker();
+    export function registerStatus(cb) {
+      WORKER.status(cb);
+    }
+
+    export function fetchWorker(ref, url, post, cb) {
+      WORKER.post(ref, url, post, cb);
+    }
+
+    export function cancelWorker(ref) {
+      WORKER.cancel(ref);
+    }
+
+Note that for a build you need to actually copy
+``worker.js`` into you source folder since the build
+system gets confused with filesystem links.
+To use *quick\_server* with a build bind the build folder:
+
+.. code:: python
+
+    server.bind_path("/", "build/")
+
+During development it is recommended to forward
+requests from the *react* server to *quick\_server*.
+For this add the following line to your ``package.json``:
+
+.. code:: javascript
+
+    "proxy": "http://localhost:8080"
+
+where the proxy field redirects to the *quick\_server*.
+
+Tokens
+~~~~~~
+
+Tokens are means to store client information on the server.
+For that the server must send the token-id to the client:
+
+.. code:: python
+
+    server.create_token()  # creates a new token -- send this to the client
+
+The server can now access (read / write) data associated with this token:
+
+.. code:: python
+
+    @server.json_post("/json_request", 0)
+    def _json_request(req: QuickServerRequestHandler, args: ReqArgs) -> ...:
+        # assuming the token-id was sent via post
+        # expire can be the expiration time in seconds of a token,
+        # None for no expiration, or be omitted for the default expiration (1h)
+        with server.get_token_obj(args["post"]["token"], expire=None) as obj:
+            ...  # do stuff with obj
+
+CORS and proxying
+~~~~~~~~~~~~~~~~~
+
+CORS can be activated with:
+
+.. code:: python
+
+    server.cross_origin = True
+
+and requests can be redirected via proxy (if you want to avoid CORS):
+
+.. code:: python
+
+    server.bind_proxy("/foo/", "http://localhost:12345")
+
+redirects every request that begins with ``/foo/`` and
+has not been handled by *quick\_server* to ``http://localhost:12345``.
+
+Custom server commands
+~~~~~~~~~~~~~~~~~~~~~~
+
+By default *quick\_server* provides the commands ``help`` (list of
+available commands), ``restart`` (restart the server), and ``quit``
+(terminates the server). You can add own commands via
+
+.. code:: python
+
+    @server.cmd()
+    def name(args: list[str]) -> None:  # creates the command name
+        if not args:
+            msg("hello")
+        else:
+            msg(f"hi {' '.join(args)}")  # words typed after name are printed here
+
+A common command to add when having caching functionality (e.g.,
+provided by
+`quick\_cache <https://pypi.python.org/pypi/quick-cache>`__) is to
+clear caches. This show-cases also auto-complete functionality:
+
+.. code:: python
+
+    def complete_cache_clear(args: list[str], text: str) -> list[str]:  # args contains already completed arguments; text the currently started one
+        if args:  # we only allow up to one argument
+            return []
+        return [ section for section in cache.list_sections() if section.startswith(text) ]  # cache is the quick_cache object
+
+    @server.cmd(complete=complete_cache_clear)
+    def cache_clear(args: list[str]) -> None:
+        if len(args) > 1: # we only allow up to one argument
+          msg(f"too many extra arguments! expected one got {' '.join(args)}")
+          return
+        msg(f"clear {'' if args else 'all '}cache{' ' if args else 's'}{args[0] if args else ''}")
+        cache.clean_cache(args[0] if args else None)
+
+Server without command loop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The easiest way to start the server without a command loop (e.g., when
+started as service) is to stop the loop with an EOF by calling the
+script like this:
+
+.. code:: sh
+
+    cat /dev/null | python yourscript.py
+
+or use the ``no_command_loop`` flag and run the script normally:
+
+.. code:: python
+
+    server.no_command_loop = True
+
+HTTPS
+~~~~~
+
+You can wrap the server socket to support HTTPS:
+
+.. code:: python
+
+    import ssl
+
+    addr = ""  # empty address is equivalent to "localhost"
+    port = 443  # the HTTPS default port 443 might require root privileges
+    server = create_server((addr, port), parallel=True)
+    server.socket = ssl.wrap_socket(server.socket, certfile="path/to/localhost.pem", server_side=True)
+
+    # setup your server
+
+    try:
+        server.serve_forever()
+    finally:
+        server.server_close()
+
+More examples
+~~~~~~~~~~~~~
+
+`example.py <https://github.com/JosuaKrause/quick_server/blob/master/example/example.py>`__ and
+`example2.py <https://github.com/JosuaKrause/quick_server/blob/master/example/example2.py>`__ also contain minimal example
+servers. You can run them with ``./example.py`` and ``./example2.py``
+respectively from the examples directory. Then you can browse to
+http://localhost:8000/example/.
+
+Contributing
+------------
+
+Pull requests are highly appreciated :) Also, feel free to open
+`issues <https://github.com/JosuaKrause/quick_server/issues>`__ for any
+questions or bugs you may encounter.
