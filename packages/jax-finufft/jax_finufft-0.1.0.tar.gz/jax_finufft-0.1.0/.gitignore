@@ -1,0 +1,9 @@
+build
+*_version.py
+*.so
+_skbuild
+dist
+MANIFEST
+__pycache__/
+*.egg-info
+.*_cache
