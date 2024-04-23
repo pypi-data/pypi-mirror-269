@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: iotest-grader
+Version: 0.0.2
+Summary: A pytest harness for input/output tests
+Author-email: Joe Delfino <jdelfino@brandeis.edu>
+Project-URL: Homepage, https://github.com/brandeis-cosi-10a/input-output-test
+Project-URL: Issues, https://github.com/brandeis-cosi-10a/input-output-test/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pexpect>=4.8.0
+Requires-Dist: pytest>=7.0
+Requires-Dist: pytest-clarity>=1.0.0
+
+# input-output-test
+Python input/output test harness 
