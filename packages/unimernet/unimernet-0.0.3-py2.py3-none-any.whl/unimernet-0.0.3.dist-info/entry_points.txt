@@ -1,0 +1,4 @@
+[console_scripts]
+unimernet=demo:main
+unimernet_gui=unimer_app:run_app
+
