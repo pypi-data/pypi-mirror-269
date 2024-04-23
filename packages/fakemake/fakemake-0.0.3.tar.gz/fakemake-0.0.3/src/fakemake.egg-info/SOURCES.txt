@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/fakemake/__init__.py
+src/fakemake.egg-info/PKG-INFO
+src/fakemake.egg-info/SOURCES.txt
+src/fakemake.egg-info/dependency_links.txt
+src/fakemake.egg-info/top_level.txt
+src/fakemake/app/__init__.py
+src/fakemake/app/database.py
+src/fakemake/generation/__init__.py
+src/fakemake/generation/create_fake_data.py
+src/fakemake/generation/create_persist_all.py
+src/fakemake/generation/run_fake_generator.py
+src/fakemake/utils/__init__.py
+src/fakemake/utils/record_keeper.py

@@ -1,0 +1,1 @@
+from .generation.run_fake_generator import run_generator

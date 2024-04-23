@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fakemake"
+version = "0.0.3"
+authors = [
+  { name="ananamoose_31", email="comerford.ryan31@gmail.com" },
+]
+description = "A simple package to persist fake data objects into a relational database"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Ryan-Comerford/Fake-Data-Generator"
+Issues = "https://github.com/Ryan-Comerford/Fake-Data-Generator/issues"
