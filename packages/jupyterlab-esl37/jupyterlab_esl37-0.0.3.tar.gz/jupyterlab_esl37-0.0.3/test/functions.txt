@@ -1,0 +1,65 @@
+# Function 1
+
+def func() -> int:
+    return 1
+end
+
+def func():
+    pass
+end
+
+def func(a: int, b: float) -> float:
+    return 1.0
+end
+
+==>
+
+SourceFile(
+    FunctionDefn(
+        FunctionName
+        TypeName
+        ReturnStatement(Integer)
+    )
+    FunctionDefn(
+        FunctionName
+        PassStatement
+    )
+    FunctionDefn(
+        FunctionName
+        VariableName TypeName
+        VariableName TypeName
+        TypeName
+        ReturnStatement(Float)
+    )
+)
+
+# Function 2
+
+def func(a: int) -> int:
+    b = 3
+    if a > 1:
+        b += 2
+    else:
+        b += 3
+    end
+    return b
+end
+
+==>
+
+SourceFile(
+    FunctionDefn(
+        FunctionName
+        VariableName TypeName
+        TypeName
+        UpdateStatement(Reference "=" Integer)
+        IfStatement(
+            BinaryExpression(Reference ">" Integer)
+            UpdateStatement(Reference "+=" Integer)
+            ElseSection(
+                UpdateStatement(Reference "+=" Integer)
+            )
+        )
+        ReturnStatement(Reference)
+    )
+)

@@ -1,0 +1,360 @@
+@external propSource highlight from "./highlight.js"
+
+@precedence {
+    unary,
+    multiply @left,
+    add @left,
+    relational @left,
+    equal @right,
+    logical_and @left,
+    logical_or @left
+}
+
+@top SourceFile {
+    (
+        Enum |
+        Global |
+        Node |
+        Edge |
+        Distributions |
+        Contagion |
+        Set |
+        FunctionDefn |
+        TestExpression |
+        TestStatement
+    )+
+}
+
+Enum {
+    kw<"enum"> TypeName
+    commaSep1<ConstantName>
+    kw<"end">
+}
+
+Global {
+    (kw<"global"> | kw<"config">)
+    VariableName ":" TypeName "=" expression ";"?
+}
+
+Node {
+    skw<"node">
+    TableField+
+    kw<"end">
+}
+
+Edge {
+    skw<"edge">
+    TableField+
+    kw<"end">
+}
+
+TableField {
+    VariableName
+    ":"
+    TypeName
+    FieldAnnotation*
+    ";"?
+}
+
+Distributions {
+    kw<"distribution">
+    (DiscreteDist | NormalDist | UniformDist)*
+    kw<"end">
+}
+
+DiscreteDist {
+    kw<"discrete"> FunctionName
+    DiscretePV*
+    kw<"end">
+}
+
+DiscretePV {
+    skw<"p"> "=" (Integer | Float) ","
+    skw<"v"> "=" expression ";"?
+}
+
+NormalDist {
+    kw<"normal"> FunctionName
+    skw<"mean"> "=" expression ","
+    skw<"std"> "=" expression
+    ("," skw<"min"> "=" expression)?
+    ("," skw<"max"> "=" expression)?
+    ";"?
+    kw<"end">
+}
+
+UniformDist {
+    kw<"uniform"> FunctionName
+    skw<"low"> "=" expression ","
+    skw<"high"> "=" expression
+    kw<"end">
+}
+
+Contagion {
+    kw<"contagion"> VariableName
+    (
+        ContagionStateType |
+        ContagionFunction |
+        Transitions |
+        Transmissions
+    )*
+    kw<"end">
+}
+
+ContagionStateType {
+    StateTypeAnnotation TypeName ";"?
+}
+
+ContagionFunction {
+   (skw<"susceptibility"> | skw<"infectivity"> | skw<"transmissibility"> | skw<"enabled">)
+   ( expression | InlineExpressionFunction ) ";"?
+}
+
+Transitions {
+    kw<"transition">
+    Transition*
+    kw<"end">
+}
+
+Transition {
+    ConstantName "->"
+    ConstantName ","
+    (skw<"p"> "=" (expression | InlineExpressionFunction) ",")?
+    skw<"dwell"> "=" (expression | InlineExpressionFunction)
+    ";"?
+}
+
+Transmissions {
+    kw<"transmission">
+    Transmission*
+    kw<"end">
+}
+
+Transmission {
+    ConstantName "=>" ConstantName "->" ConstantName ";"?
+}
+
+Set {
+  (kw<"nodeset"> | kw<"edgeset">) commaSep1<VariableName>
+}
+
+FunctionDefn {
+    kw<"def"> FunctionName params ("->" TypeName)? ":"
+    statement+
+    kw<"end">
+}
+
+InlineExpressionFunction {
+    "[" VariableName ":" TypeName "->" TypeName "]"
+    "(" expression ")"
+}
+
+InlineUpdateFunction {
+    "[" VariableName ":" TypeName "]"
+    "{" UpdateStatement+ "}"
+}
+
+params { "(" commaSep<param { VariableName ":" TypeName }> ")" }
+
+
+
+TestStatement {
+    "__test" kw<"statement"> ":" statement+ kw<"end">
+}
+
+statement {
+    Variable |
+    PassStatement |
+    ReturnStatement |
+    IfStatement |
+    SwitchStatement |
+    WhileLoop |
+    CallStatement |
+    UpdateStatement |
+    PrintStatement |
+    SelectStatement |
+    SampleStatement |
+    ApplyStatement |
+    ReduceStatement
+}
+
+Variable { kw<"var"> VariableName ":" TypeName "=" expression ";"? }
+
+PassStatement { kw<"pass"> ";"? }
+
+ReturnStatement { kw<"return"> expression ";"? }
+
+IfStatement {
+    kw<"if"> expression ":"
+    statement+
+    ElifSection*
+    ElseSection?
+    kw<"end">
+}
+
+ElifSection {
+    kw<"elif"> expression ":"
+    statement+
+}
+
+ElseSection {
+    kw<"else"> ":"
+    statement+
+}
+
+SwitchStatement {
+    kw<"switch"> expression ":"
+    CaseSection+
+    DefaultSection?
+    kw<"end">
+}
+
+CaseSection {
+    kw<"case"> expression ":"
+    statement+
+}
+
+DefaultSection {
+    kw<"default"> ":"
+    statement+
+}
+
+WhileLoop {
+    kw<"while"> expression ":"
+    statement+
+    kw<"end">
+}
+
+CallStatement {
+    FunctionCall ";"?
+}
+
+UpdateStatement {
+    Reference
+    ("=" | "*=" | "/=" | "%=" | "+=" | "-=")
+    expression ";"?
+}
+
+SelectStatement {
+    kw<"select">
+    "("
+        VariableName "," ( FunctionName | InlineExpressionFunction )
+    ")" ";"?
+}
+
+SampleStatement {
+    kw<"sample"> "(" VariableName ", " VariableName "," expression "," (op<"ABSOLUTE"> | op<"RELATIVE">) ")" ";"?
+}
+
+ApplyStatement {
+    kw<"apply"> "("
+        VariableName ","
+        (FunctionName | InlineUpdateFunction)
+    ")" ";"?
+}
+
+ReduceStatement {
+    VariableName "<-" kw<"reduce"> "("
+        VariableName ","
+        (FunctionName | InlineExpressionFunction) ","
+        ("+" | "*")
+    ")" ";"?
+}
+
+PrintStatement {
+    kw<"print"> "(" commaSep1<( String | expression )> ")" ";"?
+}
+
+TestExpression {
+    "__test" kw<"expression"> ":" expression kw<"end">
+}
+
+expression {
+    Integer |
+    Float |
+    Boolean |
+    UnaryExpression |
+    BinaryExpression |
+    ParenthesizedExpression { "(" expression ")" } |
+    Reference |
+    FunctionCall |
+    TemplateVar
+}
+
+UnaryExpression { !unary (op<"not"> | "+" | "-") expression }
+
+BinaryExpression {
+  expression !add ("+" | "-") expression |
+  expression !multiply ("*" | "/" | "%") expression |
+  expression !logical_or op<"or"> expression |
+  expression !logical_and op<"and"> expression |
+  expression !equal ( "==" | "!=") expression |
+  expression !relational ( ">" | ">=" | "<" | "<=") expression
+}
+
+Reference { dotSep1<identifier> }
+
+FunctionCall { FunctionName "(" commaSep<expression> ")" }
+
+VariableName { identifier }
+FunctionName { identifier }
+TypeName { identifier }
+ConstantName { identifier }
+
+@tokens {
+  identifier { $[a-zA-Z] $[a-zA-Z0-9_]* }
+
+  digits { $[0-9]+ }
+  exponent { $[eE] $[+-]? digits }
+
+  Integer { digits }
+  Float {
+    ( digits "." digits? exponent? ) |
+    ( digits? "." digits exponent? ) |
+    ( digits exponent)
+  }
+
+  Boolean { "True" | "False" }
+
+  String { '"' (![\\\n"] | "\\" _)* '"'? }
+  Comment { "#" ![\n]* }
+
+  TemplateVar { "{{" ![}]+ "}}" }
+  TemplateBlock { "{%" ![%]+ "%}" }
+
+  space { @whitespace+ }
+
+  FieldAnnotation {
+    ("node" @whitespace+ "key") |
+    ("target" @whitespace+ "node" @whitespace+ "key") |
+    ("source" @whitespace+ "node" @whitespace+ "key") |
+    "static" |
+    "save"
+  }
+
+  StateTypeAnnotation { "state" @whitespace+ "type" }
+
+  @precedence { Float, Integer }
+  @precedence { Boolean, FieldAnnotation, StateTypeAnnotation, identifier }
+
+  "+" "-" "*" "/" "==" "!=" ">" ">=" "<" "<="
+  "=" "*=" "/=" "%=" "+=" "-="
+  ":" "," "->" "<-"
+  "(" ")"
+  "{" "}"
+  "[" "]"
+
+}
+
+@skip { space | Comment | TemplateBlock }
+
+op<term> { @specialize[@name={term}]<identifier, term> }
+
+kw<term> { @specialize[@name={term}]<identifier, term> }
+skw<term> { @extend[@name={term}]<identifier, term> }
+// kw<term> { @specialize<identifier, term> }
+// skw<term> { @extend<identifier, term> }
+
+dotSep1<expr> { expr ("." expr)*  }
+commaSep<expr> { "" | expr ("," expr)* }
+commaSep1<expr> { expr ("," expr)* }

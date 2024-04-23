@@ -1,0 +1,22 @@
+# Nodeset 1
+
+nodeset vset1
+nodeset vset2, vset3
+
+==>
+
+SourceFile(
+    Set(VariableName)
+    Set(VariableName VariableName)
+)
+
+# Edgeset 1
+
+edgeset seed_edges
+
+==>
+
+SourceFile(
+    Set(VariableName)
+)
+

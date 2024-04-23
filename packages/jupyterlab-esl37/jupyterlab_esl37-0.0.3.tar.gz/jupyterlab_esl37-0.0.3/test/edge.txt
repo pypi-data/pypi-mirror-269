@@ -1,0 +1,23 @@
+# Edge 1
+
+edge
+    pid1: int static target node key
+    pid2: int static source node key
+    activity1: activity_t static
+    activity2: activity_t static
+    duration: float
+    dynamic_edge_attr: float save
+end
+
+==>
+
+SourceFile(
+    Edge(
+        TableField(VariableName TypeName FieldAnnotation FieldAnnotation)
+        TableField(VariableName TypeName FieldAnnotation FieldAnnotation)
+        TableField(VariableName TypeName FieldAnnotation)
+        TableField(VariableName TypeName FieldAnnotation)
+        TableField(VariableName TypeName)
+        TableField(VariableName TypeName FieldAnnotation)
+    )
+)

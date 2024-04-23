@@ -1,0 +1,25 @@
+# Enum 1
+
+enum gender_t
+    M, F
+end
+
+enum gender_t M, F end
+
+==>
+
+SourceFile(
+    Enum(
+        TypeName
+        ConstantName
+        ConstantName
+    )
+
+    Enum(
+        TypeName
+        ConstantName
+        ConstantName
+    )
+)
+
+

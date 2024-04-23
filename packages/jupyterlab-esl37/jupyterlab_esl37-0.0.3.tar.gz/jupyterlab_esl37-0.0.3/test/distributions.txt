@@ -1,0 +1,75 @@
+# Discrete Dist 1
+
+distribution
+    discrete fixed1
+        p = 1, v = var1
+    end
+
+    discrete fixed1
+        p = 1, v = 1
+        p = 1, v = 2.0
+        p = 0.5, v = var2
+    end
+end
+
+==>
+
+SourceFile(
+    Distributions(
+        DiscreteDist(
+            FunctionName
+            DiscretePV(Integer Reference)
+        )
+        DiscreteDist(
+            FunctionName
+            DiscretePV(Integer Integer)
+            DiscretePV(Integer Float)
+            DiscretePV(Float Reference)
+        )
+    )
+)
+
+
+# Normal Dist 1
+
+distribution
+    normal normal1
+        mean = 1, std = 0.1, min = 0
+    end
+
+    normal normal2
+        mean = var1, std = var2, min = 0.0, max = 1.0
+    end
+end
+
+==>
+
+SourceFile(
+    Distributions(
+        NormalDist(FunctionName Integer Float Integer)
+        NormalDist(FunctionName Reference Reference Float Float)
+    )
+)
+
+
+# Uniform Dist 1
+
+distribution
+    uniform uniform1
+        low=0.0, high=1.0
+    end
+
+    uniform uniform1
+        low = var1, high = var2
+    end
+end
+
+==>
+
+SourceFile(
+    Distributions(
+        UniformDist(FunctionName Float Float)
+        UniformDist(FunctionName Reference Reference)
+    )
+)
+

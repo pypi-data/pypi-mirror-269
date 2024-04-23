@@ -1,0 +1,46 @@
+# Template 1
+
+def func() -> int:
+    return {{ someconst }}
+end
+
+==>
+
+SourceFile(
+    FunctionDefn(
+        FunctionName
+        TypeName
+        ReturnStatement(TemplateVar)
+    )
+)
+
+# Template 2
+
+def func(a: int) -> int:
+    switch CUR_TICK:
+        {% for tick, value in somedata %}
+        case {{ tick }}:
+            return {{ value }}
+        {% endfor %}
+    end
+end
+
+==>
+
+SourceFile(
+    FunctionDefn(
+        FunctionName
+        VariableName TypeName
+        TypeName
+        SwitchStatement(
+            Reference
+            TemplateBlock
+            CaseSection(
+                TemplateVar
+                ReturnStatement(TemplateVar)
+            )
+            TemplateBlock
+        )
+    )
+)
+

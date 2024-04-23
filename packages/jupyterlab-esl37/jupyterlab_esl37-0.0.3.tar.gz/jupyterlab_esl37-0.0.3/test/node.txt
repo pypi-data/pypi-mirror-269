@@ -1,0 +1,38 @@
+# Node 1
+
+node
+    pid: int static node key
+    age: int static
+    gender: gender_t static
+
+    will_vax: bool save
+    will_mask: bool save
+    is_masking: bool
+end
+
+==>
+
+SourceFile(
+    Node(
+        TableField(VariableName TypeName FieldAnnotation FieldAnnotation)
+        TableField(VariableName TypeName FieldAnnotation)
+        TableField(VariableName TypeName FieldAnnotation)
+        TableField(VariableName TypeName FieldAnnotation)
+        TableField(VariableName TypeName FieldAnnotation)
+        TableField(VariableName TypeName)
+    )
+)
+
+# Node 2
+
+node pid: int node key ; age: int ; gender: gender_t ; end
+
+==>
+
+SourceFile(
+    Node(
+        TableField(VariableName TypeName FieldAnnotation)
+        TableField(VariableName TypeName)
+        TableField(VariableName TypeName)
+    )
+)

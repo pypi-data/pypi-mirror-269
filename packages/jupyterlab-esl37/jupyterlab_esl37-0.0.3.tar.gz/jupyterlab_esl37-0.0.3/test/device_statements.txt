@@ -1,0 +1,132 @@
+# Select 1
+
+__test statement:
+    select(vset1, uniform01) 
+    select(vset1, [v: node -> bool]( v.is_seed ))
+end
+
+==>
+
+SourceFile(
+    TestStatement(
+        SelectStatement(VariableName FunctionName)
+        SelectStatement(
+            VariableName
+            InlineExpressionFunction(
+                VariableName TypeName TypeName Reference
+            )
+        )
+    )
+)
+
+# Sample 1
+
+__test statement:
+    sample(vset2, vset1, 5, ABSOLUTE)
+    sample(vset2, vset1, nsamples / max_samples(), RELATIVE)
+end
+
+==>
+
+SourceFile(
+    TestStatement(
+        SampleStatement(VariableName VariableName Integer ABSOLUTE)
+        SampleStatement(
+            VariableName
+            VariableName
+            BinaryExpression(Reference "/" FunctionCall(FunctionName))
+            RELATIVE
+        )
+    )
+)
+
+# Apply 1
+
+__test statement:
+    apply(vset1, some_function)
+    apply(vset1, [v: node]{ v.c1.state = E ; })
+end
+
+==>
+
+SourceFile(
+    TestStatement(
+        ApplyStatement(VariableName, FunctionName)
+        ApplyStatement(
+            VariableName
+            InlineUpdateFunction(
+                VariableName
+                TypeName
+                UpdateStatement(Reference "=" Reference)
+            )
+        )
+    )
+)
+
+
+# Apply 2
+
+__test statement:
+    apply(vset1, [v: node]{
+        v.c1.state = E
+        v.c2.state = E1
+    })
+
+    apply(vset1, [v: node]{ v.c1.state = E ; v.c2.state = E1 ; })
+end
+
+==>
+
+SourceFile(
+    TestStatement(
+        ApplyStatement(
+            VariableName
+            InlineUpdateFunction(
+                VariableName
+                TypeName
+                UpdateStatement(Reference "=" Reference)
+                UpdateStatement(Reference "=" Reference)
+            )
+        )
+        ApplyStatement(
+            VariableName
+            InlineUpdateFunction(
+                VariableName
+                TypeName
+                UpdateStatement(Reference "=" Reference)
+                UpdateStatement(Reference "=" Reference)
+            )
+        )
+    )
+)
+
+
+# Reduce 1
+
+__test statement:
+    var1 <- reduce(vset1, some_function, +)
+    var2 <- reduce(vset2, [v: node -> float]( v.some_attr ), *)
+end
+
+==>
+
+SourceFile(
+    TestStatement(
+        ReduceStatement(
+            VariableName
+            VariableName
+            FunctionName
+        )
+        ReduceStatement(
+            VariableName
+            VariableName
+            InlineExpressionFunction(
+                VariableName
+                TypeName
+                TypeName
+                Reference
+            )
+        )
+    )
+)
+

@@ -1,0 +1,270 @@
+# Unary Expression 1
+
+__test expression:
+    not a
+end
+
+__test expression:
+    +1
+end
+
+__test expression:
+    -1.0
+end
+
+__test expression:
+    +1.0e-5
+end
+
+__test expression:
+    not True
+end
+
+__test expression:
+    not False
+end
+
+__test expression:
+    + a
+end
+
+==>
+
+SourceFile(
+    TestExpression(
+        UnaryExpression("not", Reference)
+    ),
+    TestExpression(
+        UnaryExpression("+", Integer)
+    ),
+    TestExpression(
+        UnaryExpression("-", Float)
+    ),
+    TestExpression(
+        UnaryExpression("+", Float)
+    ),
+    TestExpression(
+        UnaryExpression("not", Boolean)
+    ),
+    TestExpression(
+        UnaryExpression("not", Boolean)
+    ),
+    TestExpression(
+        UnaryExpression("+", Reference)
+    )
+)
+
+
+# Parenthesized Expression 1
+
+__test expression:
+    (a + b)
+end
+
+__test expression:
+    a * (b)
+end
+
+__test expression:
+    a * (-b)
+end
+
+__test expression:
+    (-a) * (-b)
+end
+
+==>
+
+SourceFile(
+    TestExpression(
+        ParenthesizedExpression(
+            BinaryExpression(
+                Reference,
+                "+",
+                Reference
+            )
+        )
+    ),
+    TestExpression(
+        BinaryExpression(
+            Reference,
+            "*",
+            ParenthesizedExpression(Reference)
+        )
+    ),
+    TestExpression(
+        BinaryExpression(
+            Reference,
+            "*",
+            ParenthesizedExpression(
+                UnaryExpression("-", Reference)
+            )
+        )
+    ),
+    TestExpression(
+        BinaryExpression(
+            ParenthesizedExpression(
+                UnaryExpression("-", Reference)
+            ),
+            "*",
+            ParenthesizedExpression(
+                UnaryExpression("-", Reference)
+            )
+        )
+    )
+
+)
+
+# Binary Expression 1
+
+__test expression:
+    a and b
+end
+
+__test expression:
+    a or b
+end
+
+__test expression:
+    a or not b
+end
+
+__test expression:
+    not a or not b
+end
+
+==>
+
+SourceFile(
+    TestExpression(
+        BinaryExpression(
+            Reference,
+            "and",
+            Reference
+        )
+    ),
+    TestExpression(
+        BinaryExpression(
+            Reference,
+            "or",
+            Reference
+        )
+    ),
+    TestExpression(
+        BinaryExpression(
+            Reference,
+            "or",
+            UnaryExpression("not", Reference)
+        )
+    ),
+    TestExpression(
+        BinaryExpression(
+            UnaryExpression("not", Reference),
+            "or"
+            UnaryExpression("not", Reference)
+        )
+    )
+)
+
+
+# Binary Expression 2
+
+__test expression:
+    a + b
+end
+
+__test expression:
+    a * b
+end
+
+__test expression:
+    a * -b
+end
+
+__test expression:
+    -a * -b
+end
+
+==>
+
+SourceFile(
+    TestExpression(
+        BinaryExpression(
+            Reference,
+            "+",
+            Reference
+        )
+    ),
+    TestExpression(
+        BinaryExpression(
+            Reference,
+            "*",
+            Reference
+        )
+    ),
+    TestExpression(
+        BinaryExpression(
+            Reference,
+            "*",
+            UnaryExpression("-", Reference)
+        )
+    ),
+    TestExpression(
+        BinaryExpression(
+            UnaryExpression("-", Reference),
+            "*"
+            UnaryExpression("-", Reference)
+        )
+    )
+)
+
+
+# Reference 1
+
+__test expression:
+    (a + b.value)
+end
+
+__test expression:
+    a * (b.c1.state)
+end
+
+==>
+
+SourceFile(
+    TestExpression(
+        ParenthesizedExpression(
+            BinaryExpression(
+                Reference,
+                "+",
+                Reference
+            )
+        )
+    ),
+    TestExpression(
+        BinaryExpression(
+            Reference,
+            "*",
+            ParenthesizedExpression(Reference)
+        )
+    )
+)
+
+# Function Call 1
+
+__test expression:
+    a + susceptibility()
+end
+
+==>
+
+SourceFile(
+    TestExpression(
+        BinaryExpression(
+            Reference,
+            "+",
+            FunctionCall( FunctionName )
+        )
+    )
+)
+

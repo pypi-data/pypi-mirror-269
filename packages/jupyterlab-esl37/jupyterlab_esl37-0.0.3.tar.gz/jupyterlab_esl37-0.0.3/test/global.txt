@@ -1,0 +1,35 @@
+# Global 1
+
+config num_ticks: int = 0
+
+config transmissibility: float = 1.0
+
+global some_flag: bool = True
+
+global other_flag: bool = False
+
+==>
+
+SourceFile(
+    Global(
+        VariableName
+        TypeName
+        Integer
+    )
+    Global(
+        VariableName
+        TypeName
+        Float
+    )
+    Global(
+        VariableName
+        TypeName
+        Boolean
+    )
+    Global(
+        VariableName
+        TypeName
+        Boolean
+    )
+)
+

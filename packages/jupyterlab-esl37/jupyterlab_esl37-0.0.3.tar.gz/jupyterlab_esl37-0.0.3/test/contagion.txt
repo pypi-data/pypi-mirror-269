@@ -1,0 +1,95 @@
+# Contagion 1
+
+contagion c1
+    state type c1_state_t
+
+    transition
+        E -> I, p = p_E_I , dwell = fixed1
+        I -> R, dwell = normal1
+    end
+
+    transmission
+        E => S -> E
+        E => V -> E
+        I => S -> E
+        I => V -> E
+    end
+
+    susceptibility c1_susceptibility
+    infectivity c1_infectivity
+    transmissibility c1_transmissibility
+    enabled c1_enabled
+end
+
+==>
+
+SourceFile(
+    Contagion(
+        VariableName
+        ContagionStateType(StateTypeAnnotation TypeName)
+        Transitions(
+            Transition(ConstantName ConstantName Reference Reference)
+            Transition(ConstantName ConstantName Reference)
+        )
+        Transmissions(
+            Transmission(ConstantName ConstantName ConstantName)
+            Transmission(ConstantName ConstantName ConstantName)
+            Transmission(ConstantName ConstantName ConstantName)
+            Transmission(ConstantName ConstantName ConstantName)
+        )
+        ContagionFunction(Reference)
+        ContagionFunction(Reference)
+        ContagionFunction(Reference)
+        ContagionFunction(Reference)
+    )
+)
+
+# Contagion 2
+
+contagion c1
+    transition
+        E -> I, p = [v : node -> float]( v.E_I_p ) , dwell = fixed1
+        I -> R, dwell = [v : node -> float]( normal1() )
+    end
+
+    susceptibility [v: node -> float]( v.susceptibility )
+    infectivity 1.0
+    transmissibility c1_transmissibility
+    enabled c1_enabled
+end
+
+==>
+
+SourceFile(
+    Contagion(
+        VariableName
+        Transitions(
+            Transition(
+                ConstantName
+                ConstantName
+                InlineExpressionFunction(
+                    VariableName TypeName TypeName
+                    Reference
+                )
+                Reference
+            )
+            Transition(
+                ConstantName
+                ConstantName
+                InlineExpressionFunction(
+                    VariableName TypeName TypeName
+                    FunctionCall(FunctionName)
+                )
+            )
+        )
+        ContagionFunction(
+            InlineExpressionFunction(
+                VariableName TypeName TypeName
+                Reference
+            )
+        )
+        ContagionFunction(Float)
+        ContagionFunction(Reference)
+        ContagionFunction(Reference)
+    )
+)
