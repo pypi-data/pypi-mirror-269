@@ -1,0 +1,14 @@
+tests/test_utils.py,sha256=wGXDT39WQqggkSLTOpLck0NegC958Atmm8UetNH9dmA,421
+voodoonet/__init__.py,sha256=cCVd4HCrOVtVo4dGCDOwDPUAm6mdV2UHUyCMDC54CPo,297
+voodoonet/datasets.py,sha256=2fhcVDe3h-BGq60aHfVUa-xBzW4A-y431cUplYEsgac,3773
+voodoonet/loader.py,sha256=dbnBjH13rWx6CuFzaB1w1XONZmf0BB_lSVDIpCEsF7M,18548
+voodoonet/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+voodoonet/torch_model.py,sha256=QT9JcduqDTO-9xi6QHDRbEMvKyj2x4bQKzJ-HXFuHOU,9769
+voodoonet/utils.py,sha256=VkYSGrButHYIKn8CqS2XzTnABt3wBO3jf8DjXoF5f88,7179
+voodoonet/version.py,sha256=50HJ1LT9Iyu-uffCy8_5G1rwR1Skh4rxgpyh9_ILt0w,71
+voodoonet/trained_models/Vnet2_0-dy0.00-fnXX-cuda0.pt,sha256=CCx6gdEXtXXhNYV6XpTpEO_smt0ZSLCHI6FgukTIaV4,11416069
+voodoonet-0.1.9.dist-info/LICENSE,sha256=xZUFlu3U3NuDNFqsiJ8qG5yKhIwgbPvcbQvIOK3yJpw,1071
+voodoonet-0.1.9.dist-info/METADATA,sha256=u94M_yQVU7db8Zs-GzV11CfM-YuDvJ8YzYBYkWMtsOc,5747
+voodoonet-0.1.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+voodoonet-0.1.9.dist-info/top_level.txt,sha256=_R0fx3F937uaYQiLF_pEjAUJ_-3Da2xTu9j5_FGOUhs,16
+voodoonet-0.1.9.dist-info/RECORD,,
