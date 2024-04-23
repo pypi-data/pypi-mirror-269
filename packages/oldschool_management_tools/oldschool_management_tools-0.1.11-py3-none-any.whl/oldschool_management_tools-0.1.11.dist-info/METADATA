@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: oldschool_management_tools
+Version: 0.1.11
+Summary: 
+Author: Alasdair McBride
+Author-email: alasdair.mcbride@gmail.com
+Requires-Python: >=3.10,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: dataclasses-json (>=0.5.14,<0.6.0)
+Requires-Dist: fastparquet (>=2023.7.0,<2024.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: pyarrow (>=16.0.0,<17.0.0)
+Requires-Dist: pywin32 (>=306,<307) ; sys_platform == "win32"
+Requires-Dist: pyyaml (>=6.0,<7.0)
+Requires-Dist: termcolor (>=2.2.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+git remote set-url origin https://git.jetbrains.space/alasdairm/main/oldschool_management_tools.git
+
+OK storing dates in json just plain sucks
+So lets store the data as parquet.  In fact dump the whole calendar to parquet.  Then you can work out what is going on.
+

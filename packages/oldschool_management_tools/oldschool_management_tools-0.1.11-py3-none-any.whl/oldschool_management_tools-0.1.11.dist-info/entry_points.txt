@@ -1,0 +1,3 @@
+[console_scripts]
+tools=oldschool_management_tools.mgmt_tools_cmd:run
+
