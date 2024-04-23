@@ -1,0 +1,5 @@
+[console_scripts]
+TerMPS-cli = TerMPS:main_cli
+
+[gui_scripts]
+TerMPS-gui = TerMPS:main_gui
