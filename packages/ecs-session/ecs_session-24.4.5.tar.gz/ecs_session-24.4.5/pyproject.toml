@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ecs-session"
+version = "24.4.5"
+description = "ECS SSM tool"
+authors = ["Stefan Heitmüller <stefan.heitmueller@gmx.com>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/morph027/ecs-session"
+
+[tool.poetry.dependencies]
+configargparse = "*"
+boto3 = "*"
+shtab = "*"
+simple_term_menu = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+ecs-session = 'ecs_session.cli:run'
