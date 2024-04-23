@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: graphical_models
+Version: 0.1a21
+Author: 
+Author-email: 
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >3.5.0
+License-File: LICENSE.txt
