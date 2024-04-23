@@ -1,0 +1,47 @@
+stages:
+#  - setup
+#  - build
+  - test
+  - deploy
+
+#variables:
+#  ENVIRONMENT: production
+
+before_script:
+  - echo "Setting up environment..."
+
+#build:
+#  stage: build
+#  script:
+#    - echo "Building the application..."
+
+pytest:
+  stage: test
+  image: python:latest
+  before_script:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+  script:
+    - pytest
+  only:
+    - dev
+
+deploy_to_pypi:
+  stage: deploy
+  image: python:latest
+  before_script:
+    - pip install --upgrade pip
+    - pip install --upgrade setuptools
+    - pip install --upgrade build
+    - pip install --upgrade twine
+    - pip install -r requirements.txt
+  script:
+    - python -m build
+    - python -m twine upload --repository pypi --username $TWINE_USERNAME --password $TWINE_PASSWORD dist/*
+  only:
+    - tags
+
+
+
+after_script:
+  - echo "Cleaning up..."
