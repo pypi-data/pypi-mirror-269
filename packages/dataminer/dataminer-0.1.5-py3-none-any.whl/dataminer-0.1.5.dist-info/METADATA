@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dataminer
+Version: 0.1.5
+Summary: A set of data processing tools.
+Home-page: https://gitee.com/javaite_code/dataminer.git
+Author: javaite
+Author-email: javaite@126.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sqlalchemy
+Requires-Dist: oracledb
+
