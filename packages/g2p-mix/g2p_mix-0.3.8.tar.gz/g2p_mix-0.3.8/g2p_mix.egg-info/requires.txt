@@ -1,0 +1,10 @@
+g2p_en
+jieba
+pypinyin
+pypinyin-dict
+wordsegment
+
+[g2pw]
+torch
+modelscope
+pypinyin-g2pw
