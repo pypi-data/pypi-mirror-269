@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-exclude venv *
+recursive-exclude odoo_rpc_helper/__pycache__ *.pyc *.pyo
