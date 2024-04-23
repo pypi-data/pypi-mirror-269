@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "sportswrangler"
+version = "0.1.0"
+description = "Python package for wranglin' sports and sports odds data"
+authors = ["Dejon <dejon.wright@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.7.0"
+requests = "^2.31.0"
+pandas = "^2.2.2"
+polars = "^0.20.21"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

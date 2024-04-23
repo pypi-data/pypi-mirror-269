@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: sportswrangler
+Version: 0.1.0
+Summary: Python package for wranglin' sports and sports odds data
+Author: Dejon
+Author-email: dejon.wright@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: polars (>=0.20.21,<0.21.0)
+Requires-Dist: pydantic (>=2.7.0,<3.0.0)
+Requires-Dist: pytest (>=8.1.1,<9.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+## sportswrangler: Data wrangler for sports data 
+
+
+Data providers supported:
+
+Odds:
+- [the-odds-api](https://the-odds-api.com/)
+
+Sports:
+- [DataFeeds by Rolling Insights](https://rollingwave.notion.site/DataFeeds-by-Rolling-Insights-API-Developer-Documentation-a2570205b6324bd9869c38860b1e5634)
+
+#### Examples
+```python
+
+```
+
+#### Testing
+**Very** basic unit tests. Mainly rely on e2e integration tests which more accurately reflect how library is used.
