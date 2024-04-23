@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "versioning-python"
+version = "0.1.0"
+description = "A command-line interface (CLI) application for managing versioning in a using Python"
+authors = ["Hermann Agossou"]
+readme = "README.md"
+packages = [
+    {include = "pyv"}
+]
+maintainers = [
+    "Hermann Agossou <agossouhermann7@gmail.com>"
+]
+license = "MIT"
+homepage = "https://github.com/Hermann-web/pyv"
+repository = "https://github.com/Hermann-web/pyv"
+documentation = "https://readthedocs.org/projects/pyv/"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+gitdb = "^4.0.10"
+gitpython = "^3.1.32"
+smmap = "^5.0.0"
+
+[tool.poetry.scripts]
+pyv-app = "pyv.core.versioning:main"
+pyv-auto = "pyv.core.autoversioning:main"
+pyv = "pyv.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
