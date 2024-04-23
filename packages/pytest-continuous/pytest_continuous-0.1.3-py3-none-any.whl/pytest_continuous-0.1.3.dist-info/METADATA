@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pytest-continuous
+Version: 0.1.3
+Summary: A pytest plugin to run tests continuously until failure or interruption.
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
