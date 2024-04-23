@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "hj-proj-module"
+version = "0.1.0"
+description = "Packages for HJ Projects"
+authors = ["Hojung Yun <hojung.yun@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/hojungyun/hj-proj-module"
+repository = "https://github.com/hojungyun/hj-proj-module"
+keywords = ["HJ"]
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

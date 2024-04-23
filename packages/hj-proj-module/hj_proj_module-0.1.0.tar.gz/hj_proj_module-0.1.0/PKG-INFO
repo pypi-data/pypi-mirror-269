@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: hj-proj-module
+Version: 0.1.0
+Summary: Packages for HJ Projects
+Home-page: https://github.com/hojungyun/hj-proj-module
+License: MIT
+Keywords: HJ
+Author: Hojung Yun
+Author-email: hojung.yun@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Project-URL: Repository, https://github.com/hojungyun/hj-proj-module
+Description-Content-Type: text/markdown
+
+# Test
