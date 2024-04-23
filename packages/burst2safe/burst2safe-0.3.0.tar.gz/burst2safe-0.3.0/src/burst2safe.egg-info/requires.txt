@@ -1,0 +1,8 @@
+gdal
+numpy
+lxml
+tifffile
+asf_search
+
+[develop]
+pytest
