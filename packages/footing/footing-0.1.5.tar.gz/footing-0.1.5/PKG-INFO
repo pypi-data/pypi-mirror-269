@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: footing
+Version: 0.1.5
+Summary: Keep templated projects in sync with their template
+Home-page: https://github.com/Opus10/footing
+License: BSD-3-Clause
+Author: Opus 10 Engineering
+Requires-Python: >=3.8.0,<4
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: click (>=6.7)
+Requires-Dist: cookiecutter (<2.0.0)
+Requires-Dist: python-gitlab (>=2.10.1)
+Requires-Dist: pyyaml (>=5.1.2,<=5.3.1)
+Requires-Dist: requests (>=2.13.0)
+Requires-Dist: tldextract (>=3.1.2)
+Project-URL: Documentation, https://footing.readthedocs.io
+Project-URL: Repository, https://github.com/Opus10/footing
+Description-Content-Type: text/markdown
+
+# footing
+
+## Compatibility
+
+`footing` is compatible with Python 3.8 - 3.12.
+
+## Documentation
+
+[View the footing docs here](https://footing.readthedocs.io/)
+
+## Installation
+
+Install `footing` with:
+
+    pip3 install footing
+
+## Contributing Guide
+
+For information on setting up footing for development and contributing changes, view [CONTRIBUTING.md](CONTRIBUTING.md).
+
