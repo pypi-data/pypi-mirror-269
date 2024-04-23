@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: showroom
+Version: 0.1
+Summary: Ntt Showroom models and schemas
+Home-page: 
+Author: Ntt Backend Team
+Author-email: lucassilluzio@gmail.com
+License: MIT
+Keywords: package ntt development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: dev
