@@ -1,0 +1,11 @@
+sphinx
+lxml
+python-magic
+
+[tests]
+pytest>=8
+selenium
+pytest-selenium
+pytest-docker
+black
+nox

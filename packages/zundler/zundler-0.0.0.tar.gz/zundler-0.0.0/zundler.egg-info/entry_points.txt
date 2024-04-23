@@ -1,0 +1,5 @@
+[console_scripts]
+zundler = zundler.__main__:main
+
+[sphinx.builders]
+zundler = zundler.sphinxext
