@@ -1,0 +1,15 @@
+setup.py
+brightspace-py-client/__init__.py
+brightspace-py-client/brightspaceclient.py
+brightspace-py-client/src/__init__.py
+brightspace-py-client/src/decorators/__init__.py
+brightspace-py-client/src/decorators/decorators.py
+brightspace-py-client/src/models/Response.py
+brightspace-py-client/src/models/__init__.py
+brightspace-py-client/src/utils/__init__.py
+brightspace-py-client/src/utils/requestswrapper.py
+brightspacepyclient.egg-info/PKG-INFO
+brightspacepyclient.egg-info/SOURCES.txt
+brightspacepyclient.egg-info/dependency_links.txt
+brightspacepyclient.egg-info/requires.txt
+brightspacepyclient.egg-info/top_level.txt
