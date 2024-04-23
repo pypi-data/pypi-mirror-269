@@ -1,0 +1,3 @@
+[console_scripts]
+alviss-render = alviss.cli.render.main:main
+alviss-stubber = alviss.cli.stubber.main:main
