@@ -1,0 +1,84 @@
+[tool.poetry]
+name = "rusttypes"
+version = "0.1.0"
+description = "Extra Datatypes for Python 3"
+authors = ["Hendrik Boeck <hendrikboeck.dev@protonmail.com>"]
+readme = "README.md"
+license = "BSD-3-Clause"
+homepage = "https://hendrikboeck.github.io/rusttypes-p3"
+repository = "https://github.com/hendrikboeck/rusttypes-py3"
+documentation = "https://hendrikboeck.github.io/rusttypes-py3"
+keywords = [
+    "rusttypes",
+    "rust",
+    "result",
+    "option",
+    "types",
+    "python",
+    "datastructures",
+    "datatypes",
+    "collections",
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.dev-dependencies]
+yapf = "^0.31.0"
+toml = "^0.10.2"
+pylint = "^3.1.0"
+pytype = { version = "^2022.1.3", python = "<3.11", markers = "platform_system != 'Windows'" }
+pytest = "^8.1.1"
+#sphinx = "<7.0.0"
+sphinx = "^7.3.7"
+qiskit-sphinx-theme = "^1.16.1"
+
+[[tool.poetry_bumpversion.replacements]]
+file = ["rusttypes/__init__.py"]
+search = "__version__ = \"{current_version}\""
+replace = "__version__ = \"{new_version}\""
+
+[[tool.poetry_bumpversion.replacements]]
+file = ["docs/source/conf.py"]
+search = "release = '{current_version}'"
+replace = "release = '{new_version}'"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytype]
+inputs = ["tests", "rusttypes"]
+disable = []
+
+[tool.pylint.'MESSAGES CONTROL']
+fail-under = 9.0
+disable = "C,R,W1401"
+
+[tool.yapf]
+based_on_style = "google"
+column_limit = 120
+indent_width = 4
+dedent_closing_brackets = true
+coalesce_brackets = true
+blank_line_before_nested_class_or_def = true
+indent_dictionary_value = true
+spaces_around_dict_delimiters = true
+spaces_around_default_or_named_assign = true
+spaces_around_list_delimiters = true
+spaces_before_comment = 3
+split_all_top_level_comma_separated_values = false
+split_before_dict_set_generator = true
+split_before_dot = true
+split_complex_comprehension = true
