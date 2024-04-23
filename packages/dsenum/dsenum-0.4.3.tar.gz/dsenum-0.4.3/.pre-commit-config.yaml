@@ -1,0 +1,48 @@
+# Work around for virtualenv with python=3.10
+# https://github.com/pre-commit/pre-commit/issues/1375
+default_language_version:
+  python: python3
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-yaml
+  # formatter
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+    - id: black
+  # linter
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+    - id: flake8
+      additional_dependencies: [flake8-bugbear]
+      exclude: ^docs/
+  # type annotation
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.5.1
+    hooks:
+    - id: mypy
+      exclude: ^docs/
+  # isort
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        name: isort (python)
+        args: ["--profile", "black"]
+        exclude: ^setup.py
+      - id: isort
+        name: isort (cython)
+        types: [cython]
+      - id: isort
+        name: isort (pyi)
+        types: [pyi]
+  # Upgrade syntax
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.10.1
+    hooks:
+      - id: pyupgrade
