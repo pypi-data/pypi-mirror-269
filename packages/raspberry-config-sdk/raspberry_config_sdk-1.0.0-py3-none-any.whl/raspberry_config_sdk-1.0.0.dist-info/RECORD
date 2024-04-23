@@ -1,0 +1,10 @@
+raspberry_config_sdk/BootConfig.py,sha256=iBFiF9yPSduqoOyhCHIAVCtmgFrCl_WBwY8OT4DLlIQ,4332
+raspberry_config_sdk/__init__.py,sha256=YHAiYrNN-hTCkhwB2SJtDer9PlYz9AUNWo-EAUjpbco,374
+raspberry_config_sdk/utils.py,sha256=Ugsq1FEv9f8Oxg7z3ZZSZTKyOBgqpIyq7ZZVzHJ-XZs,455
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_boot_config.py,sha256=wIxs_2ihbWdG6MoNA2Ek7Mun5AEo_uzJ--XeIGXtvXU,159
+raspberry_config_sdk-1.0.0.dist-info/LICENSE,sha256=FtvL9u2_8JcgBQpGCOShxu4xMoP4OvffhqcmYM0ax2Y,1064
+raspberry_config_sdk-1.0.0.dist-info/METADATA,sha256=0XIkrM6VNn8-4LbOJz9AWFWXAq5KqNc5wDmnYhvrvTE,2181
+raspberry_config_sdk-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+raspberry_config_sdk-1.0.0.dist-info/top_level.txt,sha256=a2RcUyL286J0GKD00asOOTKjzgRSwN4bIkRLMhM3AtE,26
+raspberry_config_sdk-1.0.0.dist-info/RECORD,,
