@@ -1,0 +1,14 @@
+vscode_cli_helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vscode_cli_helpers/open_file/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vscode_cli_helpers/open_file/config.py,sha256=5AVdrGatxeSm01hjU6p7NqxflulE1B0niibPptWvVhQ,6104
+vscode_cli_helpers/open_file/data/default_config.ini,sha256=sEEZQNqhZgpJ2MPYuo4q2LRz4KN0xQ0sKIyBB93rdic,771
+vscode_cli_helpers/open_file/data/templates/C++.txt,sha256=oUzcdc2wB32IYbyywvtjuHSzhH54P2ocmeZqcD4AI40,83
+vscode_cli_helpers/open_file/data/templates/Python.txt,sha256=kb6shhOrkdMNwm-vSgQwTpxJLr0fSgSMbGhXQ1-wVHE,166
+vscode_cli_helpers/open_file/exceptions.py,sha256=eUoC4TlYLF4q1GWEGCE-8JxoSUuvfkVJfEOfbhFebho,358
+vscode_cli_helpers/open_file/open_file.py,sha256=qy5JmvTU1DNZGFqCY-Df-b1Tp-SEHJhCbbHHxoHtWg4,3965
+vscode_cli_helpers/open_file/script.py,sha256=ZzLmhLGw7O17TFxyTQpsBit_fFMnPsLIHrgk01StD3g,5385
+vscode_cli_helpers_open_file-0.1.12.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+vscode_cli_helpers_open_file-0.1.12.dist-info/METADATA,sha256=2dZA_ibpgj6SXe-Y8c7RQ0FO6fRQ03nXz7Dog_-Yl0o,916
+vscode_cli_helpers_open_file-0.1.12.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+vscode_cli_helpers_open_file-0.1.12.dist-info/entry_points.txt,sha256=Vn9-JU4VPgvaezKPe2d4PMSXCxT8SKfMJcTsNCG4jps,89
+vscode_cli_helpers_open_file-0.1.12.dist-info/RECORD,,

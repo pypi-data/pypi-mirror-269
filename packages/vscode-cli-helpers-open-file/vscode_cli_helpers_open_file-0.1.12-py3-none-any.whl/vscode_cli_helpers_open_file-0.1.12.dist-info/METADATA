@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: vscode-cli-helpers-open-file
+Version: 0.1.12
+Summary: Open files (with templates) in VSCode from the command line
+Author: Håkon Hægland
+Author-email: hakon.hagland@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: configparser (>=6.0.0,<7.0.0)
+Requires-Dist: platformdirs (>=3.0)
+Description-Content-Type: text/markdown
+
+## vscode-cli-helpers-open-file
+
+- Command line script to open a file in VS Code
+
+## Documentation
+
+See [hakonhagland.github.io/vscode-cli-helpers-open-file/](https://hakonhagland.github.io/vscode-cli-helpers-open-file/)
+
+## PyPI
+
+See [vscode-cli-helper-open-file](https://pypi.org/project/vscode-cli-helpers-open-file/)
+
