@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "opencf"
+packages = [
+    {include = "opencf"}
+]
+version = "0.3.0"
+description = "A collection of Python scripts for file conversion tasks, built on top of the opencf-core framework."
+authors = ["Hermann Agossou <agossouhermann7@gmail.com>"]
+readme = "README.md"
+maintainers = [
+    "Hermann Agossou <agossouhermann7@gmail.com>"
+]
+license = "MIT"
+homepage = "https://github.com/Hermann-web/opencf"
+repository = "https://github.com/Hermann-web/opencf"
+documentation = "https://opencf.readthedocs.io"
+keywords = ["file conversion", "data processing", "file formats"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+opencf-core = "^0.2.0"
+numpy = "^1.24.0"
+opencv-python = "^4.8.1.78"
+pillow = "^10.3.0"
+pypdf2 = "^3.0.1"
+pandas = "^2.0.0"
+imageio = "^2.30.0"
+pdf2docx = "^0.5.8"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+isort = "^5.13.2"
+pydeps = "^1.10.0"
+flake8 = "^7.0.0"
+
+[tool.poetry.group.buildthedocs.dependencies]
+sphinx = "^7.0.0"
+sphinx-rtd-theme = "^2.0.0"
+m2r2 = "^0.3.3.post2"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 88
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+opencf = "opencf.app:main"
