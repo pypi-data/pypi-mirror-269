@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: imr
+Version: 0.0.1rc3
+Summary: Inteligent Model Registry
+Home-page: https://github.com/eccenca/imr
+License: Apache-2.0
+Author: eccenca GmbH
+Author-email: edgard.marx@eccenca.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+
+# imr (Inteligent Model Registry)
+
+This is a command-line interface and library for managing inteligent models.
+
+You can install the [imr](https://github.com/eccenca/imr) command-line and library
+with pip as following:
+
+```
+pip install imr
+```
+
+
