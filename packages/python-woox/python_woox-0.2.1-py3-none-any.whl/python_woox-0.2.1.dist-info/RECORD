@@ -1,0 +1,13 @@
+woox/__init__.py,sha256=aFsNgiCHtuqQviiEPbKTiyWWuzmZsSPA8FMrBKV8kpc,249
+woox/authentication.py,sha256=ScwjEBMOa7affZloRt6vZvyUJWizCPgZFB1fa5jg5bs,204
+woox/client.py,sha256=gaEgdPBG1Gj8T-Lssm8vi8L7FSIAmFUpt-I7qdS2BdQ,10283
+woox/enums.py,sha256=fbj56dLjBlXOw7rXH31sJno3dYPkE4s74EtQDri_poc,782
+woox/exceptions.py,sha256=rcBf2san6CLntSzWEclLi4Up81POR8W3mSnfmHwkmgI,499
+woox/streams.py,sha256=1Kj22ET1rdTcU_R_1WvU3opsG1WS4XmbSC-UscrTUww,11124
+woox/threaded_stream.py,sha256=pgKH7AvNoYLPEUhM34UWTJVCj4L6qMz0cNGoQZ5LUQU,2380
+python_woox-0.2.1.dist-info/LICENSE,sha256=uRpWc3fEJDsEaysGniRdCj7Y0Iwv7mcKbLgHdsiOog8,1091
+python_woox-0.2.1.dist-info/METADATA,sha256=cZjTIYs1Dg57yfzWlHTNhrVhmFzyxJ6Fjh9yK4q21Lw,444
+python_woox-0.2.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+python_woox-0.2.1.dist-info/top_level.txt,sha256=pYRBEFqpRXVqzeVHlLYDKCyCipuGRMqmho2uoBtr_No,5
+python_woox-0.2.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+python_woox-0.2.1.dist-info/RECORD,,
