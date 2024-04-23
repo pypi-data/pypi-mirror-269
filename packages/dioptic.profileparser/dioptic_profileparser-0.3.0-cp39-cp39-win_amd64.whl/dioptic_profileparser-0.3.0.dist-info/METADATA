@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dioptic.profileparser
+Version: 0.3.0
+Summary: Parser library for ARGOS declarative profiles
+Author-Email: =?utf-8?q?Peter_W=C3=BCrtz?= <pwuertz@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Project-URL: Homepage, https://github.com/dioptic/profileparser
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Dioptic declarative profile parser
