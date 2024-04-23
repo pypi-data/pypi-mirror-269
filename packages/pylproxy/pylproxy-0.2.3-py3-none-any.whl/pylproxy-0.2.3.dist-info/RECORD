@@ -1,0 +1,10 @@
+pylproxy/__init__.py,sha256=FuAPsXTjFQv-gt87QFVhU_Xiq27dsm-HEzeX63g-xlo,8441
+pylproxy/api.py,sha256=xgmvFzp6XVLgGc0NT9tQ5F_k0GUlrUBIxgLXUibuBto,1691
+pylproxy/nginx/docker-compose.yml,sha256=e922OVunxsHmOmCpCGdYqTCzhou-2uATMMz6ir74iiI,474
+pylproxy/nginx/Dockerfile,sha256=RXbo5FmSq0VL2ODhF3gw1_KelkfOjOuAuvCmwEE61kc,58
+pylproxy/nginx/nginx.conf,sha256=pYU3mU1D9eIBEFhDzN1ubV7JfLpkH5O53Rz76WfCGe4,1040
+pylproxy/nginx/node_env.env,sha256=sfh4B2eY_MZvM2RWlL4kQ_E9SUlbVYvJLMJuhB7PuDg,114
+pylproxy/nginx/yagna/Dockerfile,sha256=gxq9NNr9IJ7RAJl-Wt6HfSxuBX3O6VywbTu2NmYtqWo,892
+pylproxy-0.2.3.dist-info/METADATA,sha256=HDDJszgTL17XkiwYkAUxqbYMdhCdT43eO1wCTsPRlF0,421
+pylproxy-0.2.3.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+pylproxy-0.2.3.dist-info/RECORD,,

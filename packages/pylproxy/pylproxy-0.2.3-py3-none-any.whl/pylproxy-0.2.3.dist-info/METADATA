@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pylproxy
+Version: 0.2.3
+Summary: Proxy for use in Goth instead of mitmproxy
+Author: scx1332
+Author-email: sieciech.czajka@golem.network
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiohttp (>=3.9,<4.0)
+Description-Content-Type: text/markdown
+
+
