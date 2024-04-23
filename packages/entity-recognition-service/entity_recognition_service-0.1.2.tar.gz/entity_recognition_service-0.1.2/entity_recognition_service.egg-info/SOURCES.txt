@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+entity_recognition_service/__init__.py
+entity_recognition_service/entity_recognition.py
+entity_recognition_service/models.py
+entity_recognition_service/utils.py
+entity_recognition_service.egg-info/PKG-INFO
+entity_recognition_service.egg-info/SOURCES.txt
+entity_recognition_service.egg-info/dependency_links.txt
+entity_recognition_service.egg-info/requires.txt
+entity_recognition_service.egg-info/top_level.txt
+entity_recognition_service/data/tech_entities.json
+tests/test_entity_extraction.py
+tests/test_recommendation_generation.py
