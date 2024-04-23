@@ -1,0 +1,55 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/postgres
+{
+	"name": "Python 3 & PostgreSQL",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// This can be used to network with other containers or the host.
+	// "forwardPorts": [5000, 5432],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip install --user -r requirements.txt",
+	// Configure tool-specific properties.
+	// "customizations": {},
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"editorconfig.editorconfig",
+				"github.vscode-pull-request-github",
+				"ms-azuretools.vscode-docker",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.pylint",
+				"ms-python.isort",
+				"ms-python.flake8",
+				"ms-python.black-formatter",
+				"ms-vsliveshare.vsliveshare",
+				"ryanluker.vscode-coverage-gutters",
+				"bungcip.better-toml",
+				"GitHub.copilot",
+				"mtxr.sqltools-driver-pg",
+				"mtxr.sqltools"
+			],
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"black-formatter.path": [
+					"/usr/local/py-utils/bin/black"
+				],
+				"pylint.path": [
+					"/usr/local/py-utils/bin/pylint"
+				],
+				"flake8.path": [
+					"/usr/local/py-utils/bin/flake8"
+				],
+				"isort.path": [
+					"/usr/local/py-utils/bin/isort"
+				]
+			}
+		}
+	}
+}
