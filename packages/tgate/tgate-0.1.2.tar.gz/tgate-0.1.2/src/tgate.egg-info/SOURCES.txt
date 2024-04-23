@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+src/tgate/PixArt_Alpha.py
+src/tgate/SD.py
+src/tgate/SDXL.py
+src/tgate/SDXL_DeepCache.py
+src/tgate/SD_DeepCache.py
+src/tgate/__init__.py
+src/tgate/tgate_utils.py
+src/tgate.egg-info/PKG-INFO
+src/tgate.egg-info/SOURCES.txt
+src/tgate.egg-info/dependency_links.txt
+src/tgate.egg-info/requires.txt
+src/tgate.egg-info/top_level.txt
