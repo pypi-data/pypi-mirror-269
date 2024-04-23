@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mima-engine
+Version: 0.1.1
+Summary: A game engine based on pygame.
+Author-email: Stephan Balduin <stephan.balduin@mailbox.org>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: pygame
+Requires-Dist: pygame-ce; extra == "pygame"
+
+# Mima Engine
+
+A game engine based on pygame.
