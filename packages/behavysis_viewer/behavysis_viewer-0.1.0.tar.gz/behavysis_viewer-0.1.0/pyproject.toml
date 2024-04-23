@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "behavysis_viewer"
+version = "0.1.0"
+description = "A semi-automated behaviour verification, processing and analysis package."
+authors = ["BowenLab"]
+license = "LGPL-3.0-or-later"
+readme = "README.md"
+packages = [{ include = "behavysis_viewer" }]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+PySide6 = "^6.7.0"
+pyqtgraph = "^0.13.6"
+behavysis_core = "^0.1.0"
+# behavysis_core = { path = "../behavysis_core", develop = true }
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.0"
+pytest = "^8.1.1"
+mkdocs-material = "^9.5.18"
+mkdocstrings-python = "^1.9.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: behavysis_viewer
+Version: 0.1.0
+Summary: A semi-automated behaviour verification, processing and analysis package.
+License: LGPL-3.0-or-later
+Author: BowenLab
+Requires-Python: >=3.9,<3.13
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: PySide6 (>=6.7.0,<7.0.0)
+Requires-Dist: behavysis_core (>=0.1.0,<0.2.0)
+Requires-Dist: pyqtgraph (>=0.13.6,<0.14.0)
+Description-Content-Type: text/markdown
+
+# behavysis_viewer
+
+Semi-automated scoring animal behaviour. Behaviour is first predicted by a classifier and then the user verifies &amp; further scores this behaviour.
+
+```
+pyside6-uic behavysis_viewer/ui/main_ui.ui -o behavysis_viewer/ui/main_ui.py
+
+pyside6-uic behavysis_viewer/ui/settings_ui.ui -o behavysis_viewer/ui/settings_ui.py
+```
+
+## References
+
+Mathis, A., Mamidanna, P., Cury, K. M., Abe, T., Murthy, V. N., Mathis, M. W., & Bethge, M. (2018, August 20). DeepLabCut: markerless pose estimation of user-defined body parts with deep learning. Nature Neuroscience. Springer Science and Business Media LLC. http://doi.org/10.1038/s41593-018-0209-y
+
+Nath, T., Mathis, A., Chen, A. C., Patel, A., Bethge, M., & Mathis, M. W. (2019, June 21). Using DeepLabCut for 3D markerless pose estimation across species and behaviors. Nature Protocols. Springer Science and Business Media LLC. http://doi.org/10.1038/s41596-019-0176-0
+
+Lauer, J., Zhou, M., Ye, S., Menegas, W., Schneider, S., Nath, T., … Mathis, A. (2022, April). Multi-animal pose estimation, identification and tracking with DeepLabCut. Nature Methods. Springer Science and Business Media LLC. http://doi.org/10.1038/s41592-022-01443-0
+
