@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: streamlit-iframe-autoresize
+Version: 0.0.1
+Home-page: https://github.com/pragmatic-streamlit/streamlit-iframe-autoresize
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+Requires-Dist: streamlit
+
+# Streamlit Iframe Auto Resize
+
+
+Streamlit Iframe Auto Resize automatically resize an iframe to fit its content.
+
+## Installation
+
+```bash
+pip install streamlit-iframe-auto-resize
+```
+
+## Usage
+
+
+```python
+import streamlit as st
+
+st.text_area("This is a text area (parent)")
+st.markdown(
+    """
+    <style>
+        header[data-testid="stHeader"] {
+            display: None;
+        }
+        footer {display: none;}
+    </style>""",
+    unsafe_allow_html=True,
+)
+
+for i in range(100):
+    st.text_area("This is a text area", key=f'{i}')
+```
