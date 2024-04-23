@@ -1,0 +1,9 @@
+unsupervised_bias_detection/__init__.py,sha256=LWix7ayt3QKkn5URGJyQV9bF-xbkDy5JfduMPYHuxos,34
+unsupervised_bias_detection/clustering/__init__.py,sha256=_aa-oiBjXINbErcR34ldpUAiouL1Ix9X4a9eCAjumPw,292
+unsupervised_bias_detection/clustering/_bahc.py,sha256=wgKb0a_R_JXhRGBxiijG81iKO4a5iVuRiI67DxPx9lg,3729
+unsupervised_bias_detection/clustering/_kmeans.py,sha256=ibv23SZfdBPHgmt1GdYJRFQlfdjmRFuN_m5TI1zpen0,2146
+unsupervised_bias_detection/clustering/_kmodes.py,sha256=z3rhHU1F_b7Y0udg8DSfI8b69LbTyVlMkfGrTmZGpKY,1998
+unsupervised_bias_detection-0.1.0.dist-info/LICENSE,sha256=CdIlZc0AgAl0BL7Dvdy8zRqdqQQsNmL7mc0dbpDVG7Y,1076
+unsupervised_bias_detection-0.1.0.dist-info/METADATA,sha256=mJ1vkqpOGLkWjLGoH30T8FXMK8BpG-PQq8UCEbf9aic,14065
+unsupervised_bias_detection-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+unsupervised_bias_detection-0.1.0.dist-info/RECORD,,
