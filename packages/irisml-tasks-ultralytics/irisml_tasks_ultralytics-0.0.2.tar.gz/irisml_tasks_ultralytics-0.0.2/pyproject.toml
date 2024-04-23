@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "irisml-tasks-ultralytics"
+version = "0.0.2"
+dependencies = [
+  "irisml",
+  "ultralytics-nogui<9"
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["irisml.*"]
+
+[tool.ruff]
+line-length = 200
+exclude = [".eggs", ".git", ".venv", ".vscode"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "UP", "TID252"]

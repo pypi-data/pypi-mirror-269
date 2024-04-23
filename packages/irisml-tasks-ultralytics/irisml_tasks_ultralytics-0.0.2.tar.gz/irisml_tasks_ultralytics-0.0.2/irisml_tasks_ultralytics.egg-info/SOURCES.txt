@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+irisml/tasks/create_ultralytics_train_transform.py
+irisml/tasks/create_ultralytics_yolov9_detection_model.py
+irisml_tasks_ultralytics.egg-info/PKG-INFO
+irisml_tasks_ultralytics.egg-info/SOURCES.txt
+irisml_tasks_ultralytics.egg-info/dependency_links.txt
+irisml_tasks_ultralytics.egg-info/requires.txt
+irisml_tasks_ultralytics.egg-info/top_level.txt
+test/test_create_ultralytics_train_transform.py
+test/test_create_ultralytics_yolov9_detection_model.py
