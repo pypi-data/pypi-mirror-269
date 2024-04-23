@@ -1,0 +1,17 @@
+pytest
+pytest-cov
+requests
+setuptools
+numpy
+scipy
+matplotlib
+moviepy
+pyhank
+einops
+tqdm
+pandas
+opencv-python
+gdspy
+mat73
+omegaconf
+natsort
