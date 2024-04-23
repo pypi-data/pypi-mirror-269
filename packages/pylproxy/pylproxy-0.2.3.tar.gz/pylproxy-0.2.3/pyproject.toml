@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "pylproxy"
+version = "0.2.3"
+description = "Proxy for use in Goth instead of mitmproxy"
+authors = ["scx1332 <sieciech.czajka@golem.network>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+aiohttp = "^3.9"
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+black = "^24.4"
+flake8 = "^7.0"
+poethepoet = "^0.25"
+
+[tool.poe.tasks]
+checks_codestyle = { sequence = [
+    "_checks_codestyle_flake8",
+    "_checks_codestyle_black",
+], help = "Run only code style checks" }
+_checks_codestyle_flake8 = "flake8 --max-line-length 100"
+_checks_codestyle_black = "black --check --diff ."
+test = "pytest -svx ."
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
