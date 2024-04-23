@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: JayttleProcess
+Version: 0.2.1
+Summary: modifty time:2024-04-22 21:00
+ en: Data Process;
+ zh_CN:数据处理的方法
+Home-page: UNKNOWN
+Author: Jayttle
+Author-email: 294448068@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyautogui
+Requires-Dist: matplotlib
+Requires-Dist: statsmodels
+Requires-Dist: scikit-learn
+Requires-Dist: EMD-signal
+Requires-Dist: PyWavelets
+Requires-Dist: pymysql
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+
+UNKNOWN
+
+
