@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Generated from README.md by `gendoc` for git_smudge -->
+<html>
+<head>
+  <title>git_smudge</title>
+  <style type="text/css">
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3 {
+      background-color: #f2f2f2;
+      font-weight: bold;
+      border-bottom: 1px solid #eee;
+    }
+    h2, h3 {
+      margin-top: 1.5em;
+    }
+    pre {
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 5px;
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 3px 3px 3px 3px;
+    }
+    p > code {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 3px 3px 3px 3px;
+    }
+    blockquote {
+      background-color: #eee;
+      border-left: 5px solid #aaa;
+      padding: .25rem 1rem;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+  <body>
+<h1>git-smudge</h1>
+<p>A powerful filter driver for Git which can automatically apply local changes to the
+working tree of a repository.</p>
+<h2>Installing</h2>
+<p>Run</p>
+<pre><code>$ pip3 install git-smudge
+</code></pre>
+<p>If you're using <code>bash</code>, run:</p>
+<pre><code>$ git smudge comp
+</code></pre>
+<p>This will set up tab completion for <code>git smudge</code></p>
+<h2>Setting up a filter</h2>
+<p>The first step is to run:</p>
+<pre><code>$ git smudge setup
+</code></pre>
+<p>This will do three things:</p>
+<ul>
+<li>
+<p>It will create <code>.git/git-smudge.toml</code>, and pre-populate it with comments explaining how
+to define filters. For more information on the TOML format, see <a href="https://toml.io/en/v1.0.0">the TOML site</a>.</p>
+</li>
+<li>
+<p>It will run <code>git config filter.git-smudge 'python3 -m git_smudge.runfilter'</code>. This tells
+<code>git</code> how to run our filters.</p>
+</li>
+<li>
+<p>It will add <code>* filter=git-smudge</code> to <code>.git/info/attributes</code> which tells <code>git</code> to have
+<code>git-smudge</code> handle filtering for all files. Only files which match filters in
+<code>git-smudge.toml</code> are actually updated, however.</p>
+</li>
+</ul>
+<p>You can run <code>git smudge edit</code> to edit the configuration file, or you can just open it in
+your normal editor.</p>
+<p>Once you have your configuration set up, run:</p>
+<pre><code>$ git smudge apply
+</code></pre>
+<p>This will read <code>git-smudge.toml</code> and apply any filters defined there to the files in your
+working tree. If you had already defined filters previously, it will reverse those changes
+(using a saved copy of the old configuration). If there are any errors, <code>git smudge apply</code>
+will try to undo any changes and get back to the previous working state.</p>
+<p>If you want to undo all changes, as if a blank configuration were applied, run:</p>
+<pre><code>$ git smudge clean
+</code></pre>
+<p>To see what changes have been applied to files, run:</p>
+<pre><code>$ git smudge diff
+</code></pre>
+<p>If you change the configuration and you want to preview what changes will be applied, run:</p>
+<pre><code>$ git smudge diff --preview
+</code></pre>
+<h2>Plugins</h2>
+<p><code>git smudge</code> supports defining custom filters by specifying a path to a Python
+script. This script should subclass <code>GitFilter</code> (which is pre-defined when executing the
+script). A class which is named <code>XYZFilter</code> would define a filter named <code>XYZ</code> or <code>xyz</code>
+(filter names are case-insensitive).</p>
+<p>The filter class has two methods, <code>clean</code> and <code>smudge</code>. Both methods take a single
+parameter, <code>content</code>, which is used to manage the content of the file. This object has an
+attribute <code>path</code>, which is an instance of <code>pathlib.Path</code>, and methods <code>get_text()</code>,
+<code>set_text()</code>, <code>get_binary()</code>, and <code>set_binary()</code>. Most filters will be working with text,
+but the data can be converted to and from binary as needed.</p>
+<p>When running <code>git smudge apply</code>, the contents of the plugin script is saved to the working
+configuration so that the exact code can be run to reverse those changes even if the code
+changes.</p>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+argcomplete>=2.0.0
+ktpanda-modules>=1.0.33
+
+[:python_version < "3.11"]
+tomli>=2.0.0
