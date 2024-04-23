@@ -1,0 +1,2 @@
+[console_scripts]
+blossom = blossom.blossom_exe:cli
