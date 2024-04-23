@@ -1,0 +1,55 @@
+from fastapi import APIRouter, Depends
+from libs.security.security import Security
+from modules.user.models import UserModel
+
+from .repository import ${module_name_capital}Repository
+from .schemas import Create${module_name_capital}Schema, ${module_name_capital}Schema, ${module_name_capital}UpdateSchema
+
+router = APIRouter(prefix='/${module_name}', tags=['${module_name}'])
+security = Security()
+repository: ${module_name_capital}Repository = ${module_name_capital}Repository()
+
+
+@router.get('/', response_model=list[${module_name_capital}Schema])
+def get_all_${module_name}s(_: UserModel = Depends(security.get_current_user)):
+    return repository.get_all_${module_name}s()
+
+
+@router.post('/', response_model=${module_name_capital}Schema)
+def create_${module_name}(
+    data: Create${module_name_capital}Schema,
+    current_user: UserModel = Depends(security.get_current_user),
+):
+    return repository.new_${module_name}(
+        data,
+        current_user.id,
+    )
+
+
+@router.get('/{${module_name}_id}', response_model=${module_name_capital}Schema)
+def get_${module_name}_by_id(
+    ${module_name}_id: int, current_user: UserModel = Depends(security.get_current_user)
+):
+    return repository.get_${module_name}_by_id(${module_name}_id)
+
+
+@router.patch('/', response_model=${module_name_capital}Schema)
+def update_${module_name}(
+    data: ${module_name_capital}UpdateSchema,
+    current_user: UserModel = Depends(security.get_current_user),
+):
+    return repository.update_${module_name}(
+        data.id,
+        data,
+        current_user.id,
+    )
+
+
+@router.delete('/{${module_name}_id}', response_model=${module_name_capital}Schema)
+def delete_${module_name}(
+    ${module_name}_id: int, current_user: UserModel = Depends(security.get_current_user)
+):
+    return repository.delete_${module_name}(
+        ${module_name}_id,
+        current_user.id,
+    )
