@@ -1,0 +1,26 @@
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python>=3.10
+  - pip
+  - montreal-forced-aligner
+  - kalpy =*=cpu*
+  - pyside6
+  - pyqtgraph
+  - pytorch
+  - torchaudio
+  - setuptools_scm
+  - librosa
+  - scipy
+  - pytest
+  - pytest-qt
+  - mock
+  - coverage
+  - coveralls
+  - interrogate
+  - pip:
+      - build
+      - twine
+      - speechbrain
