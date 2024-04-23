@@ -1,0 +1,16 @@
+pythonic_cache/__init__.py,sha256=T9fLgCLgZmrCh2d05tP8uj0rh_L-Y4-vLTTsAwThsw4,208
+pythonic_cache/client.py,sha256=K4zbe-HM50ffQspLNE7AdU3BBbwPK1YHNONb1Zh9KSc,1495
+pythonic_cache/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pythonic_cache/integrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pythonic_cache/integrations/fastapi.py,sha256=Tg8Wq5CqvqJJPGRN38-DReHCUBaZ_XMecIFgiMm3RSI,2151
+pythonic_cache/integrations/flask.py,sha256=xPe06htaDnUWy1Hr6Gzoxx9sbUgwiwgdMPMPVJbiOmk,1500
+pythonic_cache/storage/__init__.py,sha256=KvlF__4WLVpH30Cg4lrxVZIrqBFMimEzcBr3Vk1YJjk,102
+pythonic_cache/storage/base.py,sha256=_mM0B1Lwd3i0f-nLl7yAbiSzKJB-jZ5Cur0HnvuiMQg,1517
+pythonic_cache/storage/memory.py,sha256=UyVZezLRRNEUqq0Meu_LwIklxUubqIrVsli0PdGGMEw,2493
+pythonic_cache/storage/redis.py,sha256=tpcO--RJFNJMBaJUzfci89LxnKpL--f9m-Ux6DbCUzg,2126
+pythonic_cache/storage/utils.py,sha256=Ko5J1Ef5EXfj-vbyDb-xm3PxYberZ92VgxXYV6SRlik,209
+pythonic_cache-0.4.0.dist-info/LICENSE.md,sha256=Uhbdg3wbEvZXqhzwgjZEv5fwrEcQvNGPSYQEONQexHQ,1057
+pythonic_cache-0.4.0.dist-info/METADATA,sha256=BQaCyUbNrcndrg_XFAOVdVtG3qmlo_mPeSfTPXhqYnE,5898
+pythonic_cache-0.4.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pythonic_cache-0.4.0.dist-info/top_level.txt,sha256=RF8-RzCHySj75Bb4q-vlcqPPhNnRL1KnPpd91X6TOCM,15
+pythonic_cache-0.4.0.dist-info/RECORD,,
