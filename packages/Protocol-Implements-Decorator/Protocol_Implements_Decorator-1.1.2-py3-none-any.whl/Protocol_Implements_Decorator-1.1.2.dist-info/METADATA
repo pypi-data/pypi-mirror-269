@@ -1,0 +1,157 @@
+Metadata-Version: 2.1
+Name: Protocol-Implements-Decorator
+Version: 1.1.2
+Summary: Adds the 'implements' decorator to make using protocols easier and more explicit
+Author: R.Broderick
+License: BSD 3-Clause License
+        
+        Copyright (c) 2021, rbroderi
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing-extensions ; python_version < "3.12"
+Provides-Extra: dev
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: dapperdata ; extra == 'dev'
+Requires-Dist: glom ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-pretty ; extra == 'dev'
+Requires-Dist: ruamel.yaml ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: toml-sort ; extra == 'dev'
+Requires-Dist: uv ; extra == 'dev'
+Requires-Dist: validate-pyproject ; extra == 'dev'
+Requires-Dist: packaging ; extra == 'dev'
+Requires-Dist: snakeviz ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: tox-pyenv-redux ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: perflint ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: Sphinx ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: sphinx-rtd-size ; extra == 'docs'
+Requires-Dist: autodocsumm ; extra == 'docs'
+Requires-Dist: sphinx-pyproject ; extra == 'docs'
+Provides-Extra: optional
+
+# protocol_implements_decorator
+
+Adds the "implements" decorator to make using protocols easier and more explicit
+
+
+## Description
+
+Adds the @implements decorator.
+This will cause a runtime NotImplementedError if the class does not implement all parts of the protocol.
+Also adds the get_protocols_implemented method to the class providing a list of all protocols the decorated class adhears to.
+
+Usage:
+---
+Two example protocols
+
+```python
+class Printable(Protocol):
+  """A test protocol that requires a to_string method."""
+
+  def to_string(self) -> str:
+    return ""
+
+class Otherable(Protocol):
+  """Another example."""
+
+  def other(self) -> str:
+    return "
+```
+
+---
+Example of one protocol
+
+```python
+@implements(Printable)
+class Example2:
+
+  def to_string(self) -> str:
+    return str(self)
+```
+
+For multiple protocols you can chain dectorator or include in a list in one dectorator
+```python
+@implements(Printable)
+@implements(Otherable)
+class Example1:
+  """Test class that uses multiple protocols."""
+
+  def to_string(self) -> str:
+    return str(self)
+
+  def other(self) -> str:
+    return str(self)
+
+
+@implements(Printable, Otherable)
+class Example2:
+  """Test class that uses multiple protocols."""
+
+  def to_string(self) -> str:
+    return str(self)
+
+  def other(self) -> str:
+    return str(self)
+```
+
+Errors
+---
+This will cause a runtime error as it doesn't implement the Printable protocol
+
+```python
+@implements(Printable, Otherable)
+class Example2:
+  """Test class that uses multiple protocols."""
+
+  def other(self) -> str:
+    return str(self)
+```
+```text
+NotImplementedError: test.<locals>.Printable requires implentation of ['to_string']
+```
+
+
+
+<!-- pyscaffold-notes -->
+
+## Note
+
+This project has been set up using PyScaffold 4.1.1. For details and usage
+information on PyScaffold see https://pyscaffold.org/.
