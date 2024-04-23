@@ -1,0 +1,17 @@
+exemplify/__init__.py,sha256=fCISgZVAe5ZSnqt3gYaFJ_oSfkDJpMWo4PDGWVnKD9A,37
+exemplify/cli.py,sha256=xJAGvMc23RJY721II2lfx-SAzQAQzGPD9SxhSED4SV8,773
+exemplify/main.py,sha256=zlusRxOsi2qpa72PC-KdDtLiDHrnwbstFScsmaWCum0,1363
+exemplify/steps/base.py,sha256=OvhOapSiyK29MO4TCo3WZeK0j3Hkc8L5JJjMUAyeoQQ,519
+exemplify/steps/command.py,sha256=I7th76EbuZ8FwOSZeSZwND-J8B9vNa9aumg8A5H0hC8,2623
+exemplify/steps/distro.py,sha256=PLOZFXApaxytAVJYkv6ajb4RbfRxcSMRfmO8QstBIrI,1926
+exemplify/steps/link.py,sha256=1o-nPnXVQMrtOWi1p9PAdvKmYhCDaVY0r8PeTxxdoJE,1186
+exemplify/steps/node.py,sha256=T07SLcAoeW_PAsfIZishwR62ctw1iti1bUYsOtptIHM,1108
+exemplify/steps/python.py,sha256=tqRMe2cyGZCshoHnZM5GodLxzMMjgwwG5HPjSliX7Zc,2124
+exemplify/steps/rust.py,sha256=5yECcmPPVs15-Wd5W2gCIHLmpcCoA4-9JlJjl1R55fI,487
+exemplify/steps/vcs.py,sha256=qziQsQryFIVRSFvavOe3a4i_75a4i5Xrie2KdTjy6gA,1761
+exemplify/util/merge.py,sha256=3IQsjDDOvKohGU_vKk6ud_gfoscvZEWKv_sCHzZl1R0,1216
+exemplify/util/python_path.py,sha256=dB_8p_BdSbkks5d8VP7fIhjeTdxMHmMiTct6ph9cCLo,793
+exemplify-0.5.0.dist-info/METADATA,sha256=7xFxsVJ_t5tv3dI6N_tG7wPOTIrKL-b6pHSX4FsqK5U,1441
+exemplify-0.5.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+exemplify-0.5.0.dist-info/entry_points.txt,sha256=Jo2ncgEcvBxgnB7QnT0lfHmJoGrjwyaA0XN6pbc1EIA,47
+exemplify-0.5.0.dist-info/RECORD,,
