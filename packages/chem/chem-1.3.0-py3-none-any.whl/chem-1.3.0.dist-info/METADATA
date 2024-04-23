@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: chem
+Version: 1.3.0
+Summary: A helper library for chemistry calculations,used by the edx-platform
+Home-page: https://github.com/openedx/openedx-chem
+Author: edX
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: openedx chem
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pyparsing
+Requires-Dist: scipy
+Requires-Dist: nltk
+Requires-Dist: numpy
+Requires-Dist: markupsafe
+
+openedx-chem
+============
+
+A helper library for chemistry calculations,
+used by the `edx-platform`_.
+
+This code originally lived in the `edx-platform`_ repo,
+but now exists here independently.
+
+
+License
+-------
+
+The code in this repository is licensed under version 3 of the AGPL
+unless otherwise noted. Please see the `LICENSE`_ file for details.
+
+
+.. _edx-platform: https://github.com/openedx/edx-platform
+.. _LICENSE: https://github.com/openedx/openedx-chem/blob/master/LICENSE
+
+
