@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: ecs-session
+Version: 24.4.0
+Summary: ECS SSM tool
+Author: Stefan Heitmüller
+Author-email: stefan.heitmueller@gmx.com
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: boto3
+Requires-Dist: configargparse
+Requires-Dist: shtab
+Requires-Dist: simple_term_menu
+Description-Content-Type: text/markdown
+
+# ecspy
+
+Inspired by [ecsgo](https://github.com/tedsmitt/ecsgo).
+
+Provides a tool to interact with AWS ECS tasks.
+
+## Installation
+
+```
+pip install git+https://github.com/morph027/ecspy
+```
+
+## Pre-requisites
+
+* [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+* [session-manager-plugin](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html)
+
+MacOS users can alternatively install this via Homebrew:
+`brew install --cask session-manager-plugin awscli`
+
+### Infrastructure
+
+Use [ecs-exec-checker](https://github.com/aws-containers/amazon-ecs-exec-checker) to check for the pre-requisites to use ECS exec.
+

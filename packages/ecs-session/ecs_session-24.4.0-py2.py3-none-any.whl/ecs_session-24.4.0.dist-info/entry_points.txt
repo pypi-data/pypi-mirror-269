@@ -1,0 +1,3 @@
+[console_scripts]
+ecspy=ecs_session:main
+
