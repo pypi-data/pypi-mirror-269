@@ -1,0 +1,17 @@
+ailia_tflite/LICENSE_AILIA_EN.pdf,sha256=GTUgb7KHMENn7ySMEUVKu_KhTWNyYMe1-jn6O2pdCb0,69583
+ailia_tflite/LICENSE_AILIA_JA.pdf,sha256=jFgpatKVkS58H_pares-nCUnW5_Hd_DzbIz_rUZ6RXU,171677
+ailia_tflite/__init__.py,sha256=UIw_TNYNFCUOw0NWuyY_-gWn5ykAgo_BI7hP5AMFnMU,51073
+ailia_tflite/license.py,sha256=b4YrZrMxK4seCwVgOoBO4zL8G4zabTCQ22SqUt3irDY,4226
+ailia_tflite/linux/libailia_tflite.so,sha256=-uZQjJ-YVJRiY8jYvZzxIKfISHNnetYUMFcO_8FBdvo,36885360
+ailia_tflite/linux/libiomp5.so,sha256=G3Fcf-ui29MntMtzqxOAOWKfZXv8V0UdFmKKCWHQKCg,2472833
+ailia_tflite/mac/libailia_tflite.dylib,sha256=PHJGSjgPTcCG5Wax0BGPFPCc0QrQPYKzp1HqusQCmEY,3687736
+ailia_tflite/oss/LICENSE_INTELMKL.txt,sha256=MEWkkkojTKZ1Rrjd_GpwJksw9Bxr8ZO_06ADdlzIySs,4278
+ailia_tflite/oss/LICENSE_TENSORFLOW.txt,sha256=ccaRXQQmV3KgM5vtRydpQsZ4tFzAFTQhDr5phP0a7GU,13575
+ailia_tflite/windows/x64/ailia_tflite.dll,sha256=gN4y8x8ryqeD3weH38f_BPUZiescnUiRxnJ0aUJoe2s,21359104
+ailia_tflite/windows/x64/libiomp5md.dll,sha256=UQQ1MsuxUrFas9SyC4Wqoo4Y6_4rJWX_kZUKG2IhY-U,1975912
+ailia_tflite-1.1.13.3.data/scripts/__init__.py,sha256=UIw_TNYNFCUOw0NWuyY_-gWn5ykAgo_BI7hP5AMFnMU,51073
+ailia_tflite-1.1.13.3.data/scripts/license.py,sha256=b4YrZrMxK4seCwVgOoBO4zL8G4zabTCQ22SqUt3irDY,4226
+ailia_tflite-1.1.13.3.dist-info/METADATA,sha256=ZAAN9aqOiI1fKUNulNL6y7FhKPzFKrscmYyXO3ad6Yw,1134
+ailia_tflite-1.1.13.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ailia_tflite-1.1.13.3.dist-info/top_level.txt,sha256=hxjy7Qx4NTRojsrl3SaeohAO7VtNL2sqjouGd1sz-fM,13
+ailia_tflite-1.1.13.3.dist-info/RECORD,,
