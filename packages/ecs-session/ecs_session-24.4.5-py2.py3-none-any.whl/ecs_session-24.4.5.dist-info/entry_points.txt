@@ -1,0 +1,3 @@
+[console_scripts]
+ecs-session=ecs_session.cli:run
+

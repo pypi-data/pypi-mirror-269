@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: ecs-session
+Version: 24.4.5
+Summary: ECS SSM tool
+Home-page: https://github.com/morph027/ecs-session
+License: MIT
+Author: Stefan Heitmüller
+Author-email: stefan.heitmueller@gmx.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: boto3
+Requires-Dist: configargparse
+Requires-Dist: shtab
+Requires-Dist: simple_term_menu
+Project-URL: Repository, https://github.com/morph027/ecs-session
+Description-Content-Type: text/markdown
+
+# ecs-session
+
+Inspired by [ecsgo](https://github.com/tedsmitt/ecsgo) (`ecspy` is in use already).
+
+Provides a tool to interact with AWS ECS tasks.
+
+Currently provides:
+
+* interactive execute-command (e.g. shell)
+* port-forwarding
+
+You can supply command-line arguments to specify which cluster/service/task/... to use or will be prompted with a nice menu.
+
+## Installation
+
+```
+pip install ecs-session
+```
+
+## Pre-requisites
+
+### [session-manager-plugin](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html)
+
+#### Linux
+
+```bash
+curl https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb -o "/tmp/session-manager-plugin.deb"
+mkdir -p ~/bin
+dpkg-deb --fsys-tarfile /tmp/session-manager-plugin.deb | tar --strip-components=4 -C ~/bin/ -xvf - usr/local/sessionmanagerplugin/bin/session-manager-plugin
+```
+
+#### MacOS
+
+`brew install --cask session-manager-plugin`
+
+### Infrastructure
+
+Use [ecs-exec-checker](https://github.com/aws-containers/amazon-ecs-exec-checker) to check for the pre-requisites to use ECS exec.
+
+
+## Usage
+
+See `ecs-session --help`.
+
