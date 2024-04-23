@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+competex/__init__.py
+competex/main.py
+competex.egg-info/PKG-INFO
+competex.egg-info/SOURCES.txt
+competex.egg-info/dependency_links.txt
+competex.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+[project]
+name = "competex"
+version = "1.4"
+authors = [
+  { name="Sike Brothers", email="sikebros@gmail.com" },
+]
+description = "A Python library for analyzing competitors using data from social media platforms"
+readme = "README.md"
+requires-python = ">=3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
