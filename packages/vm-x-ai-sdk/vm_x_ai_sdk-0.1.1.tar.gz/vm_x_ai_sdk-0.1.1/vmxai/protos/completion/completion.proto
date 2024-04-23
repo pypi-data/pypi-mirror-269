@@ -1,0 +1,83 @@
+syntax = "proto3";
+
+package llm.chat;
+
+import "google/protobuf/struct.proto";
+
+service CompletionService {
+  rpc create (CompletionRequest) returns (stream CompletionResponse);
+}
+
+message RequestFunctions {
+  string description = 1;
+  string name = 2;
+  google.protobuf.Struct parameters = 3;
+}
+
+message RequestFunctionCall {
+  oneof type {
+    bool auto = 1;
+    bool none = 2;
+    RequestFunctionCallName function = 3;
+  }
+}
+
+message RequestFunctionCallName {
+  string name = 1;
+}
+
+message RequestMessage {
+  optional string name = 1;
+  string role = 2;
+  optional string content = 3;
+  optional RequestMessageFunctionCall function_call = 4;
+}
+
+message RequestMessageFunctionCall {
+  string name = 1;
+  string arguments = 2;
+}
+
+message OpenAIRequest {
+  string model = 1;
+  optional float frequency_penalty = 2;
+  optional int32 max_tokens = 3;
+  optional float presence_penalty = 4;
+  optional float temperature = 6;
+}
+
+message GeminiRequest {
+  string model = 1;
+  optional int32 max_output_tokens = 2;
+  optional float temperature = 3;
+}
+
+message CompletionRequest {
+  string resource = 1;
+  string workload = 2;
+  string provider = 3;
+  bool stream = 4;
+  repeated RequestMessage messages = 5;
+  repeated RequestFunctions functions = 6;
+  optional RequestFunctionCall function_call = 7;
+  oneof request {
+    OpenAIRequest openai = 8;
+    GeminiRequest gemini = 9;
+  }
+}
+
+message CompletionResponse {
+  string id = 1;
+  optional string message = 2;
+  string role = 3;
+  optional RequestMessageFunctionCall function_call = 4;
+  optional CompletionUsage usage = 5;
+  optional int64 response_timestamp = 6;
+}
+
+message CompletionUsage {
+  int32 prompt = 1;
+  int32 completion = 2;
+  int32 total = 3;
+}
+
