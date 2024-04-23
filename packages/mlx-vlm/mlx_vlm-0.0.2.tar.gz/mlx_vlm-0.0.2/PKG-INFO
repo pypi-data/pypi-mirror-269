@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: mlx-vlm
+Version: 0.0.2
+Summary: Vision LLMs on Apple silicon with MLX and the Hugging Face Hub
+Home-page: https://github.com/Blaizzy/mlx-vlm
+Author: Prince Canuma
+Author-email: prince.gdt@gmail.com
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mlx>=0.8.0
+Requires-Dist: mlx-lm>=0.4.0
+Requires-Dist: numpy
+Requires-Dist: transformers
+Requires-Dist: torch
+Requires-Dist: huggingface_hub
+Requires-Dist: Pillow
+Requires-Dist: requests
+
+# MLX-VLM
+
+MLX-VLM a package for running Vision LLMs on your Mac using MLX.
+
+
+## Get started
+
+The easiest way to get started is to install the `mlx-vlm` package:
+
+**With `pip`**:
+
+```sh
+pip install mlx-vlm
+```
+
+**Inference**:
+
+```sh
+python -m mlx_vlm.generate --model qnguyen3/nanoLLaVA --max-tokens 100 --temp 0.0
+```
