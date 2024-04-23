@@ -1,0 +1,15 @@
+superstore/__init__.py,sha256=tGdENG7TQ5aIURqe4mVCfkt0Lt7ZqI_NOwoovtntl7E,100
+superstore/crossfilter.py,sha256=YP9JGJRXFP0hom_40-BLYHD2CGHpWYbSRhQFoI8LSWM,5585
+superstore/superstore.py,sha256=fxIG_npod3UOi95LNrqkrzRl80Qb2TS_ODUubA2LYAw,2351
+superstore/utils.py,sha256=ki3KRQUAUYVCkBgUm0NHPFeqy6wcGVnLQ0Nnej_gcdw,2726
+superstore/tests/test_crossfilter.py,sha256=xs5hxnDqvqWbOHE2cmJtcl22stwlAT3JAUppO67LFaI,4087
+superstore/tests/test_superstore.py,sha256=3M1K3ga9tH3aoJN8FKAdhfMTeXoz5FAEQ0GASNf1v_c,1293
+superstore/tests/test_vendored.py,sha256=wq-EDbfOfri1x8DJn-c8fsB_vKZ2r-lYMwoO3VZb_zA,253
+superstore/vendored/__init__.py,sha256=veqmkZy6j_BikD3JxBZp9cptOsaf6oP503xaDK8nn_o,26
+superstore/vendored/timeseries.py,sha256=6HwknBtWVFICvMT_FEG2LGHGhd9y-sk-tSXa2CAKt64,2661
+superstore-0.2.2.dist-info/AUTHORS,sha256=mm_WNi86iXgiZvFeTgeWgux6M3_voG5YPtoe9zTnsBw,108
+superstore-0.2.2.dist-info/LICENSE,sha256=Cke6-KJzhARJii5uj98E1LecKFvrd_AkLV03NxflVRo,11352
+superstore-0.2.2.dist-info/METADATA,sha256=8HI7zvmClowncvwPwWg5ZmWkUinByR4S0tkNUY8QP1A,15043
+superstore-0.2.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+superstore-0.2.2.dist-info/top_level.txt,sha256=wUUEqZu_xeL32FocYmdH3Y7AZCvtKHr-ldiKyZy7AKs,11
+superstore-0.2.2.dist-info/RECORD,,
