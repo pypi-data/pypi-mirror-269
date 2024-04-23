@@ -1,0 +1,31 @@
+[project]
+name = "image_transforms"
+version = "0.0.2"
+description = "simple image transformations"
+authors = [
+    { name = "TaoChenyue", email = "chenyue.Tao@qq.com" },
+]
+dependencies = [
+    "pillow>=10.3.0",
+    "opencv-python>=4.9.0.80",
+    "opencv-python-headless>=4.9.0.80",
+]
+requires-python = "<3.12,>=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pyside6==6.4.3",
+]
