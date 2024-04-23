@@ -1,0 +1,2 @@
+[console_scripts]
+chargespot = chargespot.cli:chargespot_cli
