@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: mom-test-py
+Version: 1.0.1
+Summary: Helper library for working with tests
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+### Supported Python Versions
+
+This library supports the following Python implementations:
+
+- Python 3.11
+
+
+## Installation
+
+Install from PyPi using [pip](https://pip.pypa.io/en/latest/), a
+package manager for Python.
+
+```shell
+pip3 install plasgate
+```
+
+### Test your installation
+
+Try sending yourself an SMS message. Save the following code sample to your computer with a text editor. Be sure to update the `account_sid`, `auth_token`, and `from_` phone number with values from your [Twilio account](https://console.twilio.com). The `to` phone number will be your own mobile phone.
+
+```python
+from twilio.rest import Client
+
+# Your Account SID and Auth Token from console.twilio.com
+account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+auth_token  = "your_auth_token"
+
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+    to="+15558675309",
+    from_="+15017250604",
+    body="Hello from Python!")
+
+print(message.sid)
+```
+
+Save the file as `send_sms.py`. In the terminal, `cd` to the directory containing the file you just saved then run:
+
+```shell
+python3 send_sms.py
+```
+
+After a brief delay, you will receive the text message on your phone.
+
+> **Warning**
+> It's okay to hardcode your credentials when testing locally, but you should use environment variables to keep them secret before committing any code or deploying to production. Check out [How to Set Environment Variables](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html) for more information.
+
+
