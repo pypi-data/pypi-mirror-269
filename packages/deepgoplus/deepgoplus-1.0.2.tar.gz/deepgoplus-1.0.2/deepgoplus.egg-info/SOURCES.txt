@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+deepgoplus/__init__.py
+deepgoplus/aminoacids.py
+deepgoplus/main.py
+deepgoplus/utils.py
+deepgoplus.egg-info/PKG-INFO
+deepgoplus.egg-info/SOURCES.txt
+deepgoplus.egg-info/dependency_links.txt
+deepgoplus.egg-info/entry_points.txt
+deepgoplus.egg-info/requires.txt
+deepgoplus.egg-info/top_level.txt
+deepgoplus.egg-info/zip-safe
