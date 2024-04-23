@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+SMILESTracer/__init__.py
+SMILESTracer/labling_rxn.py
+SMILESTracer/rxn_smiles_preprocess.py
+SMILESTracer/smarts_preprocess.py
+SMILESTracer.egg-info/PKG-INFO
+SMILESTracer.egg-info/SOURCES.txt
+SMILESTracer.egg-info/dependency_links.txt
+SMILESTracer.egg-info/entry_points.txt
+SMILESTracer.egg-info/top_level.txt
