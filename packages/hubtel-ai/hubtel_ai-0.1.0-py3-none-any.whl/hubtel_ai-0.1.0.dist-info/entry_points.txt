@@ -1,0 +1,3 @@
+[console_scripts]
+hubtel-ai=hubtel_ai.cli.cli:cli
+

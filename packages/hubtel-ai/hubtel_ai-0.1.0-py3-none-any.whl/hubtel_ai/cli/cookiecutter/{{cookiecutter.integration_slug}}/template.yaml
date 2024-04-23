@@ -1,0 +1,79 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS:Serverless-2016-10-31
+Description: |
+  {{cookiecutter.integration_short_description}}
+
+Parameters:
+  AccountId:
+    Type: String
+    Default: '120864420965'
+  ImageTag:
+    Type: String
+    Default: 'dev'
+  Region:
+    Type: String
+    Default: 'eu-west-1'
+  IntegrationSlug:
+    Type: String
+    Default: {{cookiecutter.integration_slug.replace(' ','-')}}
+  <SomeEnvironmentVariable>:
+    Type: String
+    Default: ""
+    
+Resources:
+  {{cookiecutter.integration_name.title().replace(' ','')}}ProcessorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      PackageType: Image
+      MemorySize: 1000
+      Timeout: 10
+      ImageUri: !Sub '${AccountId}.dkr.ecr.${Region}.amazonaws.com/${IntegrationSlug}-processor:${ImageTag}'
+      ImageConfig:
+        Command:
+          - app.lambda_handler
+      Environment:
+        Variables:
+          SomeEnvironmentVariable: !Sub '${<SomeEnvironmentVariable>}'
+      FunctionName: ${IntegrationSlug}-processor
+      Events:
+        ProcessorApi:
+          Type: Api
+          Properties:
+            Path: /process
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./functions/processor/
+      DockerTag: v0.1.0
+  
+  {{cookiecutter.integration_name.title().replace(' ','')}}ProcessorFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/{{cookiecutter.integration_name.title().replace(' ','')}}PredictionFunction
+      RetentionInDays: 30
+
+  {{cookiecutter.integration_name.title().replace(' ','')}}PredictionFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      PackageType: Image
+      ImageUri: !Sub '${AccountId}.dkr.ecr.${Region}.amazonaws.com/${IntegrationSlug}-predictor:${ImageTag}'
+      ImageConfig:
+        Command:
+          - app.lambda_handler
+      FunctionName: ${IntegrationSlug}-predictor
+      Events:
+        PredictorApi:
+          Type: Api
+          Properties:
+            Path: /predict
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./functions/predictor/
+      DockerTag: v0.1.0
+
+  {{cookiecutter.integration_name.title().replace(' ','')}}PredictionFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda/{{cookiecutter.integration_name.title().replace(' ','')}}PredictionFunction
+      RetentionInDays: 30
