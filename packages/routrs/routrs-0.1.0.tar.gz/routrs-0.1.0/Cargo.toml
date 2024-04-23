@@ -1,0 +1,24 @@
+[package]
+name = "routrs"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "routrs"
+crate-type = ["cdylib"]
+
+
+[dependencies.routrs]
+version = "1.0.0"
+features = ["highways", "railways", "maritime", "concurrency"]
+
+[dependencies.pyo3]
+version = "0.21.1"
+features = ["abi3-py37", "extension-module"]
+
+[dependencies.maturin]
+version = "1.5.1"
+optional = true
+
+[features]
+default = ["maturin"]
