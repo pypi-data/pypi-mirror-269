@@ -1,0 +1,20 @@
+{
+    "api_endpoint" : {
+        "http": {
+          "dms_base_url": "http://43.207.106.154:5001",
+          "oms_base_url": "http://43.207.106.154:4000",
+          "sms_base_url": ""
+        },
+        "ws": {
+          "dms_base_ws": "ws://43.207.106.154:5002",
+          "oms_base_ws": "ws://43.207.106.154:4001"
+        }
+    },
+    "redis" : {
+        "addr": "13.231.169.10",
+        "password": "atatat",
+        "port": 6379,
+        "read_timeout": 2,
+        "write_timeout": 2
+    }
+}

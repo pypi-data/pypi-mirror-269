@@ -1,0 +1,20 @@
+{
+    "api_endpoint": {
+        "http": {
+            "dms_base_url": "http://18.181.167.212:5001",
+            "oms_base_url": "http://18.181.167.212:4000",
+            "sms_base_url": ""
+        },
+        "ws": {
+            "dms_base_ws": "ws://18.181.167.212:5002",
+            "oms_base_ws": "ws://18.181.167.212:4001"
+        }
+    },
+    "redis": {
+        "addr": "master.at-trade-cache.cbws9o.apne1.cache.amazonaws.com",
+        "port": 6379,
+        "password": "atatatatatatatat",
+        "read_timeout": 0.2,
+        "write_timeout": 0.2
+    }
+}
