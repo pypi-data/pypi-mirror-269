@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Flask-PikaRMQ
+Version: 1.0.1
+Summary: This is Extension for RabbitMQ Microservice
+Home-page: 
+Author: Rasco Developers
+Author-email: rezahartono.rasco@gmail.com
+License: BSD
+Platform: any
+License-File: LICENSE
+Requires-Dist: Flask
+Requires-Dist: pika
+
+
+Flask-PikaMQ
+-------------
+
+ADD RABBITMQ_URL TO FLASK CONFIG
