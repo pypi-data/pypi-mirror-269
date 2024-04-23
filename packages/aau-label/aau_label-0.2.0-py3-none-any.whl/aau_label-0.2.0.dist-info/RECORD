@@ -1,0 +1,11 @@
+aau_label-0.2.0.dist-info/METADATA,sha256=Ss6VQ_EtCvxLlOG5soVNYqcu_7sahfRePTJq7VLdvEQ,326
+aau_label-0.2.0.dist-info/WHEEL,sha256=7sv5iXvIiTVJSnAxCz2tGBm9DHsb2vPSzeYeT7pvGUY,90
+aau_label-0.2.0.dist-info/licenses/LICENSE,sha256=AXqgYvfKCt8CxRTiyYYg-GsHmfxXRzp7Zl5DFAe0buI,1099
+aau_label/__init__.py,sha256=aIvrQdGbGYyP-af9TaM7pXZmWDR7y5tNpkibYLZjfcc,6621
+aau_label/errors.py,sha256=mYkylvCuDzuMpm_3Zgx2pj7-NDyGg63eKZrzEaXZ1go,436
+aau_label/model.py,sha256=I2Xtr7YcUPuDIckrZTZ7Q4fYSvh71uoJQCuiVh7IEzM,586
+aau_label/parsers/__init__.py,sha256=9IijOC5XvuzEw6m7TUDFbfc-AzOxrVaoPwb5HT60w4g,131
+aau_label/parsers/darknet_parser.py,sha256=4BIVaFGVbq8cfijs8ih08Cc7g6I0wK8mFecct0XYTsA,1830
+aau_label/parsers/pascal_parser.py,sha256=g6UcxawxRGdRSgLJIGh4XR_6glmUgTVcmiGdfkru4EA,2145
+aau_label/protocols.py,sha256=r-Rlk1j84dGPz30_JcyV3nu0LgVT4xvE3HLZcpSXiGk,496
+aau_label-0.2.0.dist-info/RECORD,,
