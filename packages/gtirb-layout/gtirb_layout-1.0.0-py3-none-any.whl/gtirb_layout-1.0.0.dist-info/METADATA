@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: gtirb-layout
+Version: 1.0.0
+Author-email: GrammaTech <gtirb@grammatech.com>
+Requires-Python: >=3.7
+License-File: LICENSE.txt
+Requires-Dist: gtirb
+Requires-Dist: more-itertools
+
