@@ -1,0 +1,14 @@
+bestnlp/__init__.py,sha256=yWr8dJQkCu83EoT_iYfJ_XAO1EFHFvZz47Wud_dClzM,239
+bestnlp/click.xlsx,sha256=Nc0YvRy-cQg6UMLvvIorFchpjXSOVlnDad0cGHCCBhI,5297525
+bestnlp/df_details.xlsx,sha256=hJY8DW5QZOrcioxVfiR7ObQzFlWQHgI1ZBUJw8n_mJk,50965182
+bestnlp/dict.txt,sha256=cZfDIR3dmJYrA2zfQDJNHqK_qhK9Ao5o-qcBEaiOEqg,5071852
+bestnlp/new_word_discovery.py,sha256=zea2PJVBJJBqQkiW8HlARIp6JJRZXtmbIanHfmQzrS4,7610
+bestnlp/search.xlsx,sha256=umfGprnOMnP8BSA-YytT6eVT8LM_IdOVQlToZ14lKHA,6050582
+bestnlp/similar_word_discovery.py,sha256=IoHd6MeD-w9cUowHucT4VSLpgcR5g3PM6rM2xatWO4Y,5006
+bestnlp/similar_word_discovery_embedding.py,sha256=HsoxJomebHNlB9JyNfGghGSPJ6FJ4X0eAvRnbTUUmf8,4004
+bestnlp/similar_word_discovery_test.py,sha256=9AzCOIz92hhF51c7misZ39eI8GgF2GyQrbhN39me0_0,10999
+bestnlp/utils.py,sha256=c8bSHGOjGJXOxFADZ9uKPKL6PClG2_XQGOsse3LJfNA,958
+bestnlp-1.1.0.dist-info/METADATA,sha256=PJtFRs8QzI2l-4F4eY05U3oJ_JqSAKHXubuXAfawXVI,245
+bestnlp-1.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+bestnlp-1.1.0.dist-info/top_level.txt,sha256=gEejasanGTcCsrx7FMvnDNjB5jb-Xf07bqn5DqRKxg8,8
+bestnlp-1.1.0.dist-info/RECORD,,
