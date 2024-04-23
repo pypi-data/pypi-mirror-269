@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mixdq-extension
+Version: 0.1
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: diffusers ==0.24.0
+Requires-Dist: peft ==0.9.0
+Requires-Dist: torch ==2.2.1
+Requires-Dist: torchvision ==0.17.1
+Requires-Dist: transformers ==4.38.2
+
