@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: habushu_cucumber_formatter
+Version: 1.0.0
+Summary: Formatter for generating Cucumber-format JSON test results using the Behave test framework
+License: MIT
+Author: Isaac Becerra Llanos
+Author-email: ibecerrallanos@cpointe-inc.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
