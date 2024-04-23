@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/atas_client/CoreATASApi.py
+src/atas_client/HttpUtil.py
+src/atas_client/__init__.py
+src/atas_client/atas_client.py
+src/atas_client.egg-info/PKG-INFO
+src/atas_client.egg-info/SOURCES.txt
+src/atas_client.egg-info/dependency_links.txt
+src/atas_client.egg-info/top_level.txt
