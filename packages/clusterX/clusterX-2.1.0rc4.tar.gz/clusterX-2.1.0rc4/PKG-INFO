@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: clusterX
+Version: 2.1.0rc4
+Summary: CELL (aka clusterX) is a python package for building Cluster Expansion models of simple and complex alloys and performing thermodynamical analyses of materials.
+Home-page: http://sol.physik.hu-berlin.de/cell/
+Author: CELL Developers
+Author-email: srigamonti@physik.hu-berlin.de
+License: http://www.apache.org/licenses/LICENSE-2.0
+License-File: LICENSE.txt
+License-File: COPYING

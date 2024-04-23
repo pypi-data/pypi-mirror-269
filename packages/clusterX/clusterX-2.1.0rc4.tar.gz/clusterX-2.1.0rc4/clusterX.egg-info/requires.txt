@@ -1,0 +1,13 @@
+numpy
+scipy
+scikit-learn
+matplotlib
+ase
+plac
+pytest
+spglib
+sympy
+nglview
+ipywidgets
+pytest-html
+tqdm
