@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: backend_sammy_gorilla
+Version: 0.1.0
+Summary: 
+Author: Hakkar
+Author-email: zugrutus@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cloudinary (>=1.38.0,<2.0.0)
+Requires-Dist: flask (>=3.0.0,<4.0.0)
+Requires-Dist: flask-cors (>=4.0.0,<5.0.0)
+Requires-Dist: pillow (>=10.2.0,<11.0.0)
+Requires-Dist: poethepoet (>=0.24.4,<0.25.0)
+Requires-Dist: psycopg2 (>=2.9.9,<3.0.0)
+Requires-Dist: pyproject-toml (>=0.0.10,<0.0.11)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: scikit-learn (>=1.4.0,<2.0.0)
+Requires-Dist: waitress (>=2.1.2,<3.0.0)
+Requires-Dist: watchdog (>=3.0.0,<4.0.0)
+Requires-Dist: weaviate-client (>=3.26.1,<4.0.0)
+Description-Content-Type: text/markdown
+
+

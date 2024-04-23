@@ -1,0 +1,10 @@
+backend_sammy_gorilla/__init__.py,sha256=03B4Zr0lPgZK6k4aO_--NfBQsFECqC6iBwFaNQiZsds,89
+backend_sammy_gorilla/__main__.py,sha256=vthjV2YM_Iy1TyezSzEP4xg-pk0TLQ2lK5GHMwM6YQ0,775
+backend_sammy_gorilla/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backend_sammy_gorilla/config/cloudinary_config.py,sha256=YauqFvgWVK72r0aU-j-Vd_v78HL85x2Lb9iJ8KjLF9o,1014
+backend_sammy_gorilla/config/postgre_config.py,sha256=AAQMsT1gv_l7iUW3CwyUNHVkUAol5NegymbVYGEVpAM,658
+backend_sammy_gorilla/routes/gallery.py,sha256=yiYCL2d2WeJ7BalLSW7jsayqna3VesOEWg26eXWgg84,2754
+backend_sammy_gorilla/routes/health.py,sha256=hjykJby3MbCNzQNJAf6axJHCC5avimNcx66f2f4SfzA,173
+backend_sammy_gorilla-0.1.0.dist-info/METADATA,sha256=UMsFYzW5-h0ZqWhHLnaG_Frq0OP-ndi6ottt9NGS7hI,960
+backend_sammy_gorilla-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+backend_sammy_gorilla-0.1.0.dist-info/RECORD,,
