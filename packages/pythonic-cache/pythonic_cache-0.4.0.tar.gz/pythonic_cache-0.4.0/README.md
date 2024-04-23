@@ -1,0 +1,140 @@
+## Pythonic-cache library for caching, which has everything you need out of the box and nothing extra.
+
+### [Документация на русском](https://github.com/Dark04072006/pythonic-cache/blob/main/README.ru.md)
+
+### Installation
+``` shell
+pip install pythonic-cache
+```
+
+### Basic Usage
+``` python
+from datetime import timedelta
+
+from pythonic_cache import CacheClient
+from pythonic_cache.storage.memory import MemoryCacheStorage
+
+client = CacheClient(MemoryCacheStorage())
+
+
+@client.cache(timedelta(minutes=5))
+def calculate_sum(a: int, b: int) -> int:
+    print("Calculating sum...")
+    return a + b
+
+
+def main() -> None:
+    # First function call, the result will be computed and cached
+    result1 = calculate_sum(5, 3)
+    print("Result 1:", result1)
+
+    # Subsequent function call with the same arguments, the result will be fetched from the cache
+    result2 = calculate_sum(5, 3)
+    print("Result 2:", result2)
+
+    # Function call with different arguments, the result will be computed again and cached
+    result3 = calculate_sum(10, 20)
+    print("Result 3:", result3)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+#### Besides `CacheClient`, there is `AsyncCacheClient`, which operates similarly but with coroutines. It takes objects of the base class `AsyncCacheStorage` as input in its initializer. Out of the box, there are two subclasses: `AsyncMemoryCacheStorage` and `AsyncRedisCacheStorage`.
+
+### Example Usage
+``` python
+import asyncio
+from datetime import timedelta
+
+from redis.asyncio import Redis
+from pythonic_cache import AsyncCacheClient
+from pythonic_cache.storage.redis import AsyncRedisCacheStorage
+
+# Connecting to Redis
+redis = Redis(host='localhost', port=6379, db=0)
+
+# Creating a cache client with Redis as the asynchronous storage
+async_redis_storage = AsyncRedisCacheStorage(redis)
+
+# Creating an asynchronous cache client
+async_client = AsyncCacheClient(async_redis_storage)
+
+
+# Asynchronous function, whose results will be cached
+@async_client.cache(timedelta(minutes=5))
+async def async_factorial(x: int) -> int:
+    if x <= 1:
+        return 1
+
+    return await async_factorial(x - 1) * x
+
+
+async def main() -> None:
+    # First call to the asynchronous function, the result will be computed and cached
+    result1 = await async_factorial(5)
+    print("Result 1:", result1)
+
+    # Subsequent call to the asynchronous function with the same arguments, the result will be fetched from the cache
+    result2 = await async_factorial(5)
+    print("Result 2:", result2)
+
+    # Call to the asynchronous function with different arguments, the result will be computed again and cached
+    result3 = await async_factorial(10)
+    print("Result 3:", result3)
+
+
+if __name__ == "__main__":
+    # Running the asynchronous main function
+    asyncio.run(main())
+```
+
+#### The main feature of the library is its integration layer, which contains functions for integrating pythonic-cache with external frameworks.
+
+### Example of integration with FastAPI
+``` python
+from datetime import timedelta
+from fastapi import FastAPI
+
+from pythonic_cache.integrations.fastapi import cache, setup_cache
+from pythonic_cache.storage.memory import AsyncMemoryCacheStorage
+
+app = FastAPI()
+
+# Setting up cache for FastAPI application
+setup_cache(app, AsyncMemoryCacheStorage())
+
+@app.get("/sum/")
+@cache(expires=timedelta(hours=1))
+async def sum_endpoint(a: int, b: int) -> int:
+    # The result will be cached for 1 hour
+    return a + b
+```
+
+## License
+See the [LICENSE](https://github.com/Dark04072006/pythonic-cache/blob/main/LICENSE.md) file for license rights and limitations (MIT).
+
+### Issues
+If you encounter any issues with the project or have suggestions for improvement, please feel free to report them by [creating an issue](https://github.com/Dark04072006/pythonic-cache/issues) on the GitHub repository. We welcome your feedback!
+
+### Pull Requests
+We welcome community contributions! If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and ensure they are properly tested.
+4. Propose a pull request (PR) to the `develop` branch of the original repository.
+5. Provide a detailed description of your changes in the PR description.
+
+We appreciate your contributions!
+
+### Contact
+If you have any questions, suggestions, or feedback regarding this project, feel free to contact the author:
+
+- **Author:** Alim Abrekov
+- **Email:** Abrekovalim38702@gmail.com
+- **GitHub:** [https://github.com/Dark04072006](https://github.com/Dark04072006)
+- **Telegram:** [https://t.me/some_usernamexD](https://t.me/some_usernamexD)
+
+Stay connected!
