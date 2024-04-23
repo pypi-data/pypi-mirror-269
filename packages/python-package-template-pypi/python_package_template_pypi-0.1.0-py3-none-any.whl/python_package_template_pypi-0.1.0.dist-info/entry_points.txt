@@ -1,0 +1,2 @@
+[console_scripts]
+ppt = python_package_template.cli:main
