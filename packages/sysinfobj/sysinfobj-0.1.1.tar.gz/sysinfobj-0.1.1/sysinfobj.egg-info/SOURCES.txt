@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+sysinfo/__init__.py
+sysinfo/sysinfo.py
+sysinfobj.egg-info/PKG-INFO
+sysinfobj.egg-info/SOURCES.txt
+sysinfobj.egg-info/dependency_links.txt
+sysinfobj.egg-info/entry_points.txt
+sysinfobj.egg-info/requires.txt
+sysinfobj.egg-info/top_level.txt
