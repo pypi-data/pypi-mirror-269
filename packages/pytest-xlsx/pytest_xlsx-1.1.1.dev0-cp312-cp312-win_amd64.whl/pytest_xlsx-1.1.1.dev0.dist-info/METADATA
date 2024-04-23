@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pytest-xlsx
+Version: 1.1.1.dev
+Summary: pytest plugin for generating test cases by xlsx(excel)
+License: Apache-2.0
+Author: dongfangtianyu
+Requires-Python: >=3.12
+Requires-Dist: allure-pytest>=2.13.0
+Requires-Dist: openpyxl>=3.0.10
+Requires-Dist: pydantic-settings~=2.0.0
+Requires-Dist: pydantic<3,>=2.0
+Requires-Dist: pytest~=8.1.1
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: tabulate[widechars]>=0.9.0
+Requires-Dist: wcwidth>=0.2.5
+Project-URL: Homepage, https://github.com/dongfangtianyu/pytest-xlsx
+Description-Content-Type: text/markdown
+
+# pytest-xlsx
+
+pytest-xlsx 是一个pytest的插件，它可以将xlsx文件作为pytest可以执行的测试文件和测试用例，
+这样软件测试人员就可以通过Excel便捷的实现关键字驱动测试（像Robot Framework那样）
+
+
+
+## 文档
+- [pytest-xlsx：把excel文件视为测试文件的pytest插件](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkxMDIyODUwOA==&action=getalbum&album_id=2706445356095520770#wechat_redirect)
+- [pytest-xlsx：使用hook自定义excel用例的执行方式](https://mp.weixin.qq.com/s/iD_KWamziFrTnDt8qpuWWA)
+
+
+
+## 联系作者
+
+如果在使用过程中遇到什么问题，欢迎通过以下方式联系：
+
+-   **Github**：https://github.com/dongfangtianyu/pytest-xlsx/issues/new
+-   **WeiXin**:  python_sanmu
+
+
