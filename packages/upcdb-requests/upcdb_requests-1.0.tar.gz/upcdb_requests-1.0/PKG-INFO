@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: upcdb-requests
+Version: 1.0
+
+This library can be used to call the upcdatabase.org api
