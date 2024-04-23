@@ -1,0 +1,15 @@
+seqprocessor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seqprocessor/main.py,sha256=QiU6j8u-ld_IaAktq-s5y7fScRKb3NQ8gnDPlkbhwRU,876
+seqprocessor/mutation/mutation.py,sha256=Upn-flvH7ohpklcuptXY2Cj-eyTWpLQ-QWiGdfZtZ_I,7780
+seqprocessor/options.py,sha256=J3znuI3yzkqKDC3w46Wb-RTHgLltTCa-LsDSFgC_270,118
+seqprocessor/seq/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seqprocessor/seq/align.py,sha256=F4RUZMSgWTQCkoe-2-J-YiRiP9rhGF6ktZ_Ukz0kZuQ,2224
+seqprocessor/seq/info.py,sha256=sBiG04lMlUBv5nxvwdF9-gBVa1GPhWD3NVAeLaVjIHw,3148
+seqprocessor/seq/phylo.py,sha256=jPrg_u2g9lHn-ukPt6POWMgX8bqJI2HKdAhfsw08fis,2097
+seqprocessor/seq/pretreat.py,sha256=13jIf-0JPR42CC9zlZoXbKLlZm7GPSsaaupwO7blrzE,8850
+seqprocessor/seq/translate.py,sha256=TLbwYcOLXPHstoRyZ9qHcbTNJJmk6L8tYn79n1RXw8k,937
+seqprocessor/utils.py,sha256=1xdcKeE9VSL1DxH0WaEna1eUxROyXpaUlxh3aQauC3U,3000
+seqprocessor-0.1.3.dist-info/METADATA,sha256=pTkwSW2fz-RlGU6OeqL3TC2K-jKZMQ1addudpDaYXho,810
+seqprocessor-0.1.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+seqprocessor-0.1.3.dist-info/entry_points.txt,sha256=QYas4M6alVsnR-GAnEFAazYsv2AU1Y4lE-80IEr9OM4,54
+seqprocessor-0.1.3.dist-info/RECORD,,
