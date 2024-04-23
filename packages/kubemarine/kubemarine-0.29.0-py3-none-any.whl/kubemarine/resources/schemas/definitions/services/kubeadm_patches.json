@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "description": "Override the original settings for patches of control-plane pods and kubelet",
+  "additionalProperties": false,
+  "properties": {
+    "apiServer": {
+      "$ref": "#/definitions/control-plane-pod-patch"
+    },
+    "etcd": {
+      "$ref": "#/definitions/control-plane-pod-patch"
+    },
+    "controllerManager": {
+      "$ref": "#/definitions/control-plane-pod-patch"
+    },
+    "scheduler": {
+      "$ref": "#/definitions/control-plane-pod-patch"
+    },
+    "kubelet": {
+      "$ref": "#/definitions/kubelet-patch"
+    }
+  },
+  "definitions": {
+    "control-plane-pod-patch": {
+      "type": "array",
+      "description": "Patches for control-plane pods",
+      "minItems": 0,
+      "items": {
+        "oneOf": [
+          {
+            "allOf": [
+              {
+                "$ref": "../common/node_ref.json#/definitions/OneOfNodesGroupsSpec"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "patch": {
+                    "$ref": "#/definitions/patch"
+                  },
+                  "groups": {
+                    "$ref": "../common/node_ref.json#/definitions/ControlPlanes"
+                  },
+                  "nodes": {
+                    "$ref": "../common/node_ref.json#/definitions/Names"
+                  }
+                },
+                "required": ["patch"],
+                "additionalProperties": false
+              }
+            ]
+          },
+          {"$ref": "../common/utils.json#/definitions/ListMergingSymbol"}
+        ]
+      }
+    },
+    "kubelet-patch": {
+      "type": "array",
+      "description": "Patches for kubelet",
+      "minItems": 0,
+      "items": {
+        "oneOf": [
+          {
+            "allOf": [
+              {
+                "$ref": "../common/node_ref.json#/definitions/OneOfNodesGroupsSpec"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "patch": {
+                    "$ref": "#/definitions/patch"
+                  },
+                  "groups": {
+                    "$ref": "../common/node_ref.json#/definitions/KubernetesRoles"
+                  },
+                  "nodes": {
+                    "$ref": "../common/node_ref.json#/definitions/Names"
+                  }
+                },
+                "required": ["patch"],
+                "additionalProperties": false
+              }
+            ]
+          },
+          {"$ref": "../common/utils.json#/definitions/ListMergingSymbol"}
+        ]
+      }
+    },
+    "patch": {
+      "type": "object",
+      "additionalProperties": {
+        "type": ["string", "boolean", "integer"]
+      }
+    }
+  }
+}
