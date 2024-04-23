@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages]
+find = {}  # Scan the project directory with the default parameters
+
+[project]
+name = "ExtendedQtableview"
+version = "1.0.5"
+authors = [{ name = "Jason Fuller", email = "jxfuller1@gmail.com" }]
+description = "A custom Qtableview that adds many features for tables, including using SQL, filters, sub-tables, footers, checkboxes and more.. "
+readme = "README.md"
+requires-python = ">=3.8"
