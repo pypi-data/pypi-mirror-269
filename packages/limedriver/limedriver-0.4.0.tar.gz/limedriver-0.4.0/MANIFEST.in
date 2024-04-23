@@ -1,0 +1,3 @@
+include src/limedriver/*.pyx
+include extern/limedriver/src/*
+include extern/limedriver/*
