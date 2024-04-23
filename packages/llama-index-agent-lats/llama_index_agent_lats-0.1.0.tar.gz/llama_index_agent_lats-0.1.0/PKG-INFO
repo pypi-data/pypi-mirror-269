@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: llama-index-agent-lats
+Version: 0.1.0
+Summary: llama-index agent lats integration
+License: MIT
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.8.1,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: llama-index-core (>=0.10.0,<0.11.0)
+Description-Content-Type: text/markdown
+
+# LlamaIndex Agent Integration: Lats
+
+This integration implements the Language Agent Tree search method introduced
+in the paper entitled "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models" by Zhou et al. 2023.
+
+Source: https://arxiv.org/pdf/2310.04406.pdf
+
+## Usage
+
+LATs is implemented as a `BaseAgentWorker` and as such is used with an `AgentRunner`.
+
+```python
+from llama_index.agent.lats import LATSAgentWorker
+from llama_index.core.agent import AgentRunner
+
+tools = ...
+llm = ...
+agent_worker = LATSAgentWorker(tools=tools, llm=llm)
+agent = AgentRunner(agent_worker)
+
+agent.chat(...)
+```
+
