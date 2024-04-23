@@ -1,0 +1,316 @@
+<p align="center">
+  <a href="https://github.com/leftmove/cria"><img src="https://i.imgur.com/vjGJOLQ.png" alt="cria"></a>
+</p>
+<p align="center">
+    <em>Cria, use Python to run LLMs with as little friction as possible.</em>
+</p>
+
+Cria is a library for programmatically running Large Language Models through Python. Cria is built so you need as little configuration as possible — even with more advanced features.
+
+- **Easy**: No configuration is required out of the box. Getting started takes just five lines of code.
+- **Concise**: Write less code to save time and avoid duplication.
+- **Efficient**: Use advanced features with your own `ollama` instance, or a subprocess.
+
+<!-- <p align="center">
+  <em>
+    Cria uses <a href="https://ollama.com/">ollama</a>.
+  </em>
+</p> -->
+
+## Guide
+
+- [Quick Start](#quickstart)
+- [Installation](#installation)
+  - [Windows](#windows)
+  - [Mac](#mac)
+  - [Linux](#linux)
+- [Advanced Usage](#advanced-usage)
+  - [Custom Models](#custom-models)
+  - [Streams](#streams)
+  - [Closing](#closing)
+  - [Message History](#message-history)
+    - [Follow-Up](#follow-up)
+    - [Clear Message History](#clear-message-history)
+    - [Passing In Custom Context](#passing-in-custom-context)
+  - [Multiple Models and Parallel Conversations](#multiple-models-and-parallel-conversations)
+    - [Models](#models)
+    - [With](#with-model)
+    - [Standalone](#standalone-model)
+  - [Running Standalone](#running-standalone)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Quickstart
+
+Running Cria is easy. After installation, you need just five lines of code — no configurations, no manual downloads, and no servers to worry about.
+
+```python
+import cria
+
+ai = cria.Cria()
+
+prompt = "Who is the CEO of OpenAI?"
+for chunk in ai.chat(prompt):
+    print(chunk, end="") # The CEO of OpenAI is Sam Altman!
+
+ai.close() # Not required, but best practice.
+```
+
+Another example.
+
+```python
+import cria
+
+with cria.Model() as ai:
+  prompt = "Who is the CEO of OpenAI?"
+  response = ai.chat(prompt, stream=False) # The CEO of OpenAI is Sam Altman!
+```
+
+If no model is configured, Cria runs the default model: `llama3:8b`. If the default model is not installed on your machine, Cria will install it automatically.
+
+**Important**: `llama:8b` is about **4.7GB**, and will likely take a while to download.
+
+## Installation
+
+1. Cria uses [`ollama`](https://ollama.com/), to install it, run the following.
+
+   ### Windows
+
+   [Download](https://ollama.com/download/windows)
+
+   ### Mac
+
+   [Download](https://ollama.com/download/mac)
+
+   ### Linux
+
+   ```
+   curl -fsSL https://ollama.com/install.sh | sh
+   ```
+
+2. Install Cria with `pip`.
+
+   ```
+   pip install cria
+   ```
+
+## Advanced Usage
+
+### Custom Models
+
+To run other LLMs, pass them into your `ai` variable.
+
+```python
+import cria
+
+ai = cria.Cria("llama2")
+
+prompt = "Who is the CEO of OpenAI?"
+for chunk in ai.chat(prompt):
+    print(chunk, end="") # The CEO of OpenAI is Sam Altman. He co-founded OpenAI in 2015 with...
+```
+
+You can find available models [here](https://ollama.com/library).
+
+### Streams
+
+Streams are used by default in Cria, but you can turn them off by passing in a boolean for the `stream` parameter.
+
+```python
+prompt = "Who is the CEO of OpenAI?"
+response = ai.chat(prompt, stream=False)
+print(response) # The CEO of OpenAI is Sam Altman!
+```
+
+### Closing
+
+By default, models are closed when you exit the Python program, but closing them manually is a best practice.
+
+```python
+ai.close()
+```
+
+You can also use [`with`](#with-model) statements to close models automatically (recommended).
+
+### Message History
+
+#### Follow-Up
+
+Message history is automatically saved in Cria, so asking follow-up questions is easy.
+
+```python
+prompt = "Who is the CEO of OpenAI?"
+response = ai.chat(prompt, stream=False)
+print(response) # The CEO of OpenAI is Sam Altman.
+
+prompt = "Tell me more about him."
+response = ai.chat(prompt, stream=False)
+print(response) # Sam Altman is an American entrepreneur and technologist who serves as the CEO of OpenAI...
+```
+
+#### Clear Message History
+
+Clear history by running `the clear` method.
+
+```python
+prompt = "Who is the CEO of OpenAI?"
+response = ai.chat(prompt, stream=False)
+print(response) # Sam Altman is an American entrepreneur and technologist who serves as the CEO of OpenAI...
+
+ai.clear()
+
+prompt = "Tell me more about him."
+response = ai.chat(prompt, stream=False)
+print(response) # I apologize, but I don't have any information about "him" because the conversation just started...
+```
+
+#### Passing In Custom Context
+
+You can also create a custom message history, and pass in your own context.
+
+```python
+context = "Our AI system employed a hybrid approach combining reinforcement learning and generative adversarial networks (GANs) to optimize the decision-making..."
+messages = [
+    {"role": "system", "content": "You are a technical documentation writer"},
+    {"role": "user", "content": context},
+]
+
+prompt = "Write some documentation using the text I gave you."
+for chunk in ai.chat(messages=messages, prompt=prompt):
+    print(chunk, end="") # AI System Optimization: Hybrid Approach Combining Reinforcement Learning and...
+```
+
+In the example, instructions are given to the LLM as the `system`. Then, extra context is given as the `user`. Finally, the prompt is entered (as a `user`). You can use any mixture of roles to specify the LLM to your liking.
+
+The available roles for messages are:
+
+- `user` - Pass prompts as the user.
+- `system` - Give instructions as the system.
+- `assistant` - Act as the AI assistant yourself, and give the LLM lines.
+
+The prompt parameter will always be appended to messages under the `user` role, to override this, you can choose to pass in nothing for `prompt`.
+
+### Multiple Models and Parallel Conversations
+
+#### Models
+
+If you are running multiple models or parallel conversations, the `Model` class is also available. This is recommended for most use cases.
+
+```python
+import cria
+
+ai = cria.Model()
+
+prompt = "Who is the CEO of OpenAI?"
+response = ai.chat(prompt, stream=False)
+print(response) # The CEO of OpenAI is Sam Altman.
+```
+
+_All methods that apply to the `Cria` class also apply to `Model`._
+
+#### With Model
+
+Multiple models can be run through a `with` statement. This automatically closes them after use.
+
+```python
+import cria
+
+prompt = "Who is the CEO of OpenAI?"
+
+with cria.Model("llama3") as ai:
+  response = ai.chat(prompt, stream=False)
+  print(response) # OpenAI's CEO is Sam Altman, who also...
+
+with cria.Model("llama2") as ai:
+  response = ai.chat(prompt, stream=False)
+  print(response) # The CEO of OpenAI is Sam Altman.
+```
+
+#### Standalone Model
+
+Or, models can be run traditionally.
+
+```python
+import cria
+
+
+prompt = "Who is the CEO of OpenAI?"
+
+llama3 = cria.Model("llama3")
+response = llama3.chat(prompt, stream=False)
+print(response) # OpenAI's CEO is Sam Altman, who also...
+
+llama2 = cria.Model("llama2")
+response = llama2.chat(prompt, stream=False)
+print(response) # The CEO of OpenAI is Sam Altman.
+
+# Not required, but best practice.
+llama3.close()
+llama2.close()
+
+```
+
+### Generate
+
+Cria also has a `generate` method.
+
+```python
+prompt = "Who is the CEO of OpenAI?"
+for chunk in ai.generate(prompt):
+    print(chunk, end="") # The CEO of OpenAI (Open-source Artificial Intelligence) is Sam Altman.
+
+promt = "Tell me more about him."
+response = ai.generate(prompt, stream=False)
+print(response) # I apologize, but I think there may have been some confusion earlier. As this...
+```
+
+### Running Standalone
+
+When you run `cria.Cria()`, an `ollama` instance will start up if one is not already running. When the program exits, this instance will terminate.
+
+To prevent this behavior, either run your own `ollama` instance in another terminal, or run a managed subprocess.
+
+#### Running Your Own Ollama Instance
+
+```bash
+ollama serve
+```
+
+```python
+ai = cria.Cria()
+prompt = "Who is the CEO of OpenAI?"
+
+with cria.Model("llama3") as llama3:
+    response = llama3.generate("Who is the CEO of OpenAI?", stream=False)
+    print(response)
+```
+
+#### Running A Managed Subprocess (Reccomended)
+
+```python
+ai = cria.Cria(standalone=True, close_on_exit=False)
+prompt = "Who is the CEO of OpenAI?"
+
+# Ollama will already be running.
+
+with cria.Model("llama2") as llama2:
+    response = llama2.generate("Who is the CEO of OpenAI?", stream=False)
+    print(response)
+
+with cria.Model("llama3") as llama3:
+    response = llama3.generate("Who is the CEO of OpenAI?", stream=False)
+    print(response)
+
+quit()
+# Olama will keep running, and be used the next time this program starts.
+```
+
+## Contributing
+
+If you have a feature request, feel free to make an issue!
+
+Contributions are highly appreciated.
+
+## License
+
+[MIT](./LICENSE.md)
