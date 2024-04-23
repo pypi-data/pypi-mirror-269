@@ -1,0 +1,5 @@
+[plover.extension]
+play_sound = plover_sound.extension:PlaySounds
+
+[plover.gui.qt.tool]
+plover_sound.tool = plover_sound.tool:PloverSoundConfig
