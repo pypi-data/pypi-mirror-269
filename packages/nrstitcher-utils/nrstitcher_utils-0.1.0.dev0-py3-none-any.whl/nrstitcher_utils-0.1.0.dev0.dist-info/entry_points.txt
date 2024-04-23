@@ -1,0 +1,2 @@
+[console_scripts]
+nrs-config = nrstitcher_utils.app.nrs_config:main
