@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: koenigsberg
+Version: 0.1.8
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# koenigsberg
+A library for graph algorithms
+
