@@ -1,0 +1,28 @@
+PackageName: {{ package.name }}
+SPDXID: SPDXRef-{{ package.uuid }}
+PackageComment: <text>PURL is {{ package.purl }}  </text>
+ExternalRef: PACKAGE-MANAGER purl {{ package.purl }}
+PackageVersion: {{ package.version }}
+PackageSupplier: NOASSERTION
+{% if package.is_root -%}
+Relationship: SPDXRef-DOCUMENT DESCRIBES SPDXRef-{{ package.uuid }}
+{% for submodule in submodules -%}
+Relationship: SPDXRef-{{ package.uuid }} CONTAINS {{ submodule.uuid }}
+{% endfor -%}
+{% endif -%}
+{% if package.requires|length == 0 -%}
+Relationship: SPDXRef-{{ package.uuid }} DEPENDS_ON NOASSERTION
+{% else -%}
+{%- for pkg in package.requires -%}
+Relationship: SPDXRef-{{ package.uuid }} DEPENDS_ON {{ pkg }}
+{% endfor -%}
+{% endif -%}
+{%- for pkg in package.recommended_by -%}
+Relationship: SPDXRef-{{ package.uuid }} OPTIONAL_DEPENDENCY_OF {{ pkg }}
+{% endfor -%}
+PackageDownloadLocation: NOASSERTION
+FilesAnalyzed: false
+PackageLicenseConcluded: {{ package.licenses }}
+PackageLicenseDeclared: {{ package.licenses }}
+PackageCopyrightText: NOASSERTION
+PackageHomePage: {{ package.homepage }}
