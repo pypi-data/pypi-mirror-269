@@ -1,0 +1,10 @@
+datapath/__init__.py,sha256=fiPxuNVdiF2_BkivIkD7nLV9aajLGlOi1uvXMlJLA_4,55
+datapath/path.py,sha256=cW42FWKsFTKuVkR2PMXh3YQiYdbL6HuuT0TxiE2nM-Y,1417
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=r9lqsXBHoz6VAHUvQbYrGJCEtrSWz015jdKCzLK2oq0,181
+tests/test_path.py,sha256=ZxNQNzl3DnhdkqBDENqtEp6baras-Mp4m_PPDsSnX4w,6050
+datapath-0.0.1.dist-info/LICENSE,sha256=Jxm0PlpeYeiIjb3xVa2-APUC_1TsXJcARYSDJnS-E6s,1068
+datapath-0.0.1.dist-info/METADATA,sha256=ZwT6sZ2BB5qHJaj1i_fjl05g2msC-x7DbXDLMnHAq1Q,4544
+datapath-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+datapath-0.0.1.dist-info/top_level.txt,sha256=A41ykm3AQ3Aco2kAIb6YiTeU4BNKOIpkhs4_xbWrlFU,15
+datapath-0.0.1.dist-info/RECORD,,
