@@ -1,0 +1,2 @@
+[console_scripts]
+stepm = step_machine.cli:cli

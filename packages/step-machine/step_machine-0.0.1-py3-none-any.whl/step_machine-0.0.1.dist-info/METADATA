@@ -1,0 +1,7 @@
+Metadata-Version: 2.3
+Name: step_machine
+Version: 0.0.1
+Author-email: Hao Wu <haowu@dataset.sh>
+Requires-Python: >=3.11
+Requires-Dist: click~=8.1.7
+Requires-Dist: pydantic~=2.0.0
