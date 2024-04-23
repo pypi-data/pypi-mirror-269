@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+odoo_rpc_helper/__init__.py
+odoo_rpc_helper/rpc_helpers.py
+odoo_rpc_helper/test.py
+odoo_rpc_helper.egg-info/PKG-INFO
+odoo_rpc_helper.egg-info/SOURCES.txt
+odoo_rpc_helper.egg-info/dependency_links.txt
+odoo_rpc_helper.egg-info/top_level.txt
