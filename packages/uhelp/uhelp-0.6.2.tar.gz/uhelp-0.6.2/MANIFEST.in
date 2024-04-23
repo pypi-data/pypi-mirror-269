@@ -1,0 +1,8 @@
+#recursive-include directory_components *.json *.png *.svg *.ini *.py *.txt *.bin *.md
+recursive-include uhelp/ *.json *.ini *.txt *.md
+recursive-include uhelp/images *.png
+recursive-include uhelp/rich_theme_manager *
+recursive-include uhelp/pages *
+
+#exclude
+recursive-exclude devdeb *

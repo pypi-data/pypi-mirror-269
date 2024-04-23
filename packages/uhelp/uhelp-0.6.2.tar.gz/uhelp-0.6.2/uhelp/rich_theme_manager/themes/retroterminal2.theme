@@ -1,0 +1,36 @@
+[metadata]
+name = retroterminal2
+description = retro orange terminal
+tags = retroorangeterm
+inherit = True
+
+[styles]
+codez = #000000 on #ffd400
+danger = bold red
+info = #ffd400
+markdown.block_quote = #ffd400
+markdown.code = #000000 on #ffd400
+markdown.code_block = cyan on black
+markdown.em = italic
+markdown.emph = italic
+markdown.h1 = bold
+markdown.h1.border = none
+markdown.h2 = bold underline
+markdown.h3 = bold
+markdown.h4 = bold dim
+markdown.h5 = underline
+markdown.h6 = italic
+markdown.h7 = dim italic
+markdown.hr = #ffd400
+markdown.item = none
+markdown.item.bullet = bold #ffd400
+markdown.item.number = bold #ffd400
+markdown.link = #ffd400
+markdown.link_url = underline #ffd400
+markdown.list = cyan
+markdown.paragraph = none
+markdown.strong = bold
+markdown.text = none
+title = #ffd400
+usage = #ffd400
+warning = bold magenta
