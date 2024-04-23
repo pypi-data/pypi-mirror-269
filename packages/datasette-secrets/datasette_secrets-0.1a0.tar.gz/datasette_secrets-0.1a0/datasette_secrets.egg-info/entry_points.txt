@@ -1,0 +1,2 @@
+[datasette]
+secrets = datasette_secrets

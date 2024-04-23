@@ -1,0 +1,6 @@
+datasette>=1.0a13
+cryptography
+
+[test]
+pytest
+pytest-asyncio
