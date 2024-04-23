@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pika_rabbitmq.py
+setup.py
+Flask_PikaMQ.egg-info/PKG-INFO
+Flask_PikaMQ.egg-info/SOURCES.txt
+Flask_PikaMQ.egg-info/dependency_links.txt
+Flask_PikaMQ.egg-info/not-zip-safe
+Flask_PikaMQ.egg-info/requires.txt
+Flask_PikaMQ.egg-info/top_level.txt
