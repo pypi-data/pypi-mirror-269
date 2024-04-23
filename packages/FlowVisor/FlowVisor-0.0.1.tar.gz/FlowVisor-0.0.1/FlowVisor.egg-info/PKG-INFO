@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: FlowVisor
+Version: 0.0.1
+Summary: Visualize the flow of your python code.
+Home-page: UNKNOWN
+Author: cophilot (Philipp B.)
+Author-email: <info@philipp-bonin.com>
+License: UNKNOWN
+Keywords: python,flow,visualize,code,flowvisor,neuralnine
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Visualize the flow of your python code.
+
