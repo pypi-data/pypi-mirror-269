@@ -1,0 +1,2 @@
+[console_scripts]
+gistrun = gistrun.cli:gistrun
