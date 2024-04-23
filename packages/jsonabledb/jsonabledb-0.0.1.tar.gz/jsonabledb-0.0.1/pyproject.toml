@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "jsonabledb"
+version = "0.0.1"
+description = "A lightweight document-oriented database based on JSON"
+packages = [
+    {include = "jsonable"}
+]
+authors = ["Yi ZHANG <yizhang.dev@gmail.com>"]
+license = "BSD-3-Clause"
+readme = "README.md"
+homepage = "https://pypi.org/project/jsonabledb"
+repository = "https://github.com/imyizhang/jsonabledb"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
