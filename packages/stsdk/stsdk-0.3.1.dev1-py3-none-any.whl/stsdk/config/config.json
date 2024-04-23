@@ -1,0 +1,25 @@
+{
+    "consul": {
+        "test_addr": "13.231.169.10:8500",
+        "pre_addr": "13.115.30.37:8500",
+        "stage_addr": "54.238.77.114:8500",
+        "prod_addr": "52.196.85.180:8500",
+        "prod_token": "e95b599e-166e-7d80-08ad-aee76e7ddf19"
+    },
+    "log": {
+        "path": "../logs"
+    },
+    "metric": {
+        "port": 8000
+    },
+    "aliyun_sls": {
+        "endpoint": "log-global.aliyuncs.com",
+        "access_key_id": "LTAI5tSjX5nN84be21cKFPGK",
+        "access_key": "2ElSlif6VdPXOpoKRW7mjJ6NWKtFRg",
+        "project": "st-sdk-log",
+        "log_store": "st-sdk-log-pre",
+        "topic": "topic_name",
+        "source": "source_name",
+        "time_interval": 15
+    }
+}
