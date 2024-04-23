@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: voila-sepal-ui
+Version: 0.3.2
+Summary: A sepal-ui template for Voila
+Home-page: https://github.com/dfguerrerom/voila-sepal-ui
+Author: Daniel Guerrero Machado
+Author-email: dfgm2006@gmail.com
+Keywords: ipython,jupyter,widgets,voila,sepal-ui
+Requires-Dist: voila<0.5,>=0.3.2
