@@ -1,0 +1,8 @@
+README.md
+setup.py
+hello/__init__.py
+hello/main.py
+rmx_hello.egg-info/PKG-INFO
+rmx_hello.egg-info/SOURCES.txt
+rmx_hello.egg-info/dependency_links.txt
+rmx_hello.egg-info/top_level.txt
