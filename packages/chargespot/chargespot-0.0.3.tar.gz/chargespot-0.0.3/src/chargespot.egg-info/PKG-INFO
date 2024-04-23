@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: chargespot
+Version: 0.0.3
+Summary: api test tools
+Home-page: 
+Author: chargespot
+Author-email: 
+Keywords: api test,automation,testing,chargespot
+Platform: any
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: configobj
+Requires-Dist: pyyaml
+Requires-Dist: click
+Requires-Dist: jinja2
+Requires-Dist: pytest
+Requires-Dist: pytest-html
+
+simplify api testing
