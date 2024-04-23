@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: HBA_Fusion
+Version: 1.0.0.0
+Summary: Add a short description here!
+Home-page: https://github.com/pyscaffold/pyscaffold/
+Author: Ben-unbelieveable
+Author-email: 614347533@qq.com
+License: MIT
+Project-URL: Documentation, https://pyscaffold.org/
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+License-File: LICENSE.txt
+Requires-Dist: importlib-metadata; python_version < "3.8"
+Provides-Extra: testing
+Requires-Dist: setuptools; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+
+# HBA
+地中海贫血（以下简称“地贫”）是一种常见的溶血性单基因隐性遗传病，主要是由于珠蛋白基因缺陷导致珠蛋白链合成减少或缺如而引起的 。我国长江以南地区，特别是广西、广东、云南、海南是该病的高发区。同时目前已经发现非常多具有代表性的地贫类型，比如常见的 -α<sup>3.7</sup>、-α<sup>4.2</sup>、--<sup>SEA</sup>、和—<sup>THAI</sup> 都是比较常见的类型地中海贫血亚型。
+
+导致地贫表型的 α２ 珠蛋白融合基因于2013年首次报道［1］,α２ 珠蛋白融合基因是在配子生成过程中，α２ 珠蛋白基因与 Ψα１（α-珠蛋白假基因）发生了片段重组［1］，改变了α２ 珠蛋白基因的 ３′ＵＴＲ，并引起了多聚腺苷酸信号突变，从而产生广泛的 α２ 珠蛋白基因转录本，引起α＋－地贫。
+
+结合相关研究报道，α２ 珠蛋白基因和Ψα１发生片段重组后会在HBA2基因下游3’段引入一段Ψα１的序列，而引入的片段和HBA2基因的原3’端片段存在几个碱基序列的差异。
+
+>HBA2基因的781-835
+TCCCCTCCTT  GC**A**CC**G**GC**C**C  TTCCTG**G**TCT  TTGAAT**A**AAG  TC**T**GAGT**G**GG  CAGCA
+>HBA2和Ψα１重组后的融合基因对应序列
+TCCCCTCCCT  GC**C**CC**A**GC**A**C  TTCCTG**A**TCT  TTGAAT**G**AAG  TC**C**GAGT**A**GG  CAGCA
+
+所以在本发明中，我们通过分析这几个特定的差异位点，来对HBA2是否发生融合基因进行准确的检测。
+
+## 使用方法：
+```shell
+python HBA2_fusion.py -bam  $sample.bam -ref Hg19.fa -out $sample.output.tsv
+```
+- cfg   HBA2_fusion.cfg 见本项目仓库，因位点固定无需进行额外调整/配置
+- bam   待检测的bam文件，需为bam格式。
+- ref   参考基因组，需为fa格式。
+- out   输出文件，记录样本分析结果。
+- genome  参考基因组版本，默认Hg19，支持（Hg19 和 GRCh38)
+- cut   位点深度阈值，默认为10，只有深度支持达到阈值的位点才会纳入最终分析。
+
+## 结果格式说明
+| sample                                                 | c.789 | c.793 | c.796 | c.799 | c.807 | c.817 | c.823 | HBA2-Fusion |
+| ------------------------------------------------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----------- |
+| pos_sample/200413_I085_V300039393_L4_C243-21.final.bam | 0.302 | 0.311 | 0.29  | 0.28  | 0.266 | 0.194 | 0.142 | True\|0.255 |
+
+第一列为分析的Bam文件名称；
+第2~8列，为影响HBA分析的位点频率；
+第九列，是样本最终的HBA2融合基因的判定结果，和融合基因频率。
+
+
