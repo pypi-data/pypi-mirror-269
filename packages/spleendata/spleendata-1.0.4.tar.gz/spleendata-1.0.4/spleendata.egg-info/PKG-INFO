@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: spleendata
+Version: 1.0.4
+Summary: A ChRIS FS plugin to download a set of spleen data
+Home-page: https://github.com/rudolphpienaar/pl-spleendata
+Author: FNNDSC
+Author-email: dev@babyMRI.org
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Provides-Extra: none
+Provides-Extra: dev
+License-File: LICENSE

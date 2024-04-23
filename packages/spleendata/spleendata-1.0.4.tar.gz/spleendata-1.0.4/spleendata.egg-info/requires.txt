@@ -1,0 +1,6 @@
+chris_plugin
+
+[dev]
+pytest~=7.1
+
+[none]
