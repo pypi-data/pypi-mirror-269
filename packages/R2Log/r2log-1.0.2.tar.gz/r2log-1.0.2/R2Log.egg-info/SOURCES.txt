@@ -1,0 +1,10 @@
+LICENSE
+R2Log.py
+README.md
+pyproject.toml
+R2Log.egg-info/PKG-INFO
+R2Log.egg-info/SOURCES.txt
+R2Log.egg-info/dependency_links.txt
+R2Log.egg-info/requires.txt
+R2Log.egg-info/top_level.txt
+tests/test_exelog.py
