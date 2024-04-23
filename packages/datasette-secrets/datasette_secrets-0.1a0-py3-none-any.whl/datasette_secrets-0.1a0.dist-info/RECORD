@@ -1,0 +1,10 @@
+datasette_secrets/__init__.py,sha256=0hepqbZLfwETYcTA6fU2raP3F1igb_Z5OaqwdjByCYY,9514
+datasette_secrets/hookspecs.py,sha256=57v14e2Y4o5eZyAgCLpuzp1KZn7CjwLXeKwfq6Zvux8,205
+datasette_secrets/templates/secrets_index.html,sha256=Zr8wmVngxzABB69hM052W8IOHgGIlJLM9KKnDxAYmQI,1510
+datasette_secrets/templates/secrets_update.html,sha256=SQs_TmrCw-eanePGiEnRiqH6OKy_G5iJJcEfg_z6RFg,1463
+datasette_secrets-0.1a0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+datasette_secrets-0.1a0.dist-info/METADATA,sha256=s_AUhTHJOv70M7vKmu-FzEy37FA5DwNpFW76Y7vs0rA,6179
+datasette_secrets-0.1a0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+datasette_secrets-0.1a0.dist-info/entry_points.txt,sha256=2083uWbPpGntxRulh8_hVaelQO-xdtjedG6rGzwPUH0,40
+datasette_secrets-0.1a0.dist-info/top_level.txt,sha256=ZBJKQk-DdDU9Vnwu4x79X9aaEulwGJMoLx62IZJPDaQ,18
+datasette_secrets-0.1a0.dist-info/RECORD,,
