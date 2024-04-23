@@ -1,0 +1,95 @@
+name: ci-test
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    tags:
+      - '*'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target: [x86_64, x86, aarch64]
+        python-version: ["3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: extractions/setup-just@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: download test data
+        run: just download-data
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Rust latest
+        run: rustup update
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+
+      # poetry update will install all dependencies for our package, as well as maturin, which we use as our build
+      # back-end
+      - name: Poetry install
+        run: poetry install
+        working-directory: ${{ github.workspace }}
+
+      - name: maturin develop
+        run: poetry run maturin develop
+        working-directory: ${{ github.workspace }}
+
+      - name: poetry pytest
+        run: poetry run pytest --cov
+        working-directory: ${{ github.workspace }}
+
+  macos:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        target: [x86_64, aarch64]
+        python-version: ["3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: extractions/setup-just@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: download test data
+        run: just download-data
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Rust latest
+        run: rustup update
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+
+      # poetry update will install all dependencies for our package, as well as maturin, which we use as our build
+      # back-end
+      - name: Poetry install
+        run: poetry install
+        working-directory: ${{ github.workspace }}
+
+      - name: maturin develop
+        run: poetry run maturin develop
+        working-directory: ${{ github.workspace }}
+
+      - name: poetry pytest
+        run: poetry run pytest --cov
+        working-directory: ${{ github.workspace }}
