@@ -1,0 +1,10 @@
+.mina/server.toml,sha256=BVBJdKennJr1t6VwaAonA8YknEM3jkEqPJcLkq-vSp4,1002
+satori/server/__init__.py,sha256=ynzsby5sXWWildjYR0i5vcmxnVKePm4rkhtNTSb45eY,14973
+satori/server/adapter.py,sha256=l2-pY5AEVxjIgRNiQBUe0opQ4h2kWqvAdEh7xPnbIKA,850
+satori/server/conection.py,sha256=c-2A_5udxqE-jCess-dQaI_SzGtwyOiFdv2ouQ7hIAw,1043
+satori/server/model.py,sha256=e97nPXVai3jIWmfgNvpTBbTmZbuSuGz6oFSr0aLkOwY,895
+satori/server/route.py,sha256=_xIp8jVNkJpTsFiCaAJQzr5BuWZgHJxgfIFRApKkrlg,5171
+satori_python_server-0.11.5.dist-info/METADATA,sha256=Kk6UPsLOj1yvjkYjMb5Pg3YLgdb6DnUO-g4XC-g12V0,3745
+satori_python_server-0.11.5.dist-info/WHEEL,sha256=7sv5iXvIiTVJSnAxCz2tGBm9DHsb2vPSzeYeT7pvGUY,90
+satori_python_server-0.11.5.dist-info/licenses/LICENSE,sha256=2EDswKd1M1648judap8BEEwp3Jz6IpfFP2wYVdU0Y2o,1069
+satori_python_server-0.11.5.dist-info/RECORD,,
