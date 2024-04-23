@@ -1,0 +1,100 @@
+[tool.poetry]
+name = "saas-api"
+version = "0.1.0"
+description = "API enabling Python applications connecting to Exasol database SaaS instances and using their SaaS services"
+packages = [ {include = "exasol"}, ]
+authors = [ "Christoph Kuhnke <christoph.kuhnke@exasol.com>" ]
+maintainers = [ "Christoph Kuhnke <christoph.kuhnke@exasol.com>" ]
+classifiers = [
+   "Programming Language :: Python :: 3",
+   "Development Status :: 3 - Alpha",
+   "License :: OSI Approved :: MIT License",
+]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.urls]
+"Homepage" = "https://github.io/exasol/saas-api-python"
+"Documentation" = "https://github.io/exasol/saas-api-python"
+"Source" = "https://github.io/exasol/saas-api-python"
+"Issues" = "https://github.io/exasol/saas-api-python/issues"
+
+
+[tool.poetry.dependencies]
+python = ">=3.8.0,<4.0"
+requests = "^2.31.0"
+types-requests = "^2.31.0.6"
+ifaddr = "^0.2.0"
+
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.1"
+pytest-mock = "^3.7.0"
+exasol-toolbox = "^0.8.0"
+openapi-python-client = "^0.19.1"
+
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+
+testpaths = [
+    "test"
+]
+
+[tool.coverage.run]
+relative_files = true
+source = [
+    "exasol",
+]
+
+[tool.coverage.report]
+fail_under = 15
+
+
+[tool.black]
+line-length = 88
+verbose = false
+include = "\\.pyi?$"
+
+
+[tool.isort]
+profile = "black"
+force_grid_wrap = 2
+
+
+[tool.pylint.master]
+fail-under = 7.5
+output-format = "colorized,json:.lint.json,text:.lint.txt"
+ignore = [
+    "noxfile.py",
+    "version.py",
+    "noxconfig.py",
+]
+ignore-paths = [
+    ".*/exasol/saas/client/openapi/.*",
+]
+
+
+[[tool.mypy.overrides]]
+module = [
+    "exasol.toolbox.nox.tasks",
+    "exasol.saas.client.openapi.*",
+    "test.conftest.*",
+    "test.*",
+    ]
+ignore_errors = true
+ignore_missing_imports = true
+
+
+[tool.pylint.format]
+max-line-length = 88
+max-module-lines = 800
+
+
+[tool.poetry.scripts]
+tbx = 'exasol.toolbox.tools.tbx:CLI'
