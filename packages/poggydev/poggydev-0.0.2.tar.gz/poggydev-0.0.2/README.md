@@ -1,0 +1,49 @@
+# 👄 Poggy
+> "Create an assistant using Poggy Voice API?, it's easy!" - Piero Molino
+## 📖 Description of Package
+Poggy is a Python package that allows you interact with the Poggy Voice API., In this package, you can create an assistant or a virtual assistant using the Poggy Voice API. just follow the steps below:
+## 📦 Installation
+To install the package, you can use pip:
+```
+pip install poggy
+# or donation:
+pip install poggy-donate-sdk # if you want to donate
+```
+## 📄 Note:
+If you want to use the donation version, you must have an Key and Secret in the Poggy Voice API SDK, Example:
+```py
+from poggy.console import PoggyDonate
+from poggy import Voice
+print(PoggyDonate.get_donate_info()) # >> "Your donation is: 0.00"
+# Checkout:
+print(PoggyDonate.checkout(amount=1.00)) # >> "Your donation link: https://checkout.stripe.com/c/pay/cs_test_a1V2VZPZb2O5a5d7dK1e0V1Zb2O5a5d7dK1e0V1Zb2O5a5d7dK1e0V1Zb2O5a5d7..."
+# Error:
+class MyVoiceAssistant(PoggyDonate):
+   system_name = "My Voice Assistant"
+   system_id = "my-voice-assistant"
+   voice = Voice()
+   def __init__(self):
+      super().__init__()
+      self.voice.say("Hello, I'm My Voice Assistant")
+# Output:
+# DonateError: Uh oh, you don't have any donation to use this class
+```
+👄 Poggy will stop speak if you don't have any donation.
+## 👄 Usage
+### 📄 Create an assistant
+```py
+from poggy import Voice
+from poggy.console import PoggyHTML, PoggyState
+
+class MyVoiceAssistant(PoggyHTML):
+   voice = Voice()
+   voiceState
+   def __init__(self):
+      super().__init__()
+      self.html_title = "My Voice Assistant"
+      self.voiceState.microphone = True
+      self.voiceState.voice = "en-US-JennyNeural"
+      self.voiceState.voice_name = "Jenny"
+if __name__ == "__main__":
+   MyVoiceAssistant().run()
+```
