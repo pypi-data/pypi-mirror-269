@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    >
+
+  <plone:service
+      method="GET"
+      factory=".faq_structure.FaqStructureGet"
+      for="redturtle.faq.interfaces.IFaqFolder"
+      permission="zope2.View"
+      name="@faq-structure"
+      />
+
+  <adapter
+      factory=".faq_structure.FaqStructure"
+      name="faq-structure"
+      />
+
+</configure>
