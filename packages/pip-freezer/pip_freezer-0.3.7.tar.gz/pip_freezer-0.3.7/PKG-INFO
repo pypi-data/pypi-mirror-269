@@ -1,0 +1,131 @@
+Metadata-Version: 2.1
+Name: pip-freezer
+Version: 0.3.7
+Summary: For the organized, but lazy developer, meaning that you'll update a package, but you don't want to be bothered with updating the requirements file. Pip Freezer pins packages no matter which requirements file they live in and maintains your comments and line breaks.
+Author-email: Tim Santor <tsantor@xstudios.com>
+Project-URL: Repository, https://github.com/tsantor/pip-freezer.git
+Project-URL: Issues, https://github.com/tsantor/pip-freezer/issues
+Project-URL: Changelog, https://github.com/tsantor/pip-freezer/blob/master/HISTORY.md
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.md
+Requires-Dist: click
+Provides-Extra: dev
+
+# Pip Freezer
+
+![Coverage](https://img.shields.io/badge/coverage-96%25-brightgreen)
+
+## Overview
+
+For the organized, but lazy developer, meaning that you'll update a package, but you don't want to be bothered with updating the requirements file. Pip Freezer pins packages no matter which requirements file they live in and maintains your comments and line breaks.
+
+> NOTE: Plays nice with [Django Cookiecutter](https://github.com/pydanny/cookiecutter-django).
+
+## Background
+
+We all have our preferences with how we manage package dependencies. There is the awesome [Poetry](https://python-poetry.org/), but there are still those of us who like to manually manage requirements with comments in various files such as `requirements.txt`, `requirements_dev.txt`. `requirements_test.txt`, or even `requirements/base.txt`, `requirements/local.txt` and `requirements/production.txt` or other similar variations.
+
+Simply running `pip freeze > requirements.txt` is not of much use if you like to be organized and only pin what you've manually defined as a "top-level" dependency (and not its sub-dependencies).
+
+Running `pipfreezer` will only pin packages defined in your requirements files.
+
+> NOTE: `pipfreezer` does not do any upating of packages itself, you can use `pip install -U package-name` or something like [pip-review](https://pypi.org/project/pip-review/). You would manually update packages and then run `pipfreezer` to auto-update those in your requirements files.
+
+## Installation
+
+To install Pip Freezer, simply use pip:
+
+```bash
+$ python3 -m pip install pip-freezer
+```
+
+## Usage
+
+In the root of your project, run:
+
+```bash
+# Freeze only packages defined in your requirements files.
+pipfreezer freeze
+
+# Update only the packages defined in your requirements files.
+pipfreezer upgrade
+```
+
+> **NOTE:** For help run `pipfreezer --help` or for a specific command run `pipfreezer {command} --help`.
+
+> **NOTE:** `pipfreezer` will **not** add or pin packages that you **have not already defined** in one of your requirements files. **This is intentional**.
+
+## Development
+
+```bash
+make env
+make pip_install
+make pip_install_editable
+```
+
+## Testing
+
+```bash
+make pytest
+make coverage
+make open_coverage
+```
+
+## Issues
+
+If you experience any issues, please create an [issue](https://github.com/tsantor/pip-freezer/issues) on Github.
+
+# History
+
+All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
+
+## 0.3.7 (2024-04-22)
+
+- Moved from `argparse` to `click`.
+- Removed `colorama`
+
+## 0.3.6 (2024-04-11)
+
+- Update to using `ruff` and added tests.
+
+## 0.3.5 (2023-06-23)
+
+- Fixed typo in pip installation command
+
+## 0.3.4 (2021-09-14)
+
+- Changed from `pip freeze` to `pip list --format json` for more reliable parsing
+
+## 0.3.3 (2021-09-13)
+
+- Fixed encountering `-r` in `pipfreezer-upgrade`
+
+## 0.3.2 (2021-09-13)
+
+- Add experimental `pipfreezer-upgrade` command which only upgrades packages listed in requirements files.
+
+## 0.3.1 (2021-09-10)
+
+- Too hasty. Remove some print statements.
+
+## 0.3.0 (2021-09-10)
+
+- Major re-release. This package behaves **NOTHING** like the previous.
+
+## 0.2.0 (2018-02-25)
+
+- Code cleanup and Python 2/3 support.
+
+## 0.1.0 (2017-12-04)
+
+- First release on PyPI.
