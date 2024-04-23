@@ -1,0 +1,14 @@
+fakemake/__init__.py,sha256=2fKdX_SZ1CZZcakR8T424XziU72sUefcvH0an8x4EFI,56
+fakemake/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fakemake/app/database.py,sha256=Lvhjncstb2KE-cC2xFS_pTgypanQ-ceAGw3Ht6MNAwg,488
+fakemake/generation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fakemake/generation/create_fake_data.py,sha256=kNvT5QTTeQhDQM9Ce97NHfR51zWmmU3q0jgUS0SOt2w,3858
+fakemake/generation/create_persist_all.py,sha256=lvc9zfp6nAMCGZTXiaXeFNJdsL42Ck_-7ZeOkVn_AJs,6034
+fakemake/generation/run_fake_generator.py,sha256=r1lB24PIdUXFvlfj7KjozPVdIYicf96K0r7m0JKMX3Q,649
+fakemake/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fakemake/utils/record_keeper.py,sha256=vByGjonzSdpX155O6qiH3fGUfxx4JHF7dfhN-L8Z2-Y,33
+fakemake-0.0.3.dist-info/LICENSE,sha256=l6cG_WgJ6KOeGdpwDnTAse-gKk9xFUcLZWm4xkT5xxo,1073
+fakemake-0.0.3.dist-info/METADATA,sha256=lvXkPpYPLgKH1RszhDfNbKc0GgGSyKQnxvlBJ0ZRoSs,2112
+fakemake-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fakemake-0.0.3.dist-info/top_level.txt,sha256=PBYqq8ZeplDNUch_NYHcd_HKE7KxLOkt4DmvHsvC83A,9
+fakemake-0.0.3.dist-info/RECORD,,
