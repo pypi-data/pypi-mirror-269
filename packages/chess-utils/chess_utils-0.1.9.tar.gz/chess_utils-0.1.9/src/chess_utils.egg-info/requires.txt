@@ -1,0 +1,7 @@
+chess
+pydantic
+lazy-loader
+
+[test]
+pytest
+hypothesis
