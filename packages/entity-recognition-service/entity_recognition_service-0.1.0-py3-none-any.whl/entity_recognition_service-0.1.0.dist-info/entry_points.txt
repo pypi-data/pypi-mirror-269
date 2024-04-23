@@ -1,0 +1,2 @@
+[console_scripts]
+entity-recognition = entity_recognition.cli:main
