@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_helpdesk_type_task_configurator,helpdesk_type.task - configurator,model_helpdesk_type_task,ssi_helpdesk.helpdesk_type_group,1,1,1,1
+access_helpdesk_type_task_all,helpdesk_type.task - all user,model_helpdesk_type_task,,1,0,0,0
