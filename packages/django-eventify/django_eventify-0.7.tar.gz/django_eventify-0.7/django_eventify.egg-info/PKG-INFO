@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: django-eventify
+Version: 0.7
+Summary: Event management utility classes
+Home-page: https://github.com/Rahulpoppad/django-eventify
+Download-URL: https://github.com/Rahulpoppad/django-eventify/archive/refs/tags/v_01.tar.gz
+Author: Poppad Rahul
+Author-email: rahulpoppad.1999@gmail.com
+License: MIT
+Keywords: EVENT,BOOKING
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE.txt
