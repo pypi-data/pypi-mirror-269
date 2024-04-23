@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+ozoneai/__init__.py
+ozoneai/connector.py
+ozoneai/embeder.py
+ozoneai/exception.py
+ozoneai/models.py
+ozonetel_ai.egg-info/PKG-INFO
+ozonetel_ai.egg-info/SOURCES.txt
+ozonetel_ai.egg-info/dependency_links.txt
+ozonetel_ai.egg-info/requires.txt
+ozonetel_ai.egg-info/top_level.txt
