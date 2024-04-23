@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+spectrae/__init__.py
+spectrae/dataset.py
+spectrae/independent_set_algo.py
+spectrae/spectra.py
+spectrae/utils.py
+spectrae.egg-info/PKG-INFO
+spectrae.egg-info/SOURCES.txt
+spectrae.egg-info/dependency_links.txt
+spectrae.egg-info/requires.txt
+spectrae.egg-info/top_level.txt
