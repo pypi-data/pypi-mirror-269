@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: obj4Alog
+Version: 0.0.6
+Summary: obj4Alog is an event log base library used to build the petri net models of any event log. It also come with the functionality to build abstract model of event log.
+Author: Faizan Khan
+Requires-Python: >=3.8.0
