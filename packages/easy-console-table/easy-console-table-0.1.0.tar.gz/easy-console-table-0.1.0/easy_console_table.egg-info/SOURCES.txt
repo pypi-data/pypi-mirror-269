@@ -1,0 +1,16 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+easy_console_table/__init__.py
+easy_console_table/horizontal_table.py
+easy_console_table/table_abc.py
+easy_console_table/table_abc_s_entry.py
+easy_console_table/table_error.py
+easy_console_table/two_entry_table.py
+easy_console_table/utils_function.py
+easy_console_table/vertical_table.py
+easy_console_table.egg-info/PKG-INFO
+easy_console_table.egg-info/SOURCES.txt
+easy_console_table.egg-info/dependency_links.txt
+easy_console_table.egg-info/top_level.txt
