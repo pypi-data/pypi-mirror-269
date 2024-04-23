@@ -1,0 +1,24 @@
+[project]
+name = "intervalpylib"
+version = "0.1.1"
+authors = [{ name = "Schukark", email = "schukark2004@gmail.com" }]
+description = "An interval solver for robots' workspace area"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[project.urls]
+Homepage = "https://github.com/schukark/intervalpylib"
+Issues = "https://github.com/schukark/intervalpylib/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

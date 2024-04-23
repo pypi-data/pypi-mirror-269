@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/intervalpylib/AreaCalculator.py
+src/intervalpylib/Solvers.py
+src/intervalpylib/SymbolicEquationSolver.py
+src/intervalpylib/__init__.py
+src/intervalpylib.egg-info/PKG-INFO
+src/intervalpylib.egg-info/SOURCES.txt
+src/intervalpylib.egg-info/dependency_links.txt
+src/intervalpylib.egg-info/requires.txt
+src/intervalpylib.egg-info/top_level.txt
