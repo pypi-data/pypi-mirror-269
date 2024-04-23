@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: aadharverify
+Version: 0.1
+Summary: A library that verifies the aadhar
+Author: Ritesh Rout
+Author-email: x21127069@student.ncirl.ie
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
