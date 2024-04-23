@@ -1,0 +1,63 @@
+from typing import Optional
+
+from libs.database import DatabaseHandler
+from sqlalchemy import select
+
+from .models import ${module_name_capital}Model
+from .schemas import Create${module_name_capital}Schema, ${module_name_capital}UpdateSchema
+
+
+class ${module_name_capital}Repository:
+
+    database_handler = DatabaseHandler()
+
+    def new_${module_name}(self, user_id: int, ${module_name}_data: Create${module_name_capital}Schema) -> ${module_name_capital}Model:
+        with self.database_handler as session:
+            ${module_name} = ${module_name_capital}Model(user_id=user_id, **${module_name}_data)
+            session.add(${module_name})
+            session.expire_on_commit = False
+            session.commit()
+            return ${module_name}
+
+    def get_${module_name}(self, ${module_name}_id: int) -> Optional[${module_name_capital}Model]:
+        with self.database_handler as session:
+            query = select(${module_name_capital}Model.id == ${module_name}_id)
+            ${module_name} = session.scalar(query)
+            session.expire_on_commit = False
+            session.commit()
+            return ${module_name}
+
+    def get_all_${module_name}s(self) -> list[${module_name_capital}Model]:
+        with self.database_handler as session:
+            query = select(${module_name_capital}Model)
+            ${module_name}s = session.scalars(query).all()
+            session.expire_on_commit = False
+            session.commit()
+            return ${module_name}s
+
+    def delete_${module_name}(self, ${module_name}_id: int, user_id: int) -> Optional[${module_name_capital}Model]:
+        with self.database_handler as session:
+            query = select(${module_name_capital}Model.id == ${module_name}_id)
+            ${module_name} = session.scalar(query)
+            if ${module_name}:
+                session.delete(${module_name})
+                session.commit()
+            session.expire_on_commit = False
+            session.commit()
+            return ${module_name}
+
+    def update_${module_name}(
+        self, ${module_name}_id: int, ${module_name}_new_data: ${module_name_capital}UpdateSchema
+    ) -> Optional[${module_name_capital}Model]:
+        with self.database_handler as session:
+            query = select(${module_name_capital}Model.id == ${module_name}_id)
+            ${module_name} = session.scalar(query)
+            ${module_name} = ${module_name}(**${module_name}_new_data)
+            if ${module_name}:
+                session.expire_on_commit = False
+                for field, value in ${module_name}_new_data.items():
+                    setattr(${module_name}, field, value)
+                session.add(${module_name})
+                session.commit()
+                session.refresh(${module_name})
+            return ${module_name}

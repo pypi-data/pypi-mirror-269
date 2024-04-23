@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: bife
+Version: 0.1.11
+Summary: 
+Author: Adrien
+Author-email: adrienv.sui@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: jinja2 (>=3.1.3,<4.0.0)
+Requires-Dist: mako (>=1.3.3,<2.0.0)
+Requires-Dist: pick (>=2.2.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Bife
+
+A great CLI to generate code with fastapi and sqlalchemy or sqlmodel for you!
