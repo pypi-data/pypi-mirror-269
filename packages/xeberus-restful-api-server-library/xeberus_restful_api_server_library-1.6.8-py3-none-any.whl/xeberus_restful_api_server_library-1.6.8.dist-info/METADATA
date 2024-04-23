@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: xeberus-restful-api-server-library
+Version: 1.6.8
+Summary: Xeberus RESTful API Server Python Library
+Home-page: https://github.com/majormode/xeberus-restful-api-server-python-library
+License: SEE LICENSE IN <LICENSE.md>
+Keywords: core,library,xeberus,restful,api
+Author: Daniel CAUNE
+Author-email: daniel.caune@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: fabric (>=2.7.0,<3.0.0)
+Requires-Dist: perseus-core-library (>=1.20.3,<2.0.0)
+Requires-Dist: perseus-restful-api-framework (>=1.28.4,<2.0.0)
+Requires-Dist: xeberus-core-library
+Project-URL: Repository, https://github.com/majormode/xeberus-restful-api-server-python-library
+Description-Content-Type: text/markdown
+
+# Xeberus RESTful API Server Python Library
+
+
