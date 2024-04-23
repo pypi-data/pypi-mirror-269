@@ -1,0 +1,119 @@
+[build-system]
+requires = ["setuptools>=61.2", "setuptools-rust"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dulwich"
+description = "Python Git Library"
+readme = "README.rst"
+authors = [{name = "Jelmer Vernooij", email = "jelmer@jelmer.uk"}]
+license = {text = "Apachev2 or later or GPLv2"}
+keywords = ["vcs", "git"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Operating System :: POSIX",
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: Software Development :: Version Control",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "urllib3>=1.25",
+    'typing_extensions;python_version<="3.7"',
+    'setuptools ; python_version >= "3.12"',
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://www.dulwich.io/"
+Repository = "https://www.dulwich.io/code/"
+GitHub = "https://github.com/dulwich/dulwich"
+"Bug Tracker" = "https://github.com/dulwich/dulwich/issues"
+
+[project.optional-dependencies]
+fastimport = ["fastimport"]
+https = ["urllib3>=1.24.1"]
+pgp = ["gpg"]
+paramiko = ["paramiko"]
+
+[project.scripts]
+dulwich = "dulwich.cli:main"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.setuptools]
+packages = [
+    "dulwich",
+    "dulwich.cloud",
+    "dulwich.contrib",
+    "dulwich.tests",
+]
+include-package-data = true
+zip-safe = false
+script-files = [
+    "bin/dul-receive-pack",
+    "bin/dul-upload-pack",
+]
+license-files = ["COPYING"]
+
+[tool.setuptools.dynamic]
+version = {attr = "dulwich.__version__"}
+
+[tool.ruff.lint]
+select = [
+    "ANN",
+    "D",
+    "E",
+    "F",
+    "I",
+    "PIE",
+    "UP",
+    "RSE",
+    "RUF",
+]
+ignore = [
+    "ANN001",
+    "ANN002",
+    "ANN003",
+    "ANN101",  # missing-type-self
+    "ANN102",
+    "ANN201",
+    "ANN202",
+    "ANN204",
+    "ANN205",
+    "ANN206",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D107",
+    "D204",
+    "D205",
+    "D417",
+    "E501",  # line too long
+    "E741",  # ambiguous variable name
+]
+
+[tool.ruff]
+target-version = "py37"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.cibuildwheel]
+environment = {PATH="$HOME/.cargo/bin:$PATH"}
+before-build = "pip install -U setuptools-rust && curl https://sh.rustup.rs -sSf | sh -s -- --profile=minimal -y && rustup show"
+
+[tool.cibuildwheel.linux]
+skip = "*-musllinux_*"
