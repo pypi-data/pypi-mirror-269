@@ -1,0 +1,11 @@
+LICENCE
+README.md
+pyproject.toml
+src/TerMPS/__init__.py
+src/TerMPS/preprocessing_module.py
+src/TerMPS.egg-info/PKG-INFO
+src/TerMPS.egg-info/SOURCES.txt
+src/TerMPS.egg-info/dependency_links.txt
+src/TerMPS.egg-info/entry_points.txt
+src/TerMPS.egg-info/requires.txt
+src/TerMPS.egg-info/top_level.txt

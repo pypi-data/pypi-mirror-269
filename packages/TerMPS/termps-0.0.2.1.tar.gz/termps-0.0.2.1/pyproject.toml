@@ -1,0 +1,39 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TerMPS"
+version = "0.0.2.1"
+authors = [ 
+    { name = "A. Ryazanova"}, {email = "r.ann.1194@gmail.com"},
+    { name = "V. Bogomolov" }, 
+    { name = "M. Varentsov" }, 
+    { name = "A. Medvedev" },
+]
+maintainers = [
+  {name = "V. Stepanenko"}
+]
+description = "Preprocessing system for the TerM (INM RAS-MSU land surface model)"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["land surface data", "aggregation", "modeling"]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23.5", "xarray>=2023.1.0", "netCDF4>=1.6.2"]
+classifiers=[
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "http://tesla.parallel.ru/Ryazanova/TerMPS"
+Documentations = "http://tesla.parallel.ru/Ryazanova/TerMPS/-/wikis/home"
+
+[project.scripts]
+TerMPS-cli = "TerMPS:main_cli"
+
+[project.gui-scripts]
+TerMPS-gui = "TerMPS:main_gui"
+
