@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+AI_Coach_RLL.egg-info/PKG-INFO
+AI_Coach_RLL.egg-info/SOURCES.txt
+AI_Coach_RLL.egg-info/dependency_links.txt
+AI_Coach_RLL.egg-info/top_level.txt
+lib/__init__.py
+lib/manhattan_cafe.py

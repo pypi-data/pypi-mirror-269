@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: AI_Coach_RLL
+Version: 1.0.2
+Summary: An AI coach under construction
+Author: Ruofan Yang
+Author-email: 13688477617@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# AI coach module
+
+
+## Installation
+```shell
+pip3 uninstall AI_Coach_RLL
+pip3 install AI_Coach_Rll
+```
+
+## Table of Contents
+
+- Under Construction
