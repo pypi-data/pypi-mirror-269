@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+streamlit_phone_number/__init__.py
+streamlit_phone_number.egg-info/PKG-INFO
+streamlit_phone_number.egg-info/SOURCES.txt
+streamlit_phone_number.egg-info/dependency_links.txt
+streamlit_phone_number.egg-info/requires.txt
+streamlit_phone_number.egg-info/top_level.txt
+streamlit_phone_number/frontend/dist/index.html
+streamlit_phone_number/frontend/dist/vite.svg
+streamlit_phone_number/frontend/dist/assets/index-5136414f.js
+streamlit_phone_number/frontend/dist/assets/index-9a42c5bf.css
