@@ -1,0 +1,13 @@
+inventree_supplier_panel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inventree_supplier_panel/meta_access.py,sha256=CYcI_IdJ-i6qxIPcjEiRP5oWimWm_WzAy_gj2KR3dnY,780
+inventree_supplier_panel/supplier_panel.py,sha256=wQdCnEn-oWt6arFYio6oswnFrrWozCrrJLhgbITmQUI,28573
+inventree_supplier_panel/version.py,sha256=KmFPX0V1TJ_fLeM8ey-3SyxYIcYaYTYxbuoe8wC2L6o,25
+inventree_supplier_panel/templates/supplier_panel/add_supplierpart.html,sha256=iNJmO7ZAe4cS9hCsx6-SnoXVF0mmEj6xbJ_meNV2kp4,1476
+inventree_supplier_panel/templates/supplier_panel/digikey.html,sha256=HEgKsvFn5-BFrc3x__tUcTvc_Zft5JOgxCTSzCSIywU,2588
+inventree_supplier_panel/templates/supplier_panel/mouser.html,sha256=q1eX5-kzd9TNp3jNPup8hE_ER1wK5ySVQ-3aLtXk3Q0,2007
+inventree_supplier_panel-0.3.0.dist-info/LICENSE,sha256=z0KzW69FNQZm8j7jdjwjmjMNPn6UIC5ioGhjP44nZ64,1064
+inventree_supplier_panel-0.3.0.dist-info/METADATA,sha256=pXAYaxPuHmFXxwXvRZdgFP4JA60JD1LTaxFtK7-BXJk,12830
+inventree_supplier_panel-0.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+inventree_supplier_panel-0.3.0.dist-info/entry_points.txt,sha256=Tnbg88wJALWj7OmoqVN-BNIatFJLsAZV32C7roBJXYg,98
+inventree_supplier_panel-0.3.0.dist-info/top_level.txt,sha256=bjASFPmpp8JaFz4FTeM7olEKL-g7BNo5BVttyI3W4Ew,25
+inventree_supplier_panel-0.3.0.dist-info/RECORD,,
