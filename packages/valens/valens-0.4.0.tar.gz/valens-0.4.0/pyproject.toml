@@ -1,0 +1,243 @@
+[tool.poetry]
+name = "valens"
+version = "0.4.0"
+description = "An app for tracking your health and training progress."
+license = "AGPL-3.0"
+authors = [
+    "Tobias Reiher <valens@ardeidae.de>"
+]
+readme = "README.md"
+repository = "https://github.com/treiher/valens"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Natural Language :: English",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Other/Nonlisted Topic",
+]
+include = [
+    { path = "valens/frontend/*" },
+    { path = "valens/frontend/fonts/*" },
+    { path = "valens/frontend/images/*" },
+    { path = "valens/frontend/js/*" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9, <4"
+alembic = ">=1.6, <2"
+flask = ">=3, <4"
+sqlalchemy = ">=2, <3"
+
+[tool.poetry.group.dev.dependencies]
+black = ">=23.1"
+fabric = ">=3"
+mypy = ">=1"
+pytest = ">=5"
+pytest-alembic = ">=0.3.1"
+pytest-cov = ">=2.10"
+pytest-selenium = ">=4.0.2"
+pytest-xdist = ">=1.32.0"
+ruff = ">=0.0.260"
+sqlalchemy = {extras = ["mypy"], version = ">=2, <3"}
+types-selenium = ">=3"
+python-kacl = "^0.4.6"
+
+[tool.poetry.group.debug]
+optional = true
+
+[tool.poetry.group.debug.dependencies]
+pytest-flakefinder = ">=1, <2"
+
+[tool.poetry.group.deploy]
+optional = true
+
+[tool.poetry.group.deploy.dependencies]
+fabric = ">=3, <4"
+
+[tool.poetry.scripts]
+valens = "valens.cli:main"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+bump = true
+
+[build-system]
+requires = ["poetry-core >=1", "poetry-dynamic-versioning >=1, <2"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "F",    # pyflakes
+    "E",    # pycodestyle
+    "W",    # pycodestyle
+    "C90",  # mccabe
+    "I",    # isort
+    "N",    # pep8-naming
+    "D",    # pydocstyle
+    "UP",   # pyupgrade
+    "FBT",  # flake8-boolean-trap
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "T10",  # flake8-debugger
+    "EXE",  # flake8-executable
+    "ISC",  # flake8-implicit-str-concat
+    "PIE",  # flake8-pie
+    "T20",  # flake8-print
+    "PYI",  # flake8-pyi
+    "PT",   # flake8-pytest-style
+    "RSE",  # flake8-raise
+    "RET",  # flake8-return
+    "SLF",  # flake8-self
+    "SIM",  # flake8-simplify
+    "TID",  # flake8-tidy-imports
+    "INT",  # flake8-gettext
+    "ARG",  # flake8-unused-arguments
+    "PTH",  # flake8-use-pathlib
+    "ERA",  # eradicate
+    "PGH",  # pygrep-hooks
+    "PL",   # pylint
+    "RUF",  # ruff
+]
+fixable = [
+    "F",    # pyflakes
+    "E",    # pycodestyle
+    "W",    # pycodestyle
+    "C90",  # mccabe
+    "I",    # isort
+    "N",    # pep8-naming
+    "D",    # pydocstyle
+    "UP",   # pyupgrade
+    "FBT",  # flake8-boolean-trap
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "T10",  # flake8-debugger
+    "EXE",  # flake8-executable
+    "ISC",  # flake8-implicit-str-concat
+    "PIE",  # flake8-pie
+    "T20",  # flake8-print
+    "PYI",  # flake8-pyi
+    "PT",   # flake8-pytest-style
+    "RSE",  # flake8-raise
+    "RET",  # flake8-return
+    "SLF",  # flake8-self
+    "SIM",  # flake8-simplify
+    "TID",  # flake8-tidy-imports
+    "INT",  # flake8-gettext
+    "ARG",  # flake8-unused-arguments
+    "PTH",  # flake8-use-pathlib
+    "PGH",  # pygrep-hooks
+    "PL",   # pylint
+    "RUF",  # ruff
+]
+ignore = [
+    "D100",    # public-module
+    "D101",    # public-class
+    "D102",    # public-method
+    "D103",    # public-function
+    "D104",    # public-package
+    "D105",    # magic-method
+    "D106",    # public-nested-class
+    "D107",    # public-init
+    "D202",    # no-blank-line-after-function
+    "D203",    # one-blank-line-before-class
+    "D212",    # multi-line-summary-first-line
+    "E741",    # ambiguous-variable-name
+    "N812",    # lowercase-imported-as-non-lowercase
+    "UP007",   # typing-union
+    "B011",    # assert-false
+    "ARG005",  # unused-lambda-argument
+    "PLC0414", # useless-import-alias
+    "PLC1901", # compare-to-empty-string
+    "PLR2004", # magic-value-comparison
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+
+[tool.ruff.lint.pylint]
+max-args = 6
+max-branches = 12
+max-returns = 10
+max-statements = 50
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_explicit = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+no_implicit_reexport = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+plugins = "sqlalchemy.ext.mypy.plugin"
+
+[[tool.mypy.overrides]]
+module = [
+    "pytest_alembic.*",
+    "sqlalchemy_repr.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "--tb=short"
+filterwarnings = [
+    "ignore:Gdk.Cursor.new is deprecated",
+    "ignore:Gtk.Widget.set_double_buffered is deprecated",
+    "ignore:Gtk.Window.set_wmclass is deprecated",
+    "ignore:Gtk.Widget.size_request is deprecated",
+]
+
+[tool.coverage.paths]
+source = ["valens"]
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+exclude_lines = [
+    "pragma: no cover",
+    "assert False",
+    "def __repr__",
+    "def __str__",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "return NotImplemented",
+]
