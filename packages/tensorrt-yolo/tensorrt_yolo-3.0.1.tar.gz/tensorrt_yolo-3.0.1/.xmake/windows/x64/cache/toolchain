@@ -1,0 +1,102 @@
+{
+    tool_target_deploy_windows_x64_cxx = {
+        program = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\cl.exe]],
+        toolchain_info = {
+            plat = "windows",
+            cachekey = "msvc_arch_x64_plat_windows",
+            name = "msvc",
+            arch = "x64"
+        },
+        toolname = "cl"
+    },
+    tool_target_deploy_windows_x64_cc = {
+        program = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\cl.exe]],
+        toolchain_info = {
+            plat = "windows",
+            cachekey = "msvc_arch_x64_plat_windows",
+            name = "msvc",
+            arch = "x64"
+        },
+        toolname = "cl"
+    },
+    tool_target_deploy_windows_x64_cu = {
+        program = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin\nvcc]],
+        toolchain_info = {
+            plat = "windows",
+            cachekey = "cuda_arch_x64_plat_windows",
+            name = "cuda",
+            arch = "x64"
+        },
+        toolname = "nvcc"
+    },
+    tool_target_deploy_windows_x64_ld = {
+        program = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\link.exe]],
+        toolchain_info = {
+            plat = "windows",
+            cachekey = "msvc_arch_x64_plat_windows",
+            name = "msvc",
+            arch = "x64"
+        },
+        toolname = "link"
+    },
+    tool_target_deploy_windows_x64_sh = {
+        program = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\link.exe]],
+        toolchain_info = {
+            plat = "windows",
+            cachekey = "msvc_arch_x64_plat_windows",
+            name = "msvc",
+            arch = "x64"
+        },
+        toolname = "link"
+    },
+    tool_target_deploy_windows_x64_culd = {
+        program = [[C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin\nvcc]],
+        toolchain_info = {
+            plat = "windows",
+            cachekey = "cuda_arch_x64_plat_windows",
+            name = "cuda",
+            arch = "x64"
+        },
+        toolname = "nvcc"
+    },
+    msvc_arch_x64_plat_windows = {
+        vcarchs = {
+            "arm64",
+            "x64",
+            "x86"
+        },
+        vs = "2022",
+        arch = "x64",
+        plat = "windows",
+        __global = true,
+        vs_sdkver = "10.0.22621.0",
+        vs_toolset = "14.38.33130",
+        vcvars = {
+            WindowsSdkVerBinPath = [[D:\Windows Kits\10\bin\10.0.22621.0\]],
+            VCInstallDir = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\]],
+            WindowsSdkDir = [[D:\Windows Kits\10\]],
+            VCToolsVersion = "14.38.33130",
+            WindowsSdkBinPath = [[D:\Windows Kits\10\bin\]],
+            INCLUDE = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\include;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\ATLMFC\include;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\VS\include;D:\Windows Kits\10\include\10.0.22621.0\ucrt;D:\Windows Kits\10\\include\10.0.22621.0\\um;D:\Windows Kits\10\\include\10.0.22621.0\\shared;D:\Windows Kits\10\\include\10.0.22621.0\\winrt;D:\Windows Kits\10\\include\10.0.22621.0\\cppwinrt]],
+            ExtensionSdkDir = [[C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs]],
+            VSCMD_ARG_TGT_ARCH = "x64",
+            VCIDEInstallDir = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\]],
+            UniversalCRTSdkDir = [[D:\Windows Kits\10\]],
+            VS170COMNTOOLS = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Common7\Tools\]],
+            VSInstallDir = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\]],
+            UCRTVersion = "10.0.22621.0",
+            WindowsLibPath = [[D:\Windows Kits\10\UnionMetadata\10.0.22621.0;D:\Windows Kits\10\References\10.0.22621.0]],
+            LIBPATH = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\ATLMFC\lib\x64;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\lib\x64;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\lib\x86\store\references;D:\Windows Kits\10\UnionMetadata\10.0.22621.0;D:\Windows Kits\10\References\10.0.22621.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319]],
+            DevEnvdir = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Common7\IDE\]],
+            VCToolsInstallDir = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\]],
+            VCToolsRedistDir = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Redist\MSVC\14.38.33130\]],
+            VisualStudioVersion = "17.0",
+            PATH = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\VCPackages;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TestWindow;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\Roslyn;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools\x64;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Team Tools\Performance Tools;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Team Tools\DiagnosticsHub\Collector;D:\Windows Kits\10\bin\10.0.22621.0\\x64;D:\Windows Kits\10\bin\\x64;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Common7\IDE\;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Common7\Tools\;D:\laugh\Program\Xmake;D:\laugh\Program\Miniconda3;D:\laugh\Program\Miniconda3\Library\mingw-w64\bin;D:\laugh\Program\Miniconda3\Library\usr\bin;D:\laugh\Program\Miniconda3\Library\bin;D:\laugh\Program\Miniconda3\Scripts;D:\laugh\Program\Miniconda3\bin;D:\laugh\Program\Miniconda3\condabin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\libnvvp;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\dotnet;D:\laugh\Program\Microsoft VS Code\bin;D:\laugh\Program\Git\cmd;D:\laugh\Program\mingw64\bin;C:\Program Files\NVIDIA Corporation\Nsight Compute 2022.2.1;C:\Program Files\NVIDIA GPU Computing Toolkit\cuDNN\v8.4.1.50\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\TensorRT\v8.4.2.4\bin;D:\Windows Kits\10\Windows Performance Toolkit;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\bin\Hostx64\x64;C:\Users\laugh\AppData\Local\Microsoft\WindowsApps;C:\Users\laugh\.dotnet\tools;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\vcpkg]],
+            VSCMD_ARG_app_plat = "Desktop",
+            VSCMD_ARG_HOST_ARCH = "x64",
+            LIB = [[D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\ATLMFC\lib\x64;D:\laugh\Program\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\lib\x64;D:\Windows Kits\10\lib\10.0.22621.0\ucrt\x64;D:\Windows Kits\10\\lib\10.0.22621.0\\um\x64]],
+            WindowsSDKVersion = "10.0.22621.0",
+            VSCMD_VER = "17.8.3"
+        }
+    }
+}

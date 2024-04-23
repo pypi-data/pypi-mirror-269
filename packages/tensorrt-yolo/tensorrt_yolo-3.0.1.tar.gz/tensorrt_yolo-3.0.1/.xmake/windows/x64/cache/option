@@ -1,0 +1,18 @@
+{
+    tensorrt = {
+        __sourceinfo_check = { },
+        check = func"\27LuaT\0\25“\13\
+\26\
+\4\8\8xV\0\0\0\0\0\0\0\0\0\0\0(w@\1@.\\xmake.lua”\1\0\3ˆ”€\0\0Ä\0\2\2Â€\0\0008\1\0€‹\0\0\1\3\1\1\0Ä\0\2\1Ç\0\1\0ƒ\4ˆenabled\4†raise\20¼TensorRT path is not set. Please specify the TensorRT path.\0\0\0€ˆ\1\0\0\0\1\0\0\2€‡option€ˆ…_ENV",
+        showmenu = true,
+        __scriptdir = [[E:\Projects\Cpp\TensorRT-YOLO]],
+        __sourceinfo_showmenu = { },
+        description = "TensorRT Path. Example: /usr/local/tensorrt",
+        __sourceinfo_description = {
+            ["TensorRT Path. Example: /usr/local/tensorrt"] = {
+                file = [[.\xmake.lua]],
+                line = 15
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    options = {
+        kind = "shared",
+        tensorrt = "C:/Program Files/NVIDIA GPU Computing Toolkit/TensorRT/v8.6.1.6"
+    },
+    mtimes = {
+        ["xmake.lua"] = 1713588592
+    },
+    recheck = false
+}
