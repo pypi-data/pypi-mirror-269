@@ -1,0 +1,15 @@
+basicbedrock/__init__.py,sha256=ePJkInOJ_BsvbUnXTORmNymI__YJXQgVSBNSJvIKtHE,273
+basicbedrock/basicbedrock.py,sha256=SfV2QY6uGDNoIHT20QHxK_uPo1M4RaMnbzpErvOmwEU,16155
+basicbedrock/models/__init__.py,sha256=us2fUV5nSjhxn1YDVf9gxGNg15RVt2qLExAJhNLYMyE,2984
+basicbedrock/models/ai21.py,sha256=Jj433pQHnGstRvOGaRsiS0l5Yr0v_g75no3DJiHmLZ4,2729
+basicbedrock/models/amazon.py,sha256=4LcgAlUzUxxiGpdQLGSGiUzJmTXh0xprGqoF2bjgDuo,5028
+basicbedrock/models/anthropic.py,sha256=2hIQmqHmSN3z4a9lwIbTdPqN586OUqdXxEonhFWHWlI,4480
+basicbedrock/models/baseclasses.py,sha256=zlp0GBxqsV5SH4ZvU7z6ffGypLh28vZBiCOvRo5Kjzk,5241
+basicbedrock/models/cohere.py,sha256=-o7NeVzvC8U5zzQnRge3GqYZcJzo2L8hlE67vAobTuo,3037
+basicbedrock/models/meta.py,sha256=FmZJOP56OvkvdW13_b50JrlpcI8OvBNTY6kWY0dxn-Y,2315
+basicbedrock/models/mistral.py,sha256=XmYVMjBHq8_A08WdnNR9nwo9puFHFdTn7Ut7RUb9DYE,1559
+basicbedrock-0.1.4.dist-info/LICENSE,sha256=8fOOXAJd1I5QGr3LpQcou7cdBpjTyRJ8N4a2ABNGw7s,1048
+basicbedrock-0.1.4.dist-info/METADATA,sha256=f9JmlLmuYmOXURpnZjJjcM6WkjYVL2nM_S28ramxjLg,3877
+basicbedrock-0.1.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+basicbedrock-0.1.4.dist-info/top_level.txt,sha256=tgTVOuPNCW6o9QB4pq8ESjP7y7ilnMunDfqqFmb0Gb4,13
+basicbedrock-0.1.4.dist-info/RECORD,,
