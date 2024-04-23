@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mirofile"
+version = "0.1"
+authors = [
+  { name="Davor Virag", email="davor.virag@gmail.com" },
+]
+description = "Python module for using MIROSLAV files as file-like objects with seamless preprocessing. MIROSLAV is a FOSS tool for monitoring activity of laboratory rodents."
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "tqdm >= 4.66.2"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/davorvr/mirofile"
+"Bug Tracker" = "https://github.com/davorvr/mirofile/issues"
