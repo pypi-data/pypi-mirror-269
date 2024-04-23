@@ -1,0 +1,2 @@
+[console_scripts]
+spatialize = hspatial.cli:main
