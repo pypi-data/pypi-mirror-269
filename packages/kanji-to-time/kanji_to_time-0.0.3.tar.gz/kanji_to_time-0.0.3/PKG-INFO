@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: kanji_to_time
+Version: 0.0.3
+Summary: Convert Japanese time expressions to datetime objects
+Home-page: https://github.com/corkborg/kanji_to_time
+Author: corkborg
+Author-email: ax4squil8@mozmail.com
+License: MIT
+Keywords: kanji,timedelta,datetime,japanese
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Natural Language :: Japanese
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lark>=1.1.9
+
+# Kanji to time
+
+日本語の漢字などで書かれた年月日をPythonのdatetime型やtimedelta型に変換するライブラリ。
+内部では正規表現ではなくパーサージェネレータを使用しているので複雑なルールに対応しやすいようになっています。
+
+漢数字、旧字漢数字、全角などに対応しています。
+
+## 使い方
+
+```bash
+pip install kanji_to_time
+```
+
+```python
+import kanji_to_time as ktt
+
+text = "2024年4月5日22時30分4秒"
+dt = ktt.to_datetime(text)
+print(dt)
+
+text = "二時間三十秒"
+td = ktt.to_timedelta(text)
+print(td)
+```
+
+## 対応パターン例
+
+### datetimeの変換
+
+```python
+dt = ktt.to_datetime("2024年4月5日22時30分4秒")
+self.assertEqual(dt, datetime(year=2024, month=4, day=5, hour=22, minute=30, second=4))
+
+dt = ktt.to_datetime("２０２０年５月７日")
+self.assertEqual(dt, datetime(year=2020, month=5, day=7))
+
+dt = ktt.to_datetime("二〇二五年十二月七日")
+self.assertEqual(dt, datetime(year=2025, month=12, day=7))
+
+dt = ktt.to_datetime("二千年八月三日")
+self.assertEqual(dt, datetime(year=2000, month=8, day=3))
+
+dt = ktt.to_datetime("弐零弐参年伍月肆日")
+self.assertEqual(dt, datetime(year=2023, month=5, day=4))
+```
+
+### timedeltaの変換
+
+```python
+td = ktt.to_timedelta("二時間三十秒")
+self.assertEqual(td, timedelta(hours=2, seconds=30))
+
+td = ktt.to_timedelta("六日間二時間五分間三秒間")
+self.assertEqual(td, timedelta(days=6, hours=2, minutes=5, seconds=3))
+
+td = ktt.to_timedelta("六日二時五分三秒")
+self.assertEqual(td, timedelta(days=6, hours=2, minutes=5, seconds=3))
+
+td = ktt.to_timedelta("90秒")
+self.assertEqual(td, timedelta(seconds=90))
+
+td = ktt.to_timedelta("マイナス七億分")
+self.assertEqual(td, timedelta(minutes=-700_000_000))
+```
+
+その他詳細なパターンはこちらのファイルを参照
+* [tests/test_to_datetime.py](tests/test_to_datetime.py)
+* [tests/test_to_timedelta.py](tests/test_to_timedelta.py)
+* [tests/test_to_number.py](tests/test_to_number.py)
+
+対応している文法の構造自体を確認したい場合はLark定義ファイルを参照
+* [kanji_to_time/grammer/kanji_to_time.lark](kanji_to_time/grammer/kanji_to_time.lark)
+
+## ユニットテスト
+
+```bash
+pip install -r requirements.txt
+python -m unittest discover -s tests
+```
+
+## 問い合わせ
+
+バグや機能要望についてはissueに報告をお願いします。<br/>
+https://github.com/corkborg/kanji_to_time/issues
+
+その他の問い合わせはメールまで（メール転送サービスを利用しています）<br/>
+ax4squil8&#064;mozmail.com
+
+## リリースノート
+
+### v0.0.3
+
+* to_timedeltaで接尾辞の「前」、「後」のサポート。 20秒後(seconds-20)、20秒前（seconds=-20 ）
+* to_timedeltaで「プラス」、「+」などのサポート。 +20分（minutes=20）
