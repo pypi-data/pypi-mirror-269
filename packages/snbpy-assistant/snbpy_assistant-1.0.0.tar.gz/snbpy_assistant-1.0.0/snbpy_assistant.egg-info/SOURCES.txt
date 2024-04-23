@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+snbpy_assistant.egg-info/PKG-INFO
+snbpy_assistant.egg-info/SOURCES.txt
+snbpy_assistant.egg-info/dependency_links.txt
+snbpy_assistant.egg-info/requires.txt
+snbpy_assistant.egg-info/top_level.txt
+src/snbpy_assistant/__init__.py
+src/snbpy_assistant/snbpy_assistant.py

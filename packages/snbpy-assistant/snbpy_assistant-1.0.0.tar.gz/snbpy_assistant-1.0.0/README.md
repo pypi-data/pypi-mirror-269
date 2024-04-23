@@ -1,0 +1,2 @@
+# snbpy-assistant
+snbpy-assistant
