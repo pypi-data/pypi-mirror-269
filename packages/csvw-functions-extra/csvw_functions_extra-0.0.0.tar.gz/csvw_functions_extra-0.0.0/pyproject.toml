@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csvw_functions_extra"
+version = "0.0.0"
+authors = [
+  { name="Steven Firth", email="s.k.firth@lboro.ac.uk" },
+]
+description = "Python functions for CSVW files providing extra functionality beyond the CSVW standards"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "csvw_functions>=0.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/stevenkfirth/csvw_functions_extra"
+Issues = "https://github.com/stevenkfirth/csvw_functions_extra/issues"

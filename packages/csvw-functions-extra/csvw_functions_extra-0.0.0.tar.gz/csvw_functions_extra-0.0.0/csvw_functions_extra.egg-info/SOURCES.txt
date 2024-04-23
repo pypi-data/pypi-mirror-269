@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+csvw_functions_extra/__init__.py
+csvw_functions_extra/csvw_functions_extra.py
+csvw_functions_extra.egg-info/PKG-INFO
+csvw_functions_extra.egg-info/SOURCES.txt
+csvw_functions_extra.egg-info/dependency_links.txt
+csvw_functions_extra.egg-info/requires.txt
+csvw_functions_extra.egg-info/top_level.txt
+tests/test_csvw_functions_extra.py
