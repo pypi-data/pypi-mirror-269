@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: DXR-BJ
+Version: 1.0.5
+Summary: 删除lResults中的sValue
+Author: zx
+Author-email: 450125770@qq.com
+License: apache 3.0
+Requires-Dist: freetype-py
