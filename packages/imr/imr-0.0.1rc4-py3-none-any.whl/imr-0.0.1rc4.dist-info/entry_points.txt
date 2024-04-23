@@ -1,0 +1,3 @@
+[console_scripts]
+imr=imr.imr_cli:cli
+
