@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: vbayesfa
+Version: 0.0.21
+Summary: Dirichlet process mixture models for latent profile analysis.
+Author-email: Sam Paskewitz <samuel.paskewitz@yale.edu>
