@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+SerializerDeserializerModels/SerializerDeserializerModels.py
+SerializerDeserializerModels/__init__.py
+SerializerDeserializerModels/models.py
+Serializer_Deserializer.egg-info/PKG-INFO
+Serializer_Deserializer.egg-info/SOURCES.txt
+Serializer_Deserializer.egg-info/dependency_links.txt
+Serializer_Deserializer.egg-info/not-zip-safe
+Serializer_Deserializer.egg-info/top_level.txt
