@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: uac-api
+Version: 0.2.0
+Summary: A Python wrapper for the Stonebranch API
+Author: Stonebranch
+Author-email: huseyin.gomleksizoglu@stonebranch.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# PyUC-API - Api Wrapper for Universal Controller REST API
