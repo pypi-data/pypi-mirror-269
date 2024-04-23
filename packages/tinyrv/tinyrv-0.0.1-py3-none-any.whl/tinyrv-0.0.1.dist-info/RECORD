@@ -1,0 +1,10 @@
+tinyrv.py,sha256=2cY59DXx3efzxaJPg-MOP9RpLK6A6r1OCkhAG3SlaoA,15618
+tinyrv/riscv-opcodes/arg_lut.csv,sha256=rkq-R_FlW9_P6Iyzb36Uyp9g65Pq1GmjggV5nLEYmsM,1674
+tinyrv/riscv-opcodes/constants.py,sha256=ZtPnXKmfW86ldqtiP9OdoDKEjzBgGHdEO6u7ZfM-tyg,7855
+tinyrv/riscv-opcodes/csrs.csv,sha256=UaSRGMw5NdHx2rjlecoPZMjmg2yk-J9csG5BPB5Cg8E,5994
+tinyrv/riscv-opcodes/csrs32.csv,sha256=XsFsY1ZYYN5VEa4Js6YATak60JaPEE_DhKTifDc6cKw,2690
+tinyrv/riscv-opcodes/instr_dict.yaml,sha256=a4LdMGtrlDycWDubgsUu-BPryOm4RB_fqTFBhyYRglU,236488
+tinyrv-0.0.1.dist-info/METADATA,sha256=Xfy1ueR3RXPxJJxVoZh8qaVkmCVATH-hWCfoHZc8EfY,2458
+tinyrv-0.0.1.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+tinyrv-0.0.1.dist-info/licenses/LICENSE,sha256=_wYH6Cx59lF341mQS3sgz6_TUIYzk1oen_-8Ij09TIc,1069
+tinyrv-0.0.1.dist-info/RECORD,,
