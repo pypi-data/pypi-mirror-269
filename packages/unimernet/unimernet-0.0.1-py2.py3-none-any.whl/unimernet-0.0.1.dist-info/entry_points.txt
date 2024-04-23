@@ -1,0 +1,5 @@
+[console_scripts]
+texify=ocr_image:main
+texify_benchmark=benchmark:main
+texify_gui=run_ocr_app:run_app
+
