@@ -1,0 +1,1 @@
+SSA is a set of python libraries which enable data streaming pipeline for cleansing incremental data from Bronze table and merge into Silver (bronze->silver as per medallion arch)
