@@ -1,0 +1,10 @@
+m-singleton==0.3
+m-monitor==0.6
+m-validator==0.1
+m-filetypes
+m-cipher==1.5.2
+m-schedule==1.0.1
+m-caching==0.1.15
+m-threadpool==0.2
+m-formatter-logging>=1.0.2
+m-kafka-sdk-v2==1.0.1
