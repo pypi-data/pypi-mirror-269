@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: myavm
+Version: 0.0.2
+Summary: A small example package
+Author-email: Amal Abdallah <feetseg@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: GitPython
+Requires-Dist: pescador
+Requires-Dist: kapre==0.1.7
+Requires-Dist: sk-video
+Requires-Dist: tf_slim
+Requires-Dist: optuna
+Requires-Dist: tensorflow==2.12.0
+Requires-Dist: joblib==1.0.0
+Requires-Dist: resampy
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+
+Here , you can give a description of your project.
+## Installation
+You can install the package using pip:
+pip install -i https://test.pypi.org/simple/ <name>
