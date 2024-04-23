@@ -1,0 +1,10 @@
+sphinx_doxysummary/__init__.py,sha256=sIcg3kYcdxeXPUCywO5UhMUXBaKd6XEiCnBcBc1AssI,1119
+sphinx_doxysummary/directive.py,sha256=NBrOOA7jexq2-caW4yDPva2s0b-PqO4OX4Xc2EkMOXQ,7887
+sphinx_doxysummary/generate.py,sha256=_fqnp1Ihu7mggtTNx4QMbDzHBwC8z0CF5a9vBfX9HRY,10782
+sphinx_doxysummary/utils.py,sha256=IB4xoLohyCns3A-Qbxe4D3NMEHIB7laIo2o3v1d5GDs,8752
+sphinx_doxysummary/xmltree.py,sha256=1DkrPDS6oyBmz2tf7hS0LtaMaIwe-tMOJT3SL5Mg7Xc,10914
+sphinx_doxysummary/templates/cppbase.rst,sha256=56tGi4wzOcaCnbNr5YSFTKqWKbuSXUKCHf3zGzMrr1I,843
+sphinx_doxysummary-2.3.3.dist-info/METADATA,sha256=WFS6uLIj3LXcobbAHDwBK7ZPqhg_bHOhcZ9V7lOX0TE,3940
+sphinx_doxysummary-2.3.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sphinx_doxysummary-2.3.3.dist-info/top_level.txt,sha256=boc5uYZ7GiVcsNsAiMBh_Tregt09zWe-Qsk4coY1fkc,19
+sphinx_doxysummary-2.3.3.dist-info/RECORD,,
