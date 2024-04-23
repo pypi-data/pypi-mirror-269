@@ -1,0 +1,1 @@
+from .Robocon_24 import decision_maker
