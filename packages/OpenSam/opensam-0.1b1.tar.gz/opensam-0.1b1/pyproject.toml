@@ -1,0 +1,187 @@
+[build-system]
+requires = ["flit_core>=3.2", "flit_scm", "wheel"]
+build-backend = "flit_scm:buildapi"
+
+[project]
+name = "OpenSam"
+authors = [
+  { name = "Johannes Maron", email = "johannes@maron.family" },
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["GPT", "AI", "Slack", "OpenAI", "bot"]
+dynamic = ["version", "description"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Programming Language :: Python",
+  "Environment :: Web Environment",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Topic :: Software Development",
+  "Topic :: Communications :: Chat",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Communications :: Email",
+  "Topic :: Games/Entertainment :: Role-Playing",
+  "Topic :: Multimedia :: Sound/Audio :: Conversion",
+  "Topic :: Multimedia :: Sound/Audio :: Speech",
+  "Topic :: Office/Business",
+  "Topic :: Office/Business :: Groupware",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Scientific/Engineering :: Human Machine Interfaces",
+  "Topic :: Text Processing :: Markup :: Markdown",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.11"
+
+dependencies = [
+  "aiohttp",
+  "click",
+  "certifi",
+  "markdownify",
+  "redis",
+  "requests",
+  "slack-bolt",
+  "openai>=1.21.0",
+  "pyyaml",
+  "algoliasearch",
+  "sentry-sdk",
+]
+
+[project.scripts]
+sam = "sam.__main__:cli"
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-asyncio",
+  "pytest-cov",
+  "pytest-env",
+]
+lint = [
+  "bandit==1.7.8",
+  "black==24.4.0",
+  "isort==5.13.2",
+  "pydocstyle[toml]==6.3.0",
+]
+docs = [
+  "pydoc-markdown",
+  "mkdocs-material",
+  "pymdown-extensions",
+]
+
+[project.urls]
+Project-URL = "https://github.com/voiio/Sam/"
+Documentation = "https://code.voiio.de/Sam/"
+Changelog = "https://github.com/voiio/Sam/releases"
+
+[tool.flit.module]
+name = "sam"
+
+[tool.setuptools_scm]
+write_to = "sam/_version.py"
+fallback_version = "1.0.0"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--tb=short -rxs"
+testpaths = ["tests"]
+
+[tool.pytest_env]
+GITHUB_REPOS = 'voiio/sam'
+BRAVE_SEARCH_LATITUDE = '37.7749'
+BRAVE_SEARCH_LONGITUDE = '-122.4194'
+FROM_EMAIL = "Sam <sam@voiio.de>"
+
+[tool.coverage.run]
+source = ["sam"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.isort]
+atomic = true
+line_length = 88
+multi_line_output = 3
+force_grid_wrap = 0
+known_first_party = "sam, tests"
+include_trailing_comma = true
+use_parentheses = true
+default_section = "THIRDPARTY"
+combine_as_imports = true
+
+[tool.pydocstyle]
+add_ignore = "D1"
+
+[[tool.pydoc-markdown.loaders]]
+type = "python"
+search_path = ["."]
+
+[tool.pydoc-markdown.renderer]
+type = "mkdocs"
+output_directory = "."
+content_directory_name = "docs"
+
+[tool.pydoc-markdown.hooks]
+pre-render = [
+  "mkdir -p docs",
+  "cp screenshot.png docs",
+  "cp slack-manifest.yml docs",
+]
+
+[tool.pydoc-markdown.renderer.mkdocs_config]
+site_name = "Sam"
+theme = "material"
+markdown_extensions = [
+  "pymdownx.highlight",
+  "pymdownx.inlinehilite",
+  "pymdownx.snippets",
+  "pymdownx.superfences",
+]
+
+[[tool.pydoc-markdown.renderer.pages]]
+title = "Setup"
+name = "index"
+source = "README.md"
+
+[[tool.pydoc-markdown.renderer.pages]]
+title = "Usage"
+name = "usage"
+source = "USAGE.md"
+
+[[tool.pydoc-markdown.renderer.pages]]
+title = "Configuration"
+name = "config"
+contents = [
+  "sam.config.*",
+  "sam.contrib.algolia.config.*",
+  "sam.contrib.brave.config.*",
+  "sam.contrib.github.config.*",
+]
+
+[tool.sam.tools.send_email]
+path = "sam.tools:send_email"
+additional_instructions = "You may ask for confirmation before sending an email."
+
+[tool.sam.tools.fetch_website]
+path = "sam.tools:fetch_website"
+additional_instructions = "You may fetch multiple websites and browse the sites."
+
+[tool.sam.tools.fetch_coworker_contacts]
+path = "sam.slack:fetch_coworker_contacts"
+
+[tool.sam.tools.web_search]
+path = "sam.contrib.brave.tools:search"
+additional_instructions = "You MUST ALWAYS always fetch a website and read it."
+
+[tool.sam.tools.create_github_issue]
+path = "sam.contrib.github.tools:create_github_issue"
+additional_instructions = "You MUST ALWAYS write the issue in English."
+
+[tool.sam.tools.platform_search]
+path = "sam.contrib.algolia.tools:search"
+additional_instructions = "The voiio platform should be searched before searching the web."
