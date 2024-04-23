@@ -1,0 +1,16 @@
+morebuiltins/__init__.py,sha256=EjlaDshcdl6H6Qu7KgGuoDQmnrs49DDrLJrtVuqbyuI,144
+morebuiltins/functools.py,sha256=sMGnh4S2_cE8DsDJtAf_Ri-a2RjX_z8Z1UPa98X7EJY,5771
+morebuiltins/ipc.py,sha256=GyFzsAgZ0tYFRH6jy3MN-iQFXBUWGUguKH7zbLZIllU,12448
+morebuiltins/request.py,sha256=CfiILH59XOVfd9l5hvHqVYbF-q8zLA03LVImjT2bklA,11610
+morebuiltins/utils.py,sha256=upK3JkibEj2VGk0wvnIu_ue6BWwXc6QGgsEsL5oglfI,24097
+morebuiltins/zipapps/__init__.py,sha256=5Ge2bj3qrq7FOVjTa0pRAH6Ps4F1f64e6J9uFWhnCw0,176
+morebuiltins/zipapps/__main__.py,sha256=9o6Bl9BWwyH4drOoeuHcoNYYV-LZ9J7-4UzO5L_UdHs,15752
+morebuiltins/zipapps/activate_zipapps.py,sha256=WLQzqLoRRywmLcMEx8dgH6u7hBxwo2FgagC15kBjP6A,561
+morebuiltins/zipapps/ensure_zipapps.py.template,sha256=30HJdc_NyahFWLyGIKY7kvEH-Fc_IJ6MsUr9bGeoIFg,8426
+morebuiltins/zipapps/entry_point.py.template,sha256=tSeRNTwXGNjcRp3Xtk_a7swsFbmYPJZqMOl24FUHcGo,3385
+morebuiltins/zipapps/freezing.py,sha256=zO_da2zSuDGCzYEGrvFuedLIxWlZKWED5t-NElbxY9M,4640
+morebuiltins/zipapps/main.py,sha256=H9OPmVCGW8NElgv0X8WBtp1y4XqgI91eBzbPb_vTdN8,26417
+morebuiltins-0.0.3.dist-info/LICENSE,sha256=uY1jr7G67ntReMIh3dc86uxMLFxINyWUiJoLCW9791o,1065
+morebuiltins-0.0.3.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+morebuiltins-0.0.3.dist-info/METADATA,sha256=DIpUDggFcM0ROw1UDhYsnFhvDKGQuK5YQZKofzUpQsQ,5655
+morebuiltins-0.0.3.dist-info/RECORD,,
