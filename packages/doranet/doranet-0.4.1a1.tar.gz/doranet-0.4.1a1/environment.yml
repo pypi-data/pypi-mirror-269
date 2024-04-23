@@ -1,0 +1,8 @@
+name: pickaxe-env
+channels:
+ - conda-forge
+dependencies:
+ - ipython
+ - pillow
+ - python>=3.9
+ - rdkit
