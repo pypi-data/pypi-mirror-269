@@ -1,0 +1,16 @@
+skleanr/1_IPC_Client.py,sha256=fPeS7y0n7S1Iex2wfCnCyUftnJWrswyNsNQyrRasMX0,601
+skleanr/1_IPC_Server.py,sha256=G0tXKvIfDfOWqtnnpNOgb0SNSXwG-J2WhcdqVbP0mxE,473
+skleanr/2_GC_Client.py,sha256=L4dCFs3VYNe27Ba7EhxSgoNnHsZxCvz62SOJH8sFP8M,594
+skleanr/2_GC_Server.py,sha256=PxBPAFWGIZawKWacSSvxqYqukBl9NIeRJzhgSCp0tI0,1234
+skleanr/3_DistGlobalAvgMethod.py,sha256=6TIjuGhNm7i5kr2wi3Rzo04FnXP4T-qwCvapdvRKBp0,1354
+skleanr/4_BerkleyMethod.py,sha256=Q2ZMWvHiozlrmCZZuk05ZmaW_qphN0S_SBbv5OsGTZU,1488
+skleanr/5_BullyElection.py,sha256=hzw_mEjLRRXJK3IauAtbpJHK_iKl39KMFU5hmAXN4NY,3309
+skleanr/6_RaymondTree.py,sha256=8bb03hKSU22mVCVJf4z2csJ3T-DyhbeEkWl8ltYOxzk,5103
+skleanr/7_RicartAggrawala.py,sha256=lEyIabH8G7RkvJEFvS3qb8ZqBFrWpNdGSrRBuzThL0g,987
+skleanr/8_Bankers.py,sha256=BSr3fO0IoEfs_Gf48Uw2QD7Kb4m4WDu_hu3a22XM8Qg,3027
+skleanr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skleanr-1.1.1.dist-info/LICENSE,sha256=RlcV46ocynjv78wlXcIWqkH2r7uXwFx9oMwJYNXCBlY,1088
+skleanr-1.1.1.dist-info/METADATA,sha256=KwGuecnSzGL7lLw4LVZAtb2THhgC6edKLsAbVeUDFcU,565
+skleanr-1.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+skleanr-1.1.1.dist-info/top_level.txt,sha256=YLVWbWnjP_26kbVFwefDRi_o1gNQsPHv44-fRNbLpPI,8
+skleanr-1.1.1.dist-info/RECORD,,
