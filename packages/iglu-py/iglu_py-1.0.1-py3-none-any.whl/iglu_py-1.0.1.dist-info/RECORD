@@ -1,0 +1,13 @@
+iglu_py/__init__.py,sha256=TnDZtBUc4r_KR60yhwLwfUIS9f3ft6PChuo7uvka4O8,1124
+iglu_py/bridge.py,sha256=EOzw4GEJe1DDFdxyYw_ji5c-3ztiZLOI0Q3Hj3ZvRmM,3126
+iglu_py/df.py,sha256=YuRILKXpt9p3FH4IjsLcvkJq1AIq0EXh2ylVjZvM6Ao,709
+iglu_py/iglu_4.0.0.tar.gz,sha256=2ok51jOv92tcN8vjH_hVat2EoTS0txopfraRwm8JnD0,4769405
+iglu_py/metrics.py,sha256=F1_FnXEcvRPuZqksH8chOjQpojFJ_SJf4qmLuJnRBYs,7185
+iglu_py/data/example_data_1_subject.csv,sha256=wkCHfPIXUp9aeVWBI3khTdli_nfXVLq_hYMmGohjs2g,123513
+iglu_py/data/example_data_5_subject.csv,sha256=rfnrniFUPI1kk8a-PCnXYaeoFMLYBj1qhqur_Ql6cmw,597377
+iglu_py/data/example_data_hall.csv,sha256=yBrqUusEuZNslfDkHpnfYeDvKGC0JhjI2ExhXzjwSJI,2010192
+iglu_py/data/example_meals_hall.csv,sha256=9ythi7x3zHhCisuYakKCmC_7VUIPmyXKfbpGZ-PUL-w,407
+iglu_py-1.0.1.dist-info/METADATA,sha256=KW8jxtfqieoMmdo5NPPyOr78SPtaJiltyglgayD9KaI,14318
+iglu_py-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+iglu_py-1.0.1.dist-info/top_level.txt,sha256=InqvxmXRLMi1Um7KLG6wx687kS6XfwlGAxhZEVY_oIY,8
+iglu_py-1.0.1.dist-info/RECORD,,
