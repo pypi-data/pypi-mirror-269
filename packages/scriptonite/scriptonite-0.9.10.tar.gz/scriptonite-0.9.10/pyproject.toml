@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "scriptonite"
+version = "0.9.10"
+description = "A toolkit for scripting in Python"
+authors = ["Andrea Mistrali <andrea@mistrali.pw>"]
+maintainers = ["Andrea Mistrali <andrea@mistrali.pw>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.23.0"
+poetry = "^1.8.2"
+
+[tool.pyright]
+reportOptionalSubscript = false
+reportAttributeAccessIssue = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
