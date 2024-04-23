@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: vadi
+Version: 0.0.1
+Summary: A simple, interpreted, statically-typed programming language.
+Home-page: https://github.com/vyogami/Vadi
+Author: Shivam Shandilya
+Author-email: fvyogami@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Project-URL: Documentation, https://vyogami.github.io/Vadi/
+Project-URL: Repository, https://github.com/vyogami/Vadi
+Description-Content-Type: text/markdown
+
+
