@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+robocupRAI/__init__.py
+robocupRAI/config.py
+robocupRAI/insert.py
+robocupRAI/query.py
+robocupRAI.egg-info/PKG-INFO
+robocupRAI.egg-info/SOURCES.txt
+robocupRAI.egg-info/dependency_links.txt
+robocupRAI.egg-info/requires.txt
+robocupRAI.egg-info/top_level.txt
