@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: quant1x-trader
+Version: 0.7.6
+Summary: Quant1X程序化自动化交易
+Home-page: https://gitee.com/quant1x/trader
+Author: WangFeng
+Author-email: wangfengxy@sina.cn
+License: MIT license
+Keywords: quant1x auto trader
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
+Requires-Dist: setuptools~=69.1.0
+Requires-Dist: future~=0.18.3
+Requires-Dist: numpy~=1.26.4
+Requires-Dist: pandas~=2.2.0
+Requires-Dist: PyYAML~=6.0.1
+Requires-Dist: pywin32==306
+Requires-Dist: uvicorn==0.27.1
+Requires-Dist: fastapi~=0.110.2
+Requires-Dist: path==16.10.0
+Requires-Dist: requests==2.31.0
+Requires-Dist: loguru~=0.7.2
+Requires-Dist: quant1x-xtquant==2024.3.29
+Requires-Dist: quant1x-base~=0.3.9
+Requires-Dist: aiohttp~=3.9.5
+Requires-Dist: sanic==23.12.1
+Requires-Dist: python-multipart~=0.0.9
+Requires-Dist: APScheduler~=3.10.4
+
+# trader
+
+#### 介绍
+python实现的自动化交易员
