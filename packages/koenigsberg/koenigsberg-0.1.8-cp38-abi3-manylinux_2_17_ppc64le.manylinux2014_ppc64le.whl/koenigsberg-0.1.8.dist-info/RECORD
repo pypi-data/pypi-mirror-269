@@ -1,0 +1,10 @@
+koenigsberg-0.1.8.dist-info/METADATA,sha256=vxjqsOCHxSHOiHAdtP77u9HPnKY9Wn6m5I9te91Gcrk,397
+koenigsberg-0.1.8.dist-info/WHEEL,sha256=-ctJsOqnvhM3Z2AjXG7TC3XgCW_ayQ_8a11VhhI8JMY,129
+koenigsberg-0.1.8.dist-info/license_files/LICENSE,sha256=hLAQvQw_CRKcKeOyoYbw25dA5ijj4EzQFbE1jJ1vxhI,1070
+koenigsberg/__init__.py,sha256=bkEracgWt2XRzwFwHf1yrJHoVcoyn0LsSdFKYtX3OLU,257
+koenigsberg/tests/test_register.py,sha256=cxURyHsMgs56IVlz6JkdmOgXBm8FJvSAKd163zBDthU,601
+koenigsberg/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+koenigsberg/tests/conftest.py,sha256=ZIuW7K3ZeXpZDkNnl2dNFRdEeagfKVLdbFRIWctKN4U,208
+koenigsberg/main.py,sha256=5dxNu1_NdoUfnMK7vqMdpIsclQl1Py4I8vIA2nl8hO4,1930
+koenigsberg/_internal.abi3.so,sha256=Se_80oF6H0Ag4Z7PHHTPMGVIlAXnhrvV6dGSZf7wWyI,66717368
+koenigsberg-0.1.8.dist-info/RECORD,,
