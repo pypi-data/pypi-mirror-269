@@ -1,0 +1,4 @@
+[console_scripts]
+DeepCopyBasicRespondCheck = DeepSomaticCopy.pipeline:respondCheck
+DeepCopyRun = DeepSomaticCopy.pipeline:scriptRunEverything
+DeepCopySecondRespondCheck = DeepSomaticCopy.pipeline:scriptCheck
