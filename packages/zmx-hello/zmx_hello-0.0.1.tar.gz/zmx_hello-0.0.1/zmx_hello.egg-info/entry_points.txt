@@ -1,0 +1,2 @@
+[console_scripts]
+zmx_hello = zmx_hello:hello

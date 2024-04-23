@@ -1,0 +1,9 @@
+README.md
+setup.py
+hello/__init__.py
+hello/main.py
+zmx_hello.egg-info/PKG-INFO
+zmx_hello.egg-info/SOURCES.txt
+zmx_hello.egg-info/dependency_links.txt
+zmx_hello.egg-info/entry_points.txt
+zmx_hello.egg-info/top_level.txt
