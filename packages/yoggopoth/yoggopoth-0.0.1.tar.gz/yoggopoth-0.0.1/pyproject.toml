@@ -1,0 +1,21 @@
+[project]
+name = "yoggopoth"
+description = "YogGoPoTh: learning Transformers with the Cthulhu Mythos!"
+version = "0.0.1"
+requires-python = ">= 3.10"
+dependencies = [
+    "torch ~=2.2.0",
+    "fire ~=0.6.0",
+    "pydantic-settings ~=2.2.1",
+    "numpy ~=1.26.4",
+]
+
+[project.optional-dependencies]
+dev = ["ruff"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["local_data"]

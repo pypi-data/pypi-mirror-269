@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+yoggopoth/__init__.py
+yoggopoth/__main__.py
+yoggopoth/models.py
+yoggopoth/settings.py
+yoggopoth/trainer.py
+yoggopoth.egg-info/PKG-INFO
+yoggopoth.egg-info/SOURCES.txt
+yoggopoth.egg-info/dependency_links.txt
+yoggopoth.egg-info/requires.txt
+yoggopoth.egg-info/top_level.txt

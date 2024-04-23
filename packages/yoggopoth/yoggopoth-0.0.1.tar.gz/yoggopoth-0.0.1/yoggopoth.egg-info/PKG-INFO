@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: yoggopoth
+Version: 0.0.1
+Summary: YogGoPoTh: learning Transformers with the Cthulhu Mythos!
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: torch~=2.2.0
+Requires-Dist: fire~=0.6.0
+Requires-Dist: pydantic-settings~=2.2.1
+Requires-Dist: numpy~=1.26.4
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
