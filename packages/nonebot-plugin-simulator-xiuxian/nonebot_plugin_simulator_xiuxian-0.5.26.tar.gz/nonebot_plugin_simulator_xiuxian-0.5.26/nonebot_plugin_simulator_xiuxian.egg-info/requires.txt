@@ -1,0 +1,8 @@
+nonebot2
+nonebot-adapter-onebot
+wget
+nonebot_plugin_apscheduler
+Pillow==9.5.0
+pydantic
+wcwidth
+ujson
