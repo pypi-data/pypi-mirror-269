@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pySigma-backend-panther
+Version: 0.2.2
+Summary: pySigma backend for Panther
+Home-page: https://github.com/panther-labs/pySigma-backend-panther
+License: LGPL-3.0-only
+Author: Josh Esbrook
+Author-email: jehockey@umich.edu
+Maintainer: Panther Labs Inc
+Maintainer-email: pypi@runpanther.io
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: defusedxml (>=0.7.1,<0.8.0)
+Requires-Dist: pysigma (>=0.11,<0.12)
+Project-URL: Repository, https://github.com/panther-labs/pySigma-backend-panther

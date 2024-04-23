@@ -1,0 +1,17 @@
+sigma/backends/panther/__init__.py,sha256=_ZAACmDkbyBA-qSEWYC2tYld3WotqgDjGShHex2GY3Q,359
+sigma/backends/panther/helpers/base.py,sha256=tGwHunFZ3PzseC06pMXZkzqrScmEn8NkpuNYirLM55s,3047
+sigma/backends/panther/helpers/python_helper.py,sha256=3X1MzKI6zXqabOoNE0D0ZKRdjUHXvzNEZIw8sUehqOA,4685
+sigma/backends/panther/helpers/sdyaml_helper.py,sha256=PJ2hl0q-RSXHsTTDZ5lJAobi7ZyAuxiAbUZN3Q3WG0o,10312
+sigma/backends/panther/panther_backend.py,sha256=fOnBaV9hlCA4Zww3GrtWOQE5WWeX48WTlqdS39O2aHY,12274
+sigma/pipelines/panther/__init__.py,sha256=_qYtEuN92xg6KGdWT7X1ZsB8L13STY8X5det0bs0IvY,258
+sigma/pipelines/panther/carbon_black_panther_pipeline.py,sha256=xZdGBIwR1TFNbQb1iy6KvYtZ9kmzaeTCThXqJ4uwHhA,4489
+sigma/pipelines/panther/crowdstrike_panther_pipeline.py,sha256=cFa8oQBxphGYpLnf6LtBc4NJznxhlLpZwCz24wSrkaA,10554
+sigma/pipelines/panther/gcp_audit_panther_pipeline.py,sha256=wAtteoM0UVj6qMljQO8X00AAELtUhBlNumA5fcAEZWU,966
+sigma/pipelines/panther/panther_pipeline.py,sha256=Cc81rPQki7ouMkraQO7R8bhB3kiPsH8Te7nSOmWFoRs,2800
+sigma/pipelines/panther/processing.py,sha256=sLwPF1DbxzxaDmwUCWpINstCiAvuKBbYYGYVo91R8vo,1049
+sigma/pipelines/panther/replace_condition_ends_with.py,sha256=KQY6iIeTwfB1yuNKUOW1VqAO9jCGaUPMY_kawmZt_6o,1975
+sigma/pipelines/panther/sdyaml_transformation.py,sha256=hphxafgAKt1pOJduqSOPOc-4Ivz_MuQeUTxsJpPM9gQ,3127
+pysigma_backend_panther-0.2.2.dist-info/LICENSE,sha256=m_S1P_jtKdbrhPIR4MW_dFQIznpA010hVb0Ork2Fug4,11549
+pysigma_backend_panther-0.2.2.dist-info/METADATA,sha256=T5Vdz3akRD9F5B-bqZuwr4DK8xk7BixFKT4ri21FwLo,890
+pysigma_backend_panther-0.2.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pysigma_backend_panther-0.2.2.dist-info/RECORD,,
