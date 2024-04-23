@@ -1,0 +1,47 @@
+# Telegram Notifier - Prakhar
+
+`telegram-notifier-prakhar` is a Python package designed to send notifications via Telegram. This is particularly useful for notifying users about the completion of long-running processes in their code.
+
+## Features
+
+- Easy to integrate with any Python script.
+- Customizable message content.
+- Uses Telegram Bot to send notifications.
+
+## Prerequisites
+
+Before you can use this package, you need to set up a Telegram Bot. Follow these steps to get started:
+
+### Step 1: Create a Telegram Bot
+
+1. Open Telegram app and search for "BotFather".
+2. Start a chat with BotFather and send `/newbot`.
+3. Follow the instructions to create your bot. You will receive a token for accessing your bot via HTTP API.
+
+### Step 2: Get Your Chat ID
+
+1. Start a chat with your newly created bot or add it to a group.
+2. Send a message to the bot or in the group.
+3. Visit `https://api.telegram.org/bot<YourBOTToken>/getUpdates` in your web browser.
+4. Look for `"chat":{"id":<number>}` in the response. This number is your chat ID.
+
+## Installation
+
+Install the package via pip:
+
+```bash
+pip install telegram-notifier-prakhar
+```
+
+## Usage
+Here is a simple example of how to use the telegram-notifier-prakhar in your Python script:
+
+```bash
+from telegram_notifier import send_telegram_message
+
+bot_token = 'your_bot_token'  # Replace with your bot token
+chat_id = 'your_chat_id'  # Replace with your chat id
+
+# Send a custom message
+send_telegram_message(bot_token, chat_id, "Your script has finished running.")
+```
