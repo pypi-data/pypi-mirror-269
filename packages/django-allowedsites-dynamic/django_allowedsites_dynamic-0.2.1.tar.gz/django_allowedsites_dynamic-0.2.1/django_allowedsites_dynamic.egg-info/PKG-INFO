@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: django-allowedsites-dynamic
+Version: 0.2.1
+Summary: dynamic ALLOWED_HOSTS
+Author: Keryn Knight
+Author-email: python-package@kerynknight.com
+License: BSD License
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Framework :: Django
+Classifier: Natural Language :: English
+Classifier: Environment :: Web Environment
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+Requires-Dist: Django>=1.4
+Requires-Dist: requests
+
+===================
+django-allowedsites
+===================
+
+Django 1.6+ library for setting your ``ALLOWED_HOSTS`` based on the domains in ``django.contrib.sites`` and
+the server's public IP address which is determined at runtime.
+
+.. image:: https://travis-ci.org/kezabelle/django-allowedsites.svg?branch=master
+  :target: https://travis-ci.org/kezabelle/django-allowedsites
+
+Usage is something like the following, in your ``settings.py`` or equivalent::
+
+    from allowedsites import AllowedSites
+    ALLOWED_HOSTS = AllowedSites(defaults=('mytestsite.com',), dynamic_public_ip=False, net_timeout=5)
+
+* dynamic_public_ip=False
+
+  If set True, the server's public IP address is set for ALLOWED_HOSTS at runtime.
+
+  The default is ``False``.
+
+* net_timeout=5
+
+  The timeout for the network request to get the server's public IP address.
+
+  The default is ``5`` seconds.
+
+Or, if you want to use your cache backend::
+
+    from allowedsites import CachedAllowedSites
+    ALLOWED_HOSTS = CachedAllowedSites(cache_timeout=None)
+
+* cache_timeout=None
+
+  For how long the cache will last, in seconds.
+
+  The default is ``None``, means cache forever.
+
+A single key, ``allowedsites`` will be inserted containing an unsorted collection
+of all the domains that are in the ``django.contrib.sites``. For the sake of allowing
+multiple processes to keep up to date with the ``Site`` values without hitting 
+the database, using a shared cache (ie: not ``LocMemCache``) is encouraged.
+
+The ``CachedAllowedSites`` also provides an ``clear_cache`` class method and an ``update_cache`` instance method which
+may be used as a signal listener::
+
+    from django.db.models.signals import post_save
+    from django.contrib.sites.models import Site
+    post_save.connect(CachedAllowedSites.clear_cache, sender=Site,
+                      dispatch_uid='clear_allowedsites')
+
+Or::
+
+    from django.conf import settings
+    from django.db.models.signals import post_save
+    from django.contrib.sites.models import Site
+    post_save.connect(settings.ALLOWED_HOSTS.update_cache, sender=Site,
+                      dispatch_uid='update_allowedsites')
+
+You can modify the the defaults::
+
+    from allowedsites import AllowedSites
+    ALLOWED_HOSTS = AllowedSites(defaults=('mytestsite.com',))
+    ALLOWED_HOSTS += AllowedSites(defaults=('anothersite.net',))
+    ALLOWED_HOSTS -= AllowedSites(defaults=('mytestsite.com',))
+    # ultimately, only anothersite.net is in the defaults
+
+Other uses?
+-----------
+
+It *may* work with `django-csp`_ (Content Security Policy headers), 
+`django-dcors`_ (Cross-Origin Resource Sharing headers) and others. I don't know.
+
+.. _django-csp: https://github.com/mozilla/django-csp
+.. _django-dcors: https://github.com/prasanthn/django-dcors
+
+
+----
+
+Copyright (c) 2014, Keryn Knight
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The views and conclusions contained in the software and documentation are those
+of the authors and should not be interpreted as representing official policies,
+either expressed or implied, of the FreeBSD Project.
+
+This license applies to version 0.1.0 of django-allowedsites.

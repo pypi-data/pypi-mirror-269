@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+allowedsites.py
+pyproject.toml
+setup.py
+django_allowedsites_dynamic.egg-info/PKG-INFO
+django_allowedsites_dynamic.egg-info/SOURCES.txt
+django_allowedsites_dynamic.egg-info/dependency_links.txt
+django_allowedsites_dynamic.egg-info/not-zip-safe
+django_allowedsites_dynamic.egg-info/requires.txt
+django_allowedsites_dynamic.egg-info/top_level.txt
