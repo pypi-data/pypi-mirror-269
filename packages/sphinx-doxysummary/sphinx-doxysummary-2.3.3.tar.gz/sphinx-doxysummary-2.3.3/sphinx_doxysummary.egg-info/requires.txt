@@ -1,0 +1,6 @@
+Sphinx>=4.0.0
+lxml>=4.9
+
+[example]
+breathe>=4.34
+sphinx-rtd-theme

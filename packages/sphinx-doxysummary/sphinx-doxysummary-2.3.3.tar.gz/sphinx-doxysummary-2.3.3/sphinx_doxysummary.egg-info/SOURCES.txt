@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+sphinx_doxysummary/__init__.py
+sphinx_doxysummary/directive.py
+sphinx_doxysummary/generate.py
+sphinx_doxysummary/utils.py
+sphinx_doxysummary/xmltree.py
+sphinx_doxysummary.egg-info/PKG-INFO
+sphinx_doxysummary.egg-info/SOURCES.txt
+sphinx_doxysummary.egg-info/dependency_links.txt
+sphinx_doxysummary.egg-info/requires.txt
+sphinx_doxysummary.egg-info/top_level.txt
+sphinx_doxysummary/templates/cppbase.rst
