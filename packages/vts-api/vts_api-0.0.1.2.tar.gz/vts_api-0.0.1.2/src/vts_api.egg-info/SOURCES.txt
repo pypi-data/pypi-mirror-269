@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/vts-api/types/__init__.py
+src/vts-api/types/auth.py
+src/vts-api/types/base.py
+src/vts-api/types/error.py
+src/vts-api/types/model_actions.py
+src/vts-api/types/data/__init__.py
+src/vts-api/types/data/auth.py
+src/vts-api/types/data/model_actions.py
+src/vts-api/utils/__init__.py
+src/vts_api.egg-info/PKG-INFO
+src/vts_api.egg-info/SOURCES.txt
+src/vts_api.egg-info/dependency_links.txt
+src/vts_api.egg-info/requires.txt
+src/vts_api.egg-info/top_level.txt
