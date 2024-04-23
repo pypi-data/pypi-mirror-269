@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: iqrfpy-app-helpers
+Version: 0.1.0.dev1
+Summary: Diagnostics for iqrfpy
+Home-page: https://gitlab.iqrf.org/open-source/iqrf-sdk/iqrfpy/iqrfpy-app-helpers
+Author: Karel Hanák
+Author-email: karel.hanak@iqrf.org
+License: Apache-2.0
+Project-URL: Homepage, https://gitlab.iqrf.org/open-source/iqrf-sdk/iqrfpy/iqrfpy-app-helpers
+Project-URL: Changelog, https://gitlab.iqrf.org/open-source/iqrf-sdk/iqrfpy/iqrfpy-app-helpers/-/blob/master/changelog.md
+Project-URL: Source code, https://gitlab.iqrf.org/open-source/iqrf-sdk/iqrfpy/iqrfpy-app-helpers
+Project-URL: Issue tracker, https://gitlab.iqrf.org/open-source/iqrf-sdk/iqrfpy/iqrfpy-app-helpers/-/issues
+Keywords: iqrf
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: iqrfpy>=0.2.0
+Requires-Dist: tabulate>=0.9.0
+
+## iqrfpy-app-helpers
+
+An extension for [iqrfpy](https://pypi.org/project/iqrfpy/) offering basic application logic examples.
+
+## Quick start
+
+Before installing the library, it is recommended to first create a virtual environment.
+Virtual environments help isolate python installations as well as pip packages independent of the operating system.
+
+A virtual environment can be created and launched using the following commands:
+
+```bash
+python3 -m venv <dir>
+source <dir>/bin/activate
+```
+
+iqrfpy-app-helpers can be installed using the pip utility:
+
+```bash
+python3 -m pip install -U iqrfpy-app-helpers
+```
