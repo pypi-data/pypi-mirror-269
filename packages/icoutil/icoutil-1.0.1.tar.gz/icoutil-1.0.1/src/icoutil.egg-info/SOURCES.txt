@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/icoutil/IcoFile.py
+src/icoutil/__init__.py
+src/icoutil/__main__.py
+src/icoutil.egg-info/PKG-INFO
+src/icoutil.egg-info/SOURCES.txt
+src/icoutil.egg-info/dependency_links.txt
+src/icoutil.egg-info/entry_points.txt
+src/icoutil.egg-info/requires.txt
+src/icoutil.egg-info/top_level.txt
+tests/test_icoutil.py
