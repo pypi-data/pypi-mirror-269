@@ -1,0 +1,9 @@
+LICENCE
+README.md
+pyproject.toml
+src/mj4_test_1/__init__.py
+src/mj4_test_1/mj4_test_2.py
+src/mj4_test_2.egg-info/PKG-INFO
+src/mj4_test_2.egg-info/SOURCES.txt
+src/mj4_test_2.egg-info/dependency_links.txt
+src/mj4_test_2.egg-info/top_level.txt
