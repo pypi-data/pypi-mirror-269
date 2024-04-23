@@ -1,0 +1,11 @@
+tradegym/__init__.py,sha256=osMWPq295XfxLO0IR9rc0K1crhfxrXUK3ydfFALx--4,22
+tradegym/agents/__init__.py,sha256=4y-0c29WiaBaUPCtzdnNdWX8aX_OREf1THHSKccrs2M,271
+tradegym/agents/baseline.py,sha256=UNhP7FNvs1hdVuzDrKHmsbJxeqJO8nKvAqj3D8zaEfo,2139
+tradegym/agents/sb3.py,sha256=Q4XfFddqiO4FaUOU31y4km2RrwcANUxfZWLYbUububY,238
+tradegym/crossval.py,sha256=Ui15uwfu9akgO7Z1X5zdBdMhaMFBDuq1SPf5sD2G_wY,13547
+tradegym/rewards.py,sha256=JuRWVKBs8MjVU4mDa51j3_FRfOjWouS2IhCOKnrxmno,2478
+tradegym/tradegym.py,sha256=2BNvIkv4RrEhhPUHFf2BdiBffsjHS6v0JYHpKUnaqsU,21470
+tradegym-25.1.4.dist-info/LICENSE,sha256=DoTFQI9KbfY7wyCNbR4F3DRfZbOgXu84Xh0F8os21NQ,1067
+tradegym-25.1.4.dist-info/METADATA,sha256=mgaCmHXATGarHGKlGOsV-AN5ohVBgpR32yCRoT2A868,7167
+tradegym-25.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tradegym-25.1.4.dist-info/RECORD,,
