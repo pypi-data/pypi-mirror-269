@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: magnet-pinn
+Version: 0.0.1
+Summary: This is the software package for simulating EM Fields using NNs
+License: GNU
+Author: Andrzej Dulny
+Author-email: andzej.dulny@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: h5py (>=3.10.0,<4.0.0)
+Requires-Dist: mypy (>=1.9.0,<2.0.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: trimesh (>=4.2.4,<5.0.0)
+Description-Content-Type: text/markdown
+
+# magnet
+This is the software package for simulating EM Fields using NNs
+
