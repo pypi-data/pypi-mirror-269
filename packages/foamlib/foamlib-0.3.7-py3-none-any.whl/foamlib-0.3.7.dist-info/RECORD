@@ -1,0 +1,15 @@
+foamlib/__init__.py,sha256=hW4v8Ud3Ftd_sV1O_SuF4JzxkLRjjKwCl-A81aOu0zo,431
+foamlib/_cases.py,sha256=ELwX-Gr3ZB11axG6coHqXDyGh9Xb7kgAfYkhCsEGZy4,20278
+foamlib/_util.py,sha256=vL03aAzpWdZyYIhe2WTxHiz9b4lnttVnRuzqUmZvXXk,3047
+foamlib/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+foamlib/_files/__init__.py,sha256=vDkPj8u8bX_I_m2YfeKvXBgwg8D1ufyFCfHGHKN3JPQ,140
+foamlib/_files/_base.py,sha256=YA5a-i5HZuA3JslCD6r-DwZzpSA8r42dqSXef286Ako,2050
+foamlib/_files/_files.py,sha256=JcOVP3eu9QYCOPt_DfobigKsd0VqgJRfEVytMOwES_g,10815
+foamlib/_files/_io.py,sha256=So9rG6iW77sRK2xFz5KHX6AFtYc2L19voAwn-_NmQow,2075
+foamlib/_files/_parsing.py,sha256=-zSpEDjuPxzOdsLWaeQl7j6FZHyw2-jXNgOCXkcGskU,7308
+foamlib/_files/_serialization.py,sha256=rmZW42Pyn1DIJbGMZqFG_lZ5DcLhPmfUgH24qsu2rIk,3400
+foamlib-0.3.7.dist-info/LICENSE.txt,sha256=5Dte9TUnLZzPRs4NQzl-Jc2-Ljd-t_v0ZR5Ng5r0UsY,35131
+foamlib-0.3.7.dist-info/METADATA,sha256=CqC7YFwGgMYkr_niGYF3p_675P8Jc1670msKlZcqjZw,5037
+foamlib-0.3.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+foamlib-0.3.7.dist-info/top_level.txt,sha256=ZdVYtetXGwPwyfL-WhlhbTFQGAwKX5P_gXxtH9JYFPI,8
+foamlib-0.3.7.dist-info/RECORD,,
