@@ -1,0 +1,8 @@
+setuptools
+pandas
+numpy
+scipy
+scikit-learn
+netCDF4
+requests
+bs4
