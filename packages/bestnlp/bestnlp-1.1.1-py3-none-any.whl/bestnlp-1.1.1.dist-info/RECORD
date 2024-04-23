@@ -1,0 +1,10 @@
+bestnlp/__init__.py,sha256=0XWpNdmxPa2JZgo6L9_HmWwpegVn5A2r3ycUA69XwN0,325
+bestnlp/dict.txt,sha256=cZfDIR3dmJYrA2zfQDJNHqK_qhK9Ao5o-qcBEaiOEqg,5071852
+bestnlp/new_word_discovery.py,sha256=zea2PJVBJJBqQkiW8HlARIp6JJRZXtmbIanHfmQzrS4,7610
+bestnlp/similar_word_discovery.py,sha256=qgiZ5FzRTPx4P3cOLcCQKdhENjxjahbNHWZZ0oFoAs4,11004
+bestnlp/similar_word_discovery_embedding.py,sha256=HsoxJomebHNlB9JyNfGghGSPJ6FJ4X0eAvRnbTUUmf8,4004
+bestnlp/utils.py,sha256=c8bSHGOjGJXOxFADZ9uKPKL6PClG2_XQGOsse3LJfNA,958
+bestnlp-1.1.1.dist-info/METADATA,sha256=EF1zKKODB3Pj1jYrNE_G5HhhIlkKTrGqh_9DPJQyM3c,245
+bestnlp-1.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+bestnlp-1.1.1.dist-info/top_level.txt,sha256=gEejasanGTcCsrx7FMvnDNjB5jb-Xf07bqn5DqRKxg8,8
+bestnlp-1.1.1.dist-info/RECORD,,
