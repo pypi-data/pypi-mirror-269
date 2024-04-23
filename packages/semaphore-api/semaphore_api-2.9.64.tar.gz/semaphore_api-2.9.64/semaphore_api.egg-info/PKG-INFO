@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: semaphore_api
+Version: 2.9.64
+Summary: Ansible Semaphore Python API
+Home-page: https://github.com/nchekwa/ansible-semaphore-api
+Author: Nchekwa
+Author-email: artur@nchekwa.com
+Keywords: ansible-semaphore,semaphore,ansible,api
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python_dateutil>=2.5.3
+Requires-Dist: setuptools>=21.0.0
+Requires-Dist: urllib3<2.1.0,>=1.25.3
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+
+
+Ansible Semaphore API
+
+API Python Client allows communication with Ansible-Semaphore API.
+
+API demo: https://www.ansible-semaphore.com/api-docs/
+
+Docs: https://github.com/nchekwa/ansible-semaphore-api
+
+This Package is Auto-Generated based on API-Docs from Ansible-Semaphore.
+ 
