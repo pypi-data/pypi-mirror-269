@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+csvw_functions/__init__.py
+csvw_functions/csvw_functions.py
+csvw_functions.egg-info/PKG-INFO
+csvw_functions.egg-info/SOURCES.txt
+csvw_functions.egg-info/dependency_links.txt
+csvw_functions.egg-info/requires.txt
+csvw_functions.egg-info/top_level.txt
+csvw_functions/_old/csvw_functions.py
+tests/test_csvw_functions.py
+tests/test_csvw_primer_examples.py
+tests/test_validating_metadata_files.py
