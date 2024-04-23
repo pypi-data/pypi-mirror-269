@@ -1,0 +1,12 @@
+name: pidginv5
+channels:
+  - anaconda
+  - conda-forge
+dependencies:
+  - python>=3.6,<3.10
+  - rdkit>=2019.03.2
+  - scikit-learn=1.1.3
+  - pip
+  - pip:
+    - zenodo-client
+    - flask
