@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: xgne
+Version: 0.0.9
+Author: BruceLong
+Author-email: 18656170559@163.com
+License: MIT Licence
+Platform: any
+Description-Content-Type: text/markdown
+Requires-Dist: wheel
+Requires-Dist: w3lib
+Requires-Dist: lxml
+Requires-Dist: numpy
+Requires-Dist: langid
+Requires-Dist: pyyaml
+Requires-Dist: newspaper3k
+Requires-Dist: dateutils
+Requires-Dist: parsel
+
+# xgne
+
+通用新闻解决方案
