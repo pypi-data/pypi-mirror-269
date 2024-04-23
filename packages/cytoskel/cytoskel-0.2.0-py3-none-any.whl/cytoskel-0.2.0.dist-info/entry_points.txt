@@ -1,0 +1,3 @@
+[console_scripts]
+cytoskel=cytoskel.cli:main
+
