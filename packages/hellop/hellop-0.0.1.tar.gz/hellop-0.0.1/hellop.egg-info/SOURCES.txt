@@ -1,0 +1,9 @@
+README.md
+setup.py
+hello/__init__.py
+hello/main.py
+hellop.egg-info/PKG-INFO
+hellop.egg-info/SOURCES.txt
+hellop.egg-info/dependency_links.txt
+hellop.egg-info/entry_points.txt
+hellop.egg-info/top_level.txt
