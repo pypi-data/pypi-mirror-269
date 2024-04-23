@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: senfenico
+Version: 0.1.1
+Summary: Python bindings for the Stripe API
+Home-page: https://github.com/senfenico/senfenico-python
+Author: Senfenico
+Author-email: contact@senfenico.com
+License: MIT
+Keywords: Senfenenico api payments
+Description-Content-Type: text/x-rst
+Requires-Dist: requests
+
+Python bindings for the Stripe API
