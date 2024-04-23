@@ -1,0 +1,2 @@
+recursive-include src/cpymad *.pxd *.pyx *.c
+recursive-include test *.py *.madx
