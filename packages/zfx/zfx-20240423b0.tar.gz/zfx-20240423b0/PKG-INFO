@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: zfx
+Version: 20240423b0
+Summary: 自用
+Home-page: 
+Author: zengfengxiang
+Author-email: 424491679@qq.com
+Requires-Dist: requests
