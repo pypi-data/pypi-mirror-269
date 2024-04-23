@@ -1,0 +1,11 @@
+rbase24-0.2.0.dist-info/METADATA,sha256=kLAdUx66LU-f-iByiD5WJUneXaOxHj_HuexU-FOFo-w,1394
+rbase24-0.2.0.dist-info/WHEEL,sha256=7sv5iXvIiTVJSnAxCz2tGBm9DHsb2vPSzeYeT7pvGUY,90
+rbase24-0.2.0.dist-info/entry_points.txt,sha256=EO1mxUB05bNoy-7MI30jlnXWLGiTn1GZg8_cHX8uc9I,46
+rbase24/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rbase24/__main__.py,sha256=KCU5vGQwlAfeGyph_b7qfoYifuyXmGFJhoFOHdvAuuQ,87
+rbase24/cli.py,sha256=Fxy8YVk5fgjrKHxswN0EyWoqY2sSjErs9qzE6QoKa38,2128
+rbase24/color.py,sha256=_vDg0CmAN5hhwPsYmbUrnrkwhtjdD7GHgV_4IhOElNw,1813
+rbase24/config.py,sha256=XY__mdVPWYx4sdi-NA-fSgqTZy5xk2EosGz8ZsHbdvM,2030
+rbase24/scheme.py,sha256=ZN3BryV2w-pdXpDsFzbF-Z-ncHixOn2TiAGkHWChhBM,1931
+rbase24/typedefs.py,sha256=sdy9MWGlNnrDQM_OP2VGwRSsLHIOQUgQgV06BiOK_W0,858
+rbase24-0.2.0.dist-info/RECORD,,
