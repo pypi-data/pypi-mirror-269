@@ -1,0 +1,15 @@
+developergpt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+developergpt/__main__.py,sha256=Ke709mJqAqvdMFc-VlNbiTTN9g9TGZKwFrCqUHR94RA,138
+developergpt/cli.py,sha256=sNs2-2qcn4xPYxNXWnHpsXcBGOE5mQjiHZ-njr1-vM4,11079
+developergpt/config.py,sha256=j4hIO-XT-j3vfhYIXpelPSuJPw1myDH9E-IWp8llsf0,3352
+developergpt/few_shot_prompts.py,sha256=FLQ3clQ3Vca5fQNBwLOh5uVzq2Jb_OvwCu2D2Mc4tF0,5110
+developergpt/gemini_adapter.py,sha256=TgaMVg1INWaF8zXy15vy1vol6kouCiRDeYt7cIsOq_E,6242
+developergpt/huggingface_adapter.py,sha256=rj1B7JjyXjjDSaRGGX5DXtLqUw0YnFgZ9czRohQBiwg,17854
+developergpt/openai_adapter.py,sha256=LJ-BV2oWzaBXt4B4cS7JqLBEG2axrMqPTjPXWcQ8nbk,10035
+developergpt/utils.py,sha256=BtDDf09xdhnT4okfrDykyBdhpWcLD2JBNJyC-vkJgI4,8715
+developergpt-0.7.0.dist-info/LICENSE,sha256=4ubllnZPPBGl82mvNFT0s6ZfX3nIo3G9WN7WATSeiFI,1067
+developergpt-0.7.0.dist-info/METADATA,sha256=zPspkcuMLSZwzuvKeegLLW--kzQNMA4aTVuURxQ_fcM,9998
+developergpt-0.7.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+developergpt-0.7.0.dist-info/entry_points.txt,sha256=kIQ-ucJFXXlUnEY9v8hUdNDKatgboyxhpx6FYlabWkM,60
+developergpt-0.7.0.dist-info/top_level.txt,sha256=0Pk0u4R5SvOTvH3B12dJJgAMzjHMwi8Kw9x1j-Rq0Lo,13
+developergpt-0.7.0.dist-info/RECORD,,
