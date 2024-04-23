@@ -1,0 +1,16 @@
+LICENSE
+README.md
+README.rst
+requirements.txt
+setup.py
+spleenseg/spleenseg.py
+spleenseg.egg-info/PKG-INFO
+spleenseg.egg-info/SOURCES.txt
+spleenseg.egg-info/dependency_links.txt
+spleenseg.egg-info/entry_points.txt
+spleenseg.egg-info/requires.txt
+spleenseg.egg-info/top_level.txt
+spleenseg/core/neuralnet.py
+spleenseg/plotting/plotting.py
+spleenseg/transforms/transforms.py
+tests/test_example.py
