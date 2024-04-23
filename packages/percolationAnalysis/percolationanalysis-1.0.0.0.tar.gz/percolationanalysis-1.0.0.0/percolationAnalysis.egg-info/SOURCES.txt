@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+percolationAnalysis/__init__.py
+percolationAnalysis/percolationAnalysis.py
+percolationAnalysis/testData.bin
+percolationAnalysis.egg-info/PKG-INFO
+percolationAnalysis.egg-info/SOURCES.txt
+percolationAnalysis.egg-info/dependency_links.txt
+percolationAnalysis.egg-info/top_level.txt
