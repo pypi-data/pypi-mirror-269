@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/diff_parser/__init__.py
+src/diff_parser.egg-info/PKG-INFO
+src/diff_parser.egg-info/SOURCES.txt
+src/diff_parser.egg-info/dependency_links.txt
+src/diff_parser.egg-info/top_level.txt
