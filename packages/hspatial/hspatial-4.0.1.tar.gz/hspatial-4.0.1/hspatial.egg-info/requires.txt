@@ -1,0 +1,7 @@
+Click>=7.0
+iso8601
+htimeseries<8,>=6
+affine
+simpletail
+gdal<4,>=1.10
+django<6,>=2.2
