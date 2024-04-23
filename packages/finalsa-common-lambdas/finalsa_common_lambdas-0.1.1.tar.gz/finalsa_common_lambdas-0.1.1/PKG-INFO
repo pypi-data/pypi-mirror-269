@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: finalsa-common-lambdas
+Version: 0.1.1
+Summary: An utils package for using finalsa common lambas.
+Home-page: https://github.com/finalsa/finalsa-common-lambda
+Author: Luis Jimenez
+Author-email: luis@finalsa.com
+License: MIT
+Keywords: dynamodb
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: boto3>=1.20.3
+Requires-Dist: pydantic>=2.5.2
+Requires-Dist: finalsa-common-models>=0.0.4
+Requires-Dist: finalsa-sqs-client>=0.0.3

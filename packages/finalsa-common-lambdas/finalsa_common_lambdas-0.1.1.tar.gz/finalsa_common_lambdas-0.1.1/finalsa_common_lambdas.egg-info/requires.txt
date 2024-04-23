@@ -1,0 +1,4 @@
+boto3>=1.20.3
+pydantic>=2.5.2
+finalsa-common-models>=0.0.4
+finalsa-sqs-client>=0.0.3
