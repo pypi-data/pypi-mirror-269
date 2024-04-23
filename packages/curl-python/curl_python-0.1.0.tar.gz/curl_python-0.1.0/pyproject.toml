@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "curl-python"
+version = "0.1.0"
+description = ""
+authors = ["hermann-web <hermannagossou6@gmail.com>"]
+readme = "README.md"
+packages = [
+    {include = "curl"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+requests = "^2.20.0"
+tqdm = "^4.60.2"
+
+[tool.poetry.scripts]
+curl-python = "curl.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
