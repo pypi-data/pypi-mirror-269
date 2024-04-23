@@ -1,0 +1,27 @@
+graft src/en_tts_tests/
+graft src/en_tts_app_tests/
+
+include \
+  pylintrc \
+  CHANGELOG.md \
+  CODE_OF_CONDUCT.md \
+  CONTRIBUTING.md \
+  CITATION.cff \
+  LICENSE \
+  MANIFEST.in \
+  Pipfile \
+  Pipfile.lock \
+  README.md \
+  pyproject.toml \
+  setup.cfg \
+  examples/rainbow.wav \
+  img/hf.png
+
+global-exclude \
+  *~ \
+  *.py[cod] \
+  *.so \
+  .DS_Store
+
+prune .*/
+prune **/__pycache__/

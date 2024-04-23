@@ -1,0 +1,135 @@
+[project]
+name = "en-tts"
+version = "0.0.2"
+description = "Web app, command-line interface and Python library for synthesizing English texts into speech."
+readme = "README.md"
+requires-python = ">=3.8, <3.12"
+license = { text = "MIT" }
+authors = [{ name = "Stefan Taubert", email = "pypi@stefantaubert.com" }]
+maintainers = [{ name = "Stefan Taubert", email = "pypi@stefantaubert.com" }]
+keywords = [
+  "Text-to-speech",
+  "Speech synthesis",
+  "praat",
+  "TextGrid",
+  "Utils",
+  "Language",
+  "Linguistics",
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Operating System :: OS Independent",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX",
+  "Operating System :: POSIX :: BSD",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: Unix",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+  "numpy>=1.18.5",
+  "tqdm>=4.63.0",
+  "ordered_set>=4.1.0",
+  "ffmpy>=0.2.3",
+  "nltk>=3.2.4",
+  "torch>=2.0.0",
+  "pronunciation-dictionary>=0.0.6",
+  "pronunciation-dictionary-utils>=0.0.5",
+  "english-text-normalization>=0.0.3",
+  "dict-from-dict>=0.0.4",
+  "dict-from-g2pe>=0.0.2",
+  "tacotron-cli>=0.0.5",
+  "waveglow-cli>=0.0.2",
+  "txt-utils>=0.0.3",
+  "gradio[oauth]>=4.26.0",
+  "uvicorn>=0.14.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/stefantaubert/en-tts"
+Issues = "https://github.com/stefantaubert/en-tts/issues"
+
+[project.scripts]
+en-tts-cli = "en_tts_cli.cli:run"
+en-tts-web = "en_tts_gr.app:run"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+packages = ["en_tts", "en_tts_app", "en_tts_gr", "en_tts_cli"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = [
+  "en_tts",
+  "en_tts.*",
+  "en_tts_app",
+  "en_tts_app.*",
+  "en_tts_cli",
+  "en_tts_cli.*",
+  "en_tts_gr",
+  "en_tts_gr.*",
+]
+exclude = [
+  "en_tts_tests",
+  "en_tts_tests.*",
+  "en_tts_app_tests",
+  "en_tts_app_tests.*",
+  "en_tts_cli_debug",
+  "en_tts_cli_debug.*",
+]
+namespaces = true
+
+[tool.pytest.ini_options]
+log_cli = true
+log_level = "DEBUG"
+testpaths = ["src/en_tts_tests", "src/en_tts_app_tests"]
+
+[tool.autopep8]
+indent-size = 2
+ignore = ["E121"]
+max_line_length = 100
+
+[tool.isort]
+line_length = 100
+indent = 2
+known_first_party = ["en_tts", "en_tts_cli", "en_tts_app", "en_tts_gr"]
+known_third_party = [
+  "scipy",
+  "numpy",
+  "tqdm",
+  "TextGrid",
+  "pandas",
+  "ordered_set",
+  "matplotlib",
+  "pronunciation_dictionary",
+]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py{38,39,310,311}
+isolated_build = True
+
+[testenv]
+deps = 
+  pytest
+commands = 
+  pytest
+  en-tts-cli
+  en-tts-cli -v
+  en-tts-cli -h
+"""
+
+[build-system]
+requires = ["setuptools >= 40.9.0", "wheel"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,40 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+en-tts = {editable = true, path = "."}
+autopep8 = "*"
+pylint = "*"
+pycodestyle = "*"
+isort = "*"
+rope = "*"
+pytest = "*"
+autoflake = "*"
+twine = "*"
+build = "*"
+mypy = "*"
+pandas-stubs = "*"
+types-tqdm = "*"
+
+[packages]
+numpy = ">=1.18.5"
+tqdm = ">=4.63.0"
+ordered-set = ">=4.1.0"
+ffmpy = ">=0.2.3"
+nltk = ">=3.2.4"
+torch = ">=2.0.0"
+pronunciation-dictionary = ">=0.0.6"
+pronunciation-dictionary-utils = ">=0.0.5"
+english-text-normalization = ">=0.0.3"
+dict-from-dict = ">=0.0.4"
+dict-from-g2pe = ">=0.0.2"
+tacotron-cli = ">=0.0.5"
+waveglow-cli = ">=0.0.2"
+txt-utils = ">=0.0.3"
+gradio = {extras = ["oauth"], version = ">=4.26.0"}
+uvicorn = ">=0.14.0"
+
+[requires]
+python_version = "3.11"

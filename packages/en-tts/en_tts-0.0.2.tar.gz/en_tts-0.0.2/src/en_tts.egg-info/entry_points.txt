@@ -1,0 +1,3 @@
+[console_scripts]
+en-tts-cli = en_tts_cli.cli:run
+en-tts-web = en_tts_gr.app:run
