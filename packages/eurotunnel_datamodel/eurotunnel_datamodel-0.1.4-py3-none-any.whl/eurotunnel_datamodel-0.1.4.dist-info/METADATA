@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: eurotunnel_datamodel
+Version: 0.1.4
+Summary: Shared datamodels for the EuroTunnel Vision Project
+Author: Chris Morris
+Author-email: Eurotunnel@morrisdigital.co.uk
+Requires-Python: >=3.10,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: psycopg2-binary
+Requires-Dist: sqlalchemy (>=2.0.19)
+Description-Content-Type: text/markdown
+
+#The shared database functionality used by both all parts of the EuroTunnel Vision system
+Includes the Datamodel for sql alchemcy and some helper functions to connect to the database
+
