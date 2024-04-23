@@ -1,0 +1,5 @@
+pymongo<4.0,>=2.7.2
+stevedore>=0.14.1
+typing-extensions
+
+[django]
