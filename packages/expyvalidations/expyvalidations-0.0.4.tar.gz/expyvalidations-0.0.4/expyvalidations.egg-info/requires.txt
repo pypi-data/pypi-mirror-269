@@ -1,0 +1,4 @@
+alive-progress>=2.4.1
+openpyxl
+pandas>=1.4.0
+xlrd
