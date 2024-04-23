@@ -1,0 +1,3 @@
+[console_scripts]
+gemi-server = gemi.bin.server:main
+gurl = gemi.bin.gurl:main

@@ -1,0 +1,89 @@
+[build-system]
+requires = ["setuptools >= 38.3.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gemi-python"
+version = "0.1.2"
+dynamic = ["readme"]
+authors = [{name = "Zoey Mae", email = "admin@barkshark.xyz"}]
+description = "Utilities for the Gemini protocol"
+license = {text = "CNPL 7+"}
+keywords = ["gemini", "gemtext"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed"
+]
+requires-python = ">= 3.9"
+dependencies = [
+    "barkshark-lib >= 0.1.2",
+    "platformdirs == 4.2.0",
+    "pyopenssl == 24.1.0"
+]
+
+[project.urls]
+Homepage = "https://git.barkshark.xyz/barkshark/gemi"
+"Bug Tracker" = "https://git.barkshark.xyz/barkshark/gemi/issues"
+Documentation = "https://git.barkshark.xyz/barkshark/gemi/wiki"
+"Source Code" = "https://git.barkshark.xyz/barkshark/gemi"
+
+[project.optional-dependencies]
+doc = [
+    "furo == 2024.1.29",
+    "sphinx == 7.2.6",
+    "sphinx-external-toc == 1.0.1",
+]
+dev = [
+    "flake8 == 6.1.0",
+    "mypy == 1.9.0",
+    "pyinstaller == 6.5.0",
+    "types-pyOpenSSL == 24.0.0.20240417"
+]
+
+[project.scripts]
+gemi-server = "gemi.bin.server:main"
+gurl = "gemi.bin.gurl:main"
+
+[tool.setuptools]
+include-package-data = true
+# packages = ["gemi", "gemi.client", "gemi.server"]
+platforms = ["any"]
+license-files = ["LICENSE.md"]
+
+[tool.setuptools.dynamic]
+readme = {file = "README.md", content-type = "text/markdown"}
+version = {attr = "gemi.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["gemi*"]
+namespaces = false
+# where = ["src"]
+
+[tool.distutils.bdist_wheel]
+universal = false
+
+[tool.distutils.sdist]
+formats = "zip, gztar"
+
+[tool.mypy]
+show_traceback = true
+install_types = true
+pretty = true
+disallow_untyped_decorators = true
+warn_redundant_casts = true
+warn_unreachable = true
+warn_unused_ignores = true
+strict = true
+implicit_reexport = true
