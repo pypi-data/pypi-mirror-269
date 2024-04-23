@@ -1,0 +1,17 @@
+limedriver/limedriver.pyx,sha256=-3PZV_1-o3wNfgNIc0OCvmaay0pdmOcXIWUDGEodL10,19137
+limedriver/limedriver.cpp,sha256=SBpjtD6-yr9iln_KSPu2vLWnRcJ3XNpOJHr1LyyS86U,857946
+limedriver/__init__.py,sha256=E32kgFd_4n-TGwDGV3Gp34AFkZwwAfaBNBXx3WHPoGU,79
+limedriver/__main__.py,sha256=S1_Xz8WMrx1NIoTh_h1c46lCUDEGTcJ-7EmVfdRxMFk,42
+limedriver/binding.cpython-310-x86_64-linux-gnu.so,sha256=l7Q91Av3CW8bgS5zouFs7yF8lsOeemfbbzsR08FPEr4,3162937
+limedriver/hdf_reader.py,sha256=fS-gh6GQyZ8QX3d0mgVL0i_zyr1WibZkmE2nMenZQl0,5162
+limedriver-0.4.0.dist-info/LICENSE,sha256=AEj93ghECeBpeUFGsqh7ACedhfRzOwR359ZYHv_ILTQ,1085
+limedriver-0.4.0.dist-info/METADATA,sha256=IWOFlkVrCRKUtlTmTLh5tUqm_abF3Ij7lSNT_4ygZaw,3346
+limedriver-0.4.0.dist-info/RECORD,,
+limedriver-0.4.0.dist-info/top_level.txt,sha256=yzWkDcFN-zehn5eozhvVkRrPNd-Y15ADOS1Bi-01mQw,11
+limedriver-0.4.0.dist-info/WHEEL,sha256=wu3hndhZalUVU2IWYgNxmk7u4GcGZW0HG8iETlT6cV4,113
+limedriver.libs/libhdf5_cpp-b3b165ac.so.103.2.0,sha256=-wg7Rd-7ahe3SMotEnfJ6FApckTnS39UWBwWyM__LLE,563169
+limedriver.libs/libhdf5-1c83fcb6.so.103.2.0,sha256=p5hZgzCQu_Ij1kUypGB2WjSsHtKLSg5S-ADTWG8NSC4,3360425
+limedriver.libs/libusb-1-6688eefd.0.so.0.2.0,sha256=UWcLKNgg933evgwo_FH1McLsc8GkQlnTbVHZwKtfgVc,106337
+limedriver.libs/libstdc++-a9383cce.so.6.0.28,sha256=Wy9UCdwS1rwI9GU5e7qE61S0AkRqqwti1q_adWSs-Rk,2447393
+limedriver.libs/libLimeSuite-886effc3.so.23.11.0,sha256=Nz1g4ZyBCk036HvFLljDEVUDu35H3YnK-Qxwkz9Zpio,1131201
+limedriver.libs/libgcc_s-a04fdf82.so.1,sha256=YxqJNaesQMhDswHEQpXsiLnVvMBBbYO6KYMDZFPWKSM,81257
