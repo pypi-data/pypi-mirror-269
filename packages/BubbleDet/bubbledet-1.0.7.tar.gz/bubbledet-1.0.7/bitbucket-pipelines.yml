@@ -1,0 +1,23 @@
+image: python:3.8
+
+pipelines:
+  branches:
+    master:
+    - parallel:
+      - step:
+          name: Test
+          caches:
+            - pip
+          script:
+            - pip install .[tests]
+            - pytest -v --junitxml=test-reports/report.xml
+  pull-requests:
+    '**':
+    - parallel:
+      - step:
+          name: Test
+          caches:
+            - pip
+          script:
+            - pip install .[tests]
+            - pytest -v --junitxml=test-reports/report.xml
