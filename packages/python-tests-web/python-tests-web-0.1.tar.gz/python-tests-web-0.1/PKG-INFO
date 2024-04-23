@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: python-tests-web
+Version: 0.1
+Summary: A simple functional test library using Selenium and Chrome driver
+Author: Linda Lopez
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
