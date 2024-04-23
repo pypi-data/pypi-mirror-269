@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: flatfilediff
+Version: 0.0.1
+Summary: Monitor for changes in a file that stores a list of items.
+Home-page: https://github.com/capjamesg/flatfilediff
+Author: capjamesg
+Author-email: jamesg@jamesg.blog
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# flatfilediff
+
+Monitor for changes in a flat list.

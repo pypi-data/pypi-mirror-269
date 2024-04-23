@@ -1,0 +1,9 @@
+README.md
+setup.py
+flatfilediff/__init__.py
+flatfilediff/filediff.py
+flatfilediff.egg-info/PKG-INFO
+flatfilediff.egg-info/SOURCES.txt
+flatfilediff.egg-info/dependency_links.txt
+flatfilediff.egg-info/requires.txt
+flatfilediff.egg-info/top_level.txt
