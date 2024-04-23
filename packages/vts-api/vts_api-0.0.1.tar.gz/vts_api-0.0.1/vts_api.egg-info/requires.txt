@@ -1,0 +1,13 @@
+websockets
+pydantic
+numpy
+loguru
+ujson
+
+[dev]
+pytest
+ruff
+
+[test]
+pytest
+ruff
