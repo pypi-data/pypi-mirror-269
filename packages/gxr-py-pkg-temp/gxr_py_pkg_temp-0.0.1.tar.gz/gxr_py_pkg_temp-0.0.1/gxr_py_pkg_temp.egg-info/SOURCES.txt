@@ -1,0 +1,8 @@
+README.md
+setup.py
+gxr_py_pkg_temp/__init__.py
+gxr_py_pkg_temp/moduleA.py
+gxr_py_pkg_temp.egg-info/PKG-INFO
+gxr_py_pkg_temp.egg-info/SOURCES.txt
+gxr_py_pkg_temp.egg-info/dependency_links.txt
+gxr_py_pkg_temp.egg-info/top_level.txt

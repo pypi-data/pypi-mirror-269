@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: gxr-py-pkg-temp
+Version: 0.0.1
+Summary: description
+Home-page: https://github.com/gxr404/py-pkg-template
+Author: gxr404
+Author-email: gxr40404@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# py-pkg-template
+
+## desc
+
+description
+
+## 发布
+
+1. 生成项目包 `python setup.py sdist bdist_wheel`
+2. 上传包 `python -m twine upload dist/*`
+<!-- 3. `python -m twine upload --repository-url https://pypi.org/legacy/ dist/*` -->
+
+> 上传时使用 `API tokens` 可以保存在 `$HOME/.pypirc` 就不用每次都输入了
+
+## 文档
+
+- 打包和分发项目: <https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/>
+- 官方:<https://packaging.python.org/en/latest/guides/section-build-and-publish/>
+
+
