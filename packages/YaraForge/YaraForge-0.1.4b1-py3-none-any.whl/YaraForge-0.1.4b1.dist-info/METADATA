@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: YaraForge
+Version: 0.1.4b1
+Summary: A plugin for IDA Pro to generate Yara rules from binary files.
+Home-page: https://github.com/zhaoxinnZ/YaraForge
+Author: Zhao Xinn, Tsai YA-HSUAN, Ting0525
+Author-email: zhaoxinzhang0429@gmail.com, aooood456@gmail.com, zg45154551@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.8, <3.12
+Requires-Dist: capstone >=5.0.1
+Requires-Dist: flare-capa >=7.0.1
+
