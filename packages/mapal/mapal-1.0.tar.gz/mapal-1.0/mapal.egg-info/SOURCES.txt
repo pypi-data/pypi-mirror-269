@@ -1,0 +1,14 @@
+setup.py
+mapal/__init__.py
+mapal.egg-info/PKG-INFO
+mapal.egg-info/SOURCES.txt
+mapal.egg-info/dependency_links.txt
+mapal.egg-info/requires.txt
+mapal.egg-info/top_level.txt
+mapal/alloy_features/__init__.py
+mapal/create_alloys/__init__.py
+mapal/element_data/__init__.py
+mapal/map_ML_predictions/__init__.py
+mapal/map_features/__init__.py
+mapal/miedema_calc/__init__.py
+mapal/preTrained_ML_mods/__init__.py
