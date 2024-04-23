@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: AresHook
+Version: 0.1
+Summary: A simple hook library.
+Author: 369
+Author-email: luck.yangbo@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: frida
+Requires-Dist: frida-tools
+
+# AresHook
+
+[中文](README.zh.md)
+
+The Hook framework management module integrates support for:
+
+- Frida
+- Xposed
+- Dobby
+- SLRomHook
+- Cydia
+
+A unified management interface is provided for all Hook frameworks, facilitating user-friendly Hook management.
+

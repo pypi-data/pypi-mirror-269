@@ -1,0 +1,17 @@
+.gitignore
+README.md
+README.zh.md
+requirements.txt
+setup.py
+AresHook.egg-info/PKG-INFO
+AresHook.egg-info/SOURCES.txt
+AresHook.egg-info/dependency_links.txt
+AresHook.egg-info/requires.txt
+AresHook.egg-info/top_level.txt
+ares/__init__.py
+ares/_dobby/__init__.py
+ares/_frida/__init__.py
+ares/_frida/_frida_exception.py
+ares/_frida/_frida_hooker.py
+ares/_sl_rom_hook/__init__.py
+ares/_xposed/__init__.py

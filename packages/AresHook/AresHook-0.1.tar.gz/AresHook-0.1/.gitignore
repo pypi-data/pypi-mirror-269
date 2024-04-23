@@ -1,0 +1,6 @@
+
+/.idea/
+/.venv/
+/config/
+node_modules/
+dist/
