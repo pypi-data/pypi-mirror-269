@@ -1,0 +1,95 @@
+# This directory will host the data files
+store = "~/.genescape"
+
+# A versioned directory for the data files
+tag = "v0.9.1"
+
+# Minimum count
+MINCOUNT = 1
+
+# Default pattern in the interface
+PATTERN = ''
+
+# The title of the page
+PAGE_TITLE = "GeneScape"
+
+# The width of the sidebar
+SIDEBAR_WIDTH = 300
+
+# The background color of the sidebar
+SIDEBAR_BG = "#f8f8f8"
+
+# Default gene list.
+GENE_LIST = """
+ABTB3
+BCAS4
+C3P1
+GRTP1
+"""
+
+# A listing of the files used by GeneScape
+[[files]]
+target = "genescape.human.json.gz"
+type = "index"
+label = "Human"
+code = "human"
+package = 'genescape.data'
+
+[[files]]
+target = "genescape.mouse.json.gz"
+type = "index"
+label = "Mouse"
+code = "mouse"
+package = 'genescape.data'
+
+[[files]]
+target = "genescape.rat.json.gz"
+type = "index"
+label = "Rat"
+code = "rat"
+package = 'genescape.data'
+
+[[files]]
+target = "genescape.flybase.json.gz"
+type = "index"
+label = "Fruitfly"
+code = "fly"
+package = 'genescape.data'
+
+[[files]]
+target = "genescape.zebrafish.json.gz"
+type = "index"
+label = "Zebrafish"
+code = "zfish"
+package = 'genescape.data'
+
+[[files]]
+target = "go-basic.obo.gz"
+package = "genescape.data"
+
+[[files]]
+target = "goa_human.gaf.gz"
+package = "genescape.data"
+
+[[files]]
+target = "test_goids.txt"
+package = "genescape.data"
+
+[[files]]
+target = "test_genes.txt"
+package = "genescape.data"
+
+[[files]]
+target = "genescape.js"
+subdir = ["js"]
+package = "genescape.data.js"
+
+[[files]]
+target = "viz-standalone.js"
+subdir = ["js"]
+package = "genescape.data.js"
+
+[[files]]
+target = "genescape.css"
+subdir = ["css"]
+package = "genescape.data.css"
