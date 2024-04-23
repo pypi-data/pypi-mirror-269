@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+sensirion_i2c_sfx6xxx/__init__.py
+sensirion_i2c_sfx6xxx/commands.py
+sensirion_i2c_sfx6xxx/device.py
+sensirion_i2c_sfx6xxx/response_provider.py
+sensirion_i2c_sfx6xxx/result_types.py
+sensirion_i2c_sfx6xxx/version.py
+sensirion_i2c_sfx6xxx.egg-info/PKG-INFO
+sensirion_i2c_sfx6xxx.egg-info/SOURCES.txt
+sensirion_i2c_sfx6xxx.egg-info/dependency_links.txt
+sensirion_i2c_sfx6xxx.egg-info/requires.txt
+sensirion_i2c_sfx6xxx.egg-info/top_level.txt
