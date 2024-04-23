@@ -1,0 +1,1 @@
+This is a very simple calculator to display the change in price when user choose hard copy or soft copy of the photo album.

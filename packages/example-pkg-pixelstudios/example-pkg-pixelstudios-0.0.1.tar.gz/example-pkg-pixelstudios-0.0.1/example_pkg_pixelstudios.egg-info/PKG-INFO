@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: example-pkg-pixelstudios
+Version: 0.0.1
+Summary: To calculate the extra price when choosing the type of album
+Home-page: UNKNOWN
+Author: Jnanashree
+Author-email: x23174528@student.ncirl.ie
+License: UNKNOWN
+Description: This is a very simple calculator to display the change in price when user choose hard copy or soft copy of the photo album.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
