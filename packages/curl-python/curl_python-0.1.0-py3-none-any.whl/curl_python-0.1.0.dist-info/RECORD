@@ -1,0 +1,10 @@
+curl/__init__.py,sha256=u26wCszexKLGf0I2YzuNw27qvVCy-nf10XFzUKvnh24,38
+curl/core/__init__.py,sha256=gVErLnCgIbJgD06aEsnNl72IFIytn_DCqPv4um83NyY,33
+curl/core/curllib.py,sha256=hg3unRK6WNOybv4a4Wd1fL2O5XUce2lTGu7TUG6YQh8,8424
+curl/core/requestslib.py,sha256=nAD84OlksHWZFrvZpZhxG3f5Lj_Vg20AWpnYXzoTBI0,5664
+curl/main.py,sha256=NvLgUC-2H7vf4wYllwlHxllwUun_5copTh3dRv-pacM,2716
+curl_python-0.1.0.dist-info/LICENSE,sha256=0DScynD9NZmXptOJthR6s02Yt67xvGDnoPBIVgACHKQ,1068
+curl_python-0.1.0.dist-info/METADATA,sha256=Gdjgu0-0XMcG66AuT9MJd5lMVZ5ixPudJjLtGCXp7D0,690
+curl_python-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+curl_python-0.1.0.dist-info/entry_points.txt,sha256=KxHjy87Hf45GoJCofv4tuhwyHY2PvSO9ScfGCjPMVFg,46
+curl_python-0.1.0.dist-info/RECORD,,

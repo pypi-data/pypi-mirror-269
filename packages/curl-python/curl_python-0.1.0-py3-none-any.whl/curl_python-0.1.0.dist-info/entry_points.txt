@@ -1,0 +1,3 @@
+[console_scripts]
+curl-python=curl.main:main
+
