@@ -1,0 +1,8 @@
+typing_extensions~=4.7.1
+networkx~=3.1
+
+[plot]
+pygraphviz>=1.11
+
+[types]
+mypy~=1.7.0
