@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pygerm
+Version: 0.0.4
+Summary: A powerful, component based, 2D Python game engine
+Author: Jeremy Liu
+Author-email: jeremylliu@umich.edu
+Requires-Python: >=3.7
+License-File: LICENSE
+Provides-Extra: test
+Requires-Dist: pytest>=6.0; extra == "test"
+
+PyGerm is a free, open-source, cross-platform library built for the development of 2D, component based games using Python. It is built on top of the Simple DirectMedia Layer library (SDL2) and other popular libraries to abstract away the most tedious tasks of game development. With PyGerm, you can focus on building your game, your way, without worrying about cross-platform support, physics, and more.
