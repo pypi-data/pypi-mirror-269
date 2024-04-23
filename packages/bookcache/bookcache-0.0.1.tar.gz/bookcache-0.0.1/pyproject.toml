@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "bookcache"
+version = "0.0.1"
+description = "An in-memory keystore caching system."
+authors = ["NotAussie <NotAussie@duck.com>"]
+readme = "README.md"
+license = "MIT"
+keywords = ["caching", "cache", "keystore"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Framework :: AsyncIO",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Database",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
