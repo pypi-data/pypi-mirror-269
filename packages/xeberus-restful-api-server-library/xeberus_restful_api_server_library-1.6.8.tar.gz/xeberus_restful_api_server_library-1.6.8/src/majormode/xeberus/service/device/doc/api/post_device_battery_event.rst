@@ -1,0 +1,134 @@
+``POST /tracker/(device_id)/battery/event``
+===========================================
+
+Synopsis
+--------
+
+Report one or more battery state changes of a device:
+
+* The device is connected to or disconnected from a power source (such as the battery of the vehicle this device is mounted on);
+
+* The level of the device's battery increases or decreases.
+
+.. note::  Only devices equipped with an internal battery can broadcast this notification.  A device not equipped with an internal battery is indeed less secure as it is not able to send any notification when it is disconnected from the power source of the vehicle this device is mounted on; the device is immediately shutdown.
+
+
+Request Header Fields
+---------------------
+
+.. include:: /_include/optional_authenticated_session_header_fields.inc
+
+
+Request URL Bits
+----------------
+
+* ``device_id:string``: The identification of the mobile device.
+
+
+Request Query Parameters
+------------------------
+
+None.
+
+
+Request Message Body
+--------------------
+
+The HTTP request must contains the following JSON structure::
+
+    {
+      "events": [
+        {
+          "battery_level": decimal,
+          "event_ref": string,
+          "event_time": timestamp,
+          "event_type": string,
+          "location": {
+            "accuracy": decimal,
+            "altitude": decimal,
+            "bearing": decimal,
+            "fix_time": timestamp,
+            "latitude": decimal,
+            "longitude": decimal,
+            "provider": string,
+            "speed": decimal
+          }
+        },
+        ...
+      ],
+      "token": string
+    }
+
+where:
+
+* ``events`` (required): A list of battery state update events:
+
+  * ``battery_level`` (required): Level in percentage of the device's
+    internal battery when this even occurred.
+
+  * ``event_ref`` (required): The reference of this event as given by the client application running on the mobile device that reported this event.
+
+    This information is used to detect events that the mobile device would report multiple times.  This happens when network outage occurs after the client application reported successfully a batch of events, but the network connection with the cloud service timed out before the client application had the chance to receive the acknowledgement from the cloud service.  Therefore, the client application reattempts to report one more time these events.
+
+  * ``event_time`` (required): The time when this event occurred, which could be slightly different from the time when the device sent this event to the platform, for instance, in case of limited network connectivity, the device decided to cache locally this event before sending it eventually to the platform.
+
+  * ``event_type`` (required): Indicate the type of event that occurred:
+
+    * ``battery_charging``: The level of the device's battery has increased significantly;
+
+    * ``battery_discharging``: The level of the device's battery has decreased significantly;
+
+    * ``battery_plugged``: The battery of the device has been plugged to a power source;
+
+    * ``battery_unplugged``: The battery of the device has been unplugged from a power source.
+
+  * ``location`` (optional): Last known location of the device when this event occurred:
+
+    * ``accuracy`` (required): Accuracy in meters of the location.
+
+    * ``altitude`` (required): Altitude in meters of the location.
+
+    * ``bearing`` (optional): Bearing in degrees.  Bearing is the horizontal direction of travel of the device, and is not related to the device orientation.  It is guaranteed to be in the range ``[0.0, 360.0]``.
+
+    * ``fix_time`` (required): Time when the device determined the information of this fix.
+
+    * ``latitude`` (required): Latitude-angular distance, expressed in decimal degrees (WGS84 datum), measured from the center of the Earth, of a point north or south of the Equator corresponding to thelocation.
+
+    * ``longitude`` (required): Longitude-angular distance, expressed in decimal degrees (WGS84 datum), measured from the center of the Earth, of a point east or west of the Prime Meridian corresponding to the location.
+
+    * ``provider`` (required): The type of the location provider that reported this geographical location:
+
+      * ``fused``: The location API in Google Play services that combines different signals to provide the location information.
+
+      * ``gps``: This provider determines location using satellites (Global
+        Positioning System (GPS).
+
+      * ``network``: This provider determines location based on availability of cell towers and Wi-Fi access points.  Results are retrieved by means of a network lookup.
+
+      * ``passive``: A special location provider for receiving locations without actually initiating a location fix.  This provider can be used to passively receive location updates when other applications or services request them without actually requesting the locations yourself.  This provider will return locations generated by other providers.
+
+    * ``speed`` (optional): The speed in meters/second over the ground.
+
+* ``token``: (required): A "number used once" (nonce) -- also known as pseudo-random number -- encrypted with the security key generated by the cloud service and shared with the client application.  This nonce is used to verify the authentication of the mobile device in order to prevent spoofing attack.
+
+
+Response Message Body
+---------------------
+
+None.
+
+
+Exceptions
+----------
+
+The platform MAY raise the following exceptions to indicate that one or several required conditions have not been respected:
+
+* ``DeletedObjectException``: If the mobile device has been banned by  an administrator of the cloud service.
+
+* ``DisabledObjectException``: If the mobile device has been disabled by the individual user or an administrator of the organization that owns this device.
+
+* ``IllegalAccessException``: If the given token has not been successfully verified, meaning that someone or a program tries to masquerade as the specified device (spoofing attack).
+
+* ``InvalidOperationException``: If the mobile device has not been activated yet.
+
+* ``UndefinedObjectException``: If the specified identification doesn't match a mobile device registered to the cloud service.
