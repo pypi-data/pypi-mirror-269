@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: example-pkg-calorietrackergoal
+Version: 0.0.1
+Summary: total calorie tracker goal library
+Home-page: UNKNOWN
+Author: Amrutha
+Author-email: x23172151@student.ncirl.ie
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
