@@ -1,0 +1,8 @@
+RAMA_CLASSIFY_MODEL_ADDRESS = 'https://disk.yandex.ru/d/4xtNt0zftHFFVg'
+RAMA_NO_SPRING_DETECT_MODEL_ADDRESS = 'https://disk.yandex.ru/d/sE5iSXYWL3xEkQ'
+RAMA_SPRING_DETECT_MODEL_ADDRESS = 'https://disk.yandex.ru/d/zAEw0_ALgtBg9Q'
+RAMA_SPRING_RUZHIMMASH_TEXT_DETECT_MODEL_ADDRESS = 'https://disk.yandex.ru/d/b4vCbEzg3t3mTg'
+RAMA_NO_SPRING_BEJICKAYA_TEXT_DETECT_MODEL_ADDRESS = 'https://disk.yandex.ru/d/ZbbcscTS2Han1A'
+LETTERS_RECOGNIZE = 'https://disk.yandex.ru/d/PklKxN-axMC95g'
+RAMA_NO_SPRING_RUZHIMMASH_TEXT_DETECT_MODEL_ADDRESS = 'https://disk.yandex.ru/d/b4vCbEzg3t3mTg'
+RAMA_SPRING_BEJICKAYA_TEXT_DETECT_MODEL_ADDRESS = 'https://disk.yandex.ru/d/ZbbcscTS2Han1A'
