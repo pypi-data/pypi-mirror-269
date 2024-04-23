@@ -1,0 +1,3 @@
+"""basketReferenceId type"""
+
+BasketReferenceId = str
