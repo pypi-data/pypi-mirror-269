@@ -1,0 +1,37 @@
+name: Publish a new release
+
+on:
+  release:
+    # Only use the types keyword to narrow down the activity types that will trigger your workflow.
+    types:
+      - published
+
+jobs:{% if "release_docs" in config.github_actions %}
+  publish-docs:
+    uses: ./.github/workflows/release-docs.yml
+{% endif %}
+  publish:
+    name: upload release to PyPI
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@1d96c772d19495a3b5c517cd2bc0cb401ea0529f
+        with:
+          submodules: "true"
+
+      - name: Set up Python {{ DEFAULT_PY_VER }}
+        uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d
+        with:
+          python-version: "{{ DEFAULT_PY_VER }}"
+
+      - name: Build project
+        run: |
+          python -m pip install --upgrade pip wheel
+          python -m pip install -r {{ NOX_DEP_PATH }}
+          python -m nox -s build
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@81e9d935c883d0b210363ab89cf05f3894778450
