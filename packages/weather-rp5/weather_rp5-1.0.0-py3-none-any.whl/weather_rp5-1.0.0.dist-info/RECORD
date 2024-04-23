@@ -1,0 +1,10 @@
+weather_rp5/__init__.py,sha256=7hj-dlFxZ4MVsPwnLn8-BpYZfYeyhD987HaD1ffVYJ4,49
+weather_rp5/cleanup.py,sha256=F7v8NRHB1QzxrZqH7hTQT7TetvHWK3eixrsmL9d2vyY,1975
+weather_rp5/downloader.py,sha256=lnFMa3HXrh26dhYS9Av5yZ7uGLo6kApnxR7rwfGhbkE,3956
+weather_rp5/headers.py,sha256=gQU5_G0spQyhRtYqePfYOIKRHFz705iMAf0PhMXoO0Q,7544
+weather_rp5/main.py,sha256=dDURio8ZTeXEW7K7kt3U-YCHRzwxNp62b2TxW8h-eHo,4032
+weather_rp5/utils.py,sha256=eChuz_AT12h3hIf4gKbr5OGC-3cmoCcFyxARWTC1VYo,3016
+weather_rp5-1.0.0.dist-info/METADATA,sha256=xFqHXHXUxCdeXhQ16lLJeTNAE7t9jVQL92KgQ7i5WeM,1526
+weather_rp5-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+weather_rp5-1.0.0.dist-info/top_level.txt,sha256=meNcPQFqjNUSOSRwp2UWazt9dUzr0HVtt9fPsB1G3AU,12
+weather_rp5-1.0.0.dist-info/RECORD,,
