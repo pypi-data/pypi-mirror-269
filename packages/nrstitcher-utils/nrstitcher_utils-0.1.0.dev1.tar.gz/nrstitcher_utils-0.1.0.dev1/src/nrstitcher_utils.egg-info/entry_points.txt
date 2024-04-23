@@ -1,0 +1,2 @@
+[console_scripts]
+nrs-config-id16a-ht = nrstitcher_utils.app.nrs_config_id16a_ht:main
