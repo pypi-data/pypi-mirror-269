@@ -1,0 +1,17 @@
+setup.cfg
+setup.py
+../license
+octoflatbuffers/__init__.py
+octoflatbuffers/_version.py
+octoflatbuffers/builder.py
+octoflatbuffers/compat.py
+octoflatbuffers/encode.py
+octoflatbuffers/flexbuffers.py
+octoflatbuffers/number_types.py
+octoflatbuffers/packer.py
+octoflatbuffers/table.py
+octoflatbuffers/util.py
+octoflatbuffers.egg-info/PKG-INFO
+octoflatbuffers.egg-info/SOURCES.txt
+octoflatbuffers.egg-info/dependency_links.txt
+octoflatbuffers.egg-info/top_level.txt
