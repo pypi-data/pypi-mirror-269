@@ -1,0 +1,8 @@
+setuptools==58.2.0
+pymysql
+py2neo
+pandas
+redis
+baidusearch
+gunicorn
+gevent
