@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: unimernet
+Version: 0.0.2
+Summary: UniMERNet: A Universal Network for Real-World Mathematical Expression Recognition
+Home-page: https://github.com/xxx
+License: Apache-2.0
+Keywords: MER,latex,markdown,pdf
+Author: Bin Wang
+Author-email: ictwangbin@gmail.com
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: albumentations (>=1.4.4,<2.0.0)
+Requires-Dist: eva-decord (>=0.6.1,<0.7.0)
+Requires-Dist: evaluate (>=0.4.1,<0.5.0)
+Requires-Dist: fairscale (>=0.4.13,<0.5.0)
+Requires-Dist: ftfy (>=6.2.0,<7.0.0)
+Requires-Dist: iopath (>=0.1.10,<0.2.0)
+Requires-Dist: matplotlib (>=3.8.4,<4.0.0)
+Requires-Dist: omegaconf (>=2.3.0,<3.0.0)
+Requires-Dist: opencv-python (>=4.9.0,<5.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: rapidfuzz (>=3.8.1,<4.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: termcolor (>=2.4.0,<3.0.0)
+Requires-Dist: timm (>=0.9.16,<0.10.0)
+Requires-Dist: torch (>=2.2.2,<3.0.0)
+Requires-Dist: torchtext (>=0.17.2,<0.18.0)
+Requires-Dist: torchvision (>=0.17.2,<0.18.0)
+Requires-Dist: transformers (>=4.40.0,<5.0.0)
+Requires-Dist: wand (>=0.6.13,<0.7.0)
+Requires-Dist: webdataset (>=0.2.86,<0.3.0)
+Project-URL: Repository, https://github.com/xxx
+Description-Content-Type: text/markdown
+
+<div align="center">
+<h1>UniMERNet: A Universal Network for Real-World Mathematical Expression Recognition</h1>
+
+[![Paper](https://img.shields.io/badge/Paper-arxiv)]()
+[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Hugging%20Face-Community%20Space-blue)]()
+
+</div>
+
+This is the official repository for UniMERNet, a math recogition model that can be used for image to LaTeX conversion for a wide range of senarios.
+
+Project page: https://gitlab.pjlab.org.cn/fdc/mllm/unimernet
+
+## Installation
+
+### For Mac
+```bash
+brew install freetype imagemagick
+export MAGICK_HOME=/opt/homebrew/opt/imagemagick
+```
+
+
+## Quickstart
+
+### Try the Streamlit Demo
+
+### Write MER Code in less than 10 lines of code
+
+
+## Training
+
+To train or finetune UniMERNet model, run 
+
+```bash
+torchrun --nproc-per-node 4 --master_port 29500 train.py --cfg-path configs/unimernet_train.yaml
+```
+or
+```bash
+bash scripts/train.sh
+```
+
+## Evaluation
+
+To evalate the model, run
+```bash
+python test.py --cfg configs/unimernet_eval.yaml
+```
+
+## Demo
+| Image | Recognition Result |
+|-------|--------------------|
+|<img src="asset/test_imgs/0000014.png" alt="drawing" width="150"/>|$A _ { 4 } = \frac { \mathrm { i } } { 2 } \frac { \nabla \rho } { \rho } \cdot \vec { \tau }$|
+|<img src="asset/test_imgs/0000008.png" alt="drawing" width="250"/>|$\begin{array} { r l } { \left[ \begin{array} { l } { \dot { \theta } _ { i } } \\ { \dot { \omega } _ { i } } \end{array} \right] = } & { \left[ \begin{array} { l l } { 0 } & { 1 } \\ { 0 } & { 0 } \end{array} \right] \left[ \begin{array} { l } { \theta _ { i } } \\ { \omega _ { i } } \end{array} \right] , } \\ { \left[ \begin{array} { l } { \dot { p } _ { i } } \\ { \dot { v } _ { i } } \end{array} \right] = } & { \left[ \begin{array} { l l } { 0 _ { 2 \times 2 } } & { I _ { 2 } } \\ { 0 _ { 2 \times 2 } } & { \omega _ { i } a } \end{array} \right] \left[ \begin{array} { l } { p _ { i } } \\ { v _ { i } } \end{array} \right] , } \end{array}$|
+|<img src="asset/test_imgs/0000001.png" alt="drawing" width="350"/>|$\begin{array} { r l } { \mathrm { M i n i m i s e ~ } } & { J ( u . ; s , y ) = \mathbb { E } \left[ \int _ { s } ^ { T } \left( u _ { t } ^ { 2 } + 1 \right) d t - \ln \left( \cosh { ( X _ { T } ) } \right) \right] } \\ { \mathrm { s u b j e c t ~ t o ~ } } & { \left\{ \begin{array} { l l } { d X _ { t } = 2 u _ { t } d t + \sqrt { 2 } d W _ { t } , t \in [ s , T ] } \\ { X _ { s } = y } \\ { u _ { t } \in [ - 1 , 1 ] , \quad t \in [ s , T ] } \end{array} \right. } \end{array}$|
+|<img src="asset/test_imgs/0000010.png" alt="drawing" width="350"/>|$\begin{array} { r l } { \left( \widetilde { C } _ { f a c e } \right) _ { C D S } } & { = \left\{ \begin{array} { l l } { m i n \left( \frac { \widetilde { C } _ { D } } { C o u } , 1 \right) , } & { \mathrm { ~ 0 ~ \leq ~ \widetilde { C } _ D ~ \leq ~ 1 ~ ; ~ 0 ~ < ~ C o u ~ \leq ~ 1 / 3 ~ } } \\ { m i n \left( 3 \widetilde { C } _ { D } , 1 \right) , } & { \mathrm { ~ 0 ~ \leq ~ \widetilde { C } _ D ~ \leq ~ 1 ~ ; ~ 1 / 3 ~ < ~ C o u ~ \leq ~ 1 ~ } } \\ { \widetilde { C } _ { D } , } & { \mathrm { ~ \widetilde { C } _ D < 0 ~ ; ~ \widetilde { C } _ D > 1 ~ } } \end{array} \right. } \\ { \left( \widetilde { C } _ { f a c e } \right) _ { H R } } & { = \left\{ \begin{array} { l l } { 3 \widetilde { C } _ { D } , } & { \mathrm { ~ 0 ~ \leq ~ \widetilde { C } _ D ~ < ~ 1 / 5 ~ } } \\ { 0 . 5 + 0 . 5 \widetilde { C } _ { D } , } & { \mathrm { ~ 1 / 5 ~ \leq ~ C _ D ~ < ~ 1 / 2 ~ } } \\ { 3 / 8 + 3 / 4 \widetilde { C } _ { D } , } & { \mathrm { ~ 1 / 2 ~ \leq ~ \widetilde { C } _ D ~ < ~ 5 / 6 ~ } } \\ { 1 , } & { \mathrm { ~ 5 / 6 ~ \leq ~ \widetilde { C } _ D ~ \leq ~ 1 ~ } } \\ { \widetilde { C } _ { D } , } & { \mathrm { ~ \widetilde { C } _ D < 0 ~ ; ~ \widetilde { C } _ D > 1 ~ } } \end{array} \right. } \\ { \gamma _ { f a c e } } & { = m i n \left[ \left( c o s \theta \right) ^ { 4 } , 1 \right] } \end{array}$|
+|<img src="asset/test_imgs/0000005.png" alt="drawing" width="350"/>|$\begin{array} { r } { \| f ( x , y , z ) - f ( x , y , \bar { z } ) \| \leq \sigma ( x , V ( z - \bar { z } ) ) } \end{array}$|
+|<img src="asset/test_imgs/0000012.png" alt="drawing" width="150"/>|$\widehat { \mathbf { K } } ^ { m a t } \! = \! \frac { A E ^ { \sigma T } } { \ell } \! \left[ \! \begin{array} { c c c c } { + 1 } & { 0 } & { - 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { 0 } \\ { - 1 } & { 0 } & { + 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { 0 } \end{array} \! \right] $|
+|<img src="asset/test_imgs/0000004.png" alt="drawing" width="350"/>|$( x + 2 ) ( x - 2 ) + 2 ( x + 1 ) ( x + 2 ) = - 8 ( x + 1 )$|
+|<img src="asset/test_imgs/0000000.png" alt="drawing" width="350"/>|   $0 + ( - 2 + 2 ) ^ { 2 } + ( - 7 - 3 ) ^ { 2 } = 1 6$  |
+
+## Citation
+If you find our models / code / papers useful in your research, please consider giving ⭐ and citations 📝, thx :)
+```bibtex
+@article{wang2023vigc, 
+      title={VIGC: Visual Instruction Generation and Correction},
+      author={Wang, Bin and Wu, Fan and Han, Xiao and Peng, Jiahui and Zhong, Huaping and Zhang, Pan and Dong, Xiaoyi and Li, Weijia and Li, Wei and Wang, Jiaqi and He, Conghui},
+      journal={arXiv preprint arXiv:2308.12714},
+      year={2023}
+}
+```
+
+## Acknowledgement
+- [VIGC](https://github.com/opendatalab/VIGC). This repository is built upon VIGC!
+- [Texify](https://github.com/VikParuchuri/texify). 
+- [Latex-OCR](https://github.com/lukas-blecher/LaTeX-OCR). The original open source Latex OCR project.
+- [Donut](https://huggingface.co/naver-clova-ix/donut-base). 
+- [Nougat](https://github.com/facebookresearch/nougat).
+
+## Contact us
+If you have any questions, comments or suggestions, please do not hesitate to contact us at wangbin@pjlab.org.cn.
+
+## License
+[Apache License 2.0](LICENSE)
