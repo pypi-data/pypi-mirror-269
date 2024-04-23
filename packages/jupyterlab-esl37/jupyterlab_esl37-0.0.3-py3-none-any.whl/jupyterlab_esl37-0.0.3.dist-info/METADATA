@@ -1,0 +1,64 @@
+Metadata-Version: 2.3
+Name: jupyterlab_esl37
+Version: 0.0.3
+Dynamic: Keywords
+Summary: ESL37 support for Jupyter Lab.
+Project-URL: Homepage, https://github.com/nssac/jupyterlab-esl37
+Project-URL: Bug Tracker, https://github.com/nssac/jupyterlab-esl37/issues
+Project-URL: Repository, https://github.com/nssac/jupyterlab-esl37.git
+Author-email: Parantapa Bhattacharya <pb@parantapa.net>
+License: Copyright (C) 2024 Rector and Visitors of the University of Virginia
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Framework :: Jupyter
+Classifier: Framework :: Jupyter :: JupyterLab
+Classifier: Framework :: Jupyter :: JupyterLab :: 4
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+
+ESL37 support for Jupyter Lab
+=============================
+
+This repository provides the `jupyterlab_esl37` package,
+which adds ESL37 file type to Jupyter Lab's editor (Codemirror).
+
+Requirements
+------------
+
+- JupyterLab >= 4.0.0
+
+Install
+-------
+
+To install the extension, execute:
+
+.. code::
+
+   pip install jupyterlab_esl37
