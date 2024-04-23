@@ -1,0 +1,18 @@
+[project]
+name="search_view-pkg-Anurag09",
+version = "0.0.1"
+authors = [
+  { name='Anurag Singh', email='x23180013@student.ncirl.ie' },
+]
+description="A package to search products in the RoundLab APP",
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Annurag99/RoundLab"
+Issues = "https://github.com/Annurag99/RoundLab/issues"
