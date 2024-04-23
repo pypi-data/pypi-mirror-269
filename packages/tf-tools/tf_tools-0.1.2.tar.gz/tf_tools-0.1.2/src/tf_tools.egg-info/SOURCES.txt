@@ -1,0 +1,12 @@
+pyproject.toml
+src/tf_tools/__init__.py
+src/tf_tools/pad.py
+src/tf_tools/set.py
+src/tf_tools/typing.py
+src/tf_tools.egg-info/PKG-INFO
+src/tf_tools.egg-info/SOURCES.txt
+src/tf_tools.egg-info/dependency_links.txt
+src/tf_tools.egg-info/requires.txt
+src/tf_tools.egg-info/top_level.txt
+src/tf_tools/sparse/__init__.py
+src/tf_tools/sparse/sparse.py
