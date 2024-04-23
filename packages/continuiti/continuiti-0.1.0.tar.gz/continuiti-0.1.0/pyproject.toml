@@ -1,0 +1,99 @@
+[build-system]
+requires = ["setuptools>=46.1.0", "setuptools_scm[toml]>=5", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "continuiti"
+description = "Learning function operators with neural networks."
+authors = [{ name = "Samuel Burbulla", email = "s.burbulla@appliedai-institute.de" }]
+license = { file = "LICENSE.txt" }
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+keywords = [
+    "Artificial Intelligence", "Machine Learning", "Mathematics", "Physics",
+    "Operator Learning", "Physics-Informed ML", "Neural Operator", "DeepONet",
+]
+version = "0.1.0"
+dependencies = [
+    "setuptools",
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "pandas",
+    "torch>=2.1.0,<3.0.0",
+    "mlflow",
+]
+
+[project.optional-dependencies]
+dev = [
+    # === Optional dependencies for tests ===
+    "optuna>=3.5.0,<4.0.0",
+    "gmsh",
+    "deepxde",
+
+    # === Code quality ===
+    "black",
+    "flake8",
+    "isort",
+    "pre-commit",
+    "pudb",
+
+    # === Testing ===
+    "pytest",
+    "pytest-cov",
+    "nbmake",
+
+    # === Documentation ===
+    "markdown-captions",
+    "mike",
+    "mkdocs==1.5.2",
+    "mkdocs-alias-plugin>=0.6.0",
+    "mkdocs-autorefs",
+    "mkdocs-gen-files",
+    "mkdocs-git-revision-date-localized-plugin",
+    "mkdocs-glightbox",
+    "mkdocs-literate-nav",
+    "mkdocs-macros-plugin",
+    "mkdocs-material",
+    "mkdocs-section-index",
+    "mkdocstrings[python]>=0.18",
+    "mknotebooks>=0.8.0",
+    "neoteroi-mkdocs",
+    "pygments",
+
+    # === Releasing ===
+    "bump-my-version",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["continuiti*"]
+
+[project.urls]
+Repository = "https://github.com/aai-institute/continuiti.git"
+Documentation = "https://aai-institute.github.io/continuiti/"
+Organization = "https://www.appliedai-institute.de/en/"
+TransferLab = "https://transferlab.ai/"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--durations=0 --strict-markers --doctest-modules"
+markers = [
+    "slow: marks tests as slow (> 5s)",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.isort]
+line_length = 99
+profile = "black"
+filter_files = true

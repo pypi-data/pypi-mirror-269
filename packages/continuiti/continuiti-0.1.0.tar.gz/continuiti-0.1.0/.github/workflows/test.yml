@@ -1,0 +1,93 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main, "release/*", "dev"]
+
+env:
+  USE_MPS_BACKEND: False
+
+jobs:
+  run_tests:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu-latest", "macos-latest"]
+        python-version: ["3.9", "3.10", "3.11"]
+
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: "true"
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+      - name: Install
+        run: |
+          pip install ".[dev]"
+      - name: Run pytest
+        run: |
+          pytest -v
+
+  run_tests_notebooks:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu-latest", "macos-latest"]
+        python-version: ["3.9", "3.10", "3.11"]
+
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: "true"
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+      - name: Install
+        run: |
+          pip install ".[dev]"
+      - name: Install missing system dependencies
+        if: ${{ matrix.os == 'ubuntu-latest' }}
+        run: |
+          sudo apt install libglu1
+      - name: Test notebooks
+        run: |
+          pytest --nbmake examples/
+
+  # upload code coverage report
+  code-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: "true"
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+          cache: "pip"
+      - name: Install
+        run: |
+          pip install ".[dev]"
+      - name: Run tests and collect coverage
+        run: pytest --cov src
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
