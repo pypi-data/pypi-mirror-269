@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: rich-torndb
+Version: 0.0.2
+Summary: More wrapper base on torndb
+Home-page: https://gitee.com/walkerjun/rich-torndb
+Author: walkerjun
+Author-email: yujun2647@163.com
+License: MulanPSL-2.0
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: tqdm~=4.62.2
+Requires-Dist: pymysql~=1.0.2
