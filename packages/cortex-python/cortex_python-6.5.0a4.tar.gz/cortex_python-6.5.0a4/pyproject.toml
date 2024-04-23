@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "cortex-python"
+version = "6.5.0a4"
+description = "Python module for the Tecnotree Sensa Platform"
+authors = ["Tecnotree <support@tecnotree.com>"]
+readme = "README.md"
+packages = [{include='cortex/**/*.py'}]
+license = "Apache-2.0"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+requests = ">=2.31.0,<3,"
+requests-toolbelt = ">=1.0.0,"
+pyyaml = ">=5.4.1,"
+python-dateutil = ">=2.8.2,<3,"
+pyjwt = { version="<3", extras=["crypto"] }
+cuid = ">=0.4,<1,"
+dill = ">=0.3.6,"
+pytimeparse2 = "^1.7.1"
+matplotlib = { version=">3,<4", optional=true}
+seaborn = { version=">0.13,<0.14", optional=true}
+setuptools = "*"  #  mlflow requires this https://github.com/mlflow/mlflow/issues/11330
+pandas = { version="<3", optional=true}
+ipython = { version=">=8.10,<9", optional=true}
+jinja2={ version="<4", optional=true}
+# TODO Consider using mlflow-skinny ?
+mlflow={ version=">1", optional=true}
+
+[tool.poetry.group.dev.dependencies]
+tox = ">=4.0,<5.0"
+requests-mock = ">=1.10.0"
+pipdeptree = "^2.16.1"
+pytest = ">=8,<9"
+pylint = ">=2.16.1,<3"
+pytest-html = ">=3.2.0,<4"
+pytest-cov = ">=4.0.0,<5.0.0"
+cuid = "^0.4"
+black = "<25"
+sphinx = "^7.2.6"
+gitpython = "^3.1.42"
+sphinx-multiversion = "^0.2.4"
+sphinx-rtd-theme = "^2.0.0"
+sphinxcontrib-restbuilder = "^0.3"
+
+[tool.poetry.extras]
+# Basic dependencies for developing models within jupyter
+models_dev = ["mlflow","ipython", "jinja2", "matplotlib", "seaborn", "pandas"] ## TODO certifai
+# dependencies for running models as skills
+models_runtime=["mlflow"] ## TODO certifai
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+# Wrapper around poetry.core.masonry.api
+build-backend = "poetry_dynamic_versioning.backend"
