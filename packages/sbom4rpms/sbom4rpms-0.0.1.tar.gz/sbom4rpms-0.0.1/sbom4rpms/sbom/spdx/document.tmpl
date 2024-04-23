@@ -1,0 +1,7 @@
+{% include "document-header.tmpl" %}
+
+{% for package in packages -%}
+{% include "document-package.tmpl" %}
+
+{% endfor -%}
+{% include "document-gitsubmodules.tmpl" %}

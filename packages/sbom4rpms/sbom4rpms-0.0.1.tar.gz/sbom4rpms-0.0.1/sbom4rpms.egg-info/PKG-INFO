@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: sbom4rpms
+Version: 0.0.1
+Author-email: Michael Engel <mengel@redhat.com>
+Maintainer-email: Michael Engel <mengel@redhat.com>
+Project-URL: Homepage, https://github.com/engelmi/sbom-for-rpms
+Project-URL: Documentation, https://github.com/engelmi/sbom-for-https://github.com/engelmi/sbom4rpm/issues
+Project-URL: Repository, https://github.com/engelmi/sbom4rpm.git
+Project-URL: Issues, https://github.com/engelmi/sbom4rpm/issues
+Keywords: SBOM,RPM,Generation
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Jinja2>=3.1.2
+
+# SBOM for RPM
+
+`SBOM4RPM` uses existing `rpm` and `dnf` features to resolve all dependencies of one or multiple RPM packages and generates an SBOM for each `.rpm`. 
+
+## Usage
+
+Start a container for building the custom RPM project and mount its directory into it. For example:
+```bash
+podman run -it -v <path-to-project>:/var/<your-project> <build-container> /bin/bash
+```
+
+Proceed by building the custom RPM project and create a repomd (xml-based rpm metadata) repository for your output directory:
+```bash
+# assuming all rpms have been put into '/tmp/custom-artifacts'
+createrepo_c /tmp/custom-artifacts
+```
+
+Then run `SBOM4RPM`:
+
+```bash
+python rpm2sbom.py --rpm-dir=/tmp/custom-artifacts/ --collect-dependencies --sbom-format=spdx --sbom-dir=sboms
+```
+
+## Example: BlueChi
+
+The [example directory](./example/) provides collected data and generated SBOMs for [BlueChi](https://github.com/eclipse-bluechi/bluechi/). 
