@@ -1,0 +1,4 @@
+[console_scripts]
+mqt-core-compare = mqt.core.evaluation:main
+mqt-core-cli = mqt.core.__main__:main
+
