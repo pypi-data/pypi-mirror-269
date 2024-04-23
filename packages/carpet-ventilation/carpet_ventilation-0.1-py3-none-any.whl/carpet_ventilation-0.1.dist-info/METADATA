@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: carpet-ventilation
+Version: 0.1
+Summary: A Python library for calculating carpet area and airflow ventilation of a house.
+Home-page: https://github.com/your_username/carpet-ventilation
+Author: Ayush JAdhav
+Author-email: jadhavayush2020@gmail.com
+License: MIT
+Keywords: carpet,ventilation,house
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
