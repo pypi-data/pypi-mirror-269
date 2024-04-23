@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: ewoksid12
+Version: 0.1.0
+Summary: Data processing workflows for ID12
+Home-page: https://gitlab.esrf.fr/workflow/ewoksapps/ewoksid12/
+Author: ESRF
+Author-email: wout.de_nolf@esrf.fr
+License: MIT
+Project-URL: Source, https://gitlab.esrf.fr/workflow/ewoksapps/ewoksid12/
+Project-URL: Documentation, https://ewoksid12.readthedocs.io/
+Project-URL: Tracker, https://gitlab.esrf.fr/workflow/ewoksapps/ewoksid12/issues/
+Keywords: ewoks
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: ewokscore
+Requires-Dist: blissdata
+Requires-Dist: numpy
+Provides-Extra: test
+Requires-Dist: pytest>=7; extra == "test"
+Provides-Extra: dev
+Requires-Dist: pytest>=7; extra == "dev"
+Requires-Dist: black>=22; extra == "dev"
+Requires-Dist: flake8>=4; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: pytest>=7; extra == "doc"
+Requires-Dist: sphinx>=4.5; extra == "doc"
+Requires-Dist: sphinx-autodoc-typehints>=1.16; extra == "doc"
+Requires-Dist: pydata_sphinx_theme<0.15; extra == "doc"
+
+# ewoksid12
+
+Data processing workflows for ID12
+
+## Documentation
+
+https://ewoksid12.readthedocs.io/
