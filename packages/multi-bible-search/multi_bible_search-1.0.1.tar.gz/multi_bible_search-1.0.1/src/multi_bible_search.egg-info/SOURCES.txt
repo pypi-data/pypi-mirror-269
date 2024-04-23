@@ -1,0 +1,47 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/ctranslate/__init__.py
+src/ctranslate/ctranslate.c
+src/multi_bible_search/__init__.py
+src/multi_bible_search/bible_search.py
+src/multi_bible_search/translate.py
+src/multi_bible_search.egg-info/PKG-INFO
+src/multi_bible_search.egg-info/SOURCES.txt
+src/multi_bible_search.egg-info/dependency_links.txt
+src/multi_bible_search.egg-info/top_level.txt
+src/multi_bible_search/data/ACV.json.pbz2
+src/multi_bible_search/data/AKJV.json.pbz2
+src/multi_bible_search/data/AMP.json.pbz2
+src/multi_bible_search/data/ASV.json.pbz2
+src/multi_bible_search/data/All.json.pbz2
+src/multi_bible_search/data/BBE.json.pbz2
+src/multi_bible_search/data/BSB.json.pbz2
+src/multi_bible_search/data/CSB.json.pbz2
+src/multi_bible_search/data/DRA.json.pbz2
+src/multi_bible_search/data/Darby.json.pbz2
+src/multi_bible_search/data/EBR.json.pbz2
+src/multi_bible_search/data/ESV.json.pbz2
+src/multi_bible_search/data/GNV.json.pbz2
+src/multi_bible_search/data/KJV 1611.json.pbz2
+src/multi_bible_search/data/KJV-like.json.pbz2
+src/multi_bible_search/data/KJV.json.pbz2
+src/multi_bible_search/data/LSV.json.pbz2
+src/multi_bible_search/data/MSG.json.pbz2
+src/multi_bible_search/data/NASB 1995.json.pbz2
+src/multi_bible_search/data/NET.json.pbz2
+src/multi_bible_search/data/NIV 1984.json.pbz2
+src/multi_bible_search/data/NIV 2011.json.pbz2
+src/multi_bible_search/data/NKJV.json.pbz2
+src/multi_bible_search/data/NLT.json.pbz2
+src/multi_bible_search/data/RNKJV.json.pbz2
+src/multi_bible_search/data/RSV.json.pbz2
+src/multi_bible_search/data/RWV.json.pbz2
+src/multi_bible_search/data/UKJV.json.pbz2
+src/multi_bible_search/data/WEB.json.pbz2
+src/multi_bible_search/data/YLT.json.pbz2
+tests/test_perf.py
+tests/test_search.py
+tests/test_translate.py
