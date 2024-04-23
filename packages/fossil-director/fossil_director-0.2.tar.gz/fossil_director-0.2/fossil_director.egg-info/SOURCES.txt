@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+fossil_director/__init__.py
+fossil_director/server.py
+fossil_director.egg-info/PKG-INFO
+fossil_director.egg-info/SOURCES.txt
+fossil_director.egg-info/dependency_links.txt
+fossil_director.egg-info/entry_points.txt
+fossil_director.egg-info/requires.txt
+fossil_director.egg-info/top_level.txt
+fossil_director.egg-info/zip-safe

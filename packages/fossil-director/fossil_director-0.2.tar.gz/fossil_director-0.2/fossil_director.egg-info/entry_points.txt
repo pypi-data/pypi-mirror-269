@@ -1,0 +1,2 @@
+[console_scripts]
+fossil-director = fossil_director.server:main
