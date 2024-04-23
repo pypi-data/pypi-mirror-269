@@ -1,0 +1,11 @@
+surveyeval/__init__.py,sha256=pDVir9Vpm-5h8SW90a8QtKmY1zSKo6155eCABCBTFu0,1058
+surveyeval/core_evaluation_lenses.py,sha256=Q2paTvyNwLYEctofJNc81_lo_cxyrNWibXOK3hkcIWs,60646
+surveyeval/evaluation_engine.py,sha256=cEjJMjvWH3646sfOdXQ2zp_f_rVu2zHyDMHl78I8i2w,36556
+surveyeval/html_tools.py,sha256=p_u5czWDxW2emqf4OqbuEQ1jG-xTbQ1nzUPi1_NfznI,3739
+surveyeval/survey_parser.py,sha256=7FoUCPUvTLN31QCvaftg2mYDRdR5ITY-RfZV6NiNilM,80776
+surveyeval/resources/EmptyForm.xlsx,sha256=t8RcVuhljnJDNLUbbpXojA5qz1Ps29R1OOYcZiNBWXk,42632
+surveyeval-0.1.10.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+surveyeval-0.1.10.dist-info/METADATA,sha256=UUsi6wy4ZXHls-u_O6h69KxtEn_1LFkZfJ5JpJOTsxE,11353
+surveyeval-0.1.10.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+surveyeval-0.1.10.dist-info/top_level.txt,sha256=YV_VlJ3rQH-ZFBoLwKUUAhFbRmxcBFgSR8e42DN8zdY,11
+surveyeval-0.1.10.dist-info/RECORD,,
