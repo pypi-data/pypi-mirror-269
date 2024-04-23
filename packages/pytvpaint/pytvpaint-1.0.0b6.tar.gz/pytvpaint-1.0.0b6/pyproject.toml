@@ -1,0 +1,105 @@
+[tool.poetry]
+name = "pytvpaint"
+version = "1.0.0b6"
+description = "Python scripting for TVPaint"
+authors = [
+    "Brunch Studio Developers <dev@brunchstudio.tv>",
+    "Radouane Lahmidi <rlahmidi@brunchstudio.tv>",
+    "Joseph Henry <jhenry@brunchstudio.tv>",
+]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/brunchstudio/pytvpaint"
+documentation = "https://brunchstudio.github.io/pytvpaint/"
+keywords = ["tvpaint", "brunch", "tvp", "george"]
+packages = [{ include = "pytvpaint" }]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+websocket-client = "^1.7.0"
+typing-extensions = "^4.9.0"
+fileseq = "^2.0.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+ruff = "^0.2.2"
+mypy = "^1.9.0"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.1"
+pytest-mock = "^3.12.0"
+pytest-cov = "^4.1.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs-material = "^9.5.10"
+mkdocstrings = { extras = ["python"], version = "^0.24.0" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.ruff]
+target-version = "py39"
+
+[tool.ruff.lint]
+ignore = ["E501", "UP006", "D107"]
+extend-select = [
+    "E",
+    "I",
+    "SLF001",
+    "C901",
+    "N",
+    "UP",
+    "RET",
+    "SIM",
+    "TID",
+    "PTH",
+    "ERA",
+    "PERF",
+    "RUF",
+    "D",
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 12
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+exclude = "package.py"
+follow_imports = "normal"
+ignore_missing_imports = true
+no_implicit_reexport = true
+show_error_codes = true
+show_error_context = true
+strict_equality = true
+strict_optional = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+extra_checks = true
+untyped_calls_exclude = "fileseq,websocket"
