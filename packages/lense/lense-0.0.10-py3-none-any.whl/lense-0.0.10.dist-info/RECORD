@@ -1,0 +1,14 @@
+lense/__init__.py,sha256=5rivs2U5ia9uXArxLc1H8FyzIZXtDjxp_vsZsUEDo60,22
+lense/app.py,sha256=X9z3enQF8PQlhiEAupIUlbVwyuH1ZYmoknU_bWJ6ZW0,6599
+lense/backend/SQL_engine.py,sha256=Gzs7MM3n-xACgZ6sAUbRZxdecvcP819YBFNhiNy8020,3290
+lense/backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lense/backend/cglense.py,sha256=nba7Qa0B64U1RzhFenAOiFfarNS5qYSt0IPeqpHhSWA,1173
+lense/backend/csv_engine.py,sha256=id-MVVsjD2KZlB8Q0gvols1db2Ot5t7K1HemEDx_gN8,5836
+lense/backend/error_handling.py,sha256=HjB1eD-2jwhC7-rwvUc6CtYICjinKnMKop4DheUQOM4,4694
+lense/backend/loader.py,sha256=c0v_AKf9Qu4O_IzKqNF-EQNYu6PcUN2HTtfVwGxb8NI,1064
+lense/backend/qna_engine.py,sha256=VZkoMp-jqitYdWOsoctmeN1ApBE5cxyGJ2IHI6Wz994,2464
+lense/backend/replace_file.py,sha256=-DzKIrFXiKwhMZAPW7GSfDIhV9FGB7yhOqp3OqlS7eE,3336
+lense-0.0.10.dist-info/METADATA,sha256=Q1qxsNUt8iAWQKMuVEg2rYza110xwbi-RfupwZ_r4eA,931
+lense-0.0.10.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+lense-0.0.10.dist-info/top_level.txt,sha256=iyP2ZFtpvgpecDSV53lznPmRGjO3FUFAnNUkUTRbxIg,6
+lense-0.0.10.dist-info/RECORD,,
