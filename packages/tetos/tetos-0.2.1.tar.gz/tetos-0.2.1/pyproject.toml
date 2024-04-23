@@ -1,0 +1,97 @@
+[project]
+name = "tetos"
+description = "Unified interface for multiple Text-to-Speech (TTS) providers"
+authors = [
+    { name = "Frost Ming", email = "me@frostming.com" },
+]
+dependencies = [
+    "edge-tts>=6.1.10",
+    "openai>=1.20.0",
+    "mutagen>=1.47.0",
+    "azure-cognitiveservices-speech>=1.37.0",
+    "anyio>=4.3.0",
+    "click>=8.1.7",
+    "google-cloud-texttospeech>=2.16.3",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+dynamic = []
+keywords = [
+    "tts",
+    "text-to-speech",
+    "speech",
+    "audio",
+    "ai",
+    "nlp",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+version = "0.2.1"
+
+[project.license]
+text = "Apache-2.0"
+
+[project.urls]
+Repository = "https://github.com/frostming/tetos"
+Documentation = "https://tetos.readthedocs.io/latest/"
+
+[project.scripts]
+tetos = "tetos.__main__:tts"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=8.1.1",
+    "pytest-asyncio>=0.23.6",
+]
+doc = [
+    "sphinx>=7.1.2",
+    "myst-parser>=2.0.0",
+    "shibuya>=2024.4.15",
+]
+
+[tool.ruff]
+src = [
+    "src",
+]
+target-version = "py38"
+
+[tool.ruff.lint]
+select = [
+    "B",
+    "C4",
+    "E",
+    "F",
+    "PGH",
+    "W",
+    "YTT",
+]
+extend-ignore = [
+    "B018",
+    "B019",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "tetos",
+]
