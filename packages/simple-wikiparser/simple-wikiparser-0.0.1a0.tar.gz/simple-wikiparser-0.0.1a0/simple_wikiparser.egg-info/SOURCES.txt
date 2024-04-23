@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+simple_wikiparser.egg-info/PKG-INFO
+simple_wikiparser.egg-info/SOURCES.txt
+simple_wikiparser.egg-info/dependency_links.txt
+simple_wikiparser.egg-info/requires.txt
+simple_wikiparser.egg-info/top_level.txt
+wikiparser/__init__.py
+wikiparser/core.py

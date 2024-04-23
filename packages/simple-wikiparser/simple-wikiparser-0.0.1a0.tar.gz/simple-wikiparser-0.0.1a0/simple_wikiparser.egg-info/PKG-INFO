@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: simple-wikiparser
+Version: 0.0.1a0
+Summary: A simple Wikipedia parser
+Home-page: https://github.com/biswajit2903/SimpleWikiParser
+Author: Biswajit Satapathy
+Author-email: biswajit2902@gmail.com
+License: Apache License 2.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# SimpleWikiParser
+An Simplified Wiki Data Parser
+
+## Installation
+```bash
+pip install simple-wikiparser
+```
+
+## Usage:
+```python
+from wikiparser.core import WikiMediaDumpParser
+
+# initialise Parser for a language (say Hindi)
+wiki_dump_parser = WikiMediaDumpParser(language="Hindi")
+
+# parse
+wiki_dump_parser.parse()
+
+# export
+wiki_dump_parser.export_hf_dataset("/path/to/data.jsonl", "dataset_name")
+```
