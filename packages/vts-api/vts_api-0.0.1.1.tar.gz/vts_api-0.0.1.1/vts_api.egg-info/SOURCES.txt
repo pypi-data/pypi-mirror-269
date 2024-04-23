@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+vts_api.egg-info/PKG-INFO
+vts_api.egg-info/SOURCES.txt
+vts_api.egg-info/dependency_links.txt
+vts_api.egg-info/requires.txt
+vts_api.egg-info/top_level.txt
