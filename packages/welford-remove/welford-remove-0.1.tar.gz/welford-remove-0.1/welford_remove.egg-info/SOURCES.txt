@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+welford/__init__.py
+welford/example.py
+welford/test_welford.py
+welford/welford.py
+welford_remove.egg-info/PKG-INFO
+welford_remove.egg-info/SOURCES.txt
+welford_remove.egg-info/dependency_links.txt
+welford_remove.egg-info/requires.txt
+welford_remove.egg-info/top_level.txt
