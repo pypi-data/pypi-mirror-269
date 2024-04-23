@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "backend_sammy_gorilla"
+version = "0.1.0"
+description = ""
+authors = ["Hakkar <zugrutus@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.0.0"
+flask-cors = "^4.0.0"
+cloudinary = "^1.38.0"
+psycopg2 = "^2.9.9"
+python-dotenv = "^1.0.0"
+watchdog = "^3.0.0"
+weaviate-client = "^3.26.1"
+requests = "^2.31.0"
+pillow = "^10.2.0"
+scikit-learn = "^1.4.0"
+poethepoet = "^0.24.4"
+waitress = "^2.1.2"
+pyproject-toml = "^0.0.10"
+
+[tool.poe.tasks]
+back = "poetry run python -m backend_sammy_gorilla"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
