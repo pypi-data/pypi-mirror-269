@@ -1,0 +1,3 @@
+[console_scripts]
+lango-cli=lango_cli_beta.cli:app
+
