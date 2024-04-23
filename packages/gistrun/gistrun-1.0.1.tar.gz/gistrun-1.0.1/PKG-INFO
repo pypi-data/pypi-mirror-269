@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: gistrun
+Version: 1.0.1
+Project-URL: Documentation, https://github.com/unknown/gistrun#readme
+Project-URL: Issues, https://github.com/unknown/gistrun/issues
+Project-URL: Source, https://github.com/unknown/gistrun
+Author-email: drengskapur <service@drengskapur.com>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: click
+Description-Content-Type: text/markdown
+
+# gistrun
+
+[![PyPI - Version](https://img.shields.io/pypi/v/gistrun.svg)](https://pypi.org/project/gistrun)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/gistrun.svg)](https://pypi.org/project/gistrun)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install gistrun
+```
+
+## License
+
+`gistrun` is distributed under the terms of the [GPL-3.0-or-later](https://spdx.org/licenses/GPL-3.0-or-later.html) license.
