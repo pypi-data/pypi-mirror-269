@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: plover-sound
+Version: 0.0.1
+Summary: Plays sound when stroke is registered
+Author: Zach Rice
+Author-email: bynxmusic@gmail.com
+License: GNU General Public License v2 or later (GPLv2+)
+Keywords: plover plover_plugin
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: plover[gui_qt]>=4.0.0.rc2
+Requires-Dist: pygame>=2.5.2
+Requires-Dist: numpy>=1.26.4
+
+# Plover Sound
+
+Very early in development, but it's coming along nicely! Let me know in the plover discord if you have any suggestions: **@ricecakes808**
+
+## Installation
+
+There are 3 modes you can use, `sample`, `mapped`, and `melody`. The "Sound" tool tab is added to your Plover window. Please open that to configure `plover_sound`.
+
+You have to git clone and then install manually from the command line. See the instructions [here](https://plover.wiki/index.php/Plugins).

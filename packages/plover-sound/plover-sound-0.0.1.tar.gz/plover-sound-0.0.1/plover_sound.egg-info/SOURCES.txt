@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+plover_sound/__init__.py
+plover_sound/extension.py
+plover_sound/tool.py
+plover_sound.egg-info/PKG-INFO
+plover_sound.egg-info/SOURCES.txt
+plover_sound.egg-info/dependency_links.txt
+plover_sound.egg-info/entry_points.txt
+plover_sound.egg-info/requires.txt
+plover_sound.egg-info/top_level.txt
+plover_sound.egg-info/zip-safe
