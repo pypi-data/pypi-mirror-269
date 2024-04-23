@@ -1,0 +1,10 @@
+spectrae/__init__.py,sha256=qKdep2P8X012IEHNX35anVA8kULYm4cjscYVEIxH1E4,64
+spectrae/dataset.py,sha256=4JP951_eLAuaTGCg-HHY0r_cWixNE0Wf2a39Vvky-bM,838
+spectrae/independent_set_algo.py,sha256=5dPrEI3WJoRVvmUyJSGSJThYn1_xT4WD8f4YG5vVru4,3353
+spectrae/spectra.py,sha256=IUT3PV5v2l_5icGE6ZVEE59lilEL0OvD8ER-dIPN5MU,13889
+spectrae/utils.py,sha256=hgr66-Qr7FvAXe7GT_MfLdAb0AE4cp7TqrOPRAv8W1s,297
+spectrae-1.0.3.dist-info/LICENSE,sha256=OR7DxcmgzBJAr1HLWpkIN6uhW8dPyieTCI4O7Z1n99I,1100
+spectrae-1.0.3.dist-info/METADATA,sha256=K8BGjWKvlqRhGRT8PCwqHZENAAMpFBOV9JS02Cvyfq4,12413
+spectrae-1.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+spectrae-1.0.3.dist-info/top_level.txt,sha256=Cv1BfzSyazb377El1BUzsR9g3Kpjly5UqKrqNfHH6tI,9
+spectrae-1.0.3.dist-info/RECORD,,
