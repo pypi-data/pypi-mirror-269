@@ -1,0 +1,31 @@
+format: jb-book
+root: index
+parts:
+- caption: Introduction
+  chapters:
+  - file: what
+    title: What is it?
+  - file: about
+  - file: roadmap
+  - file: events 
+- caption: User guide
+  chapters:
+  - file: usage
+  - file: primitives
+  - file: support
+    title: Platform support
+- caption: Examples
+  chapters:
+  - file: examples/lava/nir-conversion
+  - file: examples/nengo/nir-conversion
+  - file: examples/norse/nir-conversion
+  - file: examples/rockpool/nir-conversion
+  - file: examples/sinabs/nir-conversion
+  - file: examples/snntorch/nir-conversion
+  - file: examples/spinnaker2/import
+  - file: examples/spyx/conversion
+- caption: Developer guide
+  chapters:
+  - file: api_design
+  - file: dev
+    title: Contributing
