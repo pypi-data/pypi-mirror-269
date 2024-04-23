@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+src/happypig/VERSION.txt
+src/happypig/__init__.py
+src/happypig/saying.py
+src/happypig.egg-info/PKG-INFO
+src/happypig.egg-info/SOURCES.txt
+src/happypig.egg-info/dependency_links.txt
+src/happypig.egg-info/entry_points.txt
+src/happypig.egg-info/requires.txt
+src/happypig.egg-info/top_level.txt
+src/happypig/commands/__init__.py
+src/happypig/commands/main.py
+src/happypig/commands/random_main.py
+src/happypig/data/animals.csv

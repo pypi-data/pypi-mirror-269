@@ -1,0 +1,3 @@
+[console_scripts]
+happypig = happypig.commands.main:main
+happypig-random = happypig.commands.random_main:random_main
