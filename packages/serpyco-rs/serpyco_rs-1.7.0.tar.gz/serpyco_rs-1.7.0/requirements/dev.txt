@@ -1,0 +1,8 @@
+pytest<8.1 # https://github.com/CodSpeedHQ/pytest-codspeed/issues/27
+attrs
+maturin>=1,<2
+pytz
+python-dateutil
+multidict
+tzdata; sys_platform == 'win32'
+nox
