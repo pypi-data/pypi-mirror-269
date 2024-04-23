@@ -1,0 +1,11 @@
+cloudcix/__init__.py,sha256=sZ9l_FgFxD4s1gbRXshD96pal2p48DnqFWXaqa95wy0,148
+cloudcix/adauth.py,sha256=ULGz957D0c8n9TmgCETe_LAhqyu4F0sFqu_d8svt3tk,3251
+cloudcix/api.py,sha256=t4xMwfBK5shJoGq58JfHBYrNA7ZBB19aRUr9eX1XQ8Q,33685
+cloudcix/base.py,sha256=yz97qG5EeiYFSkm0HqFhbNuVU0uG4XuwCEPkdRL8zeY,18648
+cloudcix/cloudcixauth.py,sha256=IHnOQZa_sDXX-i2NPRcwE6DqZsdlapl_NC3oupAL0rQ,4219
+cloudcix/utils.py,sha256=JJ71jx3jezX5wiw1V6nC0NFWpowCRM6vuSeogT0MJCA,7273
+cloudcix-0.2.140.dist-info/LICENSE,sha256=aUEDaO9dcqHMsWMI5bq32YOxZz9ACCP49Fi6RFZtNts,576
+cloudcix-0.2.140.dist-info/METADATA,sha256=6qICTjErJetw5-2LyZ3zzFIVHMZIdhP3Gg1bSwExrCo,5025
+cloudcix-0.2.140.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+cloudcix-0.2.140.dist-info/top_level.txt,sha256=QGHTQfqkUzNTfALobQF6DOQ3VYqCzsSVvd3rKThaK2k,9
+cloudcix-0.2.140.dist-info/RECORD,,
