@@ -1,0 +1,9 @@
+xarray
+numpy
+pandas
+matplotlib>=3.8.4
+cartopy
+netCDF4
+scipy
+regionmask
+geopandas
