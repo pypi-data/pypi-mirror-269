@@ -1,0 +1,16 @@
+depthai.cpython-36m-x86_64-linux-gnu.so,sha256=3IDNGhGjgZ8s6XjCJh32n7yx7A7H1_fJs36IMd8mwy4,17119897
+depthai-2.25.1.0.dist-info/LICENSE,sha256=X-bU7Cqk4igULucQhNHIv-pHQjj-6NSb0Q6MvQtErOE,1068
+depthai-2.25.1.0.dist-info/METADATA,sha256=LV0D8gPP4CoP8Nl3eeV4V0_9K2g3vovGqvPt6-nsdSQ,8753
+depthai-2.25.1.0.dist-info/RECORD,,
+depthai-2.25.1.0.dist-info/top_level.txt,sha256=MPJ6FBHY1LzD-rk26r76SfnfSiz3OQ6Z9AKqSmYWp00,20
+depthai-2.25.1.0.dist-info/entry_points.txt,sha256=aKKeYP_nknvf9HzbyIrRZPSjIJ_38JLXeY09hom07m0,57
+depthai-2.25.1.0.dist-info/WHEEL,sha256=YVAXCacQXnznQ-_lMj8Nvqrs7YPtMP1pHRCw9EcyWRQ,150
+depthai.libs/libusb-1-105e664f.0.so,sha256=asIbl3OK_deSRKrn5i43rJQcnrH6noV1rISRvRnYzQ4,140681
+depthai_cli/cam_test_gui.py,sha256=Yzff_d2VyzutdjBoHtcpflvEQxp4Y6CItk6NthsdlYE,15986
+depthai_cli/stress_test.py,sha256=XgclXrFGyuGq719FqPLLYUmgrwDFuH4HFuwhtD2J3a4,23474
+depthai_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+depthai_cli/depthai_cli.py,sha256=M2XbNPUX0XUAzuR7KfU2DfU9i2dELFRaUXYFXHkVgjQ,1897
+depthai_cli/cam_test.py,sha256=bg9mkDGMvY8ixX3oDkJnAAM8HDKfjNwiCi_K_iGPZ0c,37188
+depthai/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+depthai/__init__.pyi,sha256=zk2vKf2BXnN5Hb5vJQHc8jFwT5-l8lXp0X4cekTuDjU,193713
+depthai/node.pyi,sha256=1U7nc-IytUFjZwRRN2B7WcH9xIIDQautfGHgcHo0jsg,50070

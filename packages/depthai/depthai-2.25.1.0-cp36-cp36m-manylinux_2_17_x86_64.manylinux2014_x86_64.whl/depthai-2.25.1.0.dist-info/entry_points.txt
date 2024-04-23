@@ -1,0 +1,3 @@
+[console_scripts]
+depthai = depthai_cli.depthai_cli:cli
+
