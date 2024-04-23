@@ -1,0 +1,7 @@
+Jinja2
+
+[all]
+pyvisjs[test]
+
+[test]
+pytest
