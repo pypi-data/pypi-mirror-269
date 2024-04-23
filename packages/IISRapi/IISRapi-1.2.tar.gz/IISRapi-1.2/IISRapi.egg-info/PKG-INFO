@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: IISRapi
+Version: 1.2
+License: MIT
+Requires-Dist: flair
+Requires-Dist: torch
+Requires-Dist: torchvision
