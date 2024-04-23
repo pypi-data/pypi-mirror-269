@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+spidercloud_py.egg-info/PKG-INFO
+spidercloud_py.egg-info/SOURCES.txt
+spidercloud_py.egg-info/dependency_links.txt
+spidercloud_py.egg-info/requires.txt
+spidercloud_py.egg-info/top_level.txt
+spiderwebai/__init__.py
+spiderwebai/spider.py
