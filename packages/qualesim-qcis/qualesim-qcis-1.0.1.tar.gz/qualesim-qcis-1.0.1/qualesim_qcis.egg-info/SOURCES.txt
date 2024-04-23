@@ -1,0 +1,13 @@
+README.md
+setup.py
+data/bin/dqcsfeqcis
+qualesim_qcis/QCIS_inst.py
+qualesim_qcis/QCIS_lexer.py
+qualesim_qcis/QCIS_parser.py
+qualesim_qcis/frontend.py
+qualesim_qcis/utils.py
+qualesim_qcis.egg-info/PKG-INFO
+qualesim_qcis.egg-info/SOURCES.txt
+qualesim_qcis.egg-info/dependency_links.txt
+qualesim_qcis.egg-info/requires.txt
+qualesim_qcis.egg-info/top_level.txt
