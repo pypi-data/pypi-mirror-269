@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+tck/GMM_MAP_EM.py
+tck/GMMposterior.py
+tck/TCK.py
+tck/__init__.py
+tck/datasets.py
+tck.egg-info/PKG-INFO
+tck.egg-info/SOURCES.txt
+tck.egg-info/dependency_links.txt
+tck.egg-info/requires.txt
+tck.egg-info/top_level.txt
