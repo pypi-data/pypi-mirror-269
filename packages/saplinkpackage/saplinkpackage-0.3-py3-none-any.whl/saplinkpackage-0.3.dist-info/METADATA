@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: saplinkpackage
+Version: 0.3
+Summary: Your package description
+Author: MaoMao
+Author-email: maomao1037386322@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: wmi
+Requires-Dist: xlrd
+Requires-Dist: numpy
+Requires-Dist: pywin32
+Requires-Dist: pyautogui
+Requires-Dist: datetime
+
+UNKNOWN
+
