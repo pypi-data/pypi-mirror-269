@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: DXR_BJ
+Version: 1.0.4
+Summary: 回复循环遍历，修改车牌标记颜色大小
+Author: zx
+Author-email: 450125770@qq.com
+License: apache 3.0
+Requires-Dist: freetype-py
