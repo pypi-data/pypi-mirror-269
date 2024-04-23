@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "toolshop"
+version = "0.1.2"
+description = "The Tool Framework for AI Agents"
+authors = ["Andrew Hannigan <Andrew.S.Hannigan@Gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlalchemy = "^2.0.29"
+httpx = "^0.27.0"
+click = "^8.1.7"
+marvin = "^2.3.1"
+openai = "1.18.0"
+ascii-graph = "^1.5.1"
+langchain = "^0.1.16"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+[tool.poetry.scripts]
+coder = "toolshop.agent.cli:coder"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
