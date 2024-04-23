@@ -1,0 +1,13 @@
+tqdm
+
+[all]
+carabiner-tools[deep,mpl,pd]
+
+[deep]
+tensorflow
+
+[mpl]
+matplotlib
+
+[pd]
+pandas
