@@ -1,0 +1,12 @@
+happypig/VERSION.txt,sha256=6d2FB_S_DG9CRY5BrqgzrQvT9hJycjNe7pv01YVB7Wc,6
+happypig/__init__.py,sha256=D481QJMzIvKhN4x39wA1TSoK4keTg0ycmORRk1z9wj0,598
+happypig/saying.py,sha256=kB009banJJRG3sJikkejR_GEIn-5HLBlLX4pIWXmGH4,77
+happypig/commands/__init__.py,sha256=HBnDeh-P4n6pDWsKlV3XSC9xjFmouGMjwHmIMUU_noE,45
+happypig/commands/main.py,sha256=iEKvx8d9T7bKwuwVBTsgBSXLmyR6thWZhvSwJRgz2iM,1580
+happypig/commands/random_main.py,sha256=JOzqa25GQtGCDt_NMAqYkgPGtmzzjhuy27HHOfAC1us,162
+happypig/data/animals.csv,sha256=dXVbZL0yVEK8pPeUBkukoP5R-j-Xnfvc2qdKUTo8qZ4,360
+happypig-0.1.0.dist-info/METADATA,sha256=AUdvxPrbBoC1_DWJA0lFjXsoz09nuXLhchx9F2JyTjQ,282
+happypig-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+happypig-0.1.0.dist-info/entry_points.txt,sha256=A9KOuBD3T-KZOEZbMw2eJCCvlLr7gRRAHFxkL579XPI,117
+happypig-0.1.0.dist-info/top_level.txt,sha256=FdU-e_41SIucRN3e5tBjiUs7WDGy0_lTDhGVl93NTjI,9
+happypig-0.1.0.dist-info/RECORD,,

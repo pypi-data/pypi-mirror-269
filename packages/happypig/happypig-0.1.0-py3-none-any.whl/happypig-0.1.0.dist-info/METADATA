@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: happypig
+Version: 0.1.0
+Summary: happypig
+Author: BuxianChen
+Author-email: 541205605@qq.com
+Requires-Python: >=3.7,<=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Provides-Extra: tab
+Requires-Dist: tabulate ; extra == 'tab'
+
+# happy
