@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zotasdk"
+dynamic = ['dependencies']
+version = "1.2.1"
+authors = [
+  { name="Zota Technology Pte Ltd", email="open-source@zota.com" },
+]
+description = "SDK Implementation of Zota's REST API for merchants."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 6 - Mature",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/zota/python-sdk"
+"Bug Tracker" = "https://github.com/zota/python-sdk/issues"
+
+[tool.pytest.ini_options]
+addopts = "--cov ./ --cov-report xml"
