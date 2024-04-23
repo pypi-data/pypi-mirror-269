@@ -1,0 +1,5 @@
+[console_scripts]
+pyv=pyv.main:main
+pyv-app=pyv.core.versioning:main
+pyv-auto=pyv.core.autoversioning:main
+

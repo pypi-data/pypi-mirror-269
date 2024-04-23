@@ -1,0 +1,9 @@
+pyv/core/__init__.py,sha256=7upgnJp_2SVeX0OAzo3xZD8FgcSDOHlEsw100sOgWwo,127
+pyv/core/auto_versionning.py,sha256=KZ6GcRRijojqAAE1a2ljusU61HvcpyHg3wA56q5JrEE,3630
+pyv/core/utils.py,sha256=wmDISwPAlGLYLOjuJOLfj8vpKlk3ToFfyXy6CYhzL_A,813
+pyv/core/versionning.py,sha256=Ns7iOx160Jf7eOGJe6TG5TwqR7qik5EttMjooe6YBrQ,8605
+pyv/main.py,sha256=9YqeOS_z2Eu8bnqQx8LSUtKH5BFpV0wtp_bcMthLeRo,1519
+versioning_python-0.1.0.dist-info/METADATA,sha256=XppJWlXqff0vjJ_j33DhrgHxos3IvFOOp3K7VyiZc5I,3174
+versioning_python-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+versioning_python-0.1.0.dist-info/entry_points.txt,sha256=PUT0xjViTeaJE6BHKlSMdISSsgmiYL1AKSL2eOSsEW8,108
+versioning_python-0.1.0.dist-info/RECORD,,

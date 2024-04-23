@@ -1,0 +1,2 @@
+from .auto_versionning import auto_versionning
+from .versionning import deploy_new_major_version, update_current_major_version
