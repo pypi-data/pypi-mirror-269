@@ -1,0 +1,3 @@
+[console_scripts]
+valens=valens.cli:main
+
