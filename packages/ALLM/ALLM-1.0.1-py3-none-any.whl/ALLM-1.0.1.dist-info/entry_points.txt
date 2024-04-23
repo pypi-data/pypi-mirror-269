@@ -1,0 +1,3 @@
+[console_scripts]
+allm-run = ALLM.cli:main
+allm-serve = ALLM.generate:main
