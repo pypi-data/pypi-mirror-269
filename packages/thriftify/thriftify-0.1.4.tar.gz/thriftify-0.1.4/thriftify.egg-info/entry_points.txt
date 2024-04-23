@@ -1,0 +1,3 @@
+[console_scripts]
+thriftify = thriftify.command_line:main
+
