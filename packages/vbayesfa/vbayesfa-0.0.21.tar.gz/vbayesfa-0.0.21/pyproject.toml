@@ -1,0 +1,9 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "vbayesfa"
+version = "0.0.21"
+authors = [{name = "Sam Paskewitz", email = "samuel.paskewitz@yale.edu"}]
+dynamic = ["description"]
