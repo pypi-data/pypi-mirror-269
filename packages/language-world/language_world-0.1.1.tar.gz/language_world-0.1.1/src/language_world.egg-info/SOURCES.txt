@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/language_world/__init__.py
+src/language_world.egg-info/PKG-INFO
+src/language_world.egg-info/SOURCES.txt
+src/language_world.egg-info/dependency_links.txt
+src/language_world.egg-info/requires.txt
+src/language_world.egg-info/top_level.txt
