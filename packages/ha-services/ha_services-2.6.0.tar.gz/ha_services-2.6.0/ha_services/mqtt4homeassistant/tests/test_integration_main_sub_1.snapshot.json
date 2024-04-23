@@ -1,0 +1,114 @@
+[
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": null, \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-hostname/attributes\", \"name\": \"Hostname\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": null, \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-hostname/state\", \"unique_id\": \"main_uid-hostname\", \"unit_of_measurement\": null}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-hostname/config"
+    },
+    {
+        "payload": "TheHostName",
+        "topic": "homeassistant/sensor/main_uid/main_uid-hostname/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": \"timestamp\", \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-up_time/attributes\", \"name\": \"System Up Time\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": null, \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-up_time/state\", \"unique_id\": \"main_uid-up_time\", \"unit_of_measurement\": null}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-up_time/config"
+    },
+    {
+        "payload": "2009-02-14T00:31:30+01:00",
+        "topic": "homeassistant/sensor/main_uid/main_uid-up_time/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": \"timestamp\", \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-process_start/attributes\", \"name\": \"Process Start\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": null, \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-process_start/state\", \"unique_id\": \"main_uid-process_start\", \"unit_of_measurement\": null}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-process_start/config"
+    },
+    {
+        "payload": "2009-02-13T23:31:30+00:00",
+        "topic": "homeassistant/sensor/main_uid/main_uid-process_start/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": \"frequency\", \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-cpu_freq/attributes\", \"name\": \"CPU frequency\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": \"measurement\", \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-cpu_freq/state\", \"suggested_display_precision\": 0, \"unique_id\": \"main_uid-cpu_freq\", \"unit_of_measurement\": \"Mhz\"}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-cpu_freq/config"
+    },
+    {
+        "payload": 1234,
+        "topic": "homeassistant/sensor/main_uid/main_uid-cpu_freq/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": null, \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-swap_usage/attributes\", \"name\": \"Swap usage\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": null, \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-swap_usage/state\", \"suggested_display_precision\": 1, \"unique_id\": \"main_uid-swap_usage\", \"unit_of_measurement\": \"%\"}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-swap_usage/config"
+    },
+    {
+        "payload": 123,
+        "topic": "homeassistant/sensor/main_uid/main_uid-swap_usage/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": null, \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-system_load_1min/attributes\", \"name\": \"System load 1min.\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": \"measurement\", \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-system_load_1min/state\", \"suggested_display_precision\": 2, \"unique_id\": \"main_uid-system_load_1min\", \"unit_of_measurement\": null}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-system_load_1min/config"
+    },
+    {
+        "payload": 1,
+        "topic": "homeassistant/sensor/main_uid/main_uid-system_load_1min/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": null, \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-total_cpu_usage/attributes\", \"name\": \"Total CPU usage\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": null, \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-total_cpu_usage/state\", \"suggested_display_precision\": 1, \"unique_id\": \"main_uid-total_cpu_usage\", \"unit_of_measurement\": \"%\"}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-total_cpu_usage/config"
+    },
+    {
+        "payload": 12,
+        "topic": "homeassistant/sensor/main_uid/main_uid-total_cpu_usage/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": null, \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-process_cpu_usage/attributes\", \"name\": \"Process CPU usage\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": null, \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-process_cpu_usage/state\", \"suggested_display_precision\": 1, \"unique_id\": \"main_uid-process_cpu_usage\", \"unit_of_measurement\": \"%\"}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-process_cpu_usage/config"
+    },
+    {
+        "payload": 12,
+        "topic": "homeassistant/sensor/main_uid/main_uid-process_cpu_usage/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": \"temperature\", \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-temperaturecoretemp/attributes\", \"name\": \"Temperature coretemp\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": \"measurement\", \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-temperaturecoretemp/state\", \"suggested_display_precision\": 0, \"unique_id\": \"main_uid-temperaturecoretemp\", \"unit_of_measurement\": \"°C\"}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-temperaturecoretemp/config"
+    },
+    {
+        "payload": 51.0,
+        "topic": "homeassistant/sensor/main_uid/main_uid-temperaturecoretemp/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": \"temperature\", \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-temperaturenvme/attributes\", \"name\": \"Temperature nvme\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": \"measurement\", \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-temperaturenvme/state\", \"suggested_display_precision\": 0, \"unique_id\": \"main_uid-temperaturenvme\", \"unit_of_measurement\": \"°C\"}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-temperaturenvme/config"
+    },
+    {
+        "payload": 32.85,
+        "topic": "homeassistant/sensor/main_uid/main_uid-temperaturenvme/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": \"data_size\", \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-eth0sent/attributes\", \"name\": \"eth0 sent\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": \"measurement\", \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-eth0sent/state\", \"suggested_display_precision\": 1, \"unique_id\": \"main_uid-eth0sent\", \"unit_of_measurement\": \"KiB\"}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-eth0sent/config"
+    },
+    {
+        "payload": "<mocked eth0 values>",
+        "topic": "homeassistant/sensor/main_uid/main_uid-eth0sent/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": \"data_rate\", \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-eth0sentrate/attributes\", \"name\": \"eth0 sent rate\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": \"measurement\", \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-eth0sentrate/state\", \"suggested_display_precision\": 1, \"unique_id\": \"main_uid-eth0sentrate\", \"unit_of_measurement\": \"KiB/s\"}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-eth0sentrate/config"
+    },
+    {
+        "payload": "<mocked eth0 values>",
+        "topic": "homeassistant/sensor/main_uid/main_uid-eth0sentrate/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": \"data_size\", \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-eth0received/attributes\", \"name\": \"eth0 received\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": \"measurement\", \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-eth0received/state\", \"suggested_display_precision\": 1, \"unique_id\": \"main_uid-eth0received\", \"unit_of_measurement\": \"KiB\"}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-eth0received/config"
+    },
+    {
+        "payload": "<mocked eth0 values>",
+        "topic": "homeassistant/sensor/main_uid/main_uid-eth0received/state"
+    },
+    {
+        "payload": "{\"component\": \"sensor\", \"device\": {\"identifiers\": \"main_uid\", \"name\": \"Main Device\"}, \"device_class\": \"data_rate\", \"json_attributes_topic\": \"homeassistant/sensor/main_uid/main_uid-eth0receivedrate/attributes\", \"name\": \"eth0 received rate\", \"origin\": {\"name\": \"ha-services-tests\", \"support_url\": \"https://pypi.org/project/ha_services/\", \"sw_version\": \"1.2.3\"}, \"state_class\": \"measurement\", \"state_topic\": \"homeassistant/sensor/main_uid/main_uid-eth0receivedrate/state\", \"suggested_display_precision\": 1, \"unique_id\": \"main_uid-eth0receivedrate\", \"unit_of_measurement\": \"KiB/s\"}",
+        "topic": "homeassistant/sensor/main_uid/main_uid-eth0receivedrate/config"
+    },
+    {
+        "payload": "<mocked eth0 values>",
+        "topic": "homeassistant/sensor/main_uid/main_uid-eth0receivedrate/state"
+    }
+]
