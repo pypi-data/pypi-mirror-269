@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: telegram-notifier-prakhar
+Version: 0.1
+Summary: A simple library to send Telegram messages.
+Author: Prakhar Shrivas
+Author-email: prakharshrivas17@example.com
+Keywords: telegram bot message notify
+Requires-Dist: requests
+
