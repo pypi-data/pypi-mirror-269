@@ -1,0 +1,8 @@
+Django>=4.2
+artd-location==1.0.2
+artd-partner==1.0.1
+artd-product==1.0.7
+artd-stock==1.0.4
+artd_price_list==1.0.4
+django-json-widget==1.1.1
+pillow==10.2.0
