@@ -1,0 +1,50 @@
+[tool.poetry]
+name        = "pyluba"
+version     = "0.0.1"
+license     = "GNU-3.0"
+description = ""
+readme      = "README.md"
+authors     = [
+    "Michael Arthur <michael@jumblesoft.co.nz>",
+    "Jan Dalheimer <jan@dalheimer.de>"
+]
+packages = [{include = "pyluba"}]
+
+
+[tool.poetry.dependencies]
+python = "~3.11"
+bleak = "^0.21.1"
+protobuf = "^4.25.1"
+py-jsonic = "^0.0.2"
+pydantic = "^2.5.3"
+aliyun-python-sdk-iot = "^8.57.0"
+aliyun-iot-linkkit = "^1.2.12"
+aiohttp = "^3.9.1"
+paho-mqtt = "^1.6.1"
+alicloud-gateway-iot = "^1.0.0"
+alibabacloud-apigateway-util = "^0.0.2"
+alibabacloud-iot-api-gateway = "^0.0.4"
+twine = "^5.0.0"
+
+[tool.poetry.group.dev.dependencies]
+types-protobuf = "^4.23.0.1"
+mypy-protobuf = "^3.4.0"
+
+
+[tool.bumpver]
+current_version = "0.0.1"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message  = "Bump version {old_version} -> {new_version}"
+commit          = true
+tag             = true
+push            = false
+
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version     = "{version}"']
+"src/pyluba/__init__.py" = ["{version}"]
+"setup.cfg" = ["version = {version}"]
+"README.md" = ['\[SemVer {version}\]', 'img.shields.io/static/v1.svg?label=SemVer&message={version}&color=blue']
+
+[tool.setuptools.package-data]
+pyluba = ["py.typed"]
