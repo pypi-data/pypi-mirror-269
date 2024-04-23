@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+wcglib/__init__.py
+wcglib/__version__.py
+wcglib/log_utils.py
+wcglib/wcg.py
+wcglib.egg-info/PKG-INFO
+wcglib.egg-info/SOURCES.txt
+wcglib.egg-info/dependency_links.txt
+wcglib.egg-info/top_level.txt
