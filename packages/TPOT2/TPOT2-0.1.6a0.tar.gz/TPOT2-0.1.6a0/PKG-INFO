@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: TPOT2
+Version: 0.1.6a0
+Summary: Tree-based Pipeline Optimization Tool
+Home-page: https://github.com/EpistasisLab/tpot2
+Author: Pedro Ribeiro
+License: GNU/LGPLv3
+Keywords: pipeline optimization,hyperparameter optimization,data science,machine learning,genetic programming,evolutionary computation
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Provides-Extra: skrebate
+Provides-Extra: mdr
+Provides-Extra: sklearnex
+License-File: LICENSE
+
+
+A Python tool that automatically creates and optimizes machine learning pipelines using genetic programming.
+
+
