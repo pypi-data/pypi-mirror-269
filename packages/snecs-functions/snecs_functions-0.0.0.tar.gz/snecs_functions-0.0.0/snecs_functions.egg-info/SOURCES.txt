@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+snecs_functions/__init__.py
+snecs_functions/snecs_functions.py
+snecs_functions.egg-info/PKG-INFO
+snecs_functions.egg-info/SOURCES.txt
+snecs_functions.egg-info/dependency_links.txt
+snecs_functions.egg-info/requires.txt
+snecs_functions.egg-info/top_level.txt
+tests/test_snecs_functions.py
