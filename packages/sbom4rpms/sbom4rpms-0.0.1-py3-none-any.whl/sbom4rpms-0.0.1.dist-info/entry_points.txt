@@ -1,0 +1,2 @@
+[console_scripts]
+sbom4rpms = sbom4rpms.main:main
