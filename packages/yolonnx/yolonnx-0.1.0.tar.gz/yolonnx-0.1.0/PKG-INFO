@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: yolonnx
+Version: 0.1.0
+Summary: You Only Look ONNX
+Keywords: ONNX,YOLOv8,onnxruntime,vision
+Home-page: https://www.cs.aau.dk/
+Author-Email: Kasper Fromm Pedersen <kasperf@cs.aau.dk>
+License: MIT
+Project-URL: Homepage, https://www.cs.aau.dk/
+Project-URL: Repository, https://github.com/fromm1990/yolonnx
+Requires-Python: >=3.10
+Requires-Dist: numpy==1.26.*
+Requires-Dist: aau-label==0.2.*
+Description-Content-Type: text/markdown
+
+# You Only Look ONNX
+This repository is a light weight library to ease the use of ONNX models exported by the Ultralytics YOLOv8 framework.
+
+## Example Detector Usage
+```python
+from pathlib import Path
+
+from onnxruntime import InferenceSession
+from PIL import Image
+
+from yolonnx.services import Detector
+from yolonnx.to_tensor_strategies import PillowToTensorContainStrategy
+
+model = Path("path/to/file.onnx")
+session = InferenceSession(
+    model.as_posix(),
+    providers=[
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider",
+    ],
+)
+
+predictor = Detector(session, PillowToTensorContainStrategy())
+img = Image.open("path/to/image.jpg")
+print(predictor.run(img))
+```
+
+## Example Classifier Usage
+```python
+from pathlib import Path
+
+from onnxruntime import InferenceSession
+from PIL import Image
+
+from yolonnx.services import Classifier
+from yolonnx.to_tensor_strategies import PillowToTensorContainStrategy
+
+model = Path("path/to/file.onnx")
+session = InferenceSession(
+    model.as_posix(),
+    providers=[
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider",
+    ],
+)
+
+predictor = Classifier(session, PillowToTensorContainStrategy())
+img = Image.open("path/to/image.jpg")
+print(predictor.run(img))
+
+```
