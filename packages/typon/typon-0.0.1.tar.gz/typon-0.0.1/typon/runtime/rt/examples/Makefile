@@ -1,0 +1,36 @@
+CXX=g++-11
+CXXFLAGS=-g -O3 -fwhole-program -flto -Wall -Wextra -Werror -std=c++20 -fcoroutines -I../include
+LDLIBS=-pthread -luring -lfmt
+
+%.o: %.cpp
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+%: %.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDLIBS)
+
+cat: cat.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDLIBS)
+
+fork: fork.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDLIBS)
+
+fork_exceptions: fork_exceptions.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDLIBS)
+
+fork_variations: fork_variations.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDLIBS)
+
+future_awaited: future_awaited.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDLIBS)
+
+future_detached: future_detached.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDLIBS)
+
+loop: loop.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDLIBS)
+
+naive_fibonacci_fork: naive_fibonacci_fork.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDLIBS)
+
+webserver: webserver.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDLIBS)

@@ -1,0 +1,2 @@
+[console_scripts]
+typon = typon.trans.main:main
