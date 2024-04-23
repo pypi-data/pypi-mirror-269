@@ -1,0 +1,3 @@
+[console_scripts]
+sleepkit=sleepkit.cli:run
+
