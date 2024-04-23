@@ -1,0 +1,56 @@
+from setuptools import find_packages, setup
+from version import VERSION
+
+EXCLUDE_FROM_PACKAGES = [
+    "tests",
+]
+
+
+def get_long_description():
+    long_description = ""
+    with open("README.rst", "r") as fh:
+        long_description = fh.read()
+    with open("CHANGELOG.rst", "r") as fh:
+        long_description += "\n\n" + fh.read()
+    return long_description
+
+
+def get_requirements():
+    requirements = []
+    with open("requirements.txt", "r") as df:
+        requirements = df.readlines()
+
+    filter_requirements = set()
+    for requirement in requirements:
+        requirement = requirement.strip()
+        if requirement and not requirement.startswith("#"):
+            filter_requirements.add(requirement)
+
+    return list(filter_requirements)
+
+
+setup(
+    name="nix-sitemap-generator",
+    version=VERSION,
+    packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
+    include_package_data=True,
+    url="https://github.com/nixnks/sitemap-generator",
+    license="GPL3",
+    author="Kamo Petrosyan, Nix ツ",
+    author_email="kamo@haikson.com, nikusunix@gmail.com",
+    description="Web crawler and sitemap generator.",
+    long_description=get_long_description(),
+    long_description_content_type="text/x-rst",
+    classifiers=[
+        "Environment :: Web Environment",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: BSD License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.11",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+    ],
+    install_requires=get_requirements(),
+    requires=get_requirements(),
+)

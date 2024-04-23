@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: nix-sitemap-generator
+Version: 0.10.1
+Summary: Web crawler and sitemap generator.
+Home-page: https://github.com/nixnks/sitemap-generator
+Author: Kamo Petrosyan, Nix ツ
+Author-email: kamo@haikson.com, nikusunix@gmail.com
+License: GPL3
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires: asyncio
+Requires: lxml
+Requires: sqlalchemy
+Requires: cssselect
+Requires: aiofile
+Requires: aiohttp
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: asyncio
+Requires-Dist: lxml
+Requires-Dist: sqlalchemy
+Requires-Dist: cssselect
+Requires-Dist: aiofile
+Requires-Dist: aiohttp
+
+nix-sitemap-generator
+=====================
+
+Sitemap generator library for python. Fork from *https://github.com/Haikson/sitemap-generator*.
+
+Installing
+----------
+::
+
+    pip install nix-sitemap-generator
+
+Usage
+-----
+
+1. Import `crawler` from `pysitemap`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+    from pysitemap import crawler
+
+2. Call `crawler()`
+~~~~~~~~~~~~~~~~~~~
+::
+
+    crawler(
+        'https//site.com', out_file='debug/sitemap.xml', exclude_urls=[".pdf", ".jpg", ".zip"],
+        http_request_options={"ssl": False}, parser=Parser
+    )
+
+Example
+-------
+::
+
+    import sys
+    import logging
+    from pysitemap import crawler
+    from pysitemap.parsers.lxml_parser import Parser
+
+    if __name__ == '__main__':
+        if '--iocp' in sys.argv:
+            from asyncio import events, windows_events
+            sys.argv.remove('--iocp')
+            logging.info('using iocp')
+            el = windows_events.ProactorEventLoop()
+            events.set_event_loop(el)
+
+        # root_url = sys.argv[1]
+        root_url = 'https://www.haikson.com'
+        crawler(
+            root_url, out_file='debug/sitemap.xml', exclude_urls=[".pdf", ".jpg", ".zip"],
+            http_request_options={"ssl": False}, parser=Parser
+        )
+
+
+Changes
+-------
+v. 0.10.1
+~~~~~~~~~
+
+- Refactored the code to make it more readable.
+- Removed prints() calls from code.
+- Added verbose mode to `crawler()`.
+- Added type hints to `crawler()` arguments.
+- Add ValueError handling when try to add_signal_handler()

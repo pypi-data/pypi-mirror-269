@@ -1,0 +1,6 @@
+asyncio
+lxml
+sqlalchemy
+cssselect
+aiofile
+aiohttp
