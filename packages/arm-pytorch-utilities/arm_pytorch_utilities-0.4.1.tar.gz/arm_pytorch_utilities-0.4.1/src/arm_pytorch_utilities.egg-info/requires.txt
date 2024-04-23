@@ -1,0 +1,8 @@
+torch
+numpy
+matplotlib
+scipy
+pytorch-seed
+
+[test]
+pytest
