@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: notifylib
+Version: 0.0.1
+Summary: notify users
+Home-page: https://github.com/pypa/sampleproject
+Author: Abinash
+Author-email: abinashsp608@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# pytest cache directory #
+
+This directory contains data from the pytest's cache plugin,
+which provides the `--lf` and `--ff` options, as well as the `cache` fixture.
+
+**Do not** commit this to version control.
+
+See [the docs](https://docs.pytest.org/en/stable/how-to/cache.html) for more information.
