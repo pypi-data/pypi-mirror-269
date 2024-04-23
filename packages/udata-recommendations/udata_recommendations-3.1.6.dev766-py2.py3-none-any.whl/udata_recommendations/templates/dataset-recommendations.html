@@ -1,0 +1,20 @@
+{%- if reco_datasets %}
+<div id="dataset-recommendations">
+    <h3 class="subtitle subtitle--uppercase fr-m-0">
+        {{ ngettext('%(num)d recommended dataset', '%(num)d recommended datasets', reco_datasets|length) }}
+    </h3>
+    <div id="dataset-recommendations-container">
+        {% for dataset in reco_datasets %}
+            <div 
+                class="fr-mb-2w"
+                data-track-content
+                data-content-name="dataset recommendations"
+                data-content-piece="{{ dataset.full_title }}"
+                data-content-target="{{ url_for('datasets.show', dataset=dataset) }}"
+            >
+                {% include theme('dataset/card-sm.html') with context %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif -%}
