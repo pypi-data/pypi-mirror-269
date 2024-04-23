@@ -1,0 +1,212 @@
+Metadata-Version: 2.1
+Name: geodeticengine
+Version: 1.0.10
+Summary:  Library for transformation and conversion of coordinates used in Equinor.
+Author-email: Equinor <peaar@equinor.com>
+Maintainer-email: Per Helge Aarnes <peaar@equinor.com>, Torill Gabrielsen <tokjos@equinor.com>
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: msal
+Requires-Dist: pyproj
+Requires-Dist: python-dotenv
+Requires-Dist: numpy
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+
+# Geodetic Engine
+
+A Python library using the Equinor Geodetic Engine API and pyproj to transform coordinates between different Coordinate Reference Systems (CRS).
+
+## Installation
+
+1. Access to the [Equinor Geodetic Engine API](https://api.equinor.com/api-details#api=ege-GeodeticEngine-v1) is required, which can be obtained through [AccessIT](https://accessit.equinor.com/Search/Search?term=geodetic+engine).
+
+2. A personal subscription key is also necessary to authenticate through APIM. Sign in to [api.equinor.com](https://api.equinor.com) and subscribe to [Enterprise](https://api.equinor.com/product#product=corporate).
+
+3. As usual the package it´s installed running pip install:
+```
+pip install geodeticengine
+```
+
+## Authentication
+There are two ways to authenticate:
+- User access - MSAL Device code flow
+- Application access - MSAL Client credential flow
+
+
+## User access - MSAL Device code flow
+This package uses the _PublicClientApplication_ Python class from the MSAL library for user authentication. Bearer tokens are retrieved using the _acquire_token_interactive()_ method, which can be accessed via a local browser on devices that support a Graphical User Interface (GUI). If a device lacks GUI support, such as GitHub Code Spaces, the _initiate_device_flow()_ method generates a specific URL for the user to visit and follows a standard authentication and login process.
+
+In order to use the package with user access to production, you will only need to add one environment variable to your system:
+```
+EGE_SUBS_KEYS=<your-subscription-key-for-geodeticengine-prod>
+```
+
+In order to use the package with user access to test, you will need to add the following environment variables to your system:
+```
+EGE_API_ENV=test
+EGE_SUBS_KEYS=<your-subscription-key-for-geodeticengine-test>
+```
+**EGE_SUBS_KEYS:** This variable holds your APIM subscription key for each environment (prod and test). This will allow the package to access the resources you have permission to use.<br/>
+**EGE_API_ENV:** This variable is used to access the Geodetic Engine Test environment. If this environment variable is not set, the package will use the production environment by default. It can also be set to production, by  ```EGE_API_ENV=prod```.
+
+### User access - Token cache
+The token for each environment is cached and stored in the user's home directory, eliminating the need to authenticate before every session. Although an access token expires after one hour, the presence of a cached Refresh Token allows a new Access Token to be obtained without requiring re-authentication. The Refresh Token lasts for 90 days, then you have to log in again.
+
+## Application access - MSAL Client credential flow
+In order to use the package with application access to production, you will need to add the following environment variables to your system:
+```
+EGE_CLIENT_IDS=<your-app-id-prod>
+EGE_CLIENT_SECRETS=<your-app-secret-prod>
+EGE_SUBS_KEYS=<your-subscription-key-for-geodeticengine-prod>
+```
+
+In order to use the package with application access to test:
+```
+EGE_API_ENV=test
+EGE_CLIENT_IDS=<your-app-id-prod>;<your-app-id-test>
+EGE_CLIENT_SECRETS=<your-app-secret-prod>;<your-app-secret-test>
+EGE_SUBS_KEYS=<your-subscription-key-for-geodeticengine-prod>;<your-subscription-key-for-geodeticengine-test>
+```
+**EGE_API_ENV:** This variable is used to access the different environments test and production. If this environment variable is not set, the package will use the production environment by default. It can also be set to prod, by  ```EGE_API_ENV=prod```.
+**EGE_CLIENT_IDS:** This variable holds your application (client) ID for each environment.<br />
+**EGE_CLIENT_SECRETS:** This variable is used for your application's client secret for each environment. If this variable is not set, the package will automatically fall back to user access for authentication.<br />
+**EGE_SUBS_KEYS:** This variable holds your APIM subscription key for each environment (prod and test). This will allow the package to access the resources that you have permission to use.<br />
+
+Note that if the EGE_CLIENT_IDS, EGE_CLIENT_SECRETS and EGE_SUBS_KEYS environment variables hold the IDs and secrets for both the production and test environments, the order is important. The production values must always come before the test values.
+
+## Transformation grids
+Transformation grids are essential for achieving high accuracy when performing datum transformations. The package will automatically fetch required grid if it doesn't already exist on your local machine.
+
+More information on the data available is located in [pyproj documentation](https://pyproj4.github.io/pyproj/stable/transformation_grids.html).
+
+## Transformation and Conversion
+Transforming and converting coordinates can be performed in two ways using this Python package. The first method involves passing all the required information, including the coordinates to be transformed, to the API. In this case, the transformation is carried out by the API itself. The second approach is to use the API to request the transformation pipeline—a string containing all the parameters needed to transform or convert the coordinates from `CRS A` to `CRS B`. Then, you can use this pipeline to transform the coordinates locally using the `transform_from_pipeline` method. This latter approach is more efficient and well suited for huge datasets, as it does not require sending the coordinates over the network.
+
+### Transform by passing the coordinates to the API
+
+```python
+from geodeticengine import CoordTrans
+
+### Example 1
+points = [[10, 60]]
+crs_from = "EPSG:4230"
+crs_to = "EPSG:4326"
+ct_from = "EPSG:1612"
+
+# Transform coordinates
+ct = CoordTrans(crs_from=crs_from, crs_to=crs_to, ct_from=ct_from, points=points)
+print(f"Transformed coordinates:{ct.transform_pointlist()}")
+
+
+### Example 2 - Use a bound CRS (where the transformation is tied to the CRS)
+points = [[9,65],[12,70]]
+crs_from = "ST_ED50_T1133"
+crs_to = "ST_WGS84_G4326"
+
+# Transform coordinates
+ct = CoordTrans(crs_from=crs_from, crs_to=crs_to, points=points)
+print(f"Transformed coordinates:{ct.transform_pointlist()}")
+
+```
+
+### Transform by requesting the transformation pipeline from the API and do the transformation locally using the ``transform_from_pipeline`` method.
+```python
+from geodeticengine import CoordTrans
+
+crs_from = "EPSG:32632" # WGS84 / UTM zone 32N
+crs_to = "EPSG:23031"   # ED50 / UTM zone 31N
+ct_code = "EPSG:1613"   # Transformation from ED50 to WGS84
+
+points = [[273178.571, 6846980.063]]
+
+# Create a transformer object of the source crs, target crs and the transformation between them
+trans_obj = CoordTrans(crs_from, crs_to, ct_from=ct_code)
+
+# Get the transformation pipeline
+trans_pipeline = trans_obj.get_pipeline()
+
+# Use the transformation pipeline extracted in the line above to transform the coordiantes
+transformed_coord_lst = trans_obj.transform_from_pipeline(points, trans_pipeline)
+print(f"Transformed coordinates by using the pipeline from the GeodeticEngine:\n{transformed_coord_lst}")
+
+```
+
+
+### Transform coordinates by using two different transformations (two-step)
+First transform the coordinates from ``ETRS89`` to ``WGS84`` using the ``EQUINOR:3000034`` transformation, and then transform from ``WGS84`` to ``ED50`` using ``EPSG:1613``
+
+```python
+from geodeticengine import CoordTrans
+
+crs_from = "EPSG:25832"          # ETS89 / UTM zone 32N
+crs_to = "EPSG:23031"            # ED50 / UTM zone 31N
+ct_from_code = "EQUINOR:3000034" # Equinor custom transformation from ETRS89 to WGS84
+ct_to_code = "EPSG:1613"         # Transformation from ED50 to WGS84
+
+points = [[273178.571, 6846980.063]]
+
+# Create a transformer object of the source crs, target crs and the transformation between them
+trans_obj = CoordTrans(crs_from, crs_to, ct_from=ct_from_code, ct_to=ct_to_code)
+
+# Get the transformation pipeline
+trans_pipeline = trans_obj.get_pipeline()
+print(f"The transformation pipeline for the two transformations:\n{trans_pipeline}\n")
+
+# Use the transformation pipeline extracted in the line above to transform the coordiantes
+transformed_coord_lst = trans_obj.transform_from_pipeline(points, trans_pipeline)
+print(f"Transformed coordinates by using the pipeline from the GeodeticEngine:\n{transformed_coord_lst}")
+```
+
+### Convert coordinates between CRSs (when no change of geodetic datum is necessary)
+```python
+from geodeticengine import CoordTrans
+
+
+crs_from = "EPSG:4326" # WGS84 geograpich 2D (lat/lon)
+crs_to = "EPSG:32631"  # WGS84 / UTM zone 31N
+
+points = [[1.97926020, 60.53835841]] # longitude first, then latitude (degree)
+
+# Create a transformer object of the source crs, target crs
+trans_obj = CoordTrans(crs_from, crs_to)
+
+# Get the transformation pipeline
+conv_pipeline = trans_obj.get_pipeline()
+print(f"The pipeline for the conversion:\n{trans_pipeline}\n")
+
+# Use the transformation pipeline extracted in the line above to convert the coordinates
+converted_coord_lst = trans_obj.transform_from_pipeline(points, conv_pipeline)
+print(f"Converted coordinates by using the pipeline from the GeodeticEngine:\n{converted_coord_lst}")
+
+```
+
+
+
+## Search code examples
+The two Python classes `CrsSearch` and `CtSearch` can be used for searching CRS and transformations, respectively. Both classes support spatial filtering to retrieve the available entities for a specific area.
+
+### Search for all bound CRSs with ``ST_WGS84_G4326`` as target CRS
+```python
+from geodeticengine import CrsSearch
+
+bound_crss = crs_query = CrsSearch(types=["bound projected","bound geographic 2D"], target_crs="ST_WGS84_G4326")
+print(bound_crss.get_entities())
+```
+
+### Search for all projected CRSs with a spatial filter
+```python
+from geodeticengine import CrsSearch
+crs_query = CrsSearch(types=["projected"], polygon_coords=[[1.278828871805691,58.07568845044884],[3.690287338364835,59.20344381800123],[2.274239008972083,60.12176489296384],[-0.1274790229401068, 59.8722761692493]], target_crs="ST_WGS84_G4326")
+print(crs_query.get_entities())
+```
+
+### Search for all available transformations between ED50 and WGS84
+```python
+from geodeticengine import CtSearch
+cts = CtSearch(types=["transformation","concatenated operation"], source_crs="ST_ED50_G4230", target_crs="ST_WGS84_G4326")
+all_available_trans = cts.get_entities()
+print(f'All availiable transformation between ED50 and WGS 84 in total:\n{all_available_trans}')
+```
