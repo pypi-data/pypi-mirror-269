@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+nrt_unittest_soft_asserts/__init__.py
+nrt_unittest_soft_asserts/soft_asserts.py
+nrt_unittest_soft_asserts.egg-info/PKG-INFO
+nrt_unittest_soft_asserts.egg-info/SOURCES.txt
+nrt_unittest_soft_asserts.egg-info/dependency_links.txt
+nrt_unittest_soft_asserts.egg-info/top_level.txt
