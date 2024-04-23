@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: saas-api
+Version: 0.1.0
+Summary: API enabling Python applications connecting to Exasol database SaaS instances and using their SaaS services
+License: MIT
+Author: Christoph Kuhnke
+Author-email: christoph.kuhnke@exasol.com
+Maintainer: Christoph Kuhnke
+Maintainer-email: christoph.kuhnke@exasol.com
+Requires-Python: >=3.8.0,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: ifaddr (>=0.2.0,<0.3.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: types-requests (>=2.31.0.6,<3.0.0.0)
+Project-URL: Documentation, https://github.io/exasol/saas-api-python
+Project-URL: Homepage, https://github.io/exasol/saas-api-python
+Project-URL: Issues, https://github.io/exasol/saas-api-python/issues
+Project-URL: Source, https://github.io/exasol/saas-api-python
+Description-Content-Type: text/markdown
+
+# SaaS API for Python
+
+API enabling Python applications connecting to Exasol database SaaS instances and using their SaaS services.
+
+The model layer of this API is generated from the OpenAPI specification in JSON format of the SaaS API https://cloud.exasol.com/openapi.json using [openapi-python-client](https://github.com/openapi-generators/openapi-python-client).
+
+A GitHub action will check each morning if the generated model layer is outdated.
+
+See
+* [User Guide](doc/user_guide/user-guide.md)
+* [Developer Guide](doc/developer_guide/developer_guide.md)
+
