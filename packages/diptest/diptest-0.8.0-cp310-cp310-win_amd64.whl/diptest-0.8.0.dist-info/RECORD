@@ -1,0 +1,14 @@
+diptest/.diptest.py.un~,sha256=DJ7VQK2JcBUq7OIB6Rkm2FnL14ktaD9rUoVZTdF6ET0,1515
+diptest/consts.py,sha256=71FTq1LiSBVF5YCjQeY-qYQzRCom2WPKg6o0bNJhol0,24020
+diptest/diptest.py,sha256=msCOzc2lX_XSF39KCj6OQtOts3Wrys__RJEi6oQYz3A,7172
+diptest/__init__.py,sha256=qWETyeGJ_y1Qde_j34hepIoB0ttN9XlYUmbkdlmvQCU,698
+diptest/lib/_diptest_core.cp310-win_amd64.pyd,sha256=vRHiBv_BkPAWKjRFZpgYZ2OvgATD0_ER1xTQUIgIJCI,138240
+diptest-0.8.0.dist-info/DELVEWHEEL,sha256=5MjciKg2iU00mo4Qn7kZMRlE9KgEUr2xL32FmzMbuGo,399
+diptest-0.8.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+diptest-0.8.0.dist-info/METADATA,sha256=Sk0YbUQfC5WXlGRjOaD4nwLBYJ_rz3uDBNBSSBa0aF4,6012
+diptest-0.8.0.dist-info/RECORD,,
+diptest-0.8.0.dist-info/WHEEL,sha256=5dfLGH-RjVIe-YrzFlBUCh0mPaHbbfYVQY02P6jLkc0,105
+diptest-0.8.0.dist-info/licenses/COPYING,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+diptest-0.8.0.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+diptest.libs/msvcp140-0387eb300fb8769eacd479faf3b1639d.dll,sha256=j1nF9clJpqZTLsG7o_4IX6jBVzVPZuyBZqCcxbfsrsg,621960
+diptest.libs/vcomp140-457aa2fd4f591b457fe275139a75b036.dll,sha256=1Js5TeEVQXazlhHDfGaev_UKpagY29X_PSIUopk2jd0,196688
