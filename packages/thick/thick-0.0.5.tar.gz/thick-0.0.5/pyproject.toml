@@ -1,0 +1,18 @@
+[project]
+name = "thick"
+description = "A Python dictionary that gets Thicker rather than longer"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "Clark Hensley", email = "clarkhensley@duck.com"}]
+maintainers = [{name = "Clark Hensley", email = "clarkhensley@duck.com"}]
+dynamic = ["version"]
+
+[project.urls]
+"Source" = "https://github.com/ClarkMyWords/thick"
+
+[tool.setuptools.dynamic]
+version = {attr = "thick.__version__"}
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

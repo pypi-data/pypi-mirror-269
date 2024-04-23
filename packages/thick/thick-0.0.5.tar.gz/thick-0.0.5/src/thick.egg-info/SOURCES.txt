@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/thick/__init__.py
+src/thick/py.typed
+src/thick/thick.py
+src/thick.egg-info/PKG-INFO
+src/thick.egg-info/SOURCES.txt
+src/thick.egg-info/dependency_links.txt
+src/thick.egg-info/top_level.txt
