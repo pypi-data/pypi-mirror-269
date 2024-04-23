@@ -1,0 +1,62 @@
+[build-system]
+requires = [ "setuptools>=42", "wheel" ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alviss"
+dynamic = ["version"]
+description = "Configuration file reader with some nifty bells and whistles added"
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE" }
+authors = [
+    { name = "Thordur Matthiasson", email = "thordurm@ccpgames.com" }
+]
+keywords = [ "config", "configuration", "json", "yaml", "tools", "ccp", "utils" ]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+
+    "License :: OSI Approved :: MIT License",
+
+    "Intended Audience :: Developers",
+
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities"
+]
+
+dependencies = [
+  "PyYAML >=6.0.1, <7",
+  "ccptools >=1.1, <2"
+]
+
+[project.optional-dependencies]
+fidelius = [
+    "fidelius >=1.0, <2"
+]
+
+[project.scripts]
+alviss-render = "alviss.cli.render.main:main"
+alviss-stubber = "alviss.cli.stubber.main:main"
+
+[project.urls]
+Homepage = "https://github.com/ccpgames/alviss"
+Documentation = "https://github.com/ccpgames/alviss/blob/main/README.md"
+Repository = "https://github.com/ccpgames/alviss.git"
+Issues = "https://github.com/ccpgames/alviss/issues"
+Changelog = "https://github.com/ccpgames/alviss/blob/main/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = {attr = "alviss.__version__"}
+
+[tool.setuptools.packages.find]
+where = [ "." ]
+exclude = [ "tests", "tests.*" ]

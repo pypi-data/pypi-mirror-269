@@ -1,0 +1,5 @@
+PyYAML<7,>=6.0.1
+ccptools<2,>=1.1
+
+[fidelius]
+fidelius<2,>=1.0
