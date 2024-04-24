@@ -1,0 +1,13 @@
+tidy/__init__.py,sha256=B_PNwWu8LHyAQQqSIPoAq_SmAEjVkJGVu8lmJR_g7XA,354
+tidy/cli.py,sha256=2hJyzbQPRtlHC0n-T6jwhGUZDbLqb_nESboUsUvI6SI,4056
+tidy/core.py,sha256=YFBo3ydj64z1eDl_vq49BIZ49qvZoqrq5o1INlEstM8,27245
+tidy/exceptions.py,sha256=K-pQaXcvlBklR7hQk3X9ETRZq8b4mZ0EsQKQtk5wQbA,759
+tidy/github.py,sha256=qA43zMfJRM-jZpyRIpyeawlO6DNuXcnWjmNxuEVs4x0,4588
+tidy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tidy/utils.py,sha256=atdVKt4Vc9dyPvwd9WvbayZmbKCrU4zVie9fl9k_Pj0,960
+tidy/version.py,sha256=-Hnm5xP5fmx7CuFrkJeoUunduVF4oEk_Fxoa7cA5Dpg,75
+git_tidy-1.2.1.dist-info/LICENSE,sha256=Eyu37TIZx5RXU0VXGeWMcho9vQSv9CNmPYThDIgErOk,1456
+git_tidy-1.2.1.dist-info/METADATA,sha256=dTJOxoFgTR4K0pryEEKfr3bOcM019rtYI0VsMcNlTOA,2748
+git_tidy-1.2.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+git_tidy-1.2.1.dist-info/entry_points.txt,sha256=1KhtqJLd_OC8zML_2NEIR1-9kt_LS6Lz3KpxW7K76Ys,160
+git_tidy-1.2.1.dist-info/RECORD,,
