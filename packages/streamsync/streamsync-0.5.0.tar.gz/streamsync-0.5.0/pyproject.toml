@@ -1,0 +1,93 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "streamsync"
+version = "0.5.0"
+description = "Streamsync helps you create performant data apps, via Python code and its built-in visual UI editor."
+authors = ["Ramiro Medina <ramiro.a.medina@gmail.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+homepage = "https://www.streamsync.cloud"
+repository = "https://www.github.com/streamsync-cloud/streamsync"
+documentation = "https://www.streamsync.cloud/getting-started.html"
+keywords = ["data apps", "gui", "ui"]
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Development Status :: 4 - Beta"
+]
+packages = [
+    { include = "streamsync", from = "src" }
+]
+include = [
+    "src/streamsync/*.py",
+    "src/streamsync/static/**/*",
+    "src/streamsync/app_templates/**/*"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9.2, <4.0"
+pydantic = ">= 2.6.0, < 3"
+fastapi = ">= 0.89.1, < 1"
+websockets = ">= 12, < 13"
+uvicorn = ">= 0.20.0, < 1"
+watchdog = ">= 3.0.0, < 4"
+pandas = {version = ">= 2.2.0, < 3", optional = true}
+pyarrow = {version = ">= 15.0.0, < 16.0.0",optional = true}
+plotly = {version = ">= 5.18.0, < 6", optional = true}
+
+
+[tool.poetry.group.build]
+optional = true
+
+[tool.poetry.group.build.dependencies]
+pandas = ">= 2.2.0, < 3"
+pyarrow = ">= 15.0.0, < 16.0.0"
+plotly = ">= 5.18.0, < 6"
+mypy = ">= 1.8.0, < 2"
+pandas-stubs = ">= 2.0.0, <3"
+pytest-asyncio = ">= 0.23.4, < 1"
+pytest = ">= 7.0.0, < 8"
+altair = ">= 5.2.0, < 6"
+httpx = ">=0.26.0, < 1"
+alfred-cli = "^2.2.7"
+polars = "^0.20.15"
+ruff = "^0.3.4"
+
+[tool.poetry.extras]
+ds = ["pandas", "pyarrow", "plotly"]
+
+[tool.poetry.scripts]
+streamsync = 'streamsync.command_line:main'
+
+
+[tool.ruff]
+exclude = [
+    "src/ui",
+		"src/streamsync/ui.py",
+    "docs",
+    "tests/e2e",
+    ".git",
+]
+
+line-length = 100
+indent-width = 4
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["I","E", "F", "C"]
+ignore = ["E501", "C901", "E712", "F401"]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+
