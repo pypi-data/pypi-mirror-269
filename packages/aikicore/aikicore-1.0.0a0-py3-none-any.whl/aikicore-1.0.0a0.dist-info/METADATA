@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: aikicore
+Version: 1.0.0a0
+Summary: The Core Library for the Spirit of Harmony
+Home-page: https://github.com/Great-Strength-Studios/aikicore
+Download-URL: https://github.com/Great-Strength-Studios/aikicore
+Author: Andrew Shatz
+Author-email: andrew@greatstrength.me
+License: BSD 3
+License-File: LICENSE
+Requires-Dist: schematics >=2.1.1
+Requires-Dist: pyyaml >=6.0.1
+

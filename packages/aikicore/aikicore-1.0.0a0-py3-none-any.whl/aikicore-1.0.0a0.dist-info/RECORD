@@ -1,0 +1,15 @@
+aikicore/__init__.py,sha256=7m-7VQP0-emK2Gcg-N-_HO_ybhB6edaACrDsh5ytKD4,2452
+aikicore/activity.py,sha256=Ja1rylVMOW93JQgZ2ZU10fGULe0ZzlAV2PFsIxj9Yyg,55
+aikicore/constants.py,sha256=IPfjH0VGYVlyStypWWyMrCsJATsZbPYLSOdNRAihXYw,334
+aikicore/containers.py,sha256=s2YvOrb45SpWinqwiigzaC1m92_KzEdrzXQtFmjlWk8,2397
+aikicore/domain.py,sha256=6vhWg6r46cfGNQkn4Q5qiz80TWAFQboGUbZNABNdSF0,395
+aikicore/error.py,sha256=LSCu2recsmvVwP24ZNrk1S98d1RmcEzBLT_TPSymouQ,1571
+aikicore/routing.py,sha256=hyy_SLe2qH0eYKRxVk_V1pQZb770ZTOf5bUK61KHEyo,5667
+aikicore/config/__init__.py,sha256=i-mSXxl-LAF1TA2YdUV8gRsnr1Y6t8dYAl6vO5tcT2A,3127
+aikicore/config/json.py,sha256=CCWJ-91ZsUNQTN4lF66rjrf5NNxpbCKmrz6KXVv-cPQ,306
+aikicore/config/yaml.py,sha256=QUv5smprss_C27iuOcSZ1ttIf02IHi3XkpRNo7ImM_k,407
+aikicore-1.0.0a0.dist-info/LICENSE,sha256=HWnAXBvymkvvJdZ5vRNsNCCqCXWmrt2PCJhFgJ-w_Cg,1509
+aikicore-1.0.0a0.dist-info/METADATA,sha256=7Je-Ro0Es184HX4AqB8QOLXD0XHKuelBbGXMEEjaaHA,394
+aikicore-1.0.0a0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aikicore-1.0.0a0.dist-info/top_level.txt,sha256=J7iC3VWD2_khzLPuRvvBUwfNNLkDdGTF-f2FpLQnEWs,9
+aikicore-1.0.0a0.dist-info/RECORD,,
