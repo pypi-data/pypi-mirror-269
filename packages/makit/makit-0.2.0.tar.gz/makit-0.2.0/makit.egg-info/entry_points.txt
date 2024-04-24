@@ -1,0 +1,3 @@
+[console_scripts]
+makeit = makeit.main:main
+makit = makeit.main:main
