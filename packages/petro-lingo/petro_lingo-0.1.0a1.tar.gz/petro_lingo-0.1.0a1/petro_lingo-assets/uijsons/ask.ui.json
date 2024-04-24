@@ -1,0 +1,76 @@
+{
+  "conda_environment": "petro-lingo",
+  "title": "Ask Question",
+  "drillholes": {
+    "label": "Drillhole data",
+    "main": true,
+    "multiSelect": false,
+    "groupType": "825424FB-C2C6-4FEA-9F2B-6CD00023D393",
+    "groupValue": "",
+	"group": "Data Selection",
+	"optional": true,
+    "enabled": true,
+    "value": "",
+    "tooltip": "Overriding the object and data selection; select a drillhole data."
+   },
+  "my_object": {
+    "label": "Object",
+    "main": true,
+    "value": "",
+	"group": "Data Selection",
+    "tooltip": "Select the object to extract the data from.",
+    "dependency": "drillholes",
+    "dependencyType": "disabled",
+    "meshType": [
+      "{48f5054a-1c5c-4ca4-9048-80f36dc60a06}",
+      "{202C5DB1-A56D-4004-9CAD-BAAFD8899406}",
+      "{6A057FDC-B355-11E3-95BE-FD84A7FFCB88}",
+      "{6832ACF3-78AA-44D3-8506-9574A3510C44}"
+    ]
+  },
+  "data": {
+    "label": "Data",
+    "main": true,
+    "dataType": "Text",
+	"group": "Data Selection",
+    "association": [ "Vertex", "Cell" ],
+    "parent": "my_object",
+    "value": "",
+    "dependency": "drillholes",
+    "dependencyType": "disabled",
+    "tooltip": "Select the Data containing the text."
+  },
+  "question": {
+    "label": "Question",
+    "main": true,
+    "value": "",
+    "tooltip": "Ask a question about the data.",
+    "group": "Question parameters"
+  },
+  "size": {
+    "label": "Answer length",
+    "main": true,
+    "value": "small",
+    "tooltip": "Select the length of the answer in terms of words.",
+    "choiceList": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "group": "Question parameters"
+  },
+  "model": {
+    "label": "Model",
+    "main": true,
+    "value": "gpt-3.5-turbo",
+    "tooltip": "Select the model to use.",
+    "choiceList": [
+      "gpt-3.5-turbo"
+    ],
+    "group": "Model parameters"
+  },
+  "monitoring_directory": "",
+  "workspace_geoh5": "",
+  "geoh5": "",
+  "run_command": "petro_lingo.drivers.driver_ask"
+}

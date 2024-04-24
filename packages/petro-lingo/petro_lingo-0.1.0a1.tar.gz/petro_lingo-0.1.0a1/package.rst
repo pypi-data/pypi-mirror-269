@@ -1,0 +1,67 @@
+Petro Lingo
+===========
+.. warning::
+
+    **Large Language Models generate a "Most Probable Response" through a statistical process influenced by your data and its quality. There is no guarantee of the accuracy or veracity of the results.**
+
+
+**Petro Lingo** is a Python package designed to integrate `Large Language Model`_\ s with `Geoscience ANALYST`_ via `geoh5py`_. This package encompasses a variety of applications leveraging these models to generate outputs, along with additional tools that facilitate ease of use.
+
+.. _Large Language Model: content/transformers.rst
+.. _Geoscience ANALYST: https://www.mirageoscience.com/mining-industry-software/geoscience-analyst/
+.. _geoh5py: https://github.com/MiraGeoscience/geoh5py
+
+
+Installation
+^^^^^^^^^^^^
+**Petro Lingo** is currently written for Python 3.10 or higher.
+
+Install **petro-lingo** from PyPI::
+
+    $ pip install petro-lingo
+
+
+Feedback
+^^^^^^^^
+Have comments or suggestions? Submit feedback through `Mira Geoscience Support portal <https://www.mirageoscience.com/technical-support>`_.
+
+Visit `Mira Geoscience website <https://mirageoscience.com/>`_ to learn more about our products
+and services.
+
+
+License
+^^^^^^^
+All rights reserved.
+
+The software and information contained herein are proprietary to, and
+comprise valuable trade secrets of, Mira Geoscience, which
+intend to preserve as trade secrets such software and information.
+This software is furnished pursuant to a written license agreement and
+may be used, copied, transmitted, and stored only in accordance with
+the terms of such license and with the inclusion of the above copyright
+notice.  This software and information or any other copies thereof may
+not be provided or otherwise made available to any other person.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Third Party Software
+^^^^^^^^^^^^^^^^^^^^
+The petro-lingo Software may provide links to third party libraries or code (collectively “Third Party Software”)
+to implement various functions. Third Party Software does not comprise part of the Software.
+The use of Third Party Software is governed by the terms of such software license(s).
+Third Party Software notices and/or additional terms and conditions are located in the
+`THIRD_PARTY_SOFTWARE.rst`_ file.
+
+.. _THIRD_PARTY_SOFTWARE.rst: docs/THIRD_PARTY_SOFTWARE.rst
+
+
+Copyright
+^^^^^^^^^
+Copyright (c) 2024 Mira Geoscience Ltd.
