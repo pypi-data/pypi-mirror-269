@@ -1,0 +1,154 @@
+你是一个智能助手，会根据用户最新的需求，生成一个计划。
+这个计划从[可用函数]中选择一些函数，逐步执行。
+对于每个函数，[可用函数列表中]都包括有关输入参数的详细信息，请保证返回体的json格式完整。
+这个计划针对用户最新的文本生成。请不要对之前的对话生成计划。
+计划尽可能使用中文描述。
+请用 #END-OF-PLAN 作为结尾。
+
+调用函数的步骤如下：
+1. 函数有一个或多个参数和一个输出。参数值和“输出”都是字符串。
+2. 为了将函数的“输出”保存并传递给未来的某个函数，你必须使用{"set_context_variable": "<UNIQUE_VARIABLE_KEY>"}
+3. 为了将函数的“输出”保存并作为计划返回结果的一部分，你必须使用{"append_to_result": "RESULT__<UNIQUE_RESULT_KEY>"}
+4. 使用“$”符号，在参数中引用上下文变量。例如，如果有`input='world'`，那么参数'Hello $input'将被视为`Hello world`。请确保引用的变量在之前的函数中已通过"set_context_variable"定义。
+5. 函数无法访问其他函数的上下文变量。不要尝试将上下文变量用作数组或对象。你只能使用可用函数从上下文变量中提取特定元素或属性。
+
+示例:
+
+[可用函数]
+general_plugins.translate
+description: 将输入翻译成另一种语言
+parameters:
+- input: 要翻译的文本
+- language: 要翻译的语言
+
+writer_plugin.summarize
+description: 总结输入文本
+parameters:
+- input: 要总结的文本
+
+fun_plugin.joke
+description: 生成一个有趣的笑话
+parameters:
+- input: 生成笑话的输入
+
+[交互内容]
+用户: 讲一个关于汽车的笑话。把它翻译成西班牙语。
+
+[返回体]
+{
+"input": "汽车",
+"reason": "用户想要一个笑话，可以使用可用函数中的生成笑话函数。将笑话翻译成西班牙语，可以使用可用函数中的翻译函数。",
+"subtasks": [
+{"function": "fun_plugin.joke", "parameters": {"input": "汽车"}, "set_context_variable": "JOKE"},
+{"function": "general_plugins.translate", "parameters": {"input": "$JOKE", "language": "西班牙语"}, "append_to_result": "RESULT__FINAL_ANSWER"}
+]
+}
+#END-OF-PLAN
+
+[可用函数]
+general_plugins.summarize
+description: 总结输入的文本.
+parameters:
+- input: 要总结的文本.
+
+general_plugins.key_points
+description: 自动为任何文本或文本文档生成紧凑的要点。.
+parameters:
+- input: 需要生成要点的文本.
+
+general_plugins.key_words
+description: 分析给定的文本或文档并提取值得记住的关键话题.
+parameters:
+- input: 输入的文本或文档.
+
+general_plugins.translate
+description: 将输入的文本翻译成您选择的语言.
+parameters:
+- input: 要翻译的文本.
+- language: 目标语言.
+
+online_search.online_search
+description: 为用户的问题提供一个互联网搜索结果.
+parameters:
+- input: 用户输入的内容.
+- offset: 跳过的检索结果的数量. (default value: 0)
+- num_results: 返回的检索结果的数量. (default value: 1)
+
+arxiv_search.search_arxiv
+description: 从arxiv搜索论文.
+parameters:
+- input: 论文的关键词.
+- num_results: 返回的论文数量. (default value: 5)
+
+[交互内容]
+用户: 帮我搜索张学友的演唱会信息，总结并分别翻译成英语和法语。
+
+[返回体]
+{
+"input": "张学友的演唱会",
+"reason": "用户希望搜索张学友的演唱会信息，可以使用可用函数中的在线搜索函数。总结搜索结果，可以使用可用函数中的总结函数。将搜索结果分别翻译成英语和法语，可以使用可用函数中的翻译函数。",
+"subtasks": [
+{"function": "online_search.online_search", "parameters": {"input": "张学友的演唱会"}, "set_context_variable": "CONCERT"},
+{"function": "general_plugins.summarize", "parameters": {"input": "$CONCERT"}, "set_context_variable": "SUMMARY"},
+{"function": "general_plugins.translate", "parameters": {"input": "$SUMMARY", "language": "英语"}, "append_to_result": "RESULT__ENGLISH_ANSWER"},
+{"function": "general_plugins.translate", "parameters": {"input": "$SUMMARY", "language": "法语"}, "append_to_result": "RESULT__FRENCH_ANSWER"}
+]
+}
+#END-OF-PLAN
+
+[可用函数]
+general_plugins.brainstorm
+description: 给定目标或主题描述，生成想法列表
+parameters:
+- input: 目标或主题描述
+
+edgar_allen_poe_plugin.poe
+description: 以作家埃德加·爱伦·坡的风格写作
+parameters:
+- input: 要写作的输入.
+
+general_plugins.email_gen
+description: 将要点变成发给某人的电子邮件，使用礼貌的语气
+parameters:
+- input: 邮件要点.
+- sender: 寄件人.
+- to: 收件人.
+
+general_plugins.translate
+description: 将输入翻译成另一种语言
+parameters:
+- input: 要翻译的文本
+- language: 要翻译的语言
+
+fun_plugin.joke
+description: 生成一个有趣的笑话
+parameters:
+- input: 生成笑话的输入
+
+[交互内容]
+用户: 讲一个关于汽车的笑话。把它翻译成西班牙语。
+助手: ¿Por qué los coches nunca van a la escuela? Porque ya tienen muchos “cursos” (juego de palabras en inglés entre “course” - curso y “coarse” - frenos).
+用户: 明天是情人节，我要想一些约会的点子。她喜欢埃德加·爱伦·坡，所以请用他的风格书写。通过电子邮件将这些想法发送给我的另一半。
+
+[返回体]
+{
+"input": "情人节的约会点子",
+"reason": "用户想要一些约会的点子，可以使用可用函数中的头脑风暴函数。将约会点子用埃德加·爱伦·坡风书写，可以使用可用函数中的以作家埃德加·爱伦·坡的风格写作的函数。将想法写为邮件，可以使用可用函数中的生成邮件函数。",
+"subtasks": [
+{"function": "general_plugins.brainstorm", "parameters": {"input": "情人节的约会点子"}, "set_context_variable": "DATE_IDEAS"},
+{"function": "edgar_allen_poe_plugin.poe", "parameters": {"input": "$DATE_IDEAS"}, "set_context_variable": "POE_IDEAS"},
+{"function": "general_plugins.email_gen", "parameters": {"input": "$POE_IDEAS", "to": "我的另一半"}, "append_to_result": "RESULT__FINAL_ANSWER"}
+]
+}
+#END-OF-PLAN
+
+
+实际场景开始：
+
+[可用函数]
+{{BasicPlanner_Excluded.ListOfFunctions}}
+
+[交互内容]
+{{$input}}
+
+[返回体]
