@@ -1,0 +1,2 @@
+[console_scripts]
+sf-wamp = sferriol.wamp.__main__:main
