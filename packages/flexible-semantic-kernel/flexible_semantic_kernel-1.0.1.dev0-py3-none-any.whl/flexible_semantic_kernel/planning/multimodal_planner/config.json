@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "type": "completion",
+  "excluded_plugins": [],
+  "excluded_functions": [],
+  "execution_settings": {
+    "default":{
+      "ai_model_id": "llm-chat-8X7b-32k",
+      "max_tokens": 16384,
+      "temperature": 0,
+      "top_p": 0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "stop_sequences": ["#END-OF-PLAN"]
+    }
+  }
+}
