@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[tool.black]
+line-length = 88
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.lint]
+select = [
+  "UP",   # pyupgrade
+  "E",    # pycodestyle
+  "W",    # pycodestyle warning
+  "NPY",  # numpy-specific rules
+]
+
+ignore = [
+  "NPY002",  # RNG -- fix soon!
+]
