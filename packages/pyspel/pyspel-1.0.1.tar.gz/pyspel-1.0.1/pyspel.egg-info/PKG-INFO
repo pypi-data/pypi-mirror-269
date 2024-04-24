@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pyspel
+Version: 1.0.1
+Summary: Python Specification Language (Pyspel)
+Home-page: https://github.com/dodaro/pyspel
+Download-URL: https://github.com/dodaro/pyspel/archive/refs/tags/v1.0.1.tar.gz
+Author: Carmine Dodaro
+Author-email: carmine.dodaro@unical.it
+License: Apache 2.0
+Keywords: answer set programming,specification language,combinatorial problems
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
+
+Pyspel is a python-based specification language that combines python programs with Answer Set Programming
