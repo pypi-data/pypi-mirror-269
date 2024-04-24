@@ -1,0 +1,166 @@
+import logging
+import os
+import sys
+import threading
+from functools import partial
+from http.server import HTTPServer as BaseHTTPServer
+from http.server import SimpleHTTPRequestHandler
+from logging import getLogger
+from typing import Any
+
+from github import Repository
+from pi_conf import Config
+
+from dpypi import cfg
+from dpypi.connections.connection import Connection
+from dpypi.connections.github_connection import GithubConnection
+from dpypi.connections.local_connection import LocalConnection
+from dpypi.web_utils import write_index_html
+from dpypi.wheel import Wheel
+
+print(cfg)
+log = getLogger(__name__)
+log.addHandler(logging.StreamHandler(sys.stdout))  ## add stdout handler
+log.setLevel(logging.DEBUG)
+
+class HandlerConfig(Config):
+    artifact_dir: str
+    html_dir: str
+    cache: bool = False
+    ## build only works for local connections
+    build: bool = False
+
+
+
+class HTTPHandler(SimpleHTTPRequestHandler):
+    """This handler uses server.base_path instead of always using os.getcwd()"""
+
+    def __init__(self, index_config : Config,  config: HandlerConfig, *args, **kwargs):
+        self.config: HandlerConfig = config
+        self.repo_2_connection = self.make_connections(index_config)
+        super().__init__(*args, **kwargs)
+
+
+    @staticmethod
+    def make_connections(cfg: dict[str, Any]) -> Connection:
+        repos = {}
+        for c in cfg["index"]:
+            cls = GithubConnection if c["uri"].startswith("https://") else LocalConnection
+            for r in c.get("repos", []):
+                repos[r] = cls(name=r, config=c)
+            
+        return repos
+        
+    @staticmethod
+    def _split_path(path: str) -> tuple[str, str]:
+        ext = os.path.splitext(path)[1]
+        if ext:
+            distribution = path.split("/")[-2]
+        else:
+            distribution = path.removesuffix("/").split("/")[-1]
+        return distribution, ext
+
+    def _make_distribution_html(
+        self,
+        repo: Repository.Repository,
+        connection: Connection,
+    ) -> str:
+        distribution = repo.name
+
+        log.debug(f"_make_distribution_html: distribution: {distribution}, {self.path}")
+        html_path = os.path.join(self.config.html_dir, distribution, "index.html")
+        if self.config.cache and os.path.exists(html_path):
+            log.debug(f"html_path cache exists at {html_path}")
+            return html_path
+
+        assets = connection.list_release_assets()
+        assets = [a for a in assets if a.name.endswith(".whl")]
+        write_index_html(
+            project=distribution,
+            release_assets=assets,
+            html_path=html_path,
+            artifact_dir=self.config.artifact_dir,
+        )
+        log.debug(f"wrote {html_path}")
+        return f"/{html_path}"
+
+    def do_GET(self):
+        """
+        Serve a GET request.
+        /shutdown : will shutdown the server
+        /simple/<distribution>/ : will serve the distribution's html page
+        /simple/<distribution>/<artifact> : will serve the artifact
+        """
+        if self.path == "/shutdown":
+            self.send_response(200)
+            self.end_headers()
+            threading.Thread(target=self.server.shutdown, daemon=True).start()
+            return
+
+        distribution, ext = self._split_path(self.path)
+        connection = self.repo_2_connection.get(distribution)
+        log.debug(
+            f"do_GET: distribution: {distribution} found={connection is not None} path={self.path}"
+        )
+        if not connection:
+            super().do_GET()
+            return
+        repo = connection.get_repo(f"{connection.name}/{distribution}")
+
+        if not ext:
+            if self.config.build:
+                repo.build()
+            self.path = self._make_distribution_html(repo, connection)
+        elif ext == ".whl":
+            w = Wheel.from_path(self.path)
+
+            asset = connection.get_release_asset(
+                repo=repo,
+                release=w.version,
+                asset_name=w.full_name,
+                dest_folder=os.path.join(self.config.artifact_dir, w.distribution_name),
+            )
+            self.path = asset.local_path
+        log.debug(f"~do_GET(): {self.path}")
+        super().do_GET()
+
+
+def serve(cfg : dict[str, Any]):
+    """
+    Start the HTTP server
+    Args:
+        cfg: dict
+            port: int (default 8083) : port to listen on
+            base_path: str (default "") : base path for the server
+            artifact_dir: str (default "web/artifacts") : directory to store artifacts
+            html_dir: str (default "web/html") : directory to store html files
+            cache: bool (default False) : Should use cached html files
+            [[index]] : list of repositories to index
+                name: str : name of the repository
+                uri: str : uri of the repository
+                access_token: str : token for the repository
+                repos : list[str] : list of repositories to index
+    """
+    port = cfg.get("port", 8083)
+    base_path = cfg.get("base_path", "")
+    conf = HandlerConfig(
+        artifact_dir=cfg.get("artifact_dir", "web/artifacts"),
+        html_dir=cfg.get("html_dir", "web/html"),
+        cache=cfg.get("cache", False),
+    )
+    
+    http_handler = partial(HTTPHandler, cfg, conf)
+    httpd = BaseHTTPServer((base_path, port), http_handler)
+    log.debug(f"HTTPServer: address{httpd.server_address}")
+    httpd.serve_forever()
+
+
+if __name__ == "__main__":
+    cfg = {
+        "port": 8083,
+        "base_path": "",
+        "artifact_dir": "web/artifacts",
+        "html_dir": "web/html",
+        "cache": False,
+    }
+    serve(cfg)
