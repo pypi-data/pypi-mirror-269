@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "rfc1751"
+version = "0.1.0"
+description = "Pure Python implementation of the binary-to-text encoding from RFC 1751, S/Key"
+
+license = "MIT"
+
+authors = [
+    "Remi Rampin <remi@rampin.org>",
+]
+
+readme = "README.md"
+
+repository = "https://github.com/remram44/python-rfc1751"
+
+keywords = ["binary", "encoding", "skey", "s/key", "rfc1751", "1751"]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Text Processing",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/remram44/python-rfc1751/issues"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

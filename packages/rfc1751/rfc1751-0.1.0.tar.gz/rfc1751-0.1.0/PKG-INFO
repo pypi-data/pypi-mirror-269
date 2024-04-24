@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: rfc1751
+Version: 0.1.0
+Summary: Pure Python implementation of the binary-to-text encoding from RFC 1751, S/Key
+Home-page: https://github.com/remram44/python-rfc1751
+License: MIT
+Keywords: binary,encoding,skey,s/key,rfc1751,1751
+Author: Remi Rampin
+Author-email: remi@rampin.org
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Text Processing
+Project-URL: Bug Tracker, https://github.com/remram44/python-rfc1751/issues
+Project-URL: Repository, https://github.com/remram44/python-rfc1751
+Description-Content-Type: text/markdown
+
+This is a Pure-Python implementation of [RFC 1751](https://www.rfc-editor.org/rfc/rfc1751).
+
+Using this small library, you can turn binary strings (for example IDs or passwords) into small sequences of short English words. For example:
+
+```
+EB33 F77E E73D 4053
+```
+
+would become:
+
+```
+TIDE ITCH SLOW REIN RULE MOT
+```
+
+The algorithm turns a 64-bit string into 6 English words and vice versa. Two bits of parity are included in the sequence of words, which allow detecting an invalid or corrupted phrase.
+
+# Usage
+
+```python
+>>> rfc1751.bytes_to_string([204, 172, 42, 237, 89, 16, 86, 190])
+'RASH BUSH MILK LOOK BAD BRIM'
+>>> rfc1751.bytes_to_string(b'\xCC\xAC\x2A\xED\x59\x10\x56\xBE')
+'RASH BUSH MILK LOOK BAD BRIM'
+>>> rfc1751.string_to_bytes('RASH BUSH MILK LOOK BAD BRIM')
+b'\xCC\xAC\x2A\xED\x59\x10\x56\xBE'
+>>> list(rfc1751.string_to_bytes('RASH BUSH MILK LOOK BAD BRIM'))
+[204, 172, 42, 237, 89, 16, 86, 190]
+```
+
