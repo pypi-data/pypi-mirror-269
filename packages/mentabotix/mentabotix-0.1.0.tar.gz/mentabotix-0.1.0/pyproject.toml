@@ -1,0 +1,35 @@
+[project]
+name = "mentabotix"
+version = "0.1.0"
+description = "A Bot control lib"
+authors = [
+    { name = "Whth", email = "88489697+Whth@users.noreply.github.com" },
+]
+dependencies = [
+    "pydantic>=2.7.0",
+    "coloredlogs>=15.0.1",
+    "bdmc >=0.1.2",
+    "pyyaml>=6.0.1",
+    "numpy>=1.26.4",
+    "pyuptech>=0.1.4a0",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "viztracer>=0.16.2",
+    "pytest>=8.1.1",
+]
