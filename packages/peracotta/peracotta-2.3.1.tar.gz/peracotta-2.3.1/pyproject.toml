@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peracotta"
+dynamic = ["version"]
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.9",
+  "Environment :: X11 Applications :: Qt",
+  "License :: OSI Approved :: MIT License",
+]
+
+dependencies = [
+  "colorama==0.4",
+  "commonmark==0.9",
+  "PyQt5",
+  "pytarallo>=2.3",
+  "python-dotenv==0.17",
+  "requests==2.25",
+  "typing-extensions>=3.7.4",
+  "urllib3>=1.26",
+  "loguru>=0.7",
+  "rich>=13.0",
+  "requests>=2.25",
+  "toml>=0.10"
+]
+
+[project.scripts]
+peracruda = "peracotta:main_cli"
+
+[project.gui-scripts]
+peracotta = "peracotta:main_gui"
+
+[tool.setuptools.package-dir]
+peracotta = "src"
+
+[tool.setuptools.package-data]
+peracotta = ["*"]
+"peracotta.scripts" = ["*"]
+"peracotta.assets" = ["*", "*/*"]
+
+[tool.setuptools.dynamic]
+version = { attr = "peracotta.constants.VERSION" }
+
+[tool.black]
+line-length = 160
