@@ -1,0 +1,11 @@
+clovers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clovers/core/adapter.py,sha256=FkstNisPtXsIc6WCOnwgWAn7L8zyVU0hMkvtnp6xZcU,4306
+clovers/core/config.py,sha256=Mx54pFFv3ry4yRvJYCRUJQqdcl6oDuEbzuzxF5GinYE,582
+clovers/core/plugin.py,sha256=n0eoiq8B4zPAVw-3DI4CSbCbIAQukuBO77Yx5yt2sjU,6592
+clovers/utils/library.py,sha256=YRdJzMx-oUfJdMvZl1pYbO_G8K0yciaGjw3m1CIILHo,2774
+clovers/utils/linecard.py,sha256=l0cDpNqxt4Bg4xOG_KGrdDS4MaPXQEzwVgkJWpnmaWQ,10961
+clovers/utils/tools.py,sha256=s6BQ4Qt_RUcz8NCJLWdBksbYMMc0yS9KbrdysCqrvKo,1884
+clovers-0.1.3.dist-info/LICENSE,sha256=v2QDhv3Xo1gkhRe1DXym6RZe_E3gSOKFi3FkKbVCVWw,1086
+clovers-0.1.3.dist-info/METADATA,sha256=l1791GkRFM920doD8cv_J98AMr7Gkkx_M88dmG6garg,10038
+clovers-0.1.3.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+clovers-0.1.3.dist-info/RECORD,,
