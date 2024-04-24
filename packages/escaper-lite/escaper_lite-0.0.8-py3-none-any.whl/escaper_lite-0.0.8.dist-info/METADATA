@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: escaper-lite
+Version: 0.0.8
+Summary: escaper_lite
+Home-page: 
+Download-URL: 
+Author: sike6054
+Author-email: sike6054@gmail.com
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.10, <3.11
+
