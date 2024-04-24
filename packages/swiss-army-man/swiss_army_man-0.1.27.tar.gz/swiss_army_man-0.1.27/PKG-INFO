@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: swiss-army-man
+Version: 0.1.27
+Summary: 
+Author: Brett Shollenberger
+Author-email: brettshollenberger@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: datetime (>=5.5,<6.0)
+Requires-Dist: fastai (>=2.7.14,<3.0.0)
+Requires-Dist: joblib (>=1.4.0,<2.0.0)
+Requires-Dist: matplotlib (>=3.8.4,<4.0.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: psycopg2 (>=2.9.9,<3.0.0)
+Requires-Dist: pyarrow (>=16.0.0,<17.0.0)
+Requires-Dist: pyhelpers (>=1.5.2,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: redis (>=5.0.3,<6.0.0)
+Requires-Dist: scikit-learn (>=1.4.2,<2.0.0)
+Requires-Dist: tqdm (>=4.66.2,<5.0.0)
+Requires-Dist: twine (>=5.0.0,<6.0.0)
+Description-Content-Type: text/markdown
+
+## Swiss Army Man
+
+The swiss army knife utility for Python
+
+```
+poetry build
+poetry run twine upload dist/*
+```
+
