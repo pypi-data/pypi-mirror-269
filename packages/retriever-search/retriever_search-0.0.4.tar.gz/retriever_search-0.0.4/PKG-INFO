@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: retriever_search
+Version: 0.0.4
+Home-page: https://github.com/GovML/retriever.git
+Author: Sidharth Kathpal
+Author-email: kathpal.sid@gmail.com
+License-File: LICENSE
+Requires-Dist: haystack-ai==2.0.0
+Requires-Dist: pymupdf==1.22.5
+Requires-Dist: sentence-transformers==2.5.1
+Requires-Dist: umap==0.1.1
+Requires-Dist: umap-learn==0.5.5
+Requires-Dist: qdrant-haystack==3.0.0
+Requires-Dist: Flask==3.0.2
+Requires-Dist: pandas==2.2.1
+Requires-Dist: torch==2.2.1
+Requires-Dist: accelerate==0.27.2
+Requires-Dist: gradio==4.21.0
