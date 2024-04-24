@@ -1,0 +1,10 @@
+README.md
+setup.py
+PokedexWal2/__init__.py
+PokedexWal2/pokemon.csv
+PokedexWal2/random_pokemon.py
+PokedexWal2.egg-info/PKG-INFO
+PokedexWal2.egg-info/SOURCES.txt
+PokedexWal2.egg-info/dependency_links.txt
+PokedexWal2.egg-info/requires.txt
+PokedexWal2.egg-info/top_level.txt
