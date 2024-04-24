@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: npgsm
+Version: 1.0.5
+Summary: A package that could help you manage your secrets in Google Secret Manager
+Home-page: https://github.com/noppGithub/npgsm
+Author: Nopporn Phantawee
+Author-email: n.phantawee@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google-cloud-secret-manager >=2.12.6
+Requires-Dist: google-cloud-logging >=3.2.5
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+# NPGSM
+A helper package to work with Google Secret Manager
+This module is able to create, update, read and delete secrets in Google Secret Manager.
+
+### Change log
+- 1.0.1: Added method to delete secret
+- 1.0.2: Updated the method to create new secret
+- 1.0.3: Added return to both success and failed of creating secret
+- 1.0.4: Bug fixes
+
