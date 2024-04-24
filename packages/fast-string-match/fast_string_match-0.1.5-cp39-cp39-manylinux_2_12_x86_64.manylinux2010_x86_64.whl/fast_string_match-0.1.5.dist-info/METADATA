@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: fast_string_match
+Version: 0.1.5
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Summary: fast string matching built in rust for python, use would be 
+from fast_closest_match import closest_match, closest_match_distance
+return closest_match(query,values)
+Requires-Python: >=3.8
