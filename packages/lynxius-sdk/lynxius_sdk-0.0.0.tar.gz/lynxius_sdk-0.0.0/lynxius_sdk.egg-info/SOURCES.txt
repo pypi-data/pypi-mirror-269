@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+setup.py
+lynxius/__init__.py
+lynxius/client.py
+lynxius_sdk.egg-info/PKG-INFO
+lynxius_sdk.egg-info/SOURCES.txt
+lynxius_sdk.egg-info/dependency_links.txt
+lynxius_sdk.egg-info/entry_points.txt
+lynxius_sdk.egg-info/not-zip-safe
+lynxius_sdk.egg-info/top_level.txt
