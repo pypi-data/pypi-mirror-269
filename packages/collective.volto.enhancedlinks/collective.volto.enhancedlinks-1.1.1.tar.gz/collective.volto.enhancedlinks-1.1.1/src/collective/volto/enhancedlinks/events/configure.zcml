@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="collective.volto.enhancedlinks"
+    >
+
+  <subscriber
+      for="collective.volto.enhancedlinks.interfaces.IEnhancedLinksEnabled
+           zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+      handler=".invalidate_cache.invalidate"
+      />
+
+</configure>

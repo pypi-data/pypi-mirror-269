@@ -1,0 +1,8 @@
+setuptools
+Plone
+plone.api
+plone.volto
+
+[test]
+plone.app.testing
+plone.restapi[test]

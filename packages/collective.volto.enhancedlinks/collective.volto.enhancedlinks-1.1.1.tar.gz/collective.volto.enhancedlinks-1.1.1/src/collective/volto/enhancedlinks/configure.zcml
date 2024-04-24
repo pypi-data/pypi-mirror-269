@@ -1,0 +1,56 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.volto.enhancedlinks"
+    >
+
+  <!-- <i18n:registerTranslations directory="locales" /> -->
+
+  <include package=".events" />
+  <include package=".restapi" />
+  <include file="behaviors.zcml" />
+  <include file="upgrades.zcml" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Volto: Enhanced Links"
+      description="Installs the collective.volto.enhancedlinks add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Volto: Enhanced Links (uninstall)"
+      description="Uninstalls the collective.volto.enhancedlinks add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      post_handler=".setuphandlers.uninstall"
+      />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="collective.volto.enhancedlinks-hiddenprofiles"
+      />
+
+  <!-- indexer -->
+  <adapter
+      factory=".indexer.enhanced_links_enabled"
+      name="enhanced_links_enabled"
+      />
+
+  <!-- Add some default metadata for summary serializer -->
+  <utility
+      factory=".adapters.JSONSummarySerializerMetadata"
+      name="enhancedlinks.summary_serializer_metadata"
+      />
+
+  <adapter
+      factory=".adapters.EnhancedLinksContentListingObject"
+      for="collective.volto.enhancedlinks.interfaces.IEnhancedLinksEnabled"
+      />
+
+</configure>

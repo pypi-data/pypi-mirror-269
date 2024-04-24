@@ -1,0 +1,175 @@
+Metadata-Version: 2.1
+Name: collective.volto.enhancedlinks
+Version: 1.1.1
+Summary: Enhance Volto text blocks to automatically append file size and mimetype to internal links
+Home-page: https://github.com/collective/RegioneER.volto.enhancedlinks
+Author: RedTurtle Technology
+Author-email: sviluppo@redturtle.it
+License: GPL version 2
+Project-URL: PyPI, https://pypi.org/project/collective.volto.enhancedlinks/
+Project-URL: Source, https://github.com/collective/RegioneER.volto.enhancedlinks
+Project-URL: Tracker, https://github.com/collective/RegioneER.volto.enhancedlinks/issues
+Keywords: Python Plone CMS
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Plone :: 5.2
+Classifier: Framework :: Plone :: 6.0
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Requires-Python: >=3.8
+Provides-Extra: test
+License-File: LICENSE.GPL
+License-File: LICENSE.rst
+
+.. This README is meant for consumption by humans and PyPI. PyPI can render rst files so please do not use Sphinx features.
+   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
+   This text does not appear on PyPI or github. It is a comment.
+
+.. image:: https://github.com/collective/RegioneER.volto.enhancedlinks/actions/workflows/plone-package.yml/badge.svg
+    :target: https://github.com/collective/RegioneER.volto.enhancedlinks/actions/workflows/plone-package.yml
+
+.. image:: https://coveralls.io/repos/github/collective/RegioneER.volto.enhancedlinks/badge.svg?branch=main
+    :target: https://coveralls.io/github/collective/RegioneER.volto.enhancedlinks?branch=main
+    :alt: Coveralls
+
+.. image:: https://codecov.io/gh/collective/RegioneER.volto.enhancedlinks/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/collective/RegioneER.volto.enhancedlinks
+
+.. image:: https://img.shields.io/pypi/v/collective.volto.enhancedlinks.svg
+    :target: https://pypi.python.org/pypi/collective.volto.enhancedlinks/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/status/collective.volto.enhancedlinks.svg
+    :target: https://pypi.python.org/pypi/collective.volto.enhancedlinks
+    :alt: Egg Status
+
+.. image:: https://img.shields.io/pypi/pyversions/collective.volto.enhancedlinks.svg?style=plastic   :alt: Supported - Python Versions
+
+.. image:: https://img.shields.io/pypi/l/collective.volto.enhancedlinks.svg
+    :target: https://pypi.python.org/pypi/collective.volto.enhancedlinks/
+    :alt: License
+
+
+==============================
+collective.volto.enhancedlinks
+==============================
+
+Enhance Volto slate blocks to automatically append file size and mimetype to internal links.
+
+Features
+--------
+
+When you link a content in slate block, if the linked object has `volto.enhanced_links_enabled` behavior enabled,
+an extra data will be appended to the block with its size and mimetype.
+
+By default the behavior is enabled for:
+
+- File
+- Image
+
+
+Installation
+------------
+
+Install collective.volto.enhancedlinks by adding it to your buildout::
+
+    [buildout]
+
+    ...
+
+    eggs =
+        collective.volto.enhancedlinks
+
+
+and then running ``bin/buildout``
+
+
+Contribute
+----------
+
+- Issue Tracker: https://github.com/RegioneEr/collective.volto.enhancedlinks/issues
+- Source Code: https://github.com/RegioneEr/collective.volto.enhancedlinks
+
+
+Compatibility
+-------------
+
+This product has been tested on:
+
+* Plone 6
+
+
+License
+-------
+
+The project is licensed under the GPLv2.
+
+
+Credits
+-------
+
+Developed with the support of:
+
+* `Regione Emilia Romagna`__
+
+
+Regione Emilia-Romagna supports the `PloneGov initiative`__.
+
+__ http://www.regione.emilia-romagna.it/
+__ http://www.plonegov.it/
+
+
+Authors
+-------
+
+This product was developed by RedTurtle Technology team.
+
+.. image:: http://www.redturtle.it/redturtle_banner.png
+   :alt: RedTurtle Technology Site
+   :target: http://www.redturtle.it/
+
+
+Contributors
+============
+
+- RedTurtle Technology, sviluppo@redturtle.it
+
+
+Changelog
+=========
+
+
+1.1.1 (2024-04-24)
+------------------
+
+- Prevent write-on-read to each tool call.
+  [cekk]
+
+
+1.1.0 (2024-03-18)
+------------------
+
+- Add tool to manage infos, removed memoize machinery
+  [mamico]
+
+1.0.1 (2024-01-30)
+------------------
+
+- Add some default metadata in summary serializer.
+  [cekk]
+- Return getObjSize and mime_type in summary serializer for brains and contents  with enhancedlinks behavior.
+  [cekk]
+
+1.0.0 (2024-01-26)
+------------------
+
+- Initial release.
+  [cekk]

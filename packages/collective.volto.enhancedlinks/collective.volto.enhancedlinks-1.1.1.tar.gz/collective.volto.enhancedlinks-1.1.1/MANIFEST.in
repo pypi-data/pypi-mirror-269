@@ -1,0 +1,12 @@
+graft src/collective
+include *.cfg
+include *.rst
+exclude tox.ini
+exclude *.txt
+exclude .gitlab-ci.yml
+exclude .coveragerc
+global-exclude *.pyc
+exclude news/.gitkeep
+exclude .installed.cfg
+exclude .mr.developer.cfg
+exclude pyvenv.cfg
