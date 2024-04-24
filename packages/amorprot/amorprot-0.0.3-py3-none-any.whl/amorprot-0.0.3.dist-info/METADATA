@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: amorprot
+Version: 0.0.3
+Summary: AmorProt
+Home-page: https://github.com/mhlee216/AmorProt
+Author: Myeonghun Lee
+Author-email: leemh216@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: numpy (>=1.19.0)
+Requires-Dist: rdkit (>=2021.09.2)
+
+AmorProt: Amino Acid Molecular Fingerprints Repurposing-based Protein Fingerprint
