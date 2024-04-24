@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "rr-connection-manager"
+version = "0.3.0"
+description = "A package to help you connect to all Registry databases"
+authors = ["andrew atterton <andrew.atterton@renalregistry.nhs.uk>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+SQLAlchemy = "^2.0.23"
+python-dotenv = "^1.0.0"
+sshtunnel = "^0.4.0"
+pyodbc = "^5.0.1"
+psycopg2 = "^2.9.9"
+pykeepass = "^4.0.6"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+test = "tests.something:main"
+
+[tool.poetry.group.dev.dependencies]
+tox = "^4.14.1"
+mypy = "^1.9.0"
+bandit = "^1.7.8"
+ruff = "^0.3.2"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.bandit]
+exclude_dirs = ["tests", ".vscode", ".tox", ".ruff_cache", ".pytest_cache", ".mypy_cache", "dist"]
