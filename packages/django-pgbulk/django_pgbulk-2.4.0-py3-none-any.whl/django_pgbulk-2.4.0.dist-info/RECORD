@@ -1,0 +1,8 @@
+pgbulk/__init__.py,sha256=n8XlFzjE76XmTexZD8R67PiyQugHPKYT1ilm3H75Hik,920
+pgbulk/core.py,sha256=3vXPprfYgRhwrLxX499iUUeuVxKvtVH4fxICYbkpUvQ,24376
+pgbulk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgbulk/version.py,sha256=dlgqAEitzqicyADmdbHRpxdR2_l8tH8pTq-E6vRGzZA,80
+django_pgbulk-2.4.0.dist-info/LICENSE,sha256=Eyu37TIZx5RXU0VXGeWMcho9vQSv9CNmPYThDIgErOk,1456
+django_pgbulk-2.4.0.dist-info/METADATA,sha256=PG8G6FpZVB0tjv6kFTIgYUa69U2jnpKZ4YHO9QKGd6A,3300
+django_pgbulk-2.4.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+django_pgbulk-2.4.0.dist-info/RECORD,,
