@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: tcp-sdk
+Version: 1.0.26
+Summary: Python SDK to query The Cross Product API.
+License: Proprietary License
+Author: Théodore Chabardès
+Author-email: theodore.chabardes@thecrossproduct.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: ipython
+Requires-Dist: ipython (>=8.23.0,<9.0.0) ; extra == "ipython"
+Requires-Dist: pyzmq (==25.1.2)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: requests-oauthlib (>=2.0.0,<3.0.0)
+Requires-Dist: slumber (>=0.7.1,<0.8.0)
+Description-Content-Type: text/markdown
+
+TCP python SDK 
+==============
+
+tcp-sdk is a Python module that provides a convenient object-oriented interface to TCP API. It acts as a wrapper around `slumber <https://github.com/samgiles/slumber>`_.
+
+QuickStart
+----------
+
+* Install tcp-sdk
+
+.. code-block:: bash
+
+  $ virtualenv my_virtualenv
+  $ source my_virtualenv/bin/activate
+  $ pip install tcp-sdk
+
+* Connect to your TCP account
+
+.. code-block:: python
+
+  import tcp
+  client = tcp.client (usermail="user@domain.org", passwd="passwd")
+  print(client.token)
+  
+Save this token to the environment variable $TCP_API_TOKEN.
+Latter calls to ``tcp.client()`` will automatically connect to TCP API using this environment variable.
+
+* Start using tcp-sdk
+
+.. code-block:: python
+
+  import tcp
+  client = tcp.client ()
+  print (client.query().auth.get())
+
+Requirements
+------------
+
+tcp-sdk requires the following modules.
+
+ * requests
+ * slumber
+ * requests-oauthlib
+
+
