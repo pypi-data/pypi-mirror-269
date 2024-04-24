@@ -1,0 +1,15 @@
+odoo/addons/mail_cc_and_to_text/README.rst,sha256=cDx4pgCVUB1-GfHdzG7ZG5b-mLhGXNnw6Lifa6tYyW8,2448
+odoo/addons/mail_cc_and_to_text/__init__.py,sha256=R3l5zcM1DHY7iqr3kt92069kmImpPafRbNSzv6p_hBE,42
+odoo/addons/mail_cc_and_to_text/__manifest__.py,sha256=0rLKWhUuaYWhRh67GlTRCvwvsyM-X-HUnfm1qOMUWPY,747
+odoo/addons/mail_cc_and_to_text/models/__init__.py,sha256=lSa4msiW3RwT_dbt9YrTPFl1y0EUDeNYbHJ4z-ywzfY,77
+odoo/addons/mail_cc_and_to_text/models/mail_mail.py,sha256=slhGKgkfr0NObokp3XeOBHfOkWT0xl4Kcs6ptsMpK3Q,1217
+odoo/addons/mail_cc_and_to_text/models/mail_message.py,sha256=wnYt7HByhoZw8-egQ_UQXR7hTKnh0o40bAYfIJCqJL8,489
+odoo/addons/mail_cc_and_to_text/models/mail_thread.py,sha256=UJ7QGJvGeP52RGwFXvAlqwvBDMZ2SUrSlfC7CsQ4u0s,2944
+odoo/addons/mail_cc_and_to_text/static/description/icon.png,sha256=3taXULJl0n0Ko0YOBXiXtspPonsicVgYojo1ghzHmuY,17607
+odoo/addons/mail_cc_and_to_text/wizard/__init__.py,sha256=31D0UTWUWZg4RkY4seaSvjA33B68y_A3kJ6c_e3tcZY,134
+odoo/addons/mail_cc_and_to_text/wizard/mail_compose_message.py,sha256=Ln3OwZyIT1ekqu9vlkX1zL_13k1iWgI5sWb6Z3iqWHQ,809
+odoo/addons/mail_cc_and_to_text/wizard/mail_compose_message_view.xml,sha256=bhy0OUvfh_UiuIPmBCZ0vRJXRHRbqCGU-FuBURMGuh8,1038
+odoo12_addon_mail_cc_and_to_text-12.0.0.1.0.dist-info/METADATA,sha256=8IvzMHmyrtWpzUWsxTIX64XLx-OJ7y-vpPOCcaqR4J8,3088
+odoo12_addon_mail_cc_and_to_text-12.0.0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+odoo12_addon_mail_cc_and_to_text-12.0.0.1.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_mail_cc_and_to_text-12.0.0.1.0.dist-info/RECORD,,

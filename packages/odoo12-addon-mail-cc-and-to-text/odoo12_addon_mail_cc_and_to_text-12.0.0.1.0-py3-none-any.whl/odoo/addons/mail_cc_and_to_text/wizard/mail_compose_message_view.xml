@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="email_compose_message_wizard_form_cc_and_to" model="ir.ui.view">
+            <field name="name">mail.compose.message.form.cc.and.to</field>
+            <field name="model">mail.compose.message</field>
+            <field name="inherit_id" ref="mail.email_compose_message_wizard_form"/>
+            <field name="arch" type="xml">
+                <field name="composition_mode" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                    <attribute name="widget">radio</attribute>
+                </field>
+                <field name="email_from" position="after">
+                    <field name="email_to" attrs="{'invisible':[('composition_mode', '!=', 'mass_mail')], 'required':[('composition_mode', '=', 'mass_mail')]}"/>
+                    <field name="email_cc" attrs="{'invisible':[('composition_mode', '!=', 'mass_mail')]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
