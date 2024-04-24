@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "tabbed-structblock"
+version = "0.0.1"
+description = "Tab UI implementation for Wagtail"
+authors = ["Eric Kersten <eric.kersten@egodesign.io>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "tabbed_structblock"}]
+
+[tool.poetry.dependencies]
+python = "^3.10.8"
+
+
+[tool.poetry.group.dev.dependencies]
+twine = "^5.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
