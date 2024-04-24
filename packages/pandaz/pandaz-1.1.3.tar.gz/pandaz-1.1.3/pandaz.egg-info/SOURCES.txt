@@ -1,0 +1,16 @@
+LICENSE
+setup.py
+pandaz/1_descriptive_stats.py
+pandaz/2_data_imputation.py
+pandaz/3_data_visualisation.py
+pandaz/4_supervised_learning.py
+pandaz/5_unsupervised_learning.py
+pandaz/6_timeseriesforecasting.py
+pandaz/7_outlier_detection.py
+pandaz/8_SMOTE.py
+pandaz/9_inferential_stats.py
+pandaz/__init__.py
+pandaz.egg-info/PKG-INFO
+pandaz.egg-info/SOURCES.txt
+pandaz.egg-info/dependency_links.txt
+pandaz.egg-info/top_level.txt
