@@ -1,0 +1,2 @@
+[console_scripts]
+fog_x = fog_x.__main__:main
