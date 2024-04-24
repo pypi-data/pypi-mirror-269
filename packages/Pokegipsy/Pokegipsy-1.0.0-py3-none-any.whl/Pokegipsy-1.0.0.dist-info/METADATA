@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Pokegipsy
+Version: 1.0.0
+Summary: Libreria para generar un pokemon aleatorio
+Author: Fernando Gonzalez
+Author-email: ferglezcc@gmail.com
+Requires-Dist: pandas
+
