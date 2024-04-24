@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dspy"
+version = "0.1.5"
+description = "Placeholder package for DSPy"
+authors = ["Tom Dörr <tomdoerr96@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.3"
+dspy-ai = "2.4.5"
+
+[[tool.poetry.packages]]
+include = "dspy_dummy"
+from = "src"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
