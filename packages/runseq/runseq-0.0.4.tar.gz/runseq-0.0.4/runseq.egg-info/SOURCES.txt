@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+runseq.py
+setup.py
+./runseq.py
+runseq.egg-info/PKG-INFO
+runseq.egg-info/SOURCES.txt
+runseq.egg-info/dependency_links.txt
+runseq.egg-info/entry_points.txt
+runseq.egg-info/top_level.txt
