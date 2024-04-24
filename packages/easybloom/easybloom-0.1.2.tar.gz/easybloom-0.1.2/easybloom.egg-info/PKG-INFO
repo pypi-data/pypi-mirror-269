@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: easybloom
+Version: 0.1.2
+Summary: Simplifies using bloom ai. Brings it down to only 1 line of code.
+Home-page: https://github.com/shuds13/pyexample
+Author: Abbott Broughton
+Author-email: abbottbroughton@icloud.com
+License: The Unlicense
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE.txt
+Requires-Dist: requests
+
+Use ezbloom.bloom_ans() to ask bloom questions like a chatbot.
+For example, to ask bloom "Whats a unicorn?" you would do this: bloom_ans("Whats a unicorn?") and you can use ezbloom.bloom_gen() togenerate the rest of a story you give it. It uses the same syntax as ezbloom.bloom_ans().
