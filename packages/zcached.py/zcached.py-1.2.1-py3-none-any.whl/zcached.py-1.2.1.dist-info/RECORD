@@ -1,0 +1,14 @@
+zcached/__init__.py,sha256=jp_4ZZQ0V1Pt0Y27sz6ETgfqSUfRiJRkqxHi_CIugiY,585
+zcached/backoff.py,sha256=jSYG1Z1k4S7vqt9FfDM-3dHI4V6A9Vk5pE_JDDeR73k,1757
+zcached/client.py,sha256=u2EqQxesb9jUUb_j7sWjaDAoUeASAtsE2LLrPzIW8Xk,7333
+zcached/connection.py,sha256=NadvK9_EimUDb1vXY19-ZJvMV4sxWEbIap1g8vEoTfo,8142
+zcached/deserializer.py,sha256=8yLrs9udOTOFQb-mOKe7P26BIu2HTWqzhV6wXGT1y3c,2739
+zcached/enums.py,sha256=S1-DZKnk4u83WVVVMVmJsZhaZbA0fqWJosZkCyboKu8,1186
+zcached/reader.py,sha256=TS3buxrZOoQdssNqHsc8e5jHG0U_tda-FaS-lx6YLPo,2073
+zcached/result.py,sha256=D0KCh2UGFrc63q3n7I62Ymd9o8TKXvODlcIHMijblqE,2274
+zcached/serializer.py,sha256=KmPu5gNunew8V8v8XeZbzH0ycpueMizLnRaktAsPKcg,3324
+zcached.py-1.2.1.dist-info/LICENSE,sha256=kWCgTndI9Qd2liEoYyYScQe4q9Y-L6wKSlk0qnujYbg,1084
+zcached.py-1.2.1.dist-info/METADATA,sha256=REv7VqvO36hPSGuiAoizKb9NzwCjtilM0oEc-qvYRk8,3727
+zcached.py-1.2.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+zcached.py-1.2.1.dist-info/top_level.txt,sha256=upl2IYFLIlkpTMRSyRFp7d-d9BHUnnErqtu4nlfQBx4,8
+zcached.py-1.2.1.dist-info/RECORD,,
