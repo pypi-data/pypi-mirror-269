@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: zacrostools
+Version: 0.1b0
+Summary: A collective of tools for the preparation of input files for ZACROS
+Home-page: https://github.com/hprats/ZacrosTools
+Download-URL: https://github.com/hprats/ZacrosTools/archive/refs/tags/v0.1-beta.tar.gz
+Author: Hector Prats
+Author-email: hpratsgarcia@gmail.com
+Keywords: python,chemistry,KMC,ZACROS
+License-File: LICENSE.txt
+Requires-Dist: pandas
+Requires-Dist: scipy
+
+# ZacrosTools
+
+ZacrosTools is a simple toolkit for the preparation of **[Zacros](https://zacros.org/)** input files. It is specially 
+useful when running scans at different pressure and temperature conditions, which may require hundreds of KMC 
+simulations.
+
+## Installation
+
+The easiest way to install ZacrosTools is by using pip:
+
+    $ pip install zacrostools
+
+Alternatively, it can also be cloned from [GitHub](https://github.com/hprats/ZacrosTools):
+
+    $ git clone https://github.com/hprats/ZacrosTools.git
+
+The only requirements are [scipy](https://scipy.org/) and [pandas](https://pandas.pydata.org/).
+
