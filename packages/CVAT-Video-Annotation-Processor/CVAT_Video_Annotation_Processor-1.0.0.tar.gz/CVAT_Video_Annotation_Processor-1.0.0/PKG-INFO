@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: CVAT_Video_Annotation_Processor
+Version: 1.0.0
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: xmltodict
