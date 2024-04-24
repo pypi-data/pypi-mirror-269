@@ -1,0 +1,5 @@
+networkx>=2.0
+rich>=10.7
+
+[xxhash]
+xxhash>=2.0.0
