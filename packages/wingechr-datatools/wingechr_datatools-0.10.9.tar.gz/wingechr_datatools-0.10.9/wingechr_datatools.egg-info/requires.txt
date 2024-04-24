@@ -1,0 +1,17 @@
+appdirs
+click
+coloredlogs
+jsonpath-ng>=1.5
+requests
+tzlocal
+unidecode
+sqlalchemy>=2.0
+sqlparse
+pyodbc
+numpy
+pandas
+chardet
+frictionless<5
+jsonschema
+openpyxl
+genson

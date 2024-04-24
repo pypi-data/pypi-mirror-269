@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: wingechr-datatools
+Version: 0.10.9
+Home-page: https://github.com/wingechr/datatools
+Author: Christian Winger
+Author-email: c@wingechr.de
+License: Public Domain
+Project-URL: Bug Tracker, https://github.com/wingechr/datatools
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: appdirs
+Requires-Dist: click
+Requires-Dist: coloredlogs
+Requires-Dist: jsonpath-ng>=1.5
+Requires-Dist: requests
+Requires-Dist: tzlocal
+Requires-Dist: unidecode
+Requires-Dist: sqlalchemy>=2.0
+Requires-Dist: sqlparse
+Requires-Dist: pyodbc
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: chardet
+Requires-Dist: frictionless<5
+Requires-Dist: jsonschema
+Requires-Dist: openpyxl
+Requires-Dist: genson
