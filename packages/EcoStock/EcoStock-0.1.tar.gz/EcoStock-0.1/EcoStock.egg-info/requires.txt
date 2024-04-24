@@ -1,0 +1,12 @@
+fastapi
+pydantic
+kaleido
+argparse
+uvicorn
+pandas
+numpy
+matplotlib
+yfinance
+plotly
+openai
+requests

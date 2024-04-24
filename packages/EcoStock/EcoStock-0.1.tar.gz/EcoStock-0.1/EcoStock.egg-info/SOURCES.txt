@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+setup.py
+EcoStock/__init__.py
+EcoStock/api.py
+EcoStock/functions.py
+EcoStock.egg-info/PKG-INFO
+EcoStock.egg-info/SOURCES.txt
+EcoStock.egg-info/dependency_links.txt
+EcoStock.egg-info/requires.txt
+EcoStock.egg-info/top_level.txt
