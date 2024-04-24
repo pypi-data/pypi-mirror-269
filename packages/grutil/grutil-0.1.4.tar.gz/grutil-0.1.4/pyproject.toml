@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "grutil"
+version = "0.1.4"
+description = ""
+authors = ["Ted Lazaros <tedlaz@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
