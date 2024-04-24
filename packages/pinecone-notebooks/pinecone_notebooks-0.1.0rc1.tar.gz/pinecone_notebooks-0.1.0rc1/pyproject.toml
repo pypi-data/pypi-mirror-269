@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "pinecone-notebooks"
+version = "0.1.0.rc1"
+packages = [
+    { include="pinecone_notebooks" },
+]
+description = "Helpers for using Pinecone with notebooks"
+authors = ["Pinecone Systems, Inc. <support@pinecone.io>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://www.pinecone.io"
+documentation = "https://pinecone.io/docs"
+keywords = ["Pinecone", "vector", "database", "cloud", "jupyter", "colab", "notebooks"]
+classifiers=[
+    "License :: OSI Approved :: Apache Software License",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Database",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
