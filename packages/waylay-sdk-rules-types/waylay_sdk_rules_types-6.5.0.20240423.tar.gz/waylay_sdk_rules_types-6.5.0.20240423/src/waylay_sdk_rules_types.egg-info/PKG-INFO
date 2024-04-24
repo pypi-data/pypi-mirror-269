@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: waylay-sdk-rules-types
+Version: 6.5.0.20240423
+Summary: Waylay rules engine Types 
+Author-email: Waylay <info@waylay.io>
+License: ISC License (ISC)
+        Copyright 2024, Waylay
+        
+        Permission to use, copy, modify, and/or distribute this software for any purpose 
+        with or without fee is hereby granted, provided that the above copyright notice 
+        and this permission notice appear in all copies.
+        
+        THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH 
+        REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND 
+        FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, 
+        OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, 
+        DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS 
+        ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+Project-URL: Homepage, https://www.waylay.io/
+Project-URL: Documentation, https://docs.waylay.io/#/api/?id=software-development-kits
+Project-URL: Repository, https://github.com/waylayio/waylay-sdk-rules-py.git
+Project-URL: Openapi Specification, https://docs.waylay.io/openapi/public/redocly/rules.html
+Keywords: Waylay rules engine,Types
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: waylay-sdk-core~=0.2.1
+Requires-Dist: waylay-sdk-rules==6.5.0.20240423
+Requires-Dist: pydantic~=2.6
+Requires-Dist: typing-extensions~=4.10
+Requires-Dist: eval-type-backport~=0.1.3; python_version < "3.10"
+Provides-Extra: dev
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: types-python-jose; extra == "dev"
+Requires-Dist: types-appdirs; extra == "dev"
+Requires-Dist: types-python-dateutil; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: pytest-httpx; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: starlette; extra == "dev"
+Requires-Dist: python-multipart; extra == "dev"
+Requires-Dist: typeguard; extra == "dev"
+Requires-Dist: pyyaml; extra == "dev"
+Requires-Dist: jsf>=0.11.1; extra == "dev"
+
+# Waylay Rules Service
+The REST api to manage rule tasks and rule templates in the Waylay platform.
+
+This Python package is automatically generated based on the 
+Waylay Rules OpenAPI specification (API version: 6.5.0)
+For more information, please visit [the openapi specification](https://docs.waylay.io/openapi/public/redocly/rules.html).
+
+It is considered an extension of the waylay-sdk-rules package, and it consists of the typed model classes for all path params, query params, body params and responses for each of the api methods in `waylay-sdk-rules`.
+
+## Requirements.
+This package requires Python 3.9+.
+
+## Installation
+Typically this package is installed when installing the [waylay-sdk-core](https://pypi.org/project/waylay-sdk/) package to enable the service's functionality.
+When the service api methods are required, waylay-sdk-rules is included in:
+- ```pip install waylay-sdk-core[rules]``` to install `waylay-sdk-core` along with only this service, or
+- ```pip install waylay-sdk-core[services]``` to install `waylay-sdk-core` along with all services.
+When the typed models are required, both waylay-sdk-rules and waylay-sdk-rules-types are included in:
+- ```pip install waylay-sdk-core[rules,rules-types]``` to install `waylay-sdk-core` along with only this service including the typed models, or
+- ```pip install waylay-sdk-core[services,services-types]``` to install `waylay-sdk-core` along with all services along with the typed models.
+
+## Usage
+
+```python
+from pprint import pprint
+
+# Import the waylay-client from the waylay-sdk-core package
+from waylay.sdk.client import WaylayClient
+from waylay.sdk.api.api_exceptions import ApiError
+
+# Intialize a waylay client instance
+waylay_client = WaylayClient.from_profile()
+
+# Note that the typed model classes for responses/parameters/... are only available when `waylay-sdk-rules-types` is installed
+from waylay.services.rules.models.version_response import VersionResponse
+try:
+    # Get Service Information
+    # calls `GET /rules/v1`
+    api_response = await waylay_client.rules.about.get(
+    )
+    print("The response of rules.about.get:\n")
+    pprint(api_response)
+except ApiError as e:
+    print("Exception when calling rules.about.get: %s\n" % e)
+```
+
+
+For more information, please visit the [Waylay API documentation](https://docs.waylay.io/#/api/?id=software-development-kits).
