@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: png-zip
+Version: 0.1.0
+Summary: Add your description here
+Author-email: ZackaryW <36378555+ZackaryW@users.noreply.github.com>
+Requires-Python: >=3.8
+Requires-Dist: click>=8.1.7
+Description-Content-Type: text/markdown
+
+# png.zip
+
+## Description
+PngZip is a Python tool designed for efficient image management within a single PNG file. It allows users to embed multiple images and their metadata within a single composite image file while supporting dynamic grid layouts.
+
+## Installation
+```bash
+pip install pngzip
+```
+## Usage
+refer to `test.py` for usage examples
+
+## CLI
+use `pngzip pack` to pack all images in the current cwd into a single png file
+
