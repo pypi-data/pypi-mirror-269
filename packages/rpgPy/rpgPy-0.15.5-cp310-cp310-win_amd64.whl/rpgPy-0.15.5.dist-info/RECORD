@@ -1,0 +1,16 @@
+rpgpy/__init__.py,sha256=570DHEzJOiKuhgcN5k2WDw6EgbC6FWSjWSTgegzIzyk,296
+rpgpy/data.c,sha256=Wqke9FkhA7Ks4gDWmUGFlceOVK_ULp5XlZXQrZXnMco,1638729
+rpgpy/data.cp310-win_amd64.pyd,sha256=4rt_eb8Mo14-vKu8teePi84gpvZq7au5MnwPlfJG6Fc,306688
+rpgpy/data.pyx,sha256=gGrETYaxGntGX7ARnSsgNfcwm_eqCPg_cIiw6Ibh5aI,16879
+rpgpy/header.py,sha256=QjutvTxUWyx_nCCR9bJXA2w3jq1cFtvlQWSy-yhP6Hs,6039
+rpgpy/metadata.py,sha256=Yl-wW6i4QnOEAIt1bAVWPv8iaQoqjQhOC8taaoCfRk8,13816
+rpgpy/nc.py,sha256=qV03X5ZdHMhb_Wbx8yciA81wQ48EogS54_VXyLDrnis,10610
+rpgpy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rpgpy/spcutil.py,sha256=Nkq-XxDP8x4V2ak3E1RSQZd_6Q411a3_iwISoqM46aE,7457
+rpgpy/utils.py,sha256=b2aHL1jVeZyrJectkNO5-BkeTsV5jcxjmIqye8XpnPI,4996
+rpgpy/version.py,sha256=-X7NYgHF1kmlhBOToLPd27CPjU34NuHaUtHGrIGyi7k,76
+rpgPy-0.15.5.dist-info/LICENSE,sha256=wrkHmBQArNWiXKDEsqXgFVUYhLiU66_zKOxFlGtvjak,1092
+rpgPy-0.15.5.dist-info/METADATA,sha256=VXDWq8NQ5Te4G2abOlIb4ApnIyEFVFj1zMIgF4Le4qc,12954
+rpgPy-0.15.5.dist-info/WHEEL,sha256=lO6CqtLHCAi38X3Es1a4R1lAjZFvN010IMRCFo2S7Mc,102
+rpgPy-0.15.5.dist-info/top_level.txt,sha256=VUTA_W02zUS5sKo50S02W_JYQ1P0XtY2JqQy6vtA88U,6
+rpgPy-0.15.5.dist-info/RECORD,,
