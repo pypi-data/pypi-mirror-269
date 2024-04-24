@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/aiogram3_triggers/__init__.py
+src/aiogram3_triggers/triggers.py
+src/aiogram3_triggers.egg-info/PKG-INFO
+src/aiogram3_triggers.egg-info/SOURCES.txt
+src/aiogram3_triggers.egg-info/dependency_links.txt
+src/aiogram3_triggers.egg-info/top_level.txt
