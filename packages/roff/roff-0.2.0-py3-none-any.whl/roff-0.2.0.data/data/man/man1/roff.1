@@ -1,0 +1,89 @@
+.\" generated with roff/v0.2.0
+.\" https://pypi.org/project/roff/0.2.0
+.\" https://github.com/utility-toolbox/roff/
+.\"
+.TH "ROFF" "1" "23 April 2024" "github.com/utility-toolbox/roff"
+.SH "NAME"
+\fBroff\fP \- python-based cli to convert markdown to the roff (man-pages) format
+.SH "SYNOPSIS"
+.br
+*
+.RS 2
+\fBroff [-h] [-v] {convert,template} ...\fP
+.RE
+*
+.RS 2
+\fBroff convert [-h] source [dest]\fP
+.RE
+*
+.RS 2
+\fBroff template [-h] dest\fP
+.RE
+.br
+.SH "DESCRIPTION"
+python-based cli to convert markdown to the roff (man-pages) format\.
+Supported Markdown Features:
+.br
+*
+.RS 2
+heading (h2-h4) (h1 is reserved for the head)
+.RE
+*
+.RS 2
+Flat Lists
+.RE
+*
+.RS 2
+code-blocks
+.RE
+*
+.RS 2
+inline-code
+.RE
+*
+.RS 2
+inline-bold
+.RE
+*
+.RS 2
+inline-italic
+.RE
+.br
+.SH "OPTIONS"
+.SS "\fBconvert\fP"
+.sp
+.RS 2
+Converts markdown to roff
+.RE
+.sp
+.sp
+\fBsource\fP:
+.br
+Markdown file that should be parsed
+.sp
+\fB[dest]\fP:
+.br
+Manpage file
+.SS "\fBtemplate\fP"
+.sp
+.RS 2
+Generates a Markdown file that you can fill
+.RE
+.sp
+.sp
+\fB-y\fP, \fB--yes\fP:
+.br
+Overwrite file if it exists
+.sp
+\fBdest\fP:
+.br
+Target file that should be generated
+.SH "BUGS"
+https://github\.com/utility-toolbox/roff/issues
+.SH "AUTHOR"
+https://github\.com/PlayerG9
+.SH "SEE ALSO"
+.SS "Organisation:"
+https://github\.com/utility-toolbox
+.SS "Repository:"
+https://github\.com/utility-toolbox/roff
