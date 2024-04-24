@@ -1,0 +1,13 @@
+brightspace-py-client/__init__.py,sha256=8W0Wr7vJHNE6qlwfuxRbLbFojStg9po2YDRpSdr3iSk,48
+brightspace-py-client/brightspaceclient.py,sha256=zYmtAd8YeeE9dOZpvpL7BRUCTlBvUeu5Bq3TqQSBt6A,1774
+brightspace-py-client/src/__init__.py,sha256=oONqaGvw0BIQEiL-kz85OSOqj7wO6xnw5ZCxxPs5W3A,146
+brightspace-py-client/src/decorators/__init__.py,sha256=PFIoDf1b8KFx3cw8hCZoi3B99PPxrWFEUyrEjPK3flY,30
+brightspace-py-client/src/decorators/decorators.py,sha256=t1xwBDZM-8P7-OrCVgX0r3nZcdtf-Rw8cCOr6GTeeUw,320
+brightspace-py-client/src/models/Response.py,sha256=3u1IMgyquIi8bv0u_Ji5H5LlEivlztZkZbS1XHCQUsQ,580
+brightspace-py-client/src/models/__init__.py,sha256=btP4Kkz2hGlf27Bzw2KuqkUBfZZ-wGHoXGbmxZLcoz0,50
+brightspace-py-client/src/utils/__init__.py,sha256=jwFl7v0fOlhAeaUpdcFGoKuzCYN4-a73hYtqZsZ3AZ0,51
+brightspace-py-client/src/utils/requestswrapper.py,sha256=45TekOyTKv4bvqDx_ViR1PfkauL0VMj6mXwVircOykw,412
+brightspacepyclient-0.0.3.dist-info/METADATA,sha256=zi3KwOtBxNAJjkaDk5tVbQC8h_fB6t3HnUgFEXfbxOk,501
+brightspacepyclient-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+brightspacepyclient-0.0.3.dist-info/top_level.txt,sha256=QmkSR27QvdOBM6XblSqgJTckGCMyUbr7iYVKl-_UQ1Q,22
+brightspacepyclient-0.0.3.dist-info/RECORD,,
