@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+paeio/__init__.py
+paeio/io.py
+paeio/parallelism.py
+paeio/path.py
+paeio/versioned.py
+paeio.egg-info/PKG-INFO
+paeio.egg-info/SOURCES.txt
+paeio.egg-info/dependency_links.txt
+paeio.egg-info/requires.txt
+paeio.egg-info/top_level.txt

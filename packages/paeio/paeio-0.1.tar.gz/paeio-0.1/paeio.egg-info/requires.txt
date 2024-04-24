@@ -1,0 +1,8 @@
+azure-identity
+azure-storage-file-datalake
+joblib
+numpy
+pandas
+pyarrow
+openpyxl
+python-dotenv
