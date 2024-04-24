@@ -1,0 +1,12 @@
+bookcache/__init__.py,sha256=NxHCvasbZvyAiiTj725GwV6LHmJkVEcCzGBZJ60tKF0,1125
+bookcache/cache.py,sha256=1JGILfiBCX8CvvEtNdEgHWhrd8mdG-aeNS6MZZNv3K4,4533
+bookcache/errors/__init__.py,sha256=ztF7GijdiVmkFv2RYDQpFnJHMATSTu_8CEzv0UD84Tc,1138
+bookcache/errors/base.py,sha256=D_mVQ5ufVPrdTQThyCB_R993X-LeJJBYfwp9OyCRRCY,86
+bookcache/errors/notFound.py,sha256=wQTvEqATmjeuq3dtLxQ1Aq7s3bQGco_bSiyomw5xtzM,81
+bookcache/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bookcache/types/CachedItem.py,sha256=63AIe30ey1quUI_OdRKUiuEfdAxcFz89-klAZ0sI3qg,1741
+bookcache/utils/runner.py,sha256=t4d7NnU2NzKuZzh4HoEFzjHX6KMZ9nxL-nNdcW4G3hA,185
+bookcache-0.0.4.dist-info/LICENCE,sha256=lKdaGYrgi5X2OPRUYW1unjsDloCOBqzKo-xlBlYt_EI,1073
+bookcache-0.0.4.dist-info/METADATA,sha256=vt54rwQAiSFFGizpXl3RsyIxsVQsVKLvLqVyHyrUdpI,970
+bookcache-0.0.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+bookcache-0.0.4.dist-info/RECORD,,
