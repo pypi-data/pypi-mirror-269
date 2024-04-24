@@ -1,0 +1,7 @@
+
+[dev]
+pytest-ckan
+git-changelog
+
+[test]
+pytest-ckan
