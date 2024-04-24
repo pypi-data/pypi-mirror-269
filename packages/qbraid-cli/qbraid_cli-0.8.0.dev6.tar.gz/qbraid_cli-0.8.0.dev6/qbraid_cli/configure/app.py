@@ -1,0 +1,69 @@
+# Copyright (c) 2024, qBraid Development Team
+# All rights reserved.
+
+"""
+Module defining commands in the 'qbraid configure' namespace.
+
+"""
+
+import typer
+
+from qbraid_cli.configure.actions import default_action
+
+# disable pretty_exceptions_show_locals to avoid printing sensative information in the traceback
+configure_app = typer.Typer(
+    help="Configure qBraid CLI options.", pretty_exceptions_show_locals=False
+)
+
+
+@configure_app.callback(invoke_without_command=True)
+def configure(ctx: typer.Context):
+    """
+    Prompts user for configuration values such as your qBraid API Key.
+    If your config file does not exist (the default location is ~/.qbraid/qbraidrc),
+    the qBraid CLI will create it for you. To keep an existing value, hit enter
+    when prompted for the value. When you are prompted for information, the current
+    value will be displayed in [brackets]. If the config item has no value, it be
+    displayed as [None].
+
+    """
+    if ctx.invoked_subcommand is None:
+        default_action()
+
+
+@configure_app.command(name="set")
+def configure_set(
+    name: str = typer.Argument(..., help="Config name"),
+    value: str = typer.Argument(..., help="Config value"),
+    profile: str = typer.Option("default", help="Profile name"),
+):
+    """Set configuration value in qbraidrc file."""
+    # pylint: disable-next=import-outside-toplevel
+    from qbraid_core.config import load_config, save_config
+
+    config = load_config()
+
+    if profile not in config:
+        config[profile] = {}
+
+    config[profile][name] = value
+
+    save_config(config)
+    typer.echo("Configuration updated successfully.")
+
+
+@configure_app.command(name="magic")
+def configure_magic():
+    """Configure qBraid IPython magic commands."""
+    # pylint: disable-next=import-outside-toplevel
+    from qbraid_core.services.environments import add_magic_config
+
+    add_magic_config()
+
+    typer.echo("Successfully configured qBraid IPython magic commands.")
+    typer.echo("You can now use the qBraid-CLI from inside a Jupyter notebook as follows:")
+    typer.echo("\n\n\t[ ] %load_ext qbraid_magic\n\n\t[ ] %qbraid")
+
+
+if __name__ == "__main__":
+    configure_app()
