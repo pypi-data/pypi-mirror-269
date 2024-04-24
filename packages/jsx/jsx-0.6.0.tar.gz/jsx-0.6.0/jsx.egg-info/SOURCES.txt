@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+jsx/__init__.py
+jsx/element.py
+jsx/errors.py
+jsx/internal.py
+jsx/renderer.py
+jsx.egg-info/PKG-INFO
+jsx.egg-info/SOURCES.txt
+jsx.egg-info/dependency_links.txt
+jsx.egg-info/requires.txt
+jsx.egg-info/top_level.txt
+tests/test_asgi_server.py
+tests/test_nested.py
+tests/test_rendering.py
