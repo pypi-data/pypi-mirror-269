@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: next-api-starter
+Version: 0.1.2
+Summary: Starter template for Next.js and FastAPI projects
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: uvicorn[standard]
+
+...
