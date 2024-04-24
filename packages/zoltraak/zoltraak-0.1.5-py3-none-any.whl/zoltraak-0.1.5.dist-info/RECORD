@@ -1,0 +1,11 @@
+zoltraak/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zoltraak/cli.py,sha256=eudzGBviyqr5k7u6OwrNLktqZPkQwkWHlk1D74xjQtw,5713
+zoltraak/converter.py,sha256=dHK-IFHwNuhx3WGFKg3OFGkKPRbvX1mPpuKzWUfhvCY,17101
+zoltraak/md_generator.py,sha256=v89n0FQlNUUPBL8IiLkUdRle-WCZqo6W9C5QZKyKq84,10617
+zoltraak/llms/claude.py,sha256=MybGTlytJ4Dps1OTGXyJwxeBFf59Gv8KczKSlElaSJs,1065
+zoltraak/llms/claude.txt,sha256=0wUOFh4onc5D7OjPFSWO22rYmc0B1FdnGgpjvzWg-qg,946
+zoltraak-0.1.5.dist-info/METADATA,sha256=wBcjkEhquRA9_nZGcKdvx6gVmoZDGRuOoQ-jtEHxTD0,75
+zoltraak-0.1.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+zoltraak-0.1.5.dist-info/entry_points.txt,sha256=JnQ0wGZcD9S7W9-ZjGXPB1ZCgnGJQz8BeMQSBmLlPAs,47
+zoltraak-0.1.5.dist-info/top_level.txt,sha256=qLERhqksBwWGqUNCxq53nco-LVd6rueXbzQBnub4LQ0,9
+zoltraak-0.1.5.dist-info/RECORD,,
