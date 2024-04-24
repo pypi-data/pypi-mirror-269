@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/diagen.egg-info/PKG-INFO
+src/diagen.egg-info/SOURCES.txt
+src/diagen.egg-info/dependency_links.txt
+src/diagen.egg-info/requires.txt
+src/diagen.egg-info/top_level.txt
+src/graphgen/__init__.py
+src/graphgen/graphgen.py
+src/graphgen/networking.py
+src/graphgen/nxgraph.py
+tests/test_ethernet.py
+tests/test_nesting.py

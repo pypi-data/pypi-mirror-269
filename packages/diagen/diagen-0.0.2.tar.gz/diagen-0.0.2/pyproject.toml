@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=42", "typing-extensions"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diagen"
+version = "0.0.2"
+authors = [
+  { name="Alex Pyattaev", email="mail@mail.com" },
+]
+description = "Technical diagram generator with autorouting on top of pydot and networkx"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "pydot",
+  "networkx",
+  "matplotlib"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/alexpyattaev/diagen"
+"Bug Tracker" = "https://github.com/alexpyattaev/diagen/issues"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+pythonpath = "src"
+addopts = "-ra -q --import-mode prepend"
+testpaths = [
+    "tests",
+]
