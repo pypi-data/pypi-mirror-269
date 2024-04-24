@@ -1,0 +1,2 @@
+[console_scripts]
+ml = sem6.programs:main
