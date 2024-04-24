@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: sentimetrics
+Version: 1.0.0
+Summary: Analyze sentiment of text
+Home-page: https://github.com/Emeson-Borges/sentimetrics
+Author: Emeson Borges
+Author-email: borges2016.leh@gmail.com
+Description-Content-Type: text/markdown
+
+# Análise de Sentimentos em C para Python
+
+Esta biblioteca oferece uma função em C para análise de sentimentos de texto em Python.
+
+## Como Funciona
+
+A função `sentimetrics(text)` analisa o sentimento de um texto fornecido como entrada. Aqui está uma visão geral de como funciona:
+
+1. **Preparação do Texto:**
+   - O texto de entrada é dividido em palavras individuais para facilitar a análise.
+
+2. **Análise de Sentimentos:**
+   - A função compara cada palavra do texto com listas de palavras positivas e negativas para determinar seu sentimento.
+   - Cada palavra positiva aumenta um contador de palavras positivas, e cada palavra negativa aumenta um contador de palavras negativas.
+
+3. **Classificação do Sentimento:**
+   - Com base na contagem de palavras positivas e negativas, a função determina o sentimento geral do texto.
+   - Se o número de palavras positivas for maior que o número de palavras negativas, o sentimento é considerado positivo.
+   - Se o número de palavras negativas for maior que o número de palavras positivas, o sentimento é considerado negativo.
+   - Se o número de palavras positivas e negativas for igual, o sentimento é considerado neutro.
+
