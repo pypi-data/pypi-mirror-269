@@ -1,0 +1,13 @@
+dpypi/__init__.py,sha256=P4wF_GcBEvmSrUVnwiccKy9fRh8D0x7cuckOeMHcpL8,168
+dpypi/connections/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dpypi/connections/connection.py,sha256=2bhb0KYvrXLWNGTcA-2McJCY-ECQ95NU3WSGCZrjgfw,27
+dpypi/connections/github_connection.py,sha256=gfByQznw5u9epEyAy1uVZyJmTvVNbFtH-4qmdVaGqJg,4767
+dpypi/connections/local_connection.py,sha256=gGQqOqKZ0ua169zUQ-XybR9d_RD2u1P0YlDTKEpiFRE,2616
+dpypi/serve.py,sha256=dwdPWYXU3z60vFHEsODe_8nb2t73wWYzxvRSOkEFJBk,5620
+dpypi/web_utils.py,sha256=Q1fYHUaf6HVJJPC_axaDyUs3w2uCMXxpW26MK8YnGmU,1077
+dpypi/wheel.py,sha256=nsCxBxsaFW_Lmb1i1HYU6ga0BECNz6O2cWtwMY3AnXM,655
+dynamic_pypi-0.6.5.dist-info/LICENSE.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dynamic_pypi-0.6.5.dist-info/METADATA,sha256=GjZi3gAOvyvI3Wb0TJyrEH-FiI2E14kXpF5DD8uSvIg,510
+dynamic_pypi-0.6.5.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+dynamic_pypi-0.6.5.dist-info/entry_points.txt,sha256=4jr_1MheINkqigQeZC6ZK6gMEt5Xs2B6zsIoIJ0UvBc,48
+dynamic_pypi-0.6.5.dist-info/RECORD,,
