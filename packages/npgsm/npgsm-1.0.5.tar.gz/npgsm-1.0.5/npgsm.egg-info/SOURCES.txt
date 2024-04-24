@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+npgsm/__init__.py
+npgsm.egg-info/PKG-INFO
+npgsm.egg-info/SOURCES.txt
+npgsm.egg-info/dependency_links.txt
+npgsm.egg-info/requires.txt
+npgsm.egg-info/top_level.txt
+npgsm/core/__init__.py
+npgsm/core/tools.py
+tests/test_create_delete.py
+tests/test_create_simple.py
+tests/test_disable_secret.py
+tests/test_list_secret.py
+tests/test_list_versions.py
+tests/test_remove_oldsecret.py
