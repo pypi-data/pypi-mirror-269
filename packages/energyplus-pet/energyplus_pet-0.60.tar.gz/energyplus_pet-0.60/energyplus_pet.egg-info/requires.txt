@@ -1,0 +1,7 @@
+pyperclip
+tksheet
+matplotlib
+numpy
+scipy
+PLAN-Tools>=0.5
+pillow>=8.0.0
