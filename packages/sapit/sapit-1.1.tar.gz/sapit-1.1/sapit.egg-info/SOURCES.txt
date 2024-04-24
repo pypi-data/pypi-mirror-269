@@ -1,0 +1,9 @@
+setup.py
+sapit/__init__.py
+sapit/main.py
+sapit.egg-info/PKG-INFO
+sapit.egg-info/SOURCES.txt
+sapit.egg-info/dependency_links.txt
+sapit.egg-info/entry_points.txt
+sapit.egg-info/requires.txt
+sapit.egg-info/top_level.txt

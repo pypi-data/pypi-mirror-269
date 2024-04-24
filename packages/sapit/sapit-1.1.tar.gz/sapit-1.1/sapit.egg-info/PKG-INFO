@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: sapit
+Version: 1.1
+Requires-Dist: pyttsx3==2.90
