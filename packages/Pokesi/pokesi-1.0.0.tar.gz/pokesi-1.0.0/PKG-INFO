@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: Pokesi
+Version: 1.0.0
+Summary: Esta libreria contiene la facilidad de generar un pokemon aleatorio como una pokebola
+Author: Bryan Salazar
+Author-email: bryan.nayb.1071@gmail.com.com
+Requires-Dist: pandas
