@@ -1,0 +1,11 @@
+custom_modal_admin/__init__.py,sha256=J-j-u0itpEFT6irdmWmixQqYMadNl1X91TxUmoiLHMI,22
+custom_modal_admin/admin.py,sha256=eFCd9P6tfG7tp2JNN22kOd2E3vxEnd--HZ75x3yemoA,442
+custom_modal_admin/apps.py,sha256=8CrJ1yYXEqFpax4liAuBitLMueCQXqiRyDcVutjduTc,109
+custom_modal_admin/static/css/jquery-ui.css,sha256=RPilbUJ5F7X6DdeTO6VFZ5vl5rO5MJnmSk4pwhWfV8A,35973
+custom_modal_admin/static/js/custom_modal_admin.js,sha256=TuoTZ4RbKve2vxB5DmyHYvEG4bZT3RTBxo7TCByIiFY,735
+custom_modal_admin/static/js/jquery-ui.min.js,sha256=5ZOjN589nye9Qlh1v50EuvmRm-ccpLxyjTgNkJ6AiqE,253747
+django_custom_modal_admin-1.0.0.dist-info/LICENSE.md,sha256=xMpanCMdZ3OIJeh67SPuAB3gh_tGKjZ-mtmppb7aijM,1095
+django_custom_modal_admin-1.0.0.dist-info/METADATA,sha256=8h_qqc3BpW5niUDTcz5R19a1Arof7iqbr6GYU42KZ2I,4891
+django_custom_modal_admin-1.0.0.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+django_custom_modal_admin-1.0.0.dist-info/top_level.txt,sha256=4CByy3FV9JSVAiaNHEkwHh3HW_AWz0W2cHQM5EsYvYY,19
+django_custom_modal_admin-1.0.0.dist-info/RECORD,,
