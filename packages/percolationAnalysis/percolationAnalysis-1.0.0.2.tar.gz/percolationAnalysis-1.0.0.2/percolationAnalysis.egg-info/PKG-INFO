@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: percolationAnalysis
+Version: 1.0.0.2
+Summary: Identifying non-subjective thresholds for scalar indicators of coherent structures with percolation analysis
+Home-page: https://github.com/Phoenixfire1081/PercolationAnalysis
+Author: Abhishek Harikrishnan
+Author-email: abhishek.harikrishnan@fu-berlin.de
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Identifying non-subjective thresholds for scalar indicators of coherent structures with percolation analysis
+
+For a complete description of the code see https://github.com/Phoenixfire1081/PercolationAnalysis.
+
+
+
+
