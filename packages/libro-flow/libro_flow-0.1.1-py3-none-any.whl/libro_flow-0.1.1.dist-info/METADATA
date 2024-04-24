@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: libro-flow
+Version: 0.1.1
+Summary: libro flow
+Author-email: brokun <brokun0128@gmail.com>, sunshinesmilelk <1176136681@qq.com>, zhanba <c5e1856@gmail.com>
+Requires-Python: >=3.10
+Requires-Dist: ipywidgets>=5.5.6
+Requires-Dist: jupyter-client>=7.4.8
+Requires-Dist: nbclient>=0.5.11
+Requires-Dist: nbformat>=5.5.0
+Requires-Dist: pydantic>=2.6.4
+Description-Content-Type: text/markdown
+
+# libro-flow
