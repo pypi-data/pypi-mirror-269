@@ -1,0 +1,11 @@
+README.md
+setup.py
+excsv/__init__.py
+excsv/__main__.py
+excsv/cli.py
+excsv.egg-info/PKG-INFO
+excsv.egg-info/SOURCES.txt
+excsv.egg-info/dependency_links.txt
+excsv.egg-info/entry_points.txt
+excsv.egg-info/requires.txt
+excsv.egg-info/top_level.txt
