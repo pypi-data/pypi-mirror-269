@@ -1,0 +1,11 @@
+pyspde/__init__.py,sha256=fx9thgByj009Q6f5E20H5QdiQRfX-0_WxuPE_mqAh3w,91
+pyspde/anisotropy.py,sha256=vFoosgs8DnPBASbm9O7ys-BxLptkuLKB0NnNrjNIeac,10145
+pyspde/grid.py,sha256=S-0-0RGICQm-U5lURQp6rZAHI5h2BKWn6U7X4fp725U,4826
+pyspde/neighbours.py,sha256=aznX42DGidXTD9dKHQX33XPDUfo1bGCvpBMTgQa9gGk,3606
+pyspde/spde.py,sha256=SJGPMVUnZN7r0hMMfxQlUKUtLeS5nxNHFq88QnV_q_M,10608
+pyspde/utils.py,sha256=dRxEfDs4bUxGRMt_m_bOtuNFG_KczJtcOWgoysfu-1I,4908
+pyspde-0.0.5.dist-info/LICENSE,sha256=Xf0VJ0nfnWnwUTSfTgwzvISXIDPpUIFehOiGDziGW_Y,1085
+pyspde-0.0.5.dist-info/METADATA,sha256=qufUKmNfHFy2jXFmG0JU0JSyMnoz1R0J4Ywx9mv69s4,1733
+pyspde-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pyspde-0.0.5.dist-info/top_level.txt,sha256=WSA9tqUmWW-vSxI7F1SaCaZwSf3Ndi3RalfR1E5MKqA,7
+pyspde-0.0.5.dist-info/RECORD,,
