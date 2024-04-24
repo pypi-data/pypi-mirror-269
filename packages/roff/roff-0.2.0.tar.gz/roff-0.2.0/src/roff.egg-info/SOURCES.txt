@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+docs/roff.1
+src/roff/__init__.py
+src/roff/__main__.py
+src/roff/convert.py
+src/roff.egg-info/PKG-INFO
+src/roff.egg-info/SOURCES.txt
+src/roff.egg-info/dependency_links.txt
+src/roff.egg-info/entry_points.txt
+src/roff.egg-info/requires.txt
+src/roff.egg-info/top_level.txt
+src/roff/__cli__/__init__.py
+src/roff/__cli__/convert.py
+src/roff/__cli__/template.py

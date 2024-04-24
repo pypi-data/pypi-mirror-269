@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: roff
+Version: 0.2.0
+Summary: python-based cli to convert markdown to the roff (man-pages) format
+Home-page: https://github.com/utility-toolbox/roff
+Author: PlayerG9
+License: MIT
+Project-URL: Organisation Github, https://github.com/utility-toolbox
+Project-URL: Homepage, https://github.com/utility-toolbox/roff/
+Project-URL: Bug Tracker, https://github.com/utility-toolbox/roff/issues
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: markdown-it-py
+
+# roff
+python-based cli to convert markdown to the roff (man-pages) format
+
+<!-- TOC -->
+* [roff](#roff)
+  * [Installation](#installation)
+  * [Usage/Execution](#usageexecution)
+  * [Example](#example)
+<!-- TOC -->
+
+## Installation
+
+[![PyPI - Version](https://img.shields.io/pypi/v/roff)
+](https://pypi.org/project/roff/)
+
+```shell
+pip install roff
+```
+
+> Tip: after the installation you should be able to see [roff's manpage](https://github.com/utility-toolbox/roff/blob/main/docs/roff.1.md) with `man roff` 
+
+## Usage/Execution
+
+```shell
+roff --help
+roff template command.1.md
+roff convert command.1.md
+man ./command.1
+```
+
+## Example
+
+````markdown
+roff(1) -- python-based cli to convert markdown to the roff (man-pages) format
+=============================================
+
+## SYNOPSIS
+
+- `roff [-h] [-v] {convert,template} ...`
+- `roff convert [-h] source [dest]`
+- `roff template [-h] dest`
+
+## DESCRIPTION
+
+python-based cli to convert markdown to the roff (man-pages) format.  
+nextline
+
+  indented
+
+> blockquote
+
+```python
+import roff
+
+with roff.Converter():
+    print("Hey")
+```
+
+## OPTIONS
+
+### `convert`
+
+* `source`:
+Markdown file that should be parsed
+
+* `[dest]`:
+Manpage file
+
+### `template`
+
+* `dest`:
+Target file that should be generated
+
+## BUGS
+
+**bold**, _italic_, [link](#BUGS)
+
+## AUTHOR
+
+https://github.com/PlayerG9
+
+## SEE ALSO
+
+https://github.com/utility-toolbox/roff
+````
+
+![example-manpage](https://github.com/utility-toolbox/roff/blob/main/README.assets/example-manpage.png?raw=true)
