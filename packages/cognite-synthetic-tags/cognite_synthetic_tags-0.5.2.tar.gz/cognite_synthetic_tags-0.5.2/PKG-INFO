@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cognite_synthetic_tags
+Version: 0.5.2
+Summary: Framework for working easily with tags, synthetic and regular, from Cognite Data Fusion (CDF) API.
+License: Apache-2.0
+Author: Fran Hrzenjak
+Author-email: fran.hrzenjak@cognite.com
+Requires-Python: >=3.9,<4
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cognite-sdk[pandas] (>7,<8)
