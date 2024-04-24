@@ -1,0 +1,266 @@
+[
+  {
+    "key": "area-alt",
+    "description": "Los elementos interactivos <area> deben tener un texto alternativo alguno de los siguientes metodos: title, aria-label, aria-labelledby o alt."
+  },
+  {
+    "key": "aria-allowed-attr",
+    "description": "Un atributo de rol ARIA se puede agregar a los elementos HTML para indicar a las tecnologías de asistencia que lo presenten como algo diferente a su tipo original. Por ejemplo, un elemento <a> con role=button se mostrará como un botón en lugar de un enlace. Esta regla verifica el uso correcto de atributos permitidos con cada función ARIA. "
+  },
+  {
+    "key": "aria-braille-equivalent",
+    "description": "El atributo aria-braillelabel debe ser utilizado exclusivamente en elementos que poseen un nombre accesible. El propósito de la propiedad aria-braillelabel es sobrescribir la manera en que las tecnologías de asistencia localizan y expresan el nombre accesible de un elemento en Braille."
+  },
+  {
+    "key": "aria-command-name",
+    "description": "Los elementos como botones, links y menuitems deben tener un texto discernible que describa claramente el destino, propósito, función o acción para los usuarios de lectores de pantalla. Por ejemplo un elemento <a>  que muestra un icono de un parlante tachado, debería incluir texto que diga Mute, y no solo la imagen sin texto."
+  },
+  {
+    "key": "aria-conditional-attr",
+    "description": "Algunos atributos ARIA sólo están permitidos en un elemento en determinadas condiciones. El atributo aria-checked - No se debe utilizar en un elemento HTML de tipo checkbox. Los atributos aria-posinset, aria-setsize, aria-expanded y aria-level son condicionales cuando se utilizan en una fila. Estos atributos solo pueden usarse cuando la fila es parte de un treegrid"
+  },
+  {
+    "key": "aria-deprecated-role",
+    "description": "El uso de roles WAI-ARIA obsoletos es perjudicial para la accesibilidad. No serán reconocidos ni procesados correctamente por lectores de pantalla y otras tecnologías de asistencia. Utilizar estos roles significa que no todos podrán acceder a información esencial."
+  },
+  {
+    "key": "aria-hidden-body",
+    "description": "Evita usar <body aria-hidden=true> ya que esto oculta todo el contenido del documento y lo hace inaccesible para la tecnología de asistencia."
+  },
+  {
+    "key": "aria-hidden-focus",
+    "description": "Asegura que los elementos que contengan la propiedad aria-hidden no sean del tipo focusable. Un elemento es focusable si puede recibir enfoque a través de scripts, interacción con el mouse o navegación por pestañas del teclado"
+  },
+  {
+    "key": "aria-input-field-name",
+    "description": "Garantiza que todos los campos de input ARIA tengan asignado un nombre accesible. Un input field ARIA es un control personalizado que permite a los usuarios proporcionar un input de texto,  de manera que las tecnologías de asistencia puedan asociarla con un objeto de interfaz específico"
+  },
+  {
+    "key": "aria-meter-name",
+    "description": "Los elementos de que contengan role=meter deben tener un texto discernible que describa claramente el destino, el propósito, la función o la acción para los usuarios de lectores de pantalla."
+  },
+  {
+    "key": "aria-progressbar-name",
+    "description": "Para cada elemento con role=progressbar, se debe proporcionar un nombre accesible utilizando uno de los siguientes métodos: title, aria-label o aria-labelledby"
+  },
+  {
+    "key": "aria-prohibited-attr",
+    "description": "No todas las combinaciones rol-atributo ARIA son válidas. Esta regla comprueba que ninguno de los atributos utilizados con un rol en particular esté listado como prohibido para ese rol en la última versión de WAI-ARIA. Los atributos aria-label y aria-labelledby están prohibidos en los roles presentation y none, así como en roles tipo texto como code, insertion, strong, etc."
+  },
+  {
+    "key": "aria-required-attr",
+    "description": "Los roles de widget ARIA deben tener atributos apropiados que describan el estado o las propiedades del elemento. Por ejemplo, un elemento <a> con role=button se debe tratar como un botón, no como un enlace."
+  },
+  {
+    "key": "aria-required-children",
+    "description": "Los atributos aria-label y aria-labelledby están prohibidos en los roles presentation y none, así como en roles tipo texto como code, insertion, strong, etc."
+  },
+  {
+    "key": "aria-required-parent",
+    "description": "Garantiza que los elementos con un rol ARIA que requieren roles padre están contenidos por ellos."
+  },
+  {
+    "key": "aria-roles",
+    "description": "Garantiza que todos los elementos con un atributo de rol utilicen un valor válido ya que cuando una tecnología de asistencia encuentra un elemento cuyo atributo de rol tiene un valor no válido, puede ignorar el elemento o responder de manera inesperada. "
+  },
+  {
+    "key": "aria-toggle-field-name",
+    "description": "Garantiza que cada elemento toggle como los checkbox, menuitemcheckbox, menuitemradio, radio y switch tengan un nombre accesible "
+  },
+  {
+    "key": "aria-tooltip-name",
+    "description": "Para cada elemento con role=tooltip, proporcione un nombre accesible. Los ARIA tooltips son ventanas emergentes que proporcionan texto descriptivo para un elemento de la interfaz. Normalmente, el tooltip aparece cuando el mouse se coloca sobre el elemento o cuando el elemento recibe el enfoque."
+  },
+  {
+    "key": "aria-valid-attr-value",
+    "description": "Garantiza que todos los atributos ARIA tengan valores válidos, de lo contrario cuando una tecnología de asistencia encuentra un elemento con un valor no válido para un atributo ARIA, puede ignorar el atributo o responder de manera inesperada. "
+  },
+  {
+    "key": "aria-valid-attr",
+    "description": "Los valores válidos para el atributo aria-valid-attr-value son true o false. Si el valor es true, significa que el atributo ARIA tiene un valor válido. Si el valor es false, significa que el atributo ARIA tiene un valor inválido o que no corresponde al tipo de valor esperado"
+  },
+  {
+    "key": "blink",
+    "description": "Blink es un término que se usa para describir el parpadeo rápido y repetido de un elemento en una página web, como un texto o una imagen. Los elementos <blink> no se deben utilizar más ya que están deprecados."
+  },
+  {
+    "key": "button-name",
+    "description": "Se debe proporcionar un nombre accesible para los elementos button, ya que los lectores de pantalla utilizan esta información para describir la funcionalidad del mismo."
+  },
+  {
+    "key": "bypass",
+    "description": "Proporcionar un mecanismo que permita a los usuarios evitar bloques de texto repetidos utilizando su teclado."
+  },
+  {
+    "key": "color-contrast",
+    "description": "Garantiza que los elementos web que contienen texto tengan el suficiente contraste con el background como para que su contenido pueda ser leido con facilidad."
+  },
+  {
+    "key": "definition-list",
+    "description": "Garantiza que los elementos <dl> estén estructurados correctamente"
+  },
+  {
+    "key": "dlitem",
+    "description": "Garantiza que los elementos <dt> y <dd> estén contenidos en un <dl>"
+  },
+  {
+    "key": "document-title",
+    "description": "Garantiza que cada documento HTML contenga un elemento <title> no vacío"
+  },
+  {
+    "key": "duplicate-id-aria",
+    "description": "Garantiza que cada elemento referenciado por una etiqueta o un atributo ARIA tenga un valor de id único, ya que las tecnologías de asistencia solo reconocen el primer elemento que coincide con el id y ignoran los demás."
+  },
+  {
+    "key": "form-field-multiple-labels",
+    "description": "Garantiza que cada campo de formulario tenga solo una etiqueta asociada, ya sea de forma implícita, envolviendo el campo con la etiqueta <label>, o explícita usando el atributo for con el id del campo."
+  },
+  {
+    "key": "frame-focusable-content",
+    "description": "Establece que los elementos <frame> y <iframe> no deben tener un atributo tabindex negativo (por ejemplo, tabindex=-1), ya que esto impediría que los usuarios que navegan con el teclado puedan acceder al contenido enfocable dentro de ellos."
+  },
+  {
+    "key": "frame-title-unique",
+    "description": "Garantiza que los elementos <iframe> y <frame> deben tener un atributo title que describa el propósito y el contenido de cada sección, y que estos títulos deben ser únicos dentro de la página"
+  },
+  {
+    "key": "frame-title",
+    "description": "Garantiza que los elementos <iframe> y <frame> tengan un nombre accesible"
+  },
+  {
+    "key": "html-has-lang",
+    "description": "Garantiza que cada documento HTML tenga un atributo lang que indique el idioma principal de la pagina."
+  },
+  {
+    "key": "html-lang-valid",
+    "description": "Garantiza que el atributo lang del elemento <html> tenga un valor válido"
+  },
+  {
+    "key": "html-xml-lang-mismatch",
+    "description": "Garantiza tener un atributo lang y un atributo xml:lang que indiquen el mismo idioma principal de la página."
+  },
+  {
+    "key": "image-alt",
+    "description": "Garantiza que los elementos <img> proporcionen un texto alternativo que describa el contenido y la función de la imagen."
+  },
+  {
+    "key": "input-button-name",
+    "description": "Garantiza que los elementos <input> tengan atributos type que indiquen el tipo de botón tal como button, reset o submit, para indicar proposito y funcioón del botón."
+  },
+  {
+    "key": "input-image-alt",
+    "description": "Garantiza que los elementos <input type=image> tengan texto alternativo"
+  },
+  {
+    "key": "label",
+    "description": "Garantiza que cada elemento formulario tenga una etiqueta <label>  que indique su propósito y funcionalidad."
+  },
+  {
+    "key": "label-content-name-mismatch",
+    "description": "Garantiza que los elementos etiquetados a través de su contenido deben tener su texto visible como parte de su nombre accesible."
+  },
+  {
+    "key": "link-in-text-block",
+    "description": "Garantiza que los enlaces en los elementos <a> tengan un estilo o un contraste que los distinga visualmente del texto circundante"
+  },
+  {
+    "key": "link-name",
+    "description": "Garantiza que los enlaces tengan texto discernible"
+  },
+  {
+    "key": "list",
+    "description": "Garantiza que las listas estén estructuradas correctamente"
+  },
+  {
+    "key": "listitem",
+    "description": "Garantiza que los elementos <li> se utilicen semánticamente"
+  },
+  {
+    "key": "marquee",
+    "description": "Garantiza que no se utilicen elementos <marquee> ya que se ha declarado obsoleto en HTML5, se recomienda evitarlo."
+  },
+  {
+    "key": "meta-refresh",
+    "description": "El meta-refresh puede tener efectos negativos en la accesibilidad web, ya que puede provocar confusión, desorientación o mareos en algunos usuarios, especialmente en aquellos con discapacidades visuales, cognitivas o de movilidad."
+  },
+  {
+    "key": "meta-viewport",
+    "description": "Garantiza que <meta name=viewport> no deshabilite la escala y el zoom del texto."
+  },
+  {
+    "key": "nested-interactive",
+    "description": "Garantiza que los controles interactivos no estén anidados, ya que no siempre los anuncian los lectores de pantalla o pueden causar problemas de enfoque para las tecnologías de asistencia."
+  },
+  {
+    "key": "no-autoplay-audio",
+    "description": "Garantiza que los elementos <video> o <audio> no reproduzcan automáticamente el audio durante más de 3 segundos sin un mecanismo de control para detener o silenciar el audio."
+  },
+  {
+    "key": "object-alt",
+    "description": "Se debe proporcionar un texto alternativo para los elementos <object> que contienen contenido no textual, como imágenes, vídeos, audio o aplicaciones."
+  },
+  {
+    "key": "p-as-heading",
+    "description": "Asegúrese de que el texto en negrita, cursiva y tamaño de fuente no se utiliza para el estilo de los elementos <p> como un encabezado"
+  },
+  {
+    "key": "role-img-alt",
+    "description": "Garantiza que los elementos [role=img] tengan texto alternativo"
+  },
+  {
+    "key": "scrollable-region-focusable",
+    "description": "Asegúrese de que los elementos con contenido desplazable sean accesibles por teclado."
+  },
+  {
+    "key": "select-name",
+    "description": "Garantiza que el elemento de selección tenga un nombre accesible"
+  },
+  {
+    "key": "server-side-image-map",
+    "description": "Se deben reemplazar los mapas de imágenes del lado del servidor (elementos <img ismap>) con mapas de imágenes del lado del cliente (elementos <img usemap>)."
+  },
+  {
+    "key": "svg-img-alt",
+    "description": "Garantiza que los elementos <svg> con función img, graphics-document o graphics-symbol tengan un texto accesible"
+  },
+  {
+    "key": "table-fake-caption",
+    "description": "Se debe utilizar la etiqueta <caption> para definir un título breve que describa el contenido de la tabla."
+  },
+  {
+    "key": "td-has-header",
+    "description": "Garantizar que cada celda de datos no vacía de una <tabla> mayor de 3 por 3 tenga uno o más encabezados."
+  },
+  {
+    "key": "td-headers-attr",
+    "description": "Garantizar que cada celda de una tabla que utilice el atributo headers haga referencia únicamente a otras celdas de esa tabla."
+  },
+  {
+    "key": "th-has-data-cells",
+    "description": "Asegúrese de que los elementos <th> y los elementos con role=columnheader/rowheader deben estar vinculados a una celda de datos correspondiente."
+  },
+  {
+    "key": "valid-lang",
+    "description": "Garantiza que los atributos lang tengan valores válidos"
+  },
+  {
+    "key": "video-caption",
+    "description": "Garantiza que los elementos <video> tengan subtítulos"
+  },
+  {
+    "key": "aria-allowed-role",
+    "description": "El rol ARIA asignado a un elemento debe ser apropiado para ese elemento"
+  },
+  {
+    "key": "duplicate-id",
+    "description": "Cada elemento estático debe tener un id único"
+  },
+  {
+    "key": "landmark-one-main",
+    "description": "Se debe proporcionar un ARIA landmark y el contenido del sitio web debe estar contenido dentro del mismo"
+  },
+  {
+    "key": "region",
+    "description": "El contenido de una pagina web debe estar contenido por ARIA landmarks"
+  }
+]

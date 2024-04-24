@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<body class="blue-grey lighten-4 blue-grey-text text-darken-4">
+    <nav class="blue-grey darken-4 blue-grey-text text-lighten-4">
+        <div class="valign-wrapper container margin-lr-1">
+            <h5>Reportar incidencia</h5>
+        </div>
+    </nav>
+    <main class="margin-tb-1">
+        <div class="row valign-wrapper">
+            <div class="input-field col s12">
+                <input id="last_name" type="text">
+                <label for="last_name">Titulo de la incidencia</label>
+            </div>
+        </div>
+        <div class="row valign-wrapper">
+            <div class="input-field col s8">
+                <select>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label>Proyecto</label>
+            </div>
+            <div class="input-field col s2">
+                <select>
+                    <option class="blue-text" value="1">1 - Bloqueante</option>
+                    <option class="blue-grey-text text-darken-4" value="2">2 - Alta </option>
+                    <option class="blue-grey-text text-darken-4" value="3">3 - Media </option>
+                    <option class="blue-grey-text text-darken-4" value="4">4 - Baja</option>
+                </select>
+                <label>Severidad</label>
+            </div>
+            <div class="input-field col s2">
+                <select>
+                    <option value="1">1 - Alta</option>
+                    <option value="2">2 - Media</option>
+                    <option value="3">3 - Baja</option>
+                    <option value="4">4 - Muy baja</option>
+                    <option value="5">5 - Sin priorizar</option>
+                </select>
+                <label>Prioridad</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <label class="margin-tb-1 blue-grey-text text-darken-4">Descripción:</label>
+                <div class="area rounded-small">
+                    <textarea class="mytextarea blue-grey-text text-darken-4"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="textarea1"
+                    class="materialize-textarea blue-grey-text text-darken-4"></textarea>
+                <label for="textarea1">Comentarios adicionales</label>
+                <form>
+                    <div class="file-field">
+                        <div class="btn blue-grey darken-4 blue-grey-text text-lighten-4 tooltipped"
+                            data-position="botton" data-tooltip="Adjuntar evidencia">
+                            <i class="material-icons">attach_file</i>
+                            <input type="file" multiple>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path" type="text" placeholder="Upload one or more files" value="C:\Users\Joel\Pybot\screenshots\PNG_20230918103500.png">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="margin-tb-1 row right">
+            <div class="col s12">
+                <button class="waves-effect blue-grey darken-4 blue-grey-text text-lighten-4 btn" onClick="()">
+                    <i class="material-icons left">close</i>cancelar
+                </button>
+                <button class="waves-effect blue-grey darken-4 blue-grey-text text-lighten-4 btn" title="Guardar"
+                    onClick="asdad()">
+                    <i class="material-icons right">send</i>Enviar
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
