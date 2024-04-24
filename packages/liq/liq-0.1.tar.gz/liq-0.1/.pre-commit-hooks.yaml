@@ -1,0 +1,6 @@
+- id: limit-image-quality
+  name: Limit Image Quality
+  description: Limit the accepted quality of JPEG images
+  language: docker_image
+  entry: registry.gitlab.com/qteal/oss/liq/liq:latest
+  types: [jpeg]
