@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+dkits/__init__.py
+dkits/info.py
+dkits/json.py
+dkits/path.py
+donetools.egg-info/PKG-INFO
+donetools.egg-info/SOURCES.txt
+donetools.egg-info/dependency_links.txt
+donetools.egg-info/top_level.txt
