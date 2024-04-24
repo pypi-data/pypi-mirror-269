@@ -1,0 +1,9 @@
+numpy
+ipython
+jupyter_client
+metakernel
+
+[testing]
+tox
+pytest
+pytest-cov
