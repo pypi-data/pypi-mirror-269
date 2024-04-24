@@ -1,0 +1,15 @@
+AUTHORS
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/ansys/api/platform/instancemanagement/VERSION
+src/ansys/api/platform/instancemanagement/__init__.py
+src/ansys/api/platform/instancemanagement/py.typed
+src/ansys/api/platform/instancemanagement/v1/product_instance_manager.proto
+src/ansys_api_platform_instancemanagement.egg-info/PKG-INFO
+src/ansys_api_platform_instancemanagement.egg-info/SOURCES.txt
+src/ansys_api_platform_instancemanagement.egg-info/dependency_links.txt
+src/ansys_api_platform_instancemanagement.egg-info/entry_points.txt
+src/ansys_api_platform_instancemanagement.egg-info/requires.txt
+src/ansys_api_platform_instancemanagement.egg-info/top_level.txt
