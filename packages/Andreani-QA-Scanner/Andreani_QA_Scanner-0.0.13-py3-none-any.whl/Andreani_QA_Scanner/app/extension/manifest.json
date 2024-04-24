@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Primera extension",
+  "version": "1.0",
+  "description": "Esta es mi primera extension de Chrome",
+  "icons": {
+    "128": "logo_pybot.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "webNavigation",
+        "webRequest",
+        "tabs",
+        "contextMenus",
+        "downloads",
+        "notifications",
+        "http://*/*",
+        "https://*/*",
+        "unlimitedStorage",
+        "debugger"
+    ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "Axe.js",
+        "Scraper.js",
+        "Recorder.js",
+        "Utils.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ]
+}
