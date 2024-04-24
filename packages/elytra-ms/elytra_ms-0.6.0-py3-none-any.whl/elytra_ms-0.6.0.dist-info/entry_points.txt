@@ -1,0 +1,3 @@
+[console_scripts]
+elytra-authenticate = elytra.scripts.authenticate:main
+elytra-device-code-auth = elytra.scripts.auth_device_code:main
