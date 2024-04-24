@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: LnT_HR_AI
+Version: 0.0.2
+Summary: Data analysis for Attrition predictions
+Author: Radeesh
+Author-email: <vpsrad2002@gmail.com>
+Keywords: python,video,stream,video stream,camera stream,sockets
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: scipy
+Requires-Dist: catboost
+Requires-Dist: lightgbm
+Requires-Dist: xgboost
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
+Requires-Dist: pyautogui
+Requires-Dist: pyaudio
+
