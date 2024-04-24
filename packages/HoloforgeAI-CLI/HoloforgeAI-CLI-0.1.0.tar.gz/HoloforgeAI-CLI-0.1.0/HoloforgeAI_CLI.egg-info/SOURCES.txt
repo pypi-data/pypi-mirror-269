@@ -1,0 +1,11 @@
+README.md
+setup.py
+HoloforgeAI_CLI.egg-info/PKG-INFO
+HoloforgeAI_CLI.egg-info/SOURCES.txt
+HoloforgeAI_CLI.egg-info/dependency_links.txt
+HoloforgeAI_CLI.egg-info/entry_points.txt
+HoloforgeAI_CLI.egg-info/requires.txt
+HoloforgeAI_CLI.egg-info/top_level.txt
+holoforgecli/__init__.py
+holoforgecli/ascii.py
+holoforgecli/holo.py

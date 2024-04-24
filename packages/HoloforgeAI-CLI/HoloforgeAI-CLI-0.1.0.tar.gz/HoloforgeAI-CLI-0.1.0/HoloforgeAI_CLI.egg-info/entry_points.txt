@@ -1,0 +1,2 @@
+[console_scripts]
+holo = holoforgecli.holo:main

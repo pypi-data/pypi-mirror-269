@@ -1,0 +1,63 @@
+## Holoforge CLI
+
+This is the command-line interface (CLI) for Holoforge, a tool that helps you manage and deploy serverless applications on AWS.
+
+### Getting Started
+
+**Prerequisites:**
+
+- Python 3.6 or later
+- AWS CLI configured with proper credentials
+- `sam` CLI installed (`pip install aws-samcli`)
+
+**Installation:**
+
+There is no separate installation for the Holoforge CLI. It seems to be part of a larger codebase.
+
+### Usage
+
+The CLI supports two main commands:
+
+- `init`: Initializes a new SAM project with basic configuration.
+- `pull`: Pulls code for an existing application from a remote location (likely AWS API Gateway) and configures the local SAM project.
+
+**`init` command:**
+
+```
+holo init <project-name>
+```
+
+This command creates a new SAM project named `<project-name>` with a basic structure and configuration for a Python 3.12 application.
+
+**`pull` command:**
+
+```
+holo pull <app-id>
+```
+
+This command pulls the code for an application with the ID `<app-id>` from a remote location and configures the local SAM project. It performs the following steps:
+
+1. Authenticates with AWS Cognito using the credentials stored in a configuration file (~/.hfcredentials).
+2. Retrieves the application details from the API Gateway using the provided `<app-id>`.
+3. Extracts the YAML template and Lambda function code from the response.
+4. Saves the YAML template to a file named `template.yaml` in the current working directory.
+5. Creates directories for each Lambda function and saves the function code to the corresponding `.py` file in the respective directory.
+6. (Optional) Saves any requirements specified for the Lambda functions to a `requirements.txt` file in the corresponding function directory.
+
+**Storing Credentials:**
+
+The CLI stores your AWS credentials in a configuration file named `.hfcredentials` in your home directory. If the file doesn't exist, the first time you run `holo pull`, you will be prompted to enter your username and password.
+
+**Clear Screen Animation (Optional):**
+
+The code includes functionality for displaying an animation during some operations (commented out). You can uncomment the relevant sections if you want to enable the animations.
+
+### Caveats and Limitations
+
+- The code assumes a specific structure for the response received from the API Gateway.
+- Error handling is limited.
+- The `pull` command logic for retrieving and processing application code needs to be implemented based on the actual logic used by Holoforge.
+
+### Contributing
+
+If you want to contribute to Holoforge, refer to the project's contribution guidelines (if available).
