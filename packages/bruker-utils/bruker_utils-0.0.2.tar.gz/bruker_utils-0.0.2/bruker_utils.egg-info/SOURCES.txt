@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+setup.py
+bruker_utils/__init__.py
+bruker_utils/_version.py
+bruker_utils.egg-info/PKG-INFO
+bruker_utils.egg-info/SOURCES.txt
+bruker_utils.egg-info/dependency_links.txt
+bruker_utils.egg-info/requires.txt
+bruker_utils.egg-info/top_level.txt
+tests/test.py
