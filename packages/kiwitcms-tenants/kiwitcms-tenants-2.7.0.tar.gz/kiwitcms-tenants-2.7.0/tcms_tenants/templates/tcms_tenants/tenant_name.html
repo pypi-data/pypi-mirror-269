@@ -1,0 +1,12 @@
+<a class="navbar-brand" href="/">
+    {% if tenant_logo %}
+    <img
+        src="{{ tenant_logo.attachment_file.url }}"
+        alt="{{ tenant_name }}"
+        title="{{ tenant_name }}"
+        style="max-height: 20px"
+    />
+    {% else %}
+    <span>{{ tenant_name }}</span>
+    {% endif %}
+</a>
