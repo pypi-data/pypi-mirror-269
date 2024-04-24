@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: gti-scnu
+Version: 0.0.21
+Summary: The remote control system for the HuaGuangEdu team
+Home-page: http://42.192.82.19/
+Author: gyanano
+Author-email: 1624055384@qq.com
+License: GPLv3
+Requires-Dist: astor
+Requires-Dist: requests
+
+The remote system for the HuaguangEdu Team
+>  The remote control system allows you to control the smart robot made by HuaguangEdu team remotely.
+
+version: 0.0.21
+1. fix the bug of transmitting the function with the special argument but can be replaced by the position argument
+
+version: 0.0.20
+1. add the logic of adding the ENVIROMENT_VARIABLE "REMOTE_MODE" when running the code in the remote mode
+
+version: 0.0.19
+1. add the function for getting the distance of the ultrasonic sensor
+
+version: 0.0.17
+1. fix the error of the function for downloading the server json file
+
+version: 0.0.16
+1. fix the error of the function for downloading the json file
+
+version: 0.0.15
+1. fix the error of the function for judging the class folder
+
+version: 0.0.14
+1. add the function of download the json file and save it to the gti folder
+
+version: 0.0.13
+1. fix the bug of fail modification of class methods in the function body
+
+version: 0.0.12
+1. add a new function for search the initial object of the class method in the code file
+
+version: 0.0.11
+1. optimize the logic of interaction for choosing the remote robot 
+
+version: 0.0.10
+1. fix the bug of the function of process the expr statement and will not transform the non-control function to a command for running remotely
+
+version: 0.0.9
+1. fix the bug of the function of process the import and fromimport statement, and add the new field `no_upload_module` in the `AppFuncMapClient.json` to judge whether the module need to be uploaded to the robot
+
+version: 0.0.8
+1. fix the bug of the encoding of the code file when reading and writing the file
+
+version: 0.0.7
+1. add the function of saving the xml file
