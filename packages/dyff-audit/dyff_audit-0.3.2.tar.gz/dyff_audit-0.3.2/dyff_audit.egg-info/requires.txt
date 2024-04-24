@@ -1,0 +1,14 @@
+dyff-client
+dyff-schema
+nbconvert
+nbformat
+notebook
+pandas
+pyarrow
+pydantic<2
+ruamel.yaml
+
+[dev]
+pytest
+pytest-datafiles
+pytest-depends
