@@ -1,0 +1,26 @@
+[project]
+name = 't8dev'
+description = 'Tools for 8-bit cross-development '
+version = '0.0.0'
+dependencies = []
+authors = [
+    { name = 'Curt J. Sampson', email = 'cjs@cynic.net' },
+]
+
+[project.scripts]
+ascii2a2t       = 't8dev.cli.ascii2a2t:main'
+mb6885          = 't8dev.cli.mb6885:main'
+p2a2bin         = 't8dev.cli.p2a2bin:main'
+t8dev           = 't8dev.cli.t8dev:main'
+tmc6800         = 't8dev.cli.tmc6800:main'
+wozmon-deposit  = 't8dev.cli.wozmon_deposit:main'
+
+[build-system]
+requires = ['setuptools']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools.packages.find]
+where = ['psrc']
+
+[tool.pytest.ini_options]
+testpaths = ['psrc']
