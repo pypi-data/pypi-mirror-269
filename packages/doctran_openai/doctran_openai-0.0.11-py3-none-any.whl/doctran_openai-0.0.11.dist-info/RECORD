@@ -1,0 +1,8 @@
+doctran_openai/__init__.py,sha256=2UnLSR6c8lL02hK37gvf7Z2voCM5dgIMD3WrcWT4NSA,124
+doctran_openai/doctran_openai.py,sha256=dUQb4Hw7FwkOgfSD__dFSGUjjCVh68WBXbG48k_FLFs,8319
+doctran_openai/transformers/__init__.py,sha256=a6bNcQmTqt4HO6ZVj7G-OngV9tmM_Oyau2vOc3XPg9Y,202
+doctran_openai/transformers/transformers.py,sha256=k72oRqgWM-JjJ44ewTbHtzMvxjuHR6ejlKKf_OiLhtM,15212
+doctran_openai-0.0.11.dist-info/LICENSE,sha256=jpfQHFkb3DFfhEXm-EQVvATcCzC2gYVKW3PC_dr-CuI,1064
+doctran_openai-0.0.11.dist-info/METADATA,sha256=Yl-WSeNl1IbjhrtwlD52KdjvoM5HAAidJp8zswXMPvg,8608
+doctran_openai-0.0.11.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+doctran_openai-0.0.11.dist-info/RECORD,,
