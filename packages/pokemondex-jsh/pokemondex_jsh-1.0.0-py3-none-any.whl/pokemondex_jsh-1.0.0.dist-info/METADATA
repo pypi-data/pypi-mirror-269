@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pokemondex_jsh
+Version: 1.0.0
+Summary: Libreria para generar un pokemon aleatorio.
+Author: Jeronimo Hernandez
+Author-email: sanchezhernandezjeronimo@gmail.com
+Requires-Dist: pandas
+
