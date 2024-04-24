@@ -1,0 +1,11 @@
+boxcounting/1D_random_cantor.bin,sha256=h1CtPpf3Y94dn_P8NnFlaE2O-h0eEvcLVsObcMpjiO4,1024
+boxcounting/2D_apollonian_gasket.bin,sha256=0osNhczq5TOmYHu51PMiDSzrMUL-NX4lEY0ePMAlOE4,360000
+boxcounting/3D_random_cantor.bin,sha256=fWYOaCsCTzSy6O-RP3NmwwdBZFVMEQdaSmnUM-WWj-8,32768
+boxcounting/__init__.py,sha256=qzYkQ44bRxkAWQNg17rPq3daMKj6gHermbr9OKwmfLs,34
+boxcounting/boxcounting.py,sha256=RIVUcDXH125todL6DISg0QRx8tM3fSpviD_WcnWVI00,5291
+boxcounting/runTests.py,sha256=oR4KUTBVvKNMD83XkscRm0QYW32scl2ci7hr92lLVDY,2697
+boxcounting-1.0.0.3.dist-info/LICENSE,sha256=p5m_YUXp5VAL5LbkLifwgjtseG4WXJMKsyAghOPybVk,1078
+boxcounting-1.0.0.3.dist-info/METADATA,sha256=JeksXLUnRq4b8WxHYX0blIqIZkZMhVSRlSDCSnq59TU,657
+boxcounting-1.0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+boxcounting-1.0.0.3.dist-info/top_level.txt,sha256=m4BjtlOLc6wAwORW6wjEQnGGZSfk0Jidy0XsXW-U3NY,12
+boxcounting-1.0.0.3.dist-info/RECORD,,
