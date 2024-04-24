@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dbt-rockset
+Version: 1.7.3
+Summary: The Rockset adapter plugin for dbt
+Home-page: https://github.com/rockset/dbt-rockset
+Author: Steven Baldwin
+Author-email: sbaldwin@rockset.com
+Requires-Dist: dbt-core ~=1.7.0
+Requires-Dist: rockset-sqlalchemy ~=0.0.1
+
+The Rockset adapter plugin for dbt
