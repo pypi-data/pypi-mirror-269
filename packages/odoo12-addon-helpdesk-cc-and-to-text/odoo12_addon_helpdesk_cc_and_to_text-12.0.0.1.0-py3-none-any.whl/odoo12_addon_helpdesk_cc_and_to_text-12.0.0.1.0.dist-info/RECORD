@@ -1,0 +1,16 @@
+odoo/addons/helpdesk_cc_and_to_text/README.rst,sha256=PdOLXBJK1CyimticaPzjFgZm_KKZjGU2FJHNOtu53Pw,2390
+odoo/addons/helpdesk_cc_and_to_text/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/helpdesk_cc_and_to_text/__manifest__.py,sha256=8PxgsgkSRiPHI6-B-hzqSZCo24QbnHNwBFyvOu92aic,774
+odoo/addons/helpdesk_cc_and_to_text/i18n/ca_ES.po,sha256=MHxiFOo-kGX6rzFi8CMTRhPYKJFDcqZKR1jorqOZ65o,1361
+odoo/addons/helpdesk_cc_and_to_text/i18n/en_US.po,sha256=CvCsH0Z0jLzJ4JFewLwMNGnDFjyGvCSWjF5LZ8u3bpg,1251
+odoo/addons/helpdesk_cc_and_to_text/i18n/es.po,sha256=SL8t8za4_xmy27COxmv1HmY4cYEl1I7y1DMTFs5YADU,1361
+odoo/addons/helpdesk_cc_and_to_text/models/__init__.py,sha256=dcgZjzsejepCAj6Ww622K9c7giVMiZOU9yV2IHqq4FM,30
+odoo/addons/helpdesk_cc_and_to_text/models/helpdesk_ticket.py,sha256=VyHJpYt0fjdWwjSi-usLmZFTq5X8oetZa6wdZ1a4Ybc,1172
+odoo/addons/helpdesk_cc_and_to_text/static/description/icon.png,sha256=3taXULJl0n0Ko0YOBXiXtspPonsicVgYojo1ghzHmuY,17607
+odoo/addons/helpdesk_cc_and_to_text/tests/__init__.py,sha256=hkuX5_IVR_7RlYXFdBLfxEW0iU7z9mma9rghzkdjR_g,60
+odoo/addons/helpdesk_cc_and_to_text/tests/test_helpdesk_ticket.py,sha256=tzevR6PsXLIFgMC3TRhMg7v3QSx0G6ZomYbVhdrw9ic,2880
+odoo/addons/helpdesk_cc_and_to_text/views/helpdesk_ticket_view.xml,sha256=UBHRuETQfH4EI4mGUZzAE7HMQm8vh_fpFLEhJir_b8I,532
+odoo12_addon_helpdesk_cc_and_to_text-12.0.0.1.0.dist-info/METADATA,sha256=AjFKhutNNGrIUArPiktunxNcRBCSOdlB1yiajHI8Oe4,3128
+odoo12_addon_helpdesk_cc_and_to_text-12.0.0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+odoo12_addon_helpdesk_cc_and_to_text-12.0.0.1.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_helpdesk_cc_and_to_text-12.0.0.1.0.dist-info/RECORD,,
