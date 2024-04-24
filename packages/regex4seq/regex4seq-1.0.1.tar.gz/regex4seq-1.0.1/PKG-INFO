@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: regex4seq
+Version: 1.0.1
+Summary: Regular Expressions for Sequences of Things
+Home-page: https://regex4seq.readthedocs.io/en/latest/
+License: LGPL-3.0-or-later
+Keywords: regex,regular expressions,pattern matching,sequence matching
+Author: Stephen Leach
+Author-email: sfkleach@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Project-URL: Documentation, https://regex4seq.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/sfkleach/regex4seq
+Description-Content-Type: text/markdown
+
+# Welcome to RegEx4Seq
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/sfkleach/lazychains/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/sfkleach/lazychains/tree/main) [![Documentation Status](https://readthedocs.org/projects/lazychains/badge/?version=latest)](https://lazychains.readthedocs.io/en/latest/?badge=latest)
+
+This is a python library that implements regular-expression based pattern matches for sequences of arbitrary objects. For example you can write pattern to determine if a list is a sequence of alternating 1's and 0's like this:
+
+```py
+from regex4seq import Item, Items
+
+# The core is a repetition of alternating 0s and 1s. But we need to
+# account for the pattern starting on a 1 or finishing on a zero.
+# Analogous to the regex /1?[01]*0?/.
+pattern = Item(1).optional() & Items(0, 1).repeat() & Item(0).optional()
+
+pattern.matches( [1, 0, 1, 0, 1, 0, 1])
+# True
+
+pattern.matches( [1, 0, 1, 0, 1, 0, 0])
+# False
+
+```
+
+To learn more about the library, go to [the documentation](https://regex4seq.readthedocs.io) page on ReadTheDocs.
+
