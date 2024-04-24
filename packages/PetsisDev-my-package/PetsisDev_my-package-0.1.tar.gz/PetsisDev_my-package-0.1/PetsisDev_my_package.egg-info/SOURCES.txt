@@ -1,0 +1,9 @@
+README.md
+setup.py
+PetsisDev_my_package.egg-info/PKG-INFO
+PetsisDev_my_package.egg-info/SOURCES.txt
+PetsisDev_my_package.egg-info/dependency_links.txt
+PetsisDev_my_package.egg-info/top_level.txt
+package/__init__.py
+package/module1.py
+package/module2.py
