@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+better_qq_botpy.egg-info/PKG-INFO
+better_qq_botpy.egg-info/SOURCES.txt
+better_qq_botpy.egg-info/dependency_links.txt
+better_qq_botpy.egg-info/requires.txt
+better_qq_botpy.egg-info/top_level.txt
+guildbot/__init__.py
+guildbot/event.py
+guildbot/guildbot.py
+guildbot/utils.py
