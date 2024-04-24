@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/nechestniy_znak/__init__.py
+src/nechestniy_znak/lib.py
+src/nechestniy_znak.egg-info/PKG-INFO
+src/nechestniy_znak.egg-info/SOURCES.txt
+src/nechestniy_znak.egg-info/dependency_links.txt
+src/nechestniy_znak.egg-info/requires.txt
+src/nechestniy_znak.egg-info/top_level.txt
