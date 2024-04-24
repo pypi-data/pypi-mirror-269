@@ -1,0 +1,13 @@
+DataSourceService/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+DataSourceService/__main__.py,sha256=JHLryd-07vIzQiVL27L7VJVMXcx9A81h5sPcewjUaL0,144
+DataSourceService/anecdotica.py,sha256=gHc6XUWxuIviKaszddtkNsDlIFcZ622yHGI_UBMrgaI,15082
+DataSourceService/api.py,sha256=ZPaWFgJMVN_oFR0xpOqnfXIAg4NN_ajDFaONiEmMv-8,39146
+DataSourceService/const.py,sha256=xtT6Wzjve8q4VPKUuF4XQWlbZynAJTxT0mKyDdOlmCA,3309
+DataSourceService/service.py,sha256=ekqlH3yPpjyiK7zTtcGjtM2ocWal0bHlP2WaOFKNIUw,9780
+DataSourceService/test.py,sha256=GGnE6uv6Vipmt4sR3j5deYXQtxo0b9TNiCqIW7UHhvk,100
+DataSourceService/tools.py,sha256=itqppJDgQoxRFVQuveUcFnGfVMRAx5sromIGz_2DG24,380
+pih_ds-0.15.dist-info/METADATA,sha256=ViMfOYYq5o5pUg2h8RIoS2k6SA16LoM5k_6dFJU0Aj0,397
+pih_ds-0.15.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pih_ds-0.15.dist-info/entry_points.txt,sha256=eZRoF0qxKw1u5cT8rugQ5u1AWPwbqw33bk-QX_raO3A,60
+pih_ds-0.15.dist-info/top_level.txt,sha256=K3s01rdix3-Sw-yok438RZM6J19ItfIJrzy9X4umbHI,18
+pih_ds-0.15.dist-info/RECORD,,
