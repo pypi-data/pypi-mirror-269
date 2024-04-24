@@ -1,0 +1,10 @@
+README.md
+setup.py
+pokemondex_jsh/__init__.py
+pokemondex_jsh/pokemon.csv
+pokemondex_jsh/ramdom_pokemon.py
+pokemondex_jsh.egg-info/PKG-INFO
+pokemondex_jsh.egg-info/SOURCES.txt
+pokemondex_jsh.egg-info/dependency_links.txt
+pokemondex_jsh.egg-info/requires.txt
+pokemondex_jsh.egg-info/top_level.txt
