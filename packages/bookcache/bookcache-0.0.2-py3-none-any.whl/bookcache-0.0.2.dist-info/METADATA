@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: bookcache
+Version: 0.0.2
+Summary: An in-memory keystore caching system.
+Home-page: https://pypi.org/project/bookcache/
+License: MIT
+Keywords: caching,cache,keystore
+Author: NotAussie
+Author-email: NotAussie@duck.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database
+Requires-Dist: pydantic (>=2.7.0,<3.0.0)
+Project-URL: Repository, https://github.com/NotAussie/bookcache
+Description-Content-Type: text/markdown
+
+> [!IMPORTANT]
+> This project is under development, please expect things to change over time.
