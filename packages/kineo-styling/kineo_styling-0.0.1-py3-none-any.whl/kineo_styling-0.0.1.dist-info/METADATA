@@ -1,0 +1,151 @@
+Metadata-Version: 2.1
+Name: kineo-styling
+Version: 0.0.1
+Summary: Kineo Styling Library
+Author: Jannis Grönberg
+Author-email: jannis.groenberg@kineo.ai
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas (>=1.3)
+Requires-Dist: plotly (>=5.0)
+
+# Kineo Styling Module
+Library of Kineo Styling for the efficient plotting of graphs for presentations.
+
+## Importing anything
+```
+from kineo_styling import colors, styling, export
+```
+
+## Colors Module
+
+```
+# Print all attributes of the colors module
+print("The following attributes are available in the colors module:")
+for i in dir(colors):
+    if "__" not in i:
+        print(f"{i}: {type(getattr(colors, i))}")
+
+# You can see the colors via:
+colors.show_colors()
+```
+
+## Styling Module
+
+Styling means, removing the background, enabling the kineo color palette and adjusting colors in accordance to dark/lightmode. Alos it removes the title. Since this title should be done on the presentations slides.
+
+There are three things you can use inside the styling module:
+Example
+```
+import plotly.express as px
+
+# Either pathing to lightmode or to dark mode
+@styling.patch_to_light_mode
+def example_bar_chart():
+    df = px.data.iris()
+    fig = px.bar(df, x="sepal_width", y="sepal_length", color="species", barmode="group")
+    return fig
+
+# Or you can use the dark mode
+@styling.patch_to_dark_mode
+def example_line_chart():
+    df = px.data.gapminder().query("continent=='Oceania'")
+    fig = px.line(df, x="year", y="lifeExp", color='country')
+    return fig
+    
+fig1 = example_bar_chart()
+fig1.show()
+
+fig2 = example_line_chart()
+fig2.show()
+```
+
+## Styling Module
+
+Styling means, removing the background, enabling the kineo color palette and adjusting colors in accordance to dark/lightmode. Alos it removes the title. Since this title should be done on the presentations slides.
+
+There are three things you can use inside the styling module:
+Example for Decorators
+```
+import plotly.express as px
+
+# Either pathing to lightmode or to dark mode
+@styling.patch_to_light_mode
+def example_bar_chart():
+    df = px.data.iris()
+    fig = px.bar(df, x="sepal_width", y="sepal_length", color="species", barmode="group")
+    return fig
+
+# Or you can use the dark mode
+@styling.patch_to_dark_mode
+def example_line_chart():
+    df = px.data.gapminder().query("continent=='Oceania'")
+    fig = px.line(df, x="year", y="lifeExp", color='country')
+    return fig
+    
+fig1 = example_bar_chart()
+fig1.show()
+
+fig2 = example_line_chart()
+fig2.show()
+```
+
+Example for styling function
+```
+import plotly.express as px
+
+
+def example_bar_chart():
+    df = px.data.tips()
+    fig = px.box(df, x="day", y="total_bill", color="smoker", points="all")
+    return fig
+
+
+fig = example_bar_chart()
+fig = styling.style_fig_for_presentation(
+    fig=fig,  # The figure to use
+    update_layout_kwargs={},  # any kwargs that you would pass to fig.update_layout
+    update_traces_kwargs={},  # any kwargs that you would pass to fig.update_traces
+    patch_colors=True,  # Whether to patch colors to the kineo color palette
+    dark_mode=True,  # Whether to patch to dark mode
+)
+fig.show()
+````
+
+## Export Module
+
+This module only contains function to export figures in Kineo styles
+
+```
+import plotly.express as px
+import pandas as pd
+
+data = [1,2,3,4,5,6,7,8,9]
+df = pd.DataFrame(dict(
+    linear=data,
+    inclusive=data,
+    exclusive=data
+)).melt(var_name="quartilemethod")
+
+
+fig = px.box(df, y="value", facet_col="quartilemethod", color="quartilemethod",
+             boxmode="overlay", points='all')
+
+fig.update_traces(quartilemethod="linear", jitter=0, col=1)
+fig.update_traces(quartilemethod="inclusive", jitter=0, col=2)
+fig.update_traces(quartilemethod="exclusive", jitter=0, col=3)
+
+export.export_figure_as_png(
+    fig=fig,  # The figure to use
+    output_path="example_plot_dark.png",  # The output path for the image
+    update_layout_kwargs={},  # any kwargs that you would pass to fig.update_layout
+    update_traces_kwargs={},  # any kwargs that you would pass to fig.update_traces
+    patch_colors=True,  # Whether to patch colors to the kineo color palette
+    dark_mode=True,  # Whether to patch to dark mode
+)
+
+# export.export_figure_as_png_dark_mode(fig, "example_plot_dark.png")
+export.export_figure_as_png_light_mode(fig, "example_plot_light.png")
+
+```
