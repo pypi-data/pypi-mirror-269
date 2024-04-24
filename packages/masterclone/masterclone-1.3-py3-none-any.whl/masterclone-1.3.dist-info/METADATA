@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: masterclone
+Version: 1.3
+Summary: A tool for cloning Git repositories
+Home-page: https://github.com/NpmMaster/MasterClone.git
+Author: caique9014
+Author-email: oldtimesonz@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: license.txt
+Requires-Dist: setuptools
+Requires-Dist: typer
+
