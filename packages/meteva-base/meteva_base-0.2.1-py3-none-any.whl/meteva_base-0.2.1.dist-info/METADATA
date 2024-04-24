@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: meteva-base
+Version: 0.2.1
+Summary: base classes and functions of generally meteorogical usage, like Basic_class/IO/calculation/plot .etc
+Home-page: https://github.com/guoyunqian/meteva_base
+Author: NMC_WFT
+Author-email: pangzide003@163.com
+License: MIT
+Requires-Dist: numpy (>=1.12.1)
+Requires-Dist: pandas (<=2.0.3,>=1.0.4)
+Requires-Dist: netCDF4 (<=1.6.5,>=1.4.2)
+Requires-Dist: scipy (>=1.0.0)
+Requires-Dist: xarray (<=0.20.0,>=0.10.0)
+Requires-Dist: scikit-learn (>=1.0.0)
+Requires-Dist: matplotlib (>=3.2.2)
+Requires-Dist: httplib2 (>=0.12.0)
+Requires-Dist: protobuf (<=3.20.0)
+Requires-Dist: tables (>=3.4.4)
+Requires-Dist: urllib3 (>=2.0)
+Requires-Dist: pyshp (>=2.1.0)
+Requires-Dist: shapely (>=1.8.0)
+
+# meteva_base
+
+
