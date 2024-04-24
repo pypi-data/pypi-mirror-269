@@ -1,0 +1,12 @@
+rr_connection_manager/__init__.py,sha256=19B7RnBYXf-8GzCml0HTpNQVJBWAhcT_F2b5o7DpoT0,324
+rr_connection_manager/classes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rr_connection_manager/classes/connection.py,sha256=CmgeqG_o84KHpN7CSxA2tEzuafEs9WWMvs1mr30rkhU,1570
+rr_connection_manager/classes/connection_conf.py,sha256=_od3UKcKDnUlmUmTomA-BnYOOKLJNErQBwnWtkmmPPY,4321
+rr_connection_manager/classes/postgres_connection.py,sha256=XebADBRVbUvQmfOGjp_zDYiYuFkg8rnX6pkwdFclsiw,2413
+rr_connection_manager/classes/sql_server_connection.py,sha256=uDGpRAhD2Jtx18vBDgsxTXhV7hXx3Vf_L20CdHqpVJg,1751
+rr_connection_manager/classes/sqlite_connection.py,sha256=obfuiY7_22gU6PcAGXRu6EOPkkV83BsJe2SBq5ilvYE,555
+rr_connection_manager-0.3.0.dist-info/entry_points.txt,sha256=ZBSE9Flw5y0S7tNFWvJrveqTmzKpfF4d0GreCpBQ-jE,45
+rr_connection_manager-0.3.0.dist-info/LICENSE,sha256=rZ6UTmvGS_OAKwQhViBi7Z27HZB6y8x9vigJvrIyLiM,1095
+rr_connection_manager-0.3.0.dist-info/METADATA,sha256=p8sTs7SRYTnOSRkKb0gjkoEEztK_BkTSbTiTqbKHFvk,852
+rr_connection_manager-0.3.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+rr_connection_manager-0.3.0.dist-info/RECORD,,
