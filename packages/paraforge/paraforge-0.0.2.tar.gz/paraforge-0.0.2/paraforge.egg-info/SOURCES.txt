@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+paraforge/__init__.py
+paraforge.egg-info/PKG-INFO
+paraforge.egg-info/SOURCES.txt
+paraforge.egg-info/dependency_links.txt
+paraforge.egg-info/requires.txt
+paraforge.egg-info/top_level.txt
