@@ -1,0 +1,16 @@
+.coverage
+*.egg-info
+*~
+*.swp
+__pycache__
+build
+dist
+langcodes/data/cldr
+langcodes/data/cldr-json
+.ipynb_checkpoints
+vendor
+.tox
+docs/_build/
+.hypothesis
+poetry.lock
+.venv

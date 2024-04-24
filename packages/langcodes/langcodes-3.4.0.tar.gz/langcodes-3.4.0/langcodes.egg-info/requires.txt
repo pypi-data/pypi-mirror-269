@@ -1,0 +1,9 @@
+language-data>=1.2
+
+[build]
+build
+twine
+
+[test]
+pytest
+pytest-cov
