@@ -1,0 +1,36 @@
+{% load wagtailadmin_tags %}
+
+<div class="{{ classname }}" data-prefix="{{ prefix }}">
+    {% if help_text %}
+        <span>
+            <div class="help">
+                {% icon name="help" classname="default" %}
+                {{ help_text }}
+            </div>
+        </span>
+    {% endif %}
+    
+    <div class="tabs" data-prefix="{{ prefix }}">
+        {% for tab in block_definition.meta.tabs %}
+        <a href="javascript:void(0)" data-prefix="{{prefix}}" data-role="tab" data-group="{{ tab|slugify }}">{{ tab }}</a>
+        {% endfor %}
+    </div>
+
+    {% for tab, tab_children in block_definition.meta.tabs.items %}
+        {% for tab_field in tab_children %}
+            {% for child in children.values %}
+                {% if tab_field == child.block.name %}
+                    <div class="w-field" data-field data-contentpath="{{ child.block.name }}" data-prefix="{{prefix}}" data-role="field" data-group="{{ tab|slugify }}">
+                        {% if child.block.label %}
+                            <label class="w-field__label" {% if child.id_for_label %}for="{{ child.id_for_label }}"{% endif %}>
+                                {{ child.block.label }}{% if child.block.required %}<span class="w-required-mark">*</span>{% endif %}
+                            </label>
+                        {% endif %}
+                        {{ child.render_form }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}
+    
+</div>
