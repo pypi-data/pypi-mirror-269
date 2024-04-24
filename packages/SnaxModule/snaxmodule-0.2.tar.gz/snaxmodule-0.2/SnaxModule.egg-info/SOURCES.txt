@@ -1,0 +1,8 @@
+README.md
+setup.py
+SnaxModule.egg-info/PKG-INFO
+SnaxModule.egg-info/SOURCES.txt
+SnaxModule.egg-info/dependency_links.txt
+SnaxModule.egg-info/requires.txt
+SnaxModule.egg-info/top_level.txt
+test/test.py

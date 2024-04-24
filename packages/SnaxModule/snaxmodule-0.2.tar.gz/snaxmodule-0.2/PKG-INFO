@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: SnaxModule
+Version: 0.2
+Summary: Bring Colors to CLI Make It Fun Edwin
+Home-page: https://github.com/your_username/SnaxModule
+Author: Snax Dev
+Author-email: lijisp04@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# SnaxModule
+
+SnaxModule brings colors to the CLI to make it more fun and interactive.
+
+## Installation
+
+You can install SnaxModule using pip:
+
+```bash
+pip install SnaxModule
+
+Usage
+
+Adjust Line
+Use AdjustLn for BOLD, UNDERLINE, RESET.
+
+Text Color
+Use LnClr for inline color.
+
+Background Color
+Use BgClr for background colors.
+
+
+```
