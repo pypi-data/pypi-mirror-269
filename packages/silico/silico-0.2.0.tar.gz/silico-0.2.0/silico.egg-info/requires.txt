@@ -1,0 +1,17 @@
+numpy
+pandas
+scipy
+scikit-learn
+click
+tqdm
+
+[docs]
+nbsphinx
+sphinx-rtd-theme
+IPython
+
+[progress]
+tqdm
+
+[test]
+pytest
