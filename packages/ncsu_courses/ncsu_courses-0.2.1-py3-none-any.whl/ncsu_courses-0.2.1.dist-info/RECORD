@@ -1,0 +1,10 @@
+ncsu_courses/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ncsu_courses/courses.py,sha256=NKNkC5YLI_1vNav_dVDoc7RcIYeEVmVbcZbO9wvQQ4c,2392
+ncsu_courses/sections.py,sha256=mmXLlREGbDhK8arqMBmyhfvjvYY9Y8Bj51lk64hJmMI,8004
+ncsu_courses/subjects.py,sha256=l6rmJelsxRfEDe-52KjSyNTX5KP9_s6KLRKnGnQrpp0,451
+ncsu_courses/term.py,sha256=nEABOJp9cj90Yj3px2b13xBYqJlYoG5EKHSZyplI2qs,759
+ncsu_courses/util.py,sha256=g0_7xW8KHRbA3LrwSlRiqeMd_pGVwkQmKSoY6OvjW0k,1654
+ncsu_courses-0.2.1.dist-info/LICENSE,sha256=lLg3GWEJ4XS5KeTNRpL1ifzKqW9q62HBS1Sap45P044,1060
+ncsu_courses-0.2.1.dist-info/METADATA,sha256=o0cAF7E7p5rxS4fv7G9HwNdC36GsiQimCKy2pLfVmIQ,2155
+ncsu_courses-0.2.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ncsu_courses-0.2.1.dist-info/RECORD,,
