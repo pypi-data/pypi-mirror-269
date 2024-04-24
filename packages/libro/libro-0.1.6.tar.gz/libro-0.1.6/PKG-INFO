@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: libro
+Version: 0.1.6
+Summary: Libro notebook editor
+Author-email: zhanba <c5e1856@gmail.com>, brokun <brokun0128@gmail.com>
+Requires-Python: <3.12,>=3.8.1
+Requires-Dist: ipykernel>=6.29.4
+Requires-Dist: ipython>=7.34.0
+Requires-Dist: jupyter-lsp>=2.2.4
+Requires-Dist: jupyter-server>=2.13.0
+Requires-Dist: jupyterlab-server>=2.25.4
+Requires-Dist: ruff-lsp>=0.0.53
+Description-Content-Type: text/markdown
+
+# libro-server
