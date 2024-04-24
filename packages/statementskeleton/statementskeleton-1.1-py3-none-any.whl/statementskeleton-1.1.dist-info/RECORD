@@ -1,0 +1,17 @@
+statementskeleton/__init__.py,sha256=-VCF0wElMxKmXeadICwE0sRmVfu_pH0w5qHYvstu8jM,51
+statementskeleton/elements/Account.py,sha256=g83refyBtT0FL0q7lUj9NGwuy3AK2v_LfDfn_4vDASY,1325
+statementskeleton/elements/Divider.py,sha256=_m0-S4l1IvHPnq-LdrMn2kXbNHR6GCRA47oLFD11YnM,692
+statementskeleton/elements/Element.py,sha256=JbJ0Cvv3ARbEtU0YKSa5xrUZefa-52J9AqeWqthHmNw,453
+statementskeleton/elements/Header.py,sha256=Cb3LJsTePL0C8qLsJI2fWQjfegfi6JoojRKzHrXix_w,1918
+statementskeleton/elements/Spacer.py,sha256=VDHWznUc2ulstkqX9H-a9EfuIyhg1lQRdZnFALMVARk,504
+statementskeleton/elements/Subtotal.py,sha256=UNEs7EhiDC6h224QWaBr-hOlS8qYdmTB0SVo5ijABmk,807
+statementskeleton/elements/Title.py,sha256=v0MnfJAMyMUug960hTG2FROqU33Zaik_tdiPg7hmVs0,669
+statementskeleton/elements/Total.py,sha256=QqaRYqRbiavtKEGMQAXSj1SFEID75lZf8_9eaFwLDA0,1057
+statementskeleton/elements/__init__.py,sha256=SFwckLd3Qi5fhDytqYPyZt7Jc4f1Bct1JQc44QVOqHQ,187
+statementskeleton/skeletons/Skeleton.py,sha256=rRCCMpEGZCFjipjFk94FF9iMJTvAw5Nms6_CeNiJAkU,9273
+statementskeleton/skeletons/__init__.py,sha256=imOZNTaZrvJ1oK1qfGaJOavYdOVag2sPVDUp3uQx8fg,25
+statementskeleton-1.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+statementskeleton-1.1.dist-info/METADATA,sha256=iktkPsjqBHhaCrYbVegQ1OycbeUs1mbmSeNH3YoknF0,3597
+statementskeleton-1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+statementskeleton-1.1.dist-info/top_level.txt,sha256=A-VXwn0WvZz2j1qJDV74_PDU7yOhb1-cT5tpKmcPmsY,18
+statementskeleton-1.1.dist-info/RECORD,,
