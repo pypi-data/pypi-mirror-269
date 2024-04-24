@@ -1,0 +1,15 @@
+vonage_voice/__init__.py,sha256=J800jzPEsYvk2sSnz6rTdbca0uCpgWOScMNVl6Uv58g,95
+vonage_voice/errors.py,sha256=z1UEYgVZLCc5ITMwekbCwkWkgTDpHteQiR_docAmrd4,232
+vonage_voice/voice.py,sha256=41-FXvhH8X3atwlYxsjAwnqX43mPqogARTI4ZA5-BCw,8327
+vonage_voice/models/__init__.py,sha256=HE1-hLHiycChPDy59_uOX5dFvtp223lrAx8Y2wwsR3s,1396
+vonage_voice/models/common.py,sha256=3uTl2RMaFQ11Q5lLdw-pXliaE6qbQ5XJ4Kxi0FKhGZg,955
+vonage_voice/models/connect_endpoints.py,sha256=aw_HwL7KvjJFA8mRxpnLhgTKsAxrCniEgxiEZEiqYrA,1080
+vonage_voice/models/enums.py,sha256=DkDjL_q1G6PG0mSklT0EZ8Be8wS6xA5cdZ2VHeESPvM,1733
+vonage_voice/models/input_types.py,sha256=3T_y72BkjeIZTW-7ofxgzRXpid6eoBymkhCZxsYZjsk,666
+vonage_voice/models/ncco.py,sha256=sBgRBISp4jj5eaubhwsNn7ebGEJNz3QbOl53uJH0GFw,5039
+vonage_voice/models/requests.py,sha256=vc3UopMiqk2WZIgDVod3yBrjfZVZQ3rfy0um-fyhQOc,2785
+vonage_voice/models/responses.py,sha256=QlXVM4jgElpcs9N-zjSEylKuZtVlQuNfE9su-D2kNBo,1422
+vonage_voice-1.0.1.dist-info/METADATA,sha256=5hy3l22BiGM5uNcuANzcjI1h7y1lN41KwNbrX2urFlk,4520
+vonage_voice-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+vonage_voice-1.0.1.dist-info/top_level.txt,sha256=UEkhr-Se2Ald9wQrWEQHr3Wew1tSzpb_ti5aVEs5XTw,13
+vonage_voice-1.0.1.dist-info/RECORD,,
