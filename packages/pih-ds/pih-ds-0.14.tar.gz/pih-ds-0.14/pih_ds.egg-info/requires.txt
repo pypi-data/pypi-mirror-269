@@ -1,0 +1,5 @@
+ipih
+mysql-connector-python
+lmdb==1.4.0
+lmdbm
+dadata
