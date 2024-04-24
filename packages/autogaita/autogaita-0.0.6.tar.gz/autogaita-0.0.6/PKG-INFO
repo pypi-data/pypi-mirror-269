@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: autogaita
+Version: 0.0.6
+Summary: Automatic Gait Analysis in Python
+Home-page: https://github.com/mahan-hosseini/AutoGaitA/
+Author: Mahan Hosseini
+License: GPLv3
+Requires-Python: >=3.10
+Provides-Extra: dev
+License-File: LICENSE
