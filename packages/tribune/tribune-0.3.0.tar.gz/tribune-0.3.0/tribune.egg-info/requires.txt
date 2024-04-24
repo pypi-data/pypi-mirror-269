@@ -1,0 +1,12 @@
+BlazeUtils
+xlsxwriter
+
+[test]
+BlazeUtils
+SQLAlchemy
+XlsxWriter
+openpyxl
+pytest
+pytest-cov
+wrapt
+xlrd<2
