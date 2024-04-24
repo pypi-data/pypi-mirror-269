@@ -1,0 +1,2 @@
+[hatch]
+gettext = hatch_gettext.hooks
