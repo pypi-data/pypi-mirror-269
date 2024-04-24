@@ -1,0 +1,4 @@
+[console_scripts]
+batchee=batcher.tempo_filename_parser:main
+batchee_harmony=batcher.harmony.cli:main
+
