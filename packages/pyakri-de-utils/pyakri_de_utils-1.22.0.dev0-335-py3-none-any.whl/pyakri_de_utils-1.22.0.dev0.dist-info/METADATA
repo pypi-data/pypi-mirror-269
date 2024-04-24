@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pyakri-de-utils
+Version: 1.22.0.dev0
+Summary: Python based de utils package
+Home-page: UNKNOWN
+Author: Akridata Inc
+Author-email: support@akridata.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: numpy (>=1.19.2)
+Requires-Dist: pandas (>=1.4.1)
+Requires-Dist: pyarrow (>=7.0.0)
+Requires-Dist: scipy (>=1.9.3)
+Requires-Dist: pillow (==9.0.1)
+Requires-Dist: numba (>=0.57.1)
+Requires-Dist: PyYAML (>=5.0.0)
+Requires-Dist: pydicom (>=2.4.4)
+Requires-Dist: python-gdcm (>=3.0.23)
+Provides-Extra: cpu
+Requires-Dist: onnxruntime (==1.15.1) ; extra == 'cpu'
+Provides-Extra: gpu
+Requires-Dist: onnxruntime-gpu (==1.15.1) ; extra == 'gpu'
+
+UNKNOWN
+
+
