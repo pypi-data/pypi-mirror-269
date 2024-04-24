@@ -1,0 +1,4 @@
+[console_scripts]
+mbtiles2folder = mbtiles_util.mbtiles2folder:main
+mbtiles2s3 = mbtiles_util.mbtiles2s3:main
+mbtilesinfo = mbtiles_util.mbtilesinfo:main
