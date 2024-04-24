@@ -1,0 +1,15 @@
+PyYAML>=3.1
+catkin_pkg>=0.4.0
+rospkg>=1.4.0
+rosdistro>=0.7.5
+
+[:python_version < "3.8"]
+importlib_metadata
+
+[test]
+flake8<6
+flake8-comprehensions
+pytest
+
+[test:python_version < "3.3"]
+mock
