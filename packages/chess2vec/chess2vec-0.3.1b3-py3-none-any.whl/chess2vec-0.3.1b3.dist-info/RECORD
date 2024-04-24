@@ -1,0 +1,8 @@
+chess2vec/__init__.py,sha256=Y7OsQkRg_-B1sm-pK03y9o4rE7JWOl-ISy1fhFN0dAQ,1848
+chess2vec/pgn.py,sha256=PAWgb4X3232VyN8zhJFmApFwRZbl_EiDV31CK8zXPFw,287
+chess2vec/utils/__init__.py,sha256=FYYbfnQEeemqWt3mMpkfa_m58LPynEyz-lwNR6NeXlA,202
+chess2vec/utils/vector.py,sha256=SMNuQQzSbI73ofVMhtMgik56NvuvHq_0t4a5bp25VQo,583
+chess2vec/vectorizers.py,sha256=0dMTBgcFZu5hGHhuFThapW1Hr6UPdH2MWkyGAxX8pWI,1372
+chess2vec-0.3.1b3.dist-info/METADATA,sha256=YAIdkVyxc518WaWyZfK8QOo6stlqqLlcBgz8dMsztfo,650
+chess2vec-0.3.1b3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+chess2vec-0.3.1b3.dist-info/RECORD,,
