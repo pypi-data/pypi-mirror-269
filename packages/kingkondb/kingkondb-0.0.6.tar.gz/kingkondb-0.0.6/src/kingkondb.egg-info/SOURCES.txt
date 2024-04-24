@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/kingkondb.egg-info/PKG-INFO
+src/kingkondb.egg-info/SOURCES.txt
+src/kingkondb.egg-info/dependency_links.txt
+src/kingkondb.egg-info/requires.txt
+src/kingkondb.egg-info/top_level.txt
+src/mongodb_connect/__init__.py
+src/mongodb_connect/mongo_crud.py
