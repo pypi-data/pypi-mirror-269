@@ -1,0 +1,8 @@
+pymobiledevice3<4.3.0,>=4.2.3
+pymobiledevice3>=3.4.0
+Flask==3.0.2
+zeroconf==0.132.2
+
+[dev]
+build
+pylint
