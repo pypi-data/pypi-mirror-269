@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: light-database
+Version: 0.1.9
+Summary: Easy way to handle database
+Author: Bigollo
+Description-Content-Type: text/markdown
+
+## 简介
+
+light-database 是一个用于简化数据库交互的 Python 包。它支持多种数据库系统，并提供一个易于使用的接口来执行查询和管理数据库。
+
+## 安装
+
+通过 pip 安装：
+
+```shell
+pip install light-database
+```
+
+## 快速开始
+
+1. 使用 light-database 包初始化项目环境：
+
+```python
+from light_database.config import EnvConfig
+
+EnvConfig.write(section="mysql", host=host, port=port, database=database, user=user, password=password)
+# EnvConfig.write(section="hive", host=host, port=port, user=user, password=password, auth_mechanism="PLAIN")
+# EnvConfig.write(section="hbase", host=host, port=port)
+```
+
+2. 使用 light-database 包执行查询：
+
+```python
+from light_database.mysql.db import MysqlDB
+
+df1 = MysqlDB.filter(table) \
+            .select(column1, column2) \
+            .where(column3__in=[1, 2], column4=1).df()
+
+df2 = MysqlDB.filter(table) \
+            .select(column1, column2) \
+            .where(column3__lt=1, column4__ne=1).df[1:2]
+```
+
+## 功能
+
+- 支持多种数据库系统（如 MySQL、PostgreSQL、StarRocks、Hive、HBase）
+- 简洁的 API
+- 连接池管理
+- 自动转换查询结果
