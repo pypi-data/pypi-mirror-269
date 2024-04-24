@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pytest-mypy-runner
+Version: 0.0.3
+Summary: Run the mypy static type checker as a pytest test case
+License: MIT
+Author: BrandonLWhite
+Author-email: brandonlwhite@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: mypy (>=1.8)
+Requires-Dist: pytest (>=8.0)
+Description-Content-Type: text/markdown
+
+# pytest-mypy-runner
+Run the mypy static type checker as a pytest test case
+
