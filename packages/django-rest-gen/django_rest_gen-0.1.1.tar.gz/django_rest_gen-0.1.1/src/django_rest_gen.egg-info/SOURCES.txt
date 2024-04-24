@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/django_rest_gen/__init__.py
+src/django_rest_gen/__main__.py
+src/django_rest_gen/apigen.py
+src/django_rest_gen/utils.py
+src/django_rest_gen.egg-info/PKG-INFO
+src/django_rest_gen.egg-info/SOURCES.txt
+src/django_rest_gen.egg-info/dependency_links.txt
+src/django_rest_gen.egg-info/top_level.txt
+tests/test_guess_app_path.py
+tests/test_guess_settings_path.py
+tests/test_serializer.py
