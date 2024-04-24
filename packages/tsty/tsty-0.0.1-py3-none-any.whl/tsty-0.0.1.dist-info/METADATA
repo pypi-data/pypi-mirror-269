@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: tsty
+Version: 0.0.1
+Summary: A simple command-line utility for changing your terminal colors
+Home-page: https://github.com/dannguyen/tsty
+Author: Dan Nguyen
+License: Apache License, Version 2.0
+Project-URL: Issues, https://github.dannguyen/dannguyen/tsty/issues
+Project-URL: CI, https://github.com/dannguyen/tsty/actions
+Project-URL: Changelog, https://github.com/dannguyen/tsty/releases
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: click >=8.1
+Requires-Dist: click-default-group >=1.2.3
+Requires-Dist: setuptools
+Requires-Dist: pip
+Requires-Dist: pyreadline3 ; sys_platform == "win32"
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+Requires-Dist: black >=24.2.0 ; extra == 'test'
+Requires-Dist: types-click ; extra == 'test'
+
+# tsty
+
+A simple command-line utility for changing your terminal colors and styles
+
+# TODOS
+
+- make Windows powershell/wsl compatible
+
+
+
+
+Install this tool using `pip`:
+
+
+
+```bash
+pip install tsty
+```
+
+
+Basic usage:
+
+```bash
+$ tsty red   # changes 
+
+## Dev and Testing
+
+
+```sh
+# install locally
+$ pip install -e .
+
+
+# run all tests
+$ pytest
+
+# run just alpha tests
+$ pytest -m 'alpha'
+
+
+# skip alpha tests
+$ pytest -m 'not alpha'
+```
+
+
