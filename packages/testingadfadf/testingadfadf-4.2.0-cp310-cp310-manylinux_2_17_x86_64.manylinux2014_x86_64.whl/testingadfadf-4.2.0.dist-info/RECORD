@@ -1,0 +1,12 @@
+_solib_k8/_U_S_Stensorflow_Uplugin_Czen_Ulibs_Ulinux___Uexternal_Samd_Ublis/libblis-mt.so.4,sha256=i4jKf-Y2o3CIr7gctjCinlPnDeUS9InLtjHg2v8is4o,10267304
+_solib_k8/_U_S_Stensorflow_Uplugin_Czen_Ulibs_Ulinux___Uexternal_Sllvm_Uopenmp/libiomp5.so,sha256=NnAOYe5yKN-v5iPk9BThXFOUm-9Y9Cwqn0USvbk0B5c,809272
+_solib_k8/_U_S_Stensorflow_Uplugin_Czen_Ulibs_Ulinux___Uexternal_Szen_Udnn/libamdZenDNN.so,sha256=agZJzRR6Fu7g8Vf3ROhLluq4Z_hQNMVV0QrPgS1yZcE,43530608
+my_plugin_dir/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+my_plugin_dir/python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+my_plugin_dir/python/test.py,sha256=O0mVIqkg8mD7Ma1mByHNyvc6HD-LRtb0Twhf6Vclvgo,109
+tensorflow-plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tensorflow-plugins/libamdcpu_plugin.so,sha256=70GtUmQ8J-77Y4uf8GG00Z1Z2qdw9AVPLsl9MclsWTM,11467744
+testingadfadf-4.2.0.dist-info/METADATA,sha256=W1_teFGsk5YfiJcv7gzuv3OP6gZIXVPpWttsNUQ9o84,1263
+testingadfadf-4.2.0.dist-info/WHEEL,sha256=9l1ndzONx4ZaWPkwijf7Cfj4e86OKtajPx-bu9J08f4,105
+testingadfadf-4.2.0.dist-info/top_level.txt,sha256=U8pEoRi6q_7JRw0RgHbLWlDkZ8B4LnRU8r-3rIB3uAc,33
+testingadfadf-4.2.0.dist-info/RECORD,,
