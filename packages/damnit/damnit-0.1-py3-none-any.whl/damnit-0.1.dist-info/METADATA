@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: damnit
+Version: 0.1
+Summary: The Data And Metadata iNspection Interactive Thing
+Author-email: Thomas Kluyver <thomas.kluyver@xfel.eu>, Luca Gelisio <luca.gelisio@xfel.eu>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: BSD License
+Requires-Dist: h5netcdf
+Requires-Dist: h5py
+Requires-Dist: pandas
+Requires-Dist: xarray
+Requires-Dist: EXtra-data ; extra == "backend"
+Requires-Dist: ipython ; extra == "backend"
+Requires-Dist: kafka-python ; extra == "backend"
+Requires-Dist: matplotlib ; extra == "backend"
+Requires-Dist: numpy ; extra == "backend"
+Requires-Dist: pyyaml ; extra == "backend"
+Requires-Dist: requests ; extra == "backend"
+Requires-Dist: scipy ; extra == "backend"
+Requires-Dist: supervisor ; extra == "backend"
+Requires-Dist: termcolor ; extra == "backend"
+Requires-Dist: mkdocs ; extra == "docs"
+Requires-Dist: mkdocs-material ; extra == "docs"
+Requires-Dist: mkdocstrings ; extra == "docs"
+Requires-Dist: mkdocstrings-python ; extra == "docs"
+Requires-Dist: pymdown-extensions ; extra == "docs"
+Requires-Dist: adeqt ; extra == "gui"
+Requires-Dist: mplcursors ; extra == "gui"
+Requires-Dist: mpl-pan-zoom ; extra == "gui"
+Requires-Dist: openpyxl ; extra == "gui"
+Requires-Dist: PyQt5 ; extra == "gui"
+Requires-Dist: pyflakes ; extra == "gui"
+Requires-Dist: QScintilla==2.13 ; extra == "gui"
+Requires-Dist: tabulate ; extra == "gui"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: pytest-qt ; extra == "test"
+Requires-Dist: pytest-xvfb ; extra == "test"
+Requires-Dist: pytest-timeout ; extra == "test"
+Requires-Dist: pytest-virtualenv ; extra == "test"
+Project-URL: Home, https://github.com/European-XFEL/DAMNIT
+Provides-Extra: backend
+Provides-Extra: docs
+Provides-Extra: gui
+Provides-Extra: test
+
+# DAMNIT
+
+[![Documentation Status](https://readthedocs.org/projects/damnit/badge/?version=latest)](https://damnit.readthedocs.io/en/latest/?badge=latest)
+
+DAMNIT is a tool developed at the European XFEL to help users create an
+automated overview of their experiment. Check out the documentation for more
+information: https://damnit.rtfd.io
+
