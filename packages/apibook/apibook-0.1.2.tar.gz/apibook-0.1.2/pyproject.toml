@@ -1,0 +1,64 @@
+[project]
+name = "apibook"
+description = "API documentation generator for MdBook"
+version = "0.1.2"
+authors = [
+    { name = "Tom Solberg", email = "me@sbg.dev" },
+]
+dependencies = [
+    "docstring_parser",
+    "rich",
+]
+readme = "README.md"
+keywords = [
+    "mdbook",
+    "apidoc",
+    "documentation",
+    "markdown",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+requires-python = ">=3.9"
+
+[project.license]
+file = "LICENSE-MIT.txt"
+
+[project.urls]
+Repository = "https://github.com/tgolsson/python-apibook"
+Changelog = "https://github.com/tgolsson/python-apibook/tree/main/CHANGELOG.md"
+
+[project.scripts]
+python-apibook = "apibook.cli:main"
+
+[tool.pdm.build]
+includes = [
+    "apibook",
+]
+excludes = [
+    "**/BUILD",
+]
+
+[tool.isort]
+profile = "black"
+known_first_party = [
+    "apibook",
+]
+line_length = 100
+include_trailing_comma = true
+
+[tool.black]
+line-length = 110
+preview = true
+
+[tool.ruff]
+line-length = 110
+
+[build-system]
+requires = [
+    "pdm-backend==2.1.8",
+]
+build-backend = "pdm.backend"
