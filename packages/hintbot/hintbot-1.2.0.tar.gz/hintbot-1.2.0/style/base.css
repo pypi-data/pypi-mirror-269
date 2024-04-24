@@ -1,0 +1,200 @@
+/*
+    See the JupyterLab Developer Guide for useful CSS Patterns:
+
+    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+*/
+.hint {
+  background-color: #f5f5f5;
+  display: flex;
+  margin: 10px auto 10px 72px;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
+  padding: 5px 10px;
+}
+
+.hint-left {
+  display: flex;
+  width: 40%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.help-text {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.hint-type-button {
+  width: 25px;
+  height: 25px;
+  background-color: #bbbaba;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.hint-buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+}
+
+/* .hint-button {
+  display: inline-block;
+  width: 100px;
+  background-color: #e0e0e0;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 6px 10px;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+} */
+
+.hint-button {
+  width: 60%;
+  display: block;
+  background-color: #1976d2;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 6px auto;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.planning {
+  background-color: #81c0ff;
+}
+
+.debugging {
+  background-color: #f87b7b;
+}
+
+.optimizing {
+  background-color: #7fc47f;
+}
+
+.hint-type {
+  line-height: 40px;
+}
+
+:root {
+  --hint-banner-height: 25vh;
+}
+
+#hint-banner-placeholder {
+  width: 100%;
+  height: var(--hint-banner-height);
+  background-color: #fff;
+}
+
+#hint-banner {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 29px;
+  width: calc(100% - 32px);
+  height: calc(var(--hint-banner-height));
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#hint-banner-cancel-button {
+  background-color: #1976d2;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 6px;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#hint-banner p {
+  display: flex;
+  align-items: center;
+}
+
+.loader {
+  width: 24px;
+  height: 24px;
+  margin-right: 50px;
+  border: 3px solid #1976d2;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#hint-banner-buttons-container {
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+}
+
+.hint-banner-button {
+  background-color: #1976d2;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 6px;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.reflection {
+  width: 400px;
+}
+
+.reflection-input {
+  width: 97%;
+  resize: vertical;
+}
