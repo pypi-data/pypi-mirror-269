@@ -1,0 +1,20 @@
+topic: outcomes-billing
+pipeline: outcomes
+description: Outcomes for events sent to sentry
+services:
+  producers:
+    - getsentry/sentry
+    - getsentry/relay
+  consumers:
+    - getsentry/snuba
+    - getsentry/super-big-consumers
+    - getsentry/sentry
+schemas:
+  - version: 1
+    compatibility_mode: none
+    type: json
+    resource: outcomes.v1.schema.json
+    examples:
+      - outcomes/1/
+topic_creation_config:
+  compression.type: lz4
