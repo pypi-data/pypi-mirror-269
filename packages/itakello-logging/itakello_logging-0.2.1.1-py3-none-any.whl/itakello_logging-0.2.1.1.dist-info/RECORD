@@ -1,0 +1,16 @@
+itakello_logging/__init__.py,sha256=iXQJbQ4f1Px-biYmgjVO6jdTE_eFWyviOtnPrHeWGhU,34
+itakello_logging/core.py,sha256=GvPrk4dzh4hVIyhbrxW4TsEoPy9E7p6WOhDjQr73Izc,3635
+itakello_logging/filters/__init__.py,sha256=EEyZh3FyjYMoeuKzoPSt0w4JSF23I1PvWR-hVeGraic,90
+itakello_logging/filters/custom_exclude.py,sha256=UkXUsUU_YRM_4EbF1jsOiGIv9yXXfV2osDruRVm1KA4,268
+itakello_logging/filters/ignore_root.py,sha256=BCm_UQhpKubtVIXn_jFxbx7Mkt0vnG9o6I6IRZDhU08,188
+itakello_logging/formatters/__init__.py,sha256=Sm7pimyuKdmA5CHKEE7BV3AG1SiZDTUjAoKT66JKYwU,38
+itakello_logging/formatters/console.py,sha256=OR9DJEQsYloOiQduS8YodQSHIktgammPgcj5d29cXGY,754
+itakello_logging/loggers/__init__.py,sha256=wzgM-6TrVrTZ0dsrYdXRyaT1SgAy9NFoJuWKdt2Mcnw,40
+itakello_logging/loggers/custom_logger.py,sha256=ZUtHO67z3PVvFw7VqdbeHWoNAv7kKo7npUomU07rMxM,722
+itakello_logging/test_logs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+itakello_logging/test_logs/test_logs.py,sha256=Bg011R4xpfarfagViSgf0jdL_9iZ6A849xS8_is7I-U,458
+itakello_logging-0.2.1.1.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+itakello_logging-0.2.1.1.dist-info/METADATA,sha256=8gBFmouX6Iv58ELDzbGv8PJ7tcHfxwitbqjFjemRMvc,1959
+itakello_logging-0.2.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+itakello_logging-0.2.1.1.dist-info/top_level.txt,sha256=3QCbjGI8dQXQKsXggVJB5_TN9mwt-huqY6iIdWSKRKs,17
+itakello_logging-0.2.1.1.dist-info/RECORD,,
