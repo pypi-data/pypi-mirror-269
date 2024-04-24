@@ -1,0 +1,12 @@
+name: seqnado
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - snakemake>8,<9
+  - python>=3.11
+  - pip:
+    - tracknado
+    - wget
+    - snakemake-executor-plugin-slurm
