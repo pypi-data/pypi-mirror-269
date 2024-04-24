@@ -1,0 +1,17 @@
+python-dateutil
+pydantic
+
+[dev]
+build
+pre-commit
+pylint
+pytest
+pytest-cov
+pytest-randomly
+setuptools
+
+[testing]
+bw_simapro_csv
+pytest
+pytest-cov
+python-coveralls
