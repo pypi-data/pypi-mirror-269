@@ -1,0 +1,3 @@
+[console_scripts]
+align_filenames = methlab.cli:align
+
