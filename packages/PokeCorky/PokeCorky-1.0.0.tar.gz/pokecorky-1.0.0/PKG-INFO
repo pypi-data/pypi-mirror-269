@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: PokeCorky
+Version: 1.0.0
+Summary: Una biblioteca que contiene la clase RandomPokemon para generar un pokemon aleatorio
+Author: Victor Diaz
+Author-email: 20222_diaz@tesch.edu.mx
+Requires-Dist: pandas
