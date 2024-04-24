@@ -1,0 +1,14 @@
+shapeGMMTorch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shapeGMMTorch/generate_points.py,sha256=y6-yCNoNXYN_3B2J16cCB0DcmHDFhntVBGU-D9mXsDk,1683
+shapeGMMTorch/plots.py,sha256=XQtCBatliviJuniszXMd9apvib0CIEz6s05vJlzYw_o,3013
+shapeGMMTorch/scripts.py,sha256=ZZjZr1okRgjm3wScU1C4bCWPUjjGN3VQoWk4lKwOtnM,11840
+shapeGMMTorch/similarities.py,sha256=jXbl5GqV6TdlYRaxagJCgs9xSu81Kbdy1nLnIRBXI3Q,6772
+shapeGMMTorch/torch_align.py,sha256=f0Gk6-o0BSJDMdzQyko5DwidR1RhAlUBaJyeL7NiPCc,14547
+shapeGMMTorch/torch_kronecker_sgmm_lib.py,sha256=SUCzr5cvQUaqp-DG0BJa3IdXU-CzAQy41NtJ-3v4s_g,6666
+shapeGMMTorch/torch_sgmm.py,sha256=I6cnHA3e5GrQnMIqgU9lnPcfPP6DRO_YzrHyuaRpF-s,21764
+shapeGMMTorch/torch_uniform_sgmm_lib.py,sha256=Oi3ILBns26DVbYd6U9Ygm6npYOzntRfh42s57LO_bzM,5781
+shapeGMMTorch-1.7.1.dist-info/LICENSE,sha256=wSDfloX5wowP-cYTg5gSGwtWK4IDJprRokjI8XkA5ps,1070
+shapeGMMTorch-1.7.1.dist-info/METADATA,sha256=Fae4oubX2h8w5bHieX6IZ2WhUhriraC1a98xpTCipTU,7855
+shapeGMMTorch-1.7.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+shapeGMMTorch-1.7.1.dist-info/top_level.txt,sha256=QMBanMDAtlaFMQHGXOVuUYdssWFENg7xBo8RXGMsd-M,14
+shapeGMMTorch-1.7.1.dist-info/RECORD,,
