@@ -1,0 +1,2 @@
+[console_scripts]
+pc_perf = pc_perf:main
