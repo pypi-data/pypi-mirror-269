@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: robotframework-parrot-ocrlib
+Version: 1.0.3
+Summary: OCR Library to recognize text within a digital image
+Home-page: https://github.com/zilogic-systems/parrot
+Author: Zilogic Systems
+Author-email: code@zilogic.com
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pillow
+Requires-Dist: pytesseract
+Requires-Dist: numpy
+Requires-Dist: robotframework
+
+# OCR Library
+
+## Installation
+
+This OCR Library uses Tesseract internally. Please install Tesseract from
+https://github.com/tesseract-ocr/tesseract or through your Operating Systems
+package manager.
+
+To install from package registry use the following command:
+
+```
+$ pip install robotframework-parrot-ocrlib
+```
+
+To install from git repo use the following command:
+
+```
+$ pip install .
+```
+    
+## Example
+
+Example of using the library in Robot Framework is available `example.robot`.
