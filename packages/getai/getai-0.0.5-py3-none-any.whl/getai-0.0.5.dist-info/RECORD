@@ -1,0 +1,12 @@
+getai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+getai/__main__.py,sha256=jipsDgXNM_Tvn_lAFof5yv3B-liyzU617yKkHCQ8DjU,133
+getai/dataset_downloader.py,sha256=CoDdPvoPrbYcx8PGovHXx1_kzJAdBOmbBHK9mlKWiEg,13580
+getai/getai_config.yaml,sha256=I6jXh3Fzh5qK03OAojQWt-oJa4HfysQacnupvRrY4EQ,37
+getai/main.py,sha256=LQIx2GlQJwRTYAtgM9GnRYdNESHrojb6H-2_DktLAHQ,7471
+getai/model_downloader.py,sha256=Am611WIvsNiUjBnjFcEBeexDY8z8NcggoRhYaXCQjjs,27604
+getai/utils.py,sha256=Q259x7B0jwFZvqAINNyd95WYsq4zQbaK1Y-gVSkym5U,3088
+getai-0.0.5.dist-info/LICENSE,sha256=oPUVR0tPhVgOjI2tk5FTawFOFQMz4CmpSz24dJolISI,1247
+getai-0.0.5.dist-info/METADATA,sha256=5QimrSri1gLcBsjB8fedi-oxlj6TlnjWrI877EH9R88,9357
+getai-0.0.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+getai-0.0.5.dist-info/entry_points.txt,sha256=ePg5qvTD5WPrrCozhfgjfGepYZ_4O5xy1sJ7RYzL_K8,44
+getai-0.0.5.dist-info/RECORD,,
