@@ -1,0 +1,13 @@
+setuptools
+wheel
+pydantic>=2.0
+numpy>=1.19
+click
+
+[dev]
+black==22.8.0
+isort
+pytest
+pytest-cov
+sphinx
+sphinx-rtd-theme
