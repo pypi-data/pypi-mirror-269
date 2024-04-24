@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "dagster-scaleway"
+# Version will be updated by CI
+version = "0.1.3"
+description = ""
+authors = ["Andy Méry <amery@scaleway.com>"]
+readme = "README.md"
+license = "Apache-2.0"
+packages = [{ include = "dagster_scaleway" }]
+
+[tool.poetry.scripts]
+dagster-scaleway = "dagster_scaleway.cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+scaleway = "^2.1.0"
+dagster = "^1.6.0"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.15.9"
+pre-commit = "^2.21.0"
+dagit = "^1.6.0"
+ruff = "^0.1.6"
+
+[tool.poetry.group.examples.dependencies]
+pandas = "^1.5.2"
+dagster-postgres = "^0.22"
+dagster-aws = "^0.22"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
