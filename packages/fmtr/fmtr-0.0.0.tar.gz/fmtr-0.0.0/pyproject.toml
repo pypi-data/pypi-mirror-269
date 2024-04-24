@@ -1,0 +1,5 @@
+[project]
+name = "fmtr"
+authors = [{name = "Frontmatter", email = "frisky.sanchez@mask.pro.fmtr.dev"}]
+version = "0.0.0"
+description = "Coming soon"
