@@ -1,0 +1,2 @@
+[console_scripts]
+min_vec = min_vec.api.http_api:main
