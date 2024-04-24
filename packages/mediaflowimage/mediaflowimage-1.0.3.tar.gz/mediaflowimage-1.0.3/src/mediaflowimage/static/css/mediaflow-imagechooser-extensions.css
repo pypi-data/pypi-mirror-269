@@ -1,0 +1,14 @@
+@media screen and (min-width: 56.25em) {
+  .side-panel-open .tab-content.mf-wide {
+      width: 100%;
+  }
+}
+
+#mf-fileselector .mf-search-wrapper .mf-search-bar {
+  width: 200px !important;
+  padding: 0 3px !important;
+  min-height: 29px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  font-size: 13px;
+}
