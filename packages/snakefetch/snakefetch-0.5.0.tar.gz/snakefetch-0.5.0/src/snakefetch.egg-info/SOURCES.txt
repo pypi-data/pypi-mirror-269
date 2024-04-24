@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/snakefetch/__init__.py
+src/snakefetch/snakefetch.py
+src/snakefetch.egg-info/PKG-INFO
+src/snakefetch.egg-info/SOURCES.txt
+src/snakefetch.egg-info/dependency_links.txt
+src/snakefetch.egg-info/top_level.txt
+tests/test_snakefetch.py
