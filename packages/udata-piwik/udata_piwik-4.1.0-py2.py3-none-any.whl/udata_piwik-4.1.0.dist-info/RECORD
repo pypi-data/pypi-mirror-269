@@ -1,0 +1,14 @@
+udata_piwik/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+udata_piwik/client.py,sha256=LSLZLlR8PBtaJjRKBUwwrN0p1372hDGu3TIrSalU22U,2717
+udata_piwik/factories.py,sha256=iZ5SrUIRry2ukb8nedYEBzBXY2wYtIWdMq3Rb-PRfMA,428
+udata_piwik/models.py,sha256=OO2kvB15NriorzJ5xq72sEZvhxGSZWheKHVFfivixV8,339
+udata_piwik/settings.py,sha256=-qGt0tFVrkZJMjompnjjmQX73olNvGI6ceVeix1Auww,692
+udata_piwik/tasks.py,sha256=lGOSHvnLw3ZAWHA5EZWppOpeFqj2Rn6YUZl11waiRgU,2175
+udata_piwik/views.py,sha256=AMBHivXLIDkNPmwLovD794iaSjQo_Bnl6zZvpT0hTdc,279
+udata_piwik/migrations/2015-10-01-fix-resources-metrics.js,sha256=8GWUKfLxMsXwXT3t5OO0pvlJCl8J6hpP-BUML99DFWw,199
+udata_piwik/templates/piwik.html,sha256=1KA-Yl_VS4gsq8WpGD5mIbVtxApK1gPztaK8xDs2poM,2015
+udata_piwik-4.1.0.dist-info/METADATA,sha256=YOKSXHUMB21vzyMWqbIAjvQk2o2VOba6Ny9l63gbuys,9321
+udata_piwik-4.1.0.dist-info/WHEEL,sha256=-G_t0oGuE7UD0DrSpVZnq1hHMBV9DD2XkS5v7XpmTnk,110
+udata_piwik-4.1.0.dist-info/entry_points.txt,sha256=0KSxhYoKumJP8GU4qqzIrh5gELrWRyMv4lUxXb8tvfs,124
+udata_piwik-4.1.0.dist-info/top_level.txt,sha256=OzcCbU-GK4Jh-6lVOLkGQjNDcwtsupESGM_aqCNoPbY,12
+udata_piwik-4.1.0.dist-info/RECORD,,

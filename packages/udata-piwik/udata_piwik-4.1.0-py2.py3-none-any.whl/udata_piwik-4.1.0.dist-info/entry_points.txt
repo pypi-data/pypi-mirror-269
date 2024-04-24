@@ -1,0 +1,8 @@
+[udata.models]
+piwik = udata_piwik.models
+
+[udata.tasks]
+piwik = udata_piwik.tasks
+
+[udata.views]
+piwik = udata_piwik.views
