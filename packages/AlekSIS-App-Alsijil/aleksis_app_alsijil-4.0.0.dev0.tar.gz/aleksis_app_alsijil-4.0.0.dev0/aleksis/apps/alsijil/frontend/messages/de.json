@@ -1,0 +1,81 @@
+{
+  "alsijil": {
+    "absence": {
+      "menu_title": "Abwesenheit eintragen"
+    },
+    "all_lessons": {
+      "menu_title": "Alle Stunden"
+    },
+    "coursebook": {
+      "filter": {
+        "courses": "Kurse",
+        "filter_for_obj": "Nach Gruppe und Kurs filtern",
+        "groups": "Gruppen",
+        "missing": "Nur unvollständige Stunden anzeigen",
+        "own": "Nur eigene Stunden anzeigen"
+      },
+      "menu_title": "Kursbuch",
+      "no_data": "Keine Stunden der ausgewählten Gruppen und Kurse im aktuellen Zeitraum",
+      "no_results": "Keine Suchergebnisse für {search}",
+      "notices": {
+        "future": "Diese Stunde darf nicht bearbeitet werden, da sie in der Zukunft liegt.",
+        "no_entry": "Für diese Stunde gibt es noch keinen Eintrag."
+      },
+      "page_title": "Kursbuch für {name}",
+      "status": {
+        "available": "Kursbucheintrag vorhanden",
+        "cancelled": "Stunde fällt aus",
+        "missing": "Kursbucheintrag fehlt",
+        "pending": "Stunde in der Zukunft",
+        "running": "Stunde läuft",
+        "substitution": "Vertretungsstunde"
+      },
+      "summary": {
+        "group_note": {
+          "empty": "Keine Gruppennotiz",
+          "label": "Gruppennotiz",
+          "value": "GN: {groupNote}"
+        },
+        "homework": {
+          "empty": "Keine Hausaufgaben",
+          "label": "Hausaufgaben",
+          "value": "HA: {homework}"
+        },
+        "topic": {
+          "label": "Thema",
+          "status": {
+            "error": "Beim Speichern des Themas ist ein Fehler aufgetreten: {error}",
+            "success": "Thema erfolgreich gespeichert"
+          }
+        }
+      },
+      "title_plural": "Kursbuch"
+    },
+    "excuse_types": {
+      "menu_title": "Entschuldigungsarten"
+    },
+    "extra_marks": {
+      "menu_title": "Zusätzliche Markierungen"
+    },
+    "group_roles": {
+      "menu_title_assign": "Gruppenrollen zuweisen",
+      "menu_title_manage": "Gruppenrollen verwalten"
+    },
+    "groups": {
+      "menu_title": "Meine Gruppen"
+    },
+    "lesson": {
+      "menu_title": "Aktuelle Unterrichtsstunde"
+    },
+    "menu_title": "Klassenbuch",
+    "my_overview": {
+      "menu_title": "Meine Übersicht"
+    },
+    "persons": {
+      "menu_title": "Meine Schüler*innen"
+    },
+    "week": {
+      "menu_title": "Aktuelle Woche"
+    }
+  }
+}
