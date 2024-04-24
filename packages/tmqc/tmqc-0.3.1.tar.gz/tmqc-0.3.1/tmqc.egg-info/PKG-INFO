@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: tmqc
+Version: 0.3.1
+Summary: tian ma quant cloud
+Home-page: https://github.com/tmqc/tmqc
+Author: tmqc
+Author-email: tmqc@gmail.com
+License: LGPT
+Requires-Python: >=3.11.4
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: akshare
+Requires-Dist: beautifulsoup4
+Requires-Dist: better_exceptions
+Requires-Dist: chardet
+Requires-Dist: colorama
+Requires-Dist: demjson
+Requires-Dist: easyutils
+Requires-Dist: grpcio
+Requires-Dist: httpx
+Requires-Dist: matplotlib
+Requires-Dist: mysql_connector_repackaged
+Requires-Dist: mysql-connector-python
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: protobuf
+Requires-Dist: psutil
+Requires-Dist: pycryptodome
+Requires-Dist: pymongo
+Requires-Dist: PyMySQL
+Requires-Dist: python_dateutil
+Requires-Dist: redis
+Requires-Dist: requests
+Requires-Dist: scipy
+Requires-Dist: stompest
+Requires-Dist: Twisted
+Requires-Dist: urllib3
+Requires-Dist: xlrd
+Requires-Dist: yarl
+
+abc
