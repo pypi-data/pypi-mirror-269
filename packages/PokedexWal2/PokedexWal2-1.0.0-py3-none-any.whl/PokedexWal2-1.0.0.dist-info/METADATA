@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: PokedexWal2
+Version: 1.0.0
+Summary: Libreria para generar un Pokémon aleatorio
+Author: El Wal2
+Author-email: 202224042_marin@tesch.edu.mx
+Requires-Dist: pandas
+
