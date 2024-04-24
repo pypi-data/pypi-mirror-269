@@ -1,0 +1,9 @@
+flask_statgraph/__init__.py,sha256=jRyC5-fcjozb9L0oz2KeSKkdyi6FNjmqJK1NrqYl1Dk,8368
+flask_statgraph/utils.py,sha256=XE5ViT6AwUg2kPPNe2rt9Quj-2hibFAN6goOeFS8GyE,3534
+flask_statgraph/templates/flask_statistics_index.html,sha256=ZLbiWAGGC4HbOkymBBfyHeu3MmsNjYAlD-0UBa37aFQ,4107
+flask_statgraph/templates/flask_statistics_layout.html,sha256=LfAD2rmGIIw8zkPzEcR6717IKRQaVfIbRcNaZ1ZQs5M,1329
+flask_statgraph/templates/flask_statistics_single_view.html,sha256=Kiwo-Qns3rfreu2WnuSsWHX5gSqgypCnZ4JhV96yxvE,3360
+flask_statgraph-1.0.3.dist-info/METADATA,sha256=zJVBwDKeSVn39Yjhh3IECqk3Ci9d1mbeXIa6MT4d7wY,4797
+flask_statgraph-1.0.3.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+flask_statgraph-1.0.3.dist-info/licenses/LICENSE,sha256=nQOiVrDNbidkFVOyL4EjRNUH0DINldWksErkei9FmKU,1068
+flask_statgraph-1.0.3.dist-info/RECORD,,
