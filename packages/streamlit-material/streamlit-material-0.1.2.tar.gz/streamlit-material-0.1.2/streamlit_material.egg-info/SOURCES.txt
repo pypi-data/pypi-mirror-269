@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+setup.py
+streamlit_material/__init__.py
+streamlit_material.egg-info/PKG-INFO
+streamlit_material.egg-info/SOURCES.txt
+streamlit_material.egg-info/dependency_links.txt
+streamlit_material.egg-info/requires.txt
+streamlit_material.egg-info/top_level.txt
+streamlit_material/frontend/dist/index.html
+streamlit_material/frontend/dist/vite.svg
+streamlit_material/frontend/dist/assets/index-485c45ab.css
+streamlit_material/frontend/dist/assets/index-fafa4441.js
