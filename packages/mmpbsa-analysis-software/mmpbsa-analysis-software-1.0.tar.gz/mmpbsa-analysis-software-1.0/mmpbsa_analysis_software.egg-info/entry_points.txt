@@ -1,0 +1,2 @@
+[console_scripts]
+mmpbsa-analysis = main:run_mmpbsa_analysis
