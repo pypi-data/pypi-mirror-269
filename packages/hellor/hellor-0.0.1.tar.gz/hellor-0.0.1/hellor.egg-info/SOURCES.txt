@@ -1,0 +1,9 @@
+README.md
+setup.py
+hello/__init__.py
+hello/main.py
+hellor.egg-info/PKG-INFO
+hellor.egg-info/SOURCES.txt
+hellor.egg-info/dependency_links.txt
+hellor.egg-info/entry_points.txt
+hellor.egg-info/top_level.txt
