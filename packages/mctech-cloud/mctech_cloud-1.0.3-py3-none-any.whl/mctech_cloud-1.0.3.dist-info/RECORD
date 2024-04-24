@@ -1,0 +1,8 @@
+mctech_cloud/__init__.py,sha256=Xxh1j5dRFjjsyIRCdPu2t81Do6GN0mPF-dYndabkKZ4,59
+mctech_cloud/app_server.py,sha256=3mImsijv7-bs0s5foJ__y4uQ0Ss3t7oI7JaQ-ZxyMIA,1663
+mctech_cloud/middlewares/__init__.py,sha256=AA5My4kIxJO_VwSvR63sXw6HxiZYWAPa807_ajnubaM,679
+mctech_cloud/middlewares/service_context_middleware.py,sha256=rrNmkID_3B4JIxkLgtdMXq3ILKIdsjJDivw0o9yDc7E,1790
+mctech_cloud-1.0.3.dist-info/METADATA,sha256=nF0zZWUtpUr9BJDZtwb5pDFiJmer3J7B5B3r5FNV4h4,285
+mctech_cloud-1.0.3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+mctech_cloud-1.0.3.dist-info/top_level.txt,sha256=xdDQeY-4S1xEyIgYOac17D_qdekMCw0N77R1iYEl3BE,13
+mctech_cloud-1.0.3.dist-info/RECORD,,
