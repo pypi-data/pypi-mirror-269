@@ -1,0 +1,72 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "aql"
+authors = [
+    {name = "Amethyst Reese", email="amethyst@n7.gg"},
+]
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries",
+]
+dynamic = ["version", "description"]
+requires-python = ">=3.8"
+dependencies = [
+    "attrs >= 22",
+]
+
+[project.optional-dependencies]
+all = ["aiomysql", "aiosqlite"]
+sqlite = ["aiosqlite"]
+mysql = ["aiomysql"]
+dev = [
+    "aiomysql==0.2.0",
+    "aiosqlite==0.20.0",
+    "aiounittest==1.4.2",
+    "attribution==1.7.1",
+    "attrs==23.2.0",
+    "black==24.4.0",
+    "coverage==7.5.0",
+    "flake8==7",
+    "flake8-bugbear==24.4.21",
+    "flit==3.9.0",
+    "mypy==1.9.0",
+    "usort==1.0.8.post1",
+]
+docs = [
+    "sphinx==7.3.7",
+    "sphinx-mdinclude==0.6.0",
+]
+
+[project.urls]
+Documentation = "https://aql.omnilib.dev/en/latest/"
+Github = "https://github.com/omnilib/aql"
+
+[tool.flit.sdist]
+exclude = [
+    ".github/",
+]
+
+[tool.coverage.run]
+branch = true
+include = ["aql/*"]
+omit = ["aql/tests/*"]
+
+[tool.coverage.report]
+fail_under = 93
+precision = 1
+show_missing = true
+skip_covered = true
+
+[tool.attribution]
+name = "aql"
+package = "aql"
+signed_tags = true
+version_file = true
+ignored_authors = ["dependabot", "pyup.io"]
