@@ -1,0 +1,1 @@
+from.rando_pokemon import RandomPokemon
