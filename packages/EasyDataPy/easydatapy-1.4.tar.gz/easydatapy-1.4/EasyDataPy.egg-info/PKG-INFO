@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: EasyDataPy
+Version: 1.4
+Summary: EasyDataPy through EasyData API key of State Bank of Pakistan helps to obtain information on and download a series of interest in Python for further analysis
+Author: Dr. Syed Ateeb Akhter Shah
+Author-email: syed.ateeb@wmich.edu
+Keywords: EasyData,EasyDataPy
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
+Requires-Dist: plotly
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: readme_md
+
+# EasyDataPy
+
+EasyDataPy aKa EDpy for short, is a unofficial Python library/package to read in data from EasyData platform of the State Bank of Pakistan
+
+# Details about EasyData Database of the State Bank of Pakistan
+
+EasyData platform of the State Bank of Pakistan is the largest repository of Macroeconomic time-series. It has more than 2 million observations covering more than 13,000 time-series related to economy of Pakistan.
+
+# About the Library/Package
+
+This package is intended to identify a session with EasyData API key, obtain information about a particular series of interest, and download a series of interest to Python for further analysis. Although, I could have performed basic time-series in Python such as:
+
+1. Unit-Root tests
+2. Seasonality tests
+3. Cointegration tests and Cointegrated vector autoregressive model
+4. Autoregressive and Vector Autoregressive models
+5. Forecasting using Machine Learning and Dynamic Factor models (Rolling and Fixed Window Forecast)
+6. In and Out-of-Sample Forecasts
+
+But this package is not intended to conduct these analysis but I am programming another one, which will be able to perform all of these operations. Stay Tuned!
+
+# How to install and use
+
+Inside the Python you just need to type "pip install EasyDataPy"
+
+# How to use the functions inside this library/package
+
+## Verifying EasyData API Key
+
+EasyData_key_setup("C10D3D29160CE5693F56AA9846ABB2C423D8B123") <- type in/paste your EasyData API Key!
+
+## Finding if the EasyData API Key has been verified
+
+session_has_key()
+
+## Getting the entered key for further use
+
+get_Easydata_key()
+
+##  Downloads Weighted-average Overnight Repo Rate series as a Pandas dataframe 
+
+data_frame = download_series("TS_GP_IR_REPOMR_D.ORR",Easydata_key, "2015-05-25" ,"2023-12-20", "csv")
+
+## Tranforming output of download_series function, that is object called data_frame into a usable time-series
+
+build_time_series(data_frame)
+
+## Plot Time-Series Graph for the downloaded time-series
+
+plot_time_series(data_frame)
+
+## To download a dataset containing multiple time-series
+
+# We present an example that downloads three time-series from Easydata database. It is assumed that a researcher is
+# expected to know the sample period and variables needed for the study. Just remove the #(hash) below:
+
+# series_ids = ["TS_GP_BOP_BPM6SUM_M.P00010", "TS_GP_RL_LSM1516_M.LSM000160000", "TS_GP_PT_CPI_M.P00011516"]
+# start_date = "2016-07-31"
+# end_date = "2023-11-30"
+
+# The data has to be saved in an object, we call that object combined_dataframe below:
+
+# combined_dataframe = download_dataset(series_ids, Easydata_key, start_date, end_date)
+
+# combined_dataframe
