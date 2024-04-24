@@ -1,0 +1,2 @@
+[console_scripts]
+create_nextapi = src.next_api_starter.create_nextapi:main
