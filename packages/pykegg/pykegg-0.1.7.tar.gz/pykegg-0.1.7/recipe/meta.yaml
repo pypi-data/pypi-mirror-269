@@ -1,0 +1,46 @@
+{% set name = "pykegg" %}
+{% set version = "0.1.6" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pykegg-{{ version }}.tar.gz
+  sha256: 0d70be0dec36317a014d932ae727a88c56f823dd00dc3db8133a89cd45d586bc
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
+
+requirements:
+  host:
+    - python >=3.7
+    - hatchling
+    - pip
+  run:
+    - python >=3.7
+    - python-igraph
+    - pandas
+    - biopython
+    - requests
+    - py-opencv
+    - matplotlib
+
+test:
+  imports:
+    - pykegg
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  summary: Visualizing and analyzing KEGG information in Python
+  license: EPL-2.0
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - noriakis
