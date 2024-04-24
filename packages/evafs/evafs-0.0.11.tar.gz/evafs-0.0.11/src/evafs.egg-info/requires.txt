@@ -1,0 +1,14 @@
+typer[all]
+gradio
+pydantic
+dagster
+ray[serve]
+fastapi
+
+[:python_version < "3.10"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
