@@ -1,0 +1,9 @@
+README.md
+setup.py
+PetsisDevUtils.egg-info/PKG-INFO
+PetsisDevUtils.egg-info/SOURCES.txt
+PetsisDevUtils.egg-info/dependency_links.txt
+PetsisDevUtils.egg-info/requires.txt
+PetsisDevUtils.egg-info/top_level.txt
+utils/__init__.py
+utils/funcs.py
