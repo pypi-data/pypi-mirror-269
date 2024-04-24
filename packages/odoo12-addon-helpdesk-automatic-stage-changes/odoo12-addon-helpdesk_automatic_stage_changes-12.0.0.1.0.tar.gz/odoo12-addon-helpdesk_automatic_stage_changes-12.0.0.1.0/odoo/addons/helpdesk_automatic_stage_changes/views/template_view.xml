@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets_backend" name="helpdesk_automatic_stage_changes assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/helpdesk_automatic_stage_changes/static/src/css/font-awesome.min.css"/>
+            <link rel="stylesheet" href="/helpdesk_automatic_stage_changes/static/src/css/list_renderer.css"/>
+            <script type="text/javascript" src="/helpdesk_automatic_stage_changes/static/src/js/list_renderer.js"></script>
+        </xpath>
+    </template>
+</odoo>
