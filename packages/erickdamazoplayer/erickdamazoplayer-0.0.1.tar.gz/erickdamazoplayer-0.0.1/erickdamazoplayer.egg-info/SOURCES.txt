@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+erickdamazoplayer/__init__.py
+erickdamazoplayer/lala.py
+erickdamazoplayer/player.py
+erickdamazoplayer.egg-info/PKG-INFO
+erickdamazoplayer.egg-info/SOURCES.txt
+erickdamazoplayer.egg-info/dependency_links.txt
+erickdamazoplayer.egg-info/top_level.txt
