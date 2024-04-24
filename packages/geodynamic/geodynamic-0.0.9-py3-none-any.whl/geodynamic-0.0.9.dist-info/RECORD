@@ -1,0 +1,17 @@
+geodynamic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geodynamic/manim_dynamic.py,sha256=0Q4Qhh0SC25bg4YN8eG2T9eLTEqzyFmYL40i_E0b5tk,37162
+geodynamic/geo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geodynamic/geo/construction.py,sha256=zSbdEkUVYtNEtvG7DjxtmGnZmIBxt4eMufMWbFmIEws,10547
+geodynamic/geo/lib_commands.py,sha256=GVe80JZaBthMWj-AeImbDbAHDjlEEDeVs8EeKWyvYYc,24312
+geodynamic/geo/lib_elements.py,sha256=mMGxvvcWk0gdkQAPZ97n6GyPmv0QAWJikcAMVWfZYFA,12974
+geodynamic/geo/lib_vars.py,sha256=PZQPwnhE1yGLcMsnRQi2hdJ8iTH3aoEwIMK7pYbbvKg,1752
+geodynamic/parsers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geodynamic/parsers/ggb_generator.py,sha256=7lLNGmFzAFZO9T4VAvmLswYShw6n4mJ-khKDthjTuXs,13622
+geodynamic/parsers/ggb_parser.py,sha256=sjWok3jbYJM2bn4CVv0_Zm6AIgl4-_Rjhb7bdB1wUJ0,7381
+geodynamic/parsers/short_parser.py,sha256=cBeQpRsGNmAvHfwtOt4Ht4Kb_XCKFz_Z3xXjPwQojmQ,3344
+geodynamic/parsers/svg_parser.py,sha256=4L95B4yCP0IMWidZut4y-EzEBd3uEgzskO79wZZtL9s,4142
+geodynamic-0.0.9.dist-info/LICENSE.txt,sha256=ve7oXyksGsK2xJYbtSrsgQ9fUc6NEHo7XgQZX5c3X-s,18
+geodynamic-0.0.9.dist-info/METADATA,sha256=0KKtBkj8GOc7A56Lj_q1eyHnmMXNvmneEsTEjNx6egc,1103
+geodynamic-0.0.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+geodynamic-0.0.9.dist-info/top_level.txt,sha256=dW9uFdV1DZxH9FHp4_haXmm3YElNFw_KZwfw6zmx05Y,11
+geodynamic-0.0.9.dist-info/RECORD,,
