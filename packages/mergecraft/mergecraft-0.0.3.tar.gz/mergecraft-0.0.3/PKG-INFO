@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: mergecraft
+Version: 0.0.3
+Summary: A command-line tool to merge files into a temporary file and open in VS Code.
+Home-page: https://github.com/josenerydev/mergecraft
+Author: José Nery
+Author-email: josenerydev@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pathspec
+
+# mergecraft 🚀
+
+`mergecraft` is a command-line tool to merge files into a temporary file and open in VS Code.
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+python -m venv env
+# ou se python não funcionar, tente python3
+# python3 -m venv env
+
+source env/Scripts/activate
+
+pip install -r requirements.txt
+
+.\env\Scripts\Activate.ps1
+
+
+deactivate
+
+choco install poppler
+
+Instalar o Projeto Localmente:
+Instale o seu projeto localmente usando o setup.py:
+Copy code
+pip install .
+
+Usar o Comando mergecraft:
+Depois de instalar o projeto, você pode usar o comando mergecraft em qualquer lugar do seu sistema:
+css
+Copy code
+mergecraft [argumentos]
