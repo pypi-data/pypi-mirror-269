@@ -1,0 +1,11 @@
+imgmagic/__init__.py,sha256=74QY0Sg9Y4-7YAHku1RYcKdxZL4Pcvjc7a1fPYNPLn4,393
+imgmagic/colors.py,sha256=E4PlcOrASd9V8Gmqg6crHr0wGUcxMtNnq678bo-aPBk,673
+imgmagic/display.py,sha256=OPGVurZCzDMViFTL1PdUk7QZpP1-nvjyWH2AGH-sI7E,1446
+imgmagic/filter.py,sha256=M-sD5BFkmG3c1GHgI2pd-qi9o7UT7s7QXToTP5t8mX4,11895
+imgmagic/fourier.py,sha256=t8-HJDyAWnKJVwETUGaf6I-EUjOdz5lJfRodk9Pwz0E,13009
+imgmagic/geometric.py,sha256=PPGCsIiBtKx6O-NFwJkjbpRuqJWFW7n2h4hZI8fMRgA,3987
+imgmagic/histogram.py,sha256=UAuS9D0_P-5u3YKTlbUWtOoYcWDkmgBzSfybgeoM1F4,4352
+imgmagic-0.1.0.dist-info/METADATA,sha256=0TWL0_Owm6IUlNKWU8Dt5UzPHn12Nm0TOW2lKdLdf3A,294
+imgmagic-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+imgmagic-0.1.0.dist-info/top_level.txt,sha256=0NkjpAFNl2tXByLndZgmnxt6LKEwAu0X41gVoFXjlmo,9
+imgmagic-0.1.0.dist-info/RECORD,,

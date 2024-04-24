@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: imgmagic
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy (==1.23.4)
+Requires-Dist: scipy (==1.11.4)
+Requires-Dist: matplotlib (==3.5.1)
+Requires-Dist: pillow (==9.0.1)
+Requires-Dist: protobuf (<4)
+
+UNKNOWN
+
