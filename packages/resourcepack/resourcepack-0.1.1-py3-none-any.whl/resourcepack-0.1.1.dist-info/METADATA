@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: resourcepack
+Version: 0.1.1
+Summary: Basic python functions to connect to databases and other essential stuff.
+Author: Patrick Lucescu
+Author-email: patricklucescu@outlook.com
+License: MIT
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: clickhouse-driver
+
+# resourcepack
+
+Basic python functions to connect to databases and other essential stuff.
