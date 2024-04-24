@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: Pokelib
+Version: 1.0.0
+Summary: Libreria para crear un pokemon aleatorio.
+Author: Rodrigo Gonzalez
+Author-email: 202224040_gonzalez@tesch.edu.mx
+Requires-Dist: pandas

@@ -1,0 +1,10 @@
+README.md
+setup.py
+Pokelib/__init__.py
+Pokelib/pokemon.csv
+Pokelib/random_pokemon.py
+Pokelib.egg-info/PKG-INFO
+Pokelib.egg-info/SOURCES.txt
+Pokelib.egg-info/dependency_links.txt
+Pokelib.egg-info/requires.txt
+Pokelib.egg-info/top_level.txt
