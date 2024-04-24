@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: silico
+Version: 0.2.0
+Summary: Python package to handle in silico experiments
+Home-page: https://github.com/Dih5/silico
+Author: Dih5
+Author-email: dihedralfive@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: click
+Requires-Dist: tqdm
+Provides-Extra: docs
+Requires-Dist: nbsphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: IPython ; extra == 'docs'
+Provides-Extra: progress
+Requires-Dist: tqdm ; extra == 'progress'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# silico
+[![Github release](https://img.shields.io/github/release/Dih5/silico.svg)](https://github.com/Dih5/silico/releases/latest)
+[![PyPI](https://img.shields.io/pypi/v/silico.svg)](https://pypi.python.org/pypi/silico)
+
+[![license MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Dih5/silico/master/LICENSE.txt)
+
+[![Documentation Status](https://readthedocs.org/projects/silico/badge/?version=latest)](http://silico.readthedocs.io/en/latest/?badge=latest)
+
+Python package to handle in silico experiments
+
+
+## Installation
+Assuming you have a [Python3](https://www.python.org/) distribution with [pip](https://pip.pypa.io/en/stable/installing/):
+
+```bash
+pip3 install silico
+```
+
+## Command line interface
+To run the command line interface see:
+```bash
+silico --help
+```
+
+If the bin is not in the path you can do instead:
+```bash
+python -m silico --help
+```
