@@ -1,0 +1,15 @@
+platformdirs==4.2.1
+requests==2.31.0
+tqdm==4.66.2
+
+[csv]
+pyarrow==16.0.0
+
+[dev]
+minder.research-data-snapshots[lint,typecheck]
+
+[lint]
+ruff
+
+[typecheck]
+pyright
