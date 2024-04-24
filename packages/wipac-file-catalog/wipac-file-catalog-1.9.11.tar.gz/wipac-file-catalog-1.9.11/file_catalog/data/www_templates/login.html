@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}File Catalog - Login{% end %}
+
+{% block head_scripts %}
+<style>
+.error {
+    color: red;
+    font-size: 14pt;
+}
+</style>
+{% end %}
+
+{% block login %}{% end %}
+
+{% block content %}
+<h2>Login to access the file catalog</h2>
+{% if failed %}
+    <div class="error">Login failed - bad username or password.</div>
+{% end %}
+<form action="/login" method="post">
+    <input type="hidden" name="next" value="{{ redirect }}" />
+    <input type="hidden" name="secure" value="{{ secure }}" />
+    <div>Username: <input type="text" name="name" /></div>
+    <div>Password: <input type="password" name="password" /></div>
+    {% module xsrf_form_html() %}
+    <input type="submit" value="Sign in" />
+</form>
+{% end %}
