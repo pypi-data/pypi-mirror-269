@@ -1,0 +1,16 @@
+authlib
+bcrypt
+flask-sqlalchemy
+flask>=3
+flask-login
+psycopg2
+requests
+sqlalchemy<2,>=1.4
+flask-marshmallow
+marshmallow-sqlalchemy
+alembic
+utils-flask-sqlalchemy<1.0,>=0.4.1
+
+[tests]
+pytest
+pytest-flask
