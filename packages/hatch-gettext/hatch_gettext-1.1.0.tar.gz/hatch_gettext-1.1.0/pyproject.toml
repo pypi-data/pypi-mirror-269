@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hatch-gettext"
+dynamic = ["version"]
+description = "Hatch build hook plugin for GNU gettext"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "GPL-3.0-or-later"
+keywords = [
+  "build",
+  "hatch",
+  "gettext",
+  "i18n",
+  "plugin",
+  "typing",
+]
+authors = [
+  { name = "Damon Lynch", email = "damonlynch@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Framework :: Hatch",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Typing :: Typed",
+]
+dependencies = ["rich", ]
+
+[project.urls]
+Documentation = "https://github.com/damonlynch/hatch-gettext#readme"
+Issues = "https://github.com/damonlynch/hatch-gettext/issues"
+Homepage = "https://github.com/damonlynch/hatch-gettext"
+
+[project.entry-points.hatch]
+gettext = "hatch_gettext.hooks"
+
+[tool.hatch.version]
+path = "hatch_gettext/__about__.py"
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
