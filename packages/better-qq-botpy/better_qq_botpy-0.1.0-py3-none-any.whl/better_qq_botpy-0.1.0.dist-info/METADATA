@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: better-qq-botpy
+Version: 0.1.0
+Summary: 更好的 QQ 频道机器人
+Home-page: https://github.com/Drelf2018/GuildBot
+Author: Drelf2018
+Author-email: drelf2018@outlook.com
+License: MIT
+Keywords: python,qq,guildbbot
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: bilibili-api-python ==16.1.0
+Requires-Dist: qq-botpy ==1.2.0
+Requires-Dist: apscheduler ==3.10.4
+Requires-Dist: fastapi ==0.96.1
+Requires-Dist: uvicorn ==0.22.0
+
+# GuildBot
+
+更好的 QQ 频道机器人
+
+
