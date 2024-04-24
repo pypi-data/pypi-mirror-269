@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+src/darklock/__init__.py
+src/darklock/log_disc_writer.py
+src/darklock/no_internet_socket.py
+src/darklock/restrict_network_access.py
+src/darklock/restrict_os_access.py
+src/darklock/singleton.py
+src/darklock.egg-info/PKG-INFO
+src/darklock.egg-info/SOURCES.txt
+src/darklock.egg-info/dependency_links.txt
+src/darklock.egg-info/top_level.txt
+tests/test_no_internet_socket.py
+tests/test_restrict_internet_access.py
+tests/test_restrict_os.py
