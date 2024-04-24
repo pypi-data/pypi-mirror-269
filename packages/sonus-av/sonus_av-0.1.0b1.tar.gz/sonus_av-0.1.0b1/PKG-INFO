@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: sonus-av
+Version: 0.1.0b1
+Summary: A library to add voice and image input support to large language models (LLMs).
+Author: tknishh
+Author-email: tanishqkhandelwaltqk011@gmail.com
+Requires-Python: >=3.9,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: deep-translator (>=1.11.4,<2.0.0)
+Requires-Dist: google-transliteration-api (>=1.0.3,<2.0.0)
+Requires-Dist: imgcat (>=0.5.0,<0.6.0)
+Requires-Dist: openai (>=1.23.2,<2.0.0)
+Requires-Dist: pillow (>=10.3.0,<11.0.0)
+Requires-Dist: pyaudio (>=0.2.14,<0.3.0)
+Requires-Dist: pybase64 (>=1.3.2,<2.0.0)
+Requires-Dist: pytesseract (>=0.3.10,<0.4.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: speechrecognition (>=3.10.3,<4.0.0)
+Description-Content-Type: text/markdown
+
+# Sonus-AV
+
+## Description
+Sonus-AV is a Python library designed to enhance Large Language Models (LLMs) by adding support for voice and image inputs. This library simplifies the process of converting speech to text and analyzing images before feeding the information to LLMs.
+
+## Features
+- **Audio Processing**: Convert audio input to text using `AudioProcessor`, which supports multiple languages and can handle real-time translation.
+- **Image Processing**: Use `ImageProcessor` to extract text from images or generate descriptions of images using advanced machine learning models.
+
+## Installation
+
+Install the library using pip:
+
+```bash
+pip install sonus-av
+```
+
+## Usage
+
+### Audio Processing
+Here is how you can use the `AudioProcessor` to convert speech to text:
+
+```python
+from sonus_av import AudioProcessor
+
+# Initialize the processor
+audio_processor = AudioProcessor()
+
+# Capture and translate audio to text
+recognized_text = audio_processor.capture('path_to_your_audio_file.wav')
+print(recognized_text)
+```
+
+### Image Processing
+Here is how you can use the `ImageProcessor` to get a description of an image:
+
+```python
+from sonus_av import ImageProcessor
+
+# Initialize the processor with your OpenAI API key
+image_processor = ImageProcessor(api_key='your-openai-api-key')
+
+# Get an image description
+image_description = image_processor.describe_image(image_path)
+print(image_description)
+```
+
+## Contributions
+Contributions are welcome! Please fork the repository and open a pull request with your improvements.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
+
