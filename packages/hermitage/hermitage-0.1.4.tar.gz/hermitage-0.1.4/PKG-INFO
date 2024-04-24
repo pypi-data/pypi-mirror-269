@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: hermitage
+Version: 0.1.4
+Summary: Universal storage access framework
+Home-page: https://github.com/smairon/hermitage
+Author: Smairon
+Author-email: man@smairon.ru
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: zodchy (>=0.1.0,<0.2.0)
+Project-URL: Repository, https://github.com/smairon/hermitage
+Description-Content-Type: text/markdown
+
+# Hermitage
+Universal storage access framework
