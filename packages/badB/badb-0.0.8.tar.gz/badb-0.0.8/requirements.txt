@@ -1,0 +1,6 @@
+art
+beaupy
+argparse
+json
+
+#add warning for the pre-defined keywords to not be added as variables

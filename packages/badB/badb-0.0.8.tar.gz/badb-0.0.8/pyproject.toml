@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "badB"
+version = "0.0.8"
+authors = [
+  { name="Akash Srivastava", email="sriakash.dev@gmail.com" },
+]
+description = "A pip package to create Flask RESTful-api seamlessly with customizations"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Dev-Akash/badb"
+Issues = "https://github.com/Dev-Akash/badb/issues"
+
+[project.scripts]
+badB = "badb.__main__:init"
+badB-create-app = "badb.__main__:create_app"

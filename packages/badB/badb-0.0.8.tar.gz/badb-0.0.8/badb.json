@@ -1,0 +1,61 @@
+{
+	"name": "my_first_app",
+	"secret": "my_secret",
+	"prefix": null,
+	"auth_config":{
+		"auth": true,
+		"table": "user",
+		"email_field": "email",
+		"pass_field": "password",
+		"auth_routes": {
+			"user": "PUT, DELETE",
+			"post": "POST, PUT, DELETE",
+			"project": "POST, PUT, DELETE"
+		}
+	},
+	"schema": {
+		"user": {
+			"id": "INTEGER PRIMARY KEY AUTOINCREMENT",
+			"name": "TEXT NOT NULL",
+			"email": "TEXT NOT NULL UNIQUE",
+			"age": "INT",
+			"gender": "TEXT",
+			"password": "TEXT NOT NULL"
+		},
+		"post": {
+			"id": "INTEGER PRIMARY KEY AUTOINCREMENT",
+			"title": "TEXT",
+			"content": "TEXT",
+			"author_name": "TEXT",
+			"author_id": "INT",
+			"keywords": "TEXT"
+		},
+		"project": {
+			"id": "INTEGER PRIMARY KEY AUTOINCREMENT",
+			"title":"TEXT",
+			"content":"TEXT",
+			"start_date":"TEXT",
+			"end_date":"TEXT",
+			"isCurrentlyWorking":"BOOLEAN",
+			"category":"TEXT"
+		}
+	},
+	"custom_routes":[
+		{
+			"route": "getUserById",
+			"route_method": "GET",
+			"auth": false,
+			"table": "user",
+			"url_param": ["id"],
+			"query": "SELECT name, age, gender FROM user WHERE id = ?"
+		},
+		{
+			"route": "sortByEmail",
+			"route_method": "GET",
+			"auth": false,
+			"table": "user",
+			"url_param": null,
+			"query":"SELECT * FROM user ORDER BY email ASC"
+		}
+	]
+}
