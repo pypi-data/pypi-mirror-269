@@ -1,0 +1,50 @@
+Metadata-Version: 2.3
+Name: autoformalism-with-llms
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/unknown/autoformalism-with-llms#readme
+Project-URL: Issues, https://github.com/unknown/autoformalism-with-llms/issues
+Project-URL: Source, https://github.com/unknown/autoformalism-with-llms
+Author-email: Mike Vaiana <mikevaiana@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: gitpython
+Requires-Dist: nltk
+Requires-Dist: openai
+Requires-Dist: pydantic-settings
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: tyro
+Description-Content-Type: text/markdown
+
+# autoformalism-with-llms
+
+[![PyPI - Version](https://img.shields.io/pypi/v/autoformalism-with-llms.svg)](https://pypi.org/project/autoformalism-with-llms)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/autoformalism-with-llms.svg)](https://pypi.org/project/autoformalism-with-llms)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install autoformalism-with-llms
+```
+
+## License
+
+`autoformalism-with-llms` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
