@@ -1,0 +1,10 @@
+apibook-0.1.1.dist-info/METADATA,sha256=HBb6tUWVcphRJ1dQLo-IYGlyvoOAWBhMptGYPRHc9R4,3168
+apibook-0.1.1.dist-info/WHEEL,sha256=N2J68yzZqJh3mI_Wg92rwhw0rtJDFpZj9bwQIMJgaVg,90
+apibook-0.1.1.dist-info/entry_points.txt,sha256=j2E_mshwHEjeRf6TEAeIIVrhSoEaDWrvEjdDzynXJQM,53
+apibook-0.1.1.dist-info/licenses/LICENSE-MIT.txt,sha256=ZTkm4_hxhGJ4vuyI3HVKvDrnOWhkhdCsJDWm5a8R71g,1068
+apibook/__init__.py,sha256=GfeMSbvlXh82mNT7iKOsNbQbFF6K1uMtEZOSHa_D_Xk,612
+apibook/_ast.py,sha256=mzrD_Is3wsJlgb2mHi8KnfmQukm2S86TVltDKWmfbr8,9555
+apibook/cli.py,sha256=Q5yq1vliIaU3PK06rI01XU4lJ8OE0MS3XNklGyTRcuA,2601
+apibook/data.py,sha256=I4lwxhUrvXuQihCmuFv0rq-bYlI3uFvghmTrsh7PKXM,10192
+apibook/main.py,sha256=bDbQ70RxsDRnYPcx-WdpyX92oxU6L83nQfF8yk00JwA,5239
+apibook-0.1.1.dist-info/RECORD,,
