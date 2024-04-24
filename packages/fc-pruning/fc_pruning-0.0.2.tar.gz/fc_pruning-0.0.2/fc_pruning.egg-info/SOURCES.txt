@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+Compress/__init__.py
+Compress/compress.py
+Compress/utils.py
+fc_pruning.egg-info/PKG-INFO
+fc_pruning.egg-info/SOURCES.txt
+fc_pruning.egg-info/dependency_links.txt
+fc_pruning.egg-info/requires.txt
+fc_pruning.egg-info/top_level.txt
