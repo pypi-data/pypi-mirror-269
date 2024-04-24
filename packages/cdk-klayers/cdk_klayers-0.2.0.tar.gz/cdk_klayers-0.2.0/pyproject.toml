@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "cdk-klayers"
+version = "0.2.0"
+description = ""
+authors = ["Keith Rozario <keithjosephrozario@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aws-cdk-lib = "^2.137.0"
+requests = "^2.31.0"
+bandit = {extras = ["baseline"], version = "^1.7.8"}
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+black = "^24.4.0"
+bandit = {extras = ["baseline"], version = "^1.7.8"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
