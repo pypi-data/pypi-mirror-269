@@ -1,0 +1,2 @@
+pylint-plugin-utils==0.7
+pylint<4.0.0,>=3.0.0
