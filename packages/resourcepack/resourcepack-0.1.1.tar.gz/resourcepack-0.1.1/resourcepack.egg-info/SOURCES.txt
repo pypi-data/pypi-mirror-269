@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+resourcepack/__init__.py
+resourcepack/database.py
+resourcepack.egg-info/PKG-INFO
+resourcepack.egg-info/SOURCES.txt
+resourcepack.egg-info/dependency_links.txt
+resourcepack.egg-info/requires.txt
+resourcepack.egg-info/top_level.txt
