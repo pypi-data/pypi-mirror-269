@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+flask-statgraph/__init__.py
+flask-statgraph/utils.py
+flask_statgraph.egg-info/PKG-INFO
+flask_statgraph.egg-info/SOURCES.txt
+flask_statgraph.egg-info/dependency_links.txt
+flask_statgraph.egg-info/requires.txt
+flask_statgraph.egg-info/top_level.txt
