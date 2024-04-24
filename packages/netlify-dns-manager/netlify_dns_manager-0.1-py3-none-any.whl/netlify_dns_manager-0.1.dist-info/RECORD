@@ -1,0 +1,15 @@
+netlify_dns_manage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netlify_dns_manage/driver.py,sha256=X_NX560BF2mGGfmTh76JNIJL7jWkIHGx7cUS2rp5W10,4073
+netlify_dns_manage/main.py,sha256=pKUDM-t-crWocjHE8kGA-PrPswJDLQ8r9Mq9fpWAM3w,1850
+netlify_dns_manage/netlify_api.py,sha256=IR7urJZDCVO-QaT-9HMty1sYLKiJ5ENCs5Vg2dckUdY,1682
+netlify_dns_manage/parser.py,sha256=vwOYFZsKYCwOzrZgw7DqG-yTSoxKZIQRbaAACNdTdTs,601
+netlify_dns_manage/utils.py,sha256=cLlwSqPrsn3pGK_pkNg6ax-bQ-iIb86aLi1CCNsAqCo,1178
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_netlify_api.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_parser.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netlify_dns_manager-0.1.dist-info/LICENSE,sha256=b0vJEj5FP938b06Eh0XilGtc144Iitoptc5282xIxy0,1083
+netlify_dns_manager-0.1.dist-info/METADATA,sha256=j7A3FUAPG6Xotfi3hgBw_eG_d7gpAPLuwdCYXblLZcc,2742
+netlify_dns_manager-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+netlify_dns_manager-0.1.dist-info/entry_points.txt,sha256=skno0p5aMmEwy9JjtbM6QcoTb_deW0yAYefajj62bj8,68
+netlify_dns_manager-0.1.dist-info/top_level.txt,sha256=JfruaNr9fc1p2KsplNtyCs4_2kR-lpYnhgxzejlmXDc,25
+netlify_dns_manager-0.1.dist-info/RECORD,,
