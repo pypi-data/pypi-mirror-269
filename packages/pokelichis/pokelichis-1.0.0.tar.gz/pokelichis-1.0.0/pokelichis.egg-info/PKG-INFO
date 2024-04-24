@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: pokelichis
+Version: 1.0.0
+Summary: Una blibloteca que contiene la clase para generar un pokemon aleatorio
+Author: <LIZBETH DIAZ>
+Requires-Dist: pandas
