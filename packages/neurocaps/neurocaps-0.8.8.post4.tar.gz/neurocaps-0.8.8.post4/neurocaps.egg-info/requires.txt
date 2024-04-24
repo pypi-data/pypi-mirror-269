@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+seaborn
+kneed
+nilearn==0.10.2
+
+[:platform_system != "Windows"]
+pybids
