@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/b_fade.egg-info/PKG-INFO
+src/b_fade.egg-info/SOURCES.txt
+src/b_fade.egg-info/dependency_links.txt
+src/b_fade.egg-info/requires.txt
+src/b_fade.egg-info/top_level.txt
+src/bfade/__init__.py
+src/bfade/abstract.py
+src/bfade/dataset.py
+src/bfade/elhaddad.py
+src/bfade/statistics.py
+src/bfade/util.py
+src/bfade/viewers.py

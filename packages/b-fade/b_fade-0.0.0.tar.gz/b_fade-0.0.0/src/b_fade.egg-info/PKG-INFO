@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: b-fade
+Version: 0.0.0
+Summary: B-FADE: Bayesian FAtigue moDel Estimator
+Home-page: https://github.com/aletgn/b-fade
+Author: Alessandro Tognan
+Author-email: tognan.alessandro@spes.uniud.it
+Project-URL: Bug Tracker, https://github.com/aletgn/b-fade/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: odfpy
+Requires-Dist: openpyxl
+Requires-Dist: scikit-learn
+Requires-Dist: numdifftools
+Requires-Dist: PyYAML
+Provides-Extra: test
+Requires-Dist: notebook; extra == "test"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: setuptools; extra == "dev"
+Requires-Dist: build; extra == "dev"
+
+# B-FADE: Bayesian FAtigue moDel Estimator
+
+The package implements Maximum a Posteriori Estimation (MAP) to accomplish the estimation of fatigue models' parameters. Currently the package is designed to identify the El Haddad (EH) curve given a fatigue & defectivity characterisation dataset. Other curves are foreseen in future developments.
+
+## Features
+
+- Maximum a Posteriori Estimation and computation of the predictive posterior.
+- Monte Carlo Estimation of the prediction interval for the considered curve.
+- Data pre-processing & visualisation.
+
+## Quick Setup
+
+B-FADE is available at [PyPI](https://pypi.org/project/b-fade/), so it can be installed using common package managers, such as `pip` or `conda`:
+
+```
+pip install --user b-fade
+```
+
+```
+conda install b-fade
+```
+
+For further instructions, please take a look at the documentation.
+
+## Documentation
+
+Please refer to [ReadTheDocs](https://b-fade.readthedocs.io/en/latest/) for detailed instructions about installing, utilising B-FADE and working examples.
