@@ -1,0 +1,29 @@
+sqa_criteria:
+  qc_style:
+    repos:
+      deepaas:
+        container: DEEPaaS-testing
+        commands:
+            - git config --global --add safe.directory /deepaas-testing
+            - tox -e flake8
+            - tox -e black
+            - tox -e pip-missing-reqs
+
+  qc_security:
+    repos:
+      deepaas:
+        container: DEEPaaS-testing
+        commands:
+            - git config --global --add safe.directory /deepaas-testing
+            - tox -e bandit
+
+  qc_doc:
+    repos:
+      deepaas:
+        container: DEEPaaS-testing
+        commands:
+            - git config --global --add safe.directory /deepaas-testing
+            - pip install .
+            - pip install -r doc/requirements.txt
+            - sphinx-build -W --keep-going -b html -j auto doc/source doc/build/html
+            - tox -e pypi

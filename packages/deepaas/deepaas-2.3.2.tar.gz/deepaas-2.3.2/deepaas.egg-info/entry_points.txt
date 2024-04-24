@@ -1,0 +1,7 @@
+[console_scripts]
+deepaas-cli = deepaas.cmd.cli:main
+deepaas-predict = deepaas.cmd.execute:main
+deepaas-run = deepaas.cmd.run:main
+
+[oslo.config.opts]
+deepaas = deepaas.opts:list_opts
