@@ -1,0 +1,26 @@
+[project]
+name = "bratevalwrapper4nlp"
+version = "0.0.1"
+authors = [
+  { name="Johann Frei", email="johann_frei@yahoo.de" },
+]
+description = "A small wrapper for BratEval that encapsulates the java commands"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Text Processing"
+]
+dependencies = [
+]
+
+[project.urls]
+Homepage = "https://github.com/j-frei/BratEvalWrapper4NLP"
+Issues = "https://github.com/j-frei/BratEvalWrapper4NLP/issues"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

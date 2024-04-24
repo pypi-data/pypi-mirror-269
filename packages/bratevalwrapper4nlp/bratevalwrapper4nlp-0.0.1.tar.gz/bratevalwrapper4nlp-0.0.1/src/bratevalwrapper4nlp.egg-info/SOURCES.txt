@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/bratevalwrapper4nlp/__init__.py
+src/bratevalwrapper4nlp/evaluate.py
+src/bratevalwrapper4nlp/io.py
+src/bratevalwrapper4nlp/wrapper.py
+src/bratevalwrapper4nlp.egg-info/PKG-INFO
+src/bratevalwrapper4nlp.egg-info/SOURCES.txt
+src/bratevalwrapper4nlp.egg-info/dependency_links.txt
+src/bratevalwrapper4nlp.egg-info/top_level.txt
