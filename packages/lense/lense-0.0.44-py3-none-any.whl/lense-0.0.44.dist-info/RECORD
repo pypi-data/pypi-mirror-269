@@ -1,0 +1,16 @@
+lensegt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lensegt/lense/__init__.py,sha256=5rivs2U5ia9uXArxLc1H8FyzIZXtDjxp_vsZsUEDo60,22
+lensegt/lense/app.py,sha256=Q2MbYKOXoPGWYT9VO7HfY7tk7VLxsWq3EhXk1jli-WM,6692
+lensegt/my_backend/SQL_engine.py,sha256=Gzs7MM3n-xACgZ6sAUbRZxdecvcP819YBFNhiNy8020,3290
+lensegt/my_backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lensegt/my_backend/cglense.py,sha256=dXlyHa77hvHdExcN5TVoS0ivt5UYGumSY3kRqTptFiA,1223
+lensegt/my_backend/csv_engine.py,sha256=y1Ip6SZUEGgoeQCTLOhVXGwniFdDr4h0Kqi8BS56gAk,5886
+lensegt/my_backend/error_handling.py,sha256=NMpCFzUWkBDyn1SQFVsm-t1Omujn3YBKEqtGmeHx9yg,4744
+lensegt/my_backend/loader.py,sha256=it70F6L519FB5TstQLWXTeXYesTMzgSHJ2g7S_Ccm3c,1124
+lensegt/my_backend/qna_engine.py,sha256=SUEzWnV88Ym-hTIh0_O8Dzg0UUm1qZwIns216Y_tmOM,2526
+lensegt/my_backend/replace_file.py,sha256=iCloiTCVLBxZLjv0iorKe_XZ6hQ-h1mpsOnvD90y6_4,3386
+lense-0.0.44.dist-info/LICENSE,sha256=_twrqtD8WxCS8CqpALmlow0SHzstW0NugWaFARTNmyU,1085
+lense-0.0.44.dist-info/METADATA,sha256=OyleE-jf2qoQHS-h95wKgJRmiC3RuGNZRYRFB2_loIg,1360
+lense-0.0.44.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+lense-0.0.44.dist-info/top_level.txt,sha256=CQoh7BXNu8uu5Lsp8Y9ZiFcDYoyukk6EDnl_OxG7r9Y,8
+lense-0.0.44.dist-info/RECORD,,
