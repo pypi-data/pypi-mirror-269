@@ -1,0 +1,15 @@
+hypothesis_torch/__init__.py,sha256=FPReLhZX_v0SEkUeGvvieypbg_5oPi7OJXXJp4Z4qnU,1240
+hypothesis_torch/device.py,sha256=JBi-nJwyyDWS1DlVMMVfeH_oFrUefthoaQNRtSC1cGk,1408
+hypothesis_torch/dtype.py,sha256=Ab0-lXA0HMi0JptU6ubF5hMHVcxV1RAefopE-Go6p-c,2491
+hypothesis_torch/huggingface.py,sha256=NlsgK9w2WZV9drLafhS8jn6kV5PKRZidjdvB4e23390,3922
+hypothesis_torch/inspection_util.py,sha256=an5LgWE6Dnr0BpIRVMxS9sNymtJ0zhlYt939jiHj_HE,1977
+hypothesis_torch/layout.py,sha256=7WzFWhUrFx4oM633gHM2SoeMi6dOlpvesSvbYlmEKkI,735
+hypothesis_torch/memory_format.py,sha256=HJoJt6nKAVf_6xK6xjwpkGTU9DCmMkigeEJeR7h322M,846
+hypothesis_torch/module.py,sha256=noa1YLrl4oxOHeWtyuz3V_JKRAQB8SPntug8Ne20ogE,10903
+hypothesis_torch/tensor.py,sha256=C0sGDsj87d_xDSr8nw2hFVaxewIJrNvKNbGudc2jHOY,7873
+hypothesis_torch/utils.py,sha256=O5LqKq5aOFM_5LaYMMgnck2ibu3OYnI-dOviISSf2v8,1442
+hypothesis_torch-0.3.1.dist-info/LICENSE,sha256=DBSaMTEjrmZkASvoC6TnEiHpYM5dovpuVXUfisJMkJg,1070
+hypothesis_torch-0.3.1.dist-info/METADATA,sha256=riROnQ1RacmuiFR_Ahzk_YcnZDyOaq5nNw5jIA4wK9U,8101
+hypothesis_torch-0.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hypothesis_torch-0.3.1.dist-info/top_level.txt,sha256=7WHVFneaOqBQsuv1gwbfFX4_9Eqdd-kiauJ0jlcmFFI,17
+hypothesis_torch-0.3.1.dist-info/RECORD,,
