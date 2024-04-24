@@ -1,0 +1,222 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools>=61.2",
+    "setuptools_scm",
+]
+
+[project]
+authors = [{name = "Common Partial Wave Analysis", email = "compwa-admin@ep1.rub.de"}]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python",
+    "Topic :: Documentation",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = [
+    "Sphinx>=4.4",
+    "colorama",
+    "docutils",
+    'importlib-metadata; python_version <"3.8.0"',
+    'typing-extensions; python_version <"3.8.0"',
+]
+description = "Relink type hints in your Sphinx API"
+dynamic = ["version"]
+keywords = [
+    "autodoc",
+    "reference",
+    "relink",
+    "sphinx",
+]
+license = {text = "BSD 3-Clause License"}
+maintainers = [{email = "compwa-admin@ep1.rub.de"}]
+name = "sphinx-api-relink"
+requires-python = ">=3.7"
+
+[project.optional-dependencies]
+dev = ["sphinx-api-relink[sty]"]
+sty = [
+    "mypy",
+    "pre-commit >=1.4.0",
+    "ruff",
+    "sphinx-api-relink[types]",
+]
+types = [
+    "types-colorama",
+    "types-docutils",
+    "types-requests",
+]
+
+[project.readme]
+content-type = "text/markdown"
+file = "README.md"
+
+[project.urls]
+Changelog = "https://github.com/ComPWA/sphinx-api-relink/releases"
+Documentation = "https://github.com/ComPWA/sphinx-api-relink/blob/main/README.md"
+Source = "https://github.com/ComPWA/sphinx-api-relink"
+Tracker = "https://github.com/ComPWA/sphinx-api-relink/issues"
+
+[tool.setuptools]
+include-package-data = true
+license-files = ["LICENSE"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"*" = [
+    "py.typed",
+    "templates/*.rst_t",
+]
+
+[tool.setuptools.packages.find]
+namespaces = false
+where = ["src"]
+
+[tool.setuptools_scm]
+write_to = "src/version.py"
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+
+[tool.mypy]
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+files = [
+    "**/*.py",
+    "**/*.pyi",
+]
+show_error_codes = true
+warn_unused_configs = true
+
+[tool.pyright]
+exclude = [
+    "**/.git",
+    "**/.ipynb_checkpoints",
+    "**/.mypy_cache",
+    "**/.pytest_cache",
+    "**/.tox",
+    "**/__pycache__",
+    "**/_build",
+]
+reportGeneralTypeIssues = false
+reportMissingImports = false
+reportMissingParameterType = false
+reportMissingTypeArgument = false
+reportUnboundVariable = false
+reportUnknownArgumentType = false
+reportUnknownMemberType = false
+reportUnknownParameterType = false
+reportUnknownVariableType = false
+reportUntypedFunctionDecorator = false
+reportUnusedClass = true
+reportUnusedFunction = true
+reportUnusedImport = true
+reportUnusedVariable = true
+typeCheckingMode = "strict"
+
+[tool.ruff]
+preview = true
+show-fixes = true
+src = ["src"]
+target-version = "py37"
+
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
+
+[tool.ruff.lint]
+extend-select = [
+    "A",
+    "B",
+    "BLE",
+    "C4",
+    "C90",
+    "D",
+    "EM",
+    "ERA",
+    "FA",
+    "I",
+    "ICN",
+    "INP",
+    "ISC",
+    "N",
+    "NPY",
+    "PGH",
+    "PIE",
+    "PL",
+    "Q",
+    "RET",
+    "RSE",
+    "RUF",
+    "S",
+    "SIM",
+    "T20",
+    "TCH",
+    "TID",
+    "TRY",
+    "UP",
+    "YTT",
+]
+ignore = [
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D107",
+    "D203",
+    "D213",
+    "D407",
+    "D416",
+    "E501",
+    "ISC001",
+    "PLW1514",
+    "PLW2901",
+    "S404",
+    "SIM108",
+    "UP036",
+]
+task-tags = ["cspell"]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+[tool.ruff.lint.per-file-ignores]
+"setup.py" = ["D100"]
+"tests/*" = [
+    "D",
+    "INP001",
+    "PGH001",
+    "PLR0913",
+    "PLR2004",
+    "S101",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.tomlsort]
+all = false
+ignore_case = true
+in_place = true
+sort_first = [
+    "build-system",
+    "project",
+    "tool.setuptools",
+    "tool.setuptools_scm",
+]
+sort_table_keys = true
+spaces_indent_inline_array = 4
+trailing_comma_inline_array = true
