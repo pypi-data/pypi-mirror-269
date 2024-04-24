@@ -1,0 +1,57 @@
+{# Copyright 2022, Red Hat, Inc. #}
+{# SPDX-License-Identifier: LGPL-2.1-or-later #}
+{%- from './macros/list_item.html' import list_item -%}
+<div>
+    <ul class="pf-c-data-list" role="list">
+
+        {{- list_item("Evaluation target:", report.scan_result.target) -}}
+
+        {{- list_item("Profile ID:", report.profile_info.profile_id) -}}
+
+        {%- if report.profile_info.extends -%}
+            {{- list_item("Extends Profile ID:", report.profile_info.extends) -}}
+        {%- endif -%}
+
+        {{- list_item("Scanner:", report.scan_result.scanner + "&nbsp;" + report.scan_result.scanner_version) -}}
+
+        {{- list_item("Started at:", report.scan_result.start_time) -}}
+
+        {{- list_item("Finished at:", report.scan_result.end_time) -}}
+
+    </ul>
+<div class="pf-c-accordion">
+    <h3>
+        <button class="pf-c-accordion__toggle" type="button" onclick="show_evaluation_characteristics(this);">
+            <span class="pf-c-accordion__toggle-text">More Evaluation Characteristics</span>
+            <span class="pf-c-accordion__toggle-icon">
+                <i class="fas fa-angle-right"></i>
+            </span>
+        </button>
+    </h3>
+    <div class="pf-c-accordion__expanded-content" style="display: none;">
+        <div class="pf-c-accordion__expanded-content-body">
+            <ul class="pf-c-data-list" role="list">
+
+                {{- list_item("This profile is applicable for this CPE platforms:", report.profile_info.get_applicable_cpe_platforms_for_profile()) -}}
+
+                {{- list_item("CPE platforms that were found applicable on the evaluated machine:", report.profile_info.get_cpe_platforms_that_satisfy_evaluation_target()) -}}
+
+                {{- list_item("Performed by:", report.scan_result.identity) -}}
+
+                {{- list_item("Benchmark ID:", report.scan_result.benchmark_id) -}}
+
+                {{- list_item("Benchmark url:", report.scan_result.benchmark_url) -}}
+
+                {{- list_item("Benchmark version:", report.scan_result.benchmark_version) -}}
+
+                {{- list_item("Test system:", report.scan_result.test_system) -}}
+
+                {%- for type, addresses in report.scan_result.target_addresses.items() -%}
+                    {{- list_item("Target " + type + " addresses:", ", ".join(addresses)) -}}
+                {%- endfor -%}
+
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
