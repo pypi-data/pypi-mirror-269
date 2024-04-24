@@ -1,0 +1,10 @@
+README.md
+setup.py
+crawlnet/__init__.py
+crawlnet/cl3.py
+crawlnet/cl4.py
+crawlnet.egg-info/PKG-INFO
+crawlnet.egg-info/SOURCES.txt
+crawlnet.egg-info/dependency_links.txt
+crawlnet.egg-info/requires.txt
+crawlnet.egg-info/top_level.txt
