@@ -1,0 +1,14 @@
+rinch_sql/__init__.py,sha256=s9WKUEdkFG26--j7Y4X8RXnEtGTo_9q-zuD-VqNXqu8,277
+rinch_sql/__version__.py,sha256=YSugZzTwA8qN4O2YwLcQdKYuYzTQ_9hkH7wevRogsQc,121
+rinch_sql/creator.py,sha256=qu9ZNBhrNzMBCfwTImzHdhLauu2gJ-9HUImr4M3fQV0,546
+rinch_sql/dataclasses.py,sha256=hzX-Zo5aulti5hasOntUBJJvo7R1ikFvQhZj93QA3Jk,121
+rinch_sql/db_config.py,sha256=53qbadkxn0ZQvBwBtLC0ES5YDt52Rq15muEDk5vjGpw,583
+rinch_sql/mysql.py,sha256=CqYtO9Q2KN82C7cLdD-B8TMgqL4xLoQFfpB_B7iuYSE,5606
+rinch_sql/sql.py,sha256=bZPSjfZzSYFcTJiTZJd_w4OxLUcrqMjr4abbeki5xro,3203
+rinch_sql/sql_static.py,sha256=nh9nhhOm8I-haCuZvnfbKwrrPHMJWAcyuIt3NgY7BCU,6090
+rinch_sql/table.py,sha256=ndk03Fadn0yrs3Qh8gVXz8TRFoaHgDtvcabAtZpSIac,1248
+rinch_sql/use_var.py,sha256=fB6h5XF1ah12gWaE4LdXVjO2x0DOq7cAoWXqP2N3dns,104
+rinch_sql-10.4.1.dist-info/METADATA,sha256=gaDPplR1hMG1Mb8ZV_cg2YXVUqgs0N2wKhpck5wqU6A,3873
+rinch_sql-10.4.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+rinch_sql-10.4.1.dist-info/top_level.txt,sha256=Z3ZRo9aBBpKlBmMKw50NGxQTKtppxyvJkXOHmnpxIhM,10
+rinch_sql-10.4.1.dist-info/RECORD,,
