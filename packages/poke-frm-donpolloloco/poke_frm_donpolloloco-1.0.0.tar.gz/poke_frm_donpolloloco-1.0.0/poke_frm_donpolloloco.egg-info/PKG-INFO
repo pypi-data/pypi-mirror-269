@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: poke_frm_donpolloloco
+Version: 1.0.0
+Summary: LIBRERIA QUE GENRA UN POKEMON DE DONPOLLOLO, ES DECIR UN POKEMON ALEATORIO
+Author: FernandoRoldan
+Author-email: roldanf661@gmail.com
+Requires-Dist: pandas
