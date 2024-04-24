@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pyglider
+Version: 0.0.5
+Summary: Glider data to netCDF translation in python
+Home-page: https://pyglider.readthedocs.io
+Author: Jody Klymak
+Author-email: jklymak@gmail.com
+Maintainer-email: Jody Klymak <jklymak@gmail.com>
+License: Apache
+Project-URL: Homepage, https://pyglider.readthedocs.io
+Project-URL: Documentation, https://pyglider.readthedocs.io
+Project-URL: Repository, https://github.com/c-proof/pyglider
+Keywords: underwater glider,slocum,seaexplorer,Alseamar
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: xarray
+Requires-Dist: dask
+Requires-Dist: netcdf4
+Requires-Dist: gsw
+Requires-Dist: scipy
+Requires-Dist: bitstring
+Requires-Dist: dbdreader
+Requires-Dist: polars
+Requires-Dist: pooch
+Requires-Dist: numpy
+Provides-Extra: code_style
+Requires-Dist: flake8 <3.8.0,>=3.7.0 ; extra == 'code_style'
+Requires-Dist: black ; extra == 'code_style'
+Requires-Dist: pre-commit ==1.17.0 ; extra == 'code_style'
+Provides-Extra: docs
+Requires-Dist: pydata-sphinx-theme ; extra == 'docs'
+Requires-Dist: numpydoc ; extra == 'docs'
+Requires-Dist: autoapi ; extra == 'docs'
+Requires-Dist: myst-parser ; extra == 'docs'
+Requires-Dist: sphinx ; extra == 'docs'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
