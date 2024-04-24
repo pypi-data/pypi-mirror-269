@@ -1,0 +1,13 @@
+tifftools/__init__.py,sha256=myLEu1EmITdjlrAmjNoGJFs0DggI0aMACjzKfvVqENw,1049
+tifftools/__main__.py,sha256=EdmDLwQgBQvwuBzDM8ND0vT-CjzL50GGvaccZvkTiMs,94
+tifftools/commands.py,sha256=RBpKhBTkbvPdEVUqpv5LJkJcF63zsyOmBCyZx3ICjtE,31419
+tifftools/constants.py,sha256=94Rn6cT8OlgNfUavOkPdqGNtGgBgVxN_yIKh77yRg4Y,67608
+tifftools/exceptions.py,sha256=DpLjyJWT13dBvX1PFlp5exteLbFYvCne-aiyVNKNJj8,265
+tifftools/path_or_fobj.py,sha256=xFs3-WaR2c5i3Y8oOiK6hbxPdbOMnJAuZMenPvFrGCc,2062
+tifftools/tifftools.py,sha256=bj8Gv0xiJXnH3L-O2M56qDbc3FhAIggxooQEi1b43As,33259
+tifftools-1.5.0.dist-info/LICENSE,sha256=LXBJU70lDADwHgPJvOEaZ4xl8Z5wmEa3tQQaTql2sWg,549
+tifftools-1.5.0.dist-info/METADATA,sha256=AD1tZyvK_cG7ZyPNsjSkngz9_GFjNZuOcfyb_RSYC3g,8825
+tifftools-1.5.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tifftools-1.5.0.dist-info/entry_points.txt,sha256=y_jxt54wcMZLH4I9wJ69D9QLBFQ8YAvsBSlbLU6D8cQ,45
+tifftools-1.5.0.dist-info/top_level.txt,sha256=ffGv0nn3YW28-sJrPmenLDWImT5uMlKpIc4ucNO04A4,10
+tifftools-1.5.0.dist-info/RECORD,,
