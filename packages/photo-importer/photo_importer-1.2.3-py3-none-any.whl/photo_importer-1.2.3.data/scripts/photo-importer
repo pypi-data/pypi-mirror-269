@@ -1,0 +1,6 @@
+#!python
+
+import photo_importer.run
+
+
+photo_importer.run.main()

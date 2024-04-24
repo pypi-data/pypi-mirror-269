@@ -1,0 +1,6 @@
+#!python
+
+import photo_importer.server
+
+
+photo_importer.server.main()
