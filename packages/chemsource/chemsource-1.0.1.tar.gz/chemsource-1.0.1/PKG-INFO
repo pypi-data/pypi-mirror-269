@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: chemsource
+Version: 1.0.1
+Summary: Tool to classify novel drugs and other health-related chemicals by origin
+Author: Prajit Rajkumar
+Author-email: prajkumar@ucsd.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: lxml>=4.9.4
+Requires-Dist: openai>=1.23.2
+Requires-Dist: requests<3,>=2.0.0
+Requires-Dist: wikipedia>=1.4.0
