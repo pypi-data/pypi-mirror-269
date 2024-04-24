@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cht_tiling
+Version: 0.0.2
+Summary: CHT Tiling is a package to create and use slippy tiles (xyz)
+Author-email: Maarten van Ormondt <maarten.vanormondt@deltares.nl>
+License: MIT
+Project-URL: Source, https://github.com/Deltares-research/cht_tiling
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: pyproj
+Requires-Dist: pillow
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+
+# Coastal Hazards Toolkit - Tiling
