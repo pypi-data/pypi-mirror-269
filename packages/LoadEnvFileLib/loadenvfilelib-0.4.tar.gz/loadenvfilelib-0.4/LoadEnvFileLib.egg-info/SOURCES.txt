@@ -1,0 +1,9 @@
+README.md
+setup.py
+LoadEnvFileLib.egg-info/PKG-INFO
+LoadEnvFileLib.egg-info/SOURCES.txt
+LoadEnvFileLib.egg-info/dependency_links.txt
+LoadEnvFileLib.egg-info/requires.txt
+LoadEnvFileLib.egg-info/top_level.txt
+load_envfile/__init__.py
+load_envfile/load_envfile.py
