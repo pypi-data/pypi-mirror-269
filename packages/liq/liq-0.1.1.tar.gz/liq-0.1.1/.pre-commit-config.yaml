@@ -1,0 +1,69 @@
+default_language_version:
+  python: python3
+
+repos:
+  - repo: meta
+    hooks:
+      - id: check-useless-excludes
+
+  - repo: https://github.com/abravalheri/validate-pyproject
+    rev: v0.16
+    hooks:
+      - id: validate-pyproject
+
+  - repo: https://github.com/bjd2385/pre-commit-gitlabci-lint
+    rev: v1.4.0
+    hooks:
+      - id: gitlabci-lint
+        args: ['-p', '57184022']
+
+  - repo: local
+    hooks:
+      - id: can-build
+        name: can build
+        description: Make sure the project can actually be build.
+        entry: hatch build
+        language: python
+        additional_dependencies: [ hatch ]
+        always_run: true
+        require_serial: true
+        pass_filenames: false
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-ast
+      - id: check-builtin-literals
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-yaml
+      - id: destroyed-symlinks
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+        args: [ --markdown-linebreak-ext=md ]
+      - id: pretty-format-json
+        args: [ --autofix, --no-ensure-ascii ]
+
+  - repo: https://gitlab.com/Qteal/oss/gitlabci-shellcheck-precommit
+    rev: v0.4.0
+    hooks:
+      - id: glscpc
+
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+    -   id: shellcheck
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.1
+    hooks:
+      - id: ruff
+      - id: ruff-format

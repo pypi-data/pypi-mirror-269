@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "liq"
+description = "Limit Image Quality, pre-commit hook"
+readme = "README.md"
+license = { file="LICENSE" }
+authors = [
+    {name = "Dries Kennes", email = "dries.kennes@qteal.com"}
+]
+requires-python = ">=3.11"   # Maintain parity with tested versions in the CI
+dynamic = ["version"]
+
+dependencies = [
+    "click~=8.1",
+    "wand~=0.6",
+]
+
+[project.scripts]
+liq = "liq.__main__:main"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/liq/_version.py"
+
+#  ___       __  __
+# | _ \_  _ / _|/ _|
+# |   / || |  _|  _|
+# |_|_\\_,_|_| |_|
+[tool.ruff]
+line-length = 140
+fix = true
+[tool.ruff.lint]
+ignore = [
+    "E501",  # line-too-long, ignored because the formatter has some leeway this rule doesn't understand
+]
+# Add extra checks to default. See https://docs.astral.sh/ruff/rules/
+extend-select = [
+    "F",  # pyflakes
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "G",  # flake8-logging
+    "UP",  # pyupgrade
+    "PT",  # flake8-pytest-style
+    "SIM",  # flake8-simplify
+    "ISC",  # flake8-implicit-str-concat
+    "PIE",  # flake8-pie
+    "FLY",  # flynt
+    "PERF",  # perflint
+    # "FURB",  # refurb
+    "RUF",  # ruff
+]
