@@ -1,0 +1,38 @@
+[project]
+name = "transceiver"
+version = "0.1.3"
+description = "Transceiver is a python library that swiftly exchanges fundamental data structures, specifically numpy arrays, between processes, optimizing AI inference tasks that utilize ComfyUI."
+dependencies = [ "numpy>=1.26.4",]
+readme = "README.md"
+requires-python = ">= 3.10"
+classifiers = [ "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent",]
+[[project.authors]]
+name = "nat-chan"
+email = "ogino.natsuki.tm@alumni.tsukuba.ac.jp"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.urls]
+Homepage = "https://github.com/nat-chan/transceiver"
+Issues = "https://github.com/nat-chan/transceiver/issues"
+
+[tool.rye]
+managed = true
+dev-dependencies = [ "ipykernel>=6.29.4", "ruff", "mypy", "pydantic", "pytest", "build>=1.2.1", "twine>=5.0.0", "toml>=0.10.2", "grip>=4.6.2",]
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py310"
+
+[tool.ruff.lint]
+exclude = [ ".venv",]
+select = [ "B", "C4", "E", "G", "W", "F", "I", "UP", "EXE", "F", "SIM1", "LOG", "NPY", "PERF", "PGH004", "PIE794", "PIE800", "PIE804", "PIE807", "PIE810", "PLC0131", "PLC0132", "PLC0205", "PLE", "PLR0133", "PLR0206", "PLR1722", "PLW0129", "PLW0406", "PLW0711", "PLW1509", "PLW3301", "PT006", "PT022", "PT023", "PT024", "PT025", "PT026", "PYI", "RUF008", "RUF015", "RUF016", "RUF017", "TRY200", "TRY302",]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = [ "src/transceiver",]

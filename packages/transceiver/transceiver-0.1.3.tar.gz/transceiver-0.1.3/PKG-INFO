@@ -1,0 +1,40 @@
+Metadata-Version: 2.3
+Name: transceiver
+Version: 0.1.3
+Summary: Transceiver is a python library that swiftly exchanges fundamental data structures, specifically numpy arrays, between processes, optimizing AI inference tasks that utilize ComfyUI.
+Project-URL: Homepage, https://github.com/nat-chan/transceiver
+Project-URL: Issues, https://github.com/nat-chan/transceiver/issues
+Author-email: nat-chan <ogino.natsuki.tm@alumni.tsukuba.ac.jp>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: numpy>=1.26.4
+Description-Content-Type: text/markdown
+
+# Transceiver📡
+
+Please see [**comfyui-transceiver**](https://github.com/nat-chan/comfyui-transceiver),  the ComfyUI custom nodes binding of the "transceiver" library.
+
+
+"transceiver" is a python library that swiftly exchanges fundamental data structures, specifically numpy arrays, between processes, optimizing AI inference tasks that utilize ComfyUI.
+
+## Why?
+
+When processing a large number of requests, the SaveImage and LoadImage nodes may be IO-limited, and using shared memory improves performance by passing images only through memory access, not through IO.
+
+## Installation
+
+The "transceiver" is indexed by PyPI. You can easily integrate it into any project.
+
+```bash
+pip install transceiver
+```
+
+## Features
+
+
+UNDER CONSTRUCTION
+
+See [core.py](/src/transceiver/core.py) doc
