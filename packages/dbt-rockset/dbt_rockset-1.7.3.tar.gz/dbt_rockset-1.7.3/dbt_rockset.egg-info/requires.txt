@@ -1,0 +1,2 @@
+dbt-core~=1.7.0
+rockset_sqlalchemy~=0.0.1
