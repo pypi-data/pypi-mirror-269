@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Pika_Pokemon_Library
+Version: 1.0.0
+Summary: Library para generar un  Pokemon aleatoria 
+Author: Fernanda 
+Author-email: fernandacolin777@gamil.com
+Requires-Dist: pandas
+
