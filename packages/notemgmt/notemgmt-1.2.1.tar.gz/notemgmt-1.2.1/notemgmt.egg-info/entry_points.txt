@@ -1,0 +1,2 @@
+[console_scripts]
+create_lecture_note = notemgmt.create_lecture_note:main
