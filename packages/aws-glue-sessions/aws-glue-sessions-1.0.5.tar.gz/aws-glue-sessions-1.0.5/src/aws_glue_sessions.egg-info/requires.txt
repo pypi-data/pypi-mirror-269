@@ -1,0 +1,15 @@
+hdijupyterutils>=0.6
+autovizwidget>=0.6
+ipython>=4.0.2
+nose
+requests
+ipykernel>=6.12.1
+ipywidgets>5.0.0
+notebook>=4.2
+tornado>=4
+boto3>=1.21.31
+botocore>=1.24.24
+Click
+importlib_metadata>=4.11.3
+rich
+tabulate
