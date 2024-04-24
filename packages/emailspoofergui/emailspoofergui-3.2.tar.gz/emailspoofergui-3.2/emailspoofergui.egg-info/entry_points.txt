@@ -1,0 +1,2 @@
+[console_scripts]
+emailspoofergui = emailspoofergui.emailspoofergui:send_email
