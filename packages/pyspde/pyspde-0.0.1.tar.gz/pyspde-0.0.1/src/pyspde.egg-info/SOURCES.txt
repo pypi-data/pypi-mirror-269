@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyspde/__init__.py
+src/pyspde/anisotropy.py
+src/pyspde/grid.py
+src/pyspde/neighbours.py
+src/pyspde/spde.py
+src/pyspde/utils.py
+src/pyspde.egg-info/PKG-INFO
+src/pyspde.egg-info/SOURCES.txt
+src/pyspde.egg-info/dependency_links.txt
+src/pyspde.egg-info/top_level.txt
