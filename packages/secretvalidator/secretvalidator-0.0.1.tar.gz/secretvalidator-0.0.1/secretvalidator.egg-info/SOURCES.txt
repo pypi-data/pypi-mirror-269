@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+secretvalidator/__init__.py
+secretvalidator/cli.py
+secretvalidator/urls.txt
+secretvalidator.egg-info/PKG-INFO
+secretvalidator.egg-info/SOURCES.txt
+secretvalidator.egg-info/dependency_links.txt
+secretvalidator.egg-info/entry_points.txt
+secretvalidator.egg-info/requires.txt
+secretvalidator.egg-info/top_level.txt
+secretvalidator/../requirements.txt
