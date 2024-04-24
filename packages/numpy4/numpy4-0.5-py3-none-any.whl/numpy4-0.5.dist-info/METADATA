@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: numpy4
+Version: 0.5
+Summary: A package for doing cool stuff
+Author: Your Name
+Author-email: your@email.com
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+
