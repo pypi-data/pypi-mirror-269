@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.ruff_cache/
+.vscode/
+dist/
+dev_output/
+xplor/
+
+.env
+*.pyc
+.coverage*
+snapshot_report.html
+.python-version
