@@ -1,0 +1,6 @@
+# - insert_task_into_workflow_with_dependencies(workflow_id, task_data, dependencies)
+# - list_predecessors_successors_of_task_instance_in_a_workflow(workflow_id, instance_id)
+# - create_workflow(workflow_data)
+# - list_workflow_forecast(workflow_id)
+# - modify_workflow(workflow_id, **kwargs)
+# - read_workflow(workflow_id)

@@ -1,0 +1,5 @@
+# - create_universal_event_template(template_data)
+# - delete_universal_event_template(template_id)
+# - list_universal_event_templates()
+# - modify_universal_event_template(template_id, **kwargs)
+# - read_universal_event_template(template_id)
