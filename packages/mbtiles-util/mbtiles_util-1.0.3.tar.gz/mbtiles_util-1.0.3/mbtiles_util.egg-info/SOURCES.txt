@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+mbtiles_util/__init__.py
+mbtiles_util/mbtiles2folder.py
+mbtiles_util/mbtiles2s3.py
+mbtiles_util/mbtilesinfo.py
+mbtiles_util/osm2mbtiles.py
+mbtiles_util/pbfinfo.py
+mbtiles_util/tileserve.py
+mbtiles_util/util.py
+mbtiles_util/versatiles.py
+mbtiles_util.egg-info/PKG-INFO
+mbtiles_util.egg-info/SOURCES.txt
+mbtiles_util.egg-info/dependency_links.txt
+mbtiles_util.egg-info/entry_points.txt
+mbtiles_util.egg-info/top_level.txt
