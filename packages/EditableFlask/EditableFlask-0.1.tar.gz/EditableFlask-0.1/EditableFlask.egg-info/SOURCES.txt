@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+EditableFlask/__init__.py
+EditableFlask/editable.py
+EditableFlask/views.py
+EditableFlask.egg-info/PKG-INFO
+EditableFlask.egg-info/SOURCES.txt
+EditableFlask.egg-info/dependency_links.txt
+EditableFlask.egg-info/requires.txt
+EditableFlask.egg-info/top_level.txt
