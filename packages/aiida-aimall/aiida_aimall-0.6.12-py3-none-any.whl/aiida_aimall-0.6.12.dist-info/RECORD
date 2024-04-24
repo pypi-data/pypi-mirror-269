@@ -1,0 +1,11 @@
+aiida_aimall/__init__.py,sha256=rXog35eEFkG8KkmsJLpSX7ubx-HICnIgMLpyjnGny3k,86
+aiida_aimall/calculations.py,sha256=hyAKiWkFdjeEqO5Q4ct3KKJ-ro2z9tbp7JiGV89hHhc,15432
+aiida_aimall/controllers.py,sha256=YfQmffWPN5F9avZCuE27YNg3g9URMIgweK9w2txImXM,16513
+aiida_aimall/parsers.py,sha256=kd5-m-Hm99aZGq3kdMvw3VooQP1p3KSyLpqC8fPWbkM,15668
+aiida_aimall/workchains.py,sha256=Tc8wKD5oGyqodjpBrmpGZRQYWcrbKQ3Zo7OADYlGIL8,21039
+aiida_aimall/data/__init__.py,sha256=dZ2oxUrHQEjry8ySFUni2GzRX71U_iSfIuXzeOW70Hw,3431
+aiida_aimall-0.6.12.dist-info/entry_points.txt,sha256=JyS4ANnK0DQriisQuIn77fpuFwg4RoQwqLkcumFlGR4,636
+aiida_aimall-0.6.12.dist-info/LICENSE,sha256=KMSAw1MxTSGUtV_m46hBbiqoUIw1o3gBFOPZFRpYFOw,1081
+aiida_aimall-0.6.12.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+aiida_aimall-0.6.12.dist-info/METADATA,sha256=9iLgsqTZMXfY1H5raCl-upvA0exMP892X4BqUsJ9xmc,12733
+aiida_aimall-0.6.12.dist-info/RECORD,,
