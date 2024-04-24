@@ -1,0 +1,20 @@
+{# def
+widget,
+#}
+
+<pydantic_form.Widget widget={widget} removable={widget.removable}>
+  <div class="pt-4">
+    <details open>
+      <summary class="justify-between items-center font-medium cursor-pointer">
+        <H3>{{widget.title}}</H3>
+      </summary>
+      <div>
+        {% for value in widget.value %}
+        <div class="flex items-center mb-4">
+          <Checkbox name={widget.name} type="checkbox" id={value.id} value={value.value} checked={value.checked} />
+          <Label for={value.id} class="ms-2 text-base text-neutral-900 dark:text-white">{{value.label}}</Label>
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+</pydantic_form.Widget>
