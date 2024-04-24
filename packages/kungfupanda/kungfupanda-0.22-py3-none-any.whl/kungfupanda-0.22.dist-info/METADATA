@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: kungfupanda
+Version: 0.22
+Summary: A simple package to make everything easy for programmers to do everything the cool way
+Home-page: 
+Author: The Big Fat Panda
+Author-email: po_the_big_fat_panda@gmail.com
+Requires-Dist: pandas
+Requires-Dist: opencv-python
+
+A simple package for people who are not bound by societal rules, made by a cute panda trained to be a dragon warrior. For the full story, watch the original trilogy:
+    - Kung Fu Panda 1
+    - Kung Fu Panda 2
+    - Kung Fu Panda 3
+    
