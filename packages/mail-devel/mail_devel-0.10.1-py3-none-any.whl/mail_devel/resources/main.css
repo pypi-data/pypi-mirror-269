@@ -1,0 +1,332 @@
+:root {
+  --back: #333;
+  --border: gray;
+  --primary: #ccc;
+  --secondary: #999;
+  --highlight: #555;
+  --special: #469;
+  --button: lightgray;
+
+  --dark-back: #333;
+  --dark-border: gray;
+  --dark-primary: #ccc;
+  --dark-secondary: #999;
+  --dark-highlight: #555;
+  --dark-special: #469;
+  --dark-button: lightgray;
+
+  --light-back: white;
+  --light-border: gray;
+  --light-primary: black;
+  --light-secondary: #333;
+  --light-highlight: lightgray;
+  --light-button: gray;
+
+  --slider: 20pt;
+  --font-big: 11pt;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --back: var(--light-back);
+    --border: var(--light-border);
+    --primary: var(--light-primary);
+    --secondary: var(--light-secondary);
+    --highlight: var(--light-highlight);
+    --button: var(--light-button);
+  }
+}
+
+:root.light {
+  --back: var(--light-back);
+  --border: var(--light-border);
+  --primary: var(--light-primary);
+  --secondary: var(--light-secondary);
+  --highlight: var(--light-highlight);
+  --button: var(--light-button);
+}
+
+:root.dark {
+  --back: var(--dark-back);
+  --border: var(--dark-border);
+  --primary: var(--dark-primary);
+  --secondary: var(--dark-secondary);
+  --highlight: var(--dark-highlight);
+  --button: var(--dark-button);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body, input, select, textarea, table, #editor {
+  background-color: var(--back);
+  color: var(--primary);
+}
+
+button, .btn {
+  appearance: auto;
+  background-color: var(--button);
+  border-radius: 2px;
+  border: 0;
+  color: black;
+  font-family: sans-serif;
+  text-align: center;
+  text-transform: capitalize;
+  vertical-align: middle;
+}
+
+#wrapper {
+  display: grid;
+  height: 100%;
+  grid-template-areas: "nav mailbox" "nav header" "nav content";
+  grid-template-columns: 200px auto;
+  grid-template-rows: 30% max-content auto;
+}
+
+*:focus-visible {outline: none}
+.hidden {display: none !important}
+.highlight {color: var(--special)}
+.selected {background-color: var(--highlight)}
+.unseen .subject {font-weight: bold}
+.is_deleted .subject {font-style: italic}
+.italic {font-style: italic}
+.no-overflow {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#content {grid-area: content}
+#mailbox {grid-area: mailbox}
+#nav {
+  display: flex;
+  flex-direction: column;
+  grid-area: nav;
+  border-right: 2px solid var(--border);
+}
+#header {grid-area: header}
+#accounts {padding: 5pt 2pt}
+
+#mailboxes {
+  display: block;
+  flex: 1;
+  margin-top: 5px;
+  font-size: var(--font-big);
+  height: 80%;
+  width: 100%;
+}
+#mailboxes option {padding: 5px}
+
+#mailbox {
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+#mailbox table {
+  border-collapse: collapse;
+  width: 100%;
+}
+#mailbox table.additional {
+  background-color: unset;
+}
+#mailbox table.additional td {
+  border: 0;
+}
+#mailbox td.read, #mailbox td.deleted {
+  text-align: center;
+}
+#mailbox tr:hover {
+  background-color: var(--highlight)
+}
+#mailbox .date, #mailbox .read, #mailbox .deleted {
+  padding: 0 4px;
+  text-align: right;
+  width: 1px;
+  white-space: nowrap;
+}
+#mailbox .ordering {
+  display: inline-block;
+  vertical-align: text-top;
+  width: 12pt;
+}
+#mailbox .ordering.asc:before {content: "\25B4"}
+#mailbox .ordering.desc:before {content: "\25BC"}
+
+#mailbox table th {
+  border: 1px solid gray;
+  background-color: var(--highlight);
+  text-align: center !important;
+}
+
+#mailbox table td {border: 1px solid var(--border)}
+
+#logo {
+  font-family: monospace;
+  font-size: 20pt;
+  padding: 5% 0;
+  text-align: center;
+}
+
+.header {
+  background-color: var(--highlight);
+  border-bottom: 2px solid var(--border);
+  border-top: 2px solid var(--border);
+}
+.header th {
+  text-align: right;
+  width: 100px;
+}
+.header .buttons td {text-align: right}
+.header input {
+  box-sizing: border-box;
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.buttons button {margin-right: 5px}
+
+.container {height: 100%; overflow: hidden}
+.container textarea, .container iframe {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  resize: none;
+  width: 100%;
+}
+.container textarea {box-sizing: border-box; padding: 5px}
+
+#uploader input[type="file"] {
+  display: none;
+}
+
+#btn-new, #uploader {
+  font-size: var(--font-big);
+  padding: 5pt 2pt;
+  margin: 2px 0;
+}
+#btn-dropdown button {
+  cursor: pointer;
+}
+#btn-dropdown {
+  position: relative;
+  display: inline-block;
+}
+#btn-dropdown div {
+  background-color: var(--secondary);
+  display: none;
+  min-width: 150px;
+  position: absolute;
+  right: 5px;
+}
+#btn-dropdown a {
+  display: block;
+  margin: 3px;
+  text-align: center;
+}
+#btn-dropdown:hover div {display: block}
+#btn-dropdown a:hover {background: var(--highlight)}
+
+#editor {
+  display: grid;
+  z-index: 1000;
+  position: fixed;
+  border: 2px solid var(--border);
+  top: 150px;
+  left: 150px;
+  bottom: 150px;
+  right: 150px;
+  grid-template-rows: max-content max-content min-content auto;
+}
+
+#editor-content {
+  display: block;
+  height: 100%;
+}
+#editor-header {
+  display: block;
+  max-height: 200px;
+  overflow-y: scroll;
+  padding: 3px;
+}
+#editor-header th, #editor-attachments th {
+  position: relative;
+  min-width: 150px;
+}
+#editor-header .delete {
+  content: "&#128465;";
+}
+#editor-buttons {
+  background-color: var(--highlight);
+  text-align: right;
+  padding: 3px;
+}
+#editor-header td {width: 100%}
+#editor-header .control {
+  min-width: 20px;
+}
+
+.switch {
+  background-color: var(--highlight);
+  border-bottom: 2px solid var(--border);
+  font-size: var(--font-big);
+  height: 20px;
+  border-top: 2px solid var(--border);
+  padding: 2px;
+  position: relative;
+}
+
+.switch label {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  right: 2px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--back);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--primary);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch input:checked + .slider {
+  background-color: var(--special);
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px var(--special);
+}
+
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
