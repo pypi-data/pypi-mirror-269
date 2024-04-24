@@ -1,0 +1,15 @@
+cattle_lca/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cattle_lca/database/__init__.py,sha256=qUTDMJm52TtQBea6mn-EEWdZ8M6uxtUPCmeyYCf0CSU,222
+cattle_lca/database/cattle_database.db,sha256=zu_DarGWd8zRE3jPMRmfHLPPpZhkry2Er14a0NwlDvE,40960
+cattle_lca/database/cattle_database_transaction.sql,sha256=Bz9tt5Rdzg-bhRlOPQdjHtfmP2r3Ke-X415xj1-EzpA,13868
+cattle_lca/lca.py,sha256=FnAhp8IOwqUTTkPWvMFEudupo02fThqB1F_nE1I6MJg,113577
+cattle_lca/resource_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cattle_lca/resource_manager/animal_data.py,sha256=vqcb-DHChp7AKUfntIldb9a6coj1hLW9DvGx8IsYqO8,9417
+cattle_lca/resource_manager/cattle_lca_data_manager.py,sha256=yZdWDon6EXs4u_iAz6DCdPZ6FzUXY2yuZijzx9JDD88,60106
+cattle_lca/resource_manager/data_loader.py,sha256=TqWZtORwhzb2_Gdinu2cBStUTbg5DZFwM8UmkXSRm_Y,4632
+cattle_lca/resource_manager/database_manager.py,sha256=YiTZjbcMQPBv6zmmNT6kR7zk-R-Tr8i3LYNYXiVnS_0,6586
+cattle_lca/resource_manager/models.py,sha256=LRBjqERQjjB-ibgy7tLYUdlAZ67fX7F7kOMmgw_ZEss,76679
+cattle_lca-0.3.1.dist-info/LICENSE,sha256=Dy10hVB9Gd35oqUZWETQs-uVngmMPxT2fzWvqjq6GZ0,1088
+cattle_lca-0.3.1.dist-info/METADATA,sha256=73SCQdwhw_upUfxdhONL_lgAqIQ1l7OJVunSFRoC3i8,11249
+cattle_lca-0.3.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cattle_lca-0.3.1.dist-info/RECORD,,
