@@ -1,0 +1,10 @@
+mmengine
+numpy
+imageio
+sqlalchemy
+matplotlib
+psutil
+crc32c
+seaborn
+imageio
+imageio-ffmpeg
