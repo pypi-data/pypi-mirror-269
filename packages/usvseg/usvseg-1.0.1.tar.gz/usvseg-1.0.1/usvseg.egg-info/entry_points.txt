@@ -1,0 +1,2 @@
+[console_scripts]
+usvseg = usvseg.gui:main

@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+usvseg/__init__.py
+usvseg/func.py
+usvseg/gui.py
+usvseg/usvseg_prm.yaml
+usvseg.egg-info/PKG-INFO
+usvseg.egg-info/SOURCES.txt
+usvseg.egg-info/dependency_links.txt
+usvseg.egg-info/entry_points.txt
+usvseg.egg-info/top_level.txt
