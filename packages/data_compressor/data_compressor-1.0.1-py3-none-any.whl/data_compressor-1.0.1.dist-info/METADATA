@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: data_compressor
+Version: 1.0.1
+Summary: zuno dx
+License: no
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.11,<3.12
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: langchain (==0.1.13)
+Requires-Dist: langchain-community (==0.0.29)
+Requires-Dist: langchain-core (==0.1.34)
+Requires-Dist: langchain-text-splitters (==0.0.1)
+Requires-Dist: openai (==1.14.3)
+Requires-Dist: tiktoken (==0.5.2)
+Description-Content-Type: text/markdown
+
+It compresses the given data based on query
+
+Program starts from main.py.
+
+parameters required - query, pages, azure_open_api_key and azure_endpoint
+
+function - compress_data_by_query
