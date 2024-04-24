@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+mpu6050/MPU6050.py
+mpu6050/MPUConstants.py
+mpu6050/__init__.py
+mpu6050.egg-info/PKG-INFO
+mpu6050.egg-info/SOURCES.txt
+mpu6050.egg-info/dependency_links.txt
+mpu6050.egg-info/requires.txt
+mpu6050.egg-info/top_level.txt
