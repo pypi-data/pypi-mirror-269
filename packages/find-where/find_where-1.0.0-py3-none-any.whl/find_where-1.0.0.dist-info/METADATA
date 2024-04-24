@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: find_where
+Version: 1.0.0
+Summary: find_where is a Python package that provides a function to find values in dictionaries where a specified key matches a given value, similar to filtering in SQL.
+Author-email: Daniel Ohnesorge <82357071+danohn@users.noreply.github.com>
+License: MIT License
+        
+        Copyright (c) 2024 Daniel Ohnesorge
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/danohn/find_where
+Keywords: find,where,sql
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
+# find_where
+
+`find_where` is a Python package that provides a function to find values in dictionaries where a specified key matches a given value, similar to filtering in SQL.
+
+## Installation
+
+You can install `find_where` using pip:
+
+    pip install find_where
+
+## Usage
+
+    from find_where import find_where
+
+    # Sample data
+
+    data = [
+        {"name": "Alice", "age": 30},
+        {"name": "Bob", "age": 25},
+        {"name": "Charlie", "age": 35}
+    ]
+
+    # Find the value for the key "name" where the age is 25
+
+    result = find_where(data, "name", age=25)
+    print(result)  # Output: "Bob"
