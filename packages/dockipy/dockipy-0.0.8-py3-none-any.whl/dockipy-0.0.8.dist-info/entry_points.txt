@@ -1,0 +1,5 @@
+[console_scripts]
+docki = dockipy.utils:docki
+dockinotebook = dockipy.dockinotebook:dockinotebook
+dockipy = dockipy.dockipy:dockipy
+dockishell = dockipy.dockishell:dockishell
