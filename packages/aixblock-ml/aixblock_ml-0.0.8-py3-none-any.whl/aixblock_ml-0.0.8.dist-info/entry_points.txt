@@ -1,0 +1,3 @@
+[console_scripts]
+aixblock-ml=aixblock_ml.server:main
+
