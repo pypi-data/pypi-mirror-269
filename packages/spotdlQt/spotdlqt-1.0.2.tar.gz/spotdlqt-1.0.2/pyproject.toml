@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69.0", "setuptools_scm[toml]>=8",]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+local_scheme="no-local-version"
+
+[project]
+name = "spotdlQt"
+dynamic = ["version"]
+authors = [{ name = "Magi3r", email = "magier.mit.f3erball@gmail.com" }]
+description = "A small gui for spotdl using qt written in python"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["pyqt6==6.6.1", "spotdl==4.2.5"]
+keywords = ["spotdl", "qt6", "downloader", "music"]
+
+[project.gui-scripts]
+spotdlQt = "spotdlQt.app:main"
+
+[project.urls]
+Repository = "https://github.com/Magi3r/spotdlQt"
+Issues = "https://github.com/Magi3r/spotdlQt/issues"

@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+icon.svg
+pyproject.toml
+requirements.txt
+screenshot1.png
+screenshot2.png
+.github/dependabot.yml
+.github/workflows/pypi-publish.yml
+src/spotdlQt/app.py
+src/spotdlQt.egg-info/PKG-INFO
+src/spotdlQt.egg-info/SOURCES.txt
+src/spotdlQt.egg-info/dependency_links.txt
+src/spotdlQt.egg-info/entry_points.txt
+src/spotdlQt.egg-info/requires.txt
+src/spotdlQt.egg-info/top_level.txt
