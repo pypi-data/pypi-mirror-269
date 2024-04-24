@@ -1,0 +1,10 @@
+README.md
+setup.py
+pokecuilmas/__init__.py
+pokecuilmas/pokemon.csv
+pokecuilmas/random_pokemon.py
+pokecuilmas.egg-info/PKG-INFO
+pokecuilmas.egg-info/SOURCES.txt
+pokecuilmas.egg-info/dependency_links.txt
+pokecuilmas.egg-info/requires.txt
+pokecuilmas.egg-info/top_level.txt
