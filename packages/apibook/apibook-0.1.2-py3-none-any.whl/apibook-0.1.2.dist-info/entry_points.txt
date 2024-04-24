@@ -1,0 +1,3 @@
+[console_scripts]
+python-apibook = apibook.cli:main
+
