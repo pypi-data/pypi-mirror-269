@@ -1,0 +1,71 @@
+[tool.poetry]
+name = "message-db-py"
+version = "0.2.0"
+description = "The Python interface to the MessageDB Event Store and Message Store"
+authors = ["Subhash Bhushan <subhash.bhushan@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Database",
+    "Topic :: Database :: Database Engines/Servers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License", 
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+keywords = [
+    "message-db",
+    "event-sourcing",
+    "event-store",
+    "messaging",
+    "cqrs",
+    "command-query-responsibility-segregation",
+    "events",
+    "streaming",
+    "database",
+    "postgresql",
+    "python",
+    "async",
+    "microservices",
+    "distributed-systems",
+    "message-queue",
+    "event-driven",
+    "real-time"
+]
+
+packages = [
+    { include = "message_db", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+psycopg2 = "^2.9.9"
+
+[tool.poetry.dev-dependencies]
+autoflake = "^2.3.1"
+black = "^24.4.0"
+isort = "^5.13.2"
+mypy = "^1.9.0"
+pre-commit = "^3.7.0"
+pytest = "^8.1.1"
+pytest-cov = "^5.0.0"
+types-psycopg2 = "^2.9.21.20240417"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+source = ["src/message_db"]
+show_missing = true
+precision = 2
