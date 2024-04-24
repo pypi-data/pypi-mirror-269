@@ -1,0 +1,7 @@
+src/miml
+src/miml/classifier
+src/miml/data
+src/miml/datasets
+src/miml/test
+src/miml/transformation
+src/miml/tutorial
