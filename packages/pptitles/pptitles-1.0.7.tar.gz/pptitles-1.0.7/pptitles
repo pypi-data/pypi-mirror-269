@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+import sys
+import re
+from pptx import Presentation
+
+def extract_titles(ppt_path):
+    presentation = Presentation(ppt_path)
+    titles = []
+
+    # Enhanced title extraction logic
+    for i, slide in enumerate(presentation.slides):
+        best_candidate = None
+        highest_score = float('-inf')  # Start with the lowest possible score
+
+        for shape in slide.shapes:
+            if not shape.has_text_frame or not shape.text_frame.text:
+                continue
+
+            text = shape.text_frame.text.strip().replace('\n', ' ')
+            if not text:
+                continue
+
+            # Normalize whitespace to a single space
+            text = re.sub(r'\s+', ' ', text)
+
+            # Ensure we have at least one paragraph and one run
+            if shape.text_frame.paragraphs and shape.text_frame.paragraphs[0].runs:
+                first_run = shape.text_frame.paragraphs[0].runs[0]
+                font_size = first_run.font.size.pt if first_run.font.size else 0
+                bold = True if first_run.font.bold else False
+            else:
+                font_size = 0
+                bold = False
+
+            # Scoring factors
+            top = shape.top
+            length = len(text)
+            center = abs((shape.left + shape.width / 2) - (presentation.slide_width / 2))
+
+            # Calculate score based on determined factors
+            score = font_size * (2 if bold else 1) - top - center / 100 - length
+
+            if score > highest_score:
+                highest_score = score
+                best_candidate = text
+
+        title = best_candidate if best_candidate else "No title found"
+        titles.append((i + 1, title))
+
+    return titles
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python script.py 'path_to_presentation.pptx'")
+        sys.exit(1)
+    ppt_path = sys.argv[1]
+    titles = extract_titles(ppt_path)
+    for slide_number, title in titles:
+        print(f"Slide {slide_number}: {title}")
+
