@@ -1,0 +1,20 @@
+"""
+./deploy.ps1
+"""
+import setuptools
+
+setuptools.setup(
+    name='expressmoney',
+    packages=setuptools.find_packages(),
+    version='14.1.7',
+    description='SDK ExpressMoney',
+    author='Development team',
+    author_email='dev@expressmoney.com',
+    install_requires=('requests', 'python-json-logger==2.0.4', 'django-phonenumber-field[phonenumberslite]==5.2.0',
+                      'django-jsonstore==0.5.0', 'packaging==23.1.0', 'boto3',
+                      ),
+    python_requires='>=3.7',
+    package_data={
+        'viewflow': ['*'],
+    }
+)
