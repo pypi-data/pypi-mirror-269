@@ -1,0 +1,9 @@
+curve_dao/__init__.py,sha256=iIzl0_xKl_DTEr58ix2RzSylqVjrJLj1kI0jBGgu_OY,1228
+curve_dao/addresses.py,sha256=rvnrkwuFFHpFrfnlUdxNoOSa0hKJzyDRp1X894HP1SI,1415
+curve_dao/ipfs.py,sha256=z8q_XHSC_biMtQPaoLspl0eLew5CVEtBe7_79WrQbMw,1247
+curve_dao/simulate.py,sha256=KOpwtlv2K9k3oaY3n8LI_NUKu3oZHWaahcltmyNHHwY,1544
+curve_dao/vote_utils.py,sha256=O6yCFgMCQmRN5dj_yMt__wqNPCUIcapy4ds8zAklr-A,1763
+curve_dao-0.0.5.dist-info/METADATA,sha256=Rz8fbCJj4VfWbbD8KIKpdUOVYdDMZALv5xYm9MZ1XpE,1934
+curve_dao-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+curve_dao-0.0.5.dist-info/top_level.txt,sha256=RJgdoCT_bKHB2Wy8tsiYfn9xFp1LnTjFIUSAjIY0kn0,10
+curve_dao-0.0.5.dist-info/RECORD,,
