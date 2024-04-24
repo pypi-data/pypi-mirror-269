@@ -1,0 +1,15 @@
+README.md
+setup.py
+shuangchentools/__init__.py
+shuangchentools.egg-info/PKG-INFO
+shuangchentools.egg-info/SOURCES.txt
+shuangchentools.egg-info/dependency_links.txt
+shuangchentools.egg-info/requires.txt
+shuangchentools.egg-info/top_level.txt
+shuangchentools/doc_segment/__init__.py
+shuangchentools/doc_segment/doc_segment_by_rule.py
+shuangchentools/spider/__init__.py
+shuangchentools/spider/selenium.py
+shuangchentools/utils/__init__.py
+shuangchentools/utils/decorators.py
+shuangchentools/utils/transform.py
