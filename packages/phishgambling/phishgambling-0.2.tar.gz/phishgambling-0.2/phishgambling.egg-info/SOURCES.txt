@@ -1,0 +1,9 @@
+README.md
+setup.py
+phishgambling/__init__.py
+phishgambling/main.py
+phishgambling.egg-info/PKG-INFO
+phishgambling.egg-info/SOURCES.txt
+phishgambling.egg-info/dependency_links.txt
+phishgambling.egg-info/entry_points.txt
+phishgambling.egg-info/top_level.txt
