@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: adit-radis-shared
+Version: 0.1.0
+Summary: Shared Django apps between ADIT and RADIS
+License: GPL-3.0-or-later
+Author: Kai Schlamp
+Author-email: kai.schlamp@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: Django (>=5.0.4,<6.0.0)
+Requires-Dist: Twisted[http2,tls] (>=24.3.0,<25.0.0)
+Requires-Dist: channels (>=4.0.0,<5.0.0)
+Requires-Dist: crispy-bootstrap5 (>=2024.2,<2025.0)
+Requires-Dist: cryptography (>=42.0.5,<43.0.0)
+Requires-Dist: daphne (>=4.0.0,<5.0.0)
+Requires-Dist: django-crispy-forms (>=2.0,<3.0)
+Requires-Dist: django-environ (>=0.11.2,<0.12.0)
+Requires-Dist: django-extensions (>=3.1.5,<4.0.0)
+Requires-Dist: django-filter (>=24.2,<25.0)
+Requires-Dist: django-htmx (>=1.14.0,<2.0.0)
+Requires-Dist: django-loginas (>=0.3.9,<0.4.0)
+Requires-Dist: django-registration-redux (>=2.10,<3.0)
+Requires-Dist: django-revproxy (>=0.12.0,<0.13.0)
+Requires-Dist: django-tables2 (>=2.3.3,<3.0.0)
+Requires-Dist: djangorestframework (>=3.13.1,<4.0.0)
+Requires-Dist: psycopg[binary] (>=3.1.12,<4.0.0)
+Requires-Dist: pytz (>=2024.1,<2025.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: wait-for-it (>=2.2.2,<3.0.0)
+Requires-Dist: watchfiles (>=0.21.0,<0.22.0)
+Requires-Dist: whitenoise (>=6.0.0,<7.0.0)
+Description-Content-Type: text/markdown
+
+# ADIT RADIS Shared Subrepo
+
+## About
+
+Shared resources between ADIT and RADIS managed as a [git-subrepo](https://github.com/ingydotnet/git-subrepo).
+
+## License
+
+- GPL 3.0 or later
+
