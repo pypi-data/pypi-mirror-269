@@ -1,0 +1,42 @@
+[build-system]
+  requires = ["setuptools>=68.0"]
+  build-backend = "setuptools.build_meta"
+
+[project]
+  name = "bimbmaan"
+  description = "bimbmaan: A Shaktiman to process high quality images for research publication"
+  version = "0.2"
+  authors = [
+    { name="Vishal Kumar Sahu", email="mail@vishalkumarsahu.in" },
+  ]
+  readme = "README.md"
+  requires-python = ">=3.8"
+  classifiers = [
+    'Operating System :: OS Independent',
+    'Intended Audience :: Science/Research',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10'
+  ]
+  dependencies = [
+    'UtilityLib',
+    'imageio',
+    'fitz',
+    'PyMuPDF'
+  ]
+
+[project.scripts]
+  bimbpdf = "bimbmaan:bimbpdf"
+  bimbsvg = "bimbmaan:bimbsvg"
+
+  b__pdf = "bimbmaan:bimbpdf"
+  b__svg = "bimbmaan:bimbsvg"
+
+  bimbtile = "bimbmaan:bimbtile"
+  bimbconv = "bimbmaan:bimbconv"
+  bimbclip = "bimbmaan:bimbclip"
+  bimbrbg = "bimbmaan:bimbrbg"
+
+[project.urls]
+  Homepage = "https://github.com/TheBiomics/bimbmaan"
+  Issues = "https://github.com/TheBiomics/bimbmaan/issues"

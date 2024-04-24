@@ -1,0 +1,9 @@
+[console_scripts]
+b__pdf = bimbmaan:bimbpdf
+b__svg = bimbmaan:bimbsvg
+bimbclip = bimbmaan:bimbclip
+bimbconv = bimbmaan:bimbconv
+bimbpdf = bimbmaan:bimbpdf
+bimbrbg = bimbmaan:bimbrbg
+bimbsvg = bimbmaan:bimbsvg
+bimbtile = bimbmaan:bimbtile
