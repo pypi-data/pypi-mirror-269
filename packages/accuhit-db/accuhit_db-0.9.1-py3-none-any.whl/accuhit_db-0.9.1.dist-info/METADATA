@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: accuhit-db
+Version: 0.9.1
+Summary: accuhit database common library
+Author: accuhit
+Author-email: developer@accuhit.ai
+License: Copyright accuhit
+Platform: ubuntu
+Platform: MacOS
+Platform: centos
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pymongo ==4.6.3
+Requires-Dist: PyMySQL ==1.1.0
+Requires-Dist: pytz >=2018.7
+Requires-Dist: six >=1.11.0
+Requires-Dist: SQLAlchemy ~=2.0.29
+Requires-Dist: psycopg2-binary ~=2.9.9
+Requires-Dist: certifi ~=2024.2.2
+
