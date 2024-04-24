@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mysqlLibRan
+Version: 0.0.4
+Summary: This is the simplest module for quick work with files.
+Home-page: https://github.com/Narek24IS/my_lib
+Author: Narek24IS
+Author-email: narekd192@gmail.com
+Project-URL: GitHub, https://github.com/Narek24IS/my_lib
+Keywords: files speedfiles
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+
+readme
