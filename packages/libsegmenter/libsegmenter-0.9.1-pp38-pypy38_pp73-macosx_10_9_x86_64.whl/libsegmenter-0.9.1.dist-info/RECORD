@@ -1,0 +1,15 @@
+libsegmenter-0.9.1.dist-info/RECORD,,
+libsegmenter-0.9.1.dist-info/WHEEL,sha256=BdshgUbIzNnTlW6-sHqSseQG8WKe3MWTlHUibOauk9Y,116
+libsegmenter-0.9.1.dist-info/top_level.txt,sha256=vM1fU6i2eEkdt_wR1Rvw_-LVSVSaa-Qr-O0y7KtZ500,19
+libsegmenter-0.9.1.dist-info/METADATA,sha256=PYfh9kEBlN9WipDw76D3xoMUhQh2sKeMwUiKG1ADCaw,270
+tests/reconstruction.py,sha256=cyo5rwegyPn3xLpQXRVkLr-dkL9fffIrKjn998Fu3QI,12369
+tests/creational.py,sha256=nhRduMAq_zVExDnkUj_grxKHE9LvUEL5kfKSe10Xik8,2229
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/windows.py,sha256=3AsqCfSAjYJL8miyEtPrNgAywvngxxOv7zqszZB_Qu4,889
+libsegmenter/default_window_selector.py,sha256=T1jErkPSEnB_7k2z44fD45ndlTN_olSVaEcYwZmqBQ4,4568
+libsegmenter/old.py,sha256=24UtckNg43Dnzge8XW6czXkfsQA9eWUaET5uBwF1yqA,2540
+libsegmenter/bindings.pypy38-pp73-darwin.so,sha256=JsrV5y6Gw04fvJCL2Y97ty88hqtzXkHMLLmWbHdqeRI,233096
+libsegmenter/__init__.py,sha256=_wY2cRUmJFCGZTNvyGAz2Y1hxFBdywyln_yclkzHdrA,102
+libsegmenter/SegmenterTensorFlow.py,sha256=mUSRTncmzWOzQACh9q_zR5gEZbH6nRMvfYZxmLgYXXQ,8835
+libsegmenter/Segmenter.py,sha256=wXYPtzzrgB2pJ4uEqVtZobdvtfgGzFqPA7sxBXsNDGg,684
+libsegmenter/SegmenterTorch.py,sha256=qpJyrj8hxvxz5dpfD47ndz5Xd_uxxRre4f4j8Y-AAUU,7386
