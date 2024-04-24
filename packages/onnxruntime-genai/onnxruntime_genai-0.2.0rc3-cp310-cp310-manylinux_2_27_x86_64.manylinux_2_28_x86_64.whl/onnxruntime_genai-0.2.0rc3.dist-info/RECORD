@@ -1,0 +1,11 @@
+onnxruntime_genai-0.2.0rc3.dist-info/METADATA,sha256=8ax7eW74rkJYGyJH53WHNTykyg_k2MXLYlPaFLnHgDU,65
+onnxruntime_genai-0.2.0rc3.dist-info/RECORD,,
+onnxruntime_genai-0.2.0rc3.dist-info/top_level.txt,sha256=U92ZdtZYnKUmz1D94v3YxXHvRyNbrxkZ1gDYUzEJ_bc,18
+onnxruntime_genai-0.2.0rc3.dist-info/WHEEL,sha256=BZO3kdhRbuxevkSuve5-9R-mOIH4x0baqop1iPVcDGY,153
+onnxruntime_genai/libonnxruntime.so,sha256=i9zXmrJeONHXZGlI4Hp9h-2VwhZKBOQ91oUUf9XIa0w,15469240
+onnxruntime_genai/onnxruntime_genai.cpython-310-x86_64-linux-gnu.so,sha256=ZwjpgKLdVIK7Qx_7i0mf7wVctrlLgeLaKRQrp-ZW_c8,1268928
+onnxruntime_genai/__init__.py,sha256=LH1NIwHE3ivB6rppwxZulJzxLriHjBxlKopAOTMt__8,583
+onnxruntime_genai/libonnxruntime.so.1.17.3,sha256=i9zXmrJeONHXZGlI4Hp9h-2VwhZKBOQ91oUUf9XIa0w,15469240
+onnxruntime_genai/_dll_directory.py,sha256=anhRkSVAd0wQ0tiSON2T7u8Q4D1rR7WkBKfIDJM9kO4,617
+onnxruntime_genai/models/builder.py,sha256=RYlQqimIhIWw_0QmI0OcNWLnDipKihPbXHNs0TU5frU,114407
+onnxruntime_genai/models/gguf_model.py,sha256=OPevJTuQud8qrQIbSuMXTNnOCsR1aZpPBIjNrjXIi0U,12515
