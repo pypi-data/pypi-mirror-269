@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: logstash-api
+Version: 0.1.1
+Summary: Logstash API Client
+Home-page: http://logstash-api.hive.pt
+Author: Hive Solutions Lda.
+Author-email: development@hive.pt
+License: Apache License, Version 2.0
+Description: # [Logstash API](http://logstash-api.hive.pt)
+        
+        Simple Python API client for [Logstash](https://www.elastic.co/products/logstash).
+        
+        ## Configuration
+        
+        | Name                     | Type  | Description                                                                                                                                          |
+        | ------------------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | **LOGSTASH_BASE_URL**    | `str` | The base URL value to be used to communicate using the Logstash API, should include username and password if HTTP Auth is used (defaults to `None`). |
+        | **LOGSTASH_BUFFER_SIZE** | `int` | The size of the buffer (in number of entries) until the buffer is flushed (defaults to `128`).                                                       |
+        | **LOGSTASH_TIMEOUT**     | `int` | The timeout in seconds in seconds until the buffer is flushed (defaults to `30`).                                                                    |
+        
+        ## License
+        
+        Logstash API is currently licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/).
+        
+        ## Build Automation
+        
+        [![Build Status](https://app.travis-ci.com/hivesolutions/logstash-api.svg?branch=master)](https://travis-ci.com/github/hivesolutions/logstash-api)
+        [![Coverage Status](https://coveralls.io/repos/hivesolutions/logstash-api/badge.svg?branch=master)](https://coveralls.io/r/hivesolutions/logstash-api?branch=master)
+        [![PyPi Status](https://img.shields.io/pypi/v/logstash-api.svg)](https://pypi.python.org/pypi/logstash-api)
+        [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/)
+        
+Keywords: logstash api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

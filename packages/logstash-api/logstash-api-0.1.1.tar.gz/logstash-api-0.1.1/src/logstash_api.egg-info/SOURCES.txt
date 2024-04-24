@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+src/logstash/__init__.py
+src/logstash/base.py
+src/logstash_api.egg-info/PKG-INFO
+src/logstash_api.egg-info/SOURCES.txt
+src/logstash_api.egg-info/dependency_links.txt
+src/logstash_api.egg-info/not-zip-safe
+src/logstash_api.egg-info/requires.txt
+src/logstash_api.egg-info/top_level.txt
