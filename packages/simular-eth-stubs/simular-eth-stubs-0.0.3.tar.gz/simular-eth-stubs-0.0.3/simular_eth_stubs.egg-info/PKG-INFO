@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: simular-eth-stubs
+Version: 0.0.3
+Summary: Type stubs for simular-evm
+Home-page: https://github.com/james4ever0/simular-eth-stubs
+License: UNKNOWN
+Description: # Type stubs for simular-evm
+        
+        Fully documented type annotations for `PyEvm` and `PyAbi` in [simular-evm](https://pypi.org/project/simular-evm)
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
