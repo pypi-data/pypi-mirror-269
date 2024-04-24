@@ -1,0 +1,14 @@
+omegaconf
+requests
+networkx
+numpy
+numpy-stl
+pydantic
+types-requests
+
+[dev]
+black
+darglint
+mypy
+pytest
+ruff
