@@ -1,0 +1,10 @@
+README.md
+setup.py
+poketnas/__init__.py
+poketnas/pokemon.csv
+poketnas/random_pokemon.py
+poketnas.egg-info/PKG-INFO
+poketnas.egg-info/SOURCES.txt
+poketnas.egg-info/dependency_links.txt
+poketnas.egg-info/requires.txt
+poketnas.egg-info/top_level.txt
