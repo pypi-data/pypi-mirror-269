@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: brightspacepyclient
+Version: 0.0.4
+Summary: Python client for BrightSpace
+Author: Course Companion
+Author-email: admin@coursecompanion.ai
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.31.0,<3.0.0)

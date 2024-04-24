@@ -1,0 +1,9 @@
+[tool.poetry]
+name="brightspacepyclient"
+authors=["Course Companion <admin@coursecompanion.ai>"]
+version="0.0.4"
+description="Python client for BrightSpace"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
