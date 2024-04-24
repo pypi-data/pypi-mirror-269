@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: snakefetch
+Version: 0.5
+Summary: Fetches workflow and config files from a Snakemake repository on GitHub
+Home-page: https://github.com/niekwit/snakefetch/tree/main
+Author: Niek Wit
+Author-email: nw416@cam.ac.uk
+Project-URL: Source, https://github.com/niekwit/snakefetch/tree/main
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A simple Python package for fetching snake data.
