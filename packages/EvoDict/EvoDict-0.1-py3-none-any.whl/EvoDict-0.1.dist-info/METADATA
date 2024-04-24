@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: EvoDict
+Version: 0.1
+Summary: Une classe représentant un dictionnaire évolué et une classe de graphe basée sur EvoDict.
+Author: Louis
+Author-email: louislazare.pro@gmail.com
+Requires-Dist: tabulate
+Requires-Dist: networkx
+Requires-Dist: matplotlib
+
