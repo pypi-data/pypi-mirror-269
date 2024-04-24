@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: aixblock_ml
+Version: 0.0.9
+Summary: 
+Author: TonyShark
+Author-email: quoi@wow-ai.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+aixblock ml
+pip install -e .
+aixblock-ml create my_ml_backend
+aixblock-ml start my_ml_backend
+aixblock-ml start my_ml_backend -p 9091
+
+aixblock-ml deploy gcp {ml-backend-local-dir} \
+--from={model-python-script} \
+--gcp-project-id {gcp-project-id} \
+--label-studio-host {https://aixblock.org} \
+--label-studio-api-key {YOUR-AIXBLOCK-API-KEY}
