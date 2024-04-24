@@ -1,0 +1,3 @@
+[console_scripts]
+uiauto.dev=uiauto_dev.__main__:main
+
