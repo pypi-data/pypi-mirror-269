@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+.github/workflows/publish.yml
+Hubstaff/Hubstaff.py
+Hubstaff/__init__.py
+Hubstaff.egg-info/PKG-INFO
+Hubstaff.egg-info/SOURCES.txt
+Hubstaff.egg-info/dependency_links.txt
+Hubstaff.egg-info/requires.txt
+Hubstaff.egg-info/top_level.txt

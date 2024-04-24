@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: Hubstaff
+Version: 1.1
+Summary: A python library working with Hubstaff
+Author-email: Ankushtpss <ankushkumartpss@gmail.com>
+Project-URL: Homepage, https://github.com/Ankushtpss/Hubstaff
+Project-URL: Bug Tracker, https://github.com/Ankushtpss/Hubstaff/issues
+Keywords: Hubstaff,Hub staff,Hubstaff SDK,Hubstaff library
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: sys
+
+# Hubstaff
+
+## Overview
+Library for Hubstaff. Perform actions such as list projects detail. 
+Request Feature/Suggestion: https://forms.gle/efGD5DuTpWsX96GG7
+
+[//]: # (## Download stats)
+
+[//]: # ([![Downloads]&#40;https://static.pepy.tech/badge/ActiveCollab&#41;]&#40;https://pepy.tech/project/ActiveCollab&#41;)
+
+## Installation
+```console
+pip install Hubstaff
+```
+Hubstaff supports Python 3+.
+
+## Usage
+
+### Default
+```python
+import Hubstaff
+
+personal_access_tokens = "your_personal_access_tokens" #can be generated from https://developer.hubstaff.com/personal_access_tokens
+
+
+hb = Hubstaff.Connect(personal_access_tokens)  # Login to Hubstaff
+
+print(hb.get_projects_data())
+```
+
+### List all projects
+```python
+hb.get_projects_data()  # List out all project assigned to logged in user
+```
