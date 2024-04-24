@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: middleware-help-python
+Version: 0.0.3
+Summary: This is my middleware help package
+Home-page: https://github.com/ckf10000/middleware-help-python
+Author: ckf10000
+Author-email: ckf10000@sina.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: redis>=5.0.3
+Requires-Dist: mysql-connector-python>=8.3.0
+
+This is my middleware help package
