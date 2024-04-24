@@ -1,0 +1,12 @@
+dagster<0.12.9,>=0.12.6
+pendulum<3.0.0
+protobuf<3.21.0
+networkx>2.5.1
+datapackage<1.16,>=1.15.2
+jupyter_client>=6.0
+spinedb_api>=0.30.5
+pyzmq>=21.0
+markupsafe<2.1
+
+[dev]
+coverage[toml]
