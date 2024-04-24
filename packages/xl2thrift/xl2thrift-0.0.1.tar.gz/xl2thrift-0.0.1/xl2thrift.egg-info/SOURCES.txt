@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+xl2thrift/__init__.py
+xl2thrift/command_line.py
+xl2thrift/thriftExcelTools.py
+xl2thrift.egg-info/PKG-INFO
+xl2thrift.egg-info/SOURCES.txt
+xl2thrift.egg-info/dependency_links.txt
+xl2thrift.egg-info/entry_points.txt
+xl2thrift.egg-info/not-zip-safe
+xl2thrift.egg-info/requires.txt
+xl2thrift.egg-info/top_level.txt

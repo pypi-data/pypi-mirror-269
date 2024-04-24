@@ -1,0 +1,3 @@
+[console_scripts]
+xl2thrift = xl2thrift.command_line:main
+
