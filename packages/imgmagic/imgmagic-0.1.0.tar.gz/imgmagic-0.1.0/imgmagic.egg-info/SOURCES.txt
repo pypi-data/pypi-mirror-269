@@ -1,0 +1,14 @@
+README.md
+setup.py
+imgmagic/__init__.py
+imgmagic/colors.py
+imgmagic/display.py
+imgmagic/filter.py
+imgmagic/fourier.py
+imgmagic/geometric.py
+imgmagic/histogram.py
+imgmagic.egg-info/PKG-INFO
+imgmagic.egg-info/SOURCES.txt
+imgmagic.egg-info/dependency_links.txt
+imgmagic.egg-info/requires.txt
+imgmagic.egg-info/top_level.txt
