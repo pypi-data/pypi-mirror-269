@@ -1,0 +1,9 @@
+README.md
+setup.py
+historianstexttools.egg-info/PKG-INFO
+historianstexttools.egg-info/SOURCES.txt
+historianstexttools.egg-info/dependency_links.txt
+historianstexttools.egg-info/top_level.txt
+src/__init__.py
+src/historianstexttools/__init__.py
+src/historianstexttools/chunk.py
