@@ -1,0 +1,12 @@
+excsv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+excsv/cli.py,sha256=_b_A_bl1PzPAjOk-i4I8NV-yV5HrOHPGFKHJxbzn5Uc,9727
+excsv/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+excsv/utils/excel.py,sha256=wryShtfgo4r3fuX7a2AlYNA-sAN2UO9WsySZ1LdGMWE,1040
+excsv/utils/infer.py,sha256=N7D4lHu1Tyw8dpJQG05ZSH-afvhrW1uJimDnat9eMkM,1568
+excsv/utils/listing.py,sha256=I_v5p8cdCy29faqaTObJuQn0ikzKm9_p5nZPXmFwMHk,669
+excsv/utils/text.py,sha256=AR_MUOou5jpccgH4ArujURRUcWPY4spm82uzNFsLxBQ,298
+excsv-0.1.4.dist-info/METADATA,sha256=W0Es59pw-gg1Abpogx_dV30q3hKlQXRFUgyljwMk43E,4147
+excsv-0.1.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+excsv-0.1.4.dist-info/entry_points.txt,sha256=BLJAXR-m1fHqQ6XSGUMfaLNfR3SG54BiQeQZQuaxcQM,40
+excsv-0.1.4.dist-info/top_level.txt,sha256=YGLmSt0TDqhpdCycPs6NBsmgqRIno0zNS-8utGzaUPQ,6
+excsv-0.1.4.dist-info/RECORD,,
