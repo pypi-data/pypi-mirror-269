@@ -1,0 +1,10 @@
+README.md
+setup.py
+Pokemon_AMG/__init__.py
+Pokemon_AMG/pokemon.csv
+Pokemon_AMG/random_pokemon.py
+Pokemon_AMG.egg-info/PKG-INFO
+Pokemon_AMG.egg-info/SOURCES.txt
+Pokemon_AMG.egg-info/dependency_links.txt
+Pokemon_AMG.egg-info/requires.txt
+Pokemon_AMG.egg-info/top_level.txt
