@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: EnhancedWebdriver
+Version: 0.1.4
+Summary: Extension of webdriver with less boilerplate
+Home-page: https://github.com/Tesla2000/EnhancedWebdriver
+Author: Tesla2000
+Author-email: fratajczak124@gmail.com
+Project-URL: Homepage, https://github.com/Tesla2000/EnhancedWebdriver
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.05
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: selenium >=4.18.0
+Requires-Dist: download >=0.3.5
+Requires-Dist: retry >=0.9.2
+
+# EnhancedWebdriver
+An informal extension of selenium webdriver with more error handling and more complex functions. Like keeping driver up to date with Chrome version
+
+Installation:
+`
+
+    pip install EnhancedWebdriver
+`
+
+Code example:
+`
+
+    driver = EnhancedWebdriver.create(
+        web_driver = None,
+        undetected = False,
+        options = None,
+        service = None,
+        keep_alive = True,
+    )  # all arguements optional
+`
+
+Functions:
+`
+
+    
+`
