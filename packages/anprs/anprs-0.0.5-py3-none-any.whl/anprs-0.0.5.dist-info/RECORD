@@ -1,0 +1,13 @@
+anprs/__init__.py,sha256=ZdA7elQQxJCzkncxS3EpsWBXX-pXhBcyHekPsWILyts,27
+anprs/anprs.py,sha256=ndAspbFJWI4Il6f6D_DGb1Qfm_BP5ojwl6JchcBPFKg,10272
+anprs/local_utils.py,sha256=Xqkig_XjKAohl9YeV0BHGeUU4pWf7S7Ohm4B1sKyDDo,6043
+media/photo.jpg,sha256=e2102UpWJlu5jM_8T1nRksv7gapWChPZrIhG4Daf9yQ,257536
+models/ocr_model.h5,sha256=roWPd7g_-8alfND9At0s26F0da5CDpL6DcQGN_1LeMw,9148592
+models/wpod-net.json,sha256=dC_TGB_xMkbaYOV6GOhLufXgCvKI2e2VIT_v8Nhfk3M,109183
+models/wpod_net_all_in_one.h5,sha256=Gj21tT2dgjFVVKh_80ecayemWts4fwJzrZVR1HaqczM,6846672
+results/contour.jpg,sha256=SQJheZNmfI4ODA7LtLcedruNXpgfYqNQmL5QjntZaPo,13209
+results/res.jpg,sha256=SiLh_14hhzUrszs3jQS3f13O3TsZ0Fh5JYDTaiaH62I,17062
+anprs-0.0.5.dist-info/METADATA,sha256=vDo8ToLHNiTIbXaCQcC-AlPVcb8hT6N4b7yOiR76BBQ,1701
+anprs-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+anprs-0.0.5.dist-info/top_level.txt,sha256=OuvM9AidMTPgXf-0wlwkju14N0xElUt7FNqNOuJ62fc,6
+anprs-0.0.5.dist-info/RECORD,,
