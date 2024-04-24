@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: lenscraft
+Version: 0.0.0
+Summary: Application to quickly build machine vision pipelines with little or no code
+Author-email: Gudjon Einar Magnusson <gmagnusson@fraunhofer.org>
+Project-URL: Homepage, https://cma.fraunhofer.org
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dearpygui ==1.10.0
+Requires-Dist: numpy ==1.26.4
+Requires-Dist: opencv-python ==4.9.0.80
+Requires-Dist: pillow ==10.2.0
+Requires-Dist: scikit-learn ==1.4.1.post1
+Requires-Dist: scipy ==1.12.0
+Requires-Dist: shapely ==2.0.3
+
+# Lenscraft
+
+This application allows users to create and tweak a custom computer vision pipeline for micro-assembly
+
+## How to run
+Install the package from pypi
+```
+pip install lenscraft
+```
+
+To run the application, simply run the command
+```
+lenscraft
+```
+or
+```
+python -m lenscraft
+```
+
+
+## How to Use
+
+1. Add images you want to work with
+2. Build vision pipeline using the Node Editor
+
+![image](/ScreenShot1.png)
+
+## Developer?
+
+1. Clone the repository
+2. Install the package in edit mode
+
+```
+pip install -e .
+```
+
+3. Run the application
+```
+python -m lenscraft
+```
