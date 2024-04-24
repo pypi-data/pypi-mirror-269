@@ -1,0 +1,627 @@
+Index: medor/utils/tor.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># coding: utf-8\r\nimport base64\r\nimport fileinput\r\nimport subprocess\r\nfrom pathlib import Path\r\n\r\nimport httpx\r\nimport stem\r\nfrom colorama import Fore\r\nfrom stem import Signal, process, CircStatus\r\nfrom stem.control import Controller\r\nfrom stem.version import get_system_tor_version, Requirement\r\n\r\nimport medor.utils.globals_ as globals_\r\nfrom medor.utils import net\r\nfrom medor.utils.util import success, failure, warning, spinner\r\n\r\n\r\nclass Tor:\r\n    def __init__(self):\r\n        self.tor_binary_path = str(globals_.tor[\"tor_binary_path\"])\r\n        self.net = net.Net(onion=True, timeout=10.0)\r\n        self.tor_controller = None\r\n\r\n    def launch(self):\r\n        self.ini_connection()\r\n        self.tor_controller = self.tor_control()\r\n        self.new_id()\r\n        self.verify_tor()\r\n\r\n    def ini_connection(self):\r\n        spinner.start(\"Initializing tor\")\r\n        try:\r\n            self.tor_controller = self.tor_control()\r\n            if self.tor_controller.get_info(\"status/circuit-established\") == \"1\":\r\n                spinner.stop_and_persist(symbol=success, text=\"Tor initialized\")\r\n                return\r\n        except stem.SocketError:\r\n            try:\r\n                self.start()\r\n            except OSError as e:\r\n                self.shutdown()\r\n                self.ini_connection()\r\n                spinner.stop_and_persist(\r\n                    symbol=warning,\r\n                    text=f\"{Fore.YELLOW}Your tor configuration (tor path and password,...) is not set or is not right.\\n\"\r\n                    f\"   {e}\",\r\n                )\r\n\r\n    def tor_control(self) -> stem.control.Controller:\r\n        c = Controller.from_port(port=globals_.tor[\"controller_port\"])\r\n        c.authenticate()\r\n        return c\r\n\r\n    def start(self):\r\n        if (\r\n            get_system_tor_version(self.tor_binary_path)\r\n            >= Requirement.TORRC_CONTROL_SOCKET\r\n        ):\r\n            try:\r\n                tor_process = process.launch_tor_with_config(\r\n                    config={\r\n                        \"ControlPort\": str(globals_.tor[\"controller_port\"]),\r\n                        # \"HashedControlPassword\": globals_.tor[\"tor_hashed\"],\r\n                        \"CookieAuthentication\": \"1\",\r\n                        \"SocksPort\": str(globals_.tor[\"tor_port\"]),\r\n                    },\r\n                    tor_cmd=self.tor_binary_path,\r\n                    completion_percent=100,\r\n                )\r\n                self.tor_controller = self.tor_control()\r\n            except OSError as e:\r\n                self.shutdown()\r\n                spinner.stop_and_persist(\r\n                    symbol=failure,\r\n                    text=f\"{Fore.RED}Tor might be already running. Shut down tor process\\n\"\r\n                    f\"   {e}\\n\",\r\n                )\r\n                exit()\r\n\r\n        else:\r\n            spinner.stop_and_persist(\r\n                symbol=failure, text=f\"{Fore.RED}Please, update tor.\\n\"\r\n            )\r\n            self.close(onion=True)\r\n            exit()\r\n\r\n    def new_id(self):\r\n        spinner.start(\"Setting new tor identity\")\r\n        recommended = self.tor_controller.get_info(\"status/version/recommended\").split(\r\n            \",\"\r\n        )\r\n        self.tor_recommended(recommended)\r\n        if self.tor_controller.is_newnym_available():\r\n            self.tor_controller.signal(Signal.NEWNYM)\r\n            spinner.stop_and_persist(symbol=success, text=\"Tor new identity set\")\r\n\r\n    def shutdown(self):\r\n        spinner.start(\"Shutting down tor\")\r\n        self.tor_controller = self.tor_control()\r\n        self.tor_controller.signal(Signal.SHUTDOWN)\r\n        spinner.stop_and_persist(symbol=success, text=\"Tor shut down\")\r\n        exit()\r\n\r\n    def verify_tor(self):\r\n        spinner.start(\"Checking Tor Exit IP\")\r\n        try:\r\n            res = self.net.connect(\"https://check.torproject.org/api/ip\")\r\n            if res.status_code == 200:\r\n                is_tor = res.json()[\"IsTor\"]\r\n                ip = res.json()[\"IP\"]\r\n                if is_tor:\r\n                    spinner.stop_and_persist(\r\n                        symbol=success, text=f\"Tor is ok. Exit IP: {ip}\"\r\n                    )\r\n                    return\r\n            else:\r\n                raise httpx.HTTPError\r\n        except httpx.HTTPError:\r\n            real_ip = self.net.get_real_ip()\r\n            exit_node = self.get_exit()\r\n            if real_ip != exit_node:\r\n                spinner.stop_and_persist(\r\n                    symbol=success, text=f\"Tor exit check. Exit IP: {exit_node}\"\r\n                )\r\n                return\r\n            else:\r\n                spinner.stop_and_persist(\r\n                    symbol=failure,\r\n                    text=f\"{Fore.RED}Can't verify tor exit IP. Exiting.\",\r\n                )\r\n                self.close(onion=True)\r\n                exit()\r\n        spinner.stop_and_persist(\r\n            symbol=failure, text=f\"{Fore.RED}Tor is not active. Exiting\"\r\n        )\r\n        self.close(onion=True)\r\n        exit()\r\n\r\n    def get_exit(self):\r\n        for circ in self.tor_controller.get_circuits():\r\n            if circ.status != CircStatus.BUILT:\r\n                continue\r\n            exit_fp, exit_nickname = circ.path[-1]\r\n            exit_desc = self.tor_controller.get_network_status(exit_fp, None)\r\n            exit_address = exit_desc.address if exit_desc else \"unknown\"\r\n            return exit_address\r\n\r\n    def tor_recommended(self, recommended):\r\n        present = str(get_system_tor_version(self.tor_binary_path)).split(\" \")[0]\r\n        if present not in recommended:\r\n            spinner.stop_and_persist(\r\n                symbol=warning,\r\n                text=f\"{Fore.YELLOW}Update tor, highly recommended for security.\",\r\n            )\r\n        return\r\n\r\n    def pw_decode(self, b_pass: bytes) -> str:\r\n        return base64.b64decode(b_pass).decode(\"utf-8\")\r\n\r\n    def close(self, onion=False):\r\n        if onion:\r\n            self.shutdown()\r\n\r\n\r\ndef write_tor_controller(path: str) -> None:\r\n    with fileinput.input(\r\n        Path(Path(__file__).parent, \"globals_.py\"), inplace=True, encoding=\"utf-8\"\r\n    ) as f:\r\n        for line in f:\r\n            if '    \"tor_binary_path\":' in line:\r\n                line = f'    \"tor_binary_path\": Path(r\"{path}\"),\\n'\r\n            print(line, end=\"\")\r\n\r\n\r\ndef create_tor_hash(tor_pw, tor_path):\r\n    try:\r\n        tor_pass = subprocess.run(\r\n            [Path(tor_path), \"--hash-password\", tor_pw],\r\n            capture_output=True,\r\n            text=True,\r\n        )\r\n        if stem.util.system.is_windows():\r\n            hashed = tor_pass.stdout.splitlines()[2]\r\n        else:\r\n            hashed = tor_pass.stdout.replace(\"\\n\", \"\")\r\n        return hashed\r\n    except FileNotFoundError:\r\n        spinner.stop_and_persist(\r\n            symbol=failure,\r\n            text=f\"{Fore.RED}Tor can't be found. Check its path.\\n\"\r\n            r\"\"\"   It should be the full path for windows (e.g. C:\\tor\\tor.exe),\"\"\"\r\n            + \"\\n\"\r\n            f\"   /usr/bin/tor or tor for linux\",\r\n        )\r\n        exit()\r\n\r\n\r\ndef setup() -> None:\r\n    spinner.stop_and_persist(\r\n        symbol=warning,\r\n        text=f\" {Fore.YELLOW}You have to install tor first. If you haven't, see README.md.\\n\"\r\n        f\"   https://github.com/balestek/medor?tab=readme-ov-file#install-tor\",\r\n    )\r\n    tor_path = input(\r\n        r\"➡\uFE0F Tor binary path (e.g. C:\\Tor\\tor.exe for windows,\"\r\n        \"\"\"\\n   /usr/bin/tor or tor for linux) : \"\"\"\r\n    )\r\n    if len(tor_path) == 0:\r\n        spinner.stop_and_persist(\r\n            symbol=failure,\r\n            text=f\"{Fore.RED}You should enter a path.\",\r\n        )\r\n        exit()\r\n    write_tor_controller(tor_path)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/medor/utils/tor.py b/medor/utils/tor.py
+--- a/medor/utils/tor.py	
++++ b/medor/utils/tor.py	
+@@ -18,7 +18,8 @@
+ 
+ class Tor:
+     def __init__(self):
+-        self.tor_binary_path = str(globals_.tor["tor_binary_path"])
++        self.tor_binary_path = str(r"C:\Tor\tor\tor.exe")  # globals_.tor["tor_binary_path"]
++        self.tor_pwd = 'azerty'  # self.pw_decode(globals_.tor["tor_plain"])
+         self.net = net.Net(onion=True, timeout=10.0)
+         self.tor_controller = None
+ 
+@@ -31,6 +32,7 @@
+     def ini_connection(self):
+         spinner.start("Initializing tor")
+         try:
++            spinner.start("Refreshing tor route")
+             self.tor_controller = self.tor_control()
+             if self.tor_controller.get_info("status/circuit-established") == "1":
+                 spinner.stop_and_persist(symbol=success, text="Tor initialized")
+@@ -48,8 +50,8 @@
+                 )
+ 
+     def tor_control(self) -> stem.control.Controller:
+-        c = Controller.from_port(port=globals_.tor["controller_port"])
+-        c.authenticate()
++        c = Controller.from_port(port=9151)
++        c.authenticate(password="azerty")
+         return c
+ 
+     def start(self):
+@@ -60,10 +62,10 @@
+             try:
+                 tor_process = process.launch_tor_with_config(
+                     config={
+-                        "ControlPort": str(globals_.tor["controller_port"]),
+-                        # "HashedControlPassword": globals_.tor["tor_hashed"],
++                        "ControlPort": "9151",
++                        "HashedControlPassword": "16:23C9778D22EDA47060FE30D9FCB4AA4734F7DC46F35B7E4D1CCCCB67FF",
+                         "CookieAuthentication": "1",
+-                        "SocksPort": str(globals_.tor["tor_port"]),
++                        "SocksPort": "52156",
+                     },
+                     tor_cmd=self.tor_binary_path,
+                     completion_percent=100,
+@@ -163,11 +165,15 @@
+             self.shutdown()
+ 
+ 
+-def write_tor_controller(path: str) -> None:
++def write_tor_controller(plain: bytes, hashed: str, path: str) -> None:
+     with fileinput.input(
+         Path(Path(__file__).parent, "globals_.py"), inplace=True, encoding="utf-8"
+     ) as f:
+         for line in f:
++            if '    "tor_plain":' in line:
++                line = f'    "tor_plain": {plain},\n'
++            if """    "tor_hashed":""" in line:
++                line = f'    "tor_hashed": "{hashed}",\n'
+             if '    "tor_binary_path":' in line:
+                 line = f'    "tor_binary_path": Path(r"{path}"),\n'
+             print(line, end="")
+@@ -197,11 +203,20 @@
+ 
+ 
+ def setup() -> None:
++    import pwinput
++
+     spinner.stop_and_persist(
+         symbol=warning,
+         text=f" {Fore.YELLOW}You have to install tor first. If you haven't, see README.md.\n"
+         f"   https://github.com/balestek/medor?tab=readme-ov-file#install-tor",
+     )
++    tor_pass = pwinput.pwinput(prompt="➡️ A new password to connect to tor: ", mask="*")
++    if len(tor_pass) == 0:
++        spinner.stop_and_persist(
++            symbol=failure,
++            text=f"{Fore.RED}You should enter a password.",
++        )
++        exit()
+     tor_path = input(
+         r"➡️ Tor binary path (e.g. C:\Tor\tor.exe for windows,"
+         """\n   /usr/bin/tor or tor for linux) : """
+@@ -212,4 +227,6 @@
+             text=f"{Fore.RED}You should enter a path.",
+         )
+         exit()
+-    write_tor_controller(tor_path)
++    tor_pass_e = base64.b64encode(tor_pass.encode("utf-8"))
++    tor_pass_hash = create_tor_hash(tor_pass, tor_path)
++    write_tor_controller(tor_pass_e, tor_pass_hash, tor_path)
+Index: medor/medor.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># coding: utf-8\r\n\"\"\"medor\r\n\r\nFind a WordPress website IP behind a WAF or behind Onion Services.\r\nIt works if there is at least a blog post and if xmlrpc.php has not been secured.\r\n\r\nUsage:\r\n    medor find <item> [--item-type=<domain|site|post>] [--proxy=<proxy>|--onion] [--webhook=<webhook>]\r\n    medor wp_check <url> [--proxy=<proxy>|--onion]\r\n    medor tor_setup\r\n\r\nArguments:\r\n    find <item>                         Find <item> IP:\r\n                                            domain.tld for domain (e.g. website.com)\r\n                                            website URL for site (e.g. https://www.website.com)\r\n                                            post URL for post (e.g. https://www.website.com/a-blog-post)\r\n    tor_setup                           Setup tor for medor\r\n    wp_check <url>                      URL to check if built with WordPress (e.g.https://www.website.com)\r\n\r\nOptions:\r\n    -h --help                           Show this help\r\n    -v --version                        Show medor version\r\n    -t --item-type=<domain|site|post>   Type of the <item> [default: domain]:\r\n                                            domain (domain.tld, e.g. website.com)\r\n                                            site (website URL, e.g. https://www.website.com)\r\n                                            post (post URL, e.g. https://www.website.com/a-blog-post)\r\n    -p --proxy=<proxy>                  Optional. Proxy to use :\r\n                                            with authentication : scheme://user:password@ip:port\r\n                                            without authentication : scheme://ip:port\r\n    -o --onion                          Optional. For onion websites. Requires tor setup\r\n    -w --webhook=<webhook>              Optional. Custom webhook URL to send xmlrpc request to\r\n\r\n\"\"\"\r\n\r\nfrom colorama import Fore\r\nfrom docopt import docopt\r\n\r\nimport medor.utils.globals_ as globals_\r\nfrom medor.__about__ import __version__\r\nfrom medor.utils.bone import Bone\r\nfrom medor.utils.tor import setup\r\nfrom medor.utils.util import failure, medor_home\r\nfrom medor.utils.wp_check import WpCheck\r\n\r\n\r\ndef main():\r\n    args = docopt(__doc__, version=\"medor v\" + __version__)\r\n    medor_home()\r\n    proxy = None\r\n    onion = False\r\n    webhook = None\r\n    if args[\"--proxy\"] == \"\":\r\n        exit(\r\n            f\"{failure} {Fore.RED}You want to use a proxy (--proxy=) but you haven't specified any.\\n\"\r\n            \"\"\"   Use --proxy=http://your-proxy-url\"\"\"\r\n        )\r\n    if args[\"--proxy\"]:\r\n        proxy = args[\"--proxy\"]\r\n    if args[\"--onion\"]:\r\n        onion = True\r\n        if not globals_.check_globals():\r\n            exit(\r\n                f\"{failure} {Fore.RED}You need to set up tor if you want to use medor with .onion websites.\\n\"\r\n                \"\"\"   Check the doc.\"\"\"\r\n            )\r\n    if args[\"--webhook\"]:\r\n        webhook = args[\"--webhook\"]\r\n    if args[\"find\"]:\r\n        if (\r\n            args[\"--item-type\"] == \"domain\"\r\n            or args[\"--item-type\"] == \"site\"\r\n            or args[\"--item-type\"] == \"post\"\r\n        ):\r\n            Bone(\r\n                args[\"--item-type\"],\r\n                args[\"<item>\"],\r\n                proxy=proxy,\r\n                onion=onion,\r\n                webhook=webhook,\r\n            )\r\n        else:\r\n            exit(\r\n                f\"{failure}  {Fore.RED}You used an invalid item-type\\n\"\r\n                \"\"\"   --item-type should be either \"domain\", \"site\" or \"post\", matching the item investigated.\"\"\"\r\n            )\r\n    if args[\"tor_setup\"]:\r\n        setup()\r\n    if args[\"wp_check\"]:\r\n        WpCheck(args[\"<url>\"], proxy=proxy, onion=onion)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/medor/medor.py b/medor/medor.py
+--- a/medor/medor.py	
++++ b/medor/medor.py	
+@@ -5,7 +5,7 @@
+ It works if there is at least a blog post and if xmlrpc.php has not been secured.
+ 
+ Usage:
+-    medor find <item> [--item-type=<domain|site|post>] [--proxy=<proxy>|--onion] [--webhook=<webhook>]
++    medor find <item> [--proxy=<proxy>] [--webhook=<webhook>]
+     medor wp_check <url> [--proxy=<proxy>|--onion]
+     medor tor_setup
+ 
+@@ -20,14 +20,9 @@
+ Options:
+     -h --help                           Show this help
+     -v --version                        Show medor version
+-    -t --item-type=<domain|site|post>   Type of the <item> [default: domain]:
+-                                            domain (domain.tld, e.g. website.com)
+-                                            site (website URL, e.g. https://www.website.com)
+-                                            post (post URL, e.g. https://www.website.com/a-blog-post)
+     -p --proxy=<proxy>                  Optional. Proxy to use :
+                                             with authentication : scheme://user:password@ip:port
+                                             without authentication : scheme://ip:port
+-    -o --onion                          Optional. For onion websites. Requires tor setup
+     -w --webhook=<webhook>              Optional. Custom webhook URL to send xmlrpc request to
+ 
+ """
+@@ -38,7 +33,7 @@
+ import medor.utils.globals_ as globals_
+ from medor.__about__ import __version__
+ from medor.utils.bone import Bone
+-from medor.utils.tor import setup
++# from medor.utils.tor import setup
+ from medor.utils.util import failure, medor_home
+ from medor.utils.wp_check import WpCheck
+ 
+@@ -56,35 +51,18 @@
+         )
+     if args["--proxy"]:
+         proxy = args["--proxy"]
+-    if args["--onion"]:
+-        onion = True
+-        if not globals_.check_globals():
+-            exit(
+-                f"{failure} {Fore.RED}You need to set up tor if you want to use medor with .onion websites.\n"
+-                """   Check the doc."""
+-            )
+     if args["--webhook"]:
+         webhook = args["--webhook"]
+     if args["find"]:
+-        if (
+-            args["--item-type"] == "domain"
+-            or args["--item-type"] == "site"
+-            or args["--item-type"] == "post"
+-        ):
+-            Bone(
+-                args["--item-type"],
+-                args["<item>"],
+-                proxy=proxy,
+-                onion=onion,
+-                webhook=webhook,
+-            )
+-        else:
+-            exit(
+-                f"{failure}  {Fore.RED}You used an invalid item-type\n"
+-                """   --item-type should be either "domain", "site" or "post", matching the item investigated."""
+-            )
++        Bone(
++            args["<item>"],
++            proxy=proxy,
++            webhook=webhook
++        )
++
+     if args["tor_setup"]:
+-        setup()
++        # setup()
++        pass
+     if args["wp_check"]:
+         WpCheck(args["<url>"], proxy=proxy, onion=onion)
+ 
+Index: medor/utils/bone.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># coding: utf-8\r\nimport socket\r\nfrom pathlib import Path\r\nfrom urllib.parse import urlparse\r\n\r\nimport httpx\r\nfrom bs4 import BeautifulSoup as bs\r\nfrom colorama import Fore, Style\r\nfrom validators import domain as valid_domain, ipv4, ipv6\r\n\r\nfrom medor.utils import net\r\nfrom medor.utils.tor import Tor\r\nfrom medor.utils.util import (\r\n    success,\r\n    failure,\r\n    spinner,\r\n    not_found,\r\n    found,\r\n)\r\n\r\n\r\nclass Bone:\r\n    def __init__(\r\n        self,\r\n        ptype: str,\r\n        item: str,\r\n        onion: bool = False,\r\n        proxy: str or None = None,\r\n        webhook: str or None = None,\r\n    ) -> None:\r\n        self.ptype = ptype\r\n        self.item = item\r\n        self.onion = onion\r\n        self.proxy = proxy\r\n        self.webhook = webhook\r\n        self.medor_path = Path(__file__).parent\r\n        self.webhook_token = \"\"\r\n        self.webhook_url = \"\"\r\n        self.domain = \"\"\r\n        self.site_url = \"\"\r\n        self.post_url = \"\"\r\n        self.xmlrpc_url = \"\"\r\n        self.net = net.Net(onion=onion, proxy=proxy)\r\n        self.run(ptype, item)\r\n\r\n    def run(self, ptype: str, item: str) -> None:\r\n        if self.onion:\r\n            Tor().launch()\r\n        self.net.update_ua()\r\n        if self.proxy and not self.onion:\r\n            self.net.check_proxy(self.proxy)\r\n\r\n        self.domain, self.site_url, self.post_url, self.xmlrpc_url = self.parser(\r\n            ptype, item\r\n        )\r\n\r\n        if not self.webhook:\r\n            self.webhook_token = self.create_webhook_token()\r\n            self.webhook_url = f\"https://webhook.site/{self.webhook_token}\"\r\n        else:\r\n            self.webhook_url = self.webhook\r\n\r\n        self.ping_back(\r\n            self.xmlrpc_url,\r\n            self.post_url,\r\n            self.webhook_url,\r\n        )\r\n\r\n        if not self.webhook:\r\n            self.get_ip(\r\n                self.webhook_token,\r\n                self.domain,\r\n                self.site_url,\r\n            )\r\n\r\n    def parser(self, ptype: str, item: str) -> tuple:\r\n\r\n        spinner.start(\"Parsing and creating urls\")\r\n        site_url = \"\"\r\n        domain = \"\"\r\n        post_url = \"\"\r\n        if ptype == \"domain\":\r\n            domain = item\r\n            if valid_domain(domain):\r\n                site_url = self.find_domain_scheme(domain)\r\n                post_url = self.find_post(site_url)\r\n            else:\r\n                spinner.stop_and_persist(\r\n                    symbol=failure,\r\n                    text=f\"{Fore.RED}The entry provided doesn't seem to be formatted as a domain.\\n\"\r\n                    f\"   Use a domain e.g. domain.tld.\",\r\n                )\r\n                Tor().close(self.onion)\r\n                exit()\r\n        if ptype == \"site\":\r\n            site_url = item\r\n            site_url = site_url.rstrip(\"/\")\r\n            self.net.valid_site_url(site_url)\r\n            post_url = self.find_post(site_url)\r\n            domain = \".\".join(urlparse(site_url).netloc.split(\".\")[-2:])\r\n        if ptype == \"post\":\r\n            post_url = item\r\n            self.test_url(post_url)\r\n            site_url = f\"{urlparse(post_url).scheme}://{urlparse(post_url).netloc}\"\r\n            domain = \".\".join(urlparse(post_url).netloc.split(\".\")[-2:])\r\n\r\n        xmlrpc_url = site_url + \"/xmlrpc.php\"\r\n        self.test_url(xmlrpc_url)\r\n\r\n        spinner.stop_and_persist(\r\n            symbol=success,\r\n            text=f\"Urls parsed and created :\\n\"\r\n            f\"     domain : {domain}\\n\"\r\n            f\"     site_url : {site_url}\\n\"\r\n            f\"     post_url : {post_url}\\n\"\r\n            f\"     xmlrpc_url : {xmlrpc_url}\\n\",\r\n        )\r\n\r\n        return domain, site_url, post_url, xmlrpc_url\r\n\r\n    def find_domain_scheme(self, domain: str) -> str:\r\n        schemes = [\"https://\", \"https://www.\", \"http://\", \"http://www.\"]\r\n        for scheme in schemes:\r\n            try:\r\n                url = scheme + domain\r\n                res = self.net.connect(url)\r\n                if res.status_code == 200:\r\n                    return url\r\n            except httpx.HTTPError:\r\n                if scheme == \"http://www.\":\r\n                    spinner.stop_and_persist(\r\n                        symbol=failure,\r\n                        text=f\"{Fore.RED}Domain protocol for {domain} not found.\\n\"\r\n                        f\"   Use site_url or post_url\",\r\n                    )\r\n                    Tor().close(self.onion)\r\n                    exit()\r\n                pass\r\n\r\n    def find_post(self, url: str) -> str:\r\n        post = self.find_post_rest(url)\r\n        if not post:\r\n            post = self.find_post_feed(url)\r\n        if post:\r\n            return post\r\n        spinner.stop_and_persist(\r\n            symbol=failure,\r\n            text=f\"{Fore.RED}Medor can't find a post.\\n\"\r\n            \"\"\"   Find a post manually and use item_type=post\"\"\",\r\n        )\r\n        Tor().close(self.onion)\r\n        exit()\r\n\r\n    def find_post_rest(self, url: str) -> str or None:\r\n        wp_rest = \"/wp-json/wp/v2/posts\"\r\n        if self.onion:\r\n            wp_rest = \"/index.php?rest_route=/wp/v2/posts\"\r\n        try:\r\n            res = self.net.connect(url + wp_rest)\r\n            if res.status_code == 200:\r\n                post = res.json()[0][\"link\"]\r\n                return post\r\n            else:\r\n                return None\r\n        except:\r\n            return None\r\n\r\n    def find_post_feed(self, url: str) -> str or None:\r\n        try:\r\n            res = self.net.connect(url + \"/feed/\")\r\n            if res.status_code == 200:\r\n                soup = bs(res.text, \"xml\")\r\n                post = soup.find(\"item\").find(\"link\").text\r\n                return post\r\n            else:\r\n                return None\r\n        except:\r\n            return None\r\n\r\n    def test_url(self, url):\r\n        try:\r\n            res = self.net.connect(url, rtype=\"post\")\r\n            if res.status_code == 200:\r\n                return\r\n            else:\r\n                spinner.stop_and_persist(\r\n                    symbol=failure,\r\n                    text=f\"{Fore.RED}{url} is not accessible. medor won't work.\"\r\n                    f\"{Fore.WHITE}{not_found()}\",\r\n                )\r\n                Tor().close(self.onion)\r\n                exit()\r\n        except Exception as e:\r\n            spinner.stop_and_persist(\r\n                symbol=failure,\r\n                text=f\"{Fore.RED}{url} is not accessible. medor won't work.\\n\"\r\n                f\"   {e}\"\r\n                f\"{Fore.WHITE}{not_found()}\",\r\n            )\r\n            Tor().close(self.onion)\r\n            exit()\r\n\r\n    def create_webhook_token(self) -> str:\r\n        spinner.start(f\"Creating webhook\")\r\n        content = \"\"\"{\"expiry\": 259200}\"\"\"\r\n        try:\r\n            res = self.net.connect(\r\n                \"https://webhook.site/token\", rtype=\"post\", content=content\r\n            )\r\n            if res.status_code == 429:\r\n                spinner.stop_and_persist(\r\n                    symbol=failure,\r\n                    text=f\"{Fore.RED}Your IP might have been blacklisted from webhook.site\\n.\"\r\n                    f\"   Change your IP.\",\r\n                )\r\n                Tor().close(self.onion)\r\n                exit()\r\n            if res.status_code == 201:\r\n                spinner.stop_and_persist(\r\n                    symbol=success,\r\n                    text=\"Webhook successfully created with webhook.site\",\r\n                )\r\n                return res.json()[\"uuid\"]\r\n        except httpx.HTTPError as e:\r\n            spinner.stop_and_persist(\r\n                symbol=failure,\r\n                text=f\"{Fore.RED}Token creation failed (HTTP Error {e}).\\n\"\r\n                f\"   Try again later\",\r\n            )\r\n            Tor().close(self.onion)\r\n            exit()\r\n\r\n    def ping_back(self, xmlrpc_url: str, post_url: str, webhook_url: str) -> None:\r\n        spinner.start(f\"Posting request to xmlrpc.php\")\r\n        pingback_data = f\"\"\"<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n    <methodCall>\r\n    <methodName>pingback.ping</methodName>\r\n    <params>\r\n     <param>\r\n      <value>\r\n       <string>{webhook_url}</string>\r\n      </value>\r\n     </param>\r\n     <param>\r\n      <value>\r\n       <string>{post_url}</string>\r\n      </value>\r\n     </param>\r\n    </params>\r\n    </methodCall>\"\"\"\r\n\r\n        try:\r\n            res = self.net.connect(xmlrpc_url, rtype=\"post\", content=pingback_data)\r\n            if res.status_code == 200:\r\n                spinner.stop_and_persist(\r\n                    symbol=success, text=\"Xmlrpc.php successfully reached\"\r\n                )\r\n                if self.webhook:\r\n                    spinner.stop_and_persist(\r\n                        symbol=success,\r\n                        text=f\"{Fore.GREEN}Xmlrpc.php should have sent a response to:\\n\"\r\n                        f\"   {webhook_url}\\n\"\r\n                        f\"   Check there it got the response\",\r\n                    )\r\n                    Tor().close(self.onion)\r\n                    exit()\r\n                else:\r\n                    return\r\n            else:\r\n                spinner.stop_and_persist(\r\n                    symbol=failure,\r\n                    text=f\"{Fore.RED}{xmlrpc_url} request has not been successful.\\n\"\r\n                    f\"   It might be protected or offline.\"\r\n                    f\"{not_found()}\",\r\n                )\r\n                Tor().close(self.onion)\r\n                exit()\r\n\r\n        except httpx.HTTPError as e:\r\n            spinner.stop_and_persist(\r\n                symbol=failure,\r\n                text=f\"{Fore.RED}{xmlrpc_url} request has not been successful : {e}.\\n\"\r\n                f\"   It might be protected or offline.\"\r\n                f\"{not_found()}\",\r\n            )\r\n            Tor().close(self.onion)\r\n            exit()\r\n\r\n    def get_ip(self, token: str, domain, site_url) -> None:\r\n        _headers = {\"Accept\": \"application/json\", \"Content-Type\": \"application/json\"}\r\n        spinner.start(f\"Retrieving real IP from the webhook\")\r\n        try:\r\n            res = self.net.connect(\r\n                f\"https://webhook.site/token/{token}/request/latest\",\r\n                headers=_headers,\r\n            )\r\n        except httpx.HTTPError as e:\r\n            spinner.stop_and_persist(\r\n                symbol=failure,\r\n                text=f\"{Fore.RED}Webhook is not reachable : {e}.\" f\"{not_found()}\",\r\n            )\r\n            Tor().close(self.onion)\r\n            exit()\r\n        try:\r\n            if not res.json()[\"ip\"]:\r\n                spinner.stop_and_persist(\r\n                    symbol=failure,\r\n                    text=f\"{Fore.RED}No IP found for {domain}.\\n\"\r\n                         f\"   Xmlrpc.php might be protected.\",\r\n                )\r\n                Tor().close(self.onion)\r\n                exit()\r\n            else:\r\n                webhook_ip = res.json()[\"ip\"]\r\n        except:\r\n            spinner.stop_and_persist(\r\n                symbol=failure,\r\n                text=f\"{Fore.RED}No IP found retrieved for {domain}.\\n\"\r\n                     f\"   Xmlrpc.php might be protected.\",\r\n            )\r\n            Tor().close(self.onion)\r\n            exit()\r\n\r\n        if not self.onion:\r\n            waf_hostname = urlparse(site_url).hostname\r\n            waf_ip = socket.gethostbyname(waf_hostname)\r\n\r\n            if webhook_ip == waf_ip:\r\n                spinner.stop_and_persist(\r\n                    symbol=failure,\r\n                    text=f\"{Fore.RED}The website IP found with xmlrpc.php is the same as {site_url}: {webhook_ip}\\n\"\r\n                    f\"   {site_url} is not behind WAF. No need of medor.\\n\"\r\n                    f\"{Fore.WHITE}{not_found()}\",\r\n                )\r\n                Tor().close(self.onion)\r\n                exit()\r\n            else:\r\n                spinner.stop_and_persist(\r\n                    symbol=success,\r\n                    text=f\"{Style.BRIGHT} The website IP found with xmlrpc.php is different from {site_url} ({waf_ip}):\\n\"\r\n                    f\"   The IP medor found is {Fore.GREEN}{webhook_ip}{Style.RESET_ALL}. \"\r\n                    f\"   Webhook url : https://webhook.site/#!/view/{token} (valid for 3 days){Fore.RESET}\\n\"\r\n                    f\"{found(webhook_ip)}\",\r\n                )\r\n                Tor().close(self.onion)\r\n                exit()\r\n        elif self.onion:\r\n            if ipv4(webhook_ip) or ipv6(webhook_ip):\r\n                spinner.stop_and_persist(\r\n                    symbol=success,\r\n                    text=f\"{Style.BRIGHT} A website IP has been found with xmlrpc.php for {site_url}:\\n\"\r\n                    f\"   The IP is {Fore.GREEN}{webhook_ip}{Style.RESET_ALL}. \"\r\n                    f\"   Webhook url : https://webhook.site/#!/view/{token} (valid for 3 days){Fore.RESET}\\n\"\r\n                    f\"{found(webhook_ip)}\",\r\n                )\r\n                Tor().close(self.onion)\r\n                exit()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/medor/utils/bone.py b/medor/utils/bone.py
+--- a/medor/utils/bone.py	
++++ b/medor/utils/bone.py	
+@@ -6,7 +6,7 @@
+ import httpx
+ from bs4 import BeautifulSoup as bs
+ from colorama import Fore, Style
+-from validators import domain as valid_domain, ipv4, ipv6
++from validators import domain as valid_domain, ipv4, ipv6, url as valid_url
+ 
+ from medor.utils import net
+ from medor.utils.tor import Tor
+@@ -22,30 +22,58 @@
+ class Bone:
+     def __init__(
+         self,
+-        ptype: str,
+         item: str,
+-        onion: bool = False,
+         proxy: str or None = None,
+         webhook: str or None = None,
+     ) -> None:
+-        self.ptype = ptype
+         self.item = item
+-        self.onion = onion
++        self.onion = False
+         self.proxy = proxy
+         self.webhook = webhook
+         self.medor_path = Path(__file__).parent
++        self.net = None
+         self.webhook_token = ""
+         self.webhook_url = ""
+         self.domain = ""
+         self.site_url = ""
+         self.post_url = ""
+         self.xmlrpc_url = ""
+-        self.net = net.Net(onion=onion, proxy=proxy)
+-        self.run(ptype, item)
++        self.parse_input()
++
++    def parse_input(self) -> None:
++        item = self.item
++        input_type = ""
++        if valid_domain(item):
++            input_type = "domain"
++        elif valid_url(item):
++            parsed = urlparse(item)
++            if (parsed.scheme == "https" or "http") and parsed.netloc:
++                if parsed.path == "" or parsed.path == "/":
++                    input_type = "site"
++                elif parsed.path:
++                    input_type = "post"
++        else:
++            spinner.stop_and_persist(
++                symbol=failure,
++                text=f"{Fore.RED}The entry provided doesn't seem to be formatted as a domain, url or post.\n"
++                f"   Valid entry:\n"
++                f"a domain e.g. domain.tld\n"
++                f"a website url e.g. https://www.website.com\n"
++                f"a valid post url e.g. https://www.website.com/a-blog-post/\n",
++            )
++            exit()
++        self.run(input_type, item)
++
++    def is_onion(self, item: str) -> bool:
++        if ".onion" in item:
++            self.onion = True
++            self.net = net.Net(onion=True)
++            Tor().launch()
++        return False
+ 
+     def run(self, ptype: str, item: str) -> None:
+-        if self.onion:
+-            Tor().launch()
++        if not self.is_onion(item):
++            self.net = net.Net(proxy=self.proxy)
+         self.net.update_ua()
+         if self.proxy and not self.onion:
+             self.net.check_proxy(self.proxy)
+@@ -53,25 +81,25 @@
+         self.domain, self.site_url, self.post_url, self.xmlrpc_url = self.parser(
+             ptype, item
+         )
+-
+-        if not self.webhook:
+-            self.webhook_token = self.create_webhook_token()
+-            self.webhook_url = f"https://webhook.site/{self.webhook_token}"
+-        else:
+-            self.webhook_url = self.webhook
+-
+-        self.ping_back(
+-            self.xmlrpc_url,
+-            self.post_url,
+-            self.webhook_url,
+-        )
+-
+-        if not self.webhook:
+-            self.get_ip(
+-                self.webhook_token,
+-                self.domain,
+-                self.site_url,
+-            )
++        exit()
++        # if not self.webhook:
++        #     self.webhook_token = self.create_webhook_token()
++        #     self.webhook_url = f"https://webhook.site/{self.webhook_token}"
++        # else:
++        #     self.webhook_url = self.webhook
++        #
++        # self.ping_back(
++        #     self.xmlrpc_url,
++        #     self.post_url,
++        #     self.webhook_url,
++        # )
++        #
++        # if not self.webhook:
++        #     self.get_ip(
++        #         self.webhook_token,
++        #         self.domain,
++        #         self.site_url,
++        #     )
+ 
+     def parser(self, ptype: str, item: str) -> tuple:
+ 
+@@ -90,7 +118,6 @@
+                     text=f"{Fore.RED}The entry provided doesn't seem to be formatted as a domain.\n"
+                     f"   Use a domain e.g. domain.tld.",
+                 )
+-                Tor().close(self.onion)
+                 exit()
+         if ptype == "site":
+             site_url = item
+@@ -133,7 +160,6 @@
+                         text=f"{Fore.RED}Domain protocol for {domain} not found.\n"
+                         f"   Use site_url or post_url",
+                     )
+-                    Tor().close(self.onion)
+                     exit()
+                 pass
+ 
+@@ -148,7 +174,6 @@
+             text=f"{Fore.RED}Medor can't find a post.\n"
+             """   Find a post manually and use item_type=post""",
+         )
+-        Tor().close(self.onion)
+         exit()
+ 
+     def find_post_rest(self, url: str) -> str or None:
+@@ -188,7 +213,6 @@
+                     text=f"{Fore.RED}{url} is not accessible. medor won't work."
+                     f"{Fore.WHITE}{not_found()}",
+                 )
+-                Tor().close(self.onion)
+                 exit()
+         except Exception as e:
+             spinner.stop_and_persist(
+@@ -197,7 +221,6 @@
+                 f"   {e}"
+                 f"{Fore.WHITE}{not_found()}",
+             )
+-            Tor().close(self.onion)
+             exit()
+ 
+     def create_webhook_token(self) -> str:
+@@ -213,7 +236,6 @@
+                     text=f"{Fore.RED}Your IP might have been blacklisted from webhook.site\n."
+                     f"   Change your IP.",
+                 )
+-                Tor().close(self.onion)
+                 exit()
+             if res.status_code == 201:
+                 spinner.stop_and_persist(
+@@ -227,7 +249,6 @@
+                 text=f"{Fore.RED}Token creation failed (HTTP Error {e}).\n"
+                 f"   Try again later",
+             )
+-            Tor().close(self.onion)
+             exit()
+ 
+     def ping_back(self, xmlrpc_url: str, post_url: str, webhook_url: str) -> None:
+@@ -262,7 +283,6 @@
+                         f"   {webhook_url}\n"
+                         f"   Check there it got the response",
+                     )
+-                    Tor().close(self.onion)
+                     exit()
+                 else:
+                     return
+@@ -273,7 +293,6 @@
+                     f"   It might be protected or offline."
+                     f"{not_found()}",
+                 )
+-                Tor().close(self.onion)
+                 exit()
+ 
+         except httpx.HTTPError as e:
+@@ -283,7 +302,6 @@
+                 f"   It might be protected or offline."
+                 f"{not_found()}",
+             )
+-            Tor().close(self.onion)
+             exit()
+ 
+     def get_ip(self, token: str, domain, site_url) -> None:
+@@ -299,16 +317,14 @@
+                 symbol=failure,
+                 text=f"{Fore.RED}Webhook is not reachable : {e}." f"{not_found()}",
+             )
+-            Tor().close(self.onion)
+             exit()
+         try:
+             if not res.json()["ip"]:
+                 spinner.stop_and_persist(
+                     symbol=failure,
+                     text=f"{Fore.RED}No IP found for {domain}.\n"
+-                         f"   Xmlrpc.php might be protected.",
++                    f"   Xmlrpc.php might be protected.",
+                 )
+-                Tor().close(self.onion)
+                 exit()
+             else:
+                 webhook_ip = res.json()["ip"]
+@@ -316,9 +332,8 @@
+             spinner.stop_and_persist(
+                 symbol=failure,
+                 text=f"{Fore.RED}No IP found retrieved for {domain}.\n"
+-                     f"   Xmlrpc.php might be protected.",
++                f"   Xmlrpc.php might be protected.",
+             )
+-            Tor().close(self.onion)
+             exit()
+ 
+         if not self.onion:
+@@ -332,7 +347,6 @@
+                     f"   {site_url} is not behind WAF. No need of medor.\n"
+                     f"{Fore.WHITE}{not_found()}",
+                 )
+-                Tor().close(self.onion)
+                 exit()
+             else:
+                 spinner.stop_and_persist(
+@@ -342,7 +356,6 @@
+                     f"   Webhook url : https://webhook.site/#!/view/{token} (valid for 3 days){Fore.RESET}\n"
+                     f"{found(webhook_ip)}",
+                 )
+-                Tor().close(self.onion)
+                 exit()
+         elif self.onion:
+             if ipv4(webhook_ip) or ipv6(webhook_ip):
+@@ -353,5 +366,4 @@
+                     f"   Webhook url : https://webhook.site/#!/view/{token} (valid for 3 days){Fore.RESET}\n"
+                     f"{found(webhook_ip)}",
+                 )
+-                Tor().close(self.onion)
+                 exit()
+Index: medor/utils/net.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># coding: utf-8\r\nimport importlib\r\nfrom pathlib import Path\r\nfrom random import choice\r\nfrom re import match\r\n\r\nimport httpx\r\nfrom bs4 import BeautifulSoup as bs\r\nfrom colorama import Fore\r\nfrom validators import url as valid_url, validator\r\n\r\nimport medor.utils.globals_ as globals_\r\nfrom medor.utils import uas\r\nfrom medor.utils.util import success, failure, warning, spinner\r\nfrom medor.utils.tor import Tor\r\n\r\n\r\nclass Net:\r\n    def __init__(\r\n        self,\r\n        onion: bool = False,\r\n        proxy: str or None or dict[str, str] = None,\r\n        timeout: float = 5.0,\r\n    ):\r\n        self.medor_path = Path(__file__).parent\r\n        self.onion = onion\r\n        self.uas = uas.uas\r\n        self.proxy = proxy\r\n        self.timeout = timeout\r\n        self._headers = {\r\n            \"Accept\": \"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8\",\r\n            \"Accept-Encoding\": \"gzip, deflate, br\",\r\n            \"Accept-Language\": \"en-US,en;q=0.8\",\r\n            \"Cache-Control\": \"max-age=0\",\r\n            \"Referrer\": \"https://google.com\",\r\n            \"Sec-Fetch-Dest\": \"document\",\r\n            \"Sec-Fetch-Mode\": \"navigate\",\r\n            \"Sec-Fetch-Site\": \"none\",\r\n            \"Sec-Fetch-User\": \"?1\",\r\n            \"Sec-Gpc\": \"1\",\r\n            \"Upgrade-Insecure-Requests\": \"1\",\r\n            \"User-Agent\": \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/121.0\",\r\n        }\r\n        self.onion_pattern = r\"^https?://[a-z2-7]{16,56}\\.onion/?$\"\r\n\r\n    def connect(self, url, rtype=\"get\", headers=None, content=None) -> httpx.Response:\r\n        if not headers:\r\n            headers = self.rand_headers()\r\n        if self.onion:\r\n            self.proxy = globals_.tor[\"tor_proxy\"]\r\n        with httpx.Client(headers=headers, proxy=self.proxy, timeout=self.timeout) as c:\r\n            if rtype == \"get\":\r\n                res = c.get(url)\r\n            if rtype == \"post\":\r\n                res = c.post(url, content=content)\r\n        return res\r\n\r\n    def valid_site_url(self, url: str) -> None:\r\n        if self.onion and not self.valid_onion(url):\r\n            spinner.stop_and_persist(\r\n                symbol=failure,\r\n                text=f\"{Fore.RED}{url} is not a valid onion url.\\n\"\r\n                     \"   Check the url.\",\r\n            )\r\n            Tor().close(self.onion)\r\n            exit()\r\n        if valid_url(url):\r\n            try:\r\n                res = self.connect(url)\r\n                if res.status_code == 200:\r\n                    return\r\n                else:\r\n                    spinner.stop_and_persist(\r\n                        symbol=failure,\r\n                        text=f\"{Fore.RED}{url} request is not successful.\\n\"\r\n                             \"   Check the url.\",\r\n                    )\r\n                    Tor().close(self.onion)\r\n                    exit()\r\n            except httpx.HTTPError as e:\r\n                spinner.stop_and_persist(\r\n                    symbol=failure,\r\n                    text=f\"{Fore.RED}{url} request is not successful : {e}.\\n\"\r\n                         \"   Check the url.\",\r\n                )\r\n                Tor().close(self.onion)\r\n                exit()\r\n        else:\r\n            spinner.stop_and_persist(\r\n                symbol=failure,\r\n                text=f\"{Fore.RED}{url} doesn't seem to be well formatted as a valid url.\\n\"\r\n                     \"   Check the url.\",\r\n            )\r\n            Tor().close(self.onion)\r\n            exit()\r\n\r\n    @validator\r\n    def valid_onion(self, url):\r\n        check = match(self.onion_pattern, url)\r\n        return check\r\n\r\n    def update_ua(self) -> None:\r\n        spinner.start(\"Updating User-Agents list\")\r\n        ua = self.get_ua()\r\n        if ua is None:\r\n            ua = self.get_ua_failover()\r\n            # print(\"2\", len(ua))\r\n        if ua is None:\r\n            spinner.stop_and_persist(\r\n                symbol=warning, text=f\"{Fore.YELLOW}User-Agents can't be updated\"\r\n            )\r\n        else:\r\n            with open(Path(self.medor_path, \"uas.py\"), \"w\", encoding=\"utf-8)\") as f:\r\n                f.write(ua)\r\n            importlib.reload(uas)\r\n            spinner.stop_and_persist(symbol=success, text=f\"User-Agents checked\")\r\n\r\n    def get_ua(self) -> str or None:\r\n        try:\r\n            res = self.connect(\r\n                \"https://cdn.jsdelivr.net/gh/microlinkhq/top-user-agents@master/src/desktop.json\"\r\n            )\r\n            if res.status_code == 200:\r\n                ua = f\"uas = \" + res.text\r\n                return ua\r\n        except:\r\n            return None\r\n\r\n    def get_ua_failover(self) -> str or None:\r\n        matches = [\r\n            \"latest-windows-desktop-useragents\",\r\n            \"latest-mac-desktop-useragents\",\r\n            \"latest-linux-desktop-useragents\",\r\n        ]\r\n        try:\r\n            res = self.connect(\"https://www.useragents.me/\")\r\n            soup = bs(res.text, \"lxml\")\r\n            ua = []\r\n            for h2 in soup.select(\"body div h2\"):\r\n                h2id = h2.get(\"id\")\r\n                if h2id in matches:\r\n                    textareas = h2.parent.find_all(\"textarea\")\r\n                    for content in textareas:\r\n                        ua.append(content.text)\r\n            return f\"uas = \" + str(ua)\r\n        except:\r\n            return None\r\n\r\n    def rand_headers(self):\r\n        self._headers[\"User-Agent\"] = choice(self.uas)\r\n        return self._headers\r\n\r\n    def check_proxy(self, proxy):\r\n        spinner.start(\"Checking proxy connection\")\r\n        real_ip = self.get_real_ip()\r\n        try:\r\n            res = self.connect(\"https://api64.ipify.org\")\r\n            if res.status_code == 200:\r\n                if proxy and (res.text == real_ip):\r\n                    spinner.stop_and_persist(\r\n                        symbol=failure,\r\n                        text=f\"{Fore.RED}Proxy check failed:\\n\"\r\n                             f\"   Your proxy IP ({proxy}) is the same as your real ip ({real_ip}).\",\r\n                    )\r\n                    Tor().close(self.onion)\r\n                    exit()\r\n        except httpx.HTTPError as e:\r\n            spinner.stop_and_persist(\r\n                symbol=failure,\r\n                text=f\"{Fore.RED}Proxy {proxy} check failed : {e}.\\n\"\r\n                     f\"   Check the proxy url or if https://api64.ipify.org is online.\",\r\n            )\r\n            Tor().close(self.onion)\r\n            exit()\r\n        spinner.stop_and_persist(symbol=\"\uD83E\uDDB4\".encode(\"utf-8\"), text=\"Proxy checked\")\r\n\r\n    def get_real_ip(self):\r\n        return httpx.get(\"https://api64.ipify.org\").text\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/medor/utils/net.py b/medor/utils/net.py
+--- a/medor/utils/net.py	
++++ b/medor/utils/net.py	
+@@ -3,16 +3,16 @@
+ from pathlib import Path
+ from random import choice
+ from re import match
++import os
+ 
+ import httpx
+ from bs4 import BeautifulSoup as bs
+ from colorama import Fore
+ from validators import url as valid_url, validator
++from dotenv import load_dotenv
+ 
+-import medor.utils.globals_ as globals_
+ from medor.utils import uas
+ from medor.utils.util import success, failure, warning, spinner
+-from medor.utils.tor import Tor
+ 
+ 
+ class Net:
+@@ -42,12 +42,20 @@
+             "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/121.0",
+         }
+         self.onion_pattern = r"^https?://[a-z2-7]{16,56}\.onion/?$"
++        load_dotenv()
++        self.tor_ip = os.getenv("tor_ip")
++        print(self.tor_ip)
++        self.tor_port = os.getenv("tor_port")
++        print(self.tor_port)
+ 
+     def connect(self, url, rtype="get", headers=None, content=None) -> httpx.Response:
+         if not headers:
+             headers = self.rand_headers()
+         if self.onion:
+-            self.proxy = globals_.tor["tor_proxy"]
++            self.proxy = {
++                "http://": f"socks5://{self.tor_ip}:" + f"{self.tor_port}",
++                "https://": f"socks5://{self.tor_ip}:" + f"{self.tor_port}",
++            }
+         with httpx.Client(headers=headers, proxy=self.proxy, timeout=self.timeout) as c:
+             if rtype == "get":
+                 res = c.get(url)
+@@ -59,10 +67,8 @@
+         if self.onion and not self.valid_onion(url):
+             spinner.stop_and_persist(
+                 symbol=failure,
+-                text=f"{Fore.RED}{url} is not a valid onion url.\n"
+-                     "   Check the url.",
++                text=f"{Fore.RED}{url} is not a valid onion url.\n" "   Check the url.",
+             )
+-            Tor().close(self.onion)
+             exit()
+         if valid_url(url):
+             try:
+@@ -73,25 +79,22 @@
+                     spinner.stop_and_persist(
+                         symbol=failure,
+                         text=f"{Fore.RED}{url} request is not successful.\n"
+-                             "   Check the url.",
++                        "   Check the url.",
+                     )
+-                    Tor().close(self.onion)
+                     exit()
+             except httpx.HTTPError as e:
+                 spinner.stop_and_persist(
+                     symbol=failure,
+                     text=f"{Fore.RED}{url} request is not successful : {e}.\n"
+-                         "   Check the url.",
++                    "   Check the url.",
+                 )
+-                Tor().close(self.onion)
+                 exit()
+         else:
+             spinner.stop_and_persist(
+                 symbol=failure,
+                 text=f"{Fore.RED}{url} doesn't seem to be well formatted as a valid url.\n"
+-                     "   Check the url.",
++                "   Check the url.",
+             )
+-            Tor().close(self.onion)
+             exit()
+ 
+     @validator
+@@ -160,17 +163,15 @@
+                     spinner.stop_and_persist(
+                         symbol=failure,
+                         text=f"{Fore.RED}Proxy check failed:\n"
+-                             f"   Your proxy IP ({proxy}) is the same as your real ip ({real_ip}).",
++                        f"   Your proxy IP ({proxy}) is the same as your real ip ({real_ip}).",
+                     )
+-                    Tor().close(self.onion)
+                     exit()
+         except httpx.HTTPError as e:
+             spinner.stop_and_persist(
+                 symbol=failure,
+                 text=f"{Fore.RED}Proxy {proxy} check failed : {e}.\n"
+-                     f"   Check the proxy url or if https://api64.ipify.org is online.",
++                f"   Check the proxy url or if https://api64.ipify.org is online.",
+             )
+-            Tor().close(self.onion)
+             exit()
+         spinner.stop_and_persist(symbol="🦴".encode("utf-8"), text="Proxy checked")
+ 
+Index: medor/utils/wp_check.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># coding: utf-8\r\nfrom colorama import Fore\r\n\r\nfrom medor.utils import net\r\nfrom medor.utils.globals_ import spinner\r\nfrom medor.utils.tor import Tor\r\nfrom medor.utils.util import success, failure\r\n\r\n\r\nclass WpCheck:\r\n    def __init__(\r\n        self, url: str, onion: bool = False, proxy: str or None = None\r\n    ) -> None:\r\n        self.onion = onion\r\n        self.url_signatures = {\r\n            \"urls\": {\r\n                1: \"/wp-login.php\",\r\n                2: \"/wp-content/\",\r\n                3: \"/wp-admin/\",\r\n                4: \"/wp-cron.php\",\r\n                5: \"/xmlrpc.php\",\r\n                6: \"/wp-json/wp/v2/\",\r\n                7: \"/wp-content/themes/\",\r\n                8: \"/wp-content/plugins/\",\r\n            },\r\n        }\r\n        self.string_signatures = {\r\n            \"license\": {1: \"/license.txt\", 2: \"WordPress\"},\r\n            \"readme\": {1: \"/readme.html\", 2: \"WordPress\"},\r\n            \"meta generator\": {\r\n                1: \"\",\r\n                2: \"\"\"<meta name=\"generator\" content=\"WordPress\"\"\",\r\n            },\r\n        }\r\n        self.net = net.Net(onion=onion, proxy=proxy)\r\n        if onion:\r\n            Tor().launch()\r\n        self.wp_check(url)\r\n\r\n    def url_sig_check(self, url):\r\n        spinner.text = \"Checking URL signatures\"\r\n        for signature in self.url_signatures:\r\n            for sig in self.url_signatures[signature]:\r\n                surl = self.url_signatures[signature][sig]\r\n                res = self.net.connect(url + surl)\r\n                if res.status_code == 200:\r\n                    spinner.stop_and_persist(\r\n                        symbol=success,\r\n                        text=f\"\"\"{Fore.GREEN}Looks like this website is built with WorPress.\\n\"\"\"\r\n                        f\"\"\"    URL signature {surl} has successfully been reached.\"\"\",\r\n                    )\r\n                    Tor().close(self.onion)\r\n                    exit()\r\n\r\n    def string_sig_check(self, url):\r\n        spinner.text = \"Checking string signatures\"\r\n        for signature in self.string_signatures:\r\n            surl = self.string_signatures[signature][1]\r\n            sig = self.string_signatures[signature][2]\r\n            res = self.net.connect(url + surl)\r\n            if sig in res.text:\r\n                spinner.stop_and_persist(\r\n                    symbol=success,\r\n                    text=f\"\"\"{Fore.GREEN}Looks like this website is built with WorPress.\\n\"\"\"\r\n                    f\"\"\" String signature {signature} has successfully been reached.\"\"\",\r\n                )\r\n                Tor().close(self.onion)\r\n                exit()\r\n\r\n    def wp_check(self, url):\r\n        spinner.start(\"Checking WordPress URL Signatures\")\r\n        if url.endswith(\"/\"):\r\n            url = url[:-1]\r\n        self.net.valid_site_url(url)\r\n        self.url_sig_check(url)\r\n        self.string_sig_check(url)\r\n        spinner.stop()\r\n        spinner.stop_and_persist(\r\n            symbol=failure,\r\n            text=f\"\"\"{Fore.RED}{url} website doesn't seem to be built with WordPress.\\n\"\"\"\r\n                 f\"   No WP signature found.\",\r\n        )\r\n        Tor().close(self.onion)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/medor/utils/wp_check.py b/medor/utils/wp_check.py
+--- a/medor/utils/wp_check.py	
++++ b/medor/utils/wp_check.py	
+@@ -49,7 +49,6 @@
+                         text=f"""{Fore.GREEN}Looks like this website is built with WorPress.\n"""
+                         f"""    URL signature {surl} has successfully been reached.""",
+                     )
+-                    Tor().close(self.onion)
+                     exit()
+ 
+     def string_sig_check(self, url):
+@@ -64,7 +63,6 @@
+                     text=f"""{Fore.GREEN}Looks like this website is built with WorPress.\n"""
+                     f""" String signature {signature} has successfully been reached.""",
+                 )
+-                Tor().close(self.onion)
+                 exit()
+ 
+     def wp_check(self, url):
+@@ -80,4 +78,4 @@
+             text=f"""{Fore.RED}{url} website doesn't seem to be built with WordPress.\n"""
+                  f"   No WP signature found.",
+         )
+-        Tor().close(self.onion)
++        exit()
+Index: Pipfile
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[[source]]\r\nurl = 'https://pypi.python.org/simple'\r\nverify_ssl = true\r\nname = 'pypi'\r\n\r\n[requires]\r\npython_version = '3.8'\r\n\r\n[packages]\r\nhttpx = {version = \"0.27.0\", extras = [\"socks\"]}\r\nbrotlipy = '*'\r\nstem = '*'\r\nhalo = '*'\r\ncolorama = '*'\r\ndocopt = '*'\r\nlxml = '*'\r\nbeautifulsoup4 = \"*\"\r\nvalidators = \"*\"\r\npwinput = '*'\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Pipfile b/Pipfile
+--- a/Pipfile	
++++ b/Pipfile	
+@@ -16,4 +16,4 @@
+ lxml = '*'
+ beautifulsoup4 = "*"
+ validators = "*"
+-pwinput = '*'
++python-dotenv = '*'
+Index: pyproject.toml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[build-system]\r\nrequires = [\"hatchling>=1.21.0\"]\r\nbuild-backend = \"hatchling.build\"\r\n\r\n[project]\r\nname = \"medor\"\r\ndynamic = [\r\n  \"version\"\r\n]\r\ndescription = \"medor is an OSINT tool that enables you to discover a WordPress website IP behind a WAF or behind Onion Services.\"\r\nauthors = [\r\n  { name = \"balestek\"},\r\n]\r\nlicense = { file = \"LICENSE\" }\r\nreadme = \"README.md\"\r\nkeywords = [\"osint\", \"osint-tools\", \"osint-python\", \"open-source-intelligence\", \"information-gathering\", \"osint-tool\", \"wordpress\", \"xmlrpc\", \"xml-rpc\", \"pingback\", \"darknet\", \"onion\", \"tor\", \"python\", \"pypi\", \"pipenv\", \"pipx\"]\r\nclassifiers = [\r\n    \"Development Status :: 4 - Beta\",\r\n    \"Programming Language :: Python :: 3\",\r\n    \"Programming Language :: Python :: 3.8\",\r\n    \"Programming Language :: Python :: 3.9\",\r\n    \"Programming Language :: Python :: 3.10\",\r\n    \"Programming Language :: Python :: 3.11\",\r\n    \"Programming Language :: Python :: 3.12\",\r\n    \"License :: OSI Approved :: GNU General Public License v3 (GPLv3)\",\r\n    \"Operating System :: OS Independent\",\r\n    \"Natural Language :: English\",\r\n    \"Environment :: Console\"\r\n]\r\nrequires-python = \">=3.8\"\r\ndependencies = [\r\n    \"brotlipy\",\r\n    \"stem\",\r\n    \"httpx[socks]\",\r\n    \"httpx\",\r\n    \"halo\",\r\n    \"colorama\",\r\n    \"docopt\",\r\n    \"lxml\",\r\n    \"beautifulsoup4\",\r\n    \"validators\",\r\n    \"pwinput\"\r\n]\r\n\r\n[tool.hatch.version]\r\npath = \"medor/__about__.py\"\r\n\r\n[project.scripts]\r\nmedor = \"medor.medor:main\"\r\n\r\n[project.urls]\r\n\"Homepage\" = \"https://github.com/balestek/medor\"\r\n\"Bug Tracker\" = \"https://github.com/balestek/medor/issues\"
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	
++++ b/pyproject.toml	
+@@ -39,7 +39,7 @@
+     "lxml",
+     "beautifulsoup4",
+     "validators",
+-    "pwinput"
++    "python-dotenv"
+ ]
+ 
+ [tool.hatch.version]
