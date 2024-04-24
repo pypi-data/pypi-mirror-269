@@ -1,0 +1,11 @@
+README.md
+backend_shim.py
+pyproject.toml
+src/vonage_number_insight_v2/__init__.py
+src/vonage_number_insight_v2/errors.py
+src/vonage_number_insight_v2/number_insight_v2.py
+src/vonage_number_insight_v2.egg-info/PKG-INFO
+src/vonage_number_insight_v2.egg-info/SOURCES.txt
+src/vonage_number_insight_v2.egg-info/dependency_links.txt
+src/vonage_number_insight_v2.egg-info/requires.txt
+src/vonage_number_insight_v2.egg-info/top_level.txt
