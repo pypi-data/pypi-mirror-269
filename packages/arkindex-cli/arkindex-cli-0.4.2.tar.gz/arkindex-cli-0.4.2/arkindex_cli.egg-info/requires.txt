@@ -1,0 +1,14 @@
+arkindex-client==1.0.15
+arkindex-export==0.1.9
+minio==7.1.16
+python-dateutil==2.8.2
+python-docx==1.1.0
+python-gnupg==0.5.1
+PyYAML==6.0.1
+rich==13.5.2
+teklia-toolbox==0.1.4rc4
+tenacity==8.2.3
+zstandard==0.21.0
+
+[export]
+reportlab==3.6.8
