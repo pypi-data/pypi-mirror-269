@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pandaz
+Version: 3.4.2
+Summary: A package that facilitates efficient coding and development
+Author: Tom Hanks
+Author-email: <tomhanks02@gmail.com>
+Keywords: python,development,productivity,utilities
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+Pandaz is a Python package designed to enhance coding productivity and streamline development workflows. 
+It provides utilities and tools that simplify common programming tasks, allowing users to write cleaner, 
+more concise code with fewer lines. Pandaz aims to empower developers to focus more on problem-solving 
+and less on boilerplate code.
