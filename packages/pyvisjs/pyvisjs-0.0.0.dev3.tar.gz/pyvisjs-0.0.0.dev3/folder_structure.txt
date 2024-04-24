@@ -1,0 +1,22 @@
+pyvisjs-dev/
+├── pyvisjs/
+│   ├── templates/
+│   │   └── basic.html
+│   ├── __init__.py
+│   ├── _version.py
+│   ├── network.py
+│   ├── node.py
+│   ├── edge.py
+│   └── utils.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_units.py
+│   └── test_network.py
+├── examples/
+│   └── main.py
+├── .gitignore
+├── requirements.txt
+├── pyproject.toml
+├── README.md
+├── LICENSE
+└── .venv/
