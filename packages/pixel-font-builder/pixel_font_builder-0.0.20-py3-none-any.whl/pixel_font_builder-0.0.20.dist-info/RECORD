@@ -1,0 +1,12 @@
+pixel_font_builder/__init__.py,sha256=2HQCcspKKLkUt6_GEPD32B_KQV9xhwyAV4e_GFbkAmM,206
+pixel_font_builder/bdf.py,sha256=7P4kdo2khaCy4oubj52QdEqSF1jb8nXnrCZeU48MIh8,4029
+pixel_font_builder/font.py,sha256=gIH0R9gbr7a3d3nZNsw-oGIN-V6lVNjeZlI-I0Uj5zE,4122
+pixel_font_builder/glyph.py,sha256=TOCEut-DiKm7NYNSh1v_ud0ozG1N6L7NQNNT5HWtw5E,1214
+pixel_font_builder/info.py,sha256=fcg0qq4uUOrYo3gqEDguYs4XZap0U7yZSMzLpARDe-I,2049
+pixel_font_builder/opentype.py,sha256=9xZgbCA7AF26iXfYIntKj_tg2vXN2ayGo_f7_RGvjrQ,14806
+pixel_font_builder/os2.py,sha256=uzlAY3KG2ADHfAzHq8sb0xc4UgQvutcaqKZSFJOqOB4,345
+pixel_font_builder/pcf.py,sha256=9sKiyauslcnsMZfFAoR0w_PG3nEN1ZoVngLed6HRwVE,4862
+pixel_font_builder-0.0.20.dist-info/METADATA,sha256=ve52h-v2TbqQwfU2gA9M0QbiNyM-Am5a1xfsyaLgrmE,4613
+pixel_font_builder-0.0.20.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+pixel_font_builder-0.0.20.dist-info/licenses/LICENSE,sha256=KtEAp6PdkHpy5KNgBAdtRUvP6-KffM4uJ1Smx1GF6S8,1064
+pixel_font_builder-0.0.20.dist-info/RECORD,,
