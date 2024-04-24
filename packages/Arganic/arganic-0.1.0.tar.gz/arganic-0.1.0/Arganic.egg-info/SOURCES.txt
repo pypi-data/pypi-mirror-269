@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+Arganic.egg-info/PKG-INFO
+Arganic.egg-info/SOURCES.txt
+Arganic.egg-info/dependency_links.txt
+Arganic.egg-info/requires.txt
+Arganic.egg-info/top_level.txt
+arganic/__init__.py
+arganic/arguments.py
+arganic/validators.py

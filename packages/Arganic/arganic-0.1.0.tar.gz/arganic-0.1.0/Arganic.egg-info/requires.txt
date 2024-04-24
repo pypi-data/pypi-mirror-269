@@ -1,0 +1,8 @@
+
+[test]
+pytest
+pytest-cov
+mkdocs
+mkdocs-material
+mkdocstrings[python]
+mkdocs-section-index

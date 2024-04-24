@@ -1,0 +1,32 @@
+[project]
+name = "Arganic"
+version = "0.1.0"
+description = "Arganic is a simple and lightweight Python library making it easy to manage Arguments for Classes, Methods or Functions."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{name = "Kiwea"}]
+license = {text = "GNU General Public License v3 (GPLv3)"}
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
+]
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ["arganic*"]
+exclude = ["docs*", "tests*", ".github*"]
+
+[project.urls]
+Homepage = "https://github.com/kiwea/arganic"
+Changelog = "https://github.com/kiwea/arganic/releases"
+Issues = "https://github.com/kiwea/arganic/issues"
+CI = "https://github.com/kiwea/arganic/actions"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov", "mkdocs", "mkdocs-material", "mkdocstrings[python]", "mkdocs-section-index"]
