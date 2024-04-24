@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: telegram-video-downloader
+Version: 1.0
+Summary: Command to download or serve HTTP video published on Telegram
+Author: David Grau Martínez
+Author-email: fe80grau@gmail.com
+Keywords: telegram video download
+License-File: LICENSE
+Requires-Dist: quart
+Requires-Dist: telethon
+
