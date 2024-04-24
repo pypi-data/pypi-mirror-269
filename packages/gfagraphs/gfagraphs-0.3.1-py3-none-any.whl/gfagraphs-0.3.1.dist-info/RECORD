@@ -1,0 +1,12 @@
+gfagraphs/__init__.py,sha256=sjJ93uLX62mQsG4SCQNm740YzJ93Z_T7KK210T47dFA,58
+gfagraphs/gfagraphs.py,sha256=O_jiK2pUs5ivmiTKHeK853kPcTFmOC477uG47QFZeDo,39616
+pgGraphs/__init__.py,sha256=9YlHxiJAJlJbXNukfIZ4C9n8r-4l1uUHbgc-lbh_eTM,184
+pgGraphs/abstractions.py,sha256=iELIHJ78wbinXs3nyGfEWTdTvS60jpslRbLjuJAQ1jU,2079
+pgGraphs/gfaparser.py,sha256=qY3gv7iyVfazREr7LUGLVptxf6j8oWWBHM65ujcbohg,16717
+pgGraphs/graph.py,sha256=XFtoT9j4qs5ULdSi8kGU9fGur3SXXxoa0ZF1367rLEU,30506
+pgGraphs/networkx.py,sha256=70ZrQ0uzZPFBZnySJM0E6i_QrGJmXrnL9KBJzObfuxY,6217
+gfagraphs-0.3.1.dist-info/LICENSE,sha256=ZtWkDn_YBDwY1Yd9fMvT9GaxkACZ7utJMd10QdGc1pw,34521
+gfagraphs-0.3.1.dist-info/METADATA,sha256=RH6eaODNLeUb8U0JYJoHIyew4-l5_jqz9ipuoej44eM,2114
+gfagraphs-0.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gfagraphs-0.3.1.dist-info/top_level.txt,sha256=zid91AEoyQh5i0f7NOPCevF-g0z9pxyhmHrySdIWN0w,19
+gfagraphs-0.3.1.dist-info/RECORD,,
