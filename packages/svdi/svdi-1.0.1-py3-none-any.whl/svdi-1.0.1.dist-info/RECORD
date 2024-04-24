@@ -1,0 +1,17 @@
+svdi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+svdi/cli.py,sha256=w59jojmUahXQ0QHHEMSH4bf58ZxV8zey0QRkVq9HHqQ,2213
+svdi/constant.py,sha256=HtJXwPtJ6jAkziOHJY_Wr2QYCKFgYCdk-f4TtXBZESY,72
+svdi/file/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+svdi/file/format.py,sha256=AoEaXgYI9gJsNm041g2yP6NMOk0K99TfL2JEVozWvk8,1275
+svdi/main.py,sha256=01SgYpq5AeP73BrxY5M5UwUt5PbhnxZJMfFoIXSgaNs,1855
+svdi/svd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+svdi/svd/basic_rSVD.py,sha256=mkxZefLT-HZ-ZDE3KLoEYkqctkavR8Ts9QQwK1Q7vwc,762
+svdi/svd/numpy_default.py,sha256=m4GzK_EXJi4CZ-wjdwa9KMzFNVmdV4vZk1AqgOKa_No,180
+svdi/svd/pcafast.py,sha256=z2LyIwWrs2SBEMlpGOFZZQjMg5aBoZI1f3LZJTls9I8,964
+svdi/svd/power_iterations.py,sha256=hIPyRg-_nHTPGFHMgTSlEl8rV7hMWnDBx4lLeg7QwJ8,1358
+svdi/svd/result.py,sha256=yNdAHSjpTcOFY_NEvy_TH--cXx-u4XkaU6_OvM1BPq8,91
+svdi-1.0.1.dist-info/LICENCE,sha256=xOKRYTswrk2x7OhV8xzehf4NEuvqAkWV1yStfMWasO8,1061
+svdi-1.0.1.dist-info/METADATA,sha256=bBsh0K2BeGSF6s3tWrzITnJAnm2vqh9xTzoM4pUY_sY,2828
+svdi-1.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+svdi-1.0.1.dist-info/entry_points.txt,sha256=IwLMQwX-sSITVShVeOD20CWWSeSPQwCu3pF4SLGbdWY,37
+svdi-1.0.1.dist-info/RECORD,,
