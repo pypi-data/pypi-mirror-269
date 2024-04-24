@@ -1,0 +1,16 @@
+codeproject_ai_sdk/__init__.py,sha256=7KnxDgF5hl097Z339fOPTD6A8s-Teup2RoZpbdvrsW4,337
+codeproject_ai_sdk/common.py,sha256=HE8SBbHZloEmR4jj43_TesjlJtEZtgrJj869JK-gpbY,4745
+codeproject_ai_sdk/module_logging.py,sha256=oLUMmBKH4m_qTZW492qymGzaEDeuDwMfLW7gjfz4-GU,14191
+codeproject_ai_sdk/module_options.py,sha256=E58Uba2lV5q3fkiQjQLIkVC6bOWYh7RJfR_SO6NPRhw,5209
+codeproject_ai_sdk/module_runner.py,sha256=SZdjBtEsjuNhxLf1Bb2nF_SnHW7ce6emWuIDviXWLPE,61486
+codeproject_ai_sdk/request_data.py,sha256=qjfG4bIK53itOhV_fC2iGM6sZQp5eURjArUife_15lg,9686
+codeproject_ai_sdk/system_info.py,sha256=_dJ3VeDItdN2yz-j_1uCARnz-A1N3SKN0-lsrzxGWQ0,14686
+codeproject_ai_sdk/training/augmentation.py,sha256=owzuW0FtAJikU2nfRFhO9TLDdNjJtN57FL-1ka5ilnI,8344
+codeproject_ai_sdk/utils/__init__.py,sha256=iJxF8ROEpDlnUDMb61p3LFPWyHx1NR3ix1nzv3_umKo,328
+codeproject_ai_sdk/utils/cpuinfo.py,sha256=Y2_khkb6FPiqzVoFy1olM-Kz8kDhc7CwKXyYohAU7PI,26205
+codeproject_ai_sdk/utils/environment_check.py,sha256=dLEnaXX5AlMNGRnSPRWlLniHqiyF1VJZSJAnLE6TxsE,2746
+codeproject_ai_sdk/utils/image_utils.py,sha256=IVa7x8u22VV89XJoYKR-iXMXqATDzNiDQEGV46MqSrc,1419
+codeproject_ai_sdk-0.0.3.dist-info/METADATA,sha256=_75lywopI3HBNvHFCoBPuri_7SVYSHh1CXVEXAv7plY,985
+codeproject_ai_sdk-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+codeproject_ai_sdk-0.0.3.dist-info/top_level.txt,sha256=Nv5ufBe4VOyLmSTbCJjYnM6L-0bnqnSlpxtqG0GE064,19
+codeproject_ai_sdk-0.0.3.dist-info/RECORD,,
