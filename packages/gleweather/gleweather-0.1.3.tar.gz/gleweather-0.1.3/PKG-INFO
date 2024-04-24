@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: gleweather
+Version: 0.1.3
+Summary: A python package aiming to allow you to use google's weather service with automatic city detection without having to search for hours to learn how to do it.
+Home-page: https://github.com/Pohie/gleweather-py.git
+Author: Abbott Broughton
+Author-email: abbottbroughton@icloud.com
+License: The Unlicense
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: bs4
+
+You can use gleweather.weather() to get the weather where you currently are.
