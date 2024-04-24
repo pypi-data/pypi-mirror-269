@@ -1,0 +1,14 @@
+onboard/client/__init__.py,sha256=ZyYHG58iZFyWKD61quv-5Mzg1XFuVG-HZGG_UnVrqJk,337
+onboard/client/client.py,sha256=AEMkVlC3aV3_iffptRi9MulygnjtR8nKzMoeN29nuss,10506
+onboard/client/dataframes.py,sha256=EESMjxJew1yV8cLY_QfWj5Qp679agLg3bvHU7n45yQI,3375
+onboard/client/exceptions.py,sha256=-YzM7d9_8IDgklsr-01FyrYXMW-EbSUc_6kU3XAp8f0,277
+onboard/client/helpers.py,sha256=XgEBl6PYrvDv4K0ZBX7VUKWhrzzbhQbRYtXeDhzihq8,3722
+onboard/client/models.py,sha256=0fQWynJmOh9qG3_5RSUsOJOvqFSyz-DX4aHzYDbIWRY,5900
+onboard/client/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+onboard/client/staging.py,sha256=60-qKJ4f3lgg0wKMg_sBJEN9NC6Td4IwwdBassx49bg,2954
+onboard/client/util.py,sha256=ePPFJ0P6vNA7pk9k1DuWfeU26zkAQynRaM1bXEawYFs,1646
+onboard.client-1.10.1.dist-info/LICENSE,sha256=DVQuDIgE45qn836wDaWnYhSdxoLXgpRRKH4RuTjpRZQ,10174
+onboard.client-1.10.1.dist-info/METADATA,sha256=gsxLTFVCN-ezcivA7cWn4O7l31G3rosZ4ANz2_GKnro,7621
+onboard.client-1.10.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+onboard.client-1.10.1.dist-info/top_level.txt,sha256=8HZLNeyFxel8qTo3kP2Hdze8ebIGvYm1R-8GEqBwl_8,8
+onboard.client-1.10.1.dist-info/RECORD,,
