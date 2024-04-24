@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+streamlit_comments/__init__.py
+streamlit_comments.egg-info/PKG-INFO
+streamlit_comments.egg-info/SOURCES.txt
+streamlit_comments.egg-info/dependency_links.txt
+streamlit_comments.egg-info/requires.txt
+streamlit_comments.egg-info/top_level.txt
+streamlit_comments/frontend/dist/index.html
+streamlit_comments/frontend/dist/vite.svg
+streamlit_comments/frontend/dist/assets/2a0bc34f2fdf6d6b-8f22b965.svg
+streamlit_comments/frontend/dist/assets/a0e565557add9041-5e944d95.svg
+streamlit_comments/frontend/dist/assets/f86f932721d4cf30-65b9f267.svg
+streamlit_comments/frontend/dist/assets/index-70cd2224.css
+streamlit_comments/frontend/dist/assets/index-d9343cf8.js
