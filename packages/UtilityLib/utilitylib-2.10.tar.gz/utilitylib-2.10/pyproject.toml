@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "UtilityLib"
+description = "Python Helper for Repetitive Tasks with File and Data Management"
+version = "2.10"
+authors = [
+  { name="Vishal Kumar Sahu", email="mail@vishalkumarsahu.in" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  'xmltodict',
+  'sqlalchemy',
+  'psutil',
+  'pandas',
+  'seaborn',
+  'tqdm',
+  'toml',
+]
+
+[project.urls]
+Homepage = "https://github.com/TheBiomics/UtilityLib"
+Issues = "https://github.com/TheBiomics/UtilityLib/issues"
