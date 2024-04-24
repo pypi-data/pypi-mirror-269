@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: tsml-eval
+Version: 0.2.1
+Summary: A package for benchmarking time series machine learning tools.
+Author-email: Matthew Middlehurst <m.b.middlehurst@soton.ac.uk>, Tony Bagnall <a.j.bagnall@soton.ac.uk>
+Maintainer-email: Matthew Middlehurst <m.b.middlehurst@soton.ac.uk>, Tony Bagnall <a.j.bagnall@soton.ac.uk>
+License: BSD 3-Clause License
+        
+        Copyright (c) The Time Series Machine Learning (tsml) developers.
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: homepage, https://www.timeseriesclassification.com/
+Project-URL: repository, https://github.com/time-series-machine-learning/tsml-eval/
+Keywords: data-science,machine-learning,time-series,time-series-classification,time-series-regression,time-series-clustering,evaluation,benchmarking
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: <3.12,>=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aeon<0.7.0,>=0.6.0
+Requires-Dist: tsml<0.4.0,>=0.3.0
+Requires-Dist: scikit-learn<1.5.0,>=1.0.0
+Requires-Dist: matplotlib
+Requires-Dist: gpustat
+Requires-Dist: psutil
+Provides-Extra: all-extras
+Requires-Dist: aeon[all_extras,dl]; extra == "all-extras"
+Requires-Dist: tsml[all_extras]; extra == "all-extras"
+Requires-Dist: xgboost; extra == "all-extras"
+Requires-Dist: torch>=1.13.1; extra == "all-extras"
+Requires-Dist: dask[dataframe]<2024.3.0; python_version < "3.11" and extra == "all-extras"
+Requires-Dist: pyarrow<12; python_version < "3.12" and extra == "all-extras"
+Requires-Dist: pyarrow-hotfix; python_version < "3.12" and extra == "all-extras"
+Provides-Extra: unstable-extras
+Requires-Dist: aeon[unstable_extras]; extra == "unstable-extras"
+Requires-Dist: tsml[unstable_extras]; extra == "unstable-extras"
+Provides-Extra: deep-learning
+Requires-Dist: aeon[dl]; extra == "deep-learning"
+Requires-Dist: torch>=1.13.1; extra == "deep-learning"
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-randomly; extra == "dev"
+Requires-Dist: pytest-timeout; extra == "dev"
+Requires-Dist: pytest-xdist[psutil]; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-rerunfailures; extra == "dev"
+Provides-Extra: binder
+Requires-Dist: notebook; extra == "binder"
+Requires-Dist: jupyterlab; extra == "binder"
+Provides-Extra: docs
+Requires-Dist: sphinx<8.0.0; extra == "docs"
+Requires-Dist: sphinx-design; extra == "docs"
+Requires-Dist: sphinx-version-warning; extra == "docs"
+Requires-Dist: sphinx_issues; extra == "docs"
+Requires-Dist: sphinx-copybutton; extra == "docs"
+Requires-Dist: sphinx-remove-toctrees; extra == "docs"
+Requires-Dist: sphinxext-opengraph; extra == "docs"
+Requires-Dist: nbsphinx; extra == "docs"
+Requires-Dist: numpydoc; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+Requires-Dist: jupyter; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+
+[![github-actions-release](https://img.shields.io/github/actions/workflow/status/time-series-machine-learning/tsml-eval/release.yml?logo=github&label=build%20%28release%29)](https://github.com/time-series-machine-learning/tsml-eval/actions/workflows/release.yml)
+[![github-actions-main](https://img.shields.io/github/actions/workflow/status/time-series-machine-learning/tsml-eval/pr_pytest.yml?logo=github&branch=main&label=build%20%28main%29)](https://github.com/time-series-machine-learning/tsml-eval/actions/workflows/pr_pytest.yml)
+[![github-actions-nightly](https://img.shields.io/github/actions/workflow/status/time-series-machine-learning/tsml-eval/periodic_tests.yml?logo=github&label=build%20%28nightly%29)](https://github.com/time-series-machine-learning/tsml-eval/actions/workflows/periodic_tests.yml)
+[![docs-release](https://img.shields.io/readthedocs/tsml-eval/stable?logo=readthedocs&label=docs%20%28stable%29)](https://tsml-eval.readthedocs.io/en/stable/)
+[![docs-main](https://img.shields.io/readthedocs/tsml-eval/latest?logo=readthedocs&label=docs%20%28latest%29)](https://tsml-eval.readthedocs.io/en/latest/)
+[![codecov](https://img.shields.io/codecov/c/github/time-series-machine-learning/tsml-eval?label=codecov&logo=codecov)](https://codecov.io/gh/time-series-machine-learning/tsml-eval)
+[![pypi](https://img.shields.io/pypi/v/tsml-eval?logo=pypi&color=blue)](https://pypi.org/project/tsml-eval/)
+[![!conda](https://img.shields.io/conda/vn/conda-forge/tsml-eval?logo=anaconda&color=blue)](https://anaconda.org/conda-forge/tsml-eval)
+[![python-versions](https://img.shields.io/pypi/pyversions/tsml-eval?logo=python)](https://www.python.org/)
+[![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![license](https://img.shields.io/badge/license-BSD%203--Clause-green?logo=style)](https://github.com/time-series-machine-learning/tsml-eval/blob/main/LICENSE)
+[![binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/time-series-machine-learning/tsml-eval/main?filepath=examples)
+
+# tsml-eval
+
+`tsml-eval` contains benchmarking and evaluation tools for time series machine learning
+algorithms.
+
+The current release of `tsml-eval` is v0.2.1.
+
+## Installation
+
+`tsml-eval` is available on PyPI and can be installed via pip:
+
+```console
+pip install tsml-eval
+```
+
+More information available on our [documentation](https://tsml-eval.readthedocs.io/en/stable/installation.html).
+
+## Acknowledgements
+
+This work is supported by the UK Engineering and Physical Sciences Research Council
+(EPSRC) EP/W030756/2
