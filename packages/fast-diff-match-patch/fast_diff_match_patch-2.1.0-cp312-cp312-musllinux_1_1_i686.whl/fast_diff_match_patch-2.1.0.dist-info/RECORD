@@ -1,0 +1,11 @@
+fast_diff_match_patch.cpython-312-i386-linux-musl.so,sha256=o55ICvBKc4FQYndxiq1j6ETjexb8ozcQ71M6YXa3Pxs,3208061
+tests/test_match.py,sha256=DseUTqq4XZwESC5L_BqbPMrhC6VOIPLhVAmPF39WY4w,1048
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_diff.py,sha256=MsN05FckRDE309R2LmQO3XObK5pAx8KFKYbWCvyNjGc,8292
+fast_diff_match_patch.libs/libstdc++-8baf04f9.so.6.0.28,sha256=yrzOxg1heyJ9Y-43YCLLn04Cpl_A68FN0D2Q1iBTMcY,2428961
+fast_diff_match_patch.libs/libgcc_s-8b50eaaa.so.1,sha256=WXj_FYQE1MDIyb-nN8siUALdxit6NHma0p9UxemQV8o,101649
+fast_diff_match_patch-2.1.0.dist-info/LICENSE,sha256=c7p036pSC0mkAbXSFFmoUjoUbzt1GKgz7qXvqFEwv2g,10273
+fast_diff_match_patch-2.1.0.dist-info/RECORD,,
+fast_diff_match_patch-2.1.0.dist-info/top_level.txt,sha256=O-qxb1cRfJa9JwTEFY4gqzq6cIdKWCKsZ9-JCZa7ang,28
+fast_diff_match_patch-2.1.0.dist-info/WHEEL,sha256=MhWbwqqc_ZSP2Uycbd9jQxJDL3VTGcnT16CYlXtCD-I,111
+fast_diff_match_patch-2.1.0.dist-info/METADATA,sha256=Cl6EAamK-xUv8j-MxxJP62f9oW8Mo7ahmc-D7-jQ3DQ,5234
