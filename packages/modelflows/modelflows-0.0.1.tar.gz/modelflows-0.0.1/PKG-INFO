@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: modelflows
+Version: 0.0.1
+Summary: Conditional normalizing flows for emulating grids of stellar models
+Home-page: https://github.com/mtyhon/modelflows
+Author: Marc Hon
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: tqdm
+Requires-Dist: corner
+Requires-Dist: matplotlib
+Requires-Dist: torch>=2.0.0
+Requires-Dist: scikit-learn>=1.3.0
+Requires-Dist: arviz>=0.12.1
+Requires-Dist: zuko==0.3.2
+
+# modelflows
+Normalizing Flows for the Emulation of Grids of Stellar Models
+
+To run the experiments in the notebooks, please download the grid of models [here](https://www.dropbox.com/scl/fi/yyfl98nrygg692t807uae/grid.zip?rlkey=6ausvk1wtk7r2vgc95cpdgv3m&dl=0) and the trained conditional normalizing flows (CNF<sub>dwarf</sub>, CNF<sub>giant</sub>, and CNF<sub>asfgrid</sub>) 
+[here](https://www.dropbox.com/scl/fi/fvfzzcxojwv56bfable90/pretrained_flows.zip?rlkey=0pka2ddu9s0j61dk5xxsotmws&dl=0). Unzip these files into the main folder. The grid is optional, but necessary to visualize comparisons with its emulation.
+
+An interactive app can be found [here](https://mtyhon--modelflows-inyou.modal.run/).
+
+![varymassfeh](https://github.com/mtyhon/modelflows/blob/main/images/varymassfeh.gif)
+
+
+A pip-installable package `modelflows` is available!
+
+
+## 
+
