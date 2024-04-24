@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: load_envfile
+Version: 0.5
+Summary: Una biblioteca para cargar variables de entorno desde un archivo
+Author: María Muñoz Cruzado
+Author-email: maria.munozcruzado@telefonica.com
+Requires-Python: >=3.6
+Requires-Dist: python-dotenv
