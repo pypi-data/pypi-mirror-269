@@ -1,0 +1,12 @@
+shuangchentools/__init__.py,sha256=ow313a-4kcksuTM9XJ_kEYzz-ea82G4Xps5NZY-LIac,64
+shuangchentools/doc_segment/__init__.py,sha256=IrmPtMqdbvkg4XMbGnnJwmEa-gJDTSfT6Mt1Hlvhguw,51
+shuangchentools/doc_segment/doc_segment_by_rule.py,sha256=a62yqtlDi4BieMgvfIeL4VSwuUXi5HqqeuhWs1iSLwM,7036
+shuangchentools/spider/__init__.py,sha256=BwDc-bpe6kkfeETw6M5fG-sUOIYIkS1eX6S-oQjZNLg,38
+shuangchentools/spider/selenium.py,sha256=zcUfBFx9vgA6apF4zJwlWHSU3U1PUU4YgrBTbz12PyM,3119
+shuangchentools/utils/__init__.py,sha256=KSSaECDcrSF5kTPiqpm2o4HmGuhbBwxJ8eFvzZKVXho,47
+shuangchentools/utils/decorators.py,sha256=uVw02VNhdiowMoZLvGp3EkvgU8_90Okvh10rz0j9vow,1569
+shuangchentools/utils/transform.py,sha256=Ss3vrKdzoJ97g8VGjbsxm1R0-7FR4AlKyweZu1_Ik_I,3405
+shuangchentools-0.0.3.dist-info/METADATA,sha256=3_r8RthZhLi7z4LtUgZgiOiJG2xhzai5cjWgr2A5Q5A,914
+shuangchentools-0.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+shuangchentools-0.0.3.dist-info/top_level.txt,sha256=6D4rJaE1yMnqlVsau4KzWYAHYY3EJx5nTMeZzDtpaPs,16
+shuangchentools-0.0.3.dist-info/RECORD,,
