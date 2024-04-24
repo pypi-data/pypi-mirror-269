@@ -1,0 +1,3 @@
+[console_scripts]
+onnx_summarize = onnxsharp.command_line:cli_onnx_summarize
+
