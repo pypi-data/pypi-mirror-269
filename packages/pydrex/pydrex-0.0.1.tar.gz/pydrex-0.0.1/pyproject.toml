@@ -1,0 +1,98 @@
+# Use modern (PEP621, PEP660) setuptools build system.
+# PEP 660 editable installs: <https://github.com/pypa/setuptools/blob/main/NEWS.rst#v6400>.
+# Python 3.11 support: <https://github.com/pypa/setuptools_scm/blob/main/CHANGELOG.md#v710>.
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm[toml]>=8"]
+build-backend = "setuptools.build_meta"
+
+# Automatically use the version number from vcs (e.g. git) tags,
+# <https://github.com/pypa/setuptools_scm>.
+[tool.setuptools_scm]
+
+# Docs: <https://packaging.python.org/en/latest/specifications/pyproject-toml/>.
+[project]
+name = "pydrex"
+dynamic = ["version"]  # Managed by setuptools_scm.
+description = "Dynamic CPO calculations for olivine-enstatite polycrystal aggregates"
+readme = "README.md"
+requires-python = ">=3.10"  # We use tomllib on 3.11: <https://docs.python.org/3/library/tomllib.html>.
+license = {file = "LICENSE"}
+authors = [
+    {name = "Thomas Duvernay", email = "td75013@hotmail.fr"},
+    {name = "Leon Bilton", email = "adigitoleo@posteo.net"},
+    {name = "Chris Mathews"},
+]
+keywords = ["CPO", "LPO", "olivine", "deformation", "anisotropy", "crystallography"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 2 - Pre-Alpha",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+]
+
+dependencies = [
+    "tomli >= 1.1.0 ; python_version < '3.11'",  # https://github.com/hukkin/tomli?tab=readme-ov-file#building-a-tomlitomllib-compatibility-layer
+    "numpy >= 1.8",  # <https://numpy.org/doc/stable/reference/generated/numpy.linalg.eigvalsh.html>
+    "numba >= 0.57",  # <https://numba.readthedocs.io/en/stable/release-notes.html#version-0-57-0-1-may-2023>
+    "scipy >= 1.2",  # <https://github.com/scipy/scipy/pull/9176>
+    "pyyaml",  # For YAML headers of plaintext datafiles.
+    "meshio",  # For reading VTK and other meshes.
+    "matplotlib",  # Plotting library, The.
+    "cmcrameri",  # Matplotlib colormaps using the palettes designed by Fabio Crameri.
+    "h5py",  # For reading Fluidity .h5part files.
+    "tqdm",  # For progress bars (for long-running CLI scripts)
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+doc = ["pdoc"]
+mesh = ["gmsh"]  # NOTE: Saying `import gmsh` is like saying "I don't want my CI to work".
+ray = ["ray >= 2.0.0"]
+dev = ["pytest", "uniplot", "pdoc", "ruff", "black", "isort", "ptpython"]
+lsp = ["python-lsp-server", "pyls-isort", "python-lsp-black", "python-lsp-ruff"]
+
+[project.urls]
+repository = "https://github.com/seismic-anisotropy/PyDRex"
+documentation = "https://seismic-anisotropy.github.io/PyDRex/"
+
+[project.scripts]
+pydrex-polefigures = "pydrex.cli:CLI_HANDLERS.pole_figure_visualiser"
+pydrex-mesh = "pydrex.cli:CLI_HANDLERS.mesh_generator"
+pydrex-h5party="pydrex.cli:CLI_HANDLERS.h5part_extractor"
+npzshow = "pydrex.cli:CLI_HANDLERS.npz_file_inspector"
+
+# Make setuptools include datafiles in wheels/packages.
+# Data files must be inside the package directory.
+[tool.setuptools]
+include-package-data = true
+
+# Use src/<package> layout to keep things clean.
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Some global pytest configuration settings, avoids having an extra pytest.ini file.
+[tool.pytest.ini_options]
+# NOTE: Do NOT use pytest log_cli option, see tests/conftest for logging setup.
+# Only look in '.tests/`, don't search git subprojects/worktrees or anything like that,
+# <https://github.com/pytest-dev/pytest/issues/10298>.
+testpaths = ["tests"]
+# --tb=short : Use short tracebacks, terminal scrollback is precious.
+# --show-capture=no : Don't show captured output (stdout/stderr/logs) for failed tests.
+addopts = "--tb=short --show-capture=no"
+
+# Global linter and devtools settings.
+[tool.isort]
+profile = "black"
+filter_files = true
+# Ruff is faster than flake8 and supports pyproject.toml config, line length is 88 by default.
+[tool.ruff]
+exclude = [
+    "src/initial_implementation",
+    ".scsv",
+    ".npz",
+    ".vtu",
+]
+[tool.ruff.lint.per-file-ignores]
+"src/pydrex/__init__.py" = ["F401", "E501"]  # Don't complain about unused imports or long lines in __init__.py file.
+"tests/test_scsv.py" = ["E501"]  # Don't complain about long lines here.
