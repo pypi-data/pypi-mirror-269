@@ -1,0 +1,11 @@
+kaggle_waggle/__init__.py,sha256=SCJz2d-sxi4xlh7jBNvz7dhghs0yXFPc7kjI38CX8vo,217
+kaggle_waggle/cli.py,sha256=lTdZBEqttpJZdMisdMkv_4t5peBZbMc74h9xdx2lSjM,75165
+kaggle_waggle/api/kaggle_api_extended.py,sha256=ByLNDv0_6yTO1ZSexZWYDDZ_1gZWFzTKH0rTcZp7CUs,177040
+kaggle_waggle/models/kaggle_models_extended.py,sha256=jFuDwaHqhJf6X4vF9rZYGeHvehWYhRDDs5H3gkAgceM,7195
+kaggle_waggle/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kaggle_waggle/test/test_authenticate.py,sha256=sKOLHjMHmezZtV09YytLCv_bpdZxQq_wKugR1lKZIUs,1193
+kaggle_waggle-1.6.12a6.dist-info/METADATA,sha256=C5YVhPT9ZCxGwrBjDXitkwlNnb86mLDjlJYQddMmbkE,16129
+kaggle_waggle-1.6.12a6.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+kaggle_waggle-1.6.12a6.dist-info/entry_points.txt,sha256=hl3dQAS4qpVkC5FWiqfnU6qKJU924OEN6PsHEiw-FGg,43
+kaggle_waggle-1.6.12a6.dist-info/licenses/LICENSE,sha256=IzhfWrxIlFAci3lzZCg5WWHZJBI1QSzsHxO0plI63vk,11541
+kaggle_waggle-1.6.12a6.dist-info/RECORD,,
