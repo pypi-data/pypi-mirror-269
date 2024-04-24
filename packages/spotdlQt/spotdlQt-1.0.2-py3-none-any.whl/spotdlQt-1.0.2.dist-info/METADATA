@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: spotdlQt
+Version: 1.0.2
+Summary: A small gui for spotdl using qt written in python
+Author-email: Magi3r <magier.mit.f3erball@gmail.com>
+Project-URL: Repository, https://github.com/Magi3r/spotdlQt
+Project-URL: Issues, https://github.com/Magi3r/spotdlQt/issues
+Keywords: spotdl,qt6,downloader,music
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyqt6 ==6.6.1
+Requires-Dist: spotdl ==4.2.5
+
+# spotdlQt
+A very simple gui application for spotdl to download music.
+
+Written in python using [spotdl](https://github.com/spotDL/spotify-downloader) and [pyqt6](https://pypi.org/project/PyQt6/).
+
+The icon.svg is downloaded from https://icons.getbootstrap.com/icons/spotify/.
+
+# Examples
+![screenshot1](screenshot1.png)
+![screenshot2](screenshot2.png)
