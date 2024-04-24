@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: rrtask
+Version: 0.0.3
+Summary: Round Robin Task
+License: MIT
+Author: François Schmidts
+Author-email: francois@schmidts.fr
+Requires-Python: ==3.7.*
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: blinker (==1.*)
+Requires-Dist: celery (==4.4.7)
+Requires-Dist: pyrabbit (==1.1.0)
+Requires-Dist: redis (==2.10.5)
+Requires-Dist: threaded-context (==1.*)
+Description-Content-Type: text/markdown
+
+# Basic Usage
+
+```python3
+>>> import rrtask
+```
+
+# Install
+
+via `pip`:
+
+```shell
+pip install rrtask
+```
+
+via `pipenv`:
+
+```
+pipenv install rrtask
+```
+
+Bump version in pyproject.toml and push with `make deploy`
+
