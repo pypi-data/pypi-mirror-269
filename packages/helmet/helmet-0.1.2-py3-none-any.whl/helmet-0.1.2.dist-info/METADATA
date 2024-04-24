@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: helmet
+Version: 0.1.2
+Summary: 
+Author: Jeroen
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: accelerate (>=0.25.0,<0.26.0)
+Requires-Dist: bitsandbytes (>=0.42.0,<0.43.0)
+Requires-Dist: bs4 (>=0.0.1,<0.0.2)
+Requires-Dist: captum (>=0.7.0,<0.8.0)
+Requires-Dist: dacite (>=1.8.1,<2.0.0)
+Requires-Dist: datasets (>=2.18.0,<3.0.0)
+Requires-Dist: numpy (>=1.26.2,<2.0.0)
+Requires-Dist: torch (>=2.1.1,<3.0.0)
+Requires-Dist: transformers (>=4.35.2,<5.0.0)
+Requires-Dist: trulens (>=0.13.4,<0.14.0)
+Description-Content-Type: text/markdown
+
+<p align="center">
+<img  width="75%" src="docs/helmet.png" />
+</p>
+
+## Contents
+
+- [Installation helmet](#installation)
+- [Local installation helmet-platform](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install helmet
+```
+
+### Use `helmet` in examples
+
+To use helmet in one of the examples perform the following steps:
+
+1. Create venv with `python -m venv .venv`
+2. Activate the venv with `source .venv/bin/activate`
+3. Install HELMET from source (from git, when located in the home folder of helmet `pip install -e .`
+4. Install jupyter notebook `pip install jupyterlab`
+5. Create a jupyter kernel based on the venv `python -m ipykernel install --user --name venv`
+6. Open Jupyter notebook `jupyter lab`
+
+To remove:
+
+1. `deactivate`
+2. `jupyter-kernelspec uninstall venv`
+3. `rm -r venv`
+
+## Configuration files
+
+- Project configuration
+- Model configuration
+- Run configuration
+
+## Features
+
+- Load any causal model from Huggingface.
+- Create a project for your experiment
+- Run experimental prompts
+-
+
+## Running webapp locally
+
+For this, please check the `README`
+
+## License
+
+`helmet` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+
