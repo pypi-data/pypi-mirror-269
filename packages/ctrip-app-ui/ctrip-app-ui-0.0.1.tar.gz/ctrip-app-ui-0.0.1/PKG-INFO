@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ctrip-app-ui
+Version: 0.0.1
+Summary: This is my ctrip app ui package
+Home-page: https://github.com/ckf10000/ctrip-app-ui
+Author: ckf10000
+Author-email: ckf10000@sina.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: airtest>=1.3.3
+Requires-Dist: pocoui>=1.0.94
+
+This is my ctrip app ui package
