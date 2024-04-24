@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: dmlcloud
+Version: 0.3.3
+Summary: Distributed torch training using horovod and slurm
+Author: Sebastian Hoffmann
+License: BSD 3-Clause License
+        
+        Copyright (c) 2023, Sebastian Hoffmann
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Repository, https://github.com/sehoffmann/dmlcloud
+Keywords: pytorch,torch.distributed,slurm,distributed training,deep learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: xarray
+Requires-Dist: progress-table <1.0.0,>=0.1.20
+Requires-Dist: omegaconf
+
+# dmlcloud
+[![](https://img.shields.io/pypi/v/dmlcloud)](https://pypi.org/project/dmlcloud/)
+[![](https://img.shields.io/github/actions/workflow/status/sehoffmann/dmlcloud/run_tests.yml?label=tests&logo=github)](https://github.com/sehoffmann/dmlcloud/actions/workflows/run_tests.yml)
+[![](https://img.shields.io/github/actions/workflow/status/sehoffmann/dmlcloud/run_linting.yml?label=lint&logo=github)](https://github.com/sehoffmann/dmlcloud/actions/workflows/run_linting.yml)
+
+*Flexibel, easy-to-use, opinionated*
+
+*dmlcloud* is a library for **distributed training** of deep learning models with *torch*. Unlike other similar frameworks, dmcloud adds as little additional complexity and abstraction as possible. It is tailored towards a carefully selected set of libraries and workflows.
+
+## Installation
+```
+pip install dmlcloud
+```
+
+## Why dmlcloud?
+- Easy initialization of `torch.distributed` (supports *slurm* and *MPI*).
+- Simple, yet powerful, API. No unnecessary abstractions and complications.
+- Checkpointing and metric tracking (distributed)
+- Extensive logging and diagnostics out-of-the-box. Greatly improve reproducability and traceability.
+- A wealth of useful utility functions required for distributed training (e.g. for data set sharding)
