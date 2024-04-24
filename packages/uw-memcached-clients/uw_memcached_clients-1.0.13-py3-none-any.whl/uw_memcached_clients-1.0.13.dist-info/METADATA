@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: uw-memcached-clients
+Version: 1.0.13
+Summary: Memcached clients
+Home-page: https://github.com/uw-it-aca/uw-memcached-clients
+Author: UW-IT T&LS
+Author-email: aca-it@uw.edu
+License: Apache License, Version 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+License-File: LICENSE
+Requires-Dist: pymemcache ~=4.0
+Requires-Dist: commonconf
+Requires-Dist: mock
+
+
+See the README on `GitHub
+<https://github.com/uw-it-aca/uw-memcached-clients>`_.
