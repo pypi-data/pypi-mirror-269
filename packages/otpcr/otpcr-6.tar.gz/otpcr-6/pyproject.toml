@@ -1,0 +1,49 @@
+[build-system]
+requires = [
+    "setuptools>=43.0.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "otpcr"
+description = "OTP-CR-117/19"
+version = "6"
+authors = [
+    {name = "xobjectz", email = "objx@proton.me"},
+]
+readme = "README.rst"
+license = {text="Public Domain"}
+classifiers = [ 
+    'Development Status :: 3 - Alpha',
+    'License :: Public Domain',
+    'Operating System :: Unix',
+    'Programming Language :: Python',
+    'Topic :: Utilities'
+]
+
+[project.scripts]
+"otpcr" = "otpcr.__main__:wrapped"
+
+[project.urls]
+"home" = "https://pypi.org/project/otpcr"
+"bugs" = "https://github.com/xobjectz/otpcr/issues"
+"source" = "https://github.com/xobjectz/otpcr"
+
+[tool.setuptools]
+packages = [
+    'otpcr',
+    'otpcr.modules',
+]
+zip-safe=true
+
+
+[tool.setuptools.data-files]
+"share/doc/otpcr" = [
+    "README.rst",
+    "docs/MANUAL.rst",
+    "files/verbatim5.png",
+    "files/EM_Ack_OTP-CR-117_19.pdf",
+    "files/EM_T07_OTP-CR-117_19_001.pdf",
+    "files/EM_T04_OTP-CR-117_19.pdf"
+]
