@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+interface.cpp
+setup.cfg
+setup.py
+diff-match-patch-cpp-stl/diff_match_patch.h
+fast_diff_match_patch.egg-info/PKG-INFO
+fast_diff_match_patch.egg-info/SOURCES.txt
+fast_diff_match_patch.egg-info/dependency_links.txt
+fast_diff_match_patch.egg-info/top_level.txt
+tests/__init__.py
+tests/test_diff.py
+tests/test_match.py
