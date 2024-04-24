@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: kmt
+Version: 0.3.3
+Summary: Kubernetes Manifest Transform
+Home-page: https://github.com/archmachina/kmt
+Download-URL: https://pypi.org/project/kmt/
+Author: Jesse Reichman
+License: MIT
+Keywords: Kubernetes,Manifest,Transform
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyYAML>=6.0.0
+Requires-Dist: Jinja2>=3.1.0
+Requires-Dist: jsonpatch>=1.33
+Requires-Dist: jsonpath-ng>=1.6.1
