@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "qai-core"
+version = "0.1.8"
+description = ""
+authors = ["parnell <3028114+parnell@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{from = "src", include = "qai"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+json-fix = "^1.0.0"
+
+[tool.poetry.extras]
+test = ["pytest"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
