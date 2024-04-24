@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/__init__.py
+src/homeTools.py
+src/HomePy/__init__.py
+src/HomePy.egg-info/PKG-INFO
+src/HomePy.egg-info/SOURCES.txt
+src/HomePy.egg-info/dependency_links.txt
+src/HomePy.egg-info/requires.txt
+src/HomePy.egg-info/top_level.txt

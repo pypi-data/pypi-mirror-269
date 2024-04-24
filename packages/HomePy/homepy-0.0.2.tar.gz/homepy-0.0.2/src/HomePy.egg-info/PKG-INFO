@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: HomePy
+Version: 0.0.2
+Summary: A Home python useful package
+Author-email: Jack Li <lizhq08@gmail.com>
+Project-URL: Homepage, https://github.com/lizhq/HomePy
+Project-URL: Bug Tracker, https://github.com/lizhq/HomePy/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: shapely<=2.0.2
+
+# HomePy
+HomePy 助手
+
+
+```HomePy 使用
+pip install HomePy
+
+```
