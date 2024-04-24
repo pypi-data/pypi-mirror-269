@@ -1,0 +1,76 @@
+Metadata-Version: 2.3
+Name: quaxed
+Version: 0.3.8
+Summary: Array-API JAX compatibility
+Project-URL: Homepage, https://github.com/GalacticDynamics/quaxed
+Project-URL: Bug Tracker, https://github.com/GalacticDynamics/quaxed/issues
+Project-URL: Discussions, https://github.com/GalacticDynamics/quaxed/discussions
+Project-URL: Changelog, https://github.com/GalacticDynamics/quaxed/releases
+Author-email: Nathaniel Starkman <nstarman@users.noreply.github.com>
+License-File: LICENSE
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Requires-Dist: jax
+Requires-Dist: jaxlib
+Requires-Dist: plum-dispatch
+Requires-Dist: quax>=0.0.3
+Provides-Extra: dev
+Requires-Dist: pytest-cov>=3; extra == 'dev'
+Requires-Dist: pytest>=6; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: furo>=2023.08.17; extra == 'docs'
+Requires-Dist: myst-parser>=0.13; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints; extra == 'docs'
+Requires-Dist: sphinx-copybutton; extra == 'docs'
+Requires-Dist: sphinx>=7.0; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest-cov>=3; extra == 'test'
+Requires-Dist: pytest>=6; extra == 'test'
+Description-Content-Type: text/markdown
+
+# quaxed
+
+[![Actions Status][actions-badge]][actions-link]
+[![Documentation Status][rtd-badge]][rtd-link]
+
+[![PyPI version][pypi-version]][pypi-link]
+[![Conda-Forge][conda-badge]][conda-link]
+[![PyPI platforms][pypi-platforms]][pypi-link]
+
+[![DOI][zenodo-badge]][zenodo-link]
+
+<!-- [![GitHub Discussion][github-discussions-badge]][github-discussions-link] -->
+
+<!-- SPHINX-START -->
+
+<!-- prettier-ignore-start -->
+[actions-badge]:            https://github.com/GalacticDynamics/quaxed/workflows/CI/badge.svg
+[actions-link]:             https://github.com/GalacticDynamics/quaxed/actions
+[conda-badge]:              https://img.shields.io/conda/vn/conda-forge/quaxed
+[conda-link]:               https://github.com/conda-forge/quaxed-feedstock
+<!-- [github-discussions-badge]: https://img.shields.io/static/v1?label=Discussions&message=Ask&color=blue&logo=github
+[github-discussions-link]:  https://github.com/GalacticDynamics/quaxed/discussions -->
+[pypi-link]:                https://pypi.org/project/quaxed/
+[pypi-platforms]:           https://img.shields.io/pypi/pyversions/quaxed
+[pypi-version]:             https://img.shields.io/pypi/v/quaxed
+[rtd-badge]:                https://readthedocs.org/projects/quaxed/badge/?version=latest
+[rtd-link]:                 https://quaxed.readthedocs.io/en/latest/?badge=latest
+[zenodo-badge]:             https://zenodo.org/badge/732262318.svg
+[zenodo-link]:              https://zenodo.org/doi/10.5281/zenodo.10850521
+
+
+<!-- prettier-ignore-end -->
+
+`Quaxed` is a compatibility layer for `JAX` using `quax`.
