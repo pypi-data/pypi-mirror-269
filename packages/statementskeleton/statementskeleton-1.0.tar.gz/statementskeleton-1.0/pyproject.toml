@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "statementskeleton"
+version = "1.0"
+authors = [
+    {name="Jacob Zufall", email="jacobzufall@gmail.com"}
+]
+description = "A package for formatting financial statements in the console. Designed for PyActy."
+readme = "README.md"
+requires-python= ">3.11"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/JacobZufall/statementskeleton"
+Issues = "https://github.com/JacobZufall/statementskeleton/issues"
