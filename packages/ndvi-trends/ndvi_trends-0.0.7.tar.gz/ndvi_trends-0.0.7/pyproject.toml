@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ndvi_trends"
+version = "0.0.7"
+readme = "README.md"
+dependencies = []
+
+[tool.setuptools]
+packages = [
+	"ndvi_trends",
+	"ndvi_trends.utils"
+]

@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+ndvi_trends/__init__.py
+ndvi_trends/calc.py
+ndvi_trends/data.py
+ndvi_trends/smoothing.py
+ndvi_trends.egg-info/PKG-INFO
+ndvi_trends.egg-info/SOURCES.txt
+ndvi_trends.egg-info/dependency_links.txt
+ndvi_trends.egg-info/top_level.txt
+ndvi_trends/utils/__init__.py
+ndvi_trends/utils/ee.py
+ndvi_trends/utils/npxr.py
