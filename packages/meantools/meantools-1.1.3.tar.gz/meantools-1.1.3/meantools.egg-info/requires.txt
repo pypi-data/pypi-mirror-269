@@ -1,0 +1,12 @@
+numpy
+scipy
+matplotlib
+rdkit
+networkx
+pandas
+tqdm
+svgutils
+svgelements
+scipy
+markov_clustering
+seaborn
