@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: simcore_wrapper
+Version: 0.1
+Summary: A Python wrapper for the sim-core Kotlin library
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: jpype1
+
