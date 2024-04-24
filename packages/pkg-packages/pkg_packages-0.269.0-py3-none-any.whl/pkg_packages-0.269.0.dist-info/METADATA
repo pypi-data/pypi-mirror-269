@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pkg-packages
+Version: 0.269.0
+Summary: 🤖 This is a official repository for DocuPy, a Python package that allows you to create beautiful documentation for your Python projects.
+Home-page: https://code.poggy.dev
+Author: Poggy Developers
+Author-email: poggy@JwjcBGTdWU.poggy.dev
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# 🤖 Beep boop
+This is a package automaticly maintenaned by the [Github Actions](https://github.com/actions) that runs on every push to the [main branch](https://doc.github.com/en/actions/reference/workflow-syntax-for-github-actions#main).
+# 👁️ Automatically moderated:
+- [x] The Github Actions will automatically moderate all PRs that are opened or merged.
+
