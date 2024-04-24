@@ -1,0 +1,12 @@
+.comprimir-texto {
+    max-height: 100px; /* Altura máxima deseada para el contenido */
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto truncado */
+    white-space: nowrap; /* Evita que el texto se desborde a la siguiente línea */
+}
+
+.flecha {
+    float: right;
+    font-size: 20px;
+    color: #9b9b9b;
+}

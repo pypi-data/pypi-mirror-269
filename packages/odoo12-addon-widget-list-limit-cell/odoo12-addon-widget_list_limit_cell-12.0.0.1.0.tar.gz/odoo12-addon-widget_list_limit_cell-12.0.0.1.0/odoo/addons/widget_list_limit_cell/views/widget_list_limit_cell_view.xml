@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets_backend" name="widget_list_limit_cell assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/widget_list_limit_cell/static/src/css/font-awesome.min.css"/>
+            <link rel="stylesheet" href="/widget_list_limit_cell/static/src/css/list_renderer.css"/>
+            <script type="text/javascript" src="/widget_list_limit_cell/static/src/js/list_renderer.js"></script>
+        </xpath>
+    </template>
+</odoo>
