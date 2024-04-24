@@ -1,0 +1,4 @@
+scipy
+numpy
+matplotlib
+scikit-sparse==0.4.12
