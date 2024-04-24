@@ -1,0 +1,2 @@
+[console_scripts]
+ascnii = ascnii.ascnii:main
