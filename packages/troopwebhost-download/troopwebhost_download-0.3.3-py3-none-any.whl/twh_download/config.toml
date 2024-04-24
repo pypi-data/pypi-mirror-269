@@ -1,0 +1,8 @@
+"troop_prefix" = "104_"
+
+[REPORTS]
+"scouts" = "46012"
+"adults" = "46013"
+"rank_requirements_status" = "55384"
+"merit_badges" = "46045"
+"uncompleted_merit_badge_requirements_by_scout" = "46048"
