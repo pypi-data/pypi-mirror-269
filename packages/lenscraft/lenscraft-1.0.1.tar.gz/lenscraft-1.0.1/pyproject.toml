@@ -1,0 +1,36 @@
+[project]
+name = "lenscraft"
+authors = [
+  { name="Gudjon Einar Magnusson", email="gmagnusson@fraunhofer.org" },
+]
+description = "Application to quickly build machine vision pipelines with little or no code"
+dynamic = ["version"]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "dearpygui==1.10.0",
+    "numpy==1.26.4",
+    "opencv-python==4.9.0.80",
+    "pillow==10.2.0",
+    "scikit-learn==1.4.1.post1",
+    "scipy==1.12.0",
+    "shapely==2.0.3"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://cma.fraunhofer.org"
+
+[tool.setuptools_scm]
+write_to = "src/lenscraft/_version.py"
+
+[build-system]
+requires = ["setuptools", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project.entry-points."console_scripts"]
+lenscraft = "lenscraft.cli:main"
