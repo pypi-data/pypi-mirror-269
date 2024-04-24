@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling >= 1.13.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pytainer"
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+version = "0.0.2"
+authors = [
+    { name = "Krzysztof Myjak"},
+]
+classifiers = [
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python",
+    "Topic :: Internet",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = [
+    "httpx",
+    "pydantic",
+    "typer",
+    "pytest-httpx",
+    "pytest-asyncio"
+]
+
+[tool.hatch.build.target.sdist.force-include]
+"pytainer/cli.py" = "pytainer/cli.py"
+
+[project.scripts]
+pytainer = "pytainer.cli:main"

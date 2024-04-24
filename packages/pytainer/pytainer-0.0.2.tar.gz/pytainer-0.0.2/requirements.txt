@@ -1,0 +1,6 @@
+pytest-httpx
+httpx
+ruff
+pytest-asyncio
+pydantic
+typer

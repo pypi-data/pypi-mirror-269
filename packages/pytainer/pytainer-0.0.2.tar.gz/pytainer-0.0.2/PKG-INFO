@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: pytainer
+Version: 0.0.2
+Author: Krzysztof Myjak
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Requires-Python: >=3.9
+Requires-Dist: httpx
+Requires-Dist: pydantic
+Requires-Dist: pytest-asyncio
+Requires-Dist: pytest-httpx
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+Pytainer - simple CLI for interaction with portainer
