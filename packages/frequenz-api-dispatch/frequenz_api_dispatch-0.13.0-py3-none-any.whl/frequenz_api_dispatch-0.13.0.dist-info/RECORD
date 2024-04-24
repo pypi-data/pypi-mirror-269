@@ -1,0 +1,13 @@
+frequenz/api/dispatch/__init__.py,sha256=sbBghXZzbL0DEsGVAxLDyd3Qwm41JbNDSK43IlmmzMQ,133
+frequenz/api/dispatch/conftest.py,sha256=NB21GYKVnjam9lHyFyBEYxR8qYjDkvV70f4kuYLzAUY,409
+frequenz/api/dispatch/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frequenz/api/dispatch/v1/__init__.py,sha256=0B78ezt5b2BVuzw8VeudNstkV19zowl8yDvtK641eFU,133
+frequenz/api/dispatch/v1/dispatch_pb2.py,sha256=ExXRADyfqysb6lUfyHRBKFhusLTyvuSShHlax7QfCdY,9943
+frequenz/api/dispatch/v1/dispatch_pb2.pyi,sha256=CrxCEj1AC9NxaetGYylXjefcjBuvoHa7gqimgR71w1E,32834
+frequenz/api/dispatch/v1/dispatch_pb2_grpc.py,sha256=u7_7HCCb161EtBHogxk73R4UIZXLq90Q6aQUw4tJRWQ,15822
+frequenz/api/dispatch/v1/dispatch_pb2_grpc.pyi,sha256=4TBbEVcdH6jppW8XWhaUPz55VYn2zsD0SKEFXpkMSWM,10624
+frequenz_api_dispatch-0.13.0.dist-info/LICENSE,sha256=C3svrUte2N2h2JaK1qfbYQNp5MTaqdaJkFLe-kgUxbU,1089
+frequenz_api_dispatch-0.13.0.dist-info/METADATA,sha256=AY-Y359XG-dy5O6OQuxwgcY3zWGZNhdITPXGbweYZVs,4558
+frequenz_api_dispatch-0.13.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+frequenz_api_dispatch-0.13.0.dist-info/top_level.txt,sha256=x08GRcWytsyKXa2Ayme9e5pg3L5Kcq6lw_BaQmToMO4,9
+frequenz_api_dispatch-0.13.0.dist-info/RECORD,,
