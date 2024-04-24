@@ -1,0 +1,11 @@
+pyvirtualserial/__init__.py,sha256=1ZdeuBWNhCrnIsdUwBUYZBvr3HHMNx1bjuUlKnjXKV8,851
+pyvirtualserial/virtual_serial.py,sha256=Ud4qILNRQ-vRxO8igXDHLXeIrKqyczLADB_v88bw2pE,1759
+pyvirtualserial/bases/linux_virtual_serial.py,sha256=yu4k3GW22DUTzGOTfx3ko5kL3bTTj1w0_eXBBi0_P8U,3196
+pyvirtualserial/bases/window_virtual_serial.py,sha256=0QtpV6qjgU8DNtG_lfelcYqZrx3ubil2IXvsfL1gKDM,4096
+pyvirtualserial/utils/com0com.py,sha256=ffeLVsP0AH8uRRtXhn0CugdPeLX-mI65pzH_LpWcsZc,1489
+pyvirtualserial/utils/context_managers.py,sha256=rknMtBeTU2Rpnr5xsetWnx71gxT4n-k3QYaoCBbyDvE,480
+pyvirtualserial-1.1.0.dist-info/LICENSE.txt,sha256=_Z0LjTpGd2Ve9bCFBnMqH2KdQqpNgQFJ5wAwfqgYe4U,1102
+pyvirtualserial-1.1.0.dist-info/METADATA,sha256=l4ADR6PShhUqg-ldNu8xdwyV6k5Pu3L99yDvX2FVd24,3186
+pyvirtualserial-1.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pyvirtualserial-1.1.0.dist-info/top_level.txt,sha256=K4cXmyGKDZkUjpQydw3X5ZDLB39tG98qahtYTROb73s,16
+pyvirtualserial-1.1.0.dist-info/RECORD,,
