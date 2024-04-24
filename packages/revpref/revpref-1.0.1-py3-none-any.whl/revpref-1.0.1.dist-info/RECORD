@@ -1,0 +1,13 @@
+revpref/__init__.py,sha256=B_wrbEbGsvKg0dbbxCy36-lD0lJ3X8V8nZkIhcHpOLQ,113
+revpref/_legacy.py,sha256=-tshPAvBYocFcOh6IvnBdVl6QK15m2kKELIWpgId_cs,1534
+revpref/_utils.py,sha256=kGV9WSDtXwGNqI2BWMsGDBRNpU4EVM_isvm1zwKKZdY,1836
+revpref/avi.py,sha256=UG1Olmd9mzbVl-n6VGeLTwJtnJdEM4ACtYmSUmoGXhM,1955
+revpref/ccei.py,sha256=lIQOR4UZFAJJp00HDEVrCcLFVLoaP2EEsRSE1OmJ-Vc,3001
+revpref/garp.py,sha256=oQnvmrK6k620O9pyA_BA4MOpRfIE-vHEcdu64trnUWQ,5371
+revpref/hmi.py,sha256=8JwgcV0t1PM81J2LmpkCunhfqTMxLNXBajC81Nxh5Ug,5243
+revpref/mci.py,sha256=-Hlf6PuxDrfi6yRmyVCIukRmyoPhzWaiyXY1BruYogY,4408
+revpref/mpi.py,sha256=c8t9mQR9HNYnKsI7zm07fdFaERFTWh6n9aOuKS4M17E,2363
+revpref-1.0.1.dist-info/METADATA,sha256=ValnSCMU7VN7X2D46xAXj5xhxmnBhOcUUd0zSFX_Z6I,5407
+revpref-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+revpref-1.0.1.dist-info/top_level.txt,sha256=MJO1vaeSv9TR0FiqbP5t3oObIFPDvEP-pbEtbQl97kU,8
+revpref-1.0.1.dist-info/RECORD,,
