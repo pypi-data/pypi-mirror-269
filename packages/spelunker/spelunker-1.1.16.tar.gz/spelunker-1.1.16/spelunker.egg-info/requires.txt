@@ -1,0 +1,11 @@
+numpy
+scipy
+pandas
+jwst
+astroquery
+astropy
+astroplan
+matplotlib
+ray
+tqdm
+wheel
