@@ -1,0 +1,2 @@
+[console_scripts]
+polypip = polypip.polypip:main

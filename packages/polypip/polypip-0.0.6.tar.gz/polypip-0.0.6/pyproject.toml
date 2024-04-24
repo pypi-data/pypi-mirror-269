@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polypip"
+description="A lightweight python module designed to generate a requirements file for your project."
+version = "0.0.6"
+authors = [
+    { name="Alexander Crayton", email="alexppeltier@gmail.com"},
+    { name="Parker Spaan", email="parkerspaan@yahoo.com"},
+]
+requires-python=">=3.9"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["requirements file", "imports"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3"
+]
+
+[project.scripts]
+polypip = "polypip.polypip:main"
+
+[project.urls]
+repository="https://github.com/admeeer/polypip"

@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+polypip/__init__.py
+polypip/polypip.py
+polypip/stdlib
+polypip.egg-info/PKG-INFO
+polypip.egg-info/SOURCES.txt
+polypip.egg-info/dependency_links.txt
+polypip.egg-info/entry_points.txt
+polypip.egg-info/top_level.txt
