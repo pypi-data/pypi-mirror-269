@@ -1,0 +1,655 @@
+max_epochs: &max_epochs 10
+batch_size: &batch_size 2
+eval_height: &eval_height 224
+eval_width: &eval_width 224
+image_size: &image_size !!python/tuple
+  - *eval_width
+  - *eval_height
+data_root: &data_root /ssd2/lyg/Dataset/wgisd_dataset/data
+load_from: /ssd2/lyg/Projects/mmdetection-codetr4/mmdetection/work_dirs/co_dino_5scale_swin_l_16xb1_16e_o365tococo_template/no_epoch_5.pth
+#pretrained: &pretrained /ssd2/lyg/models/co-dino/pretrain/swin_large_patch4_window12_384_22k.pth
+num_classes: &num_classes 5
+train_anno: &train_anno /ssd2/lyg/Dataset/wgisd_dataset/coco_annotations/new_test_bbox_instances.json
+val_anno: &val_anno /ssd2/lyg/Dataset/wgisd_dataset/coco_annotations/new_test_bbox_instances.json
+
+param_scheduler:
+  - begin: 0
+    by_epoch: true
+    end: *max_epochs
+    gamma: 0.1
+    milestones:
+      - 5
+    type: MultiStepLR
+# 以上参数均可能需要修改，除此之外还有transforms中地scales需要传入
+# metainfo里的classes
+auto_scale_lr:
+  base_batch_size: 16
+  enable: true
+backend_args: null
+batch_augments:
+- pad_mask: true
+  size: *image_size
+  type: BatchFixedSizePad
+custom_imports:
+  allow_failed_imports: false
+  imports:
+  - mmdet.projects.CODETR.codetr
+  - mmdet.engine.hooks.metric_tracker_hook
+custom_hooks:
+  - type: MetricTrackerHook
+dataset_type: CocoDataset
+default_hooks:
+  checkpoint:
+    _scope_: mmdet
+    by_epoch: true
+    interval: 1
+    max_keep_ckpts: 1
+    save_best: coco/bbox_mAP
+    type: CheckpointHook
+  logger:
+    _scope_: mmdet
+    interval: 50
+    type: LoggerHook
+  param_scheduler:
+    _scope_: mmdet
+    type: ParamSchedulerHook
+  sampler_seed:
+    _scope_: mmdet
+    type: DistSamplerSeedHook
+  timer:
+    _scope_: mmdet
+    type: IterTimerHook
+  visualization:
+    _scope_: mmdet
+    type: DetVisualizationHook
+default_scope: mmdet
+env_cfg:
+  cudnn_benchmark: false
+  dist_cfg:
+    backend: nccl
+  mp_cfg:
+    mp_start_method: fork
+    opencv_num_threads: 0
+
+load_pipeline:
+  - type: LoadImageFromFile
+  - type: LoadAnnotations
+    with_bbox: true
+    with_mask: true
+  - keep_ratio: false
+    ratio_range: !!python/tuple
+      - 0.1
+      - 2.0
+    scale: *image_size
+    type: RandomResize
+  - allow_negative_crop: true
+    crop_size: *image_size
+    crop_type: absolute_range
+    recompute_bbox: true
+    type: RandomCrop
+  - min_gt_bbox_wh: !!python/tuple
+      - 0.01
+      - 0.01
+    type: FilterAnnotations
+  - prob: 0.5
+    type: RandomFlip
+  - pad_val:
+      img: !!python/tuple
+        - 114
+        - 114
+        - 114
+    size: *image_size
+    type: Pad
+log_level: INFO
+log_processor:
+  _scope_: mmdet
+  by_epoch: true
+  type: LogProcessor
+  window_size: 50
+loss_lambda: 2.0
+
+metainfo:
+  classes:
+    - Chardonnay
+    - Cabernet Franc
+    - Cabernet Sauvignon
+    - Sauvignon Blanc
+    - Syrah
+model:
+  backbone:
+    attn_drop_rate: 0.0
+    convert_weights: true
+    depths:
+      - 2
+      - 2
+      - 18
+      - 2
+    drop_path_rate: 0.3
+    drop_rate: 0.0
+    embed_dims: 192
+    # init_cfg:
+    #   checkpoint: *pretrained
+    #   type: Pretrained
+    mlp_ratio: 4
+    num_heads:
+      - 6
+      - 12
+      - 24
+      - 48
+    out_indices: !!python/tuple
+      - 0
+      - 1
+      - 2
+      - 3
+    patch_norm: true
+    pretrain_img_size: 384
+    qk_scale: null
+    qkv_bias: true
+    type: SwinTransformer
+    window_size: 12
+    with_cp: true
+  bbox_head:
+  - anchor_generator:
+      octave_base_scale: 8
+      ratios:
+        - 1.0
+      scales_per_octave: 1
+      strides:
+        - 4
+        - 8
+        - 16
+        - 32
+        - 64
+        - 128
+      type: AnchorGenerator
+    bbox_coder:
+      target_means:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+      target_stds:
+        - 0.1
+        - 0.1
+        - 0.2
+        - 0.2
+      type: DeltaXYWHBBoxCoder
+    feat_channels: 256
+    in_channels: 256
+    loss_bbox:
+      loss_weight: 24.0
+      type: GIoULoss
+    loss_centerness:
+      loss_weight: 12.0
+      type: CrossEntropyLoss
+      use_sigmoid: true
+    loss_cls:
+      alpha: 0.25
+      gamma: 2.0
+      loss_weight: 12.0
+      type: FocalLoss
+      use_sigmoid: true
+    num_classes: *num_classes
+    stacked_convs: 1
+    type: CoATSSHead
+  data_preprocessor:
+    batch_augments: null
+    bgr_to_rgb: true
+    mean:
+      - 123.675
+      - 116.28
+      - 103.53
+    pad_mask: false
+    std:
+      - 58.395
+      - 57.12
+      - 57.375
+    type: DetDataPreprocessor
+  eval_module: detr
+  neck:
+    act_cfg: null
+    in_channels:
+      - 192
+      - 384
+      - 768
+      - 1536
+    kernel_size: 1
+    norm_cfg:
+      num_groups: 32
+      type: GN
+    num_outs: 5
+    out_channels: 256
+    type: ChannelMapper
+  query_head:
+    as_two_stage: true
+    dn_cfg:
+      box_noise_scale: 0.4
+      group_cfg:
+        dynamic: true
+        num_dn_queries: 500
+        num_groups: null
+      label_noise_scale: 0.5
+    in_channels: 2048
+    loss_bbox:
+      loss_weight: 5.0
+      type: L1Loss
+    loss_cls:
+      beta: 2.0
+      loss_weight: 1.0
+      type: QualityFocalLoss
+      use_sigmoid: true
+    loss_iou:
+      loss_weight: 2.0
+      type: GIoULoss
+    num_classes: *num_classes
+    num_query: 900
+    positional_encoding:
+      normalize: true
+      num_feats: 128
+      temperature: 20
+      type: SinePositionalEncoding
+    transformer:
+      decoder:
+        num_layers: 6
+        return_intermediate: true
+        transformerlayers:
+          attn_cfgs:
+          - dropout: 0.0
+            embed_dims: 256
+            num_heads: 8
+            type: MultiheadAttention
+          - dropout: 0.0
+            embed_dims: 256
+            num_levels: 5
+            type: MultiScaleDeformableAttention
+          feedforward_channels: 2048
+          ffn_dropout: 0.0
+          operation_order: !!python/tuple
+          - self_attn
+          - norm
+          - cross_attn
+          - norm
+          - ffn
+          - norm
+          type: DetrTransformerDecoderLayer
+        type: DinoTransformerDecoder
+      encoder:
+        num_layers: 6
+        transformerlayers:
+          attn_cfgs:
+            dropout: 0.0
+            embed_dims: 256
+            num_levels: 5
+            type: MultiScaleDeformableAttention
+          feedforward_channels: 2048
+          ffn_dropout: 0.0
+          operation_order: !!python/tuple
+          - self_attn
+          - norm
+          - ffn
+          - norm
+          type: BaseTransformerLayer
+        type: DetrTransformerEncoder
+        with_cp: 6
+      num_co_heads: 2
+      num_feature_levels: 5
+      type: CoDinoTransformer
+      with_coord_feat: false
+    type: CoDINOHead
+  roi_head:
+  - bbox_head:
+      bbox_coder:
+        target_means:
+          - 0.0
+          - 0.0
+          - 0.0
+          - 0.0
+        target_stds:
+          - 0.1
+          - 0.1
+          - 0.2
+          - 0.2
+        type: DeltaXYWHBBoxCoder
+      fc_out_channels: 1024
+      in_channels: 256
+      loss_bbox:
+        loss_weight: 120.0
+        type: GIoULoss
+      loss_cls:
+        loss_weight: 12.0
+        type: CrossEntropyLoss
+        use_sigmoid: false
+      num_classes: *num_classes
+      reg_class_agnostic: false
+      reg_decoded_bbox: true
+      roi_feat_size: 7
+      type: Shared2FCBBoxHead
+    bbox_roi_extractor:
+      featmap_strides:
+        - 4
+        - 8
+        - 16
+        - 32
+        - 64
+      finest_scale: 56
+      out_channels: 256
+      roi_layer:
+        output_size: 7
+        sampling_ratio: 0
+        type: RoIAlign
+      type: SingleRoIExtractor
+    type: CoStandardRoIHead
+  rpn_head:
+    anchor_generator:
+      octave_base_scale: 4
+      ratios:
+        - 0.5
+        - 1.0
+        - 2.0
+      scales_per_octave: 3
+      strides:
+        - 4
+        - 8
+        - 16
+        - 32
+        - 64
+        - 128
+      type: AnchorGenerator
+    bbox_coder:
+      target_means:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+      target_stds:
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+      type: DeltaXYWHBBoxCoder
+    feat_channels: 256
+    in_channels: 256
+    loss_bbox:
+      loss_weight: 12.0
+      type: L1Loss
+    loss_cls:
+      loss_weight: 12.0
+      type: CrossEntropyLoss
+      use_sigmoid: true
+    type: RPNHead
+  test_cfg:
+  - max_per_img: 300
+    nms:
+      iou_threshold: 0.8
+      type: nms
+  - rcnn:
+      max_per_img: 100
+      nms:
+        iou_threshold: 0.5
+        type: nms
+      score_thr: 0.0
+    rpn:
+      max_per_img: 1000
+      min_bbox_size: 0
+      nms:
+        iou_threshold: 0.7
+        type: nms
+      nms_pre: 1000
+  - max_per_img: 100
+    min_bbox_size: 0
+    nms:
+      iou_threshold: 0.6
+      type: nms
+    nms_pre: 1000
+    score_thr: 0.0
+  train_cfg:
+  - assigner:
+      match_costs:
+      - type: FocalLossCost
+        weight: 2.0
+      - box_format: xywh
+        type: BBoxL1Cost
+        weight: 5.0
+      - iou_mode: giou
+        type: IoUCost
+        weight: 2.0
+      type: HungarianAssigner
+  - rcnn:
+      assigner:
+        ignore_iof_thr: -1
+        match_low_quality: false
+        min_pos_iou: 0.5
+        neg_iou_thr: 0.5
+        pos_iou_thr: 0.5
+        type: MaxIoUAssigner
+      debug: false
+      pos_weight: -1
+      sampler:
+        add_gt_as_proposals: true
+        neg_pos_ub: -1
+        num: 512
+        pos_fraction: 0.25
+        type: RandomSampler
+    rpn:
+      allowed_border: -1
+      assigner:
+        ignore_iof_thr: -1
+        match_low_quality: true
+        min_pos_iou: 0.3
+        neg_iou_thr: 0.3
+        pos_iou_thr: 0.7
+        type: MaxIoUAssigner
+      debug: false
+      pos_weight: -1
+      sampler:
+        add_gt_as_proposals: false
+        neg_pos_ub: -1
+        num: 256
+        pos_fraction: 0.5
+        type: RandomSampler
+    rpn_proposal:
+      max_per_img: 1000
+      min_bbox_size: 0
+      nms:
+        iou_threshold: 0.7
+        type: nms
+      nms_pre: 4000
+  - allowed_border: -1
+    assigner:
+      topk: 9
+      type: ATSSAssigner
+    debug: false
+    pos_weight: -1
+  type: CoDETR
+  use_lsj: false
+
+num_dec_layer: 6
+optim_wrapper:
+  clip_grad:
+    max_norm: 0.1
+    norm_type: 2
+  optimizer:
+    lr: 0.0001
+    type: AdamW
+    weight_decay: 0.0001
+  paramwise_cfg:
+    custom_keys:
+      backbone:
+        lr_mult: 0.1
+  type: OptimWrapper
+
+resume: false
+test_cfg:
+  _scope_: mmdet
+  type: TestLoop
+
+test_pipeline:
+  - type: LoadImageFromFile
+  - keep_ratio: false
+    scale: *image_size
+    type: Resize
+  - type: LoadAnnotations
+    with_bbox: true
+  - meta_keys: !!python/tuple
+    - img_id
+    - img_path
+    - ori_shape
+    - img_shape
+    - scale_factor
+    type: PackDetInputs
+
+test_dataloader:
+  batch_size: 1
+  dataset:
+    _scope_: mmdet
+    ann_file: *val_anno
+    backend_args: null
+    data_prefix:
+      img: ''
+    data_root: *data_root
+    metainfo:
+      classes:
+        - Chardonnay
+        - Cabernet Franc
+        - Cabernet Sauvignon
+        - Sauvignon Blanc
+        - Syrah
+    pipeline:
+      - type: LoadImageFromFile
+      - keep_ratio: false
+        scale: *image_size
+        type: Resize
+      - type: LoadAnnotations
+        with_bbox: true
+      - meta_keys: !!python/tuple
+        - img_id
+        - img_path
+        - ori_shape
+        - img_shape
+        - scale_factor
+        type: PackDetInputs
+    test_mode: true
+    type: CocoDataset
+  drop_last: false
+  num_workers: 2
+  persistent_workers: true
+  sampler:
+    _scope_: mmdet
+    shuffle: false
+    type: DefaultSampler
+test_evaluator:
+  _scope_: mmdet
+  ann_file: *val_anno
+  backend_args: null
+  format_only: false
+  metric: bbox
+  type: CocoMetric
+
+train_cfg:
+  max_epochs: *max_epochs
+  type: EpochBasedTrainLoop
+  val_interval: 1
+train_dataloader:
+  batch_size: *batch_size
+  dataset:
+    ann_file: *train_anno
+    backend_args: null
+    data_prefix:
+      img: ''
+    data_root: *data_root
+    filter_cfg:
+      filter_empty_gt: false
+      min_size: 32
+    metainfo:
+      classes:
+        - Chardonnay
+        - Cabernet Franc
+        - Cabernet Sauvignon
+        - Sauvignon Blanc
+        - Syrah
+    pipeline:
+      - type: LoadImageFromFile
+      - type: LoadAnnotations
+        with_bbox: true
+      - prob: 0.5
+        type: RandomFlip
+      - transforms:
+        - - keep_ratio: false
+            scales:
+              - !!python/tuple
+                - 192
+                - 224
+              - !!python/tuple
+                - 224
+                - 192
+            type: RandomChoiceResize
+        type: RandomChoice
+      - type: PackDetInputs
+    type: CocoDataset
+  num_workers: 2
+  drop_last: false
+  persistent_workers: true
+  sampler:
+    _scope_: mmdet
+    shuffle: true
+    type: DefaultSampler
+
+val_cfg:
+  _scope_: mmdet
+  type: ValLoop
+val_dataloader:
+  batch_size: 1
+  dataset:
+    _scope_: mmdet
+    ann_file: *val_anno
+    backend_args: null
+    data_prefix:
+      img: ''
+    data_root: *data_root
+    metainfo:
+      classes:
+        - Chardonnay
+        - Cabernet Franc
+        - Cabernet Sauvignon
+        - Sauvignon Blanc
+        - Syrah
+    pipeline:
+    - type: LoadImageFromFile
+    - keep_ratio: false
+      scale: *image_size
+      type: Resize
+    - type: LoadAnnotations
+      with_bbox: true
+    - meta_keys: !!python/tuple
+      - img_id
+      - img_path
+      - ori_shape
+      - img_shape
+      - scale_factor
+      type: PackDetInputs
+    test_mode: true
+    type: CocoDataset
+  drop_last: false
+  num_workers: 2
+  persistent_workers: true
+  sampler:
+    _scope_: mmdet
+    shuffle: false
+    type: DefaultSampler
+val_evaluator:
+  _scope_: mmdet
+  ann_file: *val_anno
+  backend_args: null
+  format_only: false
+  metric: bbox
+  type: CocoMetric
+
+vis_backends:
+  - _scope_: mmdet
+    type: LocalVisBackend
+visualizer:
+  _scope_: mmdet
+  name: visualizer
+  type: DetLocalVisualizer
+  vis_backends:
+  - type: LocalVisBackend
