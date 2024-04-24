@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pokesel
+Version: 1.0.0
+Summary: Una bibliotec que tiene la clase  RandomPokemon para generar un pokemon aleatorio
+Author: Selene Garcia
+Author-email: 202224041_hernandez@tesch.edu.mx
+Requires-Dist: pandas
+
