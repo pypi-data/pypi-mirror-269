@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+paebot/__init__.py
+paebot.egg-info/PKG-INFO
+paebot.egg-info/SOURCES.txt
+paebot.egg-info/dependency_links.txt
+paebot.egg-info/requires.txt
+paebot.egg-info/top_level.txt
