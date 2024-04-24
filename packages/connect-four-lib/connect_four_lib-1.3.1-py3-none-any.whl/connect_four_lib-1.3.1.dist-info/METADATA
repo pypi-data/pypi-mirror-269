@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: connect-four-lib
+Version: 1.3.1
+Summary: A library for connect 4 game
+Author: game-ai-platform-team
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: duo-game-lib (>=0.1.0,<0.2.0)
+Description-Content-Type: text/markdown
+
+# connect-four-lib
+
+[![codecov](https://codecov.io/gh/game-ai-platform-team/connect-four-lib/graph/badge.svg?token=MNLla272Cv)](https://codecov.io/gh/game-ai-platform-team/connect-four-lib)
+[![CI/CD](https://github.com/game-ai-platform-team/connect-four-lib/actions/workflows/cicd.yml/badge.svg)](https://github.com/game-ai-platform-team/connect-four-lib/actions/workflows/cicd.yml)
+
+A library for connect 4 game.
+
+## Documentation
+
+- [Architecture](/docs/architecture.md)
