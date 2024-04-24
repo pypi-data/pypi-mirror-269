@@ -1,0 +1,4 @@
+[console_scripts]
+casm = casm.cmds:main
+cman = casm.cmds.podman:main
+
