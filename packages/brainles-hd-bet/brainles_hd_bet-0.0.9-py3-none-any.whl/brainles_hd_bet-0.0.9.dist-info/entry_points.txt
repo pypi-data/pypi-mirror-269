@@ -1,0 +1,3 @@
+[console_scripts]
+hd-bet=brainles_hd_bet:hd_bet.main
+
