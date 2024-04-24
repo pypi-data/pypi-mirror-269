@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.build-system]
+package-dir = "protkit"
+
+[tool.setuptools.packages]
+find = {}
+
+[project]
+name = "protkit"
+version = "0.2.4"
+requires-python = ">=3.6"
+authors = [
+    { name="Fred Senekal", email="fred@silicogenesis.com"},
+]
+maintainers = [
+    { name="Fred Senekal", email="fred@silicogenesis.com"},
+]
+description = "A unified toolkit for structural protein engineering."
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "joblib>=1.3.2",
+    "numpy>=1.20.3",
+    "scikit-learn>=1.4.1.post1",
+    "biopython>=1.83",
+    "mmtf-python>=1.1.3",
+    "freesasa>=2.2.1",
+    "pdb2pqr>=3.6.2",
+    "propka>=3.5.1",
+]
+keywords = ["protein", "protein engineering", "structural biology", "computational biology", "biology", "bioinformatics", "sequence", "amino acid", "residue", "dataset", "PDB", "antibody", "antibody engineering", "cdr"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.2.5",
+    "setuptools>=61.0",
+]
+
+[project.urls]
+Homepage = "https://protkit.silicogenesis.com"
+Repository = "https://github.com/silicogenesis/protkit"
+Documentation = "https://silicogenesis.github.io/protkit"
