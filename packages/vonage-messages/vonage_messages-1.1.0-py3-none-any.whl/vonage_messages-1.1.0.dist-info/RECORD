@@ -1,0 +1,15 @@
+vonage_messages/__init__.py,sha256=ZDl1pkvhvkocHXEhSdiHACMgTXlT_gvk2HTJQHBo9Ec,152
+vonage_messages/messages.py,sha256=6FTdBIAnICajfJG12f4HOaSp3GfrH7gUKNyq14gC6h0,1616
+vonage_messages/responses.py,sha256=aOc9cHSUF19s1nuBdRfbGEUDDHg-CydY4D2znZ7yNrk,221
+vonage_messages/models/__init__.py,sha256=ElL8QnLv-e4Z3CqAWZKJ_n69b8PxDxRjFx-X0dlVxxE,2136
+vonage_messages/models/base_message.py,sha256=gwF4a2D53SkTqvAtQs7h_1SDDDx8WbKNncvus7g3Uwg,348
+vonage_messages/models/enums.py,sha256=IG84UKEk5aQDAF9YslM1dqBGSVjxzpWt1i5W37LKfMA,548
+vonage_messages/models/messenger.py,sha256=emO6wQdxDujFA61oYWHu8cmBJ36bPFbpV7carqkDsbI,1490
+vonage_messages/models/mms.py,sha256=sEm_rWMEmiqBzGZvG31H8h47uhZ4BLcHSwRDs7z9IWk,942
+vonage_messages/models/sms.py,sha256=hu52T3c_x-w46VgnARQB4WTtSvq0n24iBST-Rd13_x4,672
+vonage_messages/models/viber.py,sha256=aYnsNThy2lBDFQ0MR5Ic1p914dNekkqHY6tOf42JlKw,2485
+vonage_messages/models/whatsapp.py,sha256=PwvlnIeMVbhyR2nS-QbWftw815E25L6_0J2PYa3z_sQ,2387
+vonage_messages-1.1.0.dist-info/METADATA,sha256=odFaCy4sjwlsf7xrR2_daldocoBC3CYVCvcqrjNQX1o,3292
+vonage_messages-1.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+vonage_messages-1.1.0.dist-info/top_level.txt,sha256=YfagNoDOo-1VGoQxQnnUt1SQIYQnTNq51BR2e-PfMds,16
+vonage_messages-1.1.0.dist-info/RECORD,,
