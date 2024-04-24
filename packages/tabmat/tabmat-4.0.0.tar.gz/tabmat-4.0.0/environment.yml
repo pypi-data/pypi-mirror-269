@@ -1,0 +1,35 @@
+name: tabmat
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - pandas
+  - formulaic>=0.6
+
+  # development tools
+  - click
+  - numpydoc
+  - pip
+  - pre-commit
+  - pytest
+  - pytest-xdist
+  - ruff
+  - setuptools_scm
+
+  # build tools
+  - c-compiler
+  - cxx-compiler
+  - cython !=3.0.4
+  - jemalloc-local
+  - make
+  - mako
+  - xsimd <11|>12.1
+
+  # documentation dev
+  - jupyterlab
+  - jupytext
+  - matplotlib-base
+  - seaborn-base
+  - sphinx
+  - sphinx_rtd_theme
+  - sphinxcontrib-apidoc
