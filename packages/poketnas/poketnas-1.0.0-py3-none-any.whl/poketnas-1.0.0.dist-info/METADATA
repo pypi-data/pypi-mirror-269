@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: poketnas
+Version: 1.0.0
+Summary: Libreria para generar un pokemon aleatorio.
+Author: Christopher Reynoso
+Author-email: 202224134_reynoso@tesch.edu.mx
+Requires-Dist: pandas
+
