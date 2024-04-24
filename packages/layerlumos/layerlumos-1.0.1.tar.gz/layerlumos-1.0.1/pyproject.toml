@@ -1,0 +1,41 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools",
+    "setuptools_scm",
+]
+
+[project]
+name = "layerlumos"
+version = "1.0.1"
+authors = [
+    {name = "Mingxuan Li", email = "mil152@pitt.edu"},
+]
+description = "An open-source software for TMM optical simulations"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "scipy",
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+Homepage = "https://github.com/mil152/layerlumos"
+Source = "https://github.com/mil152/layerlumos"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "wheel",
+    "build",
+    "twine",
+    "sphinx",
+]

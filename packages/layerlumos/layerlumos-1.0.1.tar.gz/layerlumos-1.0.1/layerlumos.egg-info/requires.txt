@@ -1,0 +1,9 @@
+numpy
+scipy
+
+[dev]
+pytest
+wheel
+build
+twine
+sphinx
