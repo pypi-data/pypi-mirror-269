@@ -1,0 +1,2 @@
+[console_scripts]
+convertdata = thunderlab.convertdata:main
