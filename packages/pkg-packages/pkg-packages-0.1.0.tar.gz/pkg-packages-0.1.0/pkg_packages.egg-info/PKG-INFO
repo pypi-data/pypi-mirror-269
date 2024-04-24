@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: pkg-packages
+Version: 0.1.0
+Summary: 🤖 This is a official repository for DocuPy, a Python package that allows you to create beautiful documentation for your Python projects.
+Home-page: https://code.poggy.dev
+Author: Poggy Developers
+Author-email: poggy@ouflhPppbf.poggy.dev
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+🛡️ Material Design 3(aka Material You)
+Material You is a collection of Material Design components for you to use in your projects, just like Material Design.
+## 📦 Installation
+### 📦 Install with npm:
+Sorry, this package is not yet available on npm.
+### 📦 Install with yarn:
+Not yet
+### 📦 Install with pypi:
+```
+pip install django-material-you
+pip install django # needs
+```
+## 👁️‍🗨️ Usage
+### 👁️‍🗨️ Import
+In your settings.py, add the following:
+```py
+INSTALLED_APPS = [
+    # ...
+    'material_you',
+]
+```
+### 👁️‍🗨️ Add to your templates
+In your templates, add the following:
+```html
+{% load material_you %}
+```
+## Note:
+This package are firstly based on [Material You](https://github.com/material-components/material-you) and [Material You for Django](https://github.com/material-components/material-you-django).
+## 📝 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 👨‍💻 Author
+All contributor are welcome, this account on PyPi is a robot!(what is this?).
+## 👨‍💻 Contributors
+We don't know yet. :p
+## 🛡️ Credits
+This project is inspired by [Material You](https://github.com/material-components/material-you)
+## 👁️‍🗨️ Projects on our community
+You can find more projects on our community. and projects is provide a project key to see
+Packages will be: poggy- XSUTbDRVKcTQtjjJGaCkvYBaxCjCnoSZkUyaVoM
