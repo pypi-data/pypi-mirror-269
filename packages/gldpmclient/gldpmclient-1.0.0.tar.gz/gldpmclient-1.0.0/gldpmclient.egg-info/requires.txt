@@ -1,0 +1,9 @@
+requests
+xsdata
+
+[:os_name == "nt"]
+tzdata
+
+[dev]
+pytest
+pytest-cov
