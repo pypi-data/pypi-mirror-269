@@ -1,0 +1,14 @@
+profilecard/__init__.py,sha256=Nfk_Z7fLwHA6ObqckujR620Xd9CcN0CqyChK2W4jUCI,5915
+profilecard/simple/__init__.py,sha256=1Evo2l-rwH5aKDKYMJGMJ83eY6OBCEA-Z-wmX3uUR-E,71
+profilecard/simple/config.ini,sha256=3gtMizW8Bp6EQOwVglPwMpq95Zb1pXaMmL_mQ8cB-hk,345
+profilecard/simple/pack.py,sha256=gwAEEMtdiu_6TWJHX-LXi0V9HYzcPCcpJ5YfGy6UrO8,8316
+profilecard/simple/valmanager.py,sha256=tnfjrD1eX48K3XxS-6IjdoOX25JNdrmedc8mFQt_7tQ,1616
+profilecard/styles/__init__.py,sha256=u5bTzvflwnbrKn36gV2Y7ydBwGzl7kij6qil_Icpx58,80
+profilecard/styles/style1.py,sha256=J2Ui31daCDQv6CVFV-2KKaEom09u7soVrkCtRynXbYo,4068
+profilecard/styles/style2.py,sha256=hv3u6tfU_ziFKhRtE0cZ4BAGqLZl-kLtBnbPtFN08sA,4737
+profilecard/styles/style3.py,sha256=m_tyF6CZDoYNl9O0pQi7Hm3eVSxK7x6skh5PJPxVG-8,4449
+profilecard-1.0.6.dist-info/LICENSE.md,sha256=eeahX2qQW8sekxtm-MPxHrCpH1YEnBCVXmV01I1L7ok,1066
+profilecard-1.0.6.dist-info/METADATA,sha256=kER2lVF0UVAE0vysPd_MUHG1-VxjAldAyNn7y467kS4,4064
+profilecard-1.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+profilecard-1.0.6.dist-info/top_level.txt,sha256=1Xp7HIEfJag6b9AlyhtK-yOGPIOKVfDy3sLPYo-uwKY,12
+profilecard-1.0.6.dist-info/RECORD,,
