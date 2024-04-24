@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ticker_feeder
+Version: 0.2.2
+Summary: The "Ticker Feeder" Python package provides a straightforward and efficient way to handle data feeding operations.
+Author: Sravan Peesu
+Author-email: sravanpeesu@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Ticker Feeder
+
+Simple Python library to feed data.
