@@ -1,0 +1,10 @@
+xarray_ome_ngff/__init__.py,sha256=ND6h6Qm005YGOtqPvt887Ep1xHCXxTpgavMQdQDZobY,5838
+xarray_ome_ngff/array_wrap.py,sha256=SNo5aBwT6cQWN8tNj8-eaczTd0Ueyc_F0YY1P6Sm1uc,4122
+xarray_ome_ngff/core.py,sha256=erJT6s9dLXRGTbuHDDb5DUwkyouw1TLlUfZLx5eJvNY,304
+xarray_ome_ngff/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xarray_ome_ngff/v04/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xarray_ome_ngff/v04/multiscale.py,sha256=ay4We2a5scDK6x4GR-hfz6xOZTVtrarsHeiNl7aOtRo,20892
+xarray_ome_ngff-2.1.0.dist-info/LICENSE.md,sha256=vuJGlgpevk5CqGxsyEV0jhIOZCr5s6T5bYp0pZKsfGw,1511
+xarray_ome_ngff-2.1.0.dist-info/METADATA,sha256=0V_JUP4yTwjO-cGPE3XoKCShpLl8_ibwKRcxGG8Y_gc,5109
+xarray_ome_ngff-2.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+xarray_ome_ngff-2.1.0.dist-info/RECORD,,
