@@ -1,0 +1,8 @@
+argcomplete>=3.2.1
+colorama
+colorlog
+openpyxl
+tabulate
+wcwidth
+xlrd
+xlwt
