@@ -1,0 +1,15 @@
+README.md
+setup.py
+pytract/__init__.py
+pytract/__main__.py
+pytract/abi2api.py
+pytract/constants.py
+pytract/utils.py
+pytract/vm.py
+pytract.egg-info/PKG-INFO
+pytract.egg-info/SOURCES.txt
+pytract.egg-info/dependency_links.txt
+pytract.egg-info/entry_points.txt
+pytract.egg-info/requires.txt
+pytract.egg-info/top_level.txt
+pytract/templates/api.py.j2

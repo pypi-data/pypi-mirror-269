@@ -1,0 +1,3 @@
+[console_scripts]
+pytract = pytract.__main__:main
+
