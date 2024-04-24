@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: DMCE-AIDS
+Version: 0.0.6
+Summary: Python Library for AIDS form DMCE s
+Author: sdad
+Author-email: aids@gmail.com
+Keywords: python,video,stream,aids,camera stream,sockets
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: pyperclip
+Requires-Dist: scikit-learn
+Requires-Dist: tensorflow
+Requires-Dist: dataset
+
+Python Library for AIDS form DMCE
