@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pandas_geojson/__init__.py
+pandas_geojson/core.py
+pandas_geojson/io.py
+pandas_geojson.egg-info/PKG-INFO
+pandas_geojson.egg-info/SOURCES.txt
+pandas_geojson.egg-info/dependency_links.txt
+pandas_geojson.egg-info/top_level.txt
