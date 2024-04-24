@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: sdss-target-selection
+Version: 1.2.0
+Summary: Code to perform target selection for BHM/MWM using catalogdb
+Home-page: https://github.com/sdss/target_selection
+Author: José Sánchez-Gallego
+Author-email: gallegoj@uw.edu
+License: BSD 3-Clause License
+Project-URL: Repository, https://github.com/sdss/target_selection
+Project-URL: Documentation, https://sdss-target-selection.readthedocs.org
+Keywords: astronomy,software
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: numpy>=1.18.1
+Requires-Dist: pydl>=1.0.0rc1
+Requires-Dist: sdssdb>=0.10.0
+Requires-Dist: click>=7.0
+Requires-Dist: astropy>=5.0.0
+Requires-Dist: networkx>=2.4
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: healpy>=1.13.0
+Requires-Dist: sdss-pymangle>=0.9.3
+Requires-Dist: tables>=3.6.1
+Requires-Dist: sdsstools>=1.6.0
+Requires-Dist: enlighten>=1.4.0
+Requires-Dist: mocpy>=0.8.5
+Requires-Dist: pymoc>=0.5.0
+Requires-Dist: gala>=1.6.1
+Requires-Dist: matplotlib>=3.1.1
+Requires-Dist: dustmaps==1.0.10
+Provides-Extra: dev
+Requires-Dist: Sphinx>=4.0.0; extra == "dev"
+Requires-Dist: sphinx-click>=3.0.0; extra == "dev"
+Requires-Dist: furo>=2021.6.18-beta.36; extra == "dev"
+Requires-Dist: sphinx-autobuild>=2021.3.14; extra == "dev"
+Requires-Dist: sphinx-copybutton>=0.3.3; extra == "dev"
+Requires-Dist: myst-parser>=0.15; extra == "dev"
+Requires-Dist: ipython>=7.9.0; extra == "dev"
+Requires-Dist: flake8>=3.7.9; extra == "dev"
+Requires-Dist: doc8>=0.8.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: ipdb>=0.12.3; extra == "dev"
+Requires-Dist: black>=20.8b1; extra == "dev"
+Requires-Dist: nox>=2021.6.12; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: Sphinx>=4.0.0; extra == "docs"
+Requires-Dist: sphinx-click>=3.0.0; extra == "docs"
+Requires-Dist: furo>=2021.6.18-beta.36; extra == "docs"
+Requires-Dist: sphinx-autobuild>=2021.3.14; extra == "docs"
+Requires-Dist: sphinx-copybutton>=0.3.3; extra == "docs"
+Requires-Dist: myst-parser>=0.15; extra == "docs"
+
+# target_selection
+
+![Versions](https://img.shields.io/badge/python->3.7-blue)
+[![Documentation Status](https://readthedocs.org/projects/sdss-target-selection/badge/?version=latest)](https://sdss-target-selection.readthedocs.io/en/latest/?badge=latest)
+<!-- [![Travis (.org)](https://img.shields.io/travis/sdss/target_selection)](https://travis-ci.org/sdss/target_selection)
+[![codecov](https://codecov.io/gh/sdss/target_selection/branch/main/graph/badge.svg)](https://codecov.io/gh/sdss/target_selection) -->
+
+Code to perform target selection for BHM/MWM using catalogdb.
+
+## Installation
+
+To install `target_selection` do
+
+```console
+$ pip install numpy
+$ pip install sdss-target-selection
+```
+
+Due to a misconfiguration in `pymange`, `numpy` needs to be installed before you can install `target_selection`.
+
+## Development
+
+New code must follow the [SDSS Coding Standards](https://sdss-python-template.readthedocs.io/en/latest/standards.html). Linting checks run as a GitHub workflow after each commit. The workflow also check that the package and dependencies can be installed. Pull Requests that don't pass the checks cannot be merged.
+
+To test the code offline, you must install [flake8](https://flake8.pycqa.org/en/latest/) and [isort](https://pycqa.github.io/isort/) and run the following commands from the root of the package
+
+```console
+$ flake8 . --count --show-source --statistics
+$ isort -c python/ bin/
+```
+
+If the command exit without error, everything should be fine.
