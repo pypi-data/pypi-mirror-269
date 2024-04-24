@@ -1,0 +1,6 @@
+ovos-plugin-manager~=0.0
+imutils
+opencv_python
+redis
+flask
+click

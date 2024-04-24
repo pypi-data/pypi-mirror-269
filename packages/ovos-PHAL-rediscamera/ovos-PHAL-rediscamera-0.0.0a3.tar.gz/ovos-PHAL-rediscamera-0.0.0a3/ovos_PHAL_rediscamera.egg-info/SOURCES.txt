@@ -1,0 +1,13 @@
+README.md
+setup.py
+ovos_PHAL_rediscamera/__init__.py
+ovos_PHAL_rediscamera/__main__.py
+ovos_PHAL_rediscamera/server.py
+ovos_PHAL_rediscamera/version.py
+ovos_PHAL_rediscamera.egg-info/PKG-INFO
+ovos_PHAL_rediscamera.egg-info/SOURCES.txt
+ovos_PHAL_rediscamera.egg-info/dependency_links.txt
+ovos_PHAL_rediscamera.egg-info/entry_points.txt
+ovos_PHAL_rediscamera.egg-info/requires.txt
+ovos_PHAL_rediscamera.egg-info/top_level.txt
+ovos_PHAL_rediscamera.egg-info/zip-safe
