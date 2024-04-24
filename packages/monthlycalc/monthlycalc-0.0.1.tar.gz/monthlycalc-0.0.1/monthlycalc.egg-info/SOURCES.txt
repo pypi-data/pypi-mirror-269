@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+jobportallib/__init__.py
+jobportallib/monthcalc.py
+monthlycalc.egg-info/PKG-INFO
+monthlycalc.egg-info/SOURCES.txt
+monthlycalc.egg-info/dependency_links.txt
+monthlycalc.egg-info/requires.txt
+monthlycalc.egg-info/top_level.txt
