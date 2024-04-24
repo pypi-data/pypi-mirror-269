@@ -1,0 +1,5 @@
+[console_scripts]
+npzshow = pydrex.cli:CLI_HANDLERS.npz_file_inspector
+pydrex-h5party = pydrex.cli:CLI_HANDLERS.h5part_extractor
+pydrex-mesh = pydrex.cli:CLI_HANDLERS.mesh_generator
+pydrex-polefigures = pydrex.cli:CLI_HANDLERS.pole_figure_visualiser
