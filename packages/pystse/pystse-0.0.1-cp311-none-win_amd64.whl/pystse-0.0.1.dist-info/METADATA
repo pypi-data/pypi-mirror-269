@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: pystse
+Version: 0.0.1
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Rust
+License-File: LICENSE
+Summary: safetensors 的简单构建
+Author-email: xiatian0716 <819337877@qq.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: homepage, https://gitee.com/xiatian0716/safetensors
+
+# pystse
