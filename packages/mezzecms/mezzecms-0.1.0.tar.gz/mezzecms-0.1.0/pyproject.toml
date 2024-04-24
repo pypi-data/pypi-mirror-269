@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mezzecms"
+version = "0.1.0"
+description = "Open-source Headless CMS powered by Django"
+authors = ["Karl Hobley <karl@kaed.uk>"]
+license = "BSD"
+readme = "README.md"
+packages = [
+    { include = "mezze" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^5.0.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
