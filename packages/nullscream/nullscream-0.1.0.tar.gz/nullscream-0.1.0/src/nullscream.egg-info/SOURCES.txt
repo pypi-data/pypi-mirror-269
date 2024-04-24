@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/nullscream/__init__.py
+src/nullscream/noop_class.py
+src/nullscream/noop_function.py
+src/nullscream.egg-info/PKG-INFO
+src/nullscream.egg-info/SOURCES.txt
+src/nullscream.egg-info/dependency_links.txt
+src/nullscream.egg-info/top_level.txt
+tests/test_blacklist.py
+tests/test_whitelist.py
