@@ -1,0 +1,10 @@
+README.md
+setup.py
+Pokegipsy/__init__.py
+Pokegipsy/pokemon.csv
+Pokegipsy/random_pokemon.py
+Pokegipsy.egg-info/PKG-INFO
+Pokegipsy.egg-info/SOURCES.txt
+Pokegipsy.egg-info/dependency_links.txt
+Pokegipsy.egg-info/requires.txt
+Pokegipsy.egg-info/top_level.txt
