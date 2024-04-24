@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: MaestroOps
+Version: 0.9.0
+Summary: Python Automation Framework for Development Operations Teams
+Home-page: https://www.signiant.com
+Author: Signiant DevOps
+Author-email: devops@signiant.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: boto3<2,>=1.34.0
