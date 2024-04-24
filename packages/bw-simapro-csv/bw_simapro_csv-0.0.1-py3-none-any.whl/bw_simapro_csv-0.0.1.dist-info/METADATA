@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: bw_simapro_csv
+Version: 0.0.1
+Summary: Utility library to read and parse SimaPro CSV LCI and LCIA files
+Author-email: bw_simapro_csv <cmutel@gmail.com>
+Maintainer-email: bw_simapro_csv <cmutel@gmail.com>
+Project-URL: source, https://github.com/brightway-lca/bw_simapro_csv
+Project-URL: homepage, https://github.com/brightway-lca/bw_simapro_csv
+Project-URL: tracker, https://github.com/brightway-lca/bw_simapro_csv/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-dateutil
+Requires-Dist: pydantic
+Provides-Extra: dev
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-randomly ; extra == 'dev'
+Requires-Dist: setuptools ; extra == 'dev'
+Provides-Extra: testing
+Requires-Dist: bw-simapro-csv ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: python-coveralls ; extra == 'testing'
+
+# bw_simapro_csv
+
+[![PyPI](https://img.shields.io/pypi/v/bw_simapro_csv.svg)][pypi status]
+[![Status](https://img.shields.io/pypi/status/bw_simapro_csv.svg)][pypi status]
+[![Python Version](https://img.shields.io/pypi/pyversions/bw_simapro_csv)][pypi status]
+[![License](https://img.shields.io/pypi/l/bw_simapro_csv)][license]
+
+[![Read the documentation at https://bw_simapro_csv.readthedocs.io/](https://img.shields.io/readthedocs/bw_simapro_csv/latest.svg?label=Read%20the%20Docs)][read the docs]
+[![Tests](https://github.com/brightway-lca/bw_simapro_csv/actions/workflows/python-test.yml/badge.svg)][tests]
+[![Codecov](https://codecov.io/gh/brightway-lca/bw_simapro_csv/branch/main/graph/badge.svg)][codecov]
+
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
+[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
+
+[pypi status]: https://pypi.org/project/bw_simapro_csv/
+[read the docs]: https://bw_simapro_csv.readthedocs.io/
+[tests]: https://github.com/brightway-lca/bw_simapro_csv/actions?workflow=Tests
+[codecov]: https://app.codecov.io/gh/brightway-lca/bw_simapro_csv
+[pre-commit]: https://github.com/pre-commit/pre-commit
+[black]: https://github.com/psf/black
+
+## Installation
+
+You can install _bw_simapro_csv_ via [pip] from [PyPI]:
+
+```console
+$ pip install bw_simapro_csv
+```
+
+## Contributing
+
+Contributions are very welcome.
+To learn more, see the [Contributor Guide][Contributor Guide].
+
+## License
+
+Distributed under the terms of the [MIT license][License],
+_bw_simapro_csv_ is free and open source software.
+
+## Issues
+
+If you encounter any problems,
+please [file an issue][Issue Tracker] along with a detailed description.
+
+
+<!-- github-only -->
+
+[command-line reference]: https://bw_simapro_csv.readthedocs.io/en/latest/usage.html
+[License]: https://github.com/brightway-lca/bw_simapro_csv/blob/main/LICENSE
+[Contributor Guide]: https://github.com/brightway-lca/bw_simapro_csv/blob/main/CONTRIBUTING.md
+[Issue Tracker]: https://github.com/brightway-lca/bw_simapro_csv/issues
