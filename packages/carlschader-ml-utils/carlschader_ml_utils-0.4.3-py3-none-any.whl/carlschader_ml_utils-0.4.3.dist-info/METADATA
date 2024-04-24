@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: carlschader_ml_utils
+Version: 0.4.3
+Summary: A collection of utilities for machine learning projects
+Author-email: Carl Schader <carlschader@gmail.com>
+Project-URL: Homepage, https://github.com/carlschader/ml-utils
+Project-URL: Issues, https://github.com/carlschader/ml-utils/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch >=2.0.0
+Requires-Dist: torchvision >=0.17.0
+
