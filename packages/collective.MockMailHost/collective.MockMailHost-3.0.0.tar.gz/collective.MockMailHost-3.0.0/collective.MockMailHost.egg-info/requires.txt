@@ -1,0 +1,9 @@
+setuptools
+Products.GenericSetup
+Products.MailHost
+Products.CMFCore
+
+[test]
+plone.app.testing
+plone.testing
+zope.component
