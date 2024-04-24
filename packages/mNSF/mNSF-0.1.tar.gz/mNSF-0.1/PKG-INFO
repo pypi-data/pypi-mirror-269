@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: mNSF
+Version: 0.1
+Summary: multi-sample non-negative spatial factorization
+Home-page: https://github.com/hansenlab/mNSF/
+Author: Yi Wang, Kyla Woyshner, Chaichontat Sriworarat, Loyal Goff, Genevieve Stein-O'Brien, Kasper D. Hansen
+Author-email: yiwangthu4@gmail.com
+License: MIT
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: spatial,factorization,multi-sample
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
