@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: ecv-python-development
+Version: 0.0.28
+Summary: ECV Python Development Package
+Home-page: https://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/ecv-python-development
+Author: Warren Ezra Bruce Jaudian
+Author-email: warren.jaudian@ecloudvalley.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aws-lambda-powertools
+Requires-Dist: aws-encryption-sdk
+Requires-Dist: boto3-stubs[cognito-idp]
+Requires-Dist: boto3-stubs[dynamodb]
+Requires-Dist: boto3-stubs[events]
+Requires-Dist: boto3-stubs[kms]
+Requires-Dist: boto3-stubs[lambda]
+Requires-Dist: boto3-stubs[s3]
+Requires-Dist: boto3-stubs[secretsmanager]
+Requires-Dist: boto3-stubs[ses]
+Requires-Dist: boto3-stubs[sns]
+Requires-Dist: boto3-stubs[sqs]
+Requires-Dist: boto3-stubs[ssm]
+Requires-Dist: boto3 (==1.26.86)
+Requires-Dist: botocore (==1.29.86)
+Requires-Dist: cerberus
+Requires-Dist: jsonpickle
+Requires-Dist: mypy-boto3-cognito-idp
+Requires-Dist: mypy-boto3-dynamodb
+Requires-Dist: mypy-boto3-events
+Requires-Dist: mypy-boto3-kms
+Requires-Dist: mypy-boto3-lambda
+Requires-Dist: mypy-boto3-s3
+Requires-Dist: mypy-boto3-secretsmanager
+Requires-Dist: mypy-boto3-ses
+Requires-Dist: mypy-boto3-sns
+Requires-Dist: mypy-boto3-sqs
+Requires-Dist: mypy-boto3-ssm
+Requires-Dist: pydantic (==2.7.1)
+Requires-Dist: pydantic[email]
+Requires-Dist: pynamodb (==6.0.0)
+Requires-Dist: pytz (==2022.7)
+Requires-Dist: requests
+Requires-Dist: typing-extensions
+
+# ECV Python Development Package
+
+These are modules which does common functionalities all throughout the ECV's Python Development.
+
+Modules should not have any business logic, no data awareness, and must work independently.
+
+This package is directly coupled with ECV's Python Serverless Framework.
+
