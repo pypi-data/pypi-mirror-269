@@ -1,0 +1,58 @@
+{
+    "config": {
+        "abort": {
+            "invalid_identifier": "M\u00e4\u00e4ratud piirkonna identifikaator on kehtetu."
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "region_identifier": "Warncell ID v\u00f5i nimi"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "advance_warning_level": {
+                "name": "Eelhoiatuse tase",
+                "state_attributes": {
+                    "last_update": {
+                        "name": "Viimati uuendatud"
+                    },
+                    "region_id": {
+                        "name": "Piirkonna ID"
+                    },
+                    "region_name": {
+                        "name": "Piirkonna nimi"
+                    },
+                    "warning_count": {
+                        "name": "Hoiatuste arv"
+                    }
+                }
+            },
+            "current_warning_level": {
+                "name": "Praegune hoiatustase",
+                "state_attributes": {
+                    "last_update": {
+                        "name": "Viimati uuendatud"
+                    },
+                    "region_id": {
+                        "name": "Piirkonna ID"
+                    },
+                    "region_name": {
+                        "name": "Piirkonna nimi"
+                    },
+                    "warning_count": {
+                        "name": "Hoiatuste arv"
+                    }
+                }
+            }
+        }
+    },
+    "issues": {
+        "deprecated_yaml": {
+            "description": "Deutscher Wetterdiensti (DWD) ilmahoiatuste konfigureerimine YAML-i abil eemaldatakse. \n\n Olemasolev YAML-i konfiguratsioon imporditi kasutajaliidesesse automaatselt. \n\n Eemaldage Deutscher Wetterdienst (DWD) Weather Warnings YAML-i konfiguratsioon failist configuration.yaml ja taask\u00e4ivitage selle probleemi lahendamiseks Home Assistant.",
+            "title": "Deutscher Wetterdiensti (DWD) ilmahoiatuste YAML-i konfiguratsioon eemaldatakse"
+        }
+    }
+}

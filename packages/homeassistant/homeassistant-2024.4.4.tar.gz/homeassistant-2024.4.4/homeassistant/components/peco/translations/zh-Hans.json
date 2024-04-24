@@ -1,0 +1,25 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "\u670d\u52a1\u5df2\u914d\u7f6e"
+        },
+        "error": {
+            "invalid_phone_number": "\u8bf7\u8f93\u5165\u4e00\u4e2a\u6709\u6548\u7684\u7535\u8bdd\u53f7\u7801\u3002"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "county": "\u53bf",
+                    "phone_number": "\u7535\u8bdd\u53f7\u7801"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "percent_customers_out": {
+                "name": "\u987e\u5ba2\u6d41\u5931\u7387"
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Der Dienst ist bereits konfiguriert"
+        },
+        "error": {
+            "cannot_connect": "Verbindung fehlgeschlagen",
+            "invalid_auth": "Ung\u00fcltige Authentifizierung",
+            "unknown": "Unerwarteter Fehler"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "email": "E-Mail",
+                    "password": "Passwort"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "setup_authentication_exception": {
+            "message": "Die Authentifizierung f\u00fcr {email} ist fehlgeschlagen. \u00dcberpr\u00fcfe deine E-Mail und dein Passwort."
+        },
+        "setup_parse_exception": {
+            "message": "Die Serverantwort konnte nicht analysiert werden. Versuche es sp\u00e4ter erneut."
+        },
+        "setup_request_exception": {
+            "message": "Verbindung zum Server konnte nicht hergestellt werden. Versuche es sp\u00e4ter erneut."
+        },
+        "todo_delete_item_failed": {
+            "message": "{count} Artikel konnten nicht aus der Bring!-Liste gel\u00f6scht werden."
+        },
+        "todo_rename_item_failed": {
+            "message": "Umbenennen des Elements {name} in die Bring!-Liste ist fehlgeschlagen"
+        },
+        "todo_save_item_failed": {
+            "message": "Artikel {name} konnte nicht in der Bring!-Liste gespeichert werden"
+        },
+        "todo_update_item_failed": {
+            "message": "Aktualisierung von {name} auf der Bring!-Liste fehlgeschlagen"
+        }
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "\u8d26\u53f7\u5df2\u914d\u7f6e",
+            "reauth_successful": "\u91cd\u65b0\u8ba4\u8bc1\u6210\u529f"
+        },
+        "error": {
+            "cannot_connect": "\u8fde\u63a5\u5931\u8d25",
+            "invalid_auth": "\u8eab\u4efd\u9a8c\u8bc1\u65e0\u6548",
+            "invalid_location": "\u627e\u4e0d\u5230\u5177\u6709\u6307\u5b9a\u540d\u79f0\u7684\u76f8\u673a\u4f4d\u7f6e",
+            "more_locations": "\u7528\u6307\u5b9a\u540d\u79f0\u627e\u5230\u591a\u4e2a\u76f8\u673a\u4f4d\u7f6e"
+        },
+        "step": {
+            "multiple_cameras": {
+                "data": {
+                    "id": "\u9009\u62e9\u76f8\u673a"
+                }
+            },
+            "user": {
+                "data": {
+                    "api_key": "API \u5bc6\u94a5",
+                    "location": "\u4f4d\u7f6e"
+                }
+            }
+        }
+    },
+    "entity": {
+        "camera": {
+            "tv_camera": {
+                "state_attributes": {
+                    "description": {
+                        "name": "\u63cf\u8ff0"
+                    },
+                    "direction": {
+                        "name": "\u65b9\u5411"
+                    },
+                    "full_size_photo": {
+                        "name": "\u5168\u5c3a\u5bf8\u7167\u7247"
+                    },
+                    "location": {
+                        "name": "\u4f4d\u7f6e"
+                    },
+                    "photo_url": {
+                        "name": "\u7167\u7247\u7f51\u5740"
+                    },
+                    "status": {
+                        "name": "\u72b6\u6001"
+                    },
+                    "type": {
+                        "name": "\u76f8\u673a\u7c7b\u578b"
+                    }
+                }
+            }
+        },
+        "sensor": {
+            "camera_type": {
+                "name": "\u76f8\u673a\u7c7b\u578b"
+            },
+            "direction": {
+                "name": "\u65b9\u5411"
+            },
+            "modified": {
+                "name": "\u4fee\u6539"
+            },
+            "photo_time": {
+                "name": "\u62cd\u7167\u65f6\u95f4"
+            },
+            "photo_url": {
+                "name": "\u7167\u7247\u7f51\u5740"
+            },
+            "status": {
+                "name": "\u72b6\u6001"
+            }
+        }
+    }
+}

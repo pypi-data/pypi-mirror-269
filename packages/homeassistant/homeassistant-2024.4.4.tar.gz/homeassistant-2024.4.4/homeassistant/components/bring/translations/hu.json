@@ -1,0 +1,43 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "A szolg\u00e1ltat\u00e1s m\u00e1r konfigur\u00e1lva van"
+        },
+        "error": {
+            "cannot_connect": "Sikertelen csatlakoz\u00e1s",
+            "invalid_auth": "\u00c9rv\u00e9nytelen hiteles\u00edt\u00e9s",
+            "unknown": "V\u00e1ratlan hiba"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "email": "E-mail",
+                    "password": "Jelsz\u00f3"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "setup_authentication_exception": {
+            "message": "A(z) {email} hiteles\u00edt\u00e9se nem siker\u00fclt, ellen\u0151rizze e-mail-c\u00edm\u00e9t \u00e9s jelszav\u00e1t"
+        },
+        "setup_parse_exception": {
+            "message": "A szerver v\u00e1lasz\u00e1nak elemz\u00e9se nem siker\u00fclt, pr\u00f3b\u00e1lkozzon \u00fajra k\u00e9s\u0151bb"
+        },
+        "setup_request_exception": {
+            "message": "Nem siker\u00fclt csatlakozni a szerverhez, pr\u00f3b\u00e1lkozzon \u00fajra k\u00e9s\u0151bb"
+        },
+        "todo_delete_item_failed": {
+            "message": "Nem siker\u00fclt t\u00f6r\u00f6lni a {count} elemet a Bring! list\u00e1b\u00f3l"
+        },
+        "todo_rename_item_failed": {
+            "message": "A(z) {name} elem \u00e1tnevez\u00e9se Bring! list\u00e1ra sikertelen"
+        },
+        "todo_save_item_failed": {
+            "message": "A(z) {name} elem ment\u00e9se a Bring! list\u00e1ra sikertelen"
+        },
+        "todo_update_item_failed": {
+            "message": "Nem siker\u00fclt friss\u00edteni a {name} elemet a Bring! list\u00e1n"
+        }
+    }
+}

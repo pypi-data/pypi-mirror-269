@@ -1,0 +1,43 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Paslauga jau sukonfig\u016bruota"
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_auth": "Neteisingas autentifikavimas",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "email": "El. pa\u0161tas",
+                    "password": "Slapta\u017eodis"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "setup_authentication_exception": {
+            "message": "Nepavyko autentifikuoti {email} , patikrinkite el. pa\u0161t\u0105 ir slapta\u017eod\u012f"
+        },
+        "setup_parse_exception": {
+            "message": "Nepavyko i\u0161analizuoti serverio atsakymo, bandykite dar kart\u0105 v\u0117liau"
+        },
+        "setup_request_exception": {
+            "message": "Nepavyko prisijungti prie serverio, bandykite dar kart\u0105 v\u0117liau"
+        },
+        "todo_delete_item_failed": {
+            "message": "Nepavyko i\u0161trinti {count} element\u0173 i\u0161 \u201eBring! s\u0105ra\u0161\u0105"
+        },
+        "todo_rename_item_failed": {
+            "message": "Nepavyko pervardyti elemento {name} \u012f Bring! s\u0105ra\u0161\u0105"
+        },
+        "todo_save_item_failed": {
+            "message": "Nepavyko i\u0161saugoti elemento {name} \u012f s\u0105ra\u0161\u0105 \"Bring!"
+        },
+        "todo_update_item_failed": {
+            "message": "Nepavyko atnaujinti elemento {name} \u012f Bring! s\u0105ra\u0161\u0105"
+        }
+    }
+}
