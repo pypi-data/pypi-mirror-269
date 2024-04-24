@@ -1,0 +1,10 @@
+README.md
+setup.py
+pokemon_haru/__init__.py
+pokemon_haru/pokemon.csv
+pokemon_haru/random_pokemon.py
+pokemon_haru.egg-info/PKG-INFO
+pokemon_haru.egg-info/SOURCES.txt
+pokemon_haru.egg-info/dependency_links.txt
+pokemon_haru.egg-info/requires.txt
+pokemon_haru.egg-info/top_level.txt
