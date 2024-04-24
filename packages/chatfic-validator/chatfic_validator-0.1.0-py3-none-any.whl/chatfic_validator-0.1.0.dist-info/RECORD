@@ -1,0 +1,11 @@
+chatfic_validator/__init__.py,sha256=4xjVUko1gAawUB5kJENAJ2tlXhOKtLhLTmYAkcAaICw,197
+chatfic_validator/error.py,sha256=aKXfLY_ftUz7A6A-Dmc5DcmWrWx8Fw-fY8luw3utLso,306
+chatfic_validator/result.py,sha256=PQLE50RWQcynFytrd57l8LRyLocZjsHQJx4sPfo6pSc,1129
+chatfic_validator/validator.py,sha256=dSm5IXKIXRheljIUELJgiLUW-risY2xgc-U9lS-lPwg,32726
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_validator.py,sha256=LaFl3Fs9uE-ZrxKRlZ2RUCZuK_Lph8MSIM21RGx2oEk,6981
+chatfic_validator-0.1.0.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+chatfic_validator-0.1.0.dist-info/METADATA,sha256=OnAOasOqNXInBqBN2CMawEuSA5WiHqUK1OLe_GItbLw,2370
+chatfic_validator-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+chatfic_validator-0.1.0.dist-info/top_level.txt,sha256=sf9lqASi0orf3B5ICSC_9AAt3uH3q0LVjmEJLJ3R2Cs,24
+chatfic_validator-0.1.0.dist-info/RECORD,,
