@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trackingmore-api-tool"
+version = "0.1.2"
+authors = [
+  { name="Kumi Mitterer", email="trackingmore-api-tool@kumi.email" },
+]
+description = "API wrapper for the TrackingMore API (v3)"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "src/trackingmore"
+]
+
+[project.urls]
+"Homepage" = "https://kumig.it/kumitterer/trackingmore-api-tool"
+"Bug Tracker" = "https://kumig.it/kumitterer/trackingmore-api-tool/issues"
+
+[project.scripts]
+trackingmore = "trackingmore.tracker:main"
