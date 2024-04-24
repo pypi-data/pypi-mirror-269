@@ -1,0 +1,174 @@
+Metadata-Version: 2.1
+Name: self_stats_app
+Version: 0.1.0
+Summary: Process Google Takeout data and visualize it using Dash.
+Author: Colton Robbins
+Author-email: coltonrobbins73@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: alabaster==0.7.16
+Requires-Dist: Babel==2.14.0
+Requires-Dist: blinker==1.7.0
+Requires-Dist: certifi==2024.2.2
+Requires-Dist: charset-normalizer==3.3.2
+Requires-Dist: click==8.1.7
+Requires-Dist: dash==2.16.1
+Requires-Dist: dash-bootstrap-components==1.6.0
+Requires-Dist: dash-core-components==2.0.0
+Requires-Dist: dash-html-components==2.0.0
+Requires-Dist: dash-table==5.0.0
+Requires-Dist: docutils==0.20.1
+Requires-Dist: Flask==3.0.3
+Requires-Dist: idna==3.7
+Requires-Dist: imagesize==1.4.1
+Requires-Dist: importlib_metadata==7.1.0
+Requires-Dist: itsdangerous==2.2.0
+Requires-Dist: Jinja2==3.1.3
+Requires-Dist: MarkupSafe==2.1.5
+Requires-Dist: mypy-extensions==1.0.0
+Requires-Dist: nest-asyncio==1.6.0
+Requires-Dist: numpy==1.26.4
+Requires-Dist: packaging==24.0
+Requires-Dist: pandas==2.2.2
+Requires-Dist: pathspec==0.12.1
+Requires-Dist: platformdirs==4.2.0
+Requires-Dist: plotly==5.21.0
+Requires-Dist: Pygments==2.17.2
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2024.1
+Requires-Dist: regex==2024.4.16
+Requires-Dist: retrying==1.3.4
+Requires-Dist: ruptures==1.1.9
+Requires-Dist: scipy==1.13.0
+Requires-Dist: six==1.16.0
+Requires-Dist: snowballstemmer==2.2.0
+Requires-Dist: soupsieve==2.5
+Requires-Dist: Sphinx==7.2.6
+Requires-Dist: sphinxcontrib-applehelp==1.0.8
+Requires-Dist: sphinxcontrib-devhelp==1.0.6
+Requires-Dist: sphinxcontrib-htmlhelp==2.0.5
+Requires-Dist: sphinxcontrib-jsmath==1.0.1
+Requires-Dist: sphinxcontrib-qthelp==1.0.7
+Requires-Dist: sphinxcontrib-serializinghtml==1.1.10
+Requires-Dist: tenacity==8.2.3
+Requires-Dist: tomli==2.0.1
+Requires-Dist: typing_extensions==4.11.0
+Requires-Dist: tzdata==2024.1
+Requires-Dist: tzlocal==5.2
+Requires-Dist: urllib3==2.2.1
+Requires-Dist: webencodings==0.5.1
+Requires-Dist: Werkzeug==3.0.2
+Requires-Dist: zipp==3.18.1
+
+![Splash Image](images/splash.jpg)
+
+# **Self Stats** - Google Takeout Data Insights Visualizer 📊
+
+Welcome to **Self Stats Google Takeout Data Insights Visualizer**! This Python package revolutionizes how you interact with your personal Google Analytics data extracted via Google Takeout. By offering eye-catching, interactive visualizations, this tool helps you gain deep insights into your digital footprint with Google services. Whether you're a data enthusiast or simply curious about your online habits, this tool provides valuable perspectives into your personal analytics data.
+
+## Features 🌟
+
+- **Custom Data Processing**: Import and analyze your personal Google Analytics data from Google Takeout.
+- **Interactive Visualizations**: Engage with your data through beautifully designed graphs and interactive charts.
+- **Insight Discovery**: Discover trends, patterns, and more from your personal usage data.
+- **User-Friendly Interface**: Easy setup and intuitive controls make your data exploration enjoyable and straightforward.
+
+## Getting Started 🚀
+
+### Prerequisites
+
+To use the Google Takeout Data Insights Visualizer, you will need:
+
+- Python 3.6 or higher
+- Pip for Python package management
+
+### Installation
+
+Install this package using pip:
+
+```bash
+pip install takeout-insights-visualizer
+```
+
+### Data Preparation
+
+#### Downloading Your Data from Google Takeout
+
+- Open your web browser and go to [Google Takeout](https://takeout.google.com/).
+- Google Takeout allows you to export data from your Google account products.
+- Choose the Google products you want data from. Ensure you have selected **"MyActivity"** and **"YouTube and YouTube Music"**
+- Change the file format to **JSON**.
+- Once your archive is ready, Google will notify you via email.
+- Download the archive and extract it.
+
+![Google Takeout Demo](gifs/Google_Takeout_instructions.gif)
+
+#### Setting Up the Visualizer
+
+1. **Prepare Your Data**:
+
+   - After extracting your data, place the relevant Google Analytics JOSN file(s) in a chosen directory.
+   - The package will detect specific filenames automatically so ensure they are correctly named:
+     - "watch-history.html": initiates YouTube watch history processing.
+     - "MyActivity": initiates search history processing.
+   - The package will ask you to specify the directory with the data.
+   - Processed files will be populated in the chosen directory.
+
+2. **Configuration**:
+   - Modify any necessary settings in `config.py` to customize how data is processed and visualized.
+
+### Usage
+
+Run the visualization tool with:
+
+```bash
+python -m takeout_visualizer
+```
+
+Choose the analytics files and types of visualizations through the command line interface.
+
+## Example Visualizations 📈
+
+- **Activity Heatmaps**: Visualize your online activity patterns over time.
+- **Service Interaction Overview**: Understand how you use different Google services.
+- **Data Footprint Analysis**: Explore the volume and type of data stored across various services.
+
+## Contributing 🤝
+
+We encourage contributions from the community! Please read our `CONTRIBUTING.md` for guidelines on how to participate in developing this tool further.
+
+## Data Privacy Disclaimer
+
+While the **Self Stats Google Takeout Data Insights Visualizer** offers powerful insights into your personal Google Analytics data, it's important to handle your data with care. Here are some precautions we strongly advise:
+
+- **Sensitive Information**: Your Google Takeout archive may contain sensitive personal information. Ensure you securely handle and store this data to prevent unauthorized access.
+- **Data Security**: Only use this tool on devices you trust, within secure environments. Avoid using public or shared computers where data might be compromised.
+- **Privacy Settings**: Regularly review your privacy settings on Google and other online platforms to manage what data is collected about you.
+- **Data Sharing**: Be cautious about sharing your insights and visualizations. They could inadvertently reveal personal information about you or your habits.
+- **Legal Compliance**: Ensure your use of data complies with local data protection laws and regulations, including GDPR, if applicable.
+
+By using this tool, you agree to do so at your own risk. The developers of the **Self Stats Google Takeout Data Insights Visualizer** are not responsible for any data breaches or privacy violations that may occur from improper handling of your data. Always prioritize your data privacy and use this tool responsibly.
+
+## License
+
+This project is released under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support and Feedback 📝
+
+For support, feature requests, or to report bugs, please use the repository's issue tracker.
+
+## Why Choose Google Takeout Data Insights Visualizer?
+
+Our tool not only visualizes your data from Google Takeout but also provides a powerful platform to uncover and understand personal trends and usage statistics, empowering you with the knowledge to make informed decisions about your digital privacy and online habits.
+
+# TODO
+
+- Make a blank data folder to submit to github for user access
+- Be more explicit about JSON settings for download
+- Change package name to something different
+- Add plot titles
+- Label axis better
+- Add modules to the init files
+- Document directory names
+- Make module docstrings
+- Leave some more comments throughout the script
+-
