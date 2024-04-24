@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mb_pytorch_lightning
+Version: 1.0.12
+Summary: Production Planing functions package
+Author: ['Malav Bateriwala']
+Requires-Python: >=3.8
+Requires-Dist: mb-base
+Requires-Dist: mb-utils
+Requires-Dist: pytorch-lightning
+Requires-Dist: mb-pandas
+
