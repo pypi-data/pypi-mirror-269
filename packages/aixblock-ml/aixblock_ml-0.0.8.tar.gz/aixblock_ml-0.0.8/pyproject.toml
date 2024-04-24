@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "aixblock_ml"
+version = "0.0.8"
+description = ""
+authors = ["TonyShark <quoi@wow-ai.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+aixblock-ml = 'aixblock_ml.server:main'
