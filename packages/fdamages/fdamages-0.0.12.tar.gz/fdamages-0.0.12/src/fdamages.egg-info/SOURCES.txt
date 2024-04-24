@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/fdamages/__init__.py
+src/fdamages/module_fdamage.py
+src/fdamages.egg-info/PKG-INFO
+src/fdamages.egg-info/SOURCES.txt
+src/fdamages.egg-info/dependency_links.txt
+src/fdamages.egg-info/requires.txt
+src/fdamages.egg-info/top_level.txt

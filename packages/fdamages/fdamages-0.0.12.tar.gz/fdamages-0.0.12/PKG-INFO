@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: fdamages
+Version: 0.0.12
+Summary: A fdamage utility for reading damage functions
+Home-page: https://github.com/valluzzi/fdamages.git
+Author: Valerio Luzzi
+Author-email: valerio.luzzi@gecosistema.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+A fdamage utility for reading damage functions
