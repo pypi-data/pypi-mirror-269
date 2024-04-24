@@ -1,0 +1,13 @@
+stonksfeed/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stonksfeed/config.py,sha256=cC7DJIpBalqU9durifNoszP7420RRJplHTv63XI2Rkk,724
+stonksfeed/measures.py,sha256=xdIK8MNDrkdGf2RDhbnj9fUx6uWuxVq0fcBgSTqTm6Q,2784
+stonksfeed/models/article.py,sha256=tkwzlLrT3Rsq8lrDNY_KMK6igSIK8ciIMtgYiMg6QXE,542
+stonksfeed/rss/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stonksfeed/rss/base.py,sha256=MLIZUTZJr0avsw0ENld9HSlSyd-Lf4L0okCUtoK-4Ec,900
+stonksfeed/rss/rss_reader.py,sha256=lAlySOBS5Ies9fmc7gdgraEeoSGZ3WDaS13tCE7gHmY,1160
+stonksfeed/web/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stonksfeed/web/siliconinvestor.py,sha256=bFH0MXWHr9hW_Ot2eYzhMOCoYtZKgfJzhQ_c-_Ykrbk,1629
+stonksfeed-0.1.7.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+stonksfeed-0.1.7.dist-info/METADATA,sha256=8RIb1jn-UBERjuO1zWGTrVtcpOTW1z0FX8fm8x4wQ-k,2189
+stonksfeed-0.1.7.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+stonksfeed-0.1.7.dist-info/RECORD,,
