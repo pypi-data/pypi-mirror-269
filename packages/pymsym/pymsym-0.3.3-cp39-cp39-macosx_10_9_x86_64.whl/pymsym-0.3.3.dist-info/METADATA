@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pymsym
+Version: 0.3.3
+Summary: libmsym python binding
+Keywords: symmetry,molecules,chemistry
+Author-Email: Corin Wagen <corinwagen@gmail.com>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2015 Marcus Johansson
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Project-URL: Homepage, https://github.com/corinwagen/pymsym
+Requires-Python: >=3.9
+Provides-Extra: extra-deps
+Requires-Dist: numpy>=1.19.2; extra == "extra-deps"
+Description-Content-Type: text/markdown
+
+# pymsym
+libmsym is a C library dealing with point group symmetry in molecules. pymsym is its python interface.
+
+## about
+this library was originally developed by Marcus Johansson. the original library can be found [here](https://github.com/mcodev31/libmsym) and seems unmaintained - after reaching out to the initial authors, i've decided to fork this so i can maintain it.
+
+## api
+
+see ``test/test.py`` for a low-frills introduction to the api, or the original repo for more details. i haven't modified the api at all.
+
+*Corin Wagen, 2024*
