@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "time-tracker"
+version = "0.5.0"
+description = "CLI to track time spent on tasks using pomodoro technique"
+authors = ["Jose Cabeda <jecabeda@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+tt = "time_tracker.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = "0.7.0"
+python-dotenv = "^0.19.2"
+pytest = "^7.3.1"
+rich = "^13.3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.3.1"
+black = "^23.3.0"
+mypy = "^1.2.0"
+ruff = "^0.0.261"
+
+[build-system]
+requires = ["poetry>=1.4"]
+build-backend = "poetry.masonry.api"
+
+
+[tool.ruff]
+line-length = 88
+select = [
+    "B",
+    "C",
+    "E",
+    "F",
+    "W"]
