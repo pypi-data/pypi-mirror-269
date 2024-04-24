@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: maphash
+Version: 0.1.2
+Summary: 
+Author: Jakob Klepp
+Author-email: jakob.klepp@moonvision.io
+Requires-Python: >=3.8,<4
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/x-rst
+
+maphash
+#######
+
+.. image:: https://img.shields.io/pypi/v/maphash?color=%2334D058&label=pypi%20package
+   :target: https://pypi.org/project/maphash/
+
+Python library for hashing lists, dicts and other JSON serializeable data structures.
+
+.. image:: https://asciinema.org/a/5L806jTbVjlpOdy8PWplAg9MC.svg
+   :target: https://asciinema.org/a/5L806jTbVjlpOdy8PWplAg9MC
+
+Coding Conventions
+==================
+
+Python code is automatically formatted by `black`_.
+
+Docstrings follow the `Google docstring conventions`_.
+
+.. _`black`: https://github.com/psf/black
+.. _Google docstring conventions: https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
+
