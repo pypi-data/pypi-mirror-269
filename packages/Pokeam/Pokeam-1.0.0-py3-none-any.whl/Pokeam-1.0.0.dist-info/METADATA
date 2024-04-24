@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Pokeam
+Version: 1.0.0
+Summary: Libreria para generar un pokemon aleatorio
+Author: Father1
+Author-email: 202224143_trejo@tesch.edu.mx
+Requires-Dist: pandas
+
