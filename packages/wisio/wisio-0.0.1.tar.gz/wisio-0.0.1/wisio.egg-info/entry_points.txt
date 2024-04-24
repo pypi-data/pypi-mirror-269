@@ -1,0 +1,2 @@
+[console_scripts]
+wisio = wisio.__main__:main

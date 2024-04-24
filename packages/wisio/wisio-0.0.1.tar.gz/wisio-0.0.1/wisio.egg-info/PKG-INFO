@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: wisio
+Version: 0.0.1
+Home-page: https://github.com/izzet/wisio
+Author: Izzet Yildirim
+Author-email: izzetcyildirim@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+Provides-Extra: darshan
+License-File: LICENSE
+
+<p align="center">
+    <img src="./assets/logo.png">
+</p>
+
+# WisIO: Automated I/O Analysis for HPC Workflows
+
+## Overview
+
+**"Extract wisdom from large-scale rich I/O traces of HPC workflows."**
+
+## Installation
+
+To install WisIO through `pip`, you will need to use the following command.
+
+```bash
+spack -e tools install
+pip install wisio[darshan]
+```
+
+To install WisIO from source, you will need to first install the dependencies:
+
+```bash
+spack -e tools install
+pip install .[darshan]
+```
+
+## Usage
+
+```bash
+wisio analyze -c /path/to/config
+```
