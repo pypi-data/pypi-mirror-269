@@ -1,0 +1,12 @@
+basx-bread
+django-formtools==2.3
+djangorestframework
+chardet
+tablib
+dateparser
+
+[mailer-integration]
+mailchimp_marketing
+
+[testing]
+basx-bread[testing]
