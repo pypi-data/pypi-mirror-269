@@ -1,0 +1,11 @@
+momonga/__init__.py,sha256=iWnaMiIWmYho2GfBZJiZ82rlo4znFfQlqNXkGwNXhLg,136
+momonga/momonga.py,sha256=VUcJlSWrgScf9JMs2rdnprc-5cc1TsCUjpszxRNplUU,15099
+momonga/momonga_exception.py,sha256=IPcOVNU7mpm-upYTLLo6gIxFHzjCXxs-YwzhIej8PMU,959
+momonga/momonga_response.py,sha256=ObNgkxz_HzhNQliG14775Xq-l8IEOm7jtRmn2haTzAM,2698
+momonga/momonga_session_manager.py,sha256=n27QZZHp71w-SW0kBOTyal3BFtvbqLNtdi88CNTncDU,11964
+momonga/momonga_sk_wrapper.py,sha256=U7FwKOkmaxMPEsgJ4sejL7e8yWcLxb-4G-TRL15pPXs,9392
+momonga-0.0.2.dist-info/LICENSE,sha256=pOXywwG9IIlOPHodSe52gNYGQZymYppp-BeVhAjPDME,1061
+momonga-0.0.2.dist-info/METADATA,sha256=ZcxMfRd_yQMbgFQ--Ojf9G2RRwfur8OJqWLSJ1yv9ho,10281
+momonga-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+momonga-0.0.2.dist-info/top_level.txt,sha256=wB9RSzcUXuE3oWO6vYrP1GBIbDG-FM6juEp8yztPzbM,8
+momonga-0.0.2.dist-info/RECORD,,
