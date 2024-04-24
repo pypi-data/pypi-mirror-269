@@ -1,0 +1,271 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-08 16:43+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: basxconnect/invoicing/apps.py:9
+msgid "BasxConnect Invoicing"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:22
+#: basxconnect/invoicing/urls.py:332
+msgid "Invoicing"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:29
+msgid "Default currency"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:38
+msgid "Use VAT by default"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:46
+msgid "Default VAT"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:54
+msgid "Use WHT by default"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:62
+msgid "Default WHT"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:70
+msgid "Provided invoicing amounts include VAT by default"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:78
+msgid "Invoice number grouping regex"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:99
+msgid "Invoice number extraction regex"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:118
+msgid "Invoice number template"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:133
+msgid "Default invoice template"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:144
+msgid "Default receipt template"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:155
+msgid "Invoice email subject"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:168
+msgid "Invoice email body"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:186
+msgid "Default invoice email"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:194
+msgid "Receipt email subject"
+msgstr ""
+
+#: basxconnect/invoicing/dynamic_preferences_registry.py:207
+msgid "Receipt email body"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:24
+msgid "Name"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:24
+msgid "Internal name of this payment method"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:27
+msgid "Payment information"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:28
+msgid "Instructions for the client"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:36
+msgid "Payment type"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:37
+msgid "Payment types"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:96
+msgid "Invoice number"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:102
+msgid "Client"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:105
+msgid "Currency"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:113
+msgid "Created on"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:114
+msgid "Payed on"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:115
+msgid "Invoice sent"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:116
+msgid "Receipt sent"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:117
+msgid "Cancelled"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:119
+msgid "Note to client"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:121
+msgid "Can be displayed on invoice and/or receipt"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:126
+msgid "Amounts include VAT"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:129
+msgid "VAT"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:132
+msgid "WHT"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:140
+msgid "Has VAT"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:145
+msgid "Has WHT"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:154
+msgid "Net amount"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:159
+msgid "VAT amount"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:164
+msgid "WHT amount"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:169
+msgid "Total amount"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:186 basxconnect/invoicing/urls.py:243
+msgid "Invoice"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:187
+msgid "Invoices"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:217
+msgid "Item"
+msgstr ""
+
+#: basxconnect/invoicing/models.py:218
+msgid "Items"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:42
+msgid "Net"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:71
+msgid "New"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:97
+msgid "Dates"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:106
+msgid "Currency and taxes"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:140
+msgid "Send invoice {} to {}"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:147 basxconnect/invoicing/urls.py:154
+msgid "Send invoice"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:181 basxconnect/invoicing/urls.py:187
+msgid "Mark payed"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:211
+msgid "Send receipt for invoice {} to {}"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:218 basxconnect/invoicing/urls.py:225
+msgid "Send receipt"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:254
+msgid "Select a default invoice template first in the global preferences"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:261
+msgid "Receipt"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:278
+msgid "Select a default receipt template first in the global preferences"
+msgstr ""
+
+#: basxconnect/invoicing/urls.py:290 basxconnect/invoicing/urls.py:296
+msgid "Cancel"
+msgstr ""
+
+#: basxconnect/invoicing/views.py:97
+msgid "Email successfully sent"
+msgstr ""
+
+#: basxconnect/invoicing/views.py:104
+msgid "Recepients"
+msgstr ""
+
+#: basxconnect/invoicing/views.py:108
+msgid "Add recipient"
+msgstr ""
