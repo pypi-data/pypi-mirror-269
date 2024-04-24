@@ -1,0 +1,3 @@
+[console_scripts]
+tpt=tessproposaltool.tpt:tpt
+
