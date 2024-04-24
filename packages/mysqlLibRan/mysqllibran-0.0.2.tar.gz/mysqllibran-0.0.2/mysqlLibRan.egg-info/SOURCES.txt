@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+MyLib/__init__.py
+MyLib/narek.py
+mysqlLibRan.egg-info/PKG-INFO
+mysqlLibRan.egg-info/SOURCES.txt
+mysqlLibRan.egg-info/dependency_links.txt
+mysqlLibRan.egg-info/requires.txt
+mysqlLibRan.egg-info/top_level.txt

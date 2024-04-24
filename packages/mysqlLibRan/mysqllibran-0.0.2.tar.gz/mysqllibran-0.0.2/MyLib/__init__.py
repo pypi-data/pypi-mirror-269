@@ -1,0 +1,1 @@
+from narek import *
