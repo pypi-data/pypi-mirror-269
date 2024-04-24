@@ -1,0 +1,3 @@
+[console_scripts]
+zho-tts-cli = zho_tts_cli.cli:run
+zho-tts-web = zho_tts_gr.app:run
