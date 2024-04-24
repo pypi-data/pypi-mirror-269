@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: meantools
+Version: 1.1.2
+Summary: Integration of multi-omics data for biosynthetic pathway discovery
+Home-page: https://github.com/kumarsaurabh20/meantools
+Author: Kumar Saurabh Singh
+Author-email: kumar.singh@wur.nl
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: rdkit
+Requires-Dist: networkx
+Requires-Dist: pandas
+Requires-Dist: sqlite3
+Requires-Dist: tqdm
+Requires-Dist: svgutils
+Requires-Dist: svgelements
+Requires-Dist: markov-clustering
+Requires-Dist: seaborn
+Requires-Dist: subprocess
+
+General documentation for MEANtools
+===================================
+
+Read the documentation here:
+
+https://meantools.readthedocs.io/en/latest/
+
+Maintainer
+==========
+Dr. Kumar Saurabh Singh (kumar.singh@wur.nl)
+
+Principal Investigator
+======================
+Dr. Marnix Medema (marnix.medema@wur.nl)
