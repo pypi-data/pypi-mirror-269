@@ -1,0 +1,10 @@
+tencentcloud/__init__.py,sha256=BCgmbRtVUga03-HUV5KZfHLWAb1WUGHSxQ83ySGonzs,631
+tencentcloud/trocket/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/trocket/v20230308/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/trocket/v20230308/errorcodes.py,sha256=aft5_wzkKZyvER0SDorLfQRFQt4V5-0nf6qd8hytnD8,1878
+tencentcloud/trocket/v20230308/models.py,sha256=FR-7vKAJIZBBvyh_ul8SIUoI8we1utY--upGmQy_u4E,228231
+tencentcloud/trocket/v20230308/trocket_client.py,sha256=bqDseeg9XXr5DeYnHRG2IIbGb88pwkhT3SzfNMSDanU,43547
+tencentcloud_sdk_python_trocket-3.0.1135.dist-info/METADATA,sha256=ZMogrLoMW4AbDEd6U4wnJG_jc-6hf8Lz3NoB1Xzqsck,1512
+tencentcloud_sdk_python_trocket-3.0.1135.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tencentcloud_sdk_python_trocket-3.0.1135.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_trocket-3.0.1135.dist-info/RECORD,,
