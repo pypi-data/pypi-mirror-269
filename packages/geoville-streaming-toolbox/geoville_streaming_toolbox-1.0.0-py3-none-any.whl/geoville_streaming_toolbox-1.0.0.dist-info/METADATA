@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: geoville-streaming-toolbox
+Version: 1.0.0
+Summary: GeoVille`s toolbox for extracting time frames from online accessible satellite streams.
+Home-page: 
+Author: Johannes Schmid
+Author-email: schmid@geoville.com
+Requires-Dist: pyyaml (>=5.3.1)
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: pyproj (>=3.3.0)
+Requires-Dist: ffmpeg-python (==0.2.0)
+
