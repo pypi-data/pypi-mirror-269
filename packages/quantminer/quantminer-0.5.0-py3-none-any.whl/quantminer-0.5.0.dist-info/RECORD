@@ -1,0 +1,11 @@
+quantminer/__init__.py,sha256=GTNXxtIOhUhRS9zssOSH2VPoFyxh3OvjMBvC88MQ7gw,34
+quantminer/_test_transform.py,sha256=i0q9_5yLrQ4Y8h7Ca3J-8wavppKGwa9lUCG3ZwL4vyw,6014
+quantminer/pipminer.py,sha256=vv735QI6q801WGRZTVlpCVU8YyR4i3Nx0pt2C1R7wxM,24480
+quantminer/classes/__init__.py,sha256=VC5l6XYMyaHbWFR9RLhHRQ_SAp5d427mQ-aTywyTn1w,126
+quantminer/classes/pivot_pip.py,sha256=gwZDOhh_ktsScttax48II3q1jwySE1YXiZhRXsLP5Wg,2718
+quantminer/classes/reducers.py,sha256=B1EMsIeR3wsuIRjtscA7vDR5_7tqVm097RwOgp02o_A,11263
+quantminer/classes/seqkmeans.py,sha256=AW4F5Um5JWMGaRVKUkNq57fS5IdRFTpcjLeLWqMKTAs,13017
+quantminer-0.5.0.dist-info/METADATA,sha256=Z4UAHuefA_KzlNTnQG-414cIdttDoPYxOrPTNn53sms,3984
+quantminer-0.5.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+quantminer-0.5.0.dist-info/top_level.txt,sha256=dSulXS9Rx3Ws5WJjGRmL76mY79zf9o-8iUi6mh9eS70,11
+quantminer-0.5.0.dist-info/RECORD,,
