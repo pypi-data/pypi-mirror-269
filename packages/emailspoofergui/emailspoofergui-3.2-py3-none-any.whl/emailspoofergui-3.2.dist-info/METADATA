@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: emailspoofergui
+Version: 3.2
+Summary: A graphical email spoofing tool
+Home-page: https://github.com/IMApurbo/emailspoofergui
+Author: AKM Korishee Apurbo
+Author-email: bandinvisible8@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: CTkMessagebox
+Requires-Dist: customtkinter
+
+# Email Spoofer GUI
+
+Email Spoofer GUI is a Python package that provides a graphical user interface for spoofing emails.
+
+## Installation
+
+You can install Email Spoofer GUI from PyPI using pip:
+
+```bash
+pip install emailspoofergui
+```
+
+## Usage
+
+After installing the package, you can run the Email Spoofer GUI from the command line:
+
+```bash
+emailspoofergui
+```
+
+This will launch the graphical user interface where you can spoof emails and edit configuration settings.
+
+## Features
+
+- Spoof emails with custom sender, recipient, subject, and message.
+- Edit configuration settings for SMTP server, username, and password.
+- Simple and intuitive user interface.
+
+## Configuration
+
+The configuration settings for the SMTP server, username, and password are stored in the `config.json` file. You can edit this file directly or use the "Edit Config"(->) button in the GUI to modify the settings.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
