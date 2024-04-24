@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "circuitree"
+version = "0.9.7"
+description = "Genetic circuit design using Monte Carlo tree search"
+authors = ["pranav-bhamidipati <pbhamidi@usc.edu>"]
+license = "GPLv3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.23.0"
+networkx = "^3.1"
+pandas = "^2.0.0"
+scipy = { version = "^1.11.3", python = ">=3.10,<3.13" }
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.12.0"
+black = "^23.3.0"
+fastapi = "^0.95.0"
+ipykernel = "^6.23.1"
+jupyterlab = "^4.0.0"
+ipywidgets = "^8.0.6"
+nodejs = "^0.1.1"
+ipympl = "^0.9.3"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "*"
+sphinx-autobuild = "*"
+sphinxcontrib-applehelp = "*"
+sphinxcontrib-devhelp = "*"
+sphinxcontrib-htmlhelp = "*"
+sphinxcontrib-jsmath = "*"
+sphinxcontrib-qthelp = "*"
+sphinxcontrib-serializinghtml = "*"
+sphinx-copybutton = "*"
+sphinx-external-toc = "*"
+sphinx-jupyterbook-latex = "*"
+sphinx-multitoc-numbering = "*"
+sphinx-rtd-theme = "*"
+sphinx-thebe = "*"
+sphinx-togglebutton = "*"
+nbsphinx = "*"
+pydata-sphinx-theme = "*"
+myst-nb = "*"
+myst-parser = "*"
+commonmark = "*"
+recommonmark = "*"
+watermark = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[virtualenvs]
+in-project = true
