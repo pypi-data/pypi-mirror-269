@@ -1,0 +1,87 @@
+Metadata-Version: 2.3
+Name: scmallet
+Version: 0.1.2
+Summary: Python wrapper of MALLET for LDA analysis on single-cell data
+Project-URL: Source, https://github.com/lhqing/scmallet
+Project-URL: Home-page, https://github.com/lhqing/scmallet
+Author: Hanqing Liu
+Maintainer-email: Hanqing Liu <hanqingliu@fas.harvard.edu>
+License: MIT License
+        
+        Copyright (c) 2024, lhqing
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: anndata
+Requires-Dist: gensim
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyranges
+Requires-Dist: scipy<1.13
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: twine>=4.0.2; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+# scmallet
+
+Python wrapper of MALLET for LDA analysis on single-cell data.
+
+MALLET is the LDA backend chosen by pycistopic. The implementation in this package has several difference than pycistopic:
+
+1. Improved paralization.
+2. Allow train LDA model with cell subset and then inference ramaining cells. This is nicely supported by MALLET itself.
+3. Allow the training process to be resumable.
+4. Work with anndata.
+
+## Installation
+
+You need to have Python 3.9 or newer installed on your system. If you don't have
+Python installed, we recommend installing [Mambaforge](https://github.com/conda-forge/miniforge#mambaforge).
+
+There are several alternative options to install scmallet:
+
+1. Install the latest release of `scmallet` from [PyPI](https://pypi.org/project/scmallet/):
+
+```bash
+pip install scmallet
+```
+
+2. Install the latest development version:
+
+```bash
+pip install git+https://github.com/lhqing/scmallet.git@main
+```
+
+## Usage
+
+See example usage here: https://github.com/lhqing/scmallet/blob/main/tests/example.ipynb
+
+## Citation
+
+-   Mallet Package: https://mimno.github.io/Mallet/
+
+    > McCallum, Andrew Kachites. "MALLET: A Machine Learning for Language Toolkit." http://mallet.cs.umass.edu. 2002.
+
+-   PyCistopic: https://github.com/aertslab/pycisTopic
+    > Bravo Gonzalez-Blas, C. & De Winter, S. et al. (2022). SCENIC+: single-cell multiomic inference of enhancers and gene regulatory networks
