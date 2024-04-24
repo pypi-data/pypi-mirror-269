@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: Poke-Alan
+Version: 1.0.0
+Summary: Libreria para generar un pokemon aleatorio
+Author: Alan Suarez
+Author-email: 202224129_bautista@tesch.edu.mx
+Requires-Dist: pandas
