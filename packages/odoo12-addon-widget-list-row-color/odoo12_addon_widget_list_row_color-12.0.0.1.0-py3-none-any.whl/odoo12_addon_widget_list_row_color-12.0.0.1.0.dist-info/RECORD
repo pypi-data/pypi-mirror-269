@@ -1,0 +1,11 @@
+odoo/addons/widget_list_row_color/README.rst,sha256=_gVKzA9DL0O73XhIgZYQNHib-6TXt1eAPNavd4RYoaM,3123
+odoo/addons/widget_list_row_color/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo/addons/widget_list_row_color/__manifest__.py,sha256=K72_vHlXSb6ug5LWtMEFzfry8PFC6qU82C-354Pr5f4,734
+odoo/addons/widget_list_row_color/static/description/ejemplo.png,sha256=RL0u6LAu_ihsAufnc0jA3szAUhTkrjFzv5cvMrOqqK8,69619
+odoo/addons/widget_list_row_color/static/description/icon.png,sha256=3taXULJl0n0Ko0YOBXiXtspPonsicVgYojo1ghzHmuY,17607
+odoo/addons/widget_list_row_color/static/src/js/list_renderer.js,sha256=Akd_akMYsN58PU5et6wuL-N2bsoN2KSfRgsTxZI701w,1446
+odoo/addons/widget_list_row_color/views/widget_list_row_color_view.xml,sha256=h3PSgt1bOvathSoty4xLsXNgqwSSjOa48kX-uENTa8o,346
+odoo12_addon_widget_list_row_color-12.0.0.1.0.dist-info/METADATA,sha256=yWIThWf8W8HWd84Irb60lqTstoGfy7m154WOCMp0DsI,3763
+odoo12_addon_widget_list_row_color-12.0.0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+odoo12_addon_widget_list_row_color-12.0.0.1.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_widget_list_row_color-12.0.0.1.0.dist-info/RECORD,,
