@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: pokemon_haru
+Version: 1.0.0
+Summary: Lybrari para generaar un pokemon aleatorio
+Author-email: harumissa4@gail.com
+Requires-Dist: pandas
+
