@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: keycloak-oid-client
+Version: 0.0.1
+Summary: Simple OpenID client
+Home-page: https://git.ocherepanov.ru/ocherepanov/oid-client
+Author: O.S. Cherepanov
+Author-email: ocherepanov@inbox.ru
+License: MIT
+Requires-Dist: python-keycloak-client
+Requires-Dist: xmltodict
+
