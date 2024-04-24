@@ -1,0 +1,3 @@
+[console_scripts]
+dagster-scaleway=dagster_scaleway.cli:main
+
