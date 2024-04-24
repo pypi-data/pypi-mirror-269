@@ -1,0 +1,13 @@
+synthx/__init__.py,sha256=CrWdzYj71Yran1PUAQanmuyuALAhX0X3d8_rHUczq2U,415
+synthx/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+synthx/core/dataset.py,sha256=tcHYgcyt-NbnPYFlnqmEz3FNQ3I1OYGzhjP6C5Lv10U,8374
+synthx/core/result.py,sha256=x0OpqXI2hveC2fTQC8V_Gm64Rty2C2et1Fc8FEtBpwU,6772
+synthx/core/sample.py,sha256=3xNCpqkj4K58Cxj03Z7jj38wnimnftLLEhbkZYYTKQY,7362
+synthx/errors/__init__.py,sha256=TUY16Oaq9ixNbj-4WtRFmrIvYBaXqSDd3Kfz2u2fODA,818
+synthx/method.py,sha256=d2TNgTHH18qDPQUfz6BOqoLOnAe0SJi3BcAkLbqsp2E,11233
+synthx/stats/__init__.py,sha256=jPZxbLqQXftxpefxC0lNeVFpX55b-Z8wUCvBpwpF0XQ,91
+synthx/stats/norm.py,sha256=UyIHsaYP4rYiSGO5g6sgBL5W94oD-qGQxacH8bbKLGM,1802
+synthx/stats/p.py,sha256=ZuZbkVeBiAIQ4X4TGW7IpI19UiiF42JbW-mjspYMOD8,1053
+synthx-1.0.0.dist-info/METADATA,sha256=dcqXS-097T7JR54EEcyX2TqJmRaIC59eAGBwlz9Ce38,8325
+synthx-1.0.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+synthx-1.0.0.dist-info/RECORD,,
