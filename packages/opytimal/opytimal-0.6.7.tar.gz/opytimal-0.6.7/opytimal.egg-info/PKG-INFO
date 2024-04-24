@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: opytimal
+Version: 0.6.7
+Summary: Optimal control PDE-based solver
+Author: Natanael Quintino
+Author-email: natanael.quintino@ipiaget.pt
+License: CC0 1.0 Universal
+Keywords: optimalcontrol,FEniCS,FuildDynamics,NavierStokes,Stokes
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: fenics-dijitso==2019.2.0.dev0
+Requires-Dist: fenics-ffc==2019.2.0.dev0
+Requires-Dist: fenics-fiat==2019.2.0.dev0
+Requires-Dist: fenics-ufl==2023.2.0
+Requires-Dist: fenics-ufl-legacy==2022.3.0
+Requires-Dist: screeninfo>=0.8.1
+Requires-Dist: termcolor>=2.2.0
+Requires-Dist: matplotlib>=3.7.0
+Requires-Dist: numpy>=1.24.2
+Requires-Dist: scipy>=1.10.1
+Requires-Dist: pandas>=1.5.3
+Requires-Dist: sympy>=1.11.1
+Requires-Dist: tikzplotlib>=0.8.2
+Requires-Dist: easygui>=0.98.1
+
+Opytimal is a Python/FEniCS framework that have the main goal solve Optimal Control problems considering multiple and mixed controls based to linear and nonlinear PDEs, in addition to can also solve PDEs simply and clearly
