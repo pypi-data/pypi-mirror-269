@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+curve_dao/__init__.py
+curve_dao/addresses.py
+curve_dao/ipfs.py
+curve_dao/simulate.py
+curve_dao/vote_utils.py
+curve_dao.egg-info/PKG-INFO
+curve_dao.egg-info/SOURCES.txt
+curve_dao.egg-info/dependency_links.txt
+curve_dao.egg-info/requires.txt
+curve_dao.egg-info/top_level.txt
+tests/test_kill_gauge.py

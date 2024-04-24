@@ -1,0 +1,45 @@
+[project]
+name = "curve-dao"
+version = "0.0.5"
+description = "DAO governance tools for CurveDAO."
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.10"
+license = {text = "AGPL-3.0-only License"}
+keywords = ["ethereum", "smart-contracts", "evm", "vyper", "curve-finance", "dao", "defi"]
+authors = [
+    {name = "FiddyResearch", email = "fiddyresearch@gmail.com"},
+]
+maintainers = [
+    {name = "FiddyResearch", email = "fiddyresearch@gmail.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+# Requirements
+dependencies = [
+    "titanoboa >= 0.1.10b1",
+    "requests",
+    "rich",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[tool.setuptools.packages.find]
+include = ["curve_dao"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+
+[project.urls]
+Homepage = "https://pypi.org/project/curve-dao/"
+GitHub = "https://github.com/bout3fiddy/curve-dao"
+Changelog = "https://github.com/bout3fiddy/curve-dao/blob/main/CHANGELOG.md"
+Issues = "https://github.com/bout3fiddy/curve-dao/issues"
