@@ -1,0 +1,20 @@
+import importlib
+import importlib.util
+from langreact.core.configure.default import Configure
+import os
+
+configure_cache = {}
+
+
+def get_global_configure(path="langreact/core/configure/default.py", name="Configure") -> Configure:
+    cache_key = path + ":" + name
+    if cache_key in configure_cache:
+        return configure_cache[cache_key]
+    configure_spec = importlib.util.spec_from_file_location("conf", path)
+    configure_module = importlib.util.module_from_spec(configure_spec)
+    configure_spec.loader.exec_module(configure_module)
+    configure = getattr(configure_module, name)()
+    configure_cache[cache_key] = configure
+    return configure
+
+
