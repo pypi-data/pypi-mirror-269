@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+pgpyui/__init__.py
+pgpyui.egg-info/PKG-INFO
+pgpyui.egg-info/SOURCES.txt
+pgpyui.egg-info/dependency_links.txt
+pgpyui.egg-info/not-zip-safe
+pgpyui.egg-info/top_level.txt
