@@ -1,0 +1,5 @@
+# - create_oauth_client(client_data)
+# - modify_oauth_client(client_id, **kwargs)
+# - read_oauth_client(client_id)
+# - delete_oauth_client(client_id)
+# - list_oauth_clients()

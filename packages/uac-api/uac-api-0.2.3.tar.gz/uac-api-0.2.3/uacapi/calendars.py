@@ -1,0 +1,8 @@
+# - add_existing_custom_day_to_calendar(calendar_id, custom_day_id)
+# - create_calendar(calendar_data)
+# - delete_calendar(calendar_id)
+# - list_calendars()
+# - modify_calendar(calendar_id, **kwargs)
+# - read_calendar(calendar_id)
+# - read_all_custom_days_of_calendar(calendar_id)
+# - remove_custom_day_from_calendar(calendar_id, custom_day_id)
