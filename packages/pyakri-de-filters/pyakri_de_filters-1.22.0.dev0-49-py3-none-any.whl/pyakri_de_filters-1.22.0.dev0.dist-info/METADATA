@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pyakri-de-filters
+Version: 1.22.0.dev0
+Summary: Python based filters using CPU resource
+Home-page: UNKNOWN
+Author: Akridata Inc
+Author-email: support@akridata.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: akriml (>=0.2.0)
+Requires-Dist: matplotlib (>=3.7.2)
+Requires-Dist: numba (>=0.57.1)
+Requires-Dist: numpy (>=1.19.2)
+Requires-Dist: pandas (>=1.4.1)
+Requires-Dist: pyakri-de-utils (>=1.22.0.dev0)
+Requires-Dist: pyarrow (==14.0.1)
+Requires-Dist: scikit-image (>=0.21.0)
+Requires-Dist: scipy (>=1.9.3)
+Requires-Dist: tqdm (>=4.64.0)
+Requires-Dist: urllib3 (==1.26.5)
+Provides-Extra: cpu
+Requires-Dist: pyakri-de-utils[cpu] (>=1.22.0.dev0) ; extra == 'cpu'
+Provides-Extra: gpu
+Requires-Dist: pyakri-de-utils[gpu] (>=1.22.0.dev0) ; extra == 'gpu'
+Provides-Extra: test
+Requires-Dist: pyakri-de-utils[gpu] (>=1.22.0.dev0) ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+
+UNKNOWN
+
+
