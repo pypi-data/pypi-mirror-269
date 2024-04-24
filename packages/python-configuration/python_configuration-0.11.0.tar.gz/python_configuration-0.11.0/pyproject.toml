@@ -1,0 +1,174 @@
+[project]
+name = "python-configuration"
+dynamic = ["version"]
+description = "A library to load configuration parameters from multiple sources and formats"
+readme = 'README.md'
+requires-python = ">=3.8"
+keywords = ['configuration', 'settings', 'json', 'yaml', 'toml', 'ini']
+license = { text = "MIT" }
+authors = [{ name = "Tiago Requeijo", email = "tiago.requeijo.dev@gmail.com" }]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://tr11.github.io/python-configuration/"
+Documentation = "https://tr11.github.io/python-configuration/"
+Issues = "https://github.com/tr11/python-configuration/issues"
+Source = "https://github.com/tr11/python-configuration"
+
+[project.optional-dependencies]
+# cloud
+aws = ["boto3>=1.28.20"]
+azure = ["azure-keyvault>=5.0.0"]
+gcp = ["google-cloud-secret-manager>=2.16.3"]
+vault = ["hvac>=1.1.1"]
+# file formats
+toml = ["tomli>=2.0.1"]
+yaml = ["pyyaml>=6.0"]
+# utilities
+validation = ["jsonschema>=4.21.1"]
+# groups
+cloud = ["python-configuration[aws,azure,gcp,vault]"]
+file-formats = ["python-configuration[toml,yaml]"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/config/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/config"]
+
+[tool.hatch.publish.index]
+disable = true
+
+[tool.hatch.envs.default]
+
+[tool.hatch.envs.docs]
+dependencies = [
+    "mkdocs>=1.5.3",
+    "mkdocstrings>=0.24.0",
+    "mkdocs-material>=9.5.9",
+    "mkdocstrings-python",
+]
+
+
+[tool.hatch.envs.lint]
+detached = true
+dependencies = ["mypy>=1.8.0", "pydocstyle>=6.3.0", "ruff>=0.2.2"]
+features = ["cloud", "file-formats", "validation"]
+
+[tool.hatch.envs.lint.scripts]
+lint = "ruff src"
+typing = "mypy src"
+docs = "pydocstyle src"
+
+[tool.hatch.envs.test]
+template = "lint"
+dependencies = [
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+    "pytest-mypy>=0.10.3",
+    "pytest-ruff>=0.2.1",
+    "pytest>=8.0.1",
+]
+
+[tool.hatch.envs.test.scripts]
+test = "pytest"
+
+[tool.hatch.envs.testing]
+description = "Testing Environment to run all\nthe tests across different\nPython versions."
+template = "test"
+
+[[tool.hatch.envs.testing.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.dev]
+template = "test"
+path = ".venv"
+features = ["cloud", "file-formats", "validation"]
+
+[tool.ruff]
+line-length = 88
+exclude = ["tests", "docs", "src/config/_version.py"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint]
+ignore = ['D203', 'D212']
+select = [
+    'F',
+    'E',
+    'W',
+    'I',
+    'N',
+    'D',
+    'B',
+    'A',
+    'COM',
+    'C4',
+    'T20',
+    'Q',
+    'SIM',
+]
+
+[tool.mypy]
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_subclassing_any = true
+disallow_any_decorated = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+exclude = ['tests']
+
+[[tool.mypy.overrides]]
+module = [
+    'google.auth.credentials',
+    'yaml',
+    'toml',
+    'boto3',
+    'botocore.exceptions',
+    'hvac',
+    'hvac.exceptions',
+    'jsonschema',
+    'jsonschema.exceptions',
+]
+ignore_missing_imports = true
+
+[tool.coverage.run]
+branch = true
+include = ['src/*']
+omit = ['src/config/_version.py']
+
+[tool.coverage.html]
+directory = 'cover'
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+pythonpath = ["src"]
+addopts = '--cov --cov-report=html --cov-report term-missing --ruff --mypy'
+filterwarnings = [
+    'ignore::pytest.PytestDeprecationWarning',
+    'ignore::DeprecationWarning',
+    'ignore::pytest.PytestWarning',
+]
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
