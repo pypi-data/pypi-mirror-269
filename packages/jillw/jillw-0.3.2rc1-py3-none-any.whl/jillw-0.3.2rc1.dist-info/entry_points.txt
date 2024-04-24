@@ -1,0 +1,4 @@
+[console_scripts]
+jillw=jillw.cli:main
+julia=jillw.cli:julia
+
