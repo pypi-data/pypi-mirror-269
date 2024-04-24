@@ -1,0 +1,17 @@
+prettymapp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prettymapp/geo.py,sha256=5-ji8TTHgxiBYfNt1AjQy6ysrBnJZQC1m_zpp7YdtvM,2714
+prettymapp/osm.py,sha256=mnsoXJaACdJpdnn6FNMIrS5jRhC9NeS_Zf0gPsYPwqs,2842
+prettymapp/plotting.py,sha256=MS-l0J4ENWGRBSlcjd_tgv9EdYRQ3UsWYpm-H0dt0cA,8728
+prettymapp/settings.py,sha256=DM220ZtGCrmKcr8qVh4XfO9erOxxtwxWf1z7B1zFnDY,4280
+prettymapp/fonts/PermanentMarker-Regular.ttf,sha256=SmE6TgpnrZxI7mu_ZkpZ9zRQBprSfAjU7SHhubGJNZA,73620
+prettymapp/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prettymapp/tests/test_geo.py,sha256=TVOencNALDiYKtC4Q5iU1aiI70N2LRhWJ69qs8gLn3k,2990
+prettymapp/tests/test_main.py,sha256=CFHN_1dF5FZsQBC39N3ObsLYHSSTTDD74g5SiD-mM6w,1165
+prettymapp/tests/test_osm.py,sha256=aayJX5W40ojFg5OeY95yoVClyVoqeoeuqHlYJk4YLvw,1125
+prettymapp/tests/test_plotting.py,sha256=MH1S7rtNloqLDh9Ii7TjF0_OeIoTlWJAVQWpdcxHk58,249
+prettymapp-0.3.0.data/data/requirements.txt,sha256=nx3MOagkMLfxy2BxFVRT-AtHJbUmZSd0UAXf8C5eMMU,104
+prettymapp-0.3.0.dist-info/LICENSE,sha256=SX82oQvfBY-UhZ29qqAiTlJ9Y3XafhtkoBI5H4r-l0M,1072
+prettymapp-0.3.0.dist-info/METADATA,sha256=qoQXF1xg8tH3tGiTKUf8xCqW-bXhN-wEToXrjzqORC0,3210
+prettymapp-0.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+prettymapp-0.3.0.dist-info/top_level.txt,sha256=U6WQ56ezppHVuuMfrICKKjuHKPegHsbyFQzXz4ZCb-A,11
+prettymapp-0.3.0.dist-info/RECORD,,
