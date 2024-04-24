@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: lense
+Version: 0.0.40
+Summary: For QandA
+Home-page: https://github.com/tandan-kumar-covalenseglobal/Lense
+Author: Covalense
+Author-email: Admin@covalenseglobal.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
