@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pptitles
+Version: 1.0.11
+Summary: Extract the slide number and title from all slides in a PowerPoint presentation.
+Home-page: https://github.com/phx/pptitles
+Author: phx
+Author-email: phx@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-pptx>=0.6.23
+
+# pptitles
+
+Extract the slide number and title from all slides in a PowerPoint presentation.
+
+## Install from PyPi
+
+`python3 -m pip install pptitles`
+
+## Usage:
+
+`pptitles -f "/path/to/presentation.pptx"`
