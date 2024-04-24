@@ -1,0 +1,16 @@
+dutil/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dutil/jupyter/__init__.py,sha256=_MNHsrUAfm0hoVt9VvP46FVPqFOhasKY16EjzkE7Ffg,85
+dutil/jupyter/_jupyter.py,sha256=I-lBBFf_taBQygF_GU2O4uCFzi1_XWZsi15QlzYw0U8,187
+dutil/pipeline/__init__.py,sha256=b_zGrc_n6rvxn6DXXpAknwjSCbQ4VLTJ53u4aqIOWhU,271
+dutil/pipeline/_cached.py,sha256=3qBjFAVyGL-_7O2G38jD4DH2_fVBnbqxmwDTaqgUbLw,14737
+dutil/pipeline/_dask.py,sha256=rJlbP5poAhbkztCM0rA3ivb_zyWg2gjK9PIyL9Xr-sw,4691
+dutil/stats/__init__.py,sha256=v8JdwL9ATIqp0UooYaEZz2WlJ4vm-nyRoA__dugpvMI,181
+dutil/stats/_quantiles.py,sha256=MXY0wASA055250TWOKO0lXgxEbdiV013yCd2pmDgHyc,1151
+dutil/string/__init__.py,sha256=gxNxKxuSWj7Xn1ArV8fKmUdE-4M7u9KZ4L841qPDgWw,104
+dutil/string/_string.py,sha256=td4sGbMsx-W1cbZKG9OiEoFgVKq5WzvMfYKbB7xDEro,1029
+dutil/transform/__init__.py,sha256=4jsLBYVDZ_GuVQ9nnW5Nby4IZeLzIya1EdxKMUNj4to,90
+dutil/transform/_transform.py,sha256=wtCMaGY12aJRif2hONojXdd6enzno8ZL2pkvly1KpRE,697
+dutil-0.2.24.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dutil-0.2.24.dist-info/METADATA,sha256=zWHg-2QfLSI1v1B96IWRkS6sVCneDo0Xc0dKfKKJa98,3226
+dutil-0.2.24.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dutil-0.2.24.dist-info/RECORD,,
