@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+alert_on_exception.egg-info/PKG-INFO
+alert_on_exception.egg-info/SOURCES.txt
+alert_on_exception.egg-info/dependency_links.txt
+alert_on_exception.egg-info/requires.txt
+alert_on_exception.egg-info/top_level.txt
+src/__init__.py
+src/alert_on_exception.py
