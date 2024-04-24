@@ -1,0 +1,38 @@
+Pytzx
+=====
+
+Pytzx is a simple API for creating TZX files in Python. TZX is a file format
+that represents a virtual tape or cassette. Cassette tapes were a common method
+of loading software on micro-computers throughout the 80s and very early 90s.
+TZX files are primarily useful with emulators to provide an accurate simulation
+of the loading process. Although TZX files are heavily biased towards the
+Sinclair ZX Spectrum machines, they can indeed be used with almost any platform
+of that era.
+
+
+Usage
+=====
+
+tzx.py - Provides TZX specific classes
+zxfile.py - Provides classes which aid in creating spectrum files that can be
+used in conjunction with tzx.py.
+
+Please see the supplied examples for basic information on how to use Pytzx.
+Documention on the API can also be accessed by changing to the directory where
+tzx.py and zxfile.py are installed and running python. At the python prompt
+type:
+
+import tzx
+import zxfile
+help(tzx)
+help(zxfile)
+
+examples/01-standard-loader:
+Creates a spectrum loading screen of the python logo.
+
+examples/02-turbo-loader:
+Creates a turbo-loaded loading screen of the python logo.
+
+When creating TZX files, it may be useful to consult the TZX file specification:
+https://worldofspectrum.net/TZXformat.html
+

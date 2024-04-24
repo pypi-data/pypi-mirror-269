@@ -1,0 +1,10 @@
+COPYING
+README
+setup.py
+pytzx/__init__.py
+pytzx/tzx.py
+pytzx/zxfile.py
+pytzx.egg-info/PKG-INFO
+pytzx.egg-info/SOURCES.txt
+pytzx.egg-info/dependency_links.txt
+pytzx.egg-info/top_level.txt
