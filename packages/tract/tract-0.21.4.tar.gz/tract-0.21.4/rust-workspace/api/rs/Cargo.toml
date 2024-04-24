@@ -1,0 +1,38 @@
+[package]
+name = "tract-rs"
+version = "0.21.4"
+license = "MIT OR Apache-2.0"
+authors = ["Mathieu Poumeyrol <kali@zoy.org>"]
+description = "Tiny, no-nonsense, self contained, TensorFlow and ONNX inference"
+repository = "https://github.com/sonos/tract"
+keywords = [ "NeuralNetworks" ]
+categories = [ "science" ]
+autobenches = false
+edition = "2021"
+rust-version = "1.75"
+include = [ "Cargo.toml", "src/**/*.rs", "LICENSE*", "tests" ]
+
+[dependencies]
+anyhow.workspace = true
+boow.workspace = true
+flate2.workspace = true
+half.workspace = true
+ndarray.workspace = true
+tract-api = { path = ".." , version = "=0.21.4" }
+tract-nnef = { path = "../../nnef/" , version = "=0.21.4" }
+tract-onnx-opl = { path = "../../onnx-opl/" , version = "=0.21.4" }
+tract-onnx = { path = "../../onnx/" , version = "=0.21.4" }
+tract-extra = { path = "../../extra/" , version = "=0.21.4" }
+tract-pulse = { path = "../../pulse/" , version = "=0.21.4" }
+tract-libcli = { path = "../../libcli" , version = "=0.21.4" }
+serde_json.workspace = true
+
+[dev-dependencies]
+reqwest.workspace = true
+tempfile.workspace = true
+serde_json.workspace = true
+
+# [features]
+# default = [ "dylib" ]
+# dylib = []
+# staticlib = []

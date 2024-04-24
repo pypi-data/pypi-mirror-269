@@ -1,0 +1,16 @@
+[package]
+name = "infra"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow.workspace = true
+downcast-rs.workspace = true
+dyn-clone.workspace = true
+env_logger.workspace = true
+itertools.workspace = true
+lazy_static.workspace = true
+proptest.workspace = true
+tract-core = { path = "../../core", version = "=0.21.4" }
