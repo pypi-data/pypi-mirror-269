@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+cht_tiling/__init__.py
+cht_tiling/fileops.py
+cht_tiling/tiling.py
+cht_tiling.egg-info/PKG-INFO
+cht_tiling.egg-info/SOURCES.txt
+cht_tiling.egg-info/dependency_links.txt
+cht_tiling.egg-info/requires.txt
+cht_tiling.egg-info/top_level.txt
+cht_tiling.egg-info/zip-safe
+tests/test.py
