@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: crowd-api
+Version: 0.0.10
+Summary: Python library for Atlassian Crowd
+Home-page: https://github.com/m4ce/crowd-api-python
+Download-URL: https://github.com/m4ce/crowd-api-python/tarball/0.0.10
+Author: Matteo Cerutti
+Author-email: matteo.cerutti@hotmail.co.uk
+Keywords: crowd
+License-File: LICENSE.txt
+Requires-Dist: requests

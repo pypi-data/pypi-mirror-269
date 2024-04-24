@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+crowd_api/__init__.py
+crowd_api.egg-info/PKG-INFO
+crowd_api.egg-info/SOURCES.txt
+crowd_api.egg-info/dependency_links.txt
+crowd_api.egg-info/requires.txt
+crowd_api.egg-info/top_level.txt
