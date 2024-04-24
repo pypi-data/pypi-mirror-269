@@ -1,0 +1,4 @@
+[console_scripts]
+combine_cov=metacoag.metacoag_utils.support.combine_cov:main
+metacoag=metacoag.cli:main
+

@@ -1,0 +1,17 @@
+metacoag/__init__.py,sha256=DXBR4_sSGxrW-t_s8nyqyYdAfDfFZLtyM3FrCMA-fds,357
+metacoag/cli.py,sha256=8-zscAQ7coX_cjgEvFCOcBoKZd2RpT2VDMlbbaFUOek,39864
+metacoag/metacoag_utils/__init__.py,sha256=DXBR4_sSGxrW-t_s8nyqyYdAfDfFZLtyM3FrCMA-fds,357
+metacoag/metacoag_utils/bidirectionalmap.py,sha256=AjM_I6e8X-trDc1qFNSsTYs03fCKkhMals5w2rM86rk,1099
+metacoag/metacoag_utils/feature_utils.py,sha256=iKjoks28cL7AQGhCa_H9bh2jYEuGZmkk0IqpTESdGpo,6594
+metacoag/metacoag_utils/graph_utils.py,sha256=xWa9R8cJO9LADJsWvM0o5EZEbwoBchg6m9dxPVJGS4o,13080
+metacoag/metacoag_utils/label_prop_utils.py,sha256=yPxD09vWQDZgwnVlQhmDfJfU1jgYaMFCjkBu7Olg-H8,15020
+metacoag/metacoag_utils/marker_gene_utils.py,sha256=w2U-6OC9kjPy3-eBU0meDxydqKmSQ5wcKiSUuiXrv-g,8923
+metacoag/metacoag_utils/matching_utils.py,sha256=oKZ6-3GQ8bv9-ifBqyUYMXu73WW4U1TmQNu-h2ZtzNc,15606
+metacoag/metacoag_utils/auxiliary/marker.hmm,sha256=pyEHPEoY8p0JOQk4_3geamMn68_m9qONzJFwi9dNzak,15929643
+metacoag/metacoag_utils/support/combine_cov.py,sha256=Ic_j9kV8NbgfTNdnIe2qK3Gjbpagzg6uSRBq4gari3U,1745
+metacoag/metacoag_utils/support/gfa2fasta.py,sha256=y_LYNInLYl6YvAyaIKwD5SZNKB4Q_9zJLqYky7QMOAA,3784
+metacoag-1.2.0.dist-info/entry_points.txt,sha256=M83VRwWv1aS_NsRvWFNZobpRNpZ7gAITiThqCj_7mBk,107
+metacoag-1.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+metacoag-1.2.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+metacoag-1.2.0.dist-info/METADATA,sha256=p1U1LJsKT_iPO9cob3uk4NyNdOwCV5_SrpGEOJhnm7I,11699
+metacoag-1.2.0.dist-info/RECORD,,
