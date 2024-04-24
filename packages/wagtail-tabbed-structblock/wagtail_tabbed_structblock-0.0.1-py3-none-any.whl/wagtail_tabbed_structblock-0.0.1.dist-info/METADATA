@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: wagtail-tabbed-structblock
+Version: 0.0.1
+Summary: 
+Author: Eric Kersten
+Author-email: eric.kersten@egodesign.io
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+
