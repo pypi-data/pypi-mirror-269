@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: qai-core
+Version: 0.1.8
+Summary: 
+Author: parnell
+Author-email: 3028114+parnell@users.noreply.github.com
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: test
+Requires-Dist: json-fix (>=1.0.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Core library and modules for QRev
+* Metadata
