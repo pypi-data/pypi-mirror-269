@@ -1,0 +1,129 @@
+Metadata-Version: 2.1
+Name: unimernet
+Version: 0.0.4
+Summary: UniMERNet: A Universal Network for Real-World Mathematical Expression Recognition
+Home-page: https://github.com/opendatalab/UniMERNet
+License: Apache-2.0
+Keywords: MER,latex,markdown,pdf
+Author: Bin Wang
+Author-email: ictwangbin@gmail.com
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: albumentations (>=1.4.4,<2.0.0)
+Requires-Dist: eva-decord (>=0.6.1,<0.7.0)
+Requires-Dist: evaluate (>=0.4.1,<0.5.0)
+Requires-Dist: fairscale (>=0.4.13,<0.5.0)
+Requires-Dist: ftfy (>=6.2.0,<7.0.0)
+Requires-Dist: iopath (>=0.1.10,<0.2.0)
+Requires-Dist: jupyterlab (>=4.1.6,<5.0.0)
+Requires-Dist: matplotlib (>=3.8.4,<4.0.0)
+Requires-Dist: nltk (>=3.8.1,<4.0.0)
+Requires-Dist: omegaconf (>=2.3.0,<3.0.0)
+Requires-Dist: opencv-python (>=4.9.0,<5.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: rapidfuzz (>=3.8.1,<4.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: tabulate (>=0.9.0,<0.10.0)
+Requires-Dist: termcolor (>=2.4.0,<3.0.0)
+Requires-Dist: timm (>=0.9.16,<0.10.0)
+Requires-Dist: torch (>=2.2.2,<3.0.0)
+Requires-Dist: torchtext (>=0.17.2,<0.18.0)
+Requires-Dist: torchvision (>=0.17.2,<0.18.0)
+Requires-Dist: transformers (>=4.40.0,<5.0.0)
+Requires-Dist: wand (>=0.6.13,<0.7.0)
+Requires-Dist: webdataset (>=0.2.86,<0.3.0)
+Project-URL: Repository, https://github.com/opendatalab/UniMERNet
+Description-Content-Type: text/markdown
+
+<div align="center">
+<h1>UniMERNet: A Universal Network for Real-World Mathematical Expression Recognition</h1>
+
+[![Paper](https://img.shields.io/badge/Paper-arxiv)]()
+[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Hugging%20Face-Community%20Space-blue)]()
+
+</div>
+
+This is the official repository for UniMERNet, a math recogition model that can be used for image to LaTeX conversion for a wide range of senarios.
+
+Project page: https://gitlab.pjlab.org.cn/fdc/mllm/unimernet
+
+## Installation
+
+``` bash 
+conda create -n unimernet python=3.10
+
+conda activate unimernet
+
+pip install unimernet
+```
+
+### For Mac
+```bash
+brew install freetype imagemagick
+export MAGICK_HOME=/opt/homebrew/opt/imagemagick
+```
+
+## Quickstart
+```bash
+python demo.py
+```
+or 
+```bash
+jupyter-lab ./demo.ipynb
+```
+
+
+## Training
+
+To train or finetune UniMERNet model, run 
+
+```bash
+torchrun --nproc-per-node 4 --master_port 29500 train.py --cfg-path configs/unimernet_train.yaml
+```
+or
+```bash
+bash scripts/train.sh
+```
+
+## Evaluation
+
+To evalate the model, run
+```bash
+python test.py --cfg configs/unimernet_eval.yaml
+```
+
+## Performance Comparison (BLEU) with SOTA Methods.
+![BLEU](./asset/papers/fig1_BLEU.png)
+
+## Visualization Result with Different Methods.
+![Visualization](./asset/papers/fig5_demo.png)
+
+## Citation
+If you find our models / code / papers useful in your research, please consider giving ⭐ and citations 📝, thx :)
+```bibtex
+
+```
+
+## Acknowledgement
+- [VIGC](https://github.com/opendatalab/VIGC). This repository is built upon VIGC!
+- [Texify](https://github.com/VikParuchuri/texify). 
+- [Latex-OCR](https://github.com/lukas-blecher/LaTeX-OCR). The original open source Latex OCR project.
+- [Donut](https://huggingface.co/naver-clova-ix/donut-base). 
+- [Nougat](https://github.com/facebookresearch/nougat).
+
+## Contact us
+If you have any questions, comments or suggestions, please do not hesitate to contact us at wangbin@pjlab.org.cn.
+
+## License
+[Apache License 2.0](LICENSE)
