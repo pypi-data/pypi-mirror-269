@@ -1,0 +1,31 @@
+[project]
+name = "asttrs"
+version = "1.0.1"
+description = "A attrs-style wrapper for python ast"
+authors = [
+    {name = "ryanchao2012", email = "ryanchao2012@gmail.com"},
+]
+urls = {repository = "https://github.com/ryanchao2012/asttrs"}
+license = {text = "MIT"}
+readme = "README.md"
+
+requires-python = ">=3.7"
+dependencies = [
+    "attrs",
+    "black",
+    "cattrs",
+    "isort",
+    "ast-decompiler",
+]
+
+[tool.pdm]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "invoke",
+    "ipython",
+    "flake8",
+    "pytest",
+    "pytest-cov",
+    "coverage",
+]
