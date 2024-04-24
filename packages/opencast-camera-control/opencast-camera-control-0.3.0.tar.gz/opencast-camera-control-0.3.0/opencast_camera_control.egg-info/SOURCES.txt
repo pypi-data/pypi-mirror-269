@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+occameracontrol/__main__.py
+occameracontrol/agent.py
+occameracontrol/camera.py
+occameracontrol/metrics.py
+opencast_camera_control.egg-info/PKG-INFO
+opencast_camera_control.egg-info/SOURCES.txt
+opencast_camera_control.egg-info/dependency_links.txt
+opencast_camera_control.egg-info/entry_points.txt
+opencast_camera_control.egg-info/requires.txt
+opencast_camera_control.egg-info/top_level.txt
