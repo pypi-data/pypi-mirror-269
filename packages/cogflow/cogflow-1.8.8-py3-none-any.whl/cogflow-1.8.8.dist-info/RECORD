@@ -1,0 +1,17 @@
+cogflow/__init__.py,sha256=3037NEwqd7kejLZSa3Igz7a9L3j4BZOaHfHMHKcFCOQ,729
+cogflow/dataset_plugin.py,sha256=zDAhyDE0Afd9O6O7E5uHBp1vL2wRFMi6mXZTl8v3Kr4,5430
+cogflow/kubeflowplugin.py,sha256=c_KIcfFOL4qsEnHP_iUIQn3j2tiEagb725HmOsIq3g0,8953
+cogflow/mlflowplugin.py,sha256=9ieXH67z_4DhnQahW5QT66lvBoGAKVM3duZiJUuHzDs,11091
+cogflow/plugin_config.py,sha256=TW1r9oA_k6uOdvlgaO-JZi3matOfB1fN_qAKMsmcZhw,874
+cogflow/plugin_status.py,sha256=FmIJ09G10Ku1T1CFHAyMqntc3mEx_5gijcWv9p5DlYI,620
+cogflow/pluginerrors.py,sha256=S7ypsBTimgVIwy8HspvDHr4cLAABHiSoesqHZpv-qw4,174
+cogflow/pluginmanager.py,sha256=XqlvT2G5__-DWl-TVFZ_E_GeOprWS0kCgvdiXZxlmNQ,10836
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_dataset_plugin.py,sha256=ICmWg2HhiQFc2qM2a9il-RT3dh4Zfhf8aqdMy_his2I,10080
+tests/test_kubeflowplugin.py,sha256=QpAgZySKHt6DPxgn2DGk5Zu1F6jMRxNNDNTkgp4OZ14,5369
+tests/test_mlflowplugin.py,sha256=-3iRBf8LsgQZx3JwerKHNdc00HgyNltCOmDEAfshQNw,14194
+tests/test_plugin_manager.py,sha256=QcAIEHOIpFu5hN0HF-w4iYD5ZgkqEeC2AGCLMHEgsf0,7868
+cogflow-1.8.8.dist-info/METADATA,sha256=7zks5CuQ9mE5OQ27IoJKY84QIpfSD2mkaNypQNnGEf4,861
+cogflow-1.8.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cogflow-1.8.8.dist-info/top_level.txt,sha256=r7eFQlNmPGmSZA_8jQ0Gc_ZtNRIy4m9WBmxrQO2UGfA,14
+cogflow-1.8.8.dist-info/RECORD,,
