@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: nagra_network_paloalto_utils
+Version: 0.1.24
+Summary: 
+Author: David Gallay
+Author-email: david.gallay@nagra.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: colorama (>=0.4.4)
+Requires-Dist: gitpython (>=0.3.6)
+Requires-Dist: glom (>=23.4.0,<24.0.0)
+Requires-Dist: nagra-panorama-api (>=0.1.21,<0.2.0)
+Requires-Dist: pyyaml (>=0.2.5)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: ruamel-yaml (>=0.17.21)
+Requires-Dist: urllib3 (>=1.26.4)
+Requires-Dist: xmltodict (>=0.13.0)
+Description-Content-Type: text/markdown
+
+# Utils
+
+Palo Alto script repository
+
