@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: fedn
+Version: 0.9.1
+Summary: Scaleout Federated Learning
+Home-page: https://www.scaleoutsystems.com
+Author: Scaleout Systems AB
+Author-email: contact@scaleoutsystems.com
+License: Apache 2.0
+Keywords: Federated learning
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8,<3.12
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: urllib3 >=1.26.4
+Requires-Dist: minio
+Requires-Dist: grpcio ~=1.60.0
+Requires-Dist: grpcio-tools ~=1.60.0
+Requires-Dist: numpy >=1.21.6
+Requires-Dist: protobuf ~=4.25.2
+Requires-Dist: pymongo
+Requires-Dist: Flask ==3.0.3
+Requires-Dist: pyjwt
+Requires-Dist: pyopenssl
+Requires-Dist: psutil
+Requires-Dist: click ==8.1.7
+Requires-Dist: grpcio-health-checking ~=1.60.0
+Requires-Dist: pyyaml
+Requires-Dist: plotly
+Requires-Dist: virtualenv
+Provides-Extra: flower
+Requires-Dist: flwr ==1.8.0 ; extra == 'flower'
+
+FEDn
