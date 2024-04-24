@@ -1,0 +1,7 @@
+planout==0.6.0
+six
+typing-extensions
+
+[test]
+pytest
+gevent
