@@ -1,0 +1,2 @@
+[package_tools]
+claude = promptflow_custom_tools.tools.utils:list_package_tools
