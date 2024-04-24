@@ -1,0 +1,152 @@
+Metadata-Version: 2.1
+Name: wm-topicgpt
+Version: 0.0.9
+Summary: This is a package to generate topics for the text corpus.
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pandas==2.2.1
+Requires-Dist: tqdm==4.66.2
+Requires-Dist: azure-ai-textanalytics==5.3.0
+Requires-Dist: aiohttp==3.9.3
+Requires-Dist: langchain==0.1.14
+Requires-Dist: langchain_community==0.0.31
+Requires-Dist: pycryptodome==3.10.1
+Requires-Dist: tiktoken==0.6.0
+Requires-Dist: openai==1.16.0
+Requires-Dist: scikit_learn==1.4.0
+Requires-Dist: umap_learn==0.5.5
+Requires-Dist: sentence_transformers==2.6.1
+Requires-Dist: pydantic==2.7.1
+
+# TopicGPT package
+
+## How to install this package?
+```python
+pip install wm_topicgpt==0.0.8
+```
+
+## How to use this package?
+
+### Step 1: Set up global parameters
+```python
+from topicgpt import config
+
+# For NameFilter
+config.azure_key = ""
+config.azure_endpoint = ""
+
+# For GPT3.5 or GPT4 or Ada-002
+config.consumer_id = ""
+config.private_key_path = ""
+config.mso_llm_env = ""
+```
+
+### Step 2: Load your dataset
+Load your data, must be 'pandas.DataFrame' format.
+```python
+import pandas as pd
+
+data_df = pd.read_csv("dataset.csv")
+```
+
+### Step 3: Run the code
+We provide two approaches to make the topic modling: HDBSCAN approach and Kmeans approach.
+
+HDBSCAN approach:
+```python
+# If using jupyter notebook, you should includes those two lines.
+import nest_asyncio
+nest_asyncio.apply()
+
+
+# Setting up some params for this approach. If you don't need some parts, just drop that part.
+hdbscan_params = {
+    # preprocessing part
+    'preprocessing': {'words_range': (1, 500)},
+    # name filter part
+    'name_filter': {},
+    # extracting keywords part
+    'extract_keywords': {'llm_model': 'gpt-35-turbo', 'temperature': 0., 'batch_size': 300},
+    # embedding part (must have)
+    'embedding': {'model': 'bge', 'batch_size': 500, 'device': 'mps'},
+    # hdbscan clustering part (must have)
+    'hdbscan': {'reduced_dim': 5, 'n_neighbors': 10, 'min_cluster_percent': 0.02, 'topk': 5,
+                'llm_model': 'gpt-35-turbo', 'temperature': 0.5, 'verbose': True},
+}
+
+from topicgpt.pipeline import topic_modeling_by_hdbscan
+
+# data_df: your pd.DataFrame dataset
+# text_col_name: the column name of texts in the data_df
+# params: some parameters for this approach. If you don't pass this parameter, it will use default parameters
+root = topic_modeling_by_hdbscan(data=data_df, text_col_name='userInput', params=hdbscan_params)
+```
+
+Kmeans approach:
+```python
+# If using jupyter notebook, you should includes those two lines.
+import nest_asyncio
+nest_asyncio.apply()
+
+
+# Setting up some params for this approach. If you don't need some parts, just drop that part.
+kmeans_params = {
+    # preprocessing part
+    'preprocessing': {'words_range': (1, 500)},
+    # name filter part
+    'name_filter': {},
+    # embedding part
+    'embedding': {'model': 'bge', 'batch_size': 500, 'device': 'mps'},
+    # hdbscan clustering part
+    'kmeans': {'n_clusters_list': [100, 30, 5], 'topk': 5, 'llm_model': 'gpt-35-turbo', 'temperature': 0.5,
+               'batch_size': 300, 'embed_model': "bge", "device": "mps", "embed_batch_size": 500,
+               'ngram_range': (1, 2), 'topk_keywords': 10},
+}
+
+from topicgpt.pipeline import topic_modeling_by_kmeans
+
+# data_df: your pd.DataFrame dataset
+# text_col_name: the column name of texts in the data_df
+# params: some parameters for this approach. If you don't pass this parameter, it will use default parameters
+clusters = topic_modeling_by_kmeans(data=data_df, text_col_name='userInput', params=kmeans_params)
+```
+
+
+<!-- ```python
+from topicgpt.preprocessing import MinMaxLengthFilter
+
+filter = MinMaxLengthFilter(words_range=(1, 1000))
+texts = filter.transform(data)
+```
+
+To protect the privacy, this function replaces the names in the texts with word "PersonName".
+```python
+from topicgpt.preprocessing import NameFilter
+
+filter = NameFilter()
+texts = filter.transform(texts)
+```
+
+### Step 4: Embedding the texts
+You may choose one of them to embed your texts.
+```python
+# Option 1: use OpenAI model
+from topicgpt.walmart_llm import AdaEmbedModel
+llm = AdaEmbedModel(batch_size=500)
+embedding = llm.embed_documents(texts)
+
+# Option 2: use BGE model
+from topicgpt.embedding import BGEEmbedModel
+# llm = BGEEmbedModel(batch_size=500, device="cpu")
+llm = BGEEmbedModel(batch_size=500, device="mps")
+embedding = llm.embed_documents(texts)
+```
+
+### Step 5: Build topics from texts
+This function is used to generate topic taxonomy from the texts.
+```python
+from topicgpt.topic import HDBSCANTopicGenerator
+model = HDBSCANTopicGenerator(reduced_dim=10, n_neighbors=10, min_cluster_percent=0.02, topk=5)
+root = model.predict(texts, embedding)
+``` -->
