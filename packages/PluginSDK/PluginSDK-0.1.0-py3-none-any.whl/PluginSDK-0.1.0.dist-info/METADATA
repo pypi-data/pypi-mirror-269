@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: PluginSDK
+Version: 0.1.0
+Summary: MM的插件SDK
+Home-page: https://github.com/TheD0ubleC/MusicalMoments-PluginSDK-Python/
+Author: D0ubleC
+Author-email: CC@scmd.cc
+License: MIT
+Requires-Python: >=3.6
+Requires-Dist: requests
+
