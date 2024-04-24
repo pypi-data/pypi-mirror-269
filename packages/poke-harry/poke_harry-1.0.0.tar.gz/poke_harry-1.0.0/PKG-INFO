@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: poke-harry
+Version: 1.0.0
+Summary: una biblioteca que contiene la clase llamada RandomPOkemonpara generar un pokemon aleatorio
+Author: Semiramis Del Castillo
+Author-email: 202224131_galicia@tesch.edu.mx
+Requires-Dist: pandas
