@@ -1,0 +1,14 @@
+job:
+  stage: test
+  image: busybox:latest
+  script:
+    - echo "Hello, $NAME!"
+  variables:
+    NAME: world
+
+fail:
+  stage: test
+  image: busybox:latest
+  script:
+    - ls does-not-exist
+    - echo "This will not be printed"
