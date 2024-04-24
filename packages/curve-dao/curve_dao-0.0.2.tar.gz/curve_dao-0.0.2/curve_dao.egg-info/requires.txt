@@ -1,0 +1,4 @@
+titanoboa>=0.1.9
+py-evm<0.10.0
+requests
+rich
