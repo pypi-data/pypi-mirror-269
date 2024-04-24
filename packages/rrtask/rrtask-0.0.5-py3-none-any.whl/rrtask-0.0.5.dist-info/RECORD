@@ -1,0 +1,10 @@
+rrtask/__init__.py,sha256=G4vKOnneUr7vhKKbG4MDagkyW2qfzAbZfvuqytjFST0,133
+rrtask/enums.py,sha256=zSTKhSoyUI77MPm4VoQPVVOJrIZtHuUoehNX64nqP10,171
+rrtask/rrtask.py,sha256=MOqQziWpj20WuUsiqK4HPfgM6e1KiTbAxKiIgQew-0w,5621
+rrtask/signals.py,sha256=hBYth_hXkkK4v2Cs-S-3GAJlYADACPRpLjK9Nw15H8w,394
+rrtask/utils.py,sha256=_8sMpJNMHztAxViAAVCbo1BhI6T2xC7Pm0EmBkbFmig,298
+rrtask/version.py,sha256=qSuE7XE6WuK3LjoCpunIWLZhh-T-o48lG_iYyHrBlig,18
+rrtask-0.0.5.dist-info/LICENSE,sha256=3FtjIPIcruBqbbJwpE3AWoNs4upTpznUqNDsZ4BZvTc,1063
+rrtask-0.0.5.dist-info/METADATA,sha256=3NYwtztqt8LItOMSbRqfmusGVS0qSmQ6xzXRiV1S96Y,701
+rrtask-0.0.5.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+rrtask-0.0.5.dist-info/RECORD,,
