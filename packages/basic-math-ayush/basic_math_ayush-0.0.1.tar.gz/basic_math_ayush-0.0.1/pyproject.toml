@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "basic_math_ayush"
+version = "0.0.1"
+authors = [
+  { name="AyushCodez", email="Ayush.Gupta546@iiitb.ac.in" },
+]
+description = "A small package to perform basic mathematical operations"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]

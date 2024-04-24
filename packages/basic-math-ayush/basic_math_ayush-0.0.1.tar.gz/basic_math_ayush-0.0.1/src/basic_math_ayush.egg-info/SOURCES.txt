@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/example.py
+src/basic_math_ayush/__init__.py
+src/basic_math_ayush/addition.py
+src/basic_math_ayush/multiplication.py
+src/basic_math_ayush/subtraction.py
+src/basic_math_ayush.egg-info/PKG-INFO
+src/basic_math_ayush.egg-info/SOURCES.txt
+src/basic_math_ayush.egg-info/dependency_links.txt
+src/basic_math_ayush.egg-info/top_level.txt
