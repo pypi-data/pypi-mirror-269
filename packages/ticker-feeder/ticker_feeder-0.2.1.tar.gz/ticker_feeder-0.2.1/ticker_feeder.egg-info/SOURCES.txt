@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tests/__init__.py
+tests/test_feeder.py
+ticker_feeder/__init__.py
+ticker_feeder/feeder.py
+ticker_feeder.egg-info/PKG-INFO
+ticker_feeder.egg-info/SOURCES.txt
+ticker_feeder.egg-info/dependency_links.txt
+ticker_feeder.egg-info/top_level.txt
