@@ -1,0 +1,3 @@
+[console_scripts]
+badB = badb.__main__:init
+badB-create-app = badb.__main__:create_app
