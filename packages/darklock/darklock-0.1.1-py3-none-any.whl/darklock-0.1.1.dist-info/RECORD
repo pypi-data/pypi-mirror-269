@@ -1,0 +1,11 @@
+darklock/__init__.py,sha256=5EFBiCYkzFxoJfHaP2XDD1zhrExRSKYZQ5f3QAkdXOE,594
+darklock/log_disc_writer.py,sha256=usfL5HSp863qIKpYgfCMasJAyBWSPodVy8r9mVJD6Rs,435
+darklock/no_internet_socket.py,sha256=yvKHBfRYM0DWGnGaCmp7yd-mwx55255O2d41hqdL_5Y,2145
+darklock/restrict_network_access.py,sha256=fl1tY-sv_oI-4WE6Ew02OX5qpYaLKo1r2UwilnR1FVY,1410
+darklock/restrict_os_access.py,sha256=SEn2GLRm_uQ10oBIoP5isMYkg1NEoOCeONVf1NtRZBA,4482
+darklock/singleton.py,sha256=d5M-H37o2cqgSBDg-RulXS3pvbVZ4I8SPIAXHPXWAog,238
+darklock-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+darklock-0.1.1.dist-info/METADATA,sha256=3YAnqegWhAXRPPfb4yKdknUZiiu316ur0gOG1AeE9WU,1110
+darklock-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+darklock-0.1.1.dist-info/top_level.txt,sha256=ETLmkBo0oIHngDzipwNARpvn5T9WBJBkdass2W9DyoE,9
+darklock-0.1.1.dist-info/RECORD,,
