@@ -1,0 +1,25 @@
+.tabbed-struct-block .tabs {
+    border-bottom: 1px solid var(--w-color-border-field-default);
+    margin-bottom: 1rem;
+}
+.tabbed-struct-block .tabs a {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: var(--w-color-text-label);
+    font-weight: bold;
+    border: 1px solid var(--w-color-surface-page);
+    border-bottom: none;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    position: relative;
+    top: 1px;
+}
+
+.tabbed-struct-block .tabs a.active {
+    border: 1px solid var(--w-color-border-field-default);
+    border-bottom-color: var(--w-color-surface-page);
+}
+
+.tabbed-struct-block .tabs a:not(.active):hover {
+    background: var(--w-color-surface-button-outline-hover);
+}
