@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: scrapio
+Version: 0.1.9
+Summary: Aysncio web crawling framework
+Home-page: https://github.com/EdmundMartin/Scrapio
+Author: Edmund Martin
+Maintainer: Edmund Martin <edmartin101@gmail.com>
+Maintainer-email: edmartin101@gmail.com
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: aiohttp ==3.9.5
+Requires-Dist: async-timeout ==4.0.3
+Requires-Dist: attrs ==20.2.0
+Requires-Dist: chardet ==3.0.4
+Requires-Dist: idna ==3.7
+Requires-Dist: lxml ==5.2.1
+Requires-Dist: multidict ==4.7.6
+Requires-Dist: yarl ==1.6.0
+Requires-Dist: brotlipy ==0.7.0
+
