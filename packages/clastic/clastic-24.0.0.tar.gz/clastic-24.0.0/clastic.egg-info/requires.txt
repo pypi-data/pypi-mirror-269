@@ -1,0 +1,6 @@
+Werkzeug<2.0,>=1.0.0
+ashes
+attrs
+boltons>=20.0.0
+glom
+secure-cookie<=0.2.0,==0.1.0
