@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: Pokemon_Library-Lmba
+Version: 1.0.0
+Summary: Libreria para generar un pokemon aleatorio.
+Author: Litzy Barrera
+Author-email: 202224128_barrera@tesch.edu.mx
+Requires-Dist: pandas
