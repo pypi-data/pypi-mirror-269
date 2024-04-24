@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyglider"
+dynamic = ["version"]
+dependencies = [
+    "xarray",
+    "dask",
+    "netcdf4",
+    "gsw",
+    "scipy",
+    "bitstring",
+    "dbdreader",
+    "polars",
+    "pooch",
+    "numpy"
+]
+requires-python = ">= 3.9"
+maintainers = [
+  {name = "Jody Klymak", email = "jklymak@gmail.com"}
+]
+description="Glider data to netCDF translation in python"
+license = {text = "Apache"}
+keywords = ["underwater glider", "slocum", "seaexplorer", "Alseamar"]
+
+[project.urls]
+Homepage = "https://pyglider.readthedocs.io"
+Documentation = "https://pyglider.readthedocs.io"
+Repository = "https://github.com/c-proof/pyglider"
