@@ -1,0 +1,18 @@
+[project]
+name = "exetimer"
+version = "0.0.5"
+authors = [
+  { name="Clevrthings", email="info@clevrthings.com" },
+]
+description = "A lightweight module that prints the execution time at the end of a python program."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/clevrthings/exetimer"
+Issues = "https://github.com/celvrthings/exetimer/issues"

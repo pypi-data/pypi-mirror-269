@@ -1,0 +1,1 @@
+A lightweight module that prints the execution time at the end of a python program.

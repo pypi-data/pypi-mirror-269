@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: exetimer
+Version: 0.0.5
+Summary: A lightweight module that prints the execution time at the end of a python program.
+Author-email: Clevrthings <info@clevrthings.com>
+Project-URL: Homepage, https://github.com/clevrthings/exetimer
+Project-URL: Issues, https://github.com/celvrthings/exetimer/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A lightweight module that prints the execution time at the end of a python program.
