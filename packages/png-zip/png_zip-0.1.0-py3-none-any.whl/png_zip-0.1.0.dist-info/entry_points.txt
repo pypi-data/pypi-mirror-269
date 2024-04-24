@@ -1,0 +1,2 @@
+[console_scripts]
+pngzip = png_zip.cli:cli
