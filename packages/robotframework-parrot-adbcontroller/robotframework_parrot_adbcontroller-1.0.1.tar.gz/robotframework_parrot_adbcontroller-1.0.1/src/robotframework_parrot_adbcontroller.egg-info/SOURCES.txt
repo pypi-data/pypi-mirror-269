@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/parrot/ADBController.py
+src/parrot/__init__.py
+src/robotframework_parrot_adbcontroller.egg-info/PKG-INFO
+src/robotframework_parrot_adbcontroller.egg-info/SOURCES.txt
+src/robotframework_parrot_adbcontroller.egg-info/dependency_links.txt
+src/robotframework_parrot_adbcontroller.egg-info/requires.txt
+src/robotframework_parrot_adbcontroller.egg-info/top_level.txt
