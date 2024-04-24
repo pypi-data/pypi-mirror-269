@@ -1,0 +1,12 @@
+README.md
+setup.py
+LEDAutomation/FtdiInterface.py
+LEDAutomation/LedConsole.py
+LEDAutomation/PCA9506.py
+LEDAutomation/USBs.py
+LEDAutomation/__init__.py
+LED_Automation.egg-info/PKG-INFO
+LED_Automation.egg-info/SOURCES.txt
+LED_Automation.egg-info/dependency_links.txt
+LED_Automation.egg-info/requires.txt
+LED_Automation.egg-info/top_level.txt
