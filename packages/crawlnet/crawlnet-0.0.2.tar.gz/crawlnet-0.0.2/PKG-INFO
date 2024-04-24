@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: crawlnet
+Version: 0.0.2
+Summary: CrawlNet
+Home-page: UNKNOWN
+Author: Hrushikesh Kachgunde
+Author-email: <hrushiskachgunde@gmail.com>
+License: UNKNOWN
+Description: `!pip install crawlnet`
+        
+        ```
+        from crawlnet.cl3 import Writer
+        
+        write = Writer('output.txt')
+        print(write.questions)
+        
+        write.getCode('Deap')
+        ```
+        
+Keywords: python
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
