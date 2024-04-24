@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+copilot4office.egg-info/PKG-INFO
+copilot4office.egg-info/SOURCES.txt
+copilot4office.egg-info/dependency_links.txt
+copilot4office.egg-info/requires.txt
+copilot4office.egg-info/top_level.txt
+presentation/__init___.py
+presentation/presentation_creator.py
+presentation/presentation_processor.py
+tests/test_presentation_creator.py
+tests/test_presentation_processor.py
