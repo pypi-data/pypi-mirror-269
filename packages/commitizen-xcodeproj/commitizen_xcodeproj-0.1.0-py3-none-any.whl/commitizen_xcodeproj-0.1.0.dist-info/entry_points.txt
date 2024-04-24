@@ -1,0 +1,3 @@
+[commitizen.provider]
+commitizen-xcodeproj=commitizen_xcodeproj.xcodeproj_version_provider:XcodeprojVersionProvider
+
