@@ -1,0 +1,8 @@
+setup.py
+Test_MMAI_Api.egg-info/PKG-INFO
+Test_MMAI_Api.egg-info/SOURCES.txt
+Test_MMAI_Api.egg-info/dependency_links.txt
+Test_MMAI_Api.egg-info/not-zip-safe
+Test_MMAI_Api.egg-info/top_level.txt
+mmai_api_test/__init__.py
+mmai_api_test/mmai_client.py
