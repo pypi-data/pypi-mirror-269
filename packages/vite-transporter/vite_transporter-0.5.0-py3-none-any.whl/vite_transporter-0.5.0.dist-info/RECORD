@@ -1,0 +1,10 @@
+vite_transporter/__init__.py,sha256=U3OyYejouOjEtyC0noF3BE_gnsMuiDUyee0UybyP8-8,2079
+vite_transporter/utilities.py,sha256=K5_peMgi2Z9tmuApbPyD9RwG_IBaSm2HdEZY3SzFsc4,10208
+vite_transporter/platform/__init__.py,sha256=GeVejx6Lxruv9rHsuAc83yUryiyrbxlgaFiGVYdsy2c,178
+vite_transporter/platform/flask.py,sha256=Ljzb5CJXA00PspRvzosWAmT_OAeL5NiqRa-Eq-ptr0w,4721
+vite_transporter/platform/quart.py,sha256=ldy-Yqf_OxID47ti8J-_uLsgpespIT38gm4W0CGv8B8,4785
+vite_transporter-0.5.0.dist-info/entry_points.txt,sha256=Axg-_oI9Yp0g6m4-egUbR6Age1C7-dAvllNNY2m-2lU,49
+vite_transporter-0.5.0.dist-info/LICENSE,sha256=81tCgMDdo4oVlO7sIAynWuW7o8wwlfDK4lSFnkvTCwU,1083
+vite_transporter-0.5.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+vite_transporter-0.5.0.dist-info/METADATA,sha256=F3byljk02PjjVxQel5R007LLYisJTo1bOFTzhehntPc,4760
+vite_transporter-0.5.0.dist-info/RECORD,,
