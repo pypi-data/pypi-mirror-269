@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: dogma-data
+Version: 0.2.12
+Requires-Dist: numpy
+Requires-Dist: awkward
+Requires-Dist: tqdm
+Requires-Dist: numba
+Requires-Dist: blosc2
+Requires-Dist: smart-open
+Requires-Dist: click
+License-File: LICENSE
+Summary: Data processing for Dogma
+Keywords: single-cell,RNA-seq,embedding,pytorch,uce
+Author-email: Marcel Rød <roed@stanford.edu>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://github.com/marcelroed/dogma-data
+Project-URL: Repository, https://github.com/marcelroed/dogma-data.git
+
+

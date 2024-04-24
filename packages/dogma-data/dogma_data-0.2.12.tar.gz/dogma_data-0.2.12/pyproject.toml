@@ -1,0 +1,33 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "dogma-data"
+description = "Data processing for Dogma"
+requires-python = ">=3.10"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["single-cell", "RNA-seq", "embedding", "pytorch", "uce"]
+dependencies = [
+    "numpy",
+    "awkward",
+    "tqdm",
+    "numba",
+    "blosc2",
+    "smart-open",
+    "click",
+]
+
+authors = [
+    {name = "Marcel Rød", email = "roed@stanford.edu"},
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/marcelroed/dogma-data"
+Repository = "https://github.com/marcelroed/dogma-data.git"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = 'dogma_data.dogma_rust'
