@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}File Catalog - Account{% end %}
+
+{% block head_scripts %}
+<style>
+    .wrap {
+        word-wrap: anywhere;
+    }
+</style>
+{% end %}
+
+{% block login %}{% end %}
+
+{% block content %}
+<h3>Account information for {{ current_user }}</h3>
+<br>
+Long-lived API key:
+<div class="wrap">{{ authkey }}</div>
+<br>
+{% if tempkey %}
+    Temporary key:
+    <div class="wrap">{{ tempkey }}</div>
+{% end %}
+{% end %}
