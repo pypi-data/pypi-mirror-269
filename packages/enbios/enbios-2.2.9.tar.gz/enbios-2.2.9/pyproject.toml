@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "enbios"
+version = "2.2.9"
+description = "Enbios 2"
+authors = [
+    { name = "Ramin Soleymani" },
+]
+dynamic = ["dependencies"]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Typing :: Typed"
+]
+
+readme = "README.md"
+license = { text = "BSD-3-Clause" }
+requires-python = ">=3.9,<3.12"
+
+[project.urls]
+"Homepage" = "https://github.com/LIVENlab/enbios"
+"Bug Tracker" = "https://github.com/LIVENlab/enbios/issues"
+
+[project.optional-dependencies]
+test = [
+    "pytest==7.3.2"
+]
+
+dev = [
+  "build==1.2.1", "twine==4.0.2","jupyter==1.0.0", "ruff==0.3.3","black==23.12.1", "tokenize-rt"
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+
+[tool.setuptools]
+package-dir = { "enbios" = "enbios" }
+
+[tool.setuptools.dynamic]
+dependencies = {file="requirements.txt"}
+
+[tool.ruff]
+line-length = 90
+
