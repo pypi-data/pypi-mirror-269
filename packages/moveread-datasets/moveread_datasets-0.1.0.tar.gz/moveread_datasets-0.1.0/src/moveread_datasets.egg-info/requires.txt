@@ -1,0 +1,6 @@
+kv-api
+kv-fs
+
+[local]
+kv-fs
+kv-sqlite-sync
