@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: sphinxcontrib-data-pipeline
+Version: 0.3.0
+Summary: This extension allows you to document data processing pipelines that connect tools ("drivers") and corresponding data products
+Home-page: https://michaelbuehlmann.github.io/sphinxcontrib-data-pipeline/
+License: MIT
+Keywords: development,docutils,sphinx
+Author: Michael Buehlmann
+Author-email: buehlmann.michi@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Domain
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Utilities
+Requires-Dist: gitpython (>=3.1.43,<4.0.0)
+Requires-Dist: sphinx (>=7.3.7,<8.0.0)
+Requires-Dist: sphinx-toolbox (>=3.5.0,<4.0.0)
+Requires-Dist: sphinxcontrib-mermaid (>=0.9.2,<0.10.0)
+Requires-Dist: strictyaml (>=1.7.3,<2.0.0)
+Project-URL: Documentation, https://michaelbuehlmann.github.io/sphinxcontrib-data-pipeline/
+Project-URL: Repository, https://github.com/michaelbuehlmann/sphinxcontrib-data-pipeline
+Description-Content-Type: text/x-rst
+
+sphinxcontrib-data-pipeline
+===========================
+
+This extension allows you to document data processing pipelines that connect
+tools ("drivers") and corresponding data products in sphinx.
+
+
+* `Repository <https://github.com/michaelbuehlmann/sphinxcontrib-data-pipeline>`_
+* `Documentation <https://michaelbuehlmann.github.io/sphinxcontrib-data-pipeline>`_
