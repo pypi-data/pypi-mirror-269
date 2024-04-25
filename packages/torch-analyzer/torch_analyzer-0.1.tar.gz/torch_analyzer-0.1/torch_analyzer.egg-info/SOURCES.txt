@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+torch_analyzer.egg-info/PKG-INFO
+torch_analyzer.egg-info/SOURCES.txt
+torch_analyzer.egg-info/dependency_links.txt
+torch_analyzer.egg-info/requires.txt
+torch_analyzer.egg-info/top_level.txt
+torchanalyzer/__init__.py
+torchanalyzer/base.py
+torchanalyzer/flops.py
+torchanalyzer/flops_kernel.py
+torchanalyzer/in_out.py
+torchanalyzer/time_mem.py
+torchanalyzer/utils.py
+torchanalyzer/viser.py
