@@ -1,0 +1,11 @@
+{
+    "default": {
+        "format": ["pretty", "json:allure-results/results.json"],
+        "stdout_capture": false,
+        "paths": ["features"],
+        "tags": "",
+        "junit": true,
+        "junit_directory": "allure-results",
+        "logging_level": "INFO"
+    }
+}
