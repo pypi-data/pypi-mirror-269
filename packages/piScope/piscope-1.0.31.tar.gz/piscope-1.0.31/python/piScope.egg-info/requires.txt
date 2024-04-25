@@ -1,0 +1,11 @@
+matplotlib>=3.8.3
+hgapi
+PyOpenGL
+netCDF4
+h5py
+PyPDF2
+pdfrw
+wxPython
+future
+autopep8
+scipy>=1.12.0
