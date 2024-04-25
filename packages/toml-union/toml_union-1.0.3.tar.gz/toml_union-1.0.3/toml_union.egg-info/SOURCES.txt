@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+toml_union/__init__.py
+toml_union/toml_union.py
+toml_union.egg-info/PKG-INFO
+toml_union.egg-info/SOURCES.txt
+toml_union.egg-info/dependency_links.txt
+toml_union.egg-info/entry_points.txt
+toml_union.egg-info/requires.txt
+toml_union.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+toml-union = toml_union.toml_union:main
