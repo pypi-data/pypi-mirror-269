@@ -1,0 +1,16 @@
+foyou_cli/__init__.py,sha256=jocIymTA3T8qSGC-a8SN_a9koFb56WW7YAFJoaSWW74,734
+foyou_cli/__main__.py,sha256=J2X_ip-E05dybPBMnbIf0Qq_A6kH7kcn16qssSEjR4w,66
+foyou_cli/aliyundrive.py,sha256=KnOMjnbT5mN2rKdu3pX2RmoXFqyPELVOIP8M4SVQEXY,3805
+foyou_cli/ebook.py,sha256=9kTyB_GqJlWRCI-mLpiGr5_C8S99yugF839ULXUBMls,1283
+foyou_cli/utils.py,sha256=fxgp5ALNrUVxZIvitn8urCFzj6Xd-sGB-q1GfIq8DPQ,148
+foyou_cli/geoip/__init__.py,sha256=eaQbFbojAjonr6Qwa5q87OOZdxZ0uxBKgKuAjdYbwC0,1698
+foyou_cli/geoip/geoip_pb2.py,sha256=rurOrmcvitPZmoaYHIdAZHurp1ls6sXIl80dyxIgDZQ,1897
+foyou_cli/wikihow/__init__.py,sha256=iIaEVXxcjTlJHh0Pupv3tW3ph57edFREOeCZH5zcydI,2300
+foyou_cli/wikihow/script.js,sha256=fyUSrA36CxLd9JUdGdKuqzG11_ouYQKbekY2Kby-wBY,1256
+foyou_cli/wikihow/style.css,sha256=B-0rt_AuEmAZI2y6Pr8P0yK5vDNtyyo4hF6WpTcoXgs,183
+foyou_cli-0.0.19.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+foyou_cli-0.0.19.dist-info/METADATA,sha256=xoYMKZ0krlG2yOXS-yqLZHV1pk4G-R_6o6G2DXZLaUs,1002
+foyou_cli-0.0.19.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+foyou_cli-0.0.19.dist-info/entry_points.txt,sha256=Lv7Zhr-SpvHQPSs1js7O1_U0tXFdX5PKHt9jXn1n6nE,41
+foyou_cli-0.0.19.dist-info/top_level.txt,sha256=j68W_y1wve2Wnhkl3knLtBlSFcChryRsakn30YxRwoc,10
+foyou_cli-0.0.19.dist-info/RECORD,,
