@@ -1,0 +1,8 @@
+jaycopilot_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jaycopilot_client/app/client.py,sha256=_Y-PnVzzbBZBwxoTUZe2SKsEFWUTzh8sgdkLLkh8xh8,6703
+jaycopilot_client/app/config.py,sha256=olPX2M0Fkv32R7bKgqQQjgOZ4YkAyLSNksHJaZMKVls,552
+jaycopilot_client/app/exception/client_exception.py,sha256=vSkoLgrkkcwroRODw04n7DFe4VCCgn7p7nxB2vGSjFM,291
+jaycopilot_client/app/schemas.py,sha256=dFQnyI9GuQDtZSSqyhidrv-SX7Q1MW19VRQGQlb0aRc,220
+jaycopilot_client-0.1.0.dist-info/METADATA,sha256=CwLwg4CmYnzUnSxEd5wIAoLIvyrSLPlue27MCwwqtDQ,595
+jaycopilot_client-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+jaycopilot_client-0.1.0.dist-info/RECORD,,
