@@ -1,0 +1,3 @@
+[console_scripts]
+d = gencove.command.explorer.data.cli:data
+gencove = gencove.cli:cli
