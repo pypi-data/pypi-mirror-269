@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: annoread
+Version: 0.1.1
+Summary: annotate read from mapping data, and assign the multiple mapped reads, and count
+Author-email: Hailing Fang <benjaminfang.ol@outlook.com>
+Project-URL: Homepage, https://github.com/benjaminfang/annoread
+Keywords: read annotation,read assignment,read count
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: biobrary==0.1.4
+
+# AnnoRead
+
+Annoread is a utility to annotation the read fot the gene it belong to.
+
+## Utilities
+
+annoread.py:
+
+    Annotated the reads based on read mapping data.
+
+assignread.py
+
+    Assign reads which mapped to multiple features.
+
+countmtx.py
+
+    Count the read number of features.

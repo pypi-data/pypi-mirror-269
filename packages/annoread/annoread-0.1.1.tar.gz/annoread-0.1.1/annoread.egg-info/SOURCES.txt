@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+annoread/__init__.py
+annoread/annodata.py
+annoread/annoread.py
+annoread/assignread.py
+annoread/countmtx.py
+annoread.egg-info/PKG-INFO
+annoread.egg-info/SOURCES.txt
+annoread.egg-info/dependency_links.txt
+annoread.egg-info/entry_points.txt
+annoread.egg-info/requires.txt
+annoread.egg-info/top_level.txt
