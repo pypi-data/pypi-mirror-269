@@ -1,0 +1,2 @@
+[console_scripts]
+developer_assistant = swarmauri_developer.DeveloperAssistant:main
