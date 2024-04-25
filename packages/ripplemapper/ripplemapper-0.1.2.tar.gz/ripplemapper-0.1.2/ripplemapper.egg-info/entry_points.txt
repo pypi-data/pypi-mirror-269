@@ -1,0 +1,2 @@
+[console_scripts]
+open_astronomy_package_template_example = ripplemapper.example_mod:main
