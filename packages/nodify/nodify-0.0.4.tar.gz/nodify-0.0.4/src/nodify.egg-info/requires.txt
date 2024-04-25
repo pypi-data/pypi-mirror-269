@@ -1,0 +1,17 @@
+
+[files]
+watchdog
+
+[scripting]
+black
+isort
+
+[test]
+pytest
+coverage[toml]
+pytest-cov
+pytest-env
+pytest-faulthandler
+black
+isort
+watchdog
