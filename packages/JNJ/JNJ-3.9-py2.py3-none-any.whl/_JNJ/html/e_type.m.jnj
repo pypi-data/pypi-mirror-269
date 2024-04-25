@@ -1,0 +1,204 @@
+{#- jinja template: html/e_type.m.jnj -#}
+{#
+## Copyright (C) 2011-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/e_type.m.jnj
+##
+## Purpose
+##    Macros for E_Type pages
+##
+## Revision Dates
+##    21-Nov-2011 (CT) Creation (factored from html/e_type_admin.jnj)
+##    21-Nov-2011 (CT) Continue `qr_control` (change `order_by`)
+##    22-Nov-2011 (CT) Continue `qr_control`..
+##    25-Nov-2011 (CT) Change `admin_table` to not put field values into `<a>`
+##    26-Nov-2011 (CT) Continue `qr_control`....
+##                     (`button_types`, `qr_button_first`, ...)
+##    28-Nov-2011 (CT) Continue `qr_control` (`order_by_form`)
+##    29-Nov-2011 (CT) Continue `qr_control` (`order_by_form`...)
+##    30-Nov-2011 (CT) Continue `qr_control` (`qr_button`...)
+##     4-Dec-2011 (CT) Continue `qr_control`
+##                     (Change `attr_filter_tr` to use `af.attr.input_widget`)
+##     7-Dec-2011 (CT) Continue `qr_control`
+##                     (factor `attr_filter_table`, add `entity_selector_form`)
+##    12-Dec-2011 (CT) Continue `qr_control` (`af.Class`, `need_op`)
+##    16-Jan-2012 (CT) Continue `qr_control` (`select_attr_form`, `Config`)
+##    18-Jan-2012 (CT) Continue `qr_control` (Use `GTW.attr_join` for `fields`)
+##    19-Mar-2012 (CT) Change `obj_button` to use class `ui-state-default`
+##     6-Dec-2012 (CT) Factor `obj_create_button`
+##    14-Dec-2012 (CT) Add `vip_button`
+##     3-Apr-2013 (CT) Use `af.ui_type_name` in `entity_selector_form`
+##     3-Apr-2013 (CT) Split hidden `input` field "__attribute_selector_for__"
+##                     into two: "__esf_for_attr__"  and "__esf_for_type__"
+##     3-Apr-2013 (CT) Add `entity_selector_form_p`
+##     6-Oct-2013 (CT) Add `with context` to import of `form.jnj`
+##    11-Mar-2014 (CT) Add guard `skip_qr_attr_select` to `qr_control`
+##    11-Mar-2014 (CT) Add guard for `href_change`, `href_delete` to
+##                     `admin_table`; add `href_display`
+##    14-Mar-2014 (CT) Add and use `nav_buttons`
+##    24-Aug-2014 (CT) Factor `esf_title`; DRY `result` of `esf_title`
+##    15-Sep-2014 (CT) Change `entity_selector_form` to use pure forms,
+##                     `attr_filter_pure` and `_qr_button_pure`
+##    30-Oct-2014 (CT) Factor `e_type_q.m.jnj`, switch to pure buttons
+##     2-Dec-2014 (CT) Remove class `button` from `direction` and `disabler`
+##     3-Dec-2014 (CT) Factor `esf_field`
+##    29-Jan-2015 (CT) Remove `admin_table`, use `page.renderer` instead
+##                     + remove `obj_button`, `obj_create_button`
+##     5-Feb-2015 (CT) Remove `vip_button`
+##    31-Mar-2015 (CT) Use `pure-form-stacked`, not `pure-form-aligned`, for
+##                     `entity_selector_form`
+##     1-Apr-2015 (CT) Move buttons to begin of `entity_selector_form`
+##     1-Apr-2015 (CT) Add class `pure-button-primary` to `Apply` button
+##     2-Jan-2016 (CT) Pass `first_last_p` to `rel_nav_buttons`
+##    10-May-2016 (CT) Remove `disabler` from `esf_field`
+##    10-May-2016 (CT) Add `esf_field_p`
+##    16-May-2016 (CT) Use `GTW.xmlattr (kw)`, not `kw|xmlattr`
+##    17-May-2016 (CT) Remove trailing blank from `esf_title`
+##     2-Jun-2016 (CT) Import `e_type_selector.m.jnj`
+##     7-Jun-2016 (CT) Remove `entity_selector_form` (see e_type_selector.m.jnj)
+##    11-Jan-2017 (CT) Remove obsolete `nav_buttons` once used by `admin_table`
+##     8-Feb-2017 (CT) Add trailing `qr_form` to `admin`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj") as X -%}
+{%- import "html/form.jnj" as Form with context %}
+{%- import "html/e_type_q.m.jnj" as ETQ with context %}
+{#- Import ESF just to make sure the template is known to be used -#}
+{%- import "html/e_type_selector.m.jnj" as ESF with context %}
+
+{%- set attr_filter_pure = ETQ.attr_filter_field %}
+
+{%- macro order_by_form (page) -%}
+  <form class = "QR order-by" {# -#}
+      title="{{ GTW._T ("Order-by Criteria") }}"{# -#}
+  >
+    <ul class="attributes"></ul>
+    <ul class="prototype hidden">
+      <li>
+        <a class="disabler"></a>
+        <a class="direction"></a>
+        <b></b>
+      </li>
+    </ul>
+    <div class="pure-controls">
+      {{ ETQ.button
+          ( page
+          , name  = GTW._  ("Apply")
+          , title = GTW._T
+              ("Use set of criteria currently displayed in order-by form")
+          )
+      }}
+      {{ ETQ.button
+          ( page
+          , name  = GTW._  ("Cancel")
+          , title = GTW._T
+              ("Leave form without changing set of order-by criteria")
+          )
+      }}
+      {{ ETQ.button
+          ( page
+          , name  = GTW._  ("Clear")
+          , title = GTW._T ("Reset order-by criteria")
+          )
+      }}
+      {{ ETQ.button
+          ( page
+          , name  = GTW._  ("Add")
+          , title = GTW._T ("Add an order-by criterion")
+          , text  = GTW._T ("Add criterion")
+          )
+      }}
+    </div>
+  </form>
+{%- endmacro -%} {#- order_by_form -#}
+
+{%- macro qr_field (name, title, value, label) -%}
+  {%- set caller = kwargs.pop ("caller",   None) -%}
+  {%- set id = "QR-" + name %}
+  <li title="{{ title }}">
+    <label for="{{ id }}">
+      {{ label or GTW._T (name.capitalize ()) }}
+    </label>
+    {%- if caller %}
+      {{- caller () -}}
+    {%- else %}
+      {{ X.input.text
+          ( id        = id
+          , name      = name
+          , value     = value
+          )
+      }}
+    {%- endif -%}
+  </li>
+{%- endmacro -%} {#- qr_field -#}
+
+{%- macro select_attr_form (page) -%}
+  <form class = "QR select-attr" {# -#}
+      title="{{ GTW._T ("Select the attributes to be displayed for each object") }}"{# -#}
+  >
+    <ul class="attributes"></ul>
+    <ul class="prototype hidden">
+      <li>
+        <a class="disabler"></a>
+        <b></b>
+      </li>
+    </ul>
+    <div class="pure-controls">
+      {{ ETQ.button
+          ( page
+          , class = "pure-button-primary"
+          , name  = GTW._  ("Apply")
+          , title = GTW._T ("Use set of attributes currently displayed in form")
+          )
+      }}
+      {{ ETQ.button
+          ( page
+          , name  = GTW._  ("Cancel")
+          , title = GTW._T
+              ("Leave form without changing set of attributes to display")
+          )
+      }}
+      {{ ETQ.button
+          ( page
+          , name  = GTW._  ("Clear")
+          , title = GTW._T ("Reset form to default")
+          )
+      }}
+      {{ ETQ.button
+          ( page
+          , name  = GTW._  ("Add")
+          , title = GTW._T ("Add an attribute to be displayed")
+          , text  = GTW._T ("Add attribute")
+          )
+      }}
+    </div>
+  </form>
+{%- endmacro -%} {#- select_attr_form -#}
+
+{%- macro admin   (page, renderer) -%}
+  {{ ETQ.qr_form  (page, renderer.fields, page.query_restriction) }}
+  {{ GTW.call_macro
+     ( "E_Type", renderer
+     , t_class    = "Object-List"
+     , templ_name = renderer.template_module
+     )
+  }}
+  {% if page.query_size > 5 %}
+    {{- ETQ.qr_form
+       (page, renderer.fields, page.query_restriction, show_config = False)
+    -}}
+  {% endif %}
+{%- endmacro -%} {#- admin -#}
+
+{#- __END__ jinja template: html/e_type.m.jnj -#}

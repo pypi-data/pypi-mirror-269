@@ -1,0 +1,84 @@
+{#- jinja template: media_fragments.jnj -#}
+{#
+## Copyright (C) 2011-2015 Martin Glueck All rights reserved
+## Langstrasse 4, A--2244 Spannberg. martin@mangari.org
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/media_fragments
+##
+## Purpose
+##    Provide macros for common media fragments (e.g.: link style sheets, ...)
+##
+## Revision Dates
+##    27-Sep-2011 (MG) Creation (factored from `base.jnj`)
+##     2-Dec-2011 (CT) Use `X.script` instead of home-grown markup
+##    14-Dec-2011 (CT) Change `link_rel` to access `rel_links`, not `Rel_Links`
+##     5-Jan-2012 (CT) Change `scripts` to just pass `jsl`, not `jsl.src` and
+##                     `jsl.body`
+##    26-Jun-2015 (CT) Rename argument from `media` to `template`
+##    26-Jun-2015 (CT) Improve whitespace of `js_on_ready`
+##    ««revision-date»»···
+##--
+#}
+
+{%- macro media_item (item) -%}
+  {%- onion item.condition %}
+    {% head -%}
+    <!--[if {{ item.condition }}]>
+    {% body -%}
+    {{- caller () -}}
+    {%- tail -%}
+    <![endif]-->
+  {% endonion -%} {#- item.condition -#}
+{%- endmacro -%} {#- media_item -#}
+
+{%- macro permalink (page) -%}
+  <link rel="canonical" href="{{- page.permalink -}}"/>
+{%- endmacro -%} {#- permalink -#}
+
+{%- macro inline_CSS (CSS) -%}
+   <style type="text/css">
+     {{ CSS }}
+   </style>
+{%- endmacro -%} {#- inline_CSS -#}
+
+{%- macro link_css (template) -%}
+  {%- for cssl in template.css_links %}
+    {% call media_item (cssl) -%}
+      {{ X.link_stylesheet (cssl.href, media=cssl.media_type) }}
+    {% endcall %} {# media_item #}
+  {% endfor -%}
+{%- endmacro -%} {#- link_css -#}
+
+{%- macro link_rel (template) -%}
+  {%- for rl in template.rel_links %}
+    <link {{ rl.attrs ()|safe }} />
+  {% endfor -%}
+{%- endmacro -%} {#- link_rel -#}
+
+{%- macro scripts (template) -%}
+  {%- for jsl in template.scripts %}
+    {% call media_item (jsl) -%}
+      {{ X.script (src = jsl) }}
+    {% endcall %} {# media_item #}
+  {% endfor -%}
+{%- endmacro -%} {#- scripts -#}
+
+{%- macro js_on_ready (template) -%}
+  {%- if template.js_on_ready %}
+    {% call X.script () -%}
+      $(function () {# -#}
+        { {% for jsor in template.js_on_ready %}{{ jsor|safe }} {% endfor %}}{# -#}
+       );
+    {% endcall %} {# X.script #}
+  {% endif -%}
+{%- endmacro -%} {#- js_on_ready -#}
+
+{#- __END__ jinja template: media_fragments.jnj -#}

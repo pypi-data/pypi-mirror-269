@@ -1,0 +1,43 @@
+{#- jinja template: email.jnj -#}
+{#-
+## Copyright (C) 2010-2012 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    email
+##
+## Purpose
+##    Template for generating a email message
+##
+## Revision Dates
+##    19-Feb-2010 (CT) Creation
+##    30-Apr-2012 (CT) Use `page.encoding`
+##    ««revision-date»»···
+##--
+-#}
+{%- block headers -%}
+{%- if not page -%}{%- set page = NAV -%}{%- endif -%}
+{%- set headers = [] %}
+{%- if email_subject -%}
+{%- do headers.append ("Subject: %s" % (email_subject, )) -%}
+{%- endif -%}
+{%- if email_cc -%}
+{%- do headers.append ("CC:      %s" % (email_cc, )) -%}
+{%- endif -%}
+From:    {{ GTW.firstof (email_from, page.webmaster) }}
+To:      {{ email_to }}
+Content-type: text/plain; charset={{- page.encoding or "iso-8859-15" }}
+{{ "\n".join (headers) }}
+{%- endblock headers %}
+
+{% block body -%}
+  {{ email_body }}
+{%- endblock body -%}
+{#- __END__ jinja template: email.jnj -#}

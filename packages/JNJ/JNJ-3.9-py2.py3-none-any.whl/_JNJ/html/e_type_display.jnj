@@ -1,0 +1,56 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: e_type_display.jnj -#}
+{#
+## Copyright (C) 2014-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/e_type_display.jnj
+##
+## Purpose
+##    Template for displaying a single E_Type instance in the admin
+##
+## Revision Dates
+##    11-Mar-2014 (CT) Creation
+##    29-Jan-2015 (CT) Make compatible with `Renderer`
+##     4-Feb-2015 (CT) Pass `renderer` to `as_html`, `css_class_dyn`
+##    16-May-2016 (CT) Use `GTW.xmlattr (kw)`, not `kw|xmlattr`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import "html/e_type.m.jnj" as e_type with context %}
+
+{%- block document -%}
+  {%- set obj = page.obj %}
+  <table class="Object-Display">
+    <tbody>
+      {%- for field in page.fields %}
+        {%- for f in field.td_cols %}
+          {%- set v = ("%s" % (f.as_html (obj, None), )).strip () %}
+          {% if v -%}
+            <tr title="{{ f.description }}">
+              <th scope="row">
+                {{- f.ui_name -}}
+              </th>
+              <td{{ GTW.xmlattr (class = f.css_class) }}>
+                <p>
+                  {{- v.replace ("\n\n", "</p><p>") or "&nbsp;" -}}
+                </p>
+              </td>
+            </tr>
+          {% endif -%}
+        {% endfor -%}
+      {% endfor -%}
+    </tbody>
+  </table>
+{%- endblock document -%}
+
+{#- __END__ jinja template: html/e_type_display.jnj -#}

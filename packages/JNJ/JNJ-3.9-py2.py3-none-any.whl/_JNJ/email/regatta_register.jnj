@@ -1,0 +1,35 @@
+{%- extends "email/email.jnj" %}
+{#- jinja template: regatta_register.jnj -#}
+{#
+## Copyright (C) 2012 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+## 
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    regatta_register
+##
+## Purpose
+##    Email sent to webmaster for a regatta registration
+##
+## Revision Dates
+##    30-Apr-2012 (CT) Creation
+##    24-Aug-2012 (CT) Add `request.url` to message
+##    ««revision-date»»···
+##--
+#}
+
+{%- block body -%}
+User {{ request.user }} connecting from {{ request.remote_addr }}
+to {{ request.url }} registered for regatta
+{{ page.obj.event.FO.short_title }}, {{ page.obj.event.ui_date }}:
+
+{{ message }}
+{%- endblock body -%}
+
+{#- __END__ jinja template: regatta_register.jnj -#}

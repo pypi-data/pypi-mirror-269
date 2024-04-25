@@ -1,0 +1,53 @@
+{#- jinja template: day.jnj -#}
+{#
+## Copyright (C) 2010-2012 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/cal/day.jnj
+##
+## Purpose
+##    Template and macros for displaying a single day of a calendar
+##
+## Revision Dates
+##    12-Mar-2010 (CT) Creation
+##    17-Nov-2010 (CT) `html/cal_day.jnj` factored out
+##     2-Aug-2012 (CT) Remove auto-executing code
+##    ««revision-date»»···
+##--
+#}
+
+{%- macro day (cal, day) -%}
+  <h1 class="day">
+    {{ "%s, %s" % (GTW._T (day.day_name), day) }}
+    <span class="week">
+      {{ "%s %2.2d/%s" % (GTW._T ('Week'), day.week, day.year) }}
+    </span>
+  </h1>
+  {%- set holi = day.is_holiday %}
+  {%- if holi %}
+    <div class="holiday">{{- GTW._T (holi) -}}</div>
+  {% endif -%}
+  {%- for ev in day.events %}
+    <div class="event" title="{{ ev.FO.time }}: {{ ev.title }}">
+      <h2>
+        <a href="{{ cal.obj_href (ev.essence) }}">
+          {{- ev.short_title}}: {{ ev.title -}}
+        </a>
+      </h2>
+      <p>{{ ev.FO.time }}</p>
+      {%- if ev.short_title != ev.detail %}
+        <p>{{ ev.detail }}</p>
+      {% endif -%}
+    </div>
+  {% endfor -%}
+{%- endmacro -%} {#- day -#}
+
+{#- __END__ jinja template: day.jnj -#}

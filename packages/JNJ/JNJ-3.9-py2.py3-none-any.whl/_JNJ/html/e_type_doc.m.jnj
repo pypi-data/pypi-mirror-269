@@ -1,0 +1,309 @@
+{#- jinja template: html/e_type_doc.m.jnj -#}
+{#
+## Copyright (C) 2012-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This module is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/e_type_doc.m.jnj
+##
+## Purpose
+##    Macros for E_Type documentation pages
+##
+## Revision Dates
+##     8-Aug-2012 (CT) Creation
+##    10-Aug-2012 (CT) Continue creation
+##    11-Aug-2012 (CT) Continue creation..
+##    26-Sep-2012 (CT) Add `is_partial`
+##    28-Mar-2013 (CT) Don't show false `is_required` if not `is_changeable`
+##    28-Mar-2013 (CT) Add `max_length`
+##    28-Mar-2014 (CT) Add support for `queryable` attributes
+##    28-Mar-2014 (CT) Add link-ref-attributes to `e_type_cross_refs`
+##     1-Apr-2014 (CT) Add `max_value`, `min_value` to `attributes`
+##    16-May-2016 (CT) Use `GTW.xmlattr (kw)`, not `kw|xmlattr`
+##    14-Dec-2016 (CT) Add `choices`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj") as X %}
+
+{%- macro attr_name (name, css_class = "attr-name", sep = "") -%}
+  <b class="{{ css_class }}">{{ name }}{{ sep }}</b>
+{%- endmacro -%} {#- attr_name -#}
+
+{%- macro attr_table (resource, attrs) -%}
+  {%- set cols = kwargs.pop
+      ("cols", ("name", "type", "kind", "is_required", "default_value"))
+  %}
+  {%- set E_Type = resource.E_Type %}
+  <table class="Attr-Table">
+    <thead>
+      <tr>
+        {%- for c in cols %}
+          <th class="{{ c }}" scope="col">{{ c }}</th>
+        {% endfor -%}
+      </tr>
+    </thead>
+    <tbody>
+      {%- for a in attrs %}
+        {%- set ak = E_Type.attributes [a.name] %}
+        <tr id="attr-t-{{ a.name }}">
+          {%- for c in cols %}
+            {%- set align =
+                   (" align-%s" % (ak.attr.css_align, ))
+                if ak.attr.css_align and c == "default_value" else ""
+            -%}
+            <td class="{{ c }}{{ align }}">
+              <a href="#attr-s-{{ a.name }}">{{ a [c] }}</a>
+            </td>
+          {% endfor -%}
+        </tr>
+      {% endfor -%}
+    </tbody>
+  </table>
+{%- endmacro -%} {#- attr_table -#}
+
+{%- macro attributes (resource, attrs, level = 0, show_header = True, not_electric = True) -%}
+  {%- for a in attrs %}
+    {%- if show_header %}
+      {%- set tag = GTW.formatted ("h%s", level + 4)  -%}
+      {%- if level == 0 %}
+        {%- set hd  =
+            "<a href=\"#attr-t-" + a.name + "\">" + attr_name (a.name) + "</a>"
+        -%}
+        {%- set id = "attr-s-" + a.name %}
+      {%- else %}
+        {%- set hd = attr_name (a.name) %}
+        {%- set id = None %}
+      {% endif -%}
+      {{ header (hd, tag = tag, id = id) }}
+    {% endif -%}
+
+    <dl class="Attr-Spec">
+      <dt>Name</dt>
+      <dd>
+        {{- attr_name (a.name) -}}
+      </dd>
+      {%- if a.role_name and not_electric -%}
+        <dd>
+          Can also be accessed with the role name
+          {{ attr_name (a.role_name, css_class = "role-name") -}}
+        </dd>
+      {%- endif -%}
+      <dt>Type</dt>
+      <dd>
+        {%- onion a.url %}
+          {%- head %}
+            <a href="{{ a.url }}">
+          {%- body %}
+            {{- a.type_name or a.type -}}
+            {%- if a.max_length %}
+              ({{ GTW._T ("maximum length: %s") % (a.max_length, )}})
+            {% endif -%}
+          {%- tail %}
+            </a>
+        {%- endonion %}
+        {%- if a.min_value %}
+          <p><strong>{{ GTW._T ("Minimum value") }}</strong>: {{ a.min_value }}</p>
+        {% endif -%}
+        {%- if a.max_value %}
+          <p><strong>{{ GTW._T ("Maximum value") }}</strong>: {{ a.max_value }}</p>
+        {% endif -%}
+      </dd>
+      <dt>Kind</dt>
+      <dd>
+        {{- a.kind -}}
+      </dd>
+      {%- if not_electric %}
+        {%- if a.is_changeable or a.is_required %}
+          <dt>Is required</dt>
+          <dd>
+            {{- a.is_required -}}
+          </dd>
+        {% endif -%}
+        <dt>Is changeable</dt>
+        <dd>
+          {%- if a.is_settable and not a.is_changeable %}
+            {{- GTW._T ("Only during initialization") -}}
+          {%- else %}
+            {{- a.is_changeable -}}
+          {% endif -%}
+        </dd>
+        {%- if a.default_value %}
+          <dt>Default</dt>
+          <dd>
+            {{- a.default_value -}}
+          </dd>
+        {% endif -%}
+        {%- if a.example %}
+          <dt>Example</dt>
+          <dd>
+            {{- a.example -}}
+          </dd>
+        {% endif -%}
+        {%- if a.Choices %}
+          <dt>Valid values</dt>
+          <dd>
+            {{ choices (resource, a)}}
+          </dd>
+        {% endif -%}
+      {% endif -%}
+      <dt>Description</dt>
+      <dd>
+        {{- a.description -}}
+      </dd>
+      {%- if a.explanation %}
+        <dt>Explanation</dt>
+        <dd>
+          {{- a.explanation -}}
+        </dd>
+      {% endif -%}
+      {%- if a.syntax %}
+        <dt>Syntax</dt>
+        <dd>
+          {{- a.syntax -}}
+        </dd>
+      {% endif -%}
+      {%- if a.attributes %}
+        <dt>Attributes</dt>
+        <dd>
+          Nested attributes of composite attribute type {{ a.type }}
+        </dd>
+        <dd>
+          {{ attributes (resource, a.attributes, level = level + 1) }}
+        </dd>
+      {% endif -%}
+    </dl>
+  {% endfor -%}
+{%- endmacro -%} {#- attributes -#}
+
+{%- macro choices (resource, attr) -%}
+  {%- set cs = attr.Choices %}
+  {%- set c1 = GTW.first (cs) %}
+  {%- if GTW.isinstance (c1, GTW.pyk.string_types) %}
+    {{ ", ".join (cs) }}
+  {%- else %}
+    <table class="Choices">
+      <tbody>
+        {%- for k, v in cs %}
+          <tr>
+            <td class="Value">{{- k -}}</td>
+            <td class="Desc">[{{- v -}}]</td>
+          </tr>
+        {% endfor -%}
+      </tbody>
+    </table>
+  {% endif -%}
+{%- endmacro -%} {#- choices -#}
+
+{%- macro header (name) -%}
+  {%- set tag = kwargs.pop ("tag", "h2") -%}
+  <{{ tag }} {{ GTW.xmlattr (kwargs) -}}>{{ name }}</{{ tag }}>
+{%- endmacro -%} {#- header -#}
+
+{%- macro e_type_cross_refs (cross_refs) -%}
+  {% call(cr) e_type_refs (cross_refs) -%}
+    {{ e_type_ref (cr) -}}:
+    {%- for a in cr.attributes %}
+      {%- set sep = "" if loop.last else ", " %}
+      <a href="{{ cr.url }}#attr-s-{{ a }}">{{- attr_name (a, sep = sep) -}}</a>
+    {% endfor -%}
+    {%- if cr.lra -%}
+      [<b>{{ cr.lra }}</b>]
+    {%- endif -%}
+  {% endcall %} {# e_type_refs #}
+{%- endmacro -%} {#- e_type_cross_refs -#}
+
+{%- macro e_type_ref (et) -%}
+  {%- if et -%}
+    {%- onion et.url %}
+      {%- head -%}
+        <a href="{{ et.url }}">
+      {%- body -%}
+        {{ et.type_name }}
+      {%- tail -%}
+        </a>
+    {%- endonion %}
+  {%- endif -%}
+{%- endmacro -%} {#- e_type_ref -#}
+
+{%- macro e_type_refs (refs) -%}
+  {%- set caller = kwargs.pop ("caller",   None) -%}
+  {%- if refs %}
+    <ul>
+      {%- for r in refs %}
+        <li>
+          {%- if caller %}
+            {{- caller (r) -}}
+          {%- else %}
+            {{ e_type_ref (r) }}
+          {%- endif -%}
+        </li>
+      {% endfor -%}
+    </ul>
+  {% endif -%}
+{%- endmacro -%} {#- e_type_refs -#}
+
+{%- macro section (resource, rst_cargo, name) -%}
+  {%- set caller = kwargs.pop ("caller",   None) -%}
+  {%- set body   = rst_cargo [name] -%}
+  {%- if body %}
+    {{ header
+          ( name.capitalize ().replace ("_", " ")
+          , tag = kwargs.get ("tag", "h2")
+          )
+    }}
+    {%- if caller %}
+      {{- caller (body) -}}
+    {%- else %}
+      <p>{{ body }}</p>
+    {%- endif -%}
+  {% endif -%}
+{%- endmacro -%} {#- section -#}
+
+{%- macro e_type (resource, rst_cargo) -%}
+  <h1 class="headline">
+    {{- rst_cargo ["type_name"] -}}
+    {%- set is_partial = rst_cargo ["is_partial"] %}
+    {%- if is_partial %}
+      [partial type]
+    {% endif -%}
+  </h1>
+  {{ section (resource, rst_cargo, "type_name") }}
+  {{ section (resource, rst_cargo, "description") }}
+  {% call(attrs) section (resource, rst_cargo, "attributes") -%}
+    {% call(e_able) section (resource, attrs, "editable") -%}
+      {{ attr_table (resource, e_able) }}
+    {% endcall %} {# section #}
+  {% endcall %} {# section #}
+  {% call(rr) section (resource, rst_cargo, "relevant_root") -%}
+    {{ e_type_ref (rr) }}
+  {% endcall %} {# section #}
+  {% call(ps) section (resource, rst_cargo, "parents") -%}
+    {{ e_type_refs (ps) }}
+  {% endcall %} {# section #}
+  {% call(cs) section (resource, rst_cargo, "children") -%}
+    {{ e_type_refs (cs) }}
+  {% endcall %} {# section #}
+  {% call(crs) section (resource, rst_cargo, "cross_references") -%}
+    {{ e_type_cross_refs (crs) }}
+  {% endcall %} {# section #}
+  {% call(attrs) section (resource, rst_cargo, "attributes") -%}
+    {% call(e_able) section (resource, attrs, "editable", tag = "h3") -%}
+      {{ attributes (resource, e_able) }}
+    {% endcall %} {# section #}
+    {% call(q_able) section (resource, attrs, "queryable", tag = "h3")
+    -%}
+      {{ attributes (resource, q_able, not_electric = False) }}
+    {% endcall %} {# section #}
+  {% endcall %} {# section #}
+{%- endmacro -%} {#- e_type -#}
+
+{#- __END__ jinja template: html/e_type_doc.m.jnj -#}

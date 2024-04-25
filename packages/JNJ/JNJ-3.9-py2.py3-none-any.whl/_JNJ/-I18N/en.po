@@ -1,0 +1,1100 @@
+# English translations for MOM/GTW/JNJ.
+# Copyright (C) 2010-2016 Mag. Christian Tanzer, Martin Glueck
+# This file is distributed under the same license as the MOM/GTW/JNJ
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MOM/GTW/JNJ 1.0 [en]\n"
+"Report-Msgid-Bugs-To: tanzer@swing.co.at,martin@mangari.org\n"
+"POT-Creation-Date: 2020-05-10 14:29+0200\n"
+"PO-Revision-Date: 2012-05-23 10:17+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: _JNJ/html/e_type.m.jnj:109 _JNJ/html/e_type.m.jnj:167
+#: _JNJ/html/e_type_q.m.jnj:157
+msgid "Add"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:322
+#, python-format
+msgid "Add a %s"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:159
+msgid "Add a rule to restrict the objects to a specific attribute value"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:168
+msgid "Add an attribute to be displayed"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:110
+msgid "Add an order-by criterion"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:169
+msgid "Add attribute"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:111
+msgid "Add criterion"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:83
+msgid "Anchor"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:80
+msgid "Anchor date for calendar display"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:108
+msgid "Anchor day for calendar display"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:99
+msgid "Anchor month for calendar display"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:90
+msgid "Anchor year for calendar display"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:156 _JNJ/html/e_type.m.jnj:89
+#: _JNJ/html/e_type.m.jnj:148 _JNJ/html/e_type_q.m.jnj:165
+#: _JNJ/html/e_type_selector.m.jnj:97
+msgid "Apply"
+msgstr ""
+
+#: _JNJ/html/error_400.jnj:24
+msgid "Bad request"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:96 _JNJ/html/e_type.m.jnj:154
+#: _JNJ/html/e_type_selector.m.jnj:110 _JNJ/html/mf3.m.jnj:163
+msgid "Cancel"
+msgstr ""
+
+#: _JNJ/html/MF3/input.m.jnj:194
+msgid "Cannot be changed"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:37
+msgid "Certificate login"
+msgstr ""
+
+#: _JNJ/html/news.m.jnj:41
+msgid "Change"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:106
+msgid "Change email"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:105
+#, python-format
+msgid "Change email of account %s"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:178
+msgid "Change password"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:177
+#, python-format
+msgid "Change password of account %s"
+msgstr ""
+
+#: _JNJ/html/console.jnj:30 _JNJ/html/e_type.m.jnj:103
+#: _JNJ/html/e_type.m.jnj:161 _JNJ/html/e_type_selector.m.jnj:104
+msgid "Clear"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:186
+msgid "Clear values of all fields"
+msgstr ""
+
+#: _JNJ/html/page_notifications.m.jnj:28 _JNJ/html/page_notifications.m.jnj:33
+msgid "Click to remove notifications"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:146
+msgid "Config"
+msgstr ""
+
+#: _JNJ/email/verify_new_email.jnj:25
+msgid "Confirm new email address"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:352
+msgid "Correct field"
+msgstr ""
+
+#: _JNJ/html/empty_dir.jnj:43
+msgid "Create a new entry"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:423
+msgid "Create certificate request"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:425
+#, python-format
+msgid "Create certificate request for account %s"
+msgstr ""
+
+#: _JNJ/html/cal/wr_body.jnj:36
+msgid "Currently selected day"
+msgstr ""
+
+#: _JNJ/html/main_nav.m.jnj:93
+#, python-format
+msgid "Currently selected language is %s"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:129
+msgid "Delta"
+msgstr ""
+
+#: _JNJ/html/e_type_admin.jnj:59
+msgid "Disable"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:160
+msgid "Discard all changes and leave form"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:162
+msgid "Display calendar anchored on today"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:155
+msgid "Display calendar for the selected values"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:87
+msgid "Display first batch of objects matching the restriction"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:97
+msgid "Display last batch of objects matching the restriction"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:167
+msgid "Display list of objects matching the restriction"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:64
+msgid "Display more detailed explanation"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:107
+msgid "Display next batch of objects matching the restriction"
+msgstr ""
+
+#: _JNJ/html/e_type_admin.jnj:64
+msgid "Display objects in ascending order of the attribute"
+msgstr ""
+
+#: _JNJ/html/e_type_admin.jnj:62
+msgid "Display objects in descending order of the attribute"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:117
+msgid "Display previous batch of objects matching the restriction"
+msgstr ""
+
+#: _JNJ/html/e_type_admin.jnj:68
+msgid "Drag the attributes up or down to change their priority"
+msgstr ""
+
+#: _JNJ/html/e_type_admin.jnj:66
+msgid "Drag the order-by criteria up or down to change their priority"
+msgstr ""
+
+#: _JNJ/html/news.m.jnj:38
+msgid "Edit this entry"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:473
+msgid "Email address"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:199
+msgid "Email address of your account"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:472
+msgid "Email address used as username for your new account"
+msgstr ""
+
+#: _JNJ/html/ETR/regatta_register.m.jnj:32
+msgid "Export as CSV-file"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:220
+msgid "Field(s) to display for each entity"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:203
+msgid "Field(s) to use for ordering entities"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:221
+msgid "Fields"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:85 _JNJ/html/gallery.jnj:39
+#: _JNJ/html/rel_nav.m.jnj:29
+msgid "First"
+msgstr ""
+
+#: _JNJ/html/rel_nav.m.jnj:40
+msgid "First entry"
+msgstr ""
+
+#: _JNJ/html/gallery.jnj:39 _JNJ/html/photo.jnj:28
+msgid "First picture"
+msgstr ""
+
+#: _JNJ/html/photo.jnj:26
+msgid "Gallery"
+msgstr ""
+
+#: _JNJ/html/rel_nav.m.jnj:39
+msgid "Goto first entry"
+msgstr ""
+
+#: _JNJ/html/rel_nav.m.jnj:28
+msgid "Goto first page"
+msgstr ""
+
+#: _JNJ/html/rel_nav.m.jnj:50
+msgid "Goto last page"
+msgstr ""
+
+#: _JNJ/html/rel_nav.m.jnj:122
+msgid "Goto next page"
+msgstr ""
+
+#: _JNJ/html/rel_nav.m.jnj:134
+msgid "Goto parent page"
+msgstr ""
+
+#: _JNJ/html/rel_nav.m.jnj:145
+msgid "Goto previous page"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:179
+#, python-format
+msgid "Hide fields of %s"
+msgstr ""
+
+#: _JNJ/html/main_nav.m.jnj:178
+msgid "Hide navigation"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:289 _JNJ/html/auth.m.jnj:535
+msgid "I forgot my password"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:291 _JNJ/html/auth.m.jnj:537
+msgid "I forgot my password; send me a temporary one to my email address"
+msgstr ""
+
+#: _JNJ/html/error_404.jnj:40
+#, python-format
+msgid "If a link under %s refers to %s, please contact the %s."
+msgstr ""
+
+#: _JNJ/html/e_type_admin.jnj:46
+msgid "Javascript is needed to fully use this page"
+msgstr ""
+
+#: _JNJ/html/e_type_mf3.jnj:25
+msgid "Javascript is needed to use this page"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:210
+msgid "Keysize"
+msgstr ""
+
+#: _JNJ/html/main_nav.m.jnj:90
+msgid "Language"
+msgstr ""
+
+#: _JNJ/html/main_nav.m.jnj:90
+#, python-format
+msgid "Languages that can be selected for %s"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:95 _JNJ/html/gallery.jnj:43
+#: _JNJ/html/rel_nav.m.jnj:51
+msgid "Last"
+msgstr ""
+
+#: _JNJ/html/base.jnj:126
+msgid "Last change"
+msgstr ""
+
+#: _JNJ/html/gallery.jnj:43 _JNJ/html/photo.jnj:32
+msgid "Last picture"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:156
+msgid "Leave form without changing set of attributes to display"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:98
+msgid "Leave form without changing set of order-by criteria"
+msgstr ""
+
+#: _JNJ/html/e_type_selector.m.jnj:111
+#, python-format
+msgid "Leave form without selecting %s"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:187
+msgid "Limit number of entities displayed per page"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:314
+#, python-format
+msgid "Log into %s"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:282
+msgid "Log into website"
+msgstr ""
+
+#: _JNJ/html/main_nav.m.jnj:130
+msgid "Logged in"
+msgstr ""
+
+#: _JNJ/html/main_nav.m.jnj:130
+#, python-format
+msgid "Logged in as %s"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:281 _JNJ/html/auth.m.jnj:317
+#: _JNJ/html/header_nav.m.jnj:84 _JNJ/html/main_nav.m.jnj:133
+msgid "Login"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:322
+#, python-format
+msgid "Login for %s"
+msgstr ""
+
+#: _JNJ/html/error_401.jnj:27
+msgid "Login required"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:32
+msgid "Login with a previously created client certificate"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:331
+msgid "Logout"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:368
+#, python-format
+msgid "Logout %s"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:374
+#, python-format
+msgid "Make a client certificate for account %s"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:375
+msgid "Make client certificate"
+msgstr ""
+
+#: _JNJ/html/make_client_cert.jnj:31
+#, python-format
+msgid "Make client certificate for account %s on %s"
+msgstr ""
+
+#: _JNJ/html/e_type_doc.m.jnj:90
+msgid "Maximum value"
+msgstr ""
+
+#: _JNJ/html/error_405.jnj:25
+msgid "Method Not Allowed"
+msgstr ""
+
+#: _JNJ/html/e_type_doc.m.jnj:87
+msgid "Minimum value"
+msgstr ""
+
+#: _JNJ/html/cal/wr_nav.jnj:48
+msgid "Month (for last day of week)"
+msgstr ""
+
+#: _JNJ/html/clip_aggregator.jnj:56
+msgid "More"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:127 _JNJ/html/cal/wr.jnj:136
+msgid "Move calendar display by delta units"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:479
+msgid "New Passowrd"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:488
+msgid "New password"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:105 _JNJ/html/gallery.jnj:42
+#: _JNJ/html/rel_nav.m.jnj:123
+msgid "Next"
+msgstr ""
+
+#: _JNJ/html/gallery.jnj:42 _JNJ/html/photo.jnj:31
+msgid "Next picture"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:195
+msgid "Number of first entity to display on page"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:114 _JNJ/html/cal/wr.jnj:122
+msgid "Number of weeks displayed"
+msgstr ""
+
+#: _JNJ/html/e_type_doc.m.jnj:101
+msgid "Only during initialization"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:116 _JNJ/html/mf3.m.jnj:124
+#, python-format
+msgid "Open fields of %s for editing"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:416
+msgid "Optional descritpion for client certificate"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:204
+msgid "Order by"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:76
+msgid "Order-by Criteria"
+msgstr ""
+
+#: _JNJ/html/error_404.jnj:25
+msgid "Page doesn't exist"
+msgstr ""
+
+#: _JNJ/html/error_410.jnj:24
+msgid "Page doesn't exist anymore"
+msgstr ""
+
+#: _JNJ/html/rel_nav.m.jnj:135
+msgid "Parent"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:435
+msgid "Password"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:481
+msgid "Password for your new account"
+msgstr ""
+
+#: _JNJ/email/reset_password.jnj:25
+#, python-format
+msgid "Password of %s reset"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:436
+msgid "Password of your account"
+msgstr ""
+
+#: _JNJ/html/main_nav.m.jnj:54
+msgid "Permalink of current page"
+msgstr ""
+
+#: _JNJ/html/news.m.jnj:29
+msgid "Permanent link"
+msgstr ""
+
+#: _JNJ/html/header_nav.m.jnj:76
+msgid "Personal settings"
+msgstr ""
+
+#: _JNJ/html/gallery.jnj:41
+msgid "Play"
+msgstr ""
+
+#: _JNJ/email/reset_password.jnj:32
+msgid ""
+"Please click the following link to change the temporary password to a new"
+" value"
+msgstr ""
+
+#: _JNJ/html/error_503.jnj:32
+msgid "Please try again later. "
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:115 _JNJ/html/gallery.jnj:40
+#: _JNJ/html/rel_nav.m.jnj:146
+msgid "Prev"
+msgstr ""
+
+#: _JNJ/html/gallery.jnj:40 _JNJ/html/photo.jnj:29
+msgid "Previous picture"
+msgstr ""
+
+#: _JNJ/html/error_500.jnj:29
+msgid "Processing the request triggered a server error. "
+msgstr ""
+
+#: _JNJ/html/clip_aggregator.jnj:54
+msgid "Read the full article at"
+msgstr ""
+
+#: _JNJ/html/e_type_admin.jnj:60
+msgid "Reenable"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:303 _JNJ/html/auth.m.jnj:497
+msgid "Register"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:300
+msgid "Register a new account"
+msgstr ""
+
+#: _JNJ/html/register.jnj:27
+#, python-format
+msgid "Register a new account for %s"
+msgstr ""
+
+#: _JNJ/html/regatta_boat.jnj:45
+#, python-format
+msgid "Register for regatta %s"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:193
+#, python-format
+msgid "Remove %s from form and database"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:490
+msgid "Repeat new password for your account"
+msgstr ""
+
+#: _JNJ/html/error_408.jnj:24
+msgid "Request Timeout"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:200
+msgid "Reset all fields to initial values"
+msgstr ""
+
+#: _JNJ/html/e_type_selector.m.jnj:105
+msgid "Reset fields"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:162
+msgid "Reset form to default"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:104
+msgid "Reset order-by criteria"
+msgstr ""
+
+#: _JNJ/html/reset_password.jnj:32
+#, python-format
+msgid "Reset password for %s"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:155
+msgid "Save"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:177
+#, python-format
+msgid "Scroll by %s weeks to anchor %s."
+msgstr ""
+
+#: _JNJ/html/e_type_selector.m.jnj:83
+#, python-format
+msgid "Select %s"
+msgstr ""
+
+#: _JNJ/html/e_type_selector.m.jnj:84
+#, python-format
+msgid "Select %s for attribute %s"
+msgstr ""
+
+#: _JNJ/html/main_nav.m.jnj:97
+#, python-format
+msgid "Select language %s"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:135
+msgid "Select the attributes to be displayed for each object"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:148
+msgid ""
+"Select the fields displayed, fields used for ordering, filters conditions"
+" used to select the objects to be displayed."
+msgstr ""
+
+#: _JNJ/html/e_type_selector.m.jnj:32
+#, python-format
+msgid "Select type of %s"
+msgstr ""
+
+#: _JNJ/html/gallery.jnj:52
+msgid "Selected picture"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:152
+msgid "Send form data to server and leave form"
+msgstr ""
+
+#: _JNJ/html/error_500.jnj:24
+msgid "Server error"
+msgstr ""
+
+#: _JNJ/html/error_503.jnj:24
+msgid "Service Unavailable"
+msgstr ""
+
+#: _JNJ/html/error_503.jnj:29
+msgid "Service is temporarily unavailable. "
+msgstr ""
+
+#: _JNJ/html/main_nav.m.jnj:151
+msgid "Show navigation"
+msgstr ""
+
+#: _JNJ/html/gallery.jnj:41
+msgid "Slide show"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:95
+msgid "Submit new email"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:167
+msgid "Submit new password"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:498
+msgid "Submit registration information"
+msgstr ""
+
+#: _JNJ/html/error_405.jnj:36
+#, python-format
+msgid "The HTTP method `%s` isn't supported by page %s"
+msgstr ""
+
+#: _JNJ/email/change_email_info.jnj:26
+#, python-format
+msgid ""
+"The email address for your account %s on website %s is about to be "
+"changed to %s due to a request from %s to %s."
+msgstr ""
+
+#: _JNJ/html/error_500.jnj:32
+msgid "The error was reported to the webmaster. "
+msgstr ""
+
+#: _JNJ/html/error_410.jnj:42
+#, python-format
+msgid "The object referred to by the web address %s was deleted"
+msgstr ""
+
+#: _JNJ/email/change_password_info.jnj:26
+#, python-format
+msgid ""
+"The password for your account %s on website %s was changed due to a "
+"request from %s to %s."
+msgstr ""
+
+#: _JNJ/html/ETR/regatta_register.m.jnj:25
+#, python-format
+msgid "The regatta for %s is cancelled"
+msgstr ""
+
+#: _JNJ/html/error_400.jnj:34
+msgid "The request could not be understood by the server due to malformed syntax."
+msgstr ""
+
+#: _JNJ/html/error_408.jnj:34
+msgid ""
+"The request was not produced within the time that the server was prepared"
+" to wait."
+msgstr ""
+
+#: _JNJ/email/verify_new_email.jnj:28
+msgid "To verify the new email address, please click the following link"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:163
+msgid "Today"
+msgstr ""
+
+#: _JNJ/html/base.jnj:121
+msgid "Top of page"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:149
+msgid "Units for `delta` movement of calendar display"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:94
+msgid "Update email"
+msgstr ""
+
+#: _JNJ/html/auth.m.jnj:166
+msgid "Update password"
+msgstr ""
+
+#: _JNJ/html/error_405.jnj:42
+#, python-format
+msgid "Use one of the HTTP methods (%s), instead."
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:149
+msgid "Use set of attributes currently displayed in form"
+msgstr ""
+
+#: _JNJ/html/e_type.m.jnj:91
+msgid "Use set of criteria currently displayed in order-by form"
+msgstr ""
+
+#: _JNJ/html/error_405.jnj:40
+#, python-format
+msgid "Use the HTTP method '%s', instead."
+msgstr ""
+
+#: _JNJ/html/e_type_selector.m.jnj:98
+#, python-format
+msgid "Use the currently selected %s"
+msgstr ""
+
+#: _JNJ/html/error_500.jnj:37
+msgid ""
+"We apologize for the inconvenience and hope to fix the problem as soon as"
+" possible. "
+msgstr ""
+
+#: _JNJ/html/cal/day.jnj:29 _JNJ/html/cal/wr_body.jnj:71
+msgid "Week"
+msgstr ""
+
+#: _JNJ/html/cal/wr_nav.jnj:52
+#, python-format
+msgid "Week %2.2d/%s"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:115
+msgid "Weeks"
+msgstr ""
+
+#: _JNJ/html/cal/wr_body.jnj:28
+msgid "Wk"
+msgstr ""
+
+#: _JNJ/html/error_403.jnj:34
+msgid "You are not authorized to access the page "
+msgstr ""
+
+#: _JNJ/html/error_403.jnj:24
+msgid "You are not authorized to access this page"
+msgstr ""
+
+#: _JNJ/html/error_401.jnj:32
+#, python-format
+msgid "You need to be logged in to access the page %s"
+msgstr ""
+
+#: _JNJ/html/error_410.jnj:34
+msgid "You requested a page that doesn't exist anymore: "
+msgstr ""
+
+#: _JNJ/html/error_404.jnj:35
+msgid "You requested a page that doesn't exist: "
+msgstr ""
+
+#: _JNJ/email/reset_password.jnj:27
+msgid "Your password was reset to the temporary value"
+msgstr ""
+
+#: _JNJ/html/empty_dir.jnj:36
+msgid "currently doesn't contain any entries"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:142
+msgid "day"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:219
+msgid "fields"
+msgstr ""
+
+#: _JNJ/html/mf3.m.jnj:353
+msgid "form errors: please correct"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:186
+msgid "limit"
+msgstr ""
+
+#: _JNJ/html/e_type_doc.m.jnj:83
+#, python-format
+msgid "maximum length: %s"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:144
+msgid "month"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:194
+msgid "offset"
+msgstr ""
+
+#: _JNJ/html/e_type_q.m.jnj:202
+msgid "order_by"
+msgstr ""
+
+#: _JNJ/html/regatta_boat.jnj:47
+msgid "register"
+msgstr ""
+
+#: _JNJ/html/error_404.jnj:42
+msgid "webmaster"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:143
+msgid "week"
+msgstr ""
+
+#: _JNJ/html/cal/wr.jnj:145
+msgid "year"
+msgstr ""
+
+#: _JNJ/html/reset_password.jnj:32
+msgid "your account"
+msgstr ""
+
+#~ msgid "Accept changes"
+#~ msgstr ""
+
+#~ msgid "Add new entry for %s"
+#~ msgstr ""
+
+#~ msgid "Add restriction"
+#~ msgstr ""
+
+#~ msgid "Change"
+#~ msgstr ""
+
+#~ msgid "Change attributes of this object"
+#~ msgstr ""
+
+#~ msgid "Change email for"
+#~ msgstr ""
+
+#~ msgid "Change email for %s"
+#~ msgstr ""
+
+#~ msgid "Change object"
+#~ msgstr ""
+
+#~ msgid "Class"
+#~ msgstr ""
+
+#~ msgid "Click to jump to the field with the first error"
+#~ msgstr ""
+
+#~ msgid "Click to jump to the next error"
+#~ msgstr ""
+
+#~ msgid "Club"
+#~ msgstr ""
+
+#~ msgid "Copy"
+#~ msgstr ""
+
+#~ msgid "Create certificate request for user %s"
+#~ msgstr ""
+
+#~ msgid "Create new %s"
+#~ msgstr ""
+
+#~ msgid "Create new object"
+#~ msgstr ""
+
+#~ msgid "Crew"
+#~ msgstr ""
+
+#~ msgid "Current Password"
+#~ msgstr ""
+
+#~ msgid "Delete"
+#~ msgstr ""
+
+#~ msgid "Delete object"
+#~ msgstr ""
+
+#~ msgid "Delete this object"
+#~ msgstr ""
+
+#~ msgid "Description"
+#~ msgstr ""
+
+#~ msgid "Discard all changes"
+#~ msgstr ""
+
+#~ msgid "Discard all changes made"
+#~ msgstr ""
+
+#~ msgid "Discard all changes made and leave popup-form"
+#~ msgstr ""
+
+#~ msgid "Discard changes"
+#~ msgstr ""
+
+#~ msgid "Display object"
+#~ msgstr ""
+
+#~ msgid "Done"
+#~ msgstr ""
+
+#~ msgid "Edit"
+#~ msgstr ""
+
+#~ msgid "Error"
+#~ msgid_plural "Errors"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "Get a new password for the username specified"
+#~ msgstr ""
+
+#~ msgid "Jump to Navigation"
+#~ msgstr ""
+
+#~ msgid "Limit number of entities displayed"
+#~ msgstr ""
+
+#~ msgid "Log into website or go to account page"
+#~ msgstr ""
+
+#~ msgid "Login for"
+#~ msgstr ""
+
+#~ msgid "MNA-Number"
+#~ msgstr ""
+
+#~ msgid "Make a copy of this object"
+#~ msgstr ""
+
+#~ msgid "Meldung"
+#~ msgstr ""
+
+#~ msgid "New Email"
+#~ msgstr ""
+
+#~ msgid "New Password"
+#~ msgstr ""
+
+#~ msgid "Next error"
+#~ msgstr ""
+
+#~ msgid "Number of first entity to display"
+#~ msgstr ""
+
+#~ msgid "Place"
+#~ msgstr ""
+
+#~ msgid "Please change the fields that have errors"
+#~ msgstr ""
+
+#~ msgid "Points"
+#~ msgstr ""
+
+#~ msgid "RLP"
+#~ msgstr ""
+
+#~ msgid "Ranking list points"
+#~ msgstr ""
+
+#~ msgid "Register a new account for "
+#~ msgstr ""
+
+#~ msgid "Remove value from entry field"
+#~ msgstr ""
+
+#~ msgid "Repeat Email"
+#~ msgstr ""
+
+#~ msgid "Repeat Password"
+#~ msgstr ""
+
+#~ msgid "Request password reset"
+#~ msgstr ""
+
+#~ msgid "Reset"
+#~ msgstr ""
+
+#~ msgid "Reset fields to start values"
+#~ msgstr ""
+
+#~ msgid "Reset password"
+#~ msgstr ""
+
+#~ msgid "Reset password for %s"
+#~ msgstr ""
+
+#~ msgid "Sail-No."
+#~ msgstr ""
+
+#~ msgid "Sailor"
+#~ msgstr ""
+
+#~ msgid "Save the attribute values as displayed in form fields"
+#~ msgstr ""
+
+#~ msgid "Save values in form entries"
+#~ msgstr ""
+
+#~ msgid "Select %s "
+#~ msgstr ""
+
+#~ msgid "Select a %s"
+#~ msgstr ""
+
+#~ msgid "Select attributes"
+#~ msgstr ""
+
+#~ msgid "Select one of the types below"
+#~ msgstr ""
+
+#~ msgid "Submit"
+#~ msgstr ""
+
+#~ msgid "Update Email"
+#~ msgstr ""
+

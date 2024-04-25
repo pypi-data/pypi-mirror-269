@@ -1,0 +1,322 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2012-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/e_type.m.jnj.media
+#
+# Purpose
+#    Media fragment for template html/e_type.m.jnj
+#
+# Revision Dates
+#     8-Mar-2012 (CT) Creation
+#    19-Mar-2012 (CT) Add rule for `ui-state-default`
+#    14-Dec-2012 (CT) Add rule for `.button.vip`
+#     3-Apr-2013 (CT) Add `Rule.clearfix` to rule for `.QR`
+#     9-Apr-2013 (CT) Include "html/ui_dialog.media"
+#    14-Mar-2014 (CT) Add rule for `.rel-nav`
+#    15-Sep-2014 (CT) Add `Style_File` for `font-awesome` and `pure`
+#    24-Oct-2014 (CT) Add `Script` for `GTW_button_pure`
+#    30-Oct-2014 (CT) Add rules for purecss/font-awesome buttons
+#     4-Dec-2014 (CT) Add rules for `.attr-filter` grid
+#    10-Dec-2014 (CT) Remove `Style_File` for `font-awesome` and `pure`
+#    22-Jan-2015 (CT) Remove rule for `.rel-nav`
+#     5-Feb-2015 (CT) Remove rule for `.button.vip`
+#    24-Mar-2015 (CT) Use `P.Rule.input_focus`, not `P.Rule.focus`
+#     8-Feb-2017 (CT) Change `margin` of `.QR`
+#    ««revision-date»»···
+#--
+
+from   __future__ import division
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".no-js"
+        , children           =
+            [ Rule
+                ( ".QR"
+                , children         =
+                    [ Rule
+                        ( "button"
+                        , P.Rule.hidden
+                        )
+                    ]
+                )
+            ]
+        )
+    , Rule
+        ( ".QR"
+        , margin             = TRBL (Em (0.5), 0)
+        , children           =
+            [ P.Rule.clearfix
+            , Rule
+                ( "a", "button"
+                , children         =
+                    [ Rule_Class
+                        ( "pure-button"
+                        , border_radius    = Em (1/4)
+                        , padding          = Em (0.6)
+                        , margin           = TRBL (Em (0.25), 0)
+                        )
+                    , Rule_Class
+                        ( "pure-button-primary", "pure-button-selected"
+                        , children         =
+                            [ Rule
+                                ( ".fa"
+                                , color            = "inherit"
+                                )
+                            ]
+                        )
+                    , Rule
+                        ( ".fa"
+                        , color            = P.color.m_blue
+                        , font_size        = Em (1.0)
+                        , height           = Em (1.0)
+                        , text_align       = "center"
+                        , width            = Em (1.0)
+                        )
+                    ]
+                )
+            , Rule
+                ( "a"
+                , children         =
+                    [ Rule_Class
+                        ( "direction", "disabler"
+                        , display          = "inline-block"
+                        , font_size        = Em (1.25)
+                        , padding          = 0
+                        , vertical_align   = "middle"
+                        , children         =
+                            [ Rule
+                                ( ".fa"
+                                , color        = P.color.m_orange
+                                )
+                            ]
+                        )
+                    ]
+                )
+            , Rule
+                ( "button"
+                , display          = "inline-block"
+                , width            = "auto"
+                , children         =
+                    [ Rule
+                        ( "b"
+                        , display          = "none"
+                        )
+                    ]
+                )
+            , Rule
+                ( "fieldset"
+                , padding          = 0
+                , children         =
+                    [ Rule_Class
+                        ( "hidden"
+                        , P.Rule.hidden
+                        )
+                    , Rule_Class
+                        ( "pure-g"
+                        , children         =
+                            [ Rule_Child
+                                ( """[class^="pure-u"]"""
+                                , children     =
+                                    Rule_Child
+                                      ( "input", "label"
+                                      , width      = Percent (99)
+                                      )
+                                )
+                            ]
+                        )
+                    ]
+                )
+            , Rule
+                ( "input"
+                , width            = Percent (60)
+                , children         =
+                    [ Rule_Class
+                        ( "number"
+                        , text_align   = "right"
+                        , width        = Em (7.0)
+                        )
+                    , Rule_Class
+                        ( "value.hidden"
+                        , display      = "none"
+                        )
+                    , Rule_Class
+                        ( "value.display"
+                        , color        = "inherit"
+                        )
+                    , P.Rule.hover
+                    , P.Rule.input_focus
+                    ]
+                )
+            , Rule
+                ( "label"
+                , children         =
+                    [ Rule
+                        ( ".op"
+                        , background   = "inherit"
+                        , border_color = P.color_border_grey
+                        , border_width = Px (2)
+                        , color        = P.color_target
+                        , display      = "inline-block"
+                        , float        = "right"
+                        , margin       = TRBL0 (l = Em (0.5))
+                        , padding      = 0
+                        , ** Border (radius = Px (10))
+                        )
+                    ]
+                )
+            , Rule_Class
+                ( "pure-form-aligned .pure-control-group label"
+                , width            = Percent (30)
+                )
+            , Rule
+                ( ".attrs"
+                , children         =
+                    [ Rule
+                        ( ".attr-filter"
+                        , background       = "inherit"
+                        , border_color     = P.color_border_grey
+                        , border_style     = "solid"
+                        , border_width     = Px (1)
+                        , color            = "inherit"
+                        , margin_right     = Em (0.5)
+                        , children         =
+                            [ Rule_Child
+                                ( """[class^="pure-u"]"""
+                                , vertical_align   = "middle"
+                                )
+                            , Rule_Child
+                                ( "b"
+                                , display          = "inline-block"
+                                , font_weight      = "normal"
+                                , text_align       = "right"
+                                )
+                            , Rule
+                                ( "input"
+                                , color            = "inherit"
+                                , vertical_align   = "bottom"
+                                , width            = Percent (99)
+                                )
+                            , Rule
+                                ( "[type=checkbox]"
+                                , min_height       = Em (2.8)
+                                )
+                            , Rule
+                                ( "label"
+                                , padding          = TRBL0 (r = Em (0.5))
+                                )
+                            , Rule
+                                ( ".op"
+                                , background       = "inherit"
+                                , border_color     = P.color_border_grey
+                                , border_width     = Px (2)
+                                , color            = P.color_target
+                                , display          = "inline-block"
+                                , margin           = TRBL (0, Px (2))
+                                , padding          = TRBL (Px (2), Px (5))
+                                , ** Border (radius = Px (10))
+                                )
+                            ]
+                        , ** Border (radius = Px (4))
+                        )
+                    ]
+                )
+            , Rule_Class
+                ( "ES"
+                , font_size        = Rem (1)
+                )
+            , Rule_Class
+                ( "order-by", "select-attr"
+                , padding          = 0
+                , children         =
+                    [ Rule
+                        ( ".attributes"
+                        , border_bottom    = Px (1)
+                        , font_size        = Rem (1)
+                        , margin_top       = Rem (0.5)
+                        , padding          = 0
+                        , children         =
+                            [ Rule
+                                ( "b"
+                                , display          = "inline-block"
+                                , padding          = 0
+                                , vertical_align   = "middle"
+                                )
+                            , Rule
+                                ( "li"
+                                , border           = P.border_simple
+                                , clear            = "both"
+                                , cursor           = "pointer"
+                                , display          = "block"
+                                , min_height       = Em (1.33)
+                                , padding          = TRBL
+                                    (Em (0.75), Em (0.5), Em (0.5))
+                                , children         =
+                                    [ P.Rule.disabled
+                                    , P.Rule.row_even
+                                    , P.Rule.row_odd
+                                    , P.Rule.hover
+                                    ]
+                                )
+                            , Rule
+                                ( "li:not(:last-child)"
+                                , border_bottom  = 0
+                                )
+                            ]
+                        )
+                    ]
+                )
+            ]
+        , ** P.font_spec_normal
+        )
+    , Media.Rule
+        ( Media.Query ("screen", max_width = Rem (45))
+        , rules               =
+            [ Rule
+                ( ".QR"
+                , children        =
+                    [ Rule
+                        ( "input"
+                        , width            = Percent (45)
+                        )
+                    , Rule_Class
+                        ( "pure-form-aligned .pure-control-group label"
+                        , width            = Percent (45)
+                        )
+                    ]
+                )
+            ]
+        )
+    , Media.Rule
+        ( Media.Query ("screen", max_width = Rem (30))
+        , rules               =
+            [ Rule
+                ( ".QR"
+                , children        =
+                    [ Rule
+                        ( "input"
+                        , width            = Percent (95)
+                        )
+                    , Rule_Class
+                        ( "pure-form-aligned .pure-control-group label"
+                        , width            = Percent (95)
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+
+Include ("html/ui_dialog.media")
+Script  (CHJ.Script._.GTW_button_pure)
+
+### __END__ html/e_type.m.jnj.media

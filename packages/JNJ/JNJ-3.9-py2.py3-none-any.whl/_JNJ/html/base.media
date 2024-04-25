@@ -1,0 +1,237 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/base.media
+#
+# Purpose
+#    Media fragment defining the base CSS styles
+#
+# Revision Dates
+#    21-Oct-2011 (CT) Creation (factored from `base.jnj.media`)
+#     8-Apr-2014 (CT) Add `resize`, `overflow` for `textarea`
+#    10-Jan-2017 (CT) Factor more rules from `base.jnj.media`
+#    ««revision-date»»···
+#--
+
+base_sheet = Style_Sheet \
+    ( Rule
+        ( "html"
+        , P.color_spec_normal, P.font_spec_normal
+        , overflow                 = "auto"
+        )
+    , Rule
+        ( "a"
+        , text_decoration          = "none"
+        , children                 =
+            [ P.Rule.link
+            , P.Rule.hover
+            , P.Rule.visited
+            ]
+        )
+    , Rule
+        ( "body"
+        , padding                  = P.body_margin
+        )
+    , Rule
+        ( "blockquote"
+        , margin_left              = Em (2.5)
+        )
+    , Rule
+        ( "caption"
+        , text_align               = "center"
+        )
+    , Rule ("em", ".em", ** P.font_spec_em)
+    , Rule
+        ( "fieldset"
+        , border                   = P.border_simple
+        , padding                  = P.input_padding
+        )
+    , Rule
+        ( "form div"
+        , margin                   = TRBL0 (t = Em (0.25), b = Em (0.5))
+        )
+    , Rule
+        ( * tuple ("h%s" % (i+1) for i in range (6))
+        , ** P.font_spec_em
+        )
+    , Rule ("h1", font_size = P.h1_font_size)
+    , Rule ("h2", font_size = P.h1_font_size -  5)
+    , Rule ("h3", font_size = P.h1_font_size - 10)
+    , Rule ("h4", font_size = P.h1_font_size - 15)
+    , Rule ("h5", font_size = P.h1_font_size - 20)
+    , Rule ("h6", font_size = P.h1_font_size - 25)
+    , Rule
+        ( "h1", "h2", "h3", "h4", "h5", "h6"
+        , P.color_spec_sub_heading
+        )
+    , Rule
+        ( "input", "select", "textarea"
+        , border                   = P.border_simple
+        , font_family              = "inherit"
+        , margin                   = P.input_margin
+        , padding                  = P.input_padding
+        , children                 =
+            [ P.Rule.focus_outline
+            , Rule
+                ( CS.Class ("Required"), CS.Attr ("required")
+                , border_width     = Px (2)
+                )
+            , Rule
+                ( CS.Class ("Necessary")
+                , border_width     = TRBL0 (b = Px (2), default = Px (1))
+                )
+            ]
+        )
+    , Rule
+        ( "input"
+        , children                 =
+            [ Rule_Attr ("[type=checkbox]", vertical_align = "bottom")
+            , Rule_Attr ("[type=radio]",    vertical_align = "text-bottom")
+            ]
+        )
+    , Rule
+        ( "input[type=submit]", "input[type=reset]", "button", "a.button"
+        , P.button_spec
+        )
+    , Rule
+        ( "legend"
+        , font_weight              = "bold"
+        , padding_bottom           = Em (1./2)
+        )
+    , Rule
+        ( "ol"
+        , list_style               = "decimal outside"
+        , margin_bottom            = Em (0.5)
+        , padding_left             = Em (2.5)
+        , children                 =
+            [ Rule
+                ( "li"
+                , margin_bottom    = Em (0.5)
+                )
+            , Rule
+                ( "ol"
+                , list_style       = "upper-alpha"
+                , margin           = TRBL0 (b = Em (0.5), l = Em (0.5))
+                , children         =
+                    [ Rule
+                        ( "ol"
+                        , list_style   = "lower-alpha"
+                        , children     =
+                            [ Rule ("ol", list_style = "lower-roman")
+                            ]
+                        )
+                    ]
+                )
+            ]
+        )
+    , Rule ("p",        margin_bottom = Em (0.5))
+    , Rule ("pre",      ** P.font_spec_pre)
+    , Rule ("strong",   font_weight = "bold")
+    , Rule
+        ( "textarea"
+        , overflow                 = "auto"
+        , resize                   = "both"
+        , ** P.font_spec_pre
+        )
+    , Rule
+        ( "tbody tr"
+        , children             =
+            [ P.Rule.row_odd
+            , P.Rule.row_even
+            , P.Rule.target
+            ]
+        )
+    , Rule
+        ( "thead tr"
+        , ** P.nav.main.color_spec_heading
+        )
+    , Rule
+        ( "td"
+        , children             =
+            [ Rule_Class
+                ( "link"
+                , children     =
+                    [ Rule
+                        ( "a"
+                        , color        = P.color.m_blue
+                        , outline      = 0
+                        , children     = [P.Rule.hover]
+                        )
+                    ]
+                )
+            ]
+        )
+    , Rule
+        ( "td", "th"
+        , padding              = TRBL (Em (0.15), Em (0.25))
+        , vertical_align       = "top"
+        , children             =
+            [ Rule_Class
+                ( "col-set"
+                , children             =
+                    [ Rule_Class
+                        ( "l", "m"
+                        , padding_right        = Em (0.25)
+                        )
+                    , Rule_Class
+                        ( "m", "r"
+                        , border_left          = 0
+                        , padding_left         = 0
+                        )
+                    ]
+                )
+            , Rule_Attr
+                ( "[colspan]"
+                , text_align   = "center"
+                )
+            , Rule_Child
+                ( "em"
+                , color        = P.color_selected
+                , font_size    = P.h1_font_size
+                , font_weight  = P.h1_font_weight
+                , width        = "100%"
+                )
+            , Rule_Child
+                ( "strong"
+                , color        = SVG_Color ("blue")
+                , padding      = TRBL0 (l = Em (1./2), r = Em (1./2))
+                , width        = "100%"
+                )
+            ]
+        )
+    , Rule
+        ( "ul"
+        , list_style               = "disc outside"
+        , margin_bottom            = Em (0.5)
+        , padding_left             = Em (1.0)
+        , children                 =
+            [ Rule
+                ( "ul"
+                , list_style       = "square"
+                , children         =
+                    [ Rule
+                        ( "ul"
+                        , list_style = "circle"
+                        , children   =
+                            [ Rule
+                                ( "ul"
+                                , list_style = "disc"
+                                )
+                            ]
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+
+### __END__ base.media

@@ -1,0 +1,93 @@
+{#- jinja template: _input.jnj -#}
+{#
+## Copyright (C) 2010-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    _input
+##
+## Purpose
+##    Factor commonalities between input_x.jnj and input_5.jnj
+##
+## Revision Dates
+##    16-Feb-2010 (CT) Creation
+##    17-Feb-2010 (CT) `select_v` added, `option` factored
+##    27-Jul-2011 (CT) `select` changed to include an empty `option` unless
+##                     `selected` (otherwise the first value is selected by
+##                     Firefox)
+##    10-Oct-2011 (CT) `select` changed to always include an empty `option`
+##     4-Dec-2011 (CT) Change `select` to include empty `option` at end if
+##                     `selected` (otherwise FF8 displays the empty value)
+##    23-Feb-2012 (CT) Change `option` to always compare `value` to `selected`
+##     3-Apr-2015 (CT) Factor `vc` in `option`
+##    16-May-2016 (CT) Use `GTW.xmlattr (kw)`, not `kw|xmlattr`
+##    18-May-2016 (CT) Change `select` to allow empty `name` argument
+##    14-Dec-2016 (CT) Change `option` to display `value`, too, if appropriate
+##    19-Dec-2016 (CT) Fix `option` display
+##    ««revision-date»»···
+##--
+#}
+
+{%- macro option (content, value = None, selected = None) -%}
+  {%- set vc = value if (value != None) else content %}
+  {%- set sa = ' selected="selected"' if selected and vc == selected else "" -%}
+  {%- set va = (' value="%s"' % (value, )) if value != None else "" -%}
+  {%- set vs = ('%s' % (value, )) if value != None else "" -%}
+  {%- set content_t = GTW._T (content) %}
+  {%- set display = "%s [%s]" % (vs, content_t)
+        if   vs
+        and  GTW.isinstance  (value, GTW.pyk.string_types)
+        and  not vs.endswith (content)
+        else content_t
+  -%}
+  <option{{ va }}{{ sa }}{{ GTW.xmlattr (kwargs) }}>{{ display }}</option>
+{%- endmacro -%} {#- option -#}
+
+{%- macro select (name, choices = (), selected = None) -%}
+  {%- set caller = kwargs.pop ("caller", None) -%}
+  {%- set kw = GTW.dict (kwargs, name = name ) %}
+  <select{{ GTW.xmlattr (kw) }}>
+    {% if not selected %}
+      {{ option ("---", "", "") }}
+    {% endif -%}
+    {% if choices %}    {# -#}
+      {% for c in choices %}
+        {{ option (c, None, selected) }}
+      {% endfor -%}
+    {%- elif caller %}
+      {{ caller () }}
+    {%- endif %}
+    {% if selected %}    {# -#}
+      {{ option ("---", "", "") }}
+    {% endif -%}
+  </select>
+{%- endmacro -%} {#- select -#}
+
+{%- macro select_v (name, choices, selected = None) -%}
+  {% call select (name, selected = selected, ** kwargs) %}
+    {% for v, c in choices %}    {# -#}
+      {{ option (c or v, v, selected) }}
+    {% endfor -%}
+  {% endcall %} {# select #}
+{%- endmacro -%} {#- select_v -#}
+
+{%- macro textarea (cols, rows) -%}
+  {%- set value  = kwargs.pop ("value",  None) -%}
+  {%- set caller = kwargs.pop ("caller", None) -%}
+  <textarea cols="{{ cols }}" rows="{{ rows }}"{{ GTW.xmlattr (kwargs) }}>
+    {%- if value -%}
+      {{ value }}
+    {%- elif caller -%}
+      {{ caller () }}
+    {%- endif -%}
+  </textarea>
+{%- endmacro -%}
+
+{#- __END__ jinja template: _input.jnj -#}

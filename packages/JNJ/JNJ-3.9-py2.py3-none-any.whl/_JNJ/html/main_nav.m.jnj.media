@@ -1,0 +1,340 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JBJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/main_nav.m.jnj.media
+#
+# Purpose
+#    Media fragment for html/main_nav.m.jnj
+#
+# Revision Dates
+#    10-Jan-2017 (CT) Creation
+#    16-Jan-2017 (CT) Modernize styling
+#    ««revision-date»»···
+#--
+
+from   __future__  import absolute_import
+from   __future__  import division
+from   __future__  import print_function
+from   __future__  import unicode_literals
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".main-nav"
+        , children =
+            [ Rule
+                ( "input", "button"
+                , background_color = P.nav.main.background_color
+                , border           = P.border_simple
+                , display          = "block"
+                , padding          = P.input_padding
+                , children         =
+                    [ Rule_Attr
+                        ( "[type=submit]", "[type=reset]"
+                        , Border           (radius = P.nav.border_radius)
+                        , width            = P.nav.main.width * 0.975
+                        , max_width        = P.nav.main.max_button_width
+                        , children         =
+                            [ P.Rule.hover
+                            , Rule
+                                ( "b"
+                                , font_weight      = "normal"
+                                )
+                            , Rule
+                                ( "i.fa"
+                                , float            = "left"
+                                , margin           =
+                                    TRBL0 (l = Em (1/2), t = Em (3/16))
+                                )
+                            ]
+                        , ** P.nav.main.button_spec
+                        )
+                    , Rule_Attr ("[type=hidden]", display = "none")
+                    ]
+                )
+            , Rule
+                ( "li"
+                , margin         = 0
+                , padding        = TRBL (P.nav.main.vert_padding, 0)
+                , children       =
+                    [ Rule
+                        ( "a", "b"
+                        , display          = "block"
+                        , padding_left     = P.nav.main.li_left
+                        )
+                    , Rule
+                        ( "a img"
+                        , display          = "block"
+                        , margin           = 0
+                        , padding          = 0
+                        )
+                    , Rule
+                        ( ".no-link"
+                        , P.nav.main.color_spec_no_link
+                        , font_weight      = "normal"
+                        )
+                    ]
+                )
+            , Rule
+                ( "li li"
+                , children =
+                    [ Rule ( "a", "b", padding_left = P.nav.main.li_left * 2)]
+                )
+            , Rule
+                ( "li li li"
+                , children =
+                    [ Rule ( "a", "b", padding_left = P.nav.main.li_left * 3)]
+                )
+            , Rule
+                ( "li li li li"
+                , children =
+                    [ Rule ( "a", "b", padding_left = P.nav.main.li_left * 4)]
+                )
+            , Rule
+                ( "li li li li li"
+                , children =
+                    [ Rule ( "a", "b", padding_left = P.nav.main.li_left * 5)]
+                )
+            , Rule
+                ( "li li li li li li"
+                , children =
+                    [ Rule ( "a", "b", padding_left = P.nav.main.li_left * 6)]
+                )
+            , Rule
+                ( "li li li li li li li"
+                , children =
+                    [ Rule ( "a", "b", padding_left = P.nav.main.li_left * 7)]
+                )
+            , Rule
+                ( "a.current-section"
+                , "a.current-section:link"
+                , "a.current-section:visited"
+                , "li.current-section"
+                , font_weight = "bold"
+                , ** P.nav.main.color_spec_section_current
+                )
+            , Rule
+                ( "a.current-link"
+                , "a.current-link:link"
+                , "a.current-link:visited"
+                , "b.current-link"
+                , Border        (radius = P.nav.border_radius)
+                , font_weight = 500
+                , ** P.nav.main.color_spec_link_current
+                )
+            , Rule
+                ( "a.current-link", "b.current-link"
+                , children    =
+                    [ Rule
+                        ( "a"
+                        , background_color   = "transparent"
+                        , color              = P.nav.main.mark_color_link
+                        , display            = "inline-block"
+                        , font_size          = P.nav.main.a_font_size_current
+                        , margin             = TRBL0
+                            ( l = - P.nav.main.li_left
+                            , r = + P.nav.main.li_left - P.nav.main.mark_width
+                            )
+                        , padding            = 0
+                        )
+                    , Rule
+                        ( "i"
+                        , Border
+                            ( style          = "solid"
+                            , color          = C_TRBL0
+                                ( default    = "transparent"
+                                , l          = P.nav.main.mark_color_link
+                                )
+                            , width          = TRBL0
+                                ( default    = P.nav.main.mark_width
+                                , r          = 0
+                                )
+                            )
+                        , display            = "inline-block"
+                        , height             = 0
+                        , margin             = TRBL0
+                            ( l = - P.nav.main.li_left
+                            , r = + P.nav.main.li_left - P.nav.main.mark_width
+                            )
+                        , width              = 0
+                        )
+                    , Rule
+                        ( "i.fa"
+                        , border             = 0
+                        , height             = "inherit"
+                        , margin             = 0
+                        , width              = "inherit"
+                        )
+                    ]
+                )
+            , Rule
+                ( "a.current-section i"
+                , Border
+                    ( style   = "solid"
+                    , color   = C_TRBL0
+                        ( default = "transparent"
+                        , t       = P.nav.main.mark_color_section
+                        )
+                    , width   = TRBL0
+                        ( default = P.nav.main.mark_width
+                        , b       = 0
+                        )
+                    )
+                , display        = "inline-block"
+                , height         = 0
+                , margin         = TRBL0
+                    ( b = + P.nav.main.vert_padding
+                    , l = - P.nav.main.li_left
+                    , r = + P.nav.main.li_left - P.nav.main.mark_width
+                    )
+                , width          = 0
+                )
+            , Rule
+                ( "a.current-section.current-link i"
+                , border_color   = C_TRBL0
+                    (default = "transparent", t = P.nav.main.mark_color_link)
+                )
+            , Rule
+                ( "a"
+                , text_decoration  = "none"
+                , children                 =
+                    [ P.Rule.link    (P.nav.main.color_spec_link)
+                    , P.Rule.visited (P.nav.main.color_spec_no_link)
+                    ]
+                )
+            , Rule
+                ( "a", "a.current-section", "li.nav-link"
+                , Border               (radius = P.nav.border_radius)
+                , children             =
+                    [ P.Rule.hover
+                    ]
+                )
+            , Rule
+                ( "h1"
+                , border_bottom  = P.border_double
+                , font_size      = Percent (100)
+                , font_weight    = 800
+                , line_height    = P.line_height_heading
+                , margin         = TRBL0 (b = Em (1./4))
+                , padding_left   = Em (0.50)
+                , position       = "relative"
+                , children       =
+                    [ Rule
+                        ( "a", "b"
+                        , position       = "absolute"
+                        , right          = Em (0.5)
+                        )
+                    , Rule
+                        ( "a", "a:link", "a:visited"
+                        , color          = "inherit"
+                        )
+                    ]
+                )
+            , Rule ("section", margin_bottom = Em (1./2))
+            , Rule
+                ( "table.calendar tbody th"
+                , padding        = TRBL0 (l = Em (0.50))
+                )
+            , Rule
+                ( "ul"
+                , font_weight    = "normal"
+                , list_style     = "none"
+                , margin         = 0
+                , overflow       = "hidden"
+                , padding        = TRBL0 (l = Em (1./8))
+                , children       =
+                    [ Rule ("label", ** P.nav.main.color_spec_label)
+                    ]
+                , ** P.nav.main.color_spec_link
+                )
+            , Rule
+                ( ".calendar"
+                , font_size      = P.cal.font_size
+                , line_height    = P.cal.line_height
+                , max_width      = P.nav.main.max_button_width
+                , children       =
+                    [ Rule ("a", padding = 0)
+                    , Rule ("span.event", border = 0)
+                    , Rule
+                        ( "th.week-number"
+                        , height     = Em (1.5)
+                        , padding    = TRBL0 (0, Em (0.25), Em (0.1))
+                        , width      = Em (1.5)
+                        )
+                    , Rule
+                        ( "thead"
+                        , display = "none"
+                        )
+                    , Rule ("th", padding = TRBL (0, Em (0.25), Em (0.1)))
+                    , Rule
+                        ( ".date"
+                        , background_color = "inherit"
+                        )
+                    , Rule
+                        ( ".saturday", ".sunday"
+                        , color            = "inherit"
+                        )
+                    ]
+                )
+            , Rule
+                ( "section.login"
+                , children       =
+                    [ Rule
+                        ( "a", "button"
+                        , P.nav.main.button_spec
+                        , display          = "block"
+                        , padding          = P.input_padding
+                        , width            = Percent (95)
+                        , children         =
+                            [ P.Rule.hover
+                            , Rule
+                                ( "b"
+                                , font_weight      = "normal"
+                                )
+                            , Rule
+                                ( "i.fa"
+                                , float            = "left"
+                                , margin           =
+                                    TRBL0 (l = Em (1/2), t = Em (3/16))
+                                )
+                            ]
+                        )
+                    , Rule
+                        ( "ul", "p"
+                        , width            = Percent (100)
+                        , max_width        = P.nav.main.max_button_width
+                        )
+                    ]
+                )
+            , Rule
+                ( "section.language-selection"
+                , children       =
+                    [ Rule_Child
+                        ( "span"
+                        , display          = "block"
+                        )
+                    , Rule
+                        ( "a"
+                        , display          = "block"
+                        , padding          = Em (1)
+                        )
+                    ]
+                )
+            , Rule
+                ( "#weblinks li.nav-link:hover"
+                , "#weblinks li.nav-link a:hover"
+                , ** P.nav.main.color_spec_web_link_hover
+                )
+            ]
+        )
+    )
+
+### __END__ html/main_nav.m.jnj.media

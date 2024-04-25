@@ -1,0 +1,431 @@
+{#- jinja template: nginx.m.jnj -#}
+{#
+## Copyright (C) 2016-2018 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    nginx
+##
+## Purpose
+##    Template macros for nginx config
+##
+## Revision Dates
+##    10-Nov-2016 (CT) Creation
+##    17-Nov-2016 (CT) Add `ssl_dhparam`
+##                     + https://weakdh.org/sysadmin.html
+##    22-Mar-2018 (CT) Add `plugin` to `uwsgi_config_ini`
+##    18-Jun-2018 (CT) Change `block` to allow `list` values for `kwargs`
+##    18-Jun-2018 (CT) Add `X-` headers to `_use_uwsgi_*` macros
+##    18-Jun-2018 (CT) Add `force_ssl_p` to `gtw_host`, `_use_uwsgi_*`
+##    18-Jun-2018 (CT) Add `Content-Security-Policy` header
+##    ««revision-date»»···
+##--
+#}
+
+{########## macro ** block ** #################################################}
+{%- macro block (head, indent = "") -%}
+  {%- set _caller = kwargs.pop ("caller", None) -%}
+  {%- set indent1 = indent + "    " %}
+  {%- set kw      = GTW.dict (kwargs) %}
+{#- #}
+{{ indent }}{{ head }} {{ '{' }}
+{% for k, v in GTW.sorted (kw.items ()) -%}
+{#- #}
+{%- if GTW.isinstance (v, GTW.list) %}
+{%- for ve in v %}
+{%- if ve %}
+{{ indent1 }}{{ k }} {{ ve -}};
+{% endif -%}
+{% endfor -%}
+{%- else %}
+{{ indent1 }}{{ k }} {{ v -}};
+{% endif -%}
+{% endfor -%}
+{#- #}
+{%- if _caller %}{{ _caller () }}{% endif %}
+{#- #}
+{{ indent }}{{ '}' }}
+{% endmacro -%} {#- block -#}
+
+{########## macro ** config_file ** ###########################################}
+{%- macro config_file
+        ( server_name, host_macros, config_name
+        , app_root    = None
+        , doc_root    = None
+        , log_dir     = None
+        , aliases     = ()
+        )
+-%}
+  {%- set kw = GTW.dict (kwargs) %}
+### {{ config_name or (server_name + ".conf") }}
+###
+### Nginx configuration for `{{ server_name }}`
+### * Use this file as template or just move it into the appropriate
+###   nginx configuration directory
+###   + Debian: /etc/nginx/sites-available/ and /etc/nginx/sites-enabled/
+###   + Others: /etc/nginx/conf.d/
+###
+{%- for hm in host_macros %}
+  {%- if GTW.isinstance (hm, GTW.pyk.string_types) %}
+    {%- set hm = GTW.get_macro (hm, templ_name = kw.get ("macro_module")) %}
+  {% endif -%}
+{#- #}
+
+{{ hm
+    ( server_name = server_name
+    , app_root    = app_root
+    , doc_root    = doc_root
+    , log_dir     = log_dir
+    , aliases     = aliases
+    , ** kw
+    )
+}}
+{% endfor -%}
+{%- endmacro -%} {#- config_file -#}
+
+{########## macro ** force_ssl ** #############################################}
+{%- macro force_ssl () %}
+  {%- set kw = GTW.dict (kwargs) %}
+    add_header Strict-Transport-Security "max-age=15768000; includeSubDomains; preload;";
+{% endmacro -%} {#- force_ssl -#}
+
+{########## macro ** gtw_host ** ##############################################}
+{%- macro gtw_host
+        ( server_name, script, admin, app_root, doc_root
+        , address    = "*"
+        , port       = "80"
+        , aliases    = ()
+        )
+-%}
+  {%- set _caller       = kwargs.pop ("caller", None) -%}
+  {%- set force_ssl_p   = kwargs.get ("force_ssl_p", 0) -%}
+  {%- set lib_dir       = kwargs.get ("lib_dirs", ["lib"]) [-1] -%}
+  {%- set x_locs        = kwargs.pop ("extra_locations", {}) -%}
+  {%- set xxgi_macro    = kwargs.pop ("xxgi_macro", use_uwsgi) -%}
+  {%- set kw            = GTW.dict   (kwargs, port = port) -%}
+{% call server
+    ( server_name  = server_name
+    , address      = address
+    , admin        = admin
+    , app_root     = app_root
+    , aliases      = aliases
+    , doc_root     = doc_root
+    , ** kw
+    )
+-%}
+{% if _caller %}{{ _caller () }}{% endif %}
+{%- if force_ssl_p %}{{ force_ssl () }}{% endif %}
+{#- #}
+{{ gtw_locations (app_root, doc_root, lib_dir) }}
+{%- for loc, spec in GTW.sorted (x_locs.items ()) %}
+{#- #}
+
+{{ block ("location %s" % (loc, ), "    ", ** spec) }}
+{% endfor -%}
+{#- #}
+
+{{ xxgi_macro (app_root, script, server_name, ** kw) }}
+  {%- endcall %} {# server #}
+{%- endmacro -%} {#- gtw_host -#}
+
+{########## macro ** gtw_host_ssl ** ##############################################}
+{%- macro gtw_host_ssl
+        ( server_name, script, admin, app_root, doc_root
+        , address   = "*"
+        , port      = "443"
+        , aliases   = ()
+        )
+-%}
+  {%- set _caller = kwargs.pop ("caller", None) -%}
+  {%- set l_tail  = "ssl" + (" http2" if kwargs.pop ("HTTP2", None) else "") %}
+  {%- set kw      = GTW.dict (kwargs) %}
+{% call gtw_host
+    ( server_name  = server_name
+    , script       = script
+    , address      = address
+    , port         = port
+    , admin        = admin
+    , aliases      = aliases
+    , app_root     = app_root
+    , doc_root     = doc_root
+    , force_ssl_p  = 1
+    , listen_tail  = l_tail
+    , ** kw
+    )
+-%}
+{{ use_ssl   (** kw) }}
+{% if _caller %}{{ _caller () }}{% endif -%}
+{% endcall %} {# gtw_host #}
+{% endmacro -%} {#- gtw_host_ssl -#}
+
+{########## macro ** gtw_host_80_redirect ** #########################################}
+{%- macro gtw_host_80_redirect
+        ( server_name, admin
+        , address   = "*"
+        , aliases   = ()
+        , real_name = None
+        )
+-%}
+  {%- set _caller = kwargs.pop ("caller", None) -%}
+  {%- set kw      = GTW.dict (kwargs) %}
+{% call _server (server_name, address, "80", aliases) -%}
+{{ logfiles (server_name, port, ** kw) }}
+{#- #}
+
+{% call block ("location /", "    ") %}
+        return 301 https://{{ real_name or server_name }}$request_uri;
+{% endcall %} {# block #}
+{#- #}
+
+{% if _caller %}{{ _caller () }}{% endif -%}
+{% endcall %} {# _server #}
+{%- endmacro -%} {#- gtw_host_80_redirect -#}
+
+{########## macro ** gtw_locations ** #########################################}
+{%- macro gtw_locations (app_root, doc_root, lib_dir) -%}
+  {%- set app_media_alias = GTW.pjoin (app_root,          "www/media/") %}
+  {%- set lib_media_alias = GTW.pjoin (app_root, lib_dir, "_GTW/media/$1") %}
+  {%- set indent0 = "    " %}
+  {%- set indent1 = indent0 * 2 %}
+  {%- set kw      = GTW.dict (kwargs) %}
+{#- #}
+{% call block
+    ( "location /media/", indent0
+    , access_log    = "on"
+    , alias         = app_media_alias
+    , autoindex     = "off"
+    , etag          = "on"
+    , expires       = "14d"
+    , log_not_found = "on"
+    )
+-%}
+{#- #}
+
+{{ block ("location /media/v", indent1, expires = "max") }}
+{#- #}
+
+{{ block ("location ~ ^/media/GTW/(.*)$", indent1, alias = lib_media_alias) }}
+{#- #}
+
+{{ block ("location ~* \.(gif|jpe?g|png|ico)$", indent1, expires = "max") }}
+  {%- endcall %} {# block #}
+{%- endmacro -%} {#- gtw_locations -#}
+
+{########## macro ** logfiles ** ##############################################}
+{%- macro logfiles (server_name, port, log_dir = None) -%}
+  {%- set kw = GTW.dict (kwargs) %}
+  {%- if not log_dir %}
+    {%- set log_dir = "/var/log/nginx" %}
+  {%- endif %}
+{#- #}
+
+    access_log {{ log_dir -}}/{{- server_name -}}.access_log {{ config_options.get ("logfile_fmt",     "combined") }}{#- #};
+    error_log  {{ log_dir -}}/{{- server_name -}}.error_log  {{ config_options.get ("err_logfile_fmt", "") }}{#- #};
+{%- endmacro -%} {#- logfiles -#}
+
+{########## macro ** server ** ################################################}
+{%- macro server
+        ( server_name
+        , address   = ""
+        , port      = "80"
+        , admin     = None
+        , app_root  = None
+        , doc_root  = None
+        , log_dir   = None
+        , aliases   = ()
+        )
+-%}
+  {%- set _caller = kwargs.pop ("caller", None) -%}
+  {%- if app_root and not doc_root %}
+    {%- set doc_root = app_root %}
+  {%- endif %}
+  {%- set kw = GTW.dict (kwargs) %}
+{#- #}
+{% call _server
+    ( server_name, address, port, aliases
+    , listen_tail = kwargs.pop ("listen_tail", None)
+    )
+-%}
+{#- #}
+
+    {% if doc_root %}root {{ doc_root }};{% endif %}
+
+    server_name_in_redirect on;
+
+    {{- logfiles (server_name, port, log_dir) }}
+
+    add_header Content-Security-Policy "frame-ancestors 'none'; base-uri 'none'";
+    add_header X-Frame-Options "SAMEORIGIN";
+    add_header X-Content-Type-Options "nosniff 'always'";
+    add_header X-Xss-Protection "1";
+
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_types
+        application/javascript
+        application/json
+        text/css
+        text/plain
+        image/svg+xml;
+
+{% if _caller %}{{ _caller () }}{% endif -%}
+{% endcall %} {# _server #}
+{% endmacro -%} {#- server -#}
+
+{########## macro ** _server ** ###############################################}
+{%- macro _server (server_name, address, port, aliases, listen_tail = None)
+-%}
+  {%- set _caller = kwargs.pop ("caller", None) -%}
+  {%- set kw      = GTW.dict (kwargs) %}
+  {%- set listen_arg = "%s:%s" % (address, port)
+          if address and address != "*" else port
+  %}
+  {%- if listen_tail %}
+    {%- set listen_arg = " ".join ((listen_arg, listen_tail)) %}
+  {% endif -%}
+  {%- set server_names = " ".join (GTW.ichain ((server_name, ), aliases)) %}
+{#- #}
+
+{% call block
+    ( "server", ""
+    , listen        = listen_arg
+    , server_name   = server_names
+    , ** kw
+    )
+-%}
+{#- #}
+{% if _caller %}{{ _caller () }}{% endif -%}
+{%- endcall %} {# block #}
+{%- endmacro -%} {#- _server -#}
+
+{########## macro ** use_ssl ** #############################################}
+{%- macro use_ssl
+        ( ssl_certificate
+        , ssl_certificate_key
+        , ssl_ciphers
+        , ssl_protocols
+        )
+-%}
+  {%- set _caller = kwargs.pop ("caller", None) -%}
+  {%- set kw      = GTW.dict (kwargs) %}
+{#- #}
+    ssl_certificate           {{ ssl_certificate }};
+    ssl_certificate_key       {{ ssl_certificate_key }};
+    ssl_ciphers               '{{ ssl_ciphers }}';
+    ssl_dhparam               /etc/ssl/private/dhparams.pem;
+    ssl_prefer_server_ciphers on;
+    ssl_protocols             {{ ssl_protocols }};
+    ssl_session_cache         shared:SSL:128m;
+{#- #}
+{% if _caller %}{{ _caller () }}{% endif -%}
+{% endmacro -%} {#- use_ssl -#}
+
+{########## macro ** use_uwsgi ** #############################################}
+{%- macro use_uwsgi (app_root, script, server_name) -%}
+  {%- set app = kwargs.get ("app_name") or "%s__%s" %
+          (server_name.replace (".", "_"), kwargs.get ("port"))
+  -%}
+  {%- set socket = kwargs.get ("socket") or "unix:/tmp/%s.sock" % (app, ) %}
+  {%- set kw     = GTW.dict (kwargs) %}
+{#- #}
+
+{%- if kwargs.get ("static_pages") %}
+{{ _use_uwsgi_sd (app_root, app, socket, ** kw)}}
+{%- else %}
+{{ _use_uwsgi_d (app_root, app, socket, ** kw)}}
+{% endif -%}
+{%- endmacro -%} {#- use_uwsgi -#}
+
+{########## macro ** _use_uwsgi_d ** ##########################################}
+{%- macro _use_uwsgi_d (app_root, app, socket) -%}
+  {%- set force_ssl_p = kwargs.pop ("force_ssl_p", 0) %}
+  {%- set kw = GTW.dict (kwargs) %}
+{#- #}
+{#-
+## `location /` needs to list all required `add_header` statements
+## * the ones defined in the `server` scope do not apply :-(
+-#}
+{% call block
+    ( "location /", "    "
+    , add_header      =
+        [ 'Vary "Cookie"'
+        , 'Content-Security-Policy "frame-ancestors \'none\'; base-uri \'none\'"'
+        , 'X-Content-Type-Options "nosniff"'
+        , 'X-Xss-Protection "1"'
+        ]
+    , include         = "uwsgi_params"
+    , proxy_buffering = "off"
+    , uwsgi_pass      = socket
+    )
+-%}
+{%- if force_ssl_p %}{{ force_ssl () }}{% endif %}
+{% endcall %} {# block #}
+{%- endmacro -%} {#- _use_uwsgi_sd -#}
+
+{########## macro ** _use_uwsgi_sd ** #########################################}
+{%- macro _use_uwsgi_sd (app_root, app, socket) -%}
+  {%- set force_ssl_p = kwargs.pop ("force_ssl_p", 0) %}
+  {%- set kw = GTW.dict (kwargs) %}
+{#- #}
+{#-
+## `location @` needs to list all required `add_header` statements
+## * the ones defined in the `server` scope do not apply :-(
+-#}
+{% call block
+    ( "location @" + app, "    "
+    , add_header      =
+        [ 'Vary "Cookie"'
+        , 'Content-Security-Policy "frame-ancestors \'none\'; base-uri \'none\'"'
+        , 'X-Content-Type-Options "nosniff"'
+        , 'X-Xss-Protection "1"'
+        ]
+    , include         = "uwsgi_params"
+    , proxy_buffering = "off"
+    , uwsgi_pass      = socket
+    )
+-%}
+{%- if force_ssl_p %}{{ force_ssl () }}{% endif %}
+{% endcall %} {# block #}
+{#- #}
+
+{{ block
+    ( "location /", "    "
+    , root            = GTW.pjoin (app_root, "static")
+    , try_files       = "$uri $uri/ $uri.html @%s" % (app, )
+    )
+  }}
+{%- endmacro -%} {#- _use_uwsgi_sd -#}
+
+{########## macro ** uwsgi_config_ini ** #############################################}
+{%- macro uwsgi_config_ini (server_name, config_name) -%}
+  {%- set py_path = kwargs.pop ("py_path", []) -%}
+  {%- set plugin  = kwargs.pop ("plugin", "python") -%}
+  {%- set fmt     = "%-15s = %s" %}
+  {%- set kw      = GTW.dict (kwargs) %}
+### {{ config_name or (server_name + ".ini") }}
+###
+### uwsgi configuration for `{{ server_name }}`
+### * Use this file as template or just move it into the appropriate
+###   uwsgi configuration directory
+###   + Debian: /etc/uwsgi/apps-available/ and /etc/uwsgi/apps-enabled/
+###
+[uwsgi]
+{{ fmt % ("plugin", plugin) }}
+{% for k, v in GTW.sorted (kw.items ()) if v != None %}
+{#- #}
+{{ fmt % (k.replace ("_", "-"), v) }}
+{% endfor -%}
+{%- for p in py_path %}
+{{ fmt % ("pythonpath", p) }}
+{% endfor -%}
+{%- endmacro -%} {#- uwsgi_config_ini -#}
+
+{#- __END__ jinja template: nginx.m.jnj -#}

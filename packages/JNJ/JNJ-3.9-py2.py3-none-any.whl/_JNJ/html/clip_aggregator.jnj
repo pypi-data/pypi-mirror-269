@@ -1,0 +1,83 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: clip_aggregator.jnj -#}
+{#
+## Copyright (C) 2010-2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    clip_aggregator
+##
+## Purpose
+##    Template and macros for displaying aggregated news clips
+##
+## Revision Dates
+##    12-Apr-2010 (CT) Creation
+##     6-Oct-2013 (CT) Add `with context` to import
+##    19-Feb-2014 (CT) Move `-sep` from `clip` to `aggregator`
+##    17-Nov-2015 (CT) Add guards for `page.top.dynamic_nav_p`
+##    14-Dec-2015 (CT) Add `random_picture`
+##    ««revision-date»»···
+##--
+#}
+
+{%- macro aggregator (page) -%}
+  {%- set calendar_p = calendar and page.top.dynamic_nav_p %}
+  {%- if calendar_p %}
+    {%- import "html/cal/wr.jnj" as C with context %}
+    {%- set n = 2 if calendar.today.weekday < 4  else 3 %}
+    {{- C.week_roller_body (calendar, weeks = calendar.weeks [1:n]) -}}
+  {% endif %}
+  {% for c in clips %}
+    {%- if calendar_p or not loop.first %}
+      <div class="{{ page.css_class }}-sep">&nbsp;</div>
+    {% endif -%}
+    {{ clip (page, c) }}
+  {% endfor -%}
+  {%- if random_picture and not clips %}
+    {%- set gall = page.top.page_from_obj (random_picture.left) %}
+    {%- set pic  = random_picture %}
+    <div class="photo">
+      {%- onion gall %}
+        {%- head %}
+          <a href="{{ gall.permalink }}">
+        {%- body %}
+            <img alt="{{ pic.left.title }}" {# -#}
+                 title="{{ pic.left.title }}" {# -#}
+                 src="{{ "/" + pic.photo.path }}" {# -#}
+                 height="{{ pic.photo.height }}" width="{{ pic.photo.width }}"{# -#}
+            />
+        {%- tail %}
+          </a>
+        {%- endonion %}
+    </div>
+  {% endif -%}
+{%- endmacro -%} {#- aggregator -#}
+
+{%- macro clip (page, c) -%}
+  {%- set link = c.link_to %}
+  <div class="{{ page.css_class }}">
+    {{ c.contents | safe }}
+    {%- if link %}
+      <p class="{{ page.css_class }}-more">{#--#}
+        <a href="{{ link }}"
+          title="{{ '%s %s' % (GTW._T ('Read the full article at'), link) }}"
+        >{#--#}
+          {{ GTW._T ("More") }}...{#--#}
+        </a>{#--#}
+      </p>
+    {%- endif %}
+  </div>
+{%- endmacro -%} {#- clip -#}
+
+{%- block document -%}
+  {{- aggregator (page) -}}
+{%- endblock document -%}
+
+{#- __END__ jinja template: clip_aggregator.jnj -#}

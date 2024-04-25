@@ -1,0 +1,33 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: video.jnj -#}
+{#
+## Copyright (C) 2010-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/video.jnj
+##
+## Purpose
+##    Template for a page with embedded video
+##
+## Revision Dates
+##    27-Jan-2010 (CT) Creation
+##    27-Nov-2015 (CT) Use `page.contents`, add `rel_nav_buttons`
+##    16-Jan-2017 (CT) Remove `rel_nav_buttons`
+##    ««revision-date»»···
+##--
+#}
+
+{%- block document -%}
+  <h2>{{ page.title }}</h2>
+  {{ page.contents|safe }}
+{%- endblock document -%}
+
+{#- __END__ jinja template: video.jnj -#}

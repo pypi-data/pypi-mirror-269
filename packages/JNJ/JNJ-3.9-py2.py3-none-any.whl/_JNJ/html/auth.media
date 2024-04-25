@@ -1,0 +1,66 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2012-2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/auth.media
+#
+# Purpose
+#    Media fragment for auth templates
+#
+# Revision Dates
+#     9-Oct-2012 (CT) Creation
+#    16-Jan-2013 (CT) Add rules for `a.button` and `input`
+#     4-Dec-2013 (CT) Renamed from `login.jnj.media` to `auth.media`
+#    ««revision-date»»···
+#--
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( "form.Auth"
+        , children =
+            [ Rule
+                ( "ul"
+                , list_style     = "none"
+                , margin         = 0
+                , padding        = TRBL0 (l = Em (1./8))
+                , children       =
+                    [ Rule
+                        ( "a.button", "input"
+                        , display          = "inline-block"
+                        , margin_bottom    = Em (0.5)
+                        , min_width        = Em (15.0)
+                        )
+                    , Rule
+                        ( "a.button", "input[type=submit]"
+                        , background_color = P.color_heading
+                        , color            = P.color_selected
+                        , font_size        = Percent (115)
+                        , font_weight      = "bold"
+                        , margin_bottom    = Em (1.0)
+                        )
+                    , Rule
+                        ( ".account-name"
+                        , font_size        = P.h1_font_size + 10
+                        , font_weight      = "bold"
+                        , line_height      = P.line_height_heading
+                        )
+                    , Rule
+                        ( "label"
+                        , display          = "inline-block"
+                        , padding          = TRBL (Em (0.2), Em (0.5))
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+
+### __END__ html/auth.media

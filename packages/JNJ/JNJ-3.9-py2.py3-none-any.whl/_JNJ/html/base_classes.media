@@ -1,0 +1,160 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/base_classes.media
+#
+# Purpose
+#    Media fragment with CSS rules for basic classes
+#
+# Revision Dates
+#    11-Jan-2017 (CT) Creation (factored from `base.jnj.media`)
+#    ««revision-date»»···
+#--
+
+from   __future__  import absolute_import
+from   __future__  import division
+from   __future__  import print_function
+from   __future__  import unicode_literals
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".Error-Message"
+        , P.color_spec_error
+        , font_weight        = "bold"
+        , padding            = TRBL (Em (0.2), Em (0.5))
+        )
+    , Rule
+        ( ".centered"
+        , clear              = "both"
+        , text_align         = "center"
+        )
+    , Rule
+        ( ".clickable", "a[data-action]"
+        , cursor             = "pointer"
+        )
+    , Rule
+        ( ".added"
+        , border             = P.border_added
+        , font_weight        = "bold"
+        , vertical_align     = "top"
+        )
+    , Rule
+        ( ".deleted"
+        , border             = P.border_deleted
+        , opacity            = 0.8
+        , text_decoration    = "line-through"
+        , vertical_align     = "top"
+        )
+    , Rule
+        ( ".added-inline"
+        , border             = P.border_added
+        , font_weight        = "bold"
+        )
+    , Rule
+        ( ".deleted-inline"
+        , border             = P.border_deleted
+        , opacity            = 0.8
+        , text_decoration    = "line-through"
+        )
+    , Rule
+        ( ".full-width"
+        , width              = Percent (99)
+        )
+    , Rule (".hbox",          ** P.hbox_spec)
+    , Rule
+        ( ".headline"
+        , font_size          = P.h1_font_size + 10
+        , ** P.color_spec_heading
+        )
+    , Rule
+        ( ".hidden"
+        , display            = "none"
+        , visibility         = "hidden"
+        )
+    , Rule
+        ( ".invisible"
+        , visibility         = "hidden"
+        )
+    , Rule (".just-c",        text_align     = "center")
+    , Rule (".just-l",        text_align     = "left")
+    , Rule (".just-r",        text_align     = "right")
+    , Rule (".large",         font_size      = Percent (120))
+    , Rule (".module",        overflow       = "auto")
+           ### http://learnlayout.com/clearfix.html
+    , Rule (".normal",        ** P.color_spec_normal)
+    , Rule ("a.nospam",       color          = P.link_color)
+    , Rule ("p.nospam",       display        = "inline")
+    , Rule (".placeholden",   color          = P.color_dark_grey)
+    , Rule (".rotate-45-left", P.Rule.rotate_45_left)
+    , Rule (".vbox",          float          = "left")
+    , Rule (".vboxr",         float          = "right")
+    , Rule (".vert-b",        vertical_align = "bottom")
+    , Rule (".vert-m",        vertical_align = "middle")
+    , Rule (".vert-t",        vertical_align = "top")
+    , Rule (".w1o2",          width          = Percent (50))
+    , Rule (".w1o3",          width          = Percent (100./3))
+    , Rule (".w1o4",          width          = Percent (25))
+    , Rule (".w1o5",          width          = Percent (20))
+    , Rule (".w2o3",          width          = Percent (200./3))
+    , Rule (".w2o5",          width          = Percent (40))
+    , Rule (".w3o4",          width          = Percent (75))
+    , Rule (".w3o5",          width          = Percent (60))
+    , Rule (".w4o5",          width          = Percent (80))
+    , Rule
+        ( ".vbox:last-child", ".w1o1"
+        , display        = "block"
+        , float          = "none"
+        , width          = "auto"
+        )
+    , Rule
+        ( "div", "img", "table"
+        , children       =
+            [ Rule_Class
+                ( "centered"
+                , display        = "block"
+                , height         = "auto"
+                , margin         = "1em auto"
+                , text_align     = "left"
+                , width          = "auto"
+                )
+            ]
+        )
+    , Rule
+        ( "div.centered .line"
+        , max_width      = P.pg_main_max_width
+        , text_align     = "center"
+        )
+    , Rule
+        ( "img"
+        , height         = "auto"
+        , max_width      = Percent (100)
+        )
+    , Rule
+        ( "img.pixpanded"
+        , display        = "block"
+        , float          = "none"
+        , height         = "auto"
+        , margin         = "auto"
+        , padding        = TRBL (Px (5), 0)
+        , width          = "auto"
+        )
+    , Rule
+        ( "li.ui-menu-item"
+        , background_color = P.color_bg_menu
+        )
+    , Rule
+        ( ".section + .section"
+        , margin_top     = Em (0.5)
+        )
+    )
+
+### __END__ html/base_classes.media

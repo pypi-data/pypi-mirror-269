@@ -1,0 +1,56 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: 500.jnj -#}
+{#
+## Copyright (C) 2010 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/500.jnj
+##
+## Purpose
+##    Error template for HTTP error 500 (Internal Server Error)
+##
+## Revision Dates
+##    15-Jan-2010 (CT) Creation
+##    ««revision-date»»···
+##--
+#}
+
+{%- block title %}
+  <title>{{ GTW._T ("Server error") }}</title>
+{% endblock -%}
+
+{%- block document %}
+  <h1 class="Error-Message">
+    {{ GTW._T ("Processing the request triggered a server error. ") }}
+  </h1>
+
+  {%- block error_explanation -%}
+    <p>
+      {{ GTW._T ("The error was reported to the webmaster. ") }}
+    </p>
+
+    <p>
+      {{ GTW._T
+          ( "We apologize for the inconvenience and hope to fix "
+            "the problem as soon as possible. "
+          )
+      }}
+    </p>
+  {%- endblock error_explanation -%}
+
+  {% if request.Error %}
+    <p class="Error-Message">
+      {{ GTW._T (request.Error) }}
+    </p>
+  {% endif %}
+{% endblock document -%}
+
+{#- __END__ jinja template: 500.jnj -#}

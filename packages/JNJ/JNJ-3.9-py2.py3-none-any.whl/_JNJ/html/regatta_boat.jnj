@@ -1,0 +1,66 @@
+{#- jinja template: regatta_boat.scams.at:jnj:html:regatta_boat.jnj -#}
+{#
+## Copyright (C) 2010-2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    regatta_boat.jnj
+##
+## Purpose
+##    Macros for displaying information about a boat in a regatta
+##
+## Revision Dates
+##    21-Sep-2010 (CT) Creation
+##    22-Sep-2010 (CT) Use `ul` for `Crew`, `Club`, and `MNA-Number`
+##    13-Oct-2010 (CT) Adapted to change of `Crew_Member`
+##     1-Dec-2010 (CT) Don't sort `crew`
+##     2-May-2011 (CT) `sail_number_x` added
+##     9-Nov-2011 (CT) Use `FO`
+##     9-Nov-2011 (CT) Use `sail_number_head` and `_tail` instead of `_x`
+##     2-Feb-2012 (CT) Add `register_button`
+##    27-Apr-2012 (CT) Add `register_buttons` (factored from regatta_page.jnj)
+##     9-May-2012 (CT) Use `.skipper.FO.mna_number`, not `.skipper.mna_number`
+##    14-Sep-2012 (CT) Add `td_reg_date`, `th_reg_date`
+##    14-Sep-2012 (CT) Change `th_crew` to consider `max_crew`
+##     5-Dec-2012 (CT) Use `page.regattas` instead of home-grown code
+##    17-Jun-2013 (CT) Use `&nbsp;` for undefined `club` or `mna_number`
+##    25-Aug-2013 (CT) Factor `td_li_sailor`; elide `middle_name` and `title`
+##    30-Aug-2013 (CT) Add `middle_name` to `td_li_sailor`
+##    12-Feb-2014 (CT) Factor from SCAMS
+##    17-Aug-2014 (CT) Remove `RLP Points`
+##     9-Feb-2015 (CT) Remove home-grown code that's now covered by `Renderer`
+##    ««revision-date»»···
+##--
+#}
+
+{%- macro register_button (page) -%}
+  {%- set href_register = page.href_register () %}
+  {%- if href_register %}
+    <p>
+      <a href="{{ href_register }}"{#--#}
+         title="{{ GTW._T ('Register for regatta %s') % page.obj.ui_display }}"{#--#}
+         class="button"{#--#}
+      >{{ page.obj.name }} {{ GTW._T ("register") }}</a>
+    </p>
+  {% endif -%}
+{%- endmacro -%} {#- register_button -#}
+
+{%- macro register_buttons (page) -%}
+  {%- set regattas = page.regattas %}
+  {%- if regattas %}
+    <div class="Registration">{#--#}
+      {%- for p in regattas %}
+        {{ register_button (p) }}
+      {% endfor -%}
+    </div>
+  {% endif -%}
+{%- endmacro -%} {#- register_buttons -#}
+
+{#- __END__ jinja template: regatta_boat.scams.at:jnj:html:regatta_boat.jnj -#}

@@ -1,0 +1,52 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011-2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/cmd_menu.media
+#
+# Purpose
+#    Media fragment for cmd-menu
+#
+# Revision Dates
+#    23-Nov-2011 (CT) Creation (factored from html/afs.jnj.media)
+#     8-Apr-2013 (CT) Add `max_height` and `overflow_y` to `.cmd-menu`
+#     9-Apr-2013 (CT) Add `max_width`, rule for `.cmd-menu.nested`
+#    13-Jan-2015 (CT) Remove osbolete rules
+#    ««revision-date»»···
+#--
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".cmd-menu"
+        , border           = P.border_button
+        , float            = "right"
+        , margin_top       = Em (-0.1)
+        , max_height       = Percent (80)
+        , max_width        = Percent (80)
+        , min_width        = Em (12)
+        , overflow_y       = "auto"
+        , padding          = 0
+        , width            = "auto"
+        )
+    , Rule
+        ( ".cmd-menu.nested"
+        , overflow         = "visible"
+        , children         =
+            [ Rule
+                ( "ul"
+                , max_width        = Percent (80)
+                , min_width        = Em (12)
+                )
+            ]
+        )
+    )
+
+### __END__ html/cmd_menu.media

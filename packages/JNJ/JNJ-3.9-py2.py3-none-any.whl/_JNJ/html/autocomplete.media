@@ -1,0 +1,89 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011-2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/autocomplete.media
+#
+# Purpose
+#    Media fragment for autocompletion
+#
+# Revision Dates
+#    14-Dec-2011 (CT) Creation
+#    24-Feb-2012 (CT) Add `:not(:last-child)` to rule for `b:first-child`
+#     5-Apr-2013 (CT) Split rule for `.ui-menu-item` from `.ui-autocomplete`
+#     5-Apr-2013 (CT) Add `overflow_y` to `.ui-autocomplete`
+#     8-Apr-2013 (CT) Add `max_height` to `.ui-autocomplete`
+#    14-May-2014 (CT) Add rule for `i.disabled`
+#    15-Sep-2014 (CT) Improve rule for `... .ui-menu-item a`
+#                     * increase specificity
+#                     * allow wrapping on white-space
+#                     * add `display`, `padding_left`, `text_indent` to create
+#                       hanging indent
+#    27-Mar-2015 (CT) Add `min_width`, `overflow_*` to factored `ui-menu`
+#    31-Mar-2015 (CT) Add `border`, `font_weight`, `margin` to .ui-menu-item
+#                     * Otherwise, the item with focus/hover gets wider
+#                       and triggers a horizontal scrollbar
+#                     + Set `overflow` to `auto` for `ui-menu`
+#     1-Apr-2015 (CT) Remove `max_height`
+#    ««revision-date»»···
+#--
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".ui-autocomplete"
+        , children       =
+            [ Rule_Class
+                ( "ui-menu"
+                , overflow       = "auto"
+                , children       =
+                    [ Rule
+                        ( ".ui-menu-item"
+                        , border        = "1px solid transparent"
+                        , font_weight   = "normal"
+                        , margin        = 0
+                        , children      =
+                            [ Rule
+                                ("a"
+                                , display       = "block"
+                                , padding_left  = Em ( 2.0)
+                                , text_indent   = Em (-1.6)
+                                , white_space   = "normal"
+                                )
+                            , Rule
+                                ( "b"
+                                , font_weight   = "normal"
+                                , padding_left  = Em (0.25)
+                                )
+                            , Rule
+                                ( "b:first-child:not(:last-child)"
+                                , font_weight   = "bold"
+                                , padding_left  = 0
+                                , padding_right = Em (0.75)
+                                )
+                            ]
+                        )
+                    ]
+                )
+            , Rule
+                ( "i.disabled"
+                , background_color = P.color.m_blue
+                , color            = P.color_lighter_grey
+                , display          = "inline-block"
+                , font_style       = "normal"
+                , padding          = Em (0.25)
+                , white_space      = "nowrap"
+                , width            = Percent (100)
+                )
+            ]
+        )
+    )
+
+### __END__ autocomplete

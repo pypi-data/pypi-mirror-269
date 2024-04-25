@@ -1,0 +1,89 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: e_type_admin.jnj -#}
+{#
+## Copyright (C) 2010-2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/e_type_admin.jnj
+##
+## Purpose
+##    Template for the admin page for a single E_Type
+##
+## Revision Dates
+##    22-Jan-2010 (CT) Creation
+##    20-May-2010 (CT) s/id/pid/
+##    25-Jul-2010 (MG) `_button` changed
+##    31-May-2011 (CT) `kind` added to `_button`
+##     1-Jun-2011 (CT) `postify_a` added
+##    16-Nov-2011 (CT) Start implementation of `qr_control`
+##    17-Nov-2011 (CT) Remove `count`, `total_f`, and `total_u`
+##                     (`page.head_line` contains those now)
+##    17-Nov-2011 (CT) Continue `qr_control` (`_qr_button`, "Next", ...)
+##    19-Nov-2011 (CT) Continue `qr_control` ("First", "Last")
+##    21-Nov-2011 (CT) Factor `html/_e_type.jnj`
+##    22-Nov-2011 (CT) Add `body_tail_scripts` for `gtw_query_restriction`
+##    23-Nov-2011 (CT) Add `attr_filter_html` to `gtw_query_restriction`
+##    26-Nov-2011 (CT) Add `setup_obj_list` to `gtw_query_restriction`
+##    28-Nov-2011 (CT) Add `order_by_form_...` to `gtw_query_restriction`
+##     6-Dec-2011 (CT) Replace `attr_filter_html` by `qx_af_html_url`,
+##                     `order_by_form_html` by `qx_obf_url`
+##     7-Dec-2011 (CT) Put `setup_obj_list` into `callbacks`
+##     7-Dec-2011 (CT) Add `qx_esf`, reorganize `options`
+##    16-Jan-2012 (CT) Add `qx_asf`, `select_attr_sortable`
+##    16-Mar-2012 (CT) Add `<noscript>` to signal need of Javascript
+##     6-Oct-2013 (CT) Add `with context` to import
+##    ««revision-date»»···
+##--
+#}
+
+{%- import "html/e_type.m.jnj" as e_type with context %}
+
+{%- block document %}
+  <noscript>
+    <h1>{{ GTW._T ("Javascript is needed to fully use this page") }}</h1>
+  </noscript>
+  {{- e_type.admin (page, page.renderer) -}}
+{% endblock -%}
+
+{%- block body_tail_scripts -%}
+  {{ super () }}
+  <script>
+    $("form.QR").gtw_query_restriction
+      ( {{ page.qr_spec.As_Json }}
+      , { callback :
+            { setup_obj_list : $GTW.ETA$.setup_obj_list
+            }
+        , title :
+            { disabler : "{{ GTW._T ("Disable") }}"
+            , enabler : "{{ GTW._T ("Reenable") }}"
+            , order_by_desc :
+                "{{ GTW._T ("Display objects in descending order of the attribute") }}"
+            , order_by_asc :
+                "{{ GTW._T ("Display objects in ascending order of the attribute") }}"
+            , order_by_sortable :
+                "{{ GTW._T ("Drag the order-by criteria up or down to change their priority") }}"
+            , select_attr_sortable :
+                "{{ GTW._T ("Drag the attributes up or down to change their priority") }}"
+            }
+        , url :
+            { qx_af_html : "{{ page.href_qx_af_html () }}"
+            , qx_asf : "{{ page.href_qx_asf () }}"
+            , qx_esf_completed : "{{ page.href_qx_esf_completed () }}"
+            , qx_esf_completer : "{{ page.href_qx_esf_completer () }}"
+            , qx_esf : "{{ page.href_qx_esf () }}"
+            , qx_obf : "{{ page.href_qx_obf () }}"
+            }
+        }
+      );
+  </script>
+{% endblock body_tail_scripts -%}
+
+{#- __END__ jinja template: html/e_type_admin.jnj -#}

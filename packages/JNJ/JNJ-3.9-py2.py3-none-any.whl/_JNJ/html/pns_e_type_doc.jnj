@@ -1,0 +1,55 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: pns_e_type_doc.jnj -#}
+{#
+## Copyright (C) 2012 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+## 
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/pns_e_type_doc.jnj
+##
+## Purpose
+##    Template for a page documenting the E_Types of a specific package
+##    namespace
+##
+## Revision Dates
+##    25-Sep-2012 (CT) Creation
+##    26-Sep-2012 (CT) Don't wrap inline svg in `div`
+##     9-Oct-2012 (CT) Add `PNS_desc`
+##    ««revision-date»»···
+##--
+#}
+
+{%- block document -%}
+  <h1>{{ page.title }}</h1>
+
+  {%- if page.PNS_svg %}
+    {{ page.PNS_svg }}
+  {%- elif page.href_svg %}
+    <div class="MOM-Graph" width="100%">
+      <img alt="Graph displaying the essential types of page.name"
+        src="{{ page.href_svg }}"/>
+    </div>
+  {% endif -%}
+  {%- if page.PNS_desc %}
+    {{ page.PNS_desc|safe }}
+  {% endif -%}
+{%- endblock document -%}
+
+{%- block body_tail_scripts -%}
+  {{ super () }}
+  {%- if page.PNS_svg %}
+    <script>
+      $("svg.MOM-Graph").gtw_pns_doc_graph
+          ({ qurl : "{{ page.parent.abs_href }}?E_Type=" })
+    </script>
+  {% endif -%}
+{% endblock body_tail_scripts -%}
+
+{#- __END__ jinja template: html/pns_e_type_doc.jnj -#}

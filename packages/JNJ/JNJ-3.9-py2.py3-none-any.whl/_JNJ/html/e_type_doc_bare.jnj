@@ -1,0 +1,49 @@
+{#- jinja template: html/e_type_doc_bare.jnj -#}
+{#
+## Copyright (C) 2012-2013 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This module is part of the package JNJ.
+## 
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/e_type_doc_bare.jnj
+##
+## Purpose
+##    Template for bare HTML page documenting a specific E_Type
+##
+## Revision Dates
+##     8-Aug-2012 (CT) Creation
+##     6-Oct-2013 (CT) Add `with context` to import
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj") as X %}
+{%- import "html/e_type_doc.m.jnj" as etd with context %}
+
+{%- call X.html (lang = resource.language|default ("en")) -%}
+  {%- call X.head () -%}
+    {%- block head_elements -%}
+      <meta http-equiv="Content-Type" content="text/html; charset={{ resource.encoding|default ("utf-8") }}" />
+      {%- if resource.exclude_robots %}
+        <meta name="robots" content="NOINDEX, NOFOLLOW">
+      {% endif -%}
+      {% block title %}
+        <title>{{ resource.title or resource.short_title }}</title>
+      {% endblock title -%}
+      {%- block meta_elements -%}
+        <meta name="generator" content="GTW, JNJ, Jinja2, MOM, Werkzeug" />
+      {%- endblock meta_elements -%}
+    {%- endblock head_elements %}
+  {%- endcall %} {# X.head #}
+  <body>
+    {{ etd.e_type (resource, rst_cargo) }}
+  </body>
+{%- endcall -%} {#- X.html -#}
+
+{#- __END__ jinja template: html/e_type_doc_bare.jnj -#}

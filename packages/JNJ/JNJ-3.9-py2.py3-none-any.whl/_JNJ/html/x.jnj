@@ -1,0 +1,84 @@
+{#- jinja template: html/x.jnj -#}
+{#
+## Copyright (C) 2009-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/x.jnj
+##
+## Purpose
+##    Provide macros for rendering XHtml
+##
+## Revision Dates
+##    29-Dec-2009 (CT) Creation
+##    12-Jan-2010 (CT) Creation continued
+##     2-Dec-2011 (CT) Add macros `script` and `shiv`
+##     4-Dec-2012 (CT) Remove `http:` (--> protocol-relative)
+##    15-Mar-2013 (CT) Remove obsolete macro `shiv` (use `modernizr` instead)
+##     6-Oct-2013 (CT) Add `with context` to import
+##    16-May-2016 (CT) Use `GTW.xmlattr (kw)`, not `kw|xmlattr`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import "html/input_x.jnj" as _input with context -%}{%- set input = _input -%}
+
+{%- macro html (lang) -%}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "//www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+>
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="{{ lang }}" lang="{{ lang }}" >
+  {{ caller () }}
+</html>
+{%- endmacro -%}
+
+{%- macro footer () -%}
+<div class="footer {{ kwargs.pop ('class', '') }}"{{ GTW.xmlattr (kwargs) }}>{{ caller () }}</div>
+{%- endmacro -%}
+
+{%- macro head () -%}
+<head>
+  {{ caller () }}
+</head>
+{%- endmacro -%}
+
+{%- macro header () -%}
+<div class="header {{ kwargs.pop ('class', '') }}"{{ GTW.xmlattr (kwargs) }}>{{ caller () }}</div>
+{%- endmacro -%}
+
+{%- macro link_stylesheet (uri) -%}
+<link href="{{ uri }}" rel="stylesheet" type="text/css"{{ GTW.xmlattr (kwargs) }}/>
+{%- endmacro -%}
+
+{%- macro meta_content_url (url) -%}
+  {%- do kwargs.pop("caller", "") -%}
+  <meta http-equiv="Content-URL" content="{{ url }}"{{ GTW.xmlattr (kwargs) }}/>
+{%- endmacro -%}
+
+{%- macro nav () -%}
+<div class="nav {{ kwargs.pop ('class', '') }}"{{ GTW.xmlattr (kwargs) }}>
+  {{ caller () }}
+</div>
+{%- endmacro -%}
+
+{%- macro script (src = None, body = "") -%}
+  <script {%- if src %} src="{{ src }}"{% endif %} type="text/javascript">
+    {{- body|safe -}}
+    {%- if caller %}{{ caller () }}{% endif -%}
+  </script>
+{%- endmacro -%} {#- script -#}
+
+{%- macro section () -%}
+<div class="section {{ kwargs.pop ('class', '') }}"{{ GTW.xmlattr (kwargs) }}>
+  {{ caller () }}
+</div>
+{%- endmacro -%}
+
+{#- __END__ jinja template: html/x.jnj -#}

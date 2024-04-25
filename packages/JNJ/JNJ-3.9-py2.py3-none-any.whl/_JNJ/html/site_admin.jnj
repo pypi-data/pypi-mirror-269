@@ -1,0 +1,55 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: site_admin.jnj -#}
+{#
+## Copyright (C) 2010-2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/site_admin.jnj
+##
+## Purpose
+##    Template for site administration
+##
+## Revision Dates
+##    22-Jan-2010 (CT) Creation
+##    22-Dec-2010 (CT) `a_link` factored, `Group` support added, `class` added
+##    11-Feb-2015 (CT) Use `pure-table`
+##    ««revision-date»»···
+##--
+#}
+
+{%- macro a_link (link) -%}
+  <a href="{{ link.permalink }}"
+     {% if link.title %}title="{{ GTW._T (link.title) }}"{% endif -%}
+  >{{ link.short_title }}</a>
+{%- endmacro -%} {#- a_link -#}
+
+{%- macro site_admin (page) -%}
+  <table class="Object-List pure-table">
+    {%- for link in page.own_links_transitive if link.allow_user (request.user) %}
+      <tr>
+        {%- if link.has_children %}
+          <th colspan="2" class="Group link">{{ a_link (link) }}</th>
+        {%- else -%}
+          <td class="{{ link.css_group or "Type" }} link">
+            {{- a_link (link) -}}
+          </td>
+          <td class="Count">{{ link.count }}</td>
+        {% endif %}
+      </tr>
+    {% endfor -%}
+  </table>
+{%- endmacro -%} {#- site_admin -#}
+
+{%- block document %}
+  {{- site_admin (page) -}}
+{% endblock -%}
+
+{#- __END__ jinja template: site_admin.jnj -#}

@@ -1,0 +1,251 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011-2014 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# ****************************************************************************
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# ****************************************************************************
+#
+#++
+# Name
+#    regatta_boat.jnj.media
+#
+# Purpose
+#    CSS fragment for regatta templates
+#
+# Revision Dates
+#     2-Jan-2011 (CT) Creation
+#     2-Feb-2012 (CT) Add rule for `div.Registration`
+#     ««revision-date»»···
+#--
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( "table.Regatta"
+        , border                   = P.regatta_border
+        , border_collapse          = "collapse"
+        , margin                   = TRBL (Em (1.0))
+        , children                 =
+            [ Rule
+                ( "ul"
+                , list_style       = "none"
+                , margin           = 0
+                , padding          = 0
+                )
+            ]
+        )
+    , Rule
+        ( ".Regatta"
+        , children                 =
+            [ Rule
+                ( "caption"
+                , padding          = TRBL (Em (1./2), 0, Em (3./4))
+                , ** P.color_spec_regatta_caption
+                )
+            , Rule
+                ( ".discarded"
+                , color            = P.color_discarded
+                )
+            , Rule
+                ( ".Place", ".Points", ".Index"
+                , font_weight      = "bold"
+                , text_align       = "right"
+                )
+            , Rule_Class
+                ( "Registration"
+                , children         =
+                    [ Rule
+                        ( "th"
+                        , font_weight  = "bold"
+                        )
+                    , Rule
+                        ( "td table"
+                        , children     =
+                            [ Rule
+                                ( "td", "th"
+                                , border = 0
+                                , height = Em (1.2)
+                                )
+                            ]
+                        )
+                    ]
+                )
+            , Rule_Class
+                ( "Team"
+                , children         =
+                    [ Rule
+                        ( ".Place", ".Points", ".Index"
+                        , vertical_align = "top"
+                        )
+                    , Rule
+                        ( ".Name"
+                        , color          = RGB_X ("#0050FF")
+                        , font_weight    = "bold"
+                        , padding        = TRBL (0, Em (1./2))
+                        , text_align     = "left"
+                        , vertical_align = "top"
+                        )
+                    ]
+                )
+            , Rule
+                ( ".Members .Index"
+                , font_weight      = "normal"
+                , vertical_align   = "middle"
+                )
+            , Rule
+                ( "td", "th"
+                , border           = P.regatta_border
+                , font_size        = "small"
+                , padding          = TRBL (0, Em (1./2))
+                , vertical_align   = "middle"
+                )
+            , Rule
+                ( ".first th"
+                , border_bottom    = 0
+                )
+            , Rule
+                ( ".second th"
+                , border_top       = 0
+                , padding_bottom   = Em (1./4)
+                )
+            , Rule
+                ( "td"
+                , text_align       = "right"
+                , children         =
+                    [ Rule
+                        ( "table"
+                        , border      = 0
+                        , margin_left = Em (1)
+                        , children    =
+                            [ Rule (".Club",        width = Em (10))
+                            , Rule (".Crew",        width = Em (12))
+                            , Rule (".Nation",      width = Em ( 2))
+                            , Rule (".Sail-Number", width = Em ( 3.5))
+                            ]
+                        )
+                    , Rule_Class
+                        ( "Club", "Crew", "Team"
+                        , text_align = "left"
+                        )
+                    , Rule_Class
+                        ( "Boat-Class"
+                        , color      = P.color_regatta_class
+                        , text_align = "left"
+                        )
+                    , Rule_Class
+                        ( "Nation"
+                        , border_right  = 0
+                        , padding_right = 0
+                        )
+                    , Rule_Class
+                        ( "Sail-Number"
+                        , border_left   = 0
+                        , padding_left  = Em (1./4)
+                        )
+                    ]
+                )
+            , Rule
+                ( "th"
+                , font_weight      = "bold"
+                , children         =
+                    [ Rule_Class
+                        ( "Club", "Sail-Number"
+                        , text_align = "center"
+                        )
+                    ]
+                )
+            , Rule
+                ( "thead tr"
+                , ** P.color_spec_regatta_head
+                )
+            , Rule (".Race-Result",            text_align = "right")
+            , Rule ("th.Race-Result[colspan]", text_align = "center")
+            , Rule_Class
+                ( "Result"
+                , children         =
+                    [ Rule
+                        ( "caption"
+                        , children =
+                            [ Rule
+                                ( ".Name", ".Club", ".Races"
+                                , font_weight = "bold"
+                                , margin_bottom = Em (1./2)
+                                , padding       = TRBL0 (Em (1))
+                                )
+                            , Rule
+                                ( ".Class"
+                                , margin_bottom = Em (1./2)
+                                )
+                            ]
+                        )
+                    , Rule
+                        ( "tbody td"
+                        , height   = Em (3)
+                        )
+                    , Rule
+                        ( "td", "th"
+                        , children     =
+                            [ Rule
+                                ( "table td"
+                                , border = 0
+                                , height = Em (1.2)
+                                )
+                            ]
+                        )
+                    , Rule
+                        ( "td"
+                        , children     =
+                            [ Rule
+                                ( "table"
+                                , children =
+                                    [ Rule
+                                        ( ".Index", ".MNA-Number"
+                                        , display = "none"
+                                        )
+                                    ]
+                                )
+                            ]
+                        )
+                    , Rule
+                        ( "thead"
+                        , P.color_spec_regatta_caption
+                        )
+                    ]
+                )
+            ]
+        )
+    , Rule
+        ( ".Regatta-Software"
+        , font_size                = Percent (65)
+        , padding_top              = Em (1)
+        , text_align               = "right"
+        , ** P.color_spec_regatta_caption
+        )
+    , Rule
+        ( "div.Registration"
+        , margin               = TRBL (Em (1.0))
+        , text_align           = "center"
+        , children             =
+            [ Rule
+                ( ".button"
+                , background_color = P.color_heading
+                , color            = P.color_regatta_head
+                , display          = "block"
+                , overflow         = "hidden"
+                , margin           = 0
+                , padding          = TRBL (Em (0.5), Em (1.5))
+                , children         =
+                    [ P.Rule.hover
+                    ]
+                )
+            , Rule
+                ( "p"
+                , font_size        = Percent (115)
+                , font_weight      = "bold"
+                , margin           = TRBL (0, Em (1.0), Em (0.5))
+                )
+            ]
+        )
+    )
+
+### __END__ regatta_boat.jnj.media

@@ -1,0 +1,250 @@
+{#- jinja template:  html/input_5.jnj -#}
+{#
+## Copyright (C) 2009-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/input_5.jnj
+##
+## Purpose
+##    Provide macros for rendering HTML5 input tags
+##
+## Revision Dates
+##    12-Jan-2010 (CT) Creation
+##    14-Jan-2010 (CT) `textarea` changed to allow `value`
+##    16-Feb-2010 (CT) Guard for `caller` added to `textarea`
+##    16-Feb-2010 (CT) `textarea` factored to `html/_input.jnj`
+##    16-Feb-2010 (CT) `select` added
+##    16-Feb-2010 (CT) `select_v` added
+##    22-Mar-2011 (CT) `_input_c` added
+##    21-Nov-2011 (CT) Add `option`
+##    22-Nov-2011 (CT) Add handling of `disabled` to `_input`
+##    30-Nov-2011 (CT) Add handling of `required` to `_input`
+##     2-Dec-2011 (CT) Change `_input` to `pop` empty `name`
+##    19-Apr-2012 (CT) Change `number` to use `_input_c`, not `_input`
+##     6-Oct-2013 (CT) Add `with context` to import
+##    22-Jan-2014 (CT) Change `number` to use `_input`, not `_input_c`
+##     7-May-2014 (CT) DRY option handling in `_input`;
+##                     add `autofocus`, `multiple`, `readonly`
+##    26-Jun-2014 (CT) Change `_input` to remove empty `pattern` from `kw`
+##    23-Oct-2014 (CT) Add `button`, `button_pure`; factor `with_opts_kw`
+##    21-Nov-2014 (CT) Add `hd_input`
+##    11-Jun-2015 (CT) Add optional keyword argument `primary` to `button_pure`
+##    13-Jun-2015 (CT) Add `keygen`
+##    16-May-2016 (CT) Use `GTW.xmlattr (kw)`, not `kw|xmlattr`
+##    18-May-2016 (CT) Add `labeled_pure`
+##    18-Oct-2016 (CT) Add `action` to `hd_input`
+##    ««revision-date»»···
+##--
+#}
+
+{#-
+XXX http://html5doctor.com/avoiding-common-html5-mistakes/ Boolean attributes
+- autocomplete
+- autofocus
+- required
+-#}
+
+{%- import "html/_input.jnj" as _common with context %}
+{%- set option   = _common.option       %}
+{%- set select   = _common.select       %}
+{%- set select_v = _common.select_v     %}
+{%- set textarea = _common.textarea     %}
+
+{%- macro with_opts_kw (kw) -%}
+  {%- set caller  = kwargs.pop ("caller") -%}
+  {%- do            kw.pop     ("caller", "") -%}
+  {%- set options = [] %}
+  {%- for opt in ("autofocus", "disabled", "multiple", "readonly", "required") %}
+    {%- if kw.pop (opt, None) %}
+      {%- do options.append (opt) %}
+    {% endif -%}
+  {% endfor -%}
+  {%- for key in ("name", "pattern") %}
+    {% if not kw.get (key, None) -%}
+      {#- Remove empty key from `kw` -#}
+      {%- do kw.pop (key, None) -%}
+    {%- endif -%}
+  {% endfor -%}
+  {{- caller (" ".join (options), kw) -}}
+{%- endmacro -%} {#- with_opts_kw -#}
+
+{%- macro _input (typ, kw) -%}
+  {% call(options, okw) with_opts_kw (kw) -%}
+    <input type="{{ typ }}"{{ GTW.xmlattr (okw) }}
+      {%- if options %} {{ options }}{% endif -%}
+    />
+  {% endcall %} {# with_opts_kw #}
+{%- endmacro -%} {#- text -#}
+
+{%- macro _input_c (typ, kw) -%}
+  {#- Avoid browser specific mischief, e.g., the browser ignoring a date it
+  ### doesn't recognize, like `2011/03/22`
+  -#}
+  {%- set kwc   = kw.pop   ("class", "") -%}
+  {%- set class = " ".join ((typ, kwc)) if kwc else typ -%}
+  {%- set kw    = GTW.dict (kw, class = class) -%}
+  {{- _input ("text", kw) -}}
+{%- endmacro -%} {#- _input_c -#}
+
+{%- macro button () -%}
+  {%- set button_caller = kwargs.pop ("caller") -%}
+  {% call(opts, kw) with_opts_kw (kwargs) -%}
+    <button{{ GTW.xmlattr (kw) }}{% if opts %} {{ opts }}{% endif -%}>
+      {{ button_caller () }}
+    </button>
+  {% endcall %} {# with_opts_kw #}
+{%- endmacro -%} {#- button -#}
+
+{%- macro button_pure (icon_name = None, text = None, icon_class_add = None) -%}
+  {%- set class =  GTW.filtered_join
+      ( " "
+      , ( "pure-button"
+        , "pure-button-disabled" if kwargs.get ("disabled") else ""
+        , "pure-button-primary"  if kwargs.get ("primary")  else ""
+        , kwargs.pop ("class", "")
+        )
+      )
+  %}
+  {%- set i_cls = GTW.filtered_join
+      ( " "
+      , ("fa", ("fa-%s" % (icon_name, ) if icon_name else ""), icon_class_add)
+      )
+  %}
+  {% call button (class = class, ** kwargs) -%}
+    <i class="{{ i_cls }}"></i>
+    {%- if text %}<b>{{ text }}</b>{% endif -%}
+  {% endcall %} {# button #}
+{%- endmacro -%} {#- button_pure -#}
+
+{%- macro checkbox () -%}
+  {{ _input ("checkbox", kwargs) }}
+{%- endmacro -%}
+
+{%- macro color () -%}
+  {{ _input ("color", kwargs) }}
+{%- endmacro -%}
+
+{%- macro date () -%}
+  {{ _input_c ("date", kwargs) }}
+{%- endmacro -%}
+
+{%- macro datetime () -%}
+  {{ _input_c ("datetime", kwargs) }}
+{%- endmacro -%}
+
+{%- macro datetime_local () -%}
+  {{ _input_c ("datetime-local", kwargs) }}
+{%- endmacro -%}
+
+{%- macro email () -%}
+  {{ _input ("email", kwargs) }}
+{%- endmacro -%}
+
+{%- macro file () -%}
+  {{ _input ("file", kwargs) }}
+{%- endmacro -%}
+
+{%- macro hidden () -%}
+  {{ _input ("hidden", kwargs) }}
+{%- endmacro -%}
+
+{%- macro keygen () -%}
+  {% call(opts, kw) with_opts_kw (kwargs) -%}
+    <keygen {{ GTW.xmlattr (kw) }}{% if opts %} {{ opts }}{% endif -%}>
+  {% endcall %} {# with_opts_kw #}
+{%- endmacro -%} {#- keygen -#}
+
+{%- macro labeled_pure (label_text) -%}
+  {%- set caller = kwargs.pop ("caller", None) -%}
+  <div class="{{ f_class }} pure-control-group">
+    <label{{ GTW.xmlattr (kwargs) }}>{{ label_text }}</label>
+    {{ caller () }}
+  </div>
+{%- endmacro -%} {#- labeled_pure -#}
+
+{%- macro month () -%}
+  {{ _input_c ("month", kwargs) }}
+{%- endmacro -%}
+
+{%- macro number () -%}
+  {{ _input ("number", kwargs) }}
+{%- endmacro -%}
+
+{%- macro password () -%}
+  {{ _input ("password", kwargs) }}
+{%- endmacro -%}
+
+{%- macro radio () -%}
+  {{ _input ("radio", kwargs) }}
+{%- endmacro -%}
+
+{%- macro range () -%}
+  {{ _input ("range", kwargs) }}
+{%- endmacro -%}
+
+{%- macro reset () -%}
+  {{ _input ("reset", kwargs) }}
+{%- endmacro -%}
+
+{%- macro search () -%}
+  {{ _input ("search", kwargs) }}
+{%- endmacro -%}
+
+{%- macro submit () -%}
+  {{ _input ("submit", kwargs) }}
+{%- endmacro -%}
+
+{%- macro tel () -%}
+  {{ _input ("tel", kwargs) }}
+{%- endmacro -%}
+
+{%- macro text () -%}
+  {{ _input ("text", kwargs) }}
+{%- endmacro -%}
+
+{%- macro time () -%}
+  {{ _input_c ("time", kwargs) }}
+{%- endmacro -%}
+
+{%- macro url () -%}
+  {{ _input ("url", kwargs) }}
+{%- endmacro -%}
+
+{%- macro week () -%}
+  {{ _input ("week", kwargs) }}
+{%- endmacro -%}
+
+{%- macro hd_input (name, h_value, d_value, h_typ = text, d_typ = text) -%}
+  {%- set action  = kwargs.pop ("action",  None) %}
+  {%- set class   = kwargs.pop ("class") %}
+  {%- set d_class = kwargs.pop ("d_class", None) %}
+  {%- set h_class = kwargs.pop ("h_class", None) %}
+  {%- if action %}
+    {%- do kwargs.update ({"data-action" : action}) %}
+  {% endif -%}
+  {{ h_typ
+      ( class     = GTW.filtered_join (" ", (class, "hidden", h_class))
+      , name      = name
+      , readonly  = True
+      , tabindex  = "-1"
+      , value     = h_value
+      )
+  }}
+  {{ d_typ
+      ( class     = GTW.filtered_join (" ", (class, "display", d_class))
+      , name      = None
+      , value     = d_value
+      , ** kwargs
+      )
+  }}
+{%- endmacro -%} {#- hd_input -#}
+
+{#- __END__ jinja template: html/input_5.jnj -#}

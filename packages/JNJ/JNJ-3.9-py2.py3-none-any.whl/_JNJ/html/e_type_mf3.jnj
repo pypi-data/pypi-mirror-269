@@ -1,0 +1,42 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: html/e_type_mf3.jnj -#}
+{#
+## Copyright (C) 2014 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+## 
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/e_type_mf3.jnj
+##
+## Purpose
+##    Template for rendering a page with an GTW.MF3 form
+##
+## Revision Dates
+##    26-Apr-2014 (CT) Creation
+##    ««revision-date»»···
+##--
+#}
+
+{%- block document %}
+  <noscript>
+    <h1>{{ GTW._T ("Javascript is needed to use this page") }}</h1>
+  </noscript>
+  {{ GTW.call_macro
+      (form.template_macro, page, form, templ_name = form.template_module)
+  }}
+{% endblock -%}
+
+{%- block body_tail_scripts -%}
+  {{ super () }}
+  {{ GTW.call_macro
+      ("tail_scripts", page, form, templ_name = form.template_module)
+  }}
+{% endblock body_tail_scripts -%}
+
+{#- __END__ jinja template: html/e_type_mf3.jnj -#}

@@ -1,0 +1,67 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/css_menu_icon.media
+#
+# Purpose
+#    Media fragment with CSS rules for a class creating a menu icon
+#
+# Revision Dates
+#    11-Jan-2017 (CT) Creation
+#    ««revision-date»»···
+#--
+
+from   __future__  import absolute_import
+from   __future__  import division
+from   __future__  import print_function
+from   __future__  import unicode_literals
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".menu-icon", ".menu-icon::before", ".menu-icon::after"
+        , Border
+            ( color          = C_TRBL0 (b = P.menu_icon.color)
+            , style          = "solid"
+            , width          = TRBL0   (b = P.menu_icon.line_width)
+            )
+        , Box
+            ( sizing         = "border-box"
+            )
+        , background_color   = "transparent"
+        , height             = P.menu_icon.line_width
+        , width              = P.menu_icon.width
+        )
+    , Rule
+        ( ".menu-icon"
+        , display            = "inline-block"
+        , margin_bottom      = P.menu_icon.margin_m
+        , text_align         = "left"
+        , vertical_align     = "middle"
+        , children           =
+            [ Rule_Pseudo
+                ( "after", "before"
+                , content            = '""'
+                , position           = "absolute"
+                )
+            , Rule_Pseudo
+                ( "after"
+                , margin_top         = + P.menu_icon.margin_ab
+                )
+            , Rule_Pseudo
+                ( "before"
+                , margin_top         = - P.menu_icon.margin_ab
+                )
+            ]
+        )
+    )
+
+### __END__ html/css_menu_icon.media

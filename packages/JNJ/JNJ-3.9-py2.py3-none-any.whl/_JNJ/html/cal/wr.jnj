@@ -1,0 +1,208 @@
+{#- jinja template: wr.jnj -#}
+{#
+## Copyright (C) 2010-2013 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/cal/wr.jnj
+##
+## Purpose
+##    Template and macros for displaying a week_roller
+##
+## Revision Dates
+##     9-Mar-2010 (CT) Creation
+##    10-Mar-2010 (CT) Optional keyword argument `weeks` added to `week_roller`
+##    10-Mar-2010 (CT) `week_roller_body` and `week_roller_nav` added
+##    11-Jun-2010 (CT) Validation errors removed (no `div` in `tr` and `td`)
+##    12-Nov-2010 (CT) `week_roller_ctrl` added
+##    12-Nov-2010 (CT) `week_roller_body` changed to call `caller`, if any
+##    14-Nov-2010 (CT) `week_roller_ctrl` changed to use separate `input`
+##                     elements for `year`, `month`, and `day` of `anchor`
+##    15-Nov-2010 (CT) Call to `week_roller_body` added at end
+##    17-Nov-2010 (CT) `week_day_head` factored
+##    17-Nov-2010 (CT) `label`s and `delta` added to `week_roller_ctrl`
+##    26-Nov-2010 (CT) Name of `input.submit` changed for `week_roller_ctrl`
+##    26-Nov-2010 (CT) `week_roller_slider` added
+##    27-Nov-2010 (CT) `div.echo` added to `week_roller_slider`
+##     2-Aug-2012 (CT) Remove auto-executing code
+##     6-Oct-2013 (CT) Add `with context` to imports
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj") as X -%}
+
+{%- macro week_roller (cal, weeks, W) -%}
+  <table class="calendar">
+    <thead>
+      <tr>
+        {{ W.head (cal) }}
+      </tr>
+    </thead>
+    <tbody>
+      {%- for week in weeks %}
+        <tr>
+          {{ W.week_number (cal, week) }}
+          {%- for d in week.days %}
+            {%- set events = d.events -%}
+            {%- set td_cls = " ".join
+                (( d.day_name.lower ()
+                 , "holiday" if d.is_holiday   else ""
+                 , "today"   if d == cal.today else ""
+                )).strip ()
+            -%}
+            {%- set div_cls = " ".join (("date", d.month_name)) -%}
+            <td class="{{ td_cls }}" title="{{ "%s, %s" % (GTW._T (d.day_name), d) }}">
+              <span class="{{ div_cls }}">
+                {{- W.week_day_head (cal, weeks, d, events) -}}
+              </span>
+              {{ W.week_day_events (cal, week, d) }}
+            </td>
+          {% endfor -%}
+          {{ W.week_month  (cal, week) }}
+        </tr>
+      {% endfor %}
+      {{ W.selected_day_div (cal) }}
+    </tbody>
+  </table>
+{%- endmacro -%} {#- week_roller -#}
+
+{%- macro week_roller_body (cal, weeks) -%}
+  {%- import "html/cal/wr_body.jnj" as W with context %}
+  {%- set wr_caller = kwargs.pop ("caller",   None) -%}
+  <div class="week-roller">
+    {%- if wr_caller -%}{{- wr_caller () -}}{%- endif -%}
+    {{ week_roller (cal, weeks, W, ** kwargs) }}
+  </div>
+{%- endmacro -%} {#- week_roller_body -#}
+
+{%- macro week_roller_ctrl (cal, weeks) -%}
+  {%- import "html/form.jnj" as Form with context %}
+  {%- set action = cal.q_href -%}
+  {% call Form.form (action = action, method = "get", class = "ctrl") -%}
+      <label class="anchor"
+          title="{{ GTW._T ("Anchor date for calendar display") }}"
+          for="F_anchor_year"
+      >
+        {{ GTW._T ("Anchor") }}
+      </label>
+      <div class="anchor">
+        {{- X.input.text
+            ( name      = "year"
+            , id        = "F_anchor_year"
+            , min       = cal.min_year
+            , max       = cal.max_year
+            , title     = GTW._T ("Anchor year for calendar display")
+            , value     = cal.anchor.year
+            , class     = "year"
+            )
+        -}}
+        /
+        {{- X.input.text
+            ( name      = "month"
+            , min       = 1
+            , max       = 12
+            , title     = GTW._T ("Anchor month for calendar display")
+            , value     = cal.anchor.month
+            , class     = "month"
+            )
+        -}}
+        /
+        {{- X.input.text
+            ( name      = "day"
+            , min       = 1
+            , max       = 31
+            , title     = GTW._T ("Anchor day for calendar display")
+            , value     = cal.anchor.day
+            , class     = "day"
+            )
+        -}}
+      </div>
+      <label title="{{ GTW._T ("Number of weeks displayed") }}" for="F_weeks">
+        {{ GTW._T ("Weeks") }}
+      </label>
+      {{ X.input.text
+          ( name      = "weeks"
+          , id        = "F_weeks"
+          , min       = 2
+          , max       = 14
+          , title     = GTW._T  ("Number of weeks displayed")
+          , value     = GTW.len (weeks)
+          , class     = "weeks"
+          )
+      }}
+      <label title="{{ GTW._T ("Move calendar display by delta units") }}"
+             for="F_delta">
+        {{ GTW._T ("Delta") }}
+      </label>
+      {{ X.input.text
+          ( name      = "delta"
+          , id        = "F_delta"
+          , min       = -53
+          , max       = +53
+          , title     = GTW._T ("Move calendar display by delta units")
+          , class     = "delta"
+          )
+      }}
+      {{ X.input.select_v
+          ( "delta_unit"
+          , ( ("day",   GTW._T ("day"))
+            , ("week",  GTW._T ("week"))
+            , ("month", GTW._T ("month"))
+            , ("year",  GTW._T ("year"))
+            )
+          , "week"
+          , title     = GTW._T
+              ("Units for `delta` movement of calendar display")
+          , class     = "delta unit"
+          )
+      }}
+      {{ X.input.submit
+          ( name      = "Apply"
+          , title     = GTW._T ("Display calendar for the selected values")
+          , value     = GTW._T ("Apply")
+          , class     = "Short"
+          )
+      }}
+      {{ X.input.submit
+          ( name      = "Today"
+          , title     = GTW._T ("Display calendar anchored on today")
+          , value     = GTW._T ("Today")
+          , class     = "Short"
+          )
+      }}
+  {% endcall %} {# form #}
+  {{ week_roller_slider (cal, weeks) }}
+{%- endmacro -%} {#- week_roller_ctrl -#}
+
+{%- macro week_roller_slider (cal, weeks) -%}
+  <div class="slider-ctrl">
+    <div class="ctrl"></div>
+  </div>
+  <div class="slider-echo">
+    <div class="message">
+      <p>
+        {{- GTW.formatted
+            ( GTW._T ( "Scroll by %s weeks to anchor %s.")
+            , '<span class="weeks"></span>'
+            , '<span class="anchor"></span>'
+            )
+        -}}
+      </p>
+    </div>
+  </div>
+{%- endmacro -%} {#- week_roller_slider -#}
+
+{%- macro week_roller_nav (cal, weeks) -%}
+  {%- import "html/cal/wr_nav.jnj" as W with context %}
+  {{ week_roller (cal, weeks, W, ** kwargs)}}
+{%- endmacro -%} {#- week_roller_nav -#}
+
+{#- __END__ jinja template: wr.jnj -#}

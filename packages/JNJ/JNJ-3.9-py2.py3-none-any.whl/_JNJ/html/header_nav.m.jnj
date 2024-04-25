@@ -1,0 +1,110 @@
+{#- jinja template: html/header_nav.m.jnj -#}
+{#
+## Copyright (C) 2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/header_nav.m.jnj
+##
+## Purpose
+##    Macros for horizontal nav-bar in `header`
+##
+## Revision Dates
+##     4-Jan-2017 (CT) Creation
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj") as X -%}
+{%- import "html/rel_nav.m.jnj"           as RN with context %}
+{%- import "html/auth.m.jnj"              as AT with context %}
+
+{%- macro body (page) -%}
+  {%- set body_caller = kwargs.pop ("caller", None) -%}
+  {%- set class = GTW.filtered_join (" ", ( kwargs.get ("class"), "body")) -%}
+  <div class="{{ class }}">
+    {{- body_caller () -}}
+  </div>
+{%- endmacro -%} {#- body -#}
+
+{%- macro head (page, text, title, href = None) -%}
+  {%- set head_caller = kwargs.pop ("caller", None) -%}
+  {%- set class = GTW.filtered_join (" ", ( kwargs.get ("class"), "head")) -%}
+  <div class="{{ class }}">{#- -#}
+    <a {%- if href and href != page.abs_href %} href="{{ href }}"{%- endif -%}
+       {#- #} title="{{ title }}"{#- -#}
+    >
+      {{- text -}}
+    </a>{#- -#}
+    {%- if head_caller %}
+      {{- head_caller () -}}
+    {%- endif -%}
+  </div>{#- -#}
+{%- endmacro -%} {#- head -#}
+
+{%- macro rel_links (page) -%}
+  {{ RN.rel_links
+      ( page
+      , first     = page.response.rel_first
+      , last      = page.response.rel_last
+      , next      = page.response.rel_next
+      , parent    = page.parent
+      , prev      = page.response.rel_prev
+      )
+  }}
+{%- endmacro -%} {#- rel_links -#}
+
+{%- macro short_nav (page) -%}
+  {%- set nav_caller = kwargs.pop ("caller", None) -%}
+  {{- rel_links (page) -}}
+  {{- MN.main_nav_link (page) -}}
+  {%- if nav_caller %}
+    {{- nav_caller () -}}
+  {%- endif -%}
+{%- endmacro -%} {#- short_nav -#}
+
+{%- macro tail (page, tag = "div") -%}
+  {%- set tail_caller = kwargs.pop ("caller", None) -%}
+  {%- set class = GTW.filtered_join (" ", ( kwargs.get ("class"), "tail")) -%}
+  <{{ tag }} class="{{ class }}">
+    {{- tail_caller () -}}
+  </{{ tag }}>
+{%- endmacro -%} {#- tail -#}
+
+{%- macro user_links (page, user_page = None) -%}
+  {%- set caller = kwargs.pop ("caller", None) -%}
+  {%- set href_login = page.SC.Auth.href_login %}
+  {%- if caller -%}
+    {{- caller () -}}
+  {%- endif -%}
+  {%- if page.request.user -%}
+    {%- if user_page -%}
+      {{- action_button
+          (user_page.abs_href, "user", GTW._T ("Personal settings"), "settings")
+      -}}
+    {%- endif -%}
+    {{- AT.logout_form (page) -}}
+  {%- else -%}
+    {%- onion page.abs_href != href_login %}
+      {%- head -%}
+        <a href="{{ href_login }}" class="login pure-button">
+      {%- else -%}
+        <b class="login">
+      {%- body -%}
+        <i class="fa fa-sign-in"></i> {{ GTW._T ("Login") -}}
+      {%- tail -%}
+        </a>
+      {%- else -%}
+        </b>
+    {%- endonion -%}
+  {% endif -%}
+{%- endmacro -%} {#- user_links -#}
+
+{#- __END__ jinja template: html/header_nav.m.jnj -#}

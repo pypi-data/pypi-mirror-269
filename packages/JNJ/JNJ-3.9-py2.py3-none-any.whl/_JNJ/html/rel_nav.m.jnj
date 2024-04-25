@@ -1,0 +1,193 @@
+{#- jinja template: html/rel_nav.m.jnj -#}
+{#
+## Copyright (C) 2017-2024 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/rel_nav.m.jnj
+##
+## Purpose
+##    Template macros for rel-nav elements
+##
+## Revision Dates
+##    10-Jan-2017 (CT) Creation
+##     5-Feb-2024 (CT) Change `_rel_link` to use `.eff_href`, not `.abs_href`
+##                     * Otherwise, `rel_*` are broken for `A_Link` instances
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj") as X -%}
+
+{%- macro rel_first (page, href, title = None, short_title = None) -%}
+  {{ _rel_link
+      ( page, href
+      , title,       GTW._T ("Goto first page")
+      , short_title, GTW._T ("First")
+      , class  = "first"
+      , symbol = "angle-double-left"
+      , ** kwargs
+      )
+   }}
+{%- endmacro -%} {#- rel_first -#}
+
+{%- macro rel_first_child (page, href, title = None, short_title = None) -%}
+  {{ _rel_link
+      ( page, href
+      , title,       GTW._T ("Goto first entry")
+      , short_title, GTW._T ("First entry")
+      , class  = "first-child"
+      , symbol = "angle-down"
+      , ** kwargs
+      )
+  }}
+{%- endmacro -%} {#- rel_last -#}
+
+{%- macro rel_last (page, href, title = None, short_title = None) -%}
+  {{ _rel_link
+      ( page, href
+      , title,       GTW._T ("Goto last page")
+      , short_title, GTW._T ("Last")
+      , class  = "last"
+      , symbol = "angle-double-right"
+      , ** kwargs
+      )
+  }}
+{%- endmacro -%} {#- rel_last -#}
+
+{%- macro rel_link (page, href, title, symbol, contents) -%}
+  {%- set enabled = kwargs.pop ("enabled", False)
+                      or (href and href != page.abs_href)
+  %}
+  {%- set akw = GTW.dict
+        ( kwargs
+        , class = GTW.filtered_join
+            ( " "
+            , ( kwargs.get ("class")
+              , "pure-button"
+              , "" if enabled else "pure-button-disabled"
+              )
+            )
+        , title = title
+        )
+  %}
+  {%- if enabled %}
+    {%- do akw.update (href = href) %}
+  {% endif -%}
+  <a{{ GTW.xmlattr (akw) }}>{#- -#}
+    <i class="fa fa-{{ symbol }}">{#- -#}
+      {%- if contents %}
+        <b>{{- contents -}}</b>{#- -#}
+      {% endif -%}
+    </i>{#- -#}
+  </a>
+{%- endmacro -%} {#- rel_link -#}
+
+{%- macro rel_links (page, container_tag = "p") -%}
+  {%- onion container_tag %}
+    {%- head %}
+      {%- set akw = GTW.dict
+        ( class = GTW.filtered_join (" ", (kwargs.get ("class"), "rel-nav"))
+        )
+      %}
+      <{{ container_tag }}{{ GTW.xmlattr (akw) }}>
+    {%- body %}
+      {%- for k, mac in
+          ( ("first",  rel_first)
+          , ("prev",   rel_prev)
+          , ("parent", rel_parent)
+          , ("next",   rel_next)
+          , ("last",   rel_last)
+          )
+      %}
+        {% set href = kwargs.get (k) -%}
+        {%- if href != None -%}
+          {{- mac (page, href) -}}
+        {% endif -%}
+      {% endfor -%}
+    {%- tail %}
+      </{{ container_tag }}>
+  {%- endonion %}
+{%- endmacro -%} {#- rel_links -#}
+
+{%- macro rel_nav_buttons (page, container_tag = "p", first_last_p = False, show_parent = False) -%}
+  {%- set first  = page.response.rel_first  or "" if first_last_p else None %}
+  {%- set next   = page.response.rel_next   or ""                           %}
+  {%- set parent = page.response.rel_parent or "" if show_parent  else None %}
+  {%- set prev   = page.response.rel_prev   or ""                           %}
+  {%- set last   = page.response.rel_last   or "" if first_last_p else None %}
+  {%- if GTW.any ((head, next, parent, prev, tail)) %}
+    {{ rel_links
+        ( page
+        , container_tag = container_tag
+        , first         = first
+        , last          = last
+        , next          = next
+        , parent        = parent
+        , prev          = prev
+        , ** kwargs
+        )
+    }}
+  {% endif -%}
+{%- endmacro -%} {#- rel_nav_buttons -#}
+
+{%- macro rel_next (page, href, title = None, short_title = None) -%}
+  {{ _rel_link
+      ( page, href
+      , title,       GTW._T ("Goto next page")
+      , short_title, GTW._T ("Next")
+      , class  = "next"
+      , rel    = "next"
+      , symbol = "angle-right"
+      , ** kwargs
+      )
+  }}
+{%- endmacro -%} {#- rel_next -#}
+
+{%- macro rel_parent (page, href, title = None, short_title = None) -%}
+  {{ _rel_link
+      ( page, href
+      , title,       GTW._T ("Goto parent page")
+      , short_title, GTW._T ("Parent")
+      , class  = "parent"
+      , symbol = "angle-up"
+      , ** kwargs
+      )
+  }}
+{%- endmacro -%} {#- rel_parent -#}
+
+{%- macro rel_prev (page, href, title = None, short_title = None) -%}
+  {{ _rel_link
+      ( page, href
+      , title,       GTW._T ("Goto previous page")
+      , short_title, GTW._T ("Prev")
+      , class  = "prev"
+      , rel    = "prev"
+      , symbol = "angle-left"
+      , ** kwargs
+      )
+  }}
+{%- endmacro -%} {#- rel_prev -#}
+
+{%- macro _rel_link
+    (page, href, title, default_title, short_title, default_short_title, symbol)
+-%}
+  {%- if not title %}
+    {%- set title = (href.title if href.abs_href else "") or default_title %}
+  {% endif -%}
+  {%- if not short_title %}
+    {%- set short_title = href.short_title or default_short_title %}
+  {% endif -%}
+  {{ rel_link
+      (page, href.eff_href or href, title, symbol, short_title, ** kwargs)
+  }}
+{%- endmacro -%} {#- _rel_link -#}
+
+{#- __END__ jinja template: html/rel_nav.m.jnj -#}

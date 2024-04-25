@@ -1,0 +1,56 @@
+{#- jinja template: news.m.jnj -#}
+{#
+## Copyright (C) 2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/news.m.jnj
+##
+## Purpose
+##    Macros for news entries
+##
+## Revision Dates
+##    27-Nov-2015 (CT) Creation
+##    ««revision-date»»···
+##--
+#}
+
+{%- macro entry (e) -%}
+  <div class="news-entry">
+    <div class="news-meta">
+      <span class="news-author">{{ e.created_by }}</span>{#--#}
+      <span class="news-date">{{ GTW.firstof (e.date.start, e.date) }}</span>{#--#}
+      <div  class="news-title">
+        {%- onion e.permalink %}
+          {%- head -%}
+            <a href="{{ e.permalink }}" title="{{ GTW._T ("Permanent link") }}">
+          {%- body -%}
+            {{- e.title -}}
+          {%- tail -%}
+            </a>
+          {%- endonion -%}
+      </div>
+    </div>
+    {{ e.contents|safe }}
+    {%- set changer = e.changer %}
+    {%- if changer and NAV.allow (changer, request.user) %}
+      <p>{#--#}
+        <a href="{{ changer.abs_href }}"{#--#}
+           title="{{ GTW._T ('Edit this entry') }}"{#--#}
+           class="button"{#--#}
+        >{#--#}
+          {{ GTW._T ("Change") }}{#--#}
+        </a>{#--#}
+      </p>
+    {% endif -%}
+  </div>
+{%- endmacro -%} {#- entry -#}
+
+{#- __END__ jinja template: news.m.jnj -#}

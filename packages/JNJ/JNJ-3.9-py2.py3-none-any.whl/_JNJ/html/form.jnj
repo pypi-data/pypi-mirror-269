@@ -1,0 +1,168 @@
+{#- jinja template: form.jnj -#}
+{#
+## Copyright (C) 2010-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/form.jnj
+##
+## Purpose
+##    Provide macros for rendering html forms
+##
+## Revision Dates
+##    12-Jan-2010 (CT) Creation
+##    13-Jan-2010 (CT) Creation continued
+##    14-Jan-2010 (CT) Creation continued..
+##    15-Jan-2010 (MG) `login_inline`: `name` attributes added to fields
+##    15-Jan-2010 (MG) Macro `object`: redering of errors not bound to a
+##                     field added
+##    17-Jan-2010 (MG) Login default url changed to `login.html`
+##    30-Jan-2010 (MG) `field_groups`;  added rendering of form fields
+##     2-Feb-2010 (MG) `inline` macro changed to prepare for the JS code
+##    02-Feb-2010 (MG) `field_groups`: rendering of form-hidden fields
+##                     removed again
+##    02-Feb-2010 (MG) `inline_table` added
+##     3-Feb-2010 (CT) `many-2-many-range` made `hidden`
+##     3-Feb-2010 (MG) `fgs_tr_*` added
+##     3-Feb-2010 (MG) `inline_table` add the name of the inline as css-class
+##                     (needed to setup the completion)
+##     5-Feb-2010 (MG) `inline_table*` macros added, `fgs_*` macros renamed
+##     8-Feb-2010 (MG) `aid_div_seq` added
+##    10-Feb-2010 (MG) Display of `aig` no field errors added
+##    10-Feb-2010 (MG) `aid_div_seq` fixed
+##    21-Feb-2010 (CT) `logout_inline` added, `login_inline` changed
+##    22-Feb-2010 (CT) Macro `object` changed to take `cancel_href` from
+##                     `kwargs` or `fo.kw`
+##                     (and use `cancel_kw = {}` for empty `cancel_href`)
+##    23-Feb-2010 (CT) `form` changed to accept more than 1 `submit_kw`
+##    24-Feb-2010 (CT) Missing calls to `GTW._T` added
+##    24-Feb-2010 (CT) `aid_div_seq` changed to honor `legend`
+##    26-Feb-2010 (MG) Inline forms changed
+##    27-Feb-2010 (MG) Handling of hidden fields changed
+##    28-Feb-2010 (MG) Handling of hidden fields fixed
+##    28-Feb-2010 (MG) `inline_table_aid_td` changed to write the hidden fields
+##                     of the parent form if this is the first field group
+##    28-Feb-2010 (MG) `aid_div_seq` fixed to handling hidden fields
+##    10-Mar-2010 (MG) `aid_div_seq` fixed to handle hidden fields correct
+##    10-Mar-2010 (MG) `inline_table_td`: fixed title attribute of td's
+##    11-Mar-2010 (MG) `_sep_th/_sep_td` macros added
+##    30-Apr-2010 (MG) Form table rendering changed completely, AID rendering
+##                     changed
+##     5-May-2010 (MG) `field_help` added
+##     5-May-2010 (MG) Field help for div-seq and table unified
+##    26-May-2010 (MG) Error handling changed
+##    19-Aug-2010 (CT) `form` changed to use `X.input.submit` instead of
+##                     `<a>` for `Cancel`
+##    19-Aug-2010 (CT) `title` added to all Save/reset/cancel buttons
+##    12-Nov-2010 (CT) `form` changed to include `div.buttons` only if necessary
+##    26-Jan-2012 (CT) Use `request.path_x` for `next`, if available
+##    16-Feb-2012 (CT) Add `class="button"` to `login_inline`, `logout_inline`
+##    16-Aug-2012 (MG) Add support for errors to `login_inline`
+##    16-Aug-2012 (MG) Add `password_change` form
+##    17-Aug-2012 (MG) Add customization options to `login_inline` and
+##                    `logout_inline`
+##     9-Oct-2012 (CT) Use `request.referrer` for `next`
+##     9-Oct-2012 (CT) Change `password_change` to not set `next` to
+##                     `page.abs_href`
+##     9-Oct-2012 (CT) Use class `Error-Message` for errors
+##     9-Oct-2012 (CT) Add `username` to `login_inline`
+##     8-Jan-2013 (CT) Add `cert_auth_path` to `logout_inline`
+##    15-Jan-2013 (CT) Add `cc_href` to `login_inline`
+##    16-Jan-2013 (CT) Remove `class` from `<a>` for `cc_href`
+##     9-Dec-2013 (CT) Add `anti_csrf_token` to macro `form`
+##    10-Dec-2013 (CT) Add `request.is_secure` to `login_section`
+##     7-Jan-2014 (CT) Add `link_only` to `login_inline`
+##    11-Feb-2014 (CT) Skip `anti_csrf_token` for `link_only` form
+##    20-Feb-2014 (CT) Remove `level-0`
+##     7-May-2014 (CT) Don't generate empty `action` for `form`
+##    13-Mar-2015 (CT) Pass `action` to `anti_csrf_token`
+##     7-Jun-2015 (CT) Change `maxlength` of `username` from `30` to `80`
+##     9-Jun-2015 (CT) Add class `internal` to login button
+##     9-Jun-2015 (CT) Remove `user.name` from `Logout` button
+##    11-Jun-2015 (CT) Try to avoid `autocomplete` for `password_change`
+##    11-Jun-2015 (CT) Remove obsolete macros for object forms
+##    11-Jun-2015 (CT) Simplify signature of `form`, add `form_pure`
+##    11-Jun-2015 (CT) Remove `login_inline`
+##    12-Jun-2015 (CT) Remove `logout_inline`, `password_change`,
+##                     `display_errors`
+##    13-Jun-2015 (CT) Add `button_control`
+##    16-May-2016 (CT) Use `GTW.xmlattr (kw)`, not `kw|xmlattr`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj") as X -%}
+
+{%- macro button_control () -%}
+  <div class="pure-controls">
+    {{ X.input.button_pure (** kwargs) }}
+  </div>
+{%- endmacro -%} {#- button_control -#}
+
+{%- macro form
+        ( action        = ""
+        , method        = "post"
+        , include_ACT   = True
+        , next          = None
+        )
+-%}
+  {%- set fkw = GTW.filtered_dict
+      ( action = action
+      , method = method
+      , ** kwargs
+      )
+  -%}
+  <form{{ GTW.xmlattr (fkw) }}>
+    {{ caller () }}
+    {%- set anti_csrf_token =
+          include_ACT and response and response.anti_csrf_token (action)
+    %}
+    {%- if anti_csrf_token %}
+      {{ X.input.hidden (name = "F_ACT", value = anti_csrf_token) }}
+    {% endif -%}
+    {%- if next %}
+      {{ X.input.hidden (name = "next", value = next) }}
+    {% endif -%}
+  </form>
+{%- endmacro -%} {#- form -#}
+
+{%- macro form_pure
+        ( method        = "post"
+        , include_ACT   = True
+        , next          = None
+        , aligned       = False
+        , stacked       = False
+        )
+-%}
+  {%- set form_caller = kwargs.pop ("caller", None) -%}
+  {%- set class =  GTW.filtered_join
+      ( " "
+      , ( "pure-form"
+        , "pure-form-aligned" if aligned else ""
+        , "pure-form-stacked" if stacked else ""
+        , kwargs.pop ("class", "")
+        )
+      )
+  %}
+  {% call form
+      ( method        = method
+      , include_ACT   = include_ACT
+      , next          = next
+      , class         = class
+      , ** kwargs
+      )
+  -%}
+    {%- if form_caller %}
+      {{ form_caller () }}
+    {% endif -%}
+  {% endcall %} {# form #}
+{%- endmacro -%} {#- form_pure -#}
+
+{#- __END__ jinja template: form.jnj -#}

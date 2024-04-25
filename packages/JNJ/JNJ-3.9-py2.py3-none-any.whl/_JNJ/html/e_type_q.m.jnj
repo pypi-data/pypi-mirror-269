@@ -1,0 +1,269 @@
+{#- jinja template: html/e_type_q.m.jnj -#}
+{#
+## Copyright (C) 2014-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/e_type_q.m.jnj
+##
+## Purpose
+##    Macros for query restriction for E-Types pages
+##
+## Revision Dates
+##    21-Oct-2014 (CT) Creation
+##    31-Oct-2014 (CT) Factor `qr_form_buttons`
+##    21-Nov-2014 (CT) Factor `X.input.hd_input`, `_id_entity_display`
+##     2-Dec-2014 (CT) Change `attr_filter_field` to set `af.r_name`
+##                     (needed by MF3 input wigdets)
+##     3-Dec-2014 (CT) Factor `esf_field` from `attr_filter_field`
+##     4-Dec-2014 (CT) Use pure grid for `settings` and `attr-filter`
+##     8-Feb-2017 (CT) Add `show_config` argument to `qr_form`
+##     9-Feb-2017 (CT) Add `show_config` argument to `qr_form_buttons`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj") as X -%}
+{%- import "html/form.jnj" as Form with context %}
+
+{%- macro attr_filter_field (page, af) -%}
+  {%- set l_c = " ".join (("pure-u-14-24", "pure-u-sm-23-24", "pure-u-md-7-24")) %}
+  {%- set o_c = " ".join (("pure-u-8-24",  "pure-u-sm-5-24",  "pure-u-md-3-24")) %}
+  {%- set v_c = " ".join (("pure-u-22-24", "pure-u-sm-18-24", "pure-u-md-13-24")) %}
+  <div class="pure-g attr-filter" title="{{ af.ui_name }}">
+    <b class="{{ l_c }}">
+      <label for="{{ af.id }}" title="{{ af.ui_name }}">{# -#}
+        {{ af.ui_name }}{# -#}
+      </label>
+    </b>
+    <b class="{{ o_c }}">
+      <a class="op button" title="{{ af.op.desc }}">
+      {{- af.op.label -}}
+      </a>
+    </b>
+    <span class="{{ v_c }} value{%- if af.Class %} {{ af.Class }}{%- endif -%}">
+      {#- MF3 input wigdets expect `r_name`: add it here -#}
+      {%- do GTW.setattr (af, "r_name", af.id) %}
+      {{ GTW.call_macro (af.attr.input_widget, af, class = "value") -}}
+    </span>
+    <a class="pure-1-24 disabler"></a>
+  </div>
+{%- endmacro -%} {#- attr_filter_field -#}
+
+{%- macro attr_filter_widget (page, filters) -%}
+  {%- set cls   = GTW.filtered_join
+      (" ", ("attrs", kwargs.pop ("class", "")))
+  %}
+  <fieldset class="{{ cls }}">
+    {% for af in filters %}
+      {{- attr_filter_field (page, af) }}
+    {% endfor -%}
+  </fieldset>
+{%- endmacro -%} {#- attr_filter_widget -#}
+
+{%- macro button
+      ( page, name, title
+      , text           = None
+      , disabled       = False
+      , icon_class_add = None
+      , typ            = None
+      )
+-%}
+  {%- set NAME         = name.upper () %}
+  {%- set typ          = typ or page.button_types.get (NAME, "button") %}
+  {{ X.input.button_pure
+      ( class          = cls
+      , disabled       = disabled
+      , icon_class_add = icon_class_add
+      , name           = NAME
+      , text           = text or GTW._T (name)
+      , title          = title
+      , type           = typ
+      , ** kwargs
+      )
+  }}
+{%- endmacro -%} {#- button -#}
+
+{%- macro button_first (page, qr) -%}
+  {{ button
+      ( page
+      , disabled  = not qr.prev_p
+      , name      = GTW._  ("First")
+      , title     = GTW._T
+          ("Display first batch of objects matching the restriction")
+      )
+  }}
+{%- endmacro -%} {#- button_first -#}
+
+{%- macro button_last (page, qr) -%}
+  {{ button
+      ( page
+      , disabled  = not qr.next_p
+      , name      = GTW._  ("Last")
+      , title     = GTW._T
+          ("Display last batch of objects matching the restriction")
+      )
+  }}
+{%- endmacro -%} {#- button_last -#}
+
+{%- macro button_next (page, qr) -%}
+  {{ button
+      ( page
+      , disabled  = not qr.next_p
+      , name      = GTW._  ("Next")
+      , title     = GTW._T
+          ("Display next batch of objects matching the restriction")
+      )
+  }}
+{%- endmacro -%} {#- button_next -#}
+
+{%- macro button_prev (page, qr) -%}
+  {{ button
+      ( page
+      , disabled  = not qr.prev_p
+      , name      = GTW._  ("Prev")
+      , title     = GTW._T
+          ("Display previous batch of objects matching the restriction")
+      )
+  }}
+{%- endmacro -%} {#- button_prev -#}
+
+{%- macro field (page, name, title, value, label, p_class, f_class = "") -%}
+  {%- set caller = kwargs.pop ("caller",   None) -%}
+  {%- set id = "QR-" + name %}
+  <div class="{{ p_class }}" title="{{ title }}">
+    <label for="{{ id }}">
+      {{ label or GTW._T (name.capitalize ()) }}
+    </label>
+    {%- if caller %}
+      {{- caller () -}}
+    {%- else %}
+      {{ X.input.text
+          ( class     = f_class
+          , id        = id
+          , name      = name
+          , value     = value
+          )
+      }}
+    {%- endif -%}
+  </div>
+{%- endmacro -%} {#- field -#}
+
+{%- macro qr_form_buttons (page, qr, c_class = "config", show_config = True) -%}
+  <div class="buttons">
+    {{ button_first (page, qr) }}
+    {{ button_prev  (page, qr) }}
+    {{ button_next  (page, qr) }}
+    {{ button_last  (page, qr) }}
+    {%- if show_config %}
+      {{ button
+          ( page
+          , name      = GTW._  ("Config")
+          , title     = GTW._T
+              ( "Select the fields displayed, fields used for ordering, "
+                "filters conditions used to select the objects to be displayed."
+              )
+          )
+      }}
+
+      {{ button
+          ( page
+          , class     = c_class
+          , name      = GTW._  ("Add")
+          , title     = GTW._T
+            ("Add a rule to restrict the objects to a specific attribute value")
+          )
+      }}
+      {{ button
+          ( page
+          , class     = c_class
+          , name      = GTW._  ("Apply")
+          , title     = GTW._T
+              ("Display list of objects matching the restriction")
+          )
+      }}
+    {% endif -%}
+  </div>
+{%- endmacro -%} {#- qr_form_buttons -#}
+
+{%- macro qr_form (page, fields, qr, show_config = True) -%}
+  {%- set action  = page.abs_href -%}
+  {%- set E_Type  = page.E_Type %}
+  {%- set c_class = "config hidden" %}
+  {% call Form.form
+      ( action = action
+      , method = "get"
+      , class  = "QR pure-form pure-form-stacked"
+      )
+  -%}
+    {{ qr_form_buttons (page, qr, c_class, show_config) }}
+    {%- if show_config %}
+      <fieldset class="{{ c_class }}">
+        <fieldset class="settings pure-g">
+          {{ field
+              ( page, GTW._ ("limit")
+              , GTW._T ("Limit number of entities displayed per page")
+              , qr.limit
+              , f_class = "number"
+              , p_class = "pure-u-1-2 pure-u-sm-1-4 pure-u-md-1-6 pure-u-xl-1-8"
+              )
+          }}
+          {{ field
+              ( page, GTW._ ("offset")
+              , GTW._T ("Number of first entity to display on page")
+              , qr.offset_f
+              , f_class = "number"
+              , p_class = "pure-u-1-2 pure-u-sm-1-4 pure-u-md-1-6 pure-u-xl-1-8"
+              )
+          }}
+          {% call field
+              ( page, GTW._ ("order_by")
+              , GTW._T ("Field(s) to use for ordering entities")
+              , label = GTW._T ("Order by")
+              , p_class = "pure-u-1"
+              )
+          %}
+            {{ X.input.hd_input
+                ( class     = "value"
+                , name      = "order_by"
+                , h_value   = qr.order_by_names
+                , d_value   = qr.order_by_ui_names
+                , id        = "QR-order_by"
+                , readonly  = True
+                )
+            }}
+          {% endcall %} {# field #}
+          {%- if not page.skip_qr_attr_select %}
+            {% call field
+                ( page, GTW._ ("fields")
+                , GTW._T ("Field(s) to display for each entity")
+                , label = GTW._T ("Fields")
+                , p_class = "pure-u-1"
+                )
+            %}
+              {{ X.input.hd_input
+                  ( class     = "value"
+                  , name      = "fields"
+                  , h_value   = GTW.attr_join (",",  fields, "name")
+                  , d_value   = GTW.attr_join (", ", fields, "ui_name")
+                  , id        = "QR-fields"
+                  , readonly  = True
+                  )
+              }}
+            {% endcall %} {# field #}
+          {% endif -%}
+        </fieldset>
+        {{ attr_filter_widget (page, qr.filters) }}
+      </fieldset>
+    {% endif -%}
+  {% endcall %} {# Form.form #}
+{%- endmacro -%} {#- qr_form -#}
+
+{#- __END__ jinja template: html/e_type_q.m.jnj -#}

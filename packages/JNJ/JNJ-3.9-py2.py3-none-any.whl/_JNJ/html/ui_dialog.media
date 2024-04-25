@@ -1,0 +1,150 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2013-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/ui_dialog.media
+#
+# Purpose
+#    Media fragment for use by templates using jquery-ui dialogs
+#
+# Revision Dates
+#     9-Apr-2013 (CT) Creation
+#    15-Sep-2014 (CT) Add rule for `... .ui-dialog-titlebar`
+#     5-Dec-2014 (CT) Use pure buttons for `.ui-dialog`
+#    26-Mar-2015 (CT) Add rules for `a:hover`; factor `.ui-dialog`
+#    27-Mar-2015 (CT) Move `a:hover` rule to `.ui-widget`
+#    31-Mar-2015 (CT) Add `min_height` for `.ui-dialog` plus media rules
+#     1-Apr-2015 (CT) Add rules for `.pure-button-primary`, `name=CANCEL`,
+#                     and `.ui-dialog-titlebar-close`; remove `min_height`
+#     2-Apr-2015 (CT) Increase contrast of `.ui-dialog-title`
+#    18-May-2016 (CT) Add rule for `fieldset[disabled]`
+#    25-May-2016 (CT) Add rule for `.attr-filter.polymorphic`
+#    ««revision-date»»···
+#--
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".no-close .ui-dialog-titlebar-close"
+        , display                  = None
+        , visibility               = "collapse"
+        )
+    , Rule
+        ( ".ui-widget"
+        , children                 =
+            [ Rule
+                ( "a:hover"
+                , background_color         = "inherit"
+                , border                   = 0
+                , color                    = "inherit"
+                )
+            ]
+        )
+    , Rule
+        ( ".ui-dialog"
+        , display                  = "block"
+        , min_width                = Percent (50)
+        , children                 =
+            [ Rule
+                ( "fieldset"
+                , padding          = 0
+                , children         =
+                    [ Rule_Attr
+                        ( "[disabled]"
+                        , P.Rule.hidden
+                        )
+                    , Rule_Class
+                        ( "E_Type"
+                        , border_top       = "1px solid #CCCCCC"
+                        , margin           = TRBL (Em (1.5), Em (1/2), 0)
+                        )
+                    ]
+                )
+            , Rule
+                ( ".attr-filter.polymorphic"
+                , border           = "1px solid #CCCCCC"
+                , border_radius    = Em (1/2)
+                , padding          = TRBL (Em (1/2), Em (1/2), Em (1/4))
+                )
+            , Rule
+                ( ".pure-button"
+                , children                 =
+                    [ Rule
+                        ( "b"
+                        , display                  = "none"
+                        )
+                    , Rule
+                        ( ".fa"
+                        , color                    = P.color.m_blue
+                        )
+                    , Rule_Class
+                        ( "pure-button-primary"
+                        , children                 =
+                            [ Rule
+                                ( ".fa"
+                                , color                    = "inherit"
+                                )
+                            ]
+                        )
+                    , Rule_Attr
+                        ( "[name='CANCEL']"
+                        , float                    = "right"
+                        )
+                    ]
+                )
+            , Rule
+                ( ".pure-form-stacked"
+                , children                 =
+                    [ Rule
+                        ( "input", "select"
+                        , width                    = Percent (100)
+                        )
+                    ]
+                )
+            , Rule
+                ( ".ui-dialog-titlebar"
+                , children                 =
+                    [ Rule
+                        ( ".ui-dialog-title"
+                        , color                    = P.color.m_white
+                        , max_width                = Percent (100)
+                        , white_space              = "normal"
+                        )
+                    , Rule
+                        ( ".ui-dialog-titlebar-close"
+                        , height                   = Rem (2)
+                        , margin_top               = Rem (-1)
+                        , width                    = Rem (2)
+                        )
+                    ]
+                )
+            ]
+        )
+    , Media.Rule
+        ( Media.Query ("screen", max_height = Px (480))
+        , rules               =
+            [ Rule
+                ( ".ui-dialog"
+                , max_height          = Px (300)
+                )
+            ]
+        )
+    , Media.Rule
+        ( Media.Query ("screen", max_height = Px (320))
+        , rules               =
+            [ Rule
+                ( ".ui-dialog"
+                , max_height          = Px (200)
+                )
+            ]
+        )
+    )
+
+### __END__ html/ui_dialog.media

@@ -1,0 +1,174 @@
+{#- jinja template: html/base.jnj -#}
+{#
+## Copyright (C) 2009-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/base.jnj
+##
+## Purpose
+##    Base template for HTML pages
+##
+## Revision Dates
+##    29-Dec-2009 (CT) Creation
+##    17-Mar-2010 (CT) `rel="canonical"` for `permalink` added
+##     1-May-2010 (MG) `body` block added
+##    11-Jun-2010 (CT) Use `X.link_stylesheet` instead of home-grown code
+##    17-Aug-2010 (CT) s/headline/head_line/
+##    24-Nov-2010 (CT) `nav_block` moved after `document`
+##     7-Dec-2010 (CT) `media_item` factored and used for `Media.scripts`, too
+##    15-Dec-2010 (CT) `exclude_robots` added
+##     5-Jan-2011 (CT) Support `page.template.css_href`
+##    31-May-2011 (CT) Take `template` from context, if possible
+##                     (`dir_template` must NOT get the CSS of `page.template`)
+##    26-Sep-2011 (MG) Handling of additional media of `template` added
+##    26-Sep-2011 (MG) Make use of new `page.template_media` property
+##                     (javascript, JS_On_Ready, ...)
+##    27-Sep-2011 (MG) Use new `media_fragments` module
+##    21-Oct-2011 (CT) Call `NF.main` instead of home-grown `NF.section`...
+##    21-Nov-2011 (CT) Add block `body_tail_scripts`
+##    14-Dec-2011 (CT) Move `js_on_ready` to `body_tail_scripts`
+##     5-Jan-2012 (CT) s/page.P_Media/template/
+##     5-Jan-2012 (CT) Remove use of `page.Media`
+##    21-Jan-2014 (CT) Add `pg_nav_show`
+##    20-Feb-2014 (CT) Add `nav_off_canvas`
+##     9-Apr-2014 (CT) Add `width=device-width` to `viewport`
+##    20-Jun-2014 (CT) Add blocks `body_main` and `body_document`
+##    10-Jun-2015 (CT) Factor `page_notifications.render`
+##    17-Nov-2015 (CT) Add guard for `page.top.dynamic_nav_p`
+##    31-Dec-2015 (CT) Add `rel_nav_buttons` to `pg_nav_show`
+##     4-Jan-2017 (CT) Factor `html/base.m.jnj`
+##    17-Jan-2017 (CT) Add `css_nav_side`, `css_nav_type`
+##    18-Jan-2017 (CT) Add blocks `body_header_head`, `_body`, and `_tail`
+##    18-Jan-2017 (CT) Add blocks `body_footer_copyright`,
+##                     `body_footer_top_link`, `body_footer_last_change`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj")   as X -%}
+{%- import "html/media_fragments.jnj"       as MF with context %}
+{%- import "html/main_nav.m.jnj"            as MN with context %}
+{%- import "html/navigation.jnj"            as NT with context %}
+{%- import "html/rel_nav.m.jnj"             as RN with context %}
+{%- import "html/page_notifications.m.jnj"  as PN with context %}
+{%- import "html/base.m.jnj"                as BM with context %}
+
+{%- call X.html (lang = page.language|default ("en")) -%}
+  {%- if not page -%}{%- set page = NAV -%}{%- endif -%}
+  {%- if not template -%}{%- set template = page.template -%}{%- endif -%}
+  {%- call X.head () -%}
+    {%- block head_elements -%}
+      {%- block meta_elements -%}
+        {{ BM.meta_headers (page, description = page.h_title) }}
+      {%- endblock meta_elements -%}
+      {{ BM.link_rel_headers (page, template) }}
+      {% block head_base_element %}{% endblock head_base_element %}
+        {% block title %}
+          <title>{{ page.h_title }}</title>
+        {% endblock title -%}
+      {%- block styles %}
+        {{ BM.style_headers (page, template) }}
+      {%- endblock styles %}
+        {%- block scripts %}
+          {{ MF.scripts (template) }}
+        {%- endblock scripts -%}
+      {{ page.add_headers|safe }}
+    {%- endblock head_elements %}
+  {%- endcall %} {# X.head #}
+  <body {% if page.document_class %}class="{{ page.document_class }}" {% endif %}{{ page.body_attr|safe }} {%- block body_attrs %}{% endblock %}>
+    {%- block body -%}
+    {% call X.header (id = "header", class = "pg_head") -%}
+      {%- block body_header -%}
+        {%- block body_header_head -%}{%- endblock body_header_head -%}
+        {%- block body_header_body -%}{%- endblock body_header_body -%}
+        {%- block body_header_tail -%}{%- endblock body_header_tail -%}
+      {%- endblock body_header -%}
+    {% endcall %} {# X.header #}
+    {%- block body_main -%}
+      {%- set nav_type       = page.css_nav_type or "short" -%}
+      {%- set nav_side       = page.css_nav_side or "left"  %}
+      {%- set nav_off_canvas = " nav-off-canvas"
+            if   page.nav_off_canvas or nav_type != "long"
+            else ""
+      -%}
+      <main id="main" {# -#}
+         class="pg_main{{ nav_off_canvas }} nav-side-{{ nav_side }} nav-type-{{ nav_type }}"{# -#}
+      >
+        {%- block body_document -%}
+          <div id="document" class="pg_body">
+            {%- block short_nav -%}
+              {{ MN.short_nav (page) }}
+            {%- endblock short_nav -%}
+            {%- if page.top.dynamic_nav_p %}
+              {%- block page_notifications -%}
+                {{ PN.render (notifications) }}
+              {%- endblock page_notifications -%}
+            {% endif -%}
+            {%- block body_headline %}
+              {%- if page.head_line %}
+                <h1 class="headline{% if page.headline_class %} {{ page.headline_class }}{% endif %}">{{ page.head_line|safe }}</h1>
+              {% endif -%}
+            {%- endblock body_headline %}
+            {% block document %}{% endblock -%}
+          </div> {# #document .pg_body #}
+        {%- endblock body_document -%}
+        {%- block nav_block -%}
+          {% call MN.nav () -%}
+            {%- block navigate -%}
+              {{ NT.main (page) }}
+            {%- endblock -%}
+          {%- endcall %} {# X.nav #}
+        {%- endblock nav_block -%}
+      </main> {# #main .pg_main #}
+    {%- endblock body_main -%}
+
+    {%- block body_footer %}
+      {% call X.footer (id = "footer", class="pg_foot") -%}
+
+        {%- block body_footer_copyright -%}
+          {%- if page.copyright %}
+            <div class="copyright">
+              Copyright &copy;
+              {{ page.copyright.year if page.copyright.year else GTW.now ("%Y") }}
+              <a href="{{ page.copyright.url }}">
+                {{- page.copyright.holder|default (page.owner) -}}
+              </a>
+            </div>
+          {% endif -%}
+        {%- endblock body_footer_copyright -%}
+
+        {%- block body_footer_top_link %}
+          <div class="top-link">
+            <a id="Bottom" href="#header">{{- GTW._T ("Top of page") -}}</a>
+          </div>
+        {% endblock body_footer_top_link -%}
+
+        {%- block body_footer_last_change %}
+          <div class="last-change">
+            {{- GTW._T ("Last change") -}}:
+            {%- if page.last_changed %}
+              {{ page.last_changed.split (" ") [0] -}}
+            {%- else %}
+              {{ GTW.now ("%Y-%m-%d %H:%M") -}}
+            {% endif -%}
+          </div>
+        {% endblock body_footer_last_change -%}
+      {%- endcall -%} {# X.footer #}
+    {% endblock body_footer -%}
+
+    {%- endblock body -%}
+    {%- block body_tail_scripts -%}
+      {{ MF.js_on_ready (template) }}
+    {%- endblock body_tail_scripts -%}
+  </body>
+{%- endcall -%} {#- X.html -#}
+
+{#- __END__ jinja template: html/base.jnj -#}

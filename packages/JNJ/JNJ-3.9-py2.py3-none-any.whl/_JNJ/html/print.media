@@ -1,0 +1,119 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/print.media
+#
+# Purpose
+#    Media fragment defining the print CSS style
+#
+# Revision Dates
+#    21-Oct-2011 (CT) Creation
+#    27-May-2014 (CT) Add rule for ".js .pg_main.nav-off-canvas"
+#     8-Apr-2015 (CT) Add rule to hide `.rel-nav`
+#     8-Apr-2015 (CT) Restrict rule for `a` to `.pg_main`
+#     8-Apr-2015 (CT) Remove top and bottom margins from `html`
+#    19-Jan-2017 (CT) Adapt to changes in `html/base.jnj.media`
+#    ««revision-date»»···
+#--
+
+print_sheet = Style_Sheet \
+    ( Media.Rule
+        ( Media.Query ("print")
+        , rules                   =
+            [ Rule
+                ( "*"
+                , background      = "transparent !important"
+                , color           = "black !important"
+                , overflow        = "visible !important"
+                )
+            , Rule
+                ( "html", "body", ".pg_main", ".pg_foot", ".pg_head"
+                , display         = "block !important"
+                , border          = "0 !important"
+                , margin          = "0 !important"
+                , padding         = "0 !important"
+                , width           = "auto !important"
+                )
+            , Rule
+                ( "html"
+                , margin          = TRBL (0, Cm (2.5))
+                )
+            , Rule
+                ( "body"
+                , font_size       = Pt (10)
+                , height          = "auto !important"
+                , min_width       = 0
+                , width           = "auto !important"
+                , ** P.font_spec_print
+                )
+            , Rule
+                ( "em", ".em"
+                , ** dict
+                    (P.font_spec_print, font_style = "italic")
+                )
+            , Rule
+                ( "strong"
+                , ** dict
+                    (P.font_spec_print, font_weight = "bold")
+                )
+            , Rule
+                ( "pre"
+                , ** dict
+                    (P.font_spec_print, font_family = P.font_family_pre)
+                )
+            , Rule ("thead", display = "table-header-group")
+            , Rule
+                ( ".pg_body"
+                , max_width       = Em (45)
+                )
+            , Rule
+                ( ".pg_foot"
+                , bottom          = 0
+                , font_size       = Percent (75)
+                , left            = 0
+                , position        = "fixed !important"
+                , width           = Percent (100)
+                )
+            , Rule
+                ( ".pg_head"
+                , color           = "#666666 !important"
+                , height          = "auto !important"
+                )
+            , Rule
+                ( ".pg_head .logo", ".pg_foot .top-link"
+                , "nav", ".main-nav", ".rel-nav", ".short-nav"
+                , display         = "none !important"
+                , visibility      = "collapse !important"
+                )
+            , Rule
+                ( ".pg_main a"
+                , color           = "#000033 !important"
+                , text_decoration = "none !important"
+                , children        =
+                    [ Rule_Attr
+                        ( "[href]:after"
+                        , content   = """ " [" attr(href) "]" """.strip ()
+                        , font_size = "smaller"
+                        )
+                    , Rule_Class
+                        ( "button"
+                        , display    = "none !important"
+                        , visibility = "collapse !important"
+                        )
+                    ]
+                )
+            ]
+        )
+    , rank  = 1 << 16
+    )
+
+### __END__ print

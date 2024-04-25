@@ -1,0 +1,40 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: news.jnj -#}
+{#
+## Copyright (C) 2010-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/news.jnj
+##
+## Purpose
+##    Template and macros for news
+##
+## Revision Dates
+##    27-Jan-2010 (CT) Creation
+##    26-Feb-2010 (CT) Added some `{#--#}` to avoid spurious whitespace
+##    17-Mar-2010 (CT) `permalink` added
+##    13-Sep-2010 (CT) Use `e.date.start` before `e.date`
+##     8-Apr-2013 (CT) Use `e.created_by`, not `e.creator`
+##    22-Jan-2014 (CT) Factor variable `changer`
+##    14-Mar-2014 (CT) Add `rel_nav_buttons`
+##    27-Nov-2015 (CT) Factor macro `entry` to html/news.m.jnj
+##    16-Jan-2017 (CT) Remove `rel_nav_buttons`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import "html/news.m.jnj"          as NW with context %}
+
+{%- block document -%}
+  {{- NW.entry (page) }}
+{%- endblock document -%}
+
+{#- __END__ jinja template: html/news.jnj -#}

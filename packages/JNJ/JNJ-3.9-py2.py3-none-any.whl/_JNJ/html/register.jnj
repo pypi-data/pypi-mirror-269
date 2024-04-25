@@ -1,0 +1,48 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: register.jnj -#}
+{#
+## Copyright (C) 2010-2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/register.jnj
+##
+## Purpose
+##    Template for the account registration
+##
+## Revision Dates
+##    21-Feb-2010 (MG) Creation
+##    29-Jun-2010 (CT) Use `request.host` instead of `page.site_url`
+##    16-Aug-2012 (MG) Adapt to formless new GTW.RST.TOP.Auth
+##    12-Jun-2015 (CT) Use `AT.register_form`, not home-grown code
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj") as X -%}
+{%- import "html/auth.m.jnj"              as AT with context %}
+
+{%- set title = GTW._T ("Register a new account for %s") % (request.host, ) %}
+
+{%- block title -%}
+  <title>{{ title }}</title>
+{%- endblock -%}
+
+{%- block document -%}
+  {{ AT.register_form
+      ( page
+      , next     = next
+      , errors   = errors
+      , title    = title
+      )
+  }}
+{%- endblock document -%}
+
+{#- __END__ jinja template: register.jnj -#}

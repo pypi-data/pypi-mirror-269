@@ -1,0 +1,234 @@
+{#- jinja template: html/ETR/table.m.jnj -#}
+{#
+## Copyright (C) 2015-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/ETR/table.m.jnj
+##
+## Purpose
+##    Template macros rendering E_Type instances as rows of a table
+##
+## Revision Dates
+##    21-Jan-2015 (CT) Creation
+##     3-Feb-2015 (CT) Use `f.css_class_dyn (obj)`, not `f.css_class`
+##     4-Feb-2015 (CT) Factor `E_Type_caption`, `E_Type_tail`
+##     4-Feb-2015 (CT) Pass `renderer` to `as_html`, `css_class_dyn`
+##     5-Feb-2015 (CT) Factor `E_Type_actions`, add `actions_at_top`
+##    28-May-2015 (CT) Add `data-href` to `Instance`
+##     2-Jun-2015 (CT) Factor and simplify `AB.action_button`
+##     2-Jun-2015 (CT) Add `zero_width_space` to `action_button`
+##     9-Jun-2015 (CT) Re-add `href` to `action_button_create`
+##     2-Jan-2016 (CT) Pass `first_last_p` to `rel_nav_buttons`
+##    16-May-2016 (CT) Use `GTW.xmlattr (kw)`, not `kw|xmlattr`
+##    16-Jan-2017 (CT) Import `rel_nav.m.jnj`, not `navigation.jnj`
+##     8-Feb-2017 (CT) Remove `rel_nav_buttons` from `E_Type_tail`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import "html/action_button.m.jnj"       as AB with context %}
+{%- import "html/rel_nav.m.jnj"             as RN with context %}
+
+{%- macro action_button
+    ( renderer, action
+    , title       = ""
+    , text        = ""
+    , i_add_cls   = None
+    )
+-%}
+  {{- AB.action_button
+        ( action    = action.action
+        , icon_name = action.icon
+        , title     = title or renderer.action_title (action)
+        , text      = text  or action.text
+        , i_add_cls = i_add_cls
+        , a_cls     = action.css_class
+        , tabindex  = None
+        , ** kwargs
+        )
+  -}}{{- GTW.html_char_ref (GTW.Dingbats.zero_width_space) -}}
+{%- endmacro -%} {#- action_button -#}
+
+{%- macro action_button_create
+    ( renderer, action
+    , title       = ""
+    , text        = ""
+    , i_add_cls   = None
+    )
+-%}
+  {#- XXX add support for partial types... -#}
+  {{- GTW.call_macro
+        ( "action_button", renderer, action
+        , href        = action.href
+        , title       = title
+        , text        = text or renderer.action_title (action)
+        , i_add_cls   = i_add_cls
+        , templ_name  = action.template_module or renderer.template_module
+        , ** kwargs
+        )
+  -}}
+{%- endmacro -%} {#- action_button_create -#}
+
+{%- macro actions (renderer, actions) -%}
+  {%- for action in actions -%}
+    {{- GTW.call_macro
+        ( action.template_macro, renderer, action
+        , templ_name = action.template_module or renderer.template_module
+        , ** kwargs
+        )
+    -}}
+  {%- endfor -%}
+{%- endmacro -%} {#- actions -#}
+
+{%- macro E_Type (renderer, t_class = None) -%}
+  {%- set cls = GTW.filtered_join
+        (" ", (renderer.css_class, t_class, "pure-table pure-table-bordered"))
+  %}
+  {%- set cols = GTW.len (renderer.td_cols) + GTW.bool (renderer.Actions_I) %}
+  {{ GTW.call_macro
+       ("E_Type_head", renderer, templ_name = renderer.template_module)
+  -}}
+  <table{{ GTW.xmlattr (class = cls, id = renderer.css_id) }}>
+    {{ GTW.call_macro
+         ("E_Type_caption", renderer, templ_name = renderer.template_module)
+    -}}
+    <thead>
+      {%- if renderer.th_cols0 %}
+        <tr>
+          {{ GTW.call_macro
+             ( "th_fields", renderer, "th_cols0"
+             , templ_name = renderer.template_module
+             )
+          }}
+          {%- if renderer.Actions_I %}
+            <th class="action"></th>
+          {% endif -%}
+        </tr>
+      {% endif -%}
+      <tr>
+        {{ GTW.call_macro
+             ( "th_fields", renderer, "th_cols"
+             , templ_name = renderer.template_module
+             )
+        }}
+        {%- if renderer.Actions_I %}
+          <th class="action">
+            {%- if renderer.actions %}
+              {{- GTW.call_macro
+                  ( "actions", renderer, renderer.actions [:1]
+                  , text       = " "
+                  , templ_name = renderer.template_module
+                  )
+              -}}
+            {% endif -%}
+          </th>
+        {% endif -%}
+      </tr>
+    </thead>
+    <tbody>
+      {{- GTW.call_macro
+          ( "E_Type_actions", renderer, renderer.actions_at_top, cols
+          , templ_name = renderer.template_module
+          )
+      }}
+      {%- for o in renderer.objects %}
+        {{ GTW.call_macro
+           ( "Instance", o
+           , templ_name = o.template_module or renderer.template_module
+           )
+        }}
+      {% endfor -%}
+      {{- GTW.call_macro
+          ( "E_Type_actions", renderer, renderer.actions_at_bottom, cols
+          , templ_name = renderer.template_module
+          )
+      }}
+    </tbody>
+  </table>
+  {{ GTW.call_macro
+       ("E_Type_tail", renderer, templ_name = renderer.template_module)
+  -}}
+{%- endmacro -%} {#- E_Type -#}
+
+{%- macro E_Type_actions (renderer, actions, cols) -%}
+  {%- if actions %}
+    <tr class="action">
+      <td colspan="{{ cols }}">
+        {{- GTW.call_macro
+            ( "actions", renderer, actions
+            , templ_name = renderer.template_module
+            )
+        -}}
+      </td>
+    </tr>
+  {% endif -%}
+{%- endmacro -%} {#- E_Type_actions -#}
+
+{%- macro E_Type_caption (renderer) -%}
+{%- endmacro -%} {#- E_Type_caption -#}
+
+{%- macro E_Type_head (renderer) -%}
+{%- endmacro -%} {#- E_Type_head -#}
+
+{%- macro E_Type_tail (renderer) -%}
+{%- endmacro -%} {#- E_Type_tail -#}
+
+{%- macro Instance (renderer) -%}
+  {%- set obj = renderer.obj %}
+  <tr{{ GTW.xmlattr ({"data-href" : renderer.obj_href}, class = renderer.css_class, id = renderer.css_id) }}>
+    {%- for field in renderer.fields %}
+      {%- for f in field.td_cols %}
+        <td{{ GTW.xmlattr (class = f.css_class_dyn (obj, renderer)) }}>
+          {{- f.as_html (obj, renderer) -}}
+        </td>
+      {% endfor -%}
+    {% endfor -%}
+    {%- if renderer.etr.Actions_I -%}
+      <td class="action">{#- -#}
+        <p>
+          {{- GTW.call_macro
+              ( "actions", renderer, renderer.actions
+              , templ_name = renderer.template_module
+              )
+          -}}
+        </p>{#- -#}
+      </td>
+    {%- endif -%}
+  </tr>
+{%- endmacro -%} {#- Instance -#}
+
+{%- macro th_field (renderer, field, colspan) -%}
+  {%- set kw = GTW.dict
+        (class = field.css_class, scope = "col", title = field.description)
+  %}
+  {%- if colspan > 1 %}
+    {%- do kw.update (colspan = colspan) %}
+  {% endif -%}
+  <th{{ GTW.xmlattr (kw) }}>
+    {{- field.ui_name -}}
+  </th>
+{%- endmacro -%} {#- th_field -#}
+
+{%- macro th_fields (renderer, th_col_name) -%}
+  {%- for field in renderer.fields %}
+    {%- set th_cols = GTW.getattr (field, th_col_name) %}
+    {%- set cs      = GTW.len (field.td_cols) - GTW.len (th_cols) + 1 %}
+    {%- for f in th_cols %}
+      {{ GTW.call_macro
+          ( "th_field", renderer, f, cs
+          , templ_name = f.template_module or renderer.template_module
+          )
+      }}
+    {% endfor -%}
+  {% endfor -%}
+{%- endmacro -%} {#- th_fields -#}
+
+{#- __END__ jinja template: html/ETR/table.m.jnj -#}

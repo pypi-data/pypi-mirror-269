@@ -1,0 +1,39 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: regatta_page_r.jnj -#}
+{#
+## Copyright (C) 2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/regatta_page_r.jnj
+##
+## Purpose
+##    Template rendering a regatta page
+##
+## Revision Dates
+##     2-Feb-2015 (CT) Creation
+##    ««revision-date»»···
+##--
+#}
+
+{%- block body_attrs %}
+  {{ super () }} class="Regatta-{{ page.__class__.__name__ }}"
+{%- endblock -%}
+
+{%- block document %}
+  {{ GTW.call_macro
+     ( "E_Type", page.renderer
+     , t_class    = "Object-List Regatta"
+     , templ_name = page.renderer.template_module
+     )
+  }}
+{% endblock -%}
+
+{#- __END__ jinja template: html/regatta_page_r.jnj -#}

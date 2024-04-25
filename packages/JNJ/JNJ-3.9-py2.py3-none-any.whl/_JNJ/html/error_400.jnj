@@ -1,0 +1,41 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: error_400.jnj -#}
+{#
+## Copyright (C) 2011 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+## 
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    error_400
+##
+## Purpose
+##    Error template for HTTP error 400 (Bad Request)
+##
+## Revision Dates
+##     2-May-2011 (CT) Creation
+##    ««revision-date»»···
+##--
+#}
+{%- block title %}
+  <title>{{ GTW._T ("Bad request") }}</title>
+{% endblock -%}
+
+{%- block document %}
+  {% if request.Error %}
+    <h1 class="Error-Message">
+      {{ GTW._T (request.Error) }}
+    </h1>
+  {% else %}
+    <h1 class="Error-Message">
+      {{ GTW._T ("The request could not be understood by the server due to malformed syntax.") }}
+    </h1>
+  {% endif %}
+{% endblock document -%}
+
+{#- __END__ jinja template: error_400.jnj -#}

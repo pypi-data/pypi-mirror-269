@@ -1,0 +1,415 @@
+{#- jinja template: html/mf3.m.jnj -#}
+{#
+## Copyright (C) 2014-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/mf3.m.jnj
+##
+## Purpose
+##    Template macros for rendering GTW.MF3 forms
+##
+## Revision Dates
+##    26-Apr-2014 (CT) Creation
+##     7-May-2014 (CT) Add `completer` to `Field`
+##    14-May-2014 (CT) Use `<section>`, not `<fieldset>`
+##    14-May-2014 (CT) Add `action-button` to `Field_Entity`
+##    17-Jun-2014 (CT) Factor `entity_buttons`
+##    17-Jun-2014 (CT) Add `Entity_Rev_Ref`, `Field_Rev_Ref`
+##    18-Jun-2014 (CT) Factor `do_field_entity`
+##    19-Jun-2014 (CT) Change `entity_buttons` to use `elem.action_buttons`
+##    19-Jun-2014 (CT) Add `entity_button_remove`
+##     2-Jul-2014 (CT) Add `texts` to `tail_scripts`
+##     8-Jul-2014 (CT) Use `<a>`, not `<button>`, for action buttons
+##    27-Aug-2014 (CT) Use class `"Field Confirmation"`,
+##                     not `Field-Confirmation`, for `Field__Confirmation`
+##    28-Aug-2014 (CT) Add `do_description` to `Field_Composite`
+##    29-Aug-2014 (CT) Add `max_rev_ref` to `Field_Rev_Ref`
+##    25-Sep-2014 (CT) Add `polisher` to `Field`
+##    21-Nov-2014 (CT) Correct use of `safe` in `do_description`
+##                     (`safe` applied to `None` returns `"None"`)
+##    12-Dec-2014 (CT) Add `F_ACT` to `do_form`
+##    30-Jan-2015 (CT) Use `page.request.path` for form `action`
+##                     (to match what `Anti_CSRF` uses; otherwise Aliases break)
+##    13-Mar-2015 (CT) Pass `action` to `anti_csrf_token`
+##    24-Mar-2015 (CT) Add `<b>*</b>` to `label` for required elements
+##                     (that aren't also prefilled)
+##    16-Apr-2015 (CT) Add guard for `add_rev_ref` button
+##    29-Apr-2015 (CT) Change `do_description` to always add `aside` element,
+##                     even if empty
+##     2-Jun-2015 (CT) Factor and simplify `action_button`
+##    20-Dec-2015 (CT) Use `elem.aside` and `.aside_x`, not home-grown code
+##    20-Dec-2015 (CT) Add `class="?"` to label if `elem.aside`
+##    26-Apr-2016 (CT) Use `elem.polisher.id`, not 1, for `data-polisher`
+##    20-Sep-2016 (CT) Add `Field_Structured`, factor `_Field_Composite_`
+##    18-Oct-2016 (CT) Add `ui_allow_change`, `ui_allow_move`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj") as X -%}
+{%- import "html/form.jnj" as FM with context %}
+{%- from   "html/action_button.m.jnj" import action_button with context %}
+
+{%- macro do_description (page, form, elem, t_module) -%}
+  {%- set desc    = GTW._T (elem.aside) %}
+  {%- set aside_x = elem.aside_x %}
+  <aside class="Desc">
+    {%- if desc -%}
+      {{- desc|safe -}}
+      {%- if aside_x -%}
+        <a class="button pure-button" {# -#}
+           data-action="more_aside" {# -#}
+           tabindex="-1" {# -#}
+           title="{{ GTW._T ("Display more detailed explanation") }}" {# -#}
+        >{# -#}
+          <i class="fa fa-ellipsis-h"></i>{# -#}
+        </a>{# -#}
+        <div class="Expl">
+          {%- for text in aside_x %}
+            <p>{{- GTW._T (text)|safe -}}</p>
+          {% endfor -%}
+        </div>
+      {% endif -%}
+    {% endif -%}
+  </aside>
+{%- endmacro -%} {#- do_description -#}
+
+{%- macro do_elements (page, form, elem, t_module) -%}
+  {%- set t_module = elem.template_module or t_module %}
+  {%- for e in elem.template_elements %}
+    {%- set tm = e.template_module or t_module %}
+    {{ GTW.call_macro (e.template_macro, page, form, e, tm, templ_name = tm) }}
+  {% endfor -%}
+{%- endmacro -%} {#- do_elements -#}
+
+{%- macro do_field (page, form, elem, t_module, f_class) -%}
+  {%- set caller = kwargs.pop ("caller", None) -%}
+  <div class="{{ f_class }} pure-control-group">
+    {%- if caller %}
+      {{ caller () }}
+    {%- else %}
+      {{ GTW.call_macro
+          ( "do_label", page, form, elem, t_module
+          , templ_name = t_module, ** kwargs
+          )
+      }}
+    {% endif -%}
+    {{ GTW.call_macro (elem.input_widget, elem, ** kwargs) }}
+    {{ GTW.call_macro
+        ("do_description", page, form, elem, t_module, templ_name = t_module)
+    }}
+  </div>
+{%- endmacro -%} {#- do_field -#}
+
+{%- macro do_field_entity (page, form, elem, t_module, h1_text) -%}
+  <section class="Field-Entity{%- if elem.collapsed %} closed{% endif -%}">
+    <h1>{{ h1_text }}</h1>
+    {{ entity_buttons (page, form, elem, t_module) }}
+    {%- set action = "open" if elem.ui_allow_change
+          else ("open4move" if elem.ui_allow_move else "")
+    %}
+    {% call GTW.call_macro
+        ( "do_field", page, form, elem, t_module, "Display Field"
+        , class       = "value"
+        , action      = action
+        , templ_name  = t_module, ** kwargs
+        )
+    -%}
+      <label for="{{ elem.id }}">{# -#}
+        {%- if elem.ui_allow_change %}
+          <span class="action-button">{# -#}
+            {{- action_button
+                ( "open", "pencil"
+                , GTW._T ("Open fields of %s for editing") % (elem.label, )
+                )
+            -}}
+          </span>{# -#}
+        {%- elif elem.ui_allow_move %}
+          <span class="action-button">{# -#}
+            {{- action_button
+                ( "open4move", "pencil-square-o"
+                , GTW._T ("Open fields of %s for editing") % (elem.label, )
+                )
+            -}}
+          </span>{# -#}
+        {% endif -%}
+      </label>
+    {% endcall %}
+    <fieldset>
+      {{ GTW.call_macro
+          ("do_elements", page, form, elem, t_module, templ_name = t_module)
+      }}
+    </fieldset>
+  </section>
+{%- endmacro -%} {#- do_field_entity -#}
+
+{%- macro do_form (page, form, referrer) -%}
+  {%- set caller = kwargs.pop ("caller") -%}
+  {%- set action = page.request.path %}
+  <form action="{{ action }}" {# -#}
+        class="{{ form.css_class }} pure-form pure-form-aligned" {# -#}
+        id="{{ form.id }}" {# -#}
+        method="post" {# -#}
+        {#- -#}
+  >
+    {{ caller () }}
+    {%- set response = page.response %}
+    {%- set anti_csrf_token = response and response.anti_csrf_token (action) %}
+    {%- if anti_csrf_token %}
+      {{ X.input.hidden (name = "F_ACT", value = anti_csrf_token) }}
+    {% endif -%}
+    <div class="pure-controls">
+      <button class="pure-button pure-button-primary" {# -#}
+              title="{{ GTW._T ("Send form data to server and leave form") }}" {# -#}
+              type="submit" {# -#}
+      >{# -#}
+        <i class="fa fa-check"></i> {{ GTW._T ("Save") -}}
+      </button>{# -#}
+      <button class="pure-button" {# -#}
+              name="cancel"
+              tabindex="-1" {# -#}
+              title="{{ GTW._T ("Discard all changes and leave form") }}" {# -#}
+              type="submit" {# -#}
+      >{# -#}
+        {{ GTW._T ("Cancel") -}}
+      </button>{# -#}
+    </div>
+  </form>
+{%- endmacro -%} {#- do_form -#}
+
+{%- macro do_label (page, form, elem, t_module) -%}
+  {%- set prefix = kwargs.pop ("label_prefix", "") %}
+  {%- set label  = kwargs.pop ("label", "") %}
+  {%- set aside  = elem.aside %}
+  <label for="{{ elem.id }}" {%- if aside %} class="desc-p"{% endif -%}>{# -#}
+    {%- if prefix %}{{ prefix }} {% endif -%}
+    {{ label or GTW._T (elem.label) -}}
+    {%- if elem.required and not elem.prefilled %}<b>*</b>{% endif -%}
+  </label>
+{%- endmacro -%} {#- do_label -#}
+
+{%- macro entity_button_close (page, form, elem, t_module) -%}
+  {{- action_button
+      ( "close", "check"
+      , GTW._T ("Hide fields of %s") % (elem.label, )
+      )
+  -}}
+{%- endmacro -%} {#- entity_button_close -#}
+
+{%- macro entity_button_clear (page, form, elem, t_module) -%}
+  {{- action_button
+      ("clear", "eraser", GTW._T ("Clear values of all fields"))
+  -}}
+{%- endmacro -%} {#- entity_button_clear -#}
+
+{%- macro entity_button_remove (page, form, elem, t_module) -%}
+  {{- action_button
+      ( "remove", "trash-o"
+      , GTW._T ("Remove %s from form and database") % (elem.label, )
+      )
+  -}}
+{%- endmacro -%} {#- entity_button_remove -#}
+
+{%- macro entity_button_reset (page, form, elem, t_module) -%}
+  {{- action_button
+      ("reset", "undo", GTW._T ("Reset all fields to initial values"))
+  -}}
+{%- endmacro -%} {#- entity_button_reset -#}
+
+{%- macro entity_buttons (page, form, elem, t_module) -%}
+  <div class="action-button">{# -#}
+    {%- for bn in elem.action_buttons %}
+      {{ GTW.call_macro
+          ( "entity_button_" + bn, page, form, elem, t_module
+          , templ_name = t_module
+          )
+      }}
+    {% endfor -%}
+  </div>
+{%- endmacro -%} {#- entity_buttons -#}
+
+{%- macro Entity (page, form, elem, t_module) -%}
+  <section class="Entity">
+    <h1>{{ elem.label }}</h1>
+    {{ GTW.call_macro
+        ("do_elements", page, form, elem, t_module, templ_name = t_module)
+    }}
+  </section>
+{%- endmacro -%} {#- Entity -#}
+
+{%- macro Entity_Rev_Ref (page, form, elem, t_module) -%}
+  {{ GTW.call_macro
+      ( "do_field_entity"
+      , page, form, elem, t_module
+      , templ_name = t_module
+      , h1_text    = elem.label
+      , ** kwargs
+      )
+  }}
+{%- endmacro -%} {#- Entity_Rev_Ref -#}
+
+{%- macro Entity_Form (page, form) -%}
+  {#- Render the form for an instance `form` of of `GTW.MF3.Entity` -#}
+  {%- set form_caller = kwargs.pop ("caller", None) -%}
+  {%- set referrer = form.referrer or page.referrer %}
+  {%- set t_module = form.template_module %}
+  {% call GTW.call_macro
+      ("do_form", page, form, referrer, templ_name = t_module)
+  -%}
+    {{ GTW.call_macro
+        ("Entity", page, form, form, t_module, templ_name = t_module)
+    }}
+    {%- if form_caller %}
+      {{ form_caller () }}
+    {% endif -%}
+  {% endcall %} {# do_form #}
+{%- endmacro -%} {#- Entity_Form -#}
+
+{%- macro Field (page, form, elem, t_module) -%}
+  {%- set kw = GTW.dict (kwargs) %}
+  {%- if not elem.readonly %}
+    {%- if elem.completer %}
+      {%- do kw.update ([("data-completer", elem.completer.id)]) %}
+    {% endif -%}
+    {%- if elem.polisher %}
+      {%- do kw.update ([("data-polisher",  elem.polisher.id)]) %}
+    {% endif -%}
+  {% endif -%}
+  {{ GTW.call_macro
+      ( "do_field", page, form, elem, t_module, "Field"
+      , templ_name = t_module
+      , ** kw
+      )
+  -}}
+{%- endmacro -%} {#- Field -#}
+
+{%- macro Field__Confirmation (page, form, elem, t_module) -%}
+  {{ GTW.call_macro
+      ( "do_field", page, form, elem, t_module, "Field Confirmation"
+      , templ_name = t_module, ** kwargs
+      )
+  -}}
+{%- endmacro -%} {#- Field__Confirmation -#}
+
+{%- macro _Field_Composite_ (page, form, elem, t_module, cls) -%}
+  {%- onion GTW.len (elem.field_elements) > 1 %}
+    {%- head %}
+      <div class="{{ cls }}">
+        <h1>
+          {{- GTW._T (elem.label) -}}
+        </h1>
+        {{ GTW.call_macro
+            ("do_description", page, form, elem, t_module, templ_name = t_module)
+        }}
+    {%- body %}
+      {{ GTW.call_macro
+        ("do_elements", page, form, elem, t_module, templ_name = t_module)
+      }}
+    {%- tail %}
+      </div>
+    {%- endonion %}
+{%- endmacro -%} {#- _Field_Composite_ -#}
+
+{%- macro Field_Composite (page, form, elem, t_module) -%}
+  {{- _Field_Composite_ (page, form, elem, t_module, "Field-Composite") -}}
+{%- endmacro -%} {#- Field_Composite -#}
+
+{%- macro Field_Entity (page, form, elem, t_module) -%}
+  {%- if elem.readonly %}
+    {{ GTW.call_macro
+      ( "do_field", page, form, elem, t_module, "Field"
+      , templ_name = t_module, ** kwargs
+      )
+    -}}
+  {%- elif elem.allow_new %}
+    {{ GTW.call_macro
+        ( "do_field_entity"
+        , page, form, elem, t_module
+        , templ_name = t_module
+        , h1_text    = GTW._T (elem.label)
+        , ** kwargs
+        )
+    }}
+  {%- else %}
+    {{ GTW.call_macro
+      ( "do_field", page, form, elem, t_module, "Selector Field"
+      , class = "value"
+      , templ_name = t_module, ** kwargs
+      )
+    }}
+  {% endif -%}
+{%- endmacro -%} {#- Field_Entity -#}
+
+{%- macro Field_Ref_Hidden (page, form, elem, t_module) -%}
+  {{ GTW.call_macro (elem.input_widget, elem, ** kwargs) }}
+{%- endmacro -%} {#- Field_Ref_Hidden -#}
+
+{%- macro Field_Rev_Ref (page, form, elem, t_module) -%}
+  {%- if elem.max_rev_ref != 0 %}
+    {%- set label = elem.attr.Ref_Type.ui_name_T %}
+    <div class="Entity-List" id="{{ elem.id }}" {# -#}
+         data-max-rev-ref="{{ elem.max_rev_ref }}" {#- -#}
+    >
+      <h1>{{ label }}</h1>
+      {%- if elem.max_index < elem.max_rev_ref %}
+        <div class="action-button">{# -#}
+          {{- action_button
+              ( "add_rev_ref", "plus", GTW._T ("Add a %s") % (label, )
+              , ref = elem.id
+              )
+          -}}
+        </div>
+      {% endif -%}
+      {{ GTW.call_macro
+          ("do_elements", page, form, elem, t_module, templ_name = t_module)
+      }}
+    </div>
+  {% endif -%}
+{%- endmacro -%} {#- Field_Rev_Ref -#}
+
+{%- macro Field_Structured (page, form, elem, t_module) -%}
+  {{- _Field_Composite_ (page, form, elem, t_module, "Field-Composite") -}}
+{%- endmacro -%} {#- Field_Structured -#}
+
+{%- macro main (page, form) -%}
+  {{ GTW.call_macro
+      (form.template_macro, page, form, templ_name = form.template_module)
+  }}
+  {{ GTW.call_macro
+      ("tail_scripts", page, form, templ_name = form.template_module)
+  }}
+{%- endmacro -%} {#- main -#}
+
+{%- macro tail_scripts (page, form) -%}
+  <script>{# -#}
+    $("form[id=\"{{ form.id }}\"]").gtw_mf3_form
+      ( {{ form.as_json }}
+      , { texts : {# -#}
+            { "Correct field" : "{{ GTW._T ("Correct field") }}" {# -#}
+            , "Form errors" : "{{ GTW._T ("form errors: please correct") }}" {# -#}
+            } {#- -#}
+        , url : {# -#}
+            { add_rev_ref : "{{ page.href_add_rev_ref () }}" {# -#}
+            , completer : "{{ page.href_complete () }}" {# -#}
+            , completed : "{{ page.href_completed () }}" {# -#}
+            , remove : "{{ page.href_delete () }}" {# -#}
+            , next : "{{ page.referrer or page.parent.parent.abs_href }}" {# -#}
+            , polisher : "{{ page.href_polisher () }}" {# -#}
+            , qx_esf_completed : "{{ page.href_qx_esf_completed () }}" {# -#}
+            , qx_esf_completer : "{{ page.href_qx_esf_completer () }}" {# -#}
+            , qx_esf : "{{ page.href_qx_esf () }}" {# -#}
+            }
+        }
+      );{# -#}
+  </script>
+{%- endmacro -%} {#- tail_scripts -#}
+
+{#- __END__ jinja template: html/mf3.m.jnj -#}

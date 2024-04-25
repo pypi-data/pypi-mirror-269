@@ -1,0 +1,60 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: empty_dir.jnj -#}
+{#
+## Copyright (C) 2014 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+## 
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/empty_dir.jnj
+##
+## Purpose
+##    Template for empty directory
+##
+## Revision Dates
+##    22-Jan-2014 (CT) Creation
+##    18-Feb-2014 (CT) Show `page.entries_a_link`, if any
+##    ««revision-date»»···
+##--
+#}
+
+{%- block document -%}
+  {%- set a_links = page.entries_a_link %}
+  {%- if a_links %}
+    <h1 class="headline">
+      {{- page.title -}}
+    </h1>
+    <ul>
+      {%- for al in a_links %}
+        <li>
+          <a href="{{ al.abs_href }}">
+            {{- al.title -}}
+          </a>
+        </li>
+      {% endfor -%}
+    </ul>
+  {%- else %}
+    <h1>
+      {{ page.abs_href }} {{ GTW._T ("currently doesn't contain any entries") }}
+    </h1>
+  {% endif -%}
+
+  {%- set creator = page.creator %}
+  {%- if creator %}
+    {%- if creator and NAV.allow (creator, request.user) %}
+      <p class="Create">{#--#}
+        <a href="{{ creator.abs_href }}" class="button">{#--#}
+          {{ GTW._T ("Create a new entry") }}{#--#}
+        </a>{#--#}
+      </p>
+    {% endif -%}
+  {% endif -%}
+{%- endblock document -%}
+
+{#- __END__ jinja template: html/empty_dir.jnj -#}

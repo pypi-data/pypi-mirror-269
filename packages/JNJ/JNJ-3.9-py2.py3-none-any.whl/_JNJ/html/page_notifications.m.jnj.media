@@ -1,0 +1,110 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2015-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/page_notifications.m.jnj.media
+#
+# Purpose
+#    Media fragment defining CSS rules for page notifications
+#
+# Revision Dates
+#    10-Jun-2015 (CT) Creation
+#    17-Jan-2016 (CT) Use `V5a_page_notifications`
+#    27-Jan-2016 (CT) Add `cursor` to `label`
+#    27-Jan-2016 (CT) Remove redundant `visibility`
+#    ««revision-date»»···
+#--
+
+from   __future__ import division
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".page-notifications"
+        , background_color         = P.color_lighter_grey
+        , border                   = "1px solid " + P.color_light_grey
+        , border_radius            = Em (1/2)
+        , color                    = "#3C763D"
+        , margin                   = Em (1/2)
+        , children                 =
+            [ Rule
+                ( "label + input[type=checkbox]"
+                , display          = "none"
+                )
+            , Rule
+                ( "label"
+                , cursor           = "pointer"
+                , display          = "inline-block"
+                , margin           = TRBL (Em (1/2), Em (3/4))
+                , vertical_align   = "top"
+                , children         =
+                    [ Rule
+                        ( ".fa"
+                        , color            = P.color_selected
+                        , font_size        = Em (1.25)
+                        , height           = Em (1.0)
+                        , opacity          = 0.75
+                        , width            = Em (1.0)
+                        )
+                    ]
+                )
+            , Rule
+                ( "ul"
+                , display          = "inline-block"
+                , list_style       = "none"
+                , margin           = TRBL (Em (1/2), 0)
+                , padding          = 0
+                , vertical_align   = "top"
+                , width            = Percent (90)
+                , children         =
+                    [ Rule
+                        ( "li"
+                        , border_bottom    = "1px solid " + P.color_border_grey
+                        , padding          = Em (1/2)
+                        , children         =
+                            [ Rule_Pseudo
+                                ( "first-child"
+                                , padding_top      = 0
+                                )
+                            , Rule_Pseudo
+                                ( "last-child"
+                                , border_bottom    = 0
+                                , padding_bottom   = 0
+                                )
+                            ]
+                        )
+                    ]
+                )
+            , Rule
+                ( "label + input[type=checkbox]:checked + ul"
+                , display          = "none"
+                )
+            ]
+        )
+    , Media.Rule
+        ( Media.Query ("screen", P.breakpoint.narrow)
+         , rules               =
+            [ Rule
+                ( ".page-notifications"
+                , children         =
+                    [ Rule
+                        ( "ul"
+                        , width            = Percent (80)
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+
+Script      (CHJ.Script._.V5a_page_notifications)
+JS_On_Ready (CHJ.JS_On_Ready._.V5a_page_notifications)
+
+### __END__ html/page_notifications.m.jnj.media

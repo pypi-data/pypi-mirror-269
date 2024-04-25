@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2012 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+# 
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/pns_e_type_doc.jnj.media
+#
+# Purpose
+#    Media fragment for template html/pns_e_type_doc.jnj
+#
+# Revision Dates
+#    25-Sep-2012 (CT) Creation
+#    ««revision-date»»···
+#--
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( "svg.MOM-Graph"
+        , display            = "block"
+        , vertical_align     = "top"
+        )
+    )
+
+Script (CHJ.Script._.GTW_pns_doc_graph)
+
+### __END__ html/pns_e_type_doc.jnj.media

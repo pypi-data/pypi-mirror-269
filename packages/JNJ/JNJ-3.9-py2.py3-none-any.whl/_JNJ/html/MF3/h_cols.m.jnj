@@ -1,0 +1,78 @@
+{#- jinja template: html/h_cols.m.jnj -#}
+{#
+## Copyright (C) 2014-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/h_cols.m.jnj
+##
+## Purpose
+##    Template macros for rendering fields of GTW.MF3 forms horizontally
+##
+## Revision Dates
+##     1-May-2014 (CT) Creation
+##    28-Aug-2014 (CT) Add `do_description` to `Field_Composite`
+##    28-Aug-2014 (CT) Change class of `Field_Composite` to
+##                     `Field-Composite horizontal`
+##    21-Dec-2015 (CT) Change `Field-Composite` to use `do_label`
+##    20-Sep-2016 (CT) Add `Field_Structured`, factor `_Field_Composite_`
+##    ««revision-date»»···
+##--
+#}
+
+{%- macro do_field (page, form, elem, t_module, f_class) -%}
+  <div class="{{ f_class }} mf3-control-group-h">
+    {{ GTW.call_macro
+        ("do_label", page, form, elem, t_module, templ_name = t_module)
+    }}
+    {{ GTW.call_macro (elem.input_widget, elem, ** kwargs) }}
+    {{ GTW.call_macro
+        ("do_description", page, form, elem, t_module, templ_name = t_module)
+    }}
+  </div>
+{%- endmacro -%} {#- do_field -#}
+
+{%- macro _Field_Composite_ (page, form, elem, t_module, cls) -%}
+  {%- if GTW.len (elem.field_elements) > 1 %}
+    <div class="{{ cls }} horizontal pure-control-group">
+      {{ GTW.call_macro
+          ("do_label", page, form, elem, t_module, templ_name = t_module)
+      }}
+      <div class="Fields">
+        {{ GTW.call_macro
+          ("do_elements", page, form, elem, t_module, templ_name = t_module)
+        }}
+      </div>
+      {{ GTW.call_macro
+          ("do_description", page, form, elem, t_module, templ_name = t_module)
+      }}
+    </div>
+  {%- elif elem.field_elements %}
+    {%- set e        = elem.field_elements [0] %}
+    {%- set t_module = e.template_module or elem.parent.template_module %}
+    {%- set tm       = kwargs.get ("templ_name", t_module) %}
+    {{ GTW.call_macro
+        ( e.template_macro, page, form, e, tm
+        , templ_name = tm
+        , label_prefix = GTW._T (elem.label)
+        )
+    }}
+  {%- endif %}
+{%- endmacro -%} {#- _Field_Composite_ -#}
+
+{%- macro Field_Composite (page, form, elem, t_module) -%}
+  {{- _Field_Composite_ (page, form, elem, t_module, "Field-Composite") -}}
+{%- endmacro -%} {#- Field_Composite -#}
+
+{%- macro Field_Structured (page, form, elem, t_module) -%}
+  {{- _Field_Composite_ (page, form, elem, t_module, "Field-Composite") -}}
+{%- endmacro -%} {#- Field_Structured -#}
+
+{#- __END__ jinja template: html/h_cols.m.jnj -#}

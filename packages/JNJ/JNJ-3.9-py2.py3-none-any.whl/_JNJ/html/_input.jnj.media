@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# ****************************************************************************
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# ****************************************************************************
+#
+#++
+# Name
+#    html/_input.jnj.media
+#
+# Purpose
+#    CSS fragment for template html/_input.jnj
+#
+# Revision Dates
+#     3-Jan-2011 (CT) Creation
+#    ««revision-date»»···
+#--
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( "input"
+        , children =
+            [ Rule_Class ("Short",        width = Em      ( 5))
+            , Rule_Class ("Moderate-Len", width = Em      ( 6))
+            , Rule_Class ("Medium-Len",   width = Em      ( 9))
+            , Rule_Class ("Long",         width = Percent (100))
+            , Rule_Class ("Very-Long",    width = Percent (100))
+            ]
+        )
+    )
+
+### __END__ html/_input.jnj.media

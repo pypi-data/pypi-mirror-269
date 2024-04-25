@@ -1,0 +1,157 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# ****************************************************************************
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# ****************************************************************************
+#
+#++
+# Name
+#    html/gallery.jnj.media
+#
+# Purpose
+#    CSS fragment for template html/gallery.jnj
+#
+# Revision Dates
+#     2-Jan-2011 (CT) Creation
+#    17-Nov-2011 (CT) Add `Script` and `JS_On_Ready`
+#     8-Apr-2014 (CT) Add `max_width` for `.inline .photo`;
+#                     remove `max_width` from `.inline .photo-nav`
+#    23-Jun-2015 (CT) Change rule for `button` for font-awesome icons
+#    21-Jan-2016 (CT) Use `V5a_gallery`, not `GTW_Gallery`
+#    27-Jan-2016 (CT) Add `cursor` to `.inline .photo`
+#    ««revision-date»»···
+#--
+
+from   __future__  import absolute_import
+from   __future__  import division
+from   __future__  import print_function
+from   __future__  import unicode_literals
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".gallery"
+        , width                    = Percent (100)
+        , children                 =
+            [ Rule
+                ( "h1", "h2"
+                , margin_bottom    = Px (10)
+                , padding          = TRBL (Px (10), 0)
+                , text_align       = "center"
+                , ** P.color_spec_gallery_heading
+                )
+            , Rule
+                ( ".inline"
+                , display          = "none"
+                , children         =
+                    [ Rule
+                        ( "img"
+                        , display          = "block"
+                        , margin           = "auto"
+                        )
+                    , Rule
+                        ( ".photo"
+                        , cursor           = "pointer"
+                        , margin           = "auto"
+                        , max_width        = Percent (100)
+                        )
+                    , Rule
+                        ( ".photo-nav"
+                        , Display          ("flex")
+                        , Flex             ("row wrap")
+                        , border           = 0
+                        , margin           = TRBL (Em (0.5), "auto")
+                        , padding          = 0
+                        , width            = Percent (100)
+                        , text_align       = "center"
+                        , children         =
+                            [ Rule
+                                ( "button"
+                                , Flex             ("0 0 auto")
+                                , background_color = "inherit"
+                                , display          = "inline-block"
+                                , font_size        = Em (1.5)
+                                , padding          = Em (0.5)
+                                , margin           = TRBL (0, Em (0.25))
+                                , min_width        = 0
+                                , children         =
+                                    [ P.Rule.hover
+                                    , Rule
+                                        ( "i.fa"
+                                        , color            = P.color.m_orange
+                                        )
+                                    , Rule_Class
+                                        ( ".first"
+                                        , margin_right     = "auto"
+                                        )
+                                    , Rule_Class
+                                        ( ".last"
+                                        , margin_left      = "auto"
+                                        )
+                                    ]
+                                )
+                            ]
+                        )
+                    ]
+                )
+            ]
+        )
+    , Rule
+        ( ".thumbnails"
+        , font_style                 = "italic"
+        , children                   =
+            [ Rule_Class
+                ( "inline"
+                , display            = "block"
+                , overflow           = "auto"
+                , position           = "relative"
+                )
+            , Rule
+                ( "a"
+                , display            = "inline-block"
+                , height             = P.thumbnail_size
+                , text_align         = "center"
+                , width              = P.thumbnail_size
+                )
+            , Rule
+                ( "img"
+                , border             =
+                    "3px solid " + P.color_spec_normal ["background_color"]
+                , vertical_align     = "middle"
+                , children           =
+                    [ Rule_Class
+                        ( "selected"
+                        , border_color = P.thumbnail_selected_color
+                        )
+                    ]
+                )
+            , Rule
+                ( ".list"
+                , display            = "block"
+                , list_style         = "none"
+                , margin             = 0
+                , padding            = 0
+                , children           =
+                    [ Rule
+                        ( "li"
+                        , display            = "inline-block"
+                        , margin             = 0
+                        , padding            = 0
+                        )
+                    ]
+                )
+            ]
+        )
+    , Rule
+        ( ".js .gallery .inline"
+        , display            = "block"
+        )
+    )
+
+Script      (CHJ.Script._.V5a_gallery)
+JS_On_Ready (CHJ.JS_On_Ready._.V5a_gallery)
+
+### __END__ html/gallery.jnj.media

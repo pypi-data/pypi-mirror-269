@@ -1,0 +1,45 @@
+{#- jinja template: html/ETR/regatta.m.jnj -#}
+{#
+## Copyright (C) 2015-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/ETR/regatta.m.jnj
+##
+## Purpose
+##    Template macros rendering Regatta pages
+##
+## Revision Dates
+##     4-Feb-2015 (CT) Creation
+##    16-May-2016 (CT) Use `GTW.xmlattr (kw)`, not `kw|xmlattr`
+##    ««revision-date»»···
+##--
+#}
+
+{%- macro Field_Team_Table (renderer, team, boats, fields) -%}
+  <span class="Name">{{ team.FO.name }}</span>
+  <table class="Members">
+    <tbody>
+      {%- for b in boats %}
+        <tr>
+          {%- for field in fields %}
+            {%- for f in field.td_cols %}
+              <td{{ GTW.xmlattr (class = f.css_class_dyn (b.obj, b)) }}>
+                {{- f.as_html (b.obj, b) -}}
+              </td>
+            {% endfor -%}
+          {% endfor -%}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{%- endmacro -%} {#- Field_Team_Table -#}
+
+{#- __END__ jinja template: html/ETR/regatta.m.jnj -#}

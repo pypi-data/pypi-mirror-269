@@ -1,0 +1,64 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2012-2013 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+# 
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/cmd_button.media
+#
+# Purpose
+#    Media fragment for cmd-button
+#
+# Revision Dates
+#    29-Feb-2012 (CT) Creation
+#    ««revision-date»»···
+#--
+
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".cmd-button"
+        , padding       = 0
+        , children      =
+            [ Rule
+                ( "a"
+                , background_color  = "transparent"
+                , border_color      = "transparent"
+                , display           = "inline-block"
+                , margin            = TRBL0 (b = Em (0.075))
+                , padding           = 0
+                )
+            , Rule
+                ( "b"
+                , P.button_spec
+                , Border
+                    ( color         = P.color_half_grey
+                    , radius        = Em (0.75)
+                    )
+                , background_color  = P.color_lighter_grey
+                , padding           = TRBL (Em (0.15), Em (0.25))
+                , margin            = 0
+                , children          =
+                    [ Rule_Pseudo
+                        ( "not(:first-child)"
+                        , margin    = TRBL0 (l = Em (0.5))
+                        )
+                    ]
+                )
+            , Rule
+                ( "a", "b"
+                , children          =
+                    [ P.Rule.hover
+                    ]
+                )
+            ]
+        )
+    )
+
+### __END__ html/cmd_button.media

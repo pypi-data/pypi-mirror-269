@@ -1,0 +1,277 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# ****************************************************************************
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# ****************************************************************************
+#
+#++
+# Name
+#    html/cal/wr.jnj.css
+#
+# Purpose
+#    CSS fragment for calendar templates
+#
+# Revision Dates
+#     3-Jan-2011 (CT) Creation
+#     4-Jan-2011 (CT) Bug fixes
+#    ««revision-date»»···
+#--
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".calendar"
+        , margin_top               = Em (1./2)
+        , children                 =
+            [ Rule
+                ( "a"
+                , text_decoration  = "none"
+                , children         =
+                    [ P.Rule.link
+                    , P.Rule.visited
+                    , P.Rule.hover
+                    ]
+                )
+            , Rule
+                ( "span"
+                , children         =
+                    [ Rule_Class
+                        ( "date", "date a", "event a"
+                        , display  = "block"
+                        )
+                    , Rule_Class
+                        ( "event"
+                        , background_color = P.cal.event_bg
+                        , border           = P.border_simple
+                        , border_top       = 0
+                        , padding          = TRBL (0, Px (2))
+                        , display          = "block"
+                        )
+                    ]
+                )
+            , Rule
+                ( "td"
+                , overflow         = "hidden"
+                , padding          = 0
+                , children         =
+                    [ Rule
+                        ( ".date"
+                        , text_align = "right"
+                        , children   =
+                            [ Rule
+                                ( ".month"
+                                , color      = P.cal.month_color
+                                )
+                            , Rule
+                                ( "a"
+                                , display    = "inline-block"
+                                , width      = Percent (100)
+                                )
+                            ]
+                        )
+                    , Rule_Class
+                        ( "saturday", "sunday"
+                        , children   =
+                            [ Rule
+                                ( ".date span"
+                                , color      = P.cal.weekend_color
+                                )
+                            ]
+                        )
+                    , Rule_Class
+                        ( "month-name"
+                        , text_align = "right"
+                        )
+                    , Rule_Class
+                        ( "selected", "selected .date"
+                        , background_color = P.color_selected
+                        )
+                    , Rule_Class
+                        ( "today", "today .date"
+                        , ** P.color_spec_selected
+                        )
+                    ]
+                )
+            , Rule
+                ( "th"
+                , padding          = P.cal.date_padding
+                , children         =
+                    [ Rule_Class
+                        ( "week-number"
+                        , background_color = P.cal.week_bg
+                        , color            = P.cal.week_color
+                        , padding          = TRBL0 (r = Em (0.5))
+                        , text_align       = "right"
+                        , vertical_align   = "top"
+                        , width            = Em (1.75)
+                        )
+                    ]
+                )
+            , Rule
+                ( ".date"
+                , background_color = P.cal.date_bg
+                , padding          = P.cal.date_padding
+                )
+            , Rule
+                ( "div.selected"
+                , border           = P.border_selected
+                , display          = "none"
+                , padding          = Px (2)
+                , text_align       = "left"
+                )
+            , Rule
+                ( "tr.selected"
+                , background_color = P.background_color
+                )
+            , Rule
+                ( ".holiday .date"
+                , background_color = P.cal.holiday_bg
+                )
+            , Rule
+                ( ".saturday", ".sunday"
+                , color            = P.cal.weekend_color
+                )
+            ]
+        )
+    , Rule
+        ( ".pg_body .calendar span.week-number"
+        , display                  = "block"
+        , height                   = P.cal.week_height
+        )
+    , Rule
+        ( ".week-roller"
+        , font_size                = P.cal.font_size
+        , position                 = "relative"
+        , children                 =
+            [ Rule
+                ( ".ctrl"
+                , padding          = 0 ### XXX ???
+                , children         =
+                    [ Rule
+                        ( "label"
+                        , padding  = TRBL0 (Px (4))
+                        )
+                    ]
+                )
+            , Rule
+                ( "input", "div.anchor", "select"
+                , background_color = P.nav.main.background_color
+                , border           = P.border_simple
+                , border_width     = Px (2)
+                , margin           = TRBL0 (r = Em (2))
+                , text_align       = "right"
+                , children         =
+                    [ P.Rule.focus
+                    , P.Rule.hover
+                    ]
+                )
+            , Rule
+                ( "input"
+                , padding          = TRBL0
+                    (Px (2), Em (0.15), Px (2), Em (0.05))
+                , children         =
+                    [ Rule_Class
+                        ( "delta"
+                        , margin_right = 0
+                        , width        = Em (2)
+                        )
+                    , Rule_Class
+                        ( "weeks"
+                        , width        = Em (2)
+                        )
+                    , Rule_Attr
+                        ( "[type=submit]"
+                        , border       = P.border_button
+                        , float        = "right"
+                        , margin       = TRBL0 (r = Em (2))
+                        , text_align   = "center"
+                        )
+                    ]
+                )
+            , Rule
+                ( "label.anchor"
+                , float            = "left"
+                )
+            , Rule
+                ( "div.anchor"
+                , float            = "left"
+                , padding          = 0 ### XXX ???
+                , children         =
+                    [ Rule
+                        ( "input"
+                        , border   = 0
+                        , display  = "inline"
+                        , margin   = 0
+                        , width    = Em (2)
+                        , children =
+                            [ Rule_Class
+                                ( "year"
+                                , width = Em (3.25)
+                                )
+                            ]
+                        )
+                    ]
+                )
+            , Rule
+                ( ".anchor"
+                , margin_right     = Em   (1./4)
+                , padding          = TRBL (Px (4), Em (0.05))
+                )
+            , Rule
+                ( "select"
+                , padding          = TRBL0
+                    (Px (1), Em (0.15), Px (1), Em (0.05))
+                , text_align       = "left"
+                )
+            , Rule
+                ( ".slider-ctrl", ".slider-echo"
+                , display          = "none"
+                , children         =
+                    [ Rule_Class
+                        ( "enabled"
+                        , display  = "block"
+                        , height   = Percent (100)
+                        , position = "absolute"
+                        )
+                    ]
+                )
+            , Rule
+                ( ".slider-echo .message"
+                , font_size        = Percent (200)
+                , height           = Percent (100)
+                , opacity          = 0.625
+                , position         = "relative"
+                , children         =
+                    [ Rule
+                        ( "p"
+                        , margin_bottom = 0
+                        , text_align    = "center"
+                        )
+                    ]
+                , ** P.color_spec_message
+                )
+            ]
+        )
+    , Rule
+        ( "table.calendar"
+        , table_layout             = "fixed"
+        , width                    = Percent (97)
+        )
+    , Rule
+        ( "div.holiday"
+        , background_color         = P.cal.holiday_bg
+        )
+    , Rule
+        ( "h1.day"
+        , overflow                 = "hidden"
+        , width                    = Percent (100)
+        , children                 =
+            [ Rule ("span.week", float = "right")
+            ]
+        )
+    )
+
+### __END__ html/cal/wr.jnj.css

@@ -1,0 +1,754 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2014-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/mf3.jnj.media
+#
+# Purpose
+#    Media fragment for template html/mf3.jnj.media
+#
+# Revision Dates
+#    28-Apr-2014 (CT) Creation
+#    14-May-2014 (CT) Add `style_sheet`
+#    15-May-2014 (CT) Add `Media.Rule`
+#    17-Jun-2014 (CT) Add rules for `Entity-List`
+#     2-Jul-2014 (CT) Add rules for `.form-errors`
+#    24-Aug-2014 (CT) Put Field-Entity action-buttons horizontally at bottom
+#                     of border; fix vertical spacing accordingly
+#    24-Aug-2014 (CT) Add rule for `aside` for media with `max_width = Rem (34)`
+#    27-Aug-2014 (CT) Change `aside` to `display="block"`, not `"inline-block"`
+#     8-Sep-2014 (CT) Fix rules for `quite_narrow` screens
+#    24-Mar-2015 (CT) Remove rule `focus + aside`
+#    24-Mar-2015 (CT) Use `P.Rule.input_focus`, not `P.Rule.focus`
+#    24-Mar-2015 (CT) Add rule for `form .pure-form label > b`
+#     1-Apr-2015 (CT) Add `background_color` to rule for `... input.bad:focus`
+#    16-Apr-2015 (CT) Add rule for vertical alignment of `input[type=checkbox]`
+#    29-Apr-2015 (CT) Add rule for `aside .error-msg`
+#    12-May-2015 (CT) Add children `good/missing/bad` to `form ... label > b`
+#     1-Jun-2015 (CT) Add rules for `.Field-Entity.removed`
+#    29-Jul-2015 (CT) Add rules for `.no-js`
+#                     + Disable pointer-events for input elements
+#                     + Reduce opacity of form
+#                     + Display warning in P.color_status_bad
+#    20-Dec-2015 (CT) Change rules for `aside`
+#                     + per default, display `aside`
+#                     + add rules for `.expl`, `.button[data-action=more]`
+#    18-Jan-2016 (CT) Use `V5a_Form_externalize`
+#    ««revision-date»»···
+#--
+
+from   __future__ import division
+
+CSS_Link (CHJ.CSS_Link._.jQuery_UI)
+
+Include ("html/autocomplete.media")
+Include ("html/ui_dialog.media")
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( "body:after"
+        , content              = "''"
+        , font_size            = 0
+        )
+    , Rule
+        ( "form"
+        , font_size            = Em (0.875)
+        , children             =
+            [ Rule
+                ( "h6"
+                , font_size    = Rem (1.0)
+                , margin       = TRBL (0, Em (1.0))
+                )
+            , Rule
+                ( ".action-button"
+                , background_color = P.background_color
+                , border           = 0
+                , display          = "inline-block"
+                , font_size        = Em (0.875)
+                , font_weight      = "normal"
+                , width            = "auto"
+                , children         =
+                    [ Rule
+                        ( ".fa"
+                        , color        = P.color.m_blue
+                        , height       = Em (1.0)
+                        , width        = Em (1.0)
+                        )
+                    , Rule
+                        ( ".pure-button"
+                        , display      = "inline-block"
+                        , padding      = Em (0.5)
+                        , margin       = TRBL (Em (0.25), 0)
+                        )
+                    ]
+                )
+            , Rule
+                ( ".pure-button"
+                , border_radius     = Em (1/4)
+                )
+            , Rule_Class
+                ( "pure-form"
+                , children     =
+                    [ Rule
+                        ( "input", "select", "textarea"
+                        , line_height          = P.line_height_input
+                        , children             =
+                            [ Rule_Class
+                                ( "bad"
+                                , background_color  = P.color_status_bad
+                                , children          =
+                                    [ Rule_Pseudo
+                                        ( "focus"
+                                        , background_color  = P.color_status_bad
+                                        , border_width      = Px (2)
+                                        )
+                                    ]
+                                )
+                            , Rule_Class
+                                ( "invalid"
+                                , border_color = P.color_status_bad
+                                , border_width = Px (2)
+                                )
+                            , Rule_Pseudo
+                                ( "invalid"
+                                , border_color = P.color_status_bad
+                                )
+                            , Rule_Pseudo
+                                ( """invalid[value=""]"""
+                                , border_color = P.color_status_missing
+                                , children     =
+                                    [ Rule_Pseudo
+                                        ( "focus"
+                                        , P.Rule.input_focus
+                                        , outline = "3px solid "
+                                                  + P.color_status_missing
+                                        )
+                                    ]
+                                )
+                            , P.Rule.input_focus
+                            ]
+                        )
+                    , Rule
+                        ( "label > b"
+                        , color            = P.color_status_bad
+                        , font_size        = Em (1.25)
+                        , margin_left      = Em (0.25)
+                        , position         = "absolute"
+                        , children          =
+                            [ Rule_Class
+                                ( "good"
+                                , color  = P.color_status_good
+                                )
+                            , Rule_Class
+                                ( "missing"
+                                , color  = P.color_status_bad
+                                )
+                            , Rule_Class
+                                ( "bad"
+                                , color  = P.color_status_bad
+                                )
+                            ]
+                        )
+                    ]
+                )
+            , Rule
+                ( "div", "section"
+                , position         = "relative"
+                , children         =
+                    [ Rule_Class
+                        ( "Entity"
+                        , children         =
+                            [ Rule_Child
+                                ( "h1"
+                                , border_bottom    = "1px solid #DEDEDE"
+                                , font_size        = Em (1.5)
+                                , font_weight      = "bold"
+                                , padding          = TRBL
+                                    (0,  Em (1.1), Em (0.5))
+                                )
+                            ]
+                        )
+                    , Rule_Class
+                        ( "Entity-List", "Field-Entity", "Field-Composite"
+                        , border           = "1px solid #DEDEDE"
+                        , border_radius    = Em (1/2)
+                        , padding          = TRBL (Rem (1.0), 0, Rem (0.5))
+                        , children         =
+                            [ Rule_Pseudo
+                                ( "hover"
+                                , background_color = P.color_jnd_grey
+                                )
+                            , Rule_Child
+                                ( "h1"
+                                , background_color = P.background_color
+                                , border           = 0
+                                , display          = "inline-block"
+                                , font_size        = "inherit"
+                                , font_weight      = "normal"
+                                , left             = Em (2)
+                                , margin_top       = Em (-0.6)
+                                , padding          = TRBL (0,  Em (1.1))
+                                , position         = "absolute"
+                                , top              = 0
+                                , width            = "auto"
+                                )
+                            , Rule_Child
+                                ( ".Display.Field"
+                                , display              = "none"
+                                , visibility           = "hidden"
+                                )
+                            , Rule_Child
+                                ( "fieldset"
+                                , display              = "block"
+                                , visibility           = "visible"
+                                )
+                            ]
+                        )
+                    , Rule_Class
+                        ( "Field-Entity", "Field-Composite"
+                        , margin           = TRBL (0, Em (1.0), Em (0.5))
+                        )
+                    , Rule_Sibling
+                        ( "section", "div"
+                        , children             =
+                            [ Rule_Class
+                                ( "Field-Entity", "Field-Composite"
+                                , margin_top           = Rem (1.5)
+                                )
+                            ]
+                        )
+                    , Rule_Class
+                        ( "Field-Composite.horizontal"
+                        , border           = 0
+                        , margin           = TRBL0 (b = Em (0.5))
+                        , children             =
+                            [ Rule
+                                ( "div"
+                                , margin_bottom    = 0
+                                )
+                            , Rule_Child
+                                ( "label"
+                                , padding_top      = Em (2.0)
+                                , vertical_align   = "top"
+                                )
+                            , Rule_Child
+                                ( ".Fields"
+                                , display          = "inline-block"
+                                , margin           = 0
+                                , vertical_align   = "top"
+                                , children         =
+                                    [ Rule
+                                        ( "aside"
+                                        , padding_left     = Em (0.2)
+                                        , margin_left      = 0
+                                        )
+                                    ]
+                                )
+                            ]
+                        )
+                    , Rule_Class
+                        ( "Field-Entity"
+                        , children         =
+                            [ Rule_Child
+                                ( ".action-button"
+                                , bottom           = 0
+                                , margin_bottom    = Em (-1.3)
+                                , padding          = TRBL (0, Em (0.5))
+                                , position         = "absolute"
+                                , right            = Em (1)
+                                , visibility       = "visible"
+                                )
+                            , Rule_Class
+                                ( "removed"
+                                , children         =
+                                    [ Rule_Child
+                                        ( "div.action-button"
+                                        , "div.Display.Field"
+                                        , "fieldset"
+                                        , display              = "none"
+                                        , visibility           = "hidden"
+                                        )
+                                    , Rule_Child
+                                        ( ".feedback"
+                                        , display              = "block"
+                                        , margin               = TRBL
+                                            (0, Em (1.0))
+                                        , max_width            = Percent (100)
+                                        , visibility           = "visible"
+                                        , children             =
+                                            [ Rule
+                                                ( "a[data-action]"
+                                                , display          = "block"
+                                                , float            = "left"
+                                                , height           = Em (1.5)
+                                                , margin_right     = Em (0.5)
+                                                , padding          = TRBL
+                                                    ( Em (0.675)
+                                                    , Em (0.5)
+                                                    , Em (0.25)
+                                                    )
+                                                , vertical_align   = "middle"
+                                                , width            = Em (1.5)
+                                                )
+                                            , Rule
+                                                ( "b"
+                                                , background_color =
+                                                    P.color_status_good
+                                                , display          = "block"
+                                                , padding          = TRBL (Em (0.5))
+                                                , vertical_align   = "middle"
+                                                )
+                                            , Rule
+                                                ( ".fa"
+                                                , color            =
+                                                    P.color.m_orange
+                                                , font_size        = Em (1.25)
+                                                , height           = Em (1.0)
+                                                , width            = Em (1.0)
+                                                )
+                                            ]
+                                        )
+                                    ]
+                                )
+                            , Rule_Sibling
+                                ( ".Field"
+                                , margin_top       = Em (1.5)
+                                )
+                            ]
+                        )
+                    , Rule_Class
+                        ( "Fields"
+                        , children         =
+                            [ Rule
+                                ( ".Field"
+                                , margin_top   = 0
+                                )
+                            ]
+                        )
+                    , Rule_Class
+                        ( "Entity-List"
+                        , margin           =
+                            TRBL (Rem (1.0), Rem (0.5), Rem (2.0), 0)
+                        , padding_bottom   = Em (1.0)
+                        , children         =
+                            [ Rule_Child
+                                ( "h1"
+                                , font_weight      = "bold"
+                                )
+                            , Rule_Child
+                                ( ".action-button"
+                                , bottom           = 0
+                                , left             = Em (2)
+                                , margin_bottom    = Em (-1.3)
+                                , padding          = TRBL (0,  Em (1.1))
+                                , position         = "absolute"
+                                , width            = "auto"
+                                )
+                            , Rule_Child
+                                ( ".Field-Entity"
+                                , margin_bottom    = Em (0.5)
+                                , margin_top       = Em (0.5)
+                                , children         =
+                                    [ Rule_Sibling
+                                        ( ".Field-Entity"
+                                        , margin_top   = Em (1.5)
+                                        )
+                                    ]
+                                )
+                            ]
+                        )
+                    , Rule_Class
+                        ( "Field-Entity.closed"
+                        , children         =
+                            [ Rule_Child
+                                ( ".action-button .pure-button"
+                                , display              = "none"
+                                , visibility           = "hidden"
+                                )
+                            , Rule_Child
+                                ( ".action-button [data-action=remove]"
+                                , display              = "block"
+                                , visibility           = "visible"
+                                )
+                            , Rule_Child
+                                ( ".Display.Field"
+                                , display              = "block"
+                                , visibility           = "visible"
+                                )
+                            , Rule_Child
+                                ( "fieldset"
+                                , display              = "none"
+                                , visibility           = "hidden"
+                                )
+                            , Rule_Sibling
+                                ( ".Field"
+                                , margin_top           = 0
+                                )
+                            ]
+                        )
+                    ]
+                )
+            , Rule
+                ( ".Field", ".Field-Composite"
+                , children         =
+                    [ Rule_Child
+                        ( "aside"
+                        , color                = P.color_half_grey
+                        , margin               = TRBL0
+                            ( b                = Em (0.5)
+                            , l                = P.pure.aside_indent
+                            )
+                        , padding_left         = Em (0.5)
+                        , children             =
+                            [ Rule_Child
+                                ( ".button[data-action=more_aside]"
+                                , Border (radius = Em (1.0), width = 0)
+                                , cursor               = "help"
+                                , margin               = TRBL0 (l = Em (0.5))
+                                , padding              = Em (0.5)
+                                , children             =
+                                    [ Rule
+                                        ( "i.fa"
+                                        , color                = P.color.m_blue
+                                        )
+                                    ]
+                                )
+                            , Rule_Child
+                                ( ".Expl"
+                                , display              = "none"
+                                , margin               = TRBL0 (t = Em (0.5))
+                                , children             =
+                                    [ Rule
+                                        ( "p"
+                                        , margin       = TRBL0 (t = Em (0.5))
+                                        )
+                                    ]
+                                )
+                            , Rule_Class
+                                ( "open"
+                                , display              = "block"
+                                )
+                            , Rule
+                                ( ".error-msg"
+                                , background_color = P.color_status_bad
+                                , border           =
+                                    "1px solid " + P.color_status_bad
+                                , border_radius    = Em (1/2)
+                                , color            = P.text_color
+                                , font_weight      = 600
+                                , margin           = TRBL (Rem (0.5), 0)
+                                , padding          = TRBL (Rem (0.5))
+                                )
+                            ]
+                        )
+                    ]
+                )
+            , Rule
+                ( ".Field"
+                , children         =
+                    [ Rule_Class
+                        ( "Confirmation"
+                        , children             =
+                            [ Rule_Child
+                                ( "aside"
+                                , display              = "block"
+                                )
+                            ]
+                        )
+                    , Rule_Class
+                        ( "mf3-control-group-h"
+                        , display              = "inline-block"
+                        , vertical_align       = "top"
+                        , children             =
+                            [ Rule
+                                ( "label"
+                                , display          = "block"
+                                , margin           = TRBL0 (l = Em (0.5))
+                                , text_align       = "left"
+                                , vertical_align   = "top"
+                                , width            = "auto"
+                                )
+                            , Rule
+                                ( "input"
+                                , display          = "block"
+                                , vertical_align   = "top"
+                                )
+                            ]
+                        )
+                    , Rule
+                        ( "input"
+                        , children             =
+                            [ Rule_Attr
+                                ( "[type=checkbox]"
+                                , vertical_align       = "text-top"
+                                )
+                            ]
+                        )
+                    , Rule
+                        ( "input", "textarea"
+                        , children             =
+                            [ Rule_Class
+                                ( "display.value"
+                                , background_color     = "inherit"
+                                , border_color         = "inherit"
+                                , color                = "inherit"
+                                , children             =
+                                    [ P.Rule.input_focus
+                                    ]
+                                )
+                            , Rule_Class
+                                ( "hidden.value"
+                                , display              = "none"
+                                )
+                            ]
+                        )
+                    , Rule
+                        ( "textarea"
+                        , height       = Em (10.0)
+                        )
+                    ]
+                )
+            , Rule
+                ( ".form-errors"
+                , background_color = P.color_status_bad
+                , border           = "1px solid " + P.background_color
+                , border_radius    = Em (1/2)
+                , margin           = TRBL (0, 0, Em (1.0))
+                , padding          = TRBL (Rem (0.5), Rem (1.1), 0)
+                , children         =
+                    [ Rule
+                        ( ".error-msg"
+                        , border           = "1px solid #DEDEDE"
+                        , border_radius    = Em (1/2)
+                        , padding          = TRBL (Rem (0.5), Rem (0.5), 0)
+                        , margin           = TRBL (0, 0, Rem (1.0))
+                        , children         =
+                            [ Rule
+                                ( "a.pure-button"
+                                , color     = P.color.m_blue
+                                , min_width = Rem  (2.0)
+                                , padding   =
+                                    TRBL (Rem (0.25), Rem (0.5), Rem (0.125))
+                                )
+                            ]
+                        )
+                    , Rule
+                        ( "h1", "h2", "p"
+                        , margin           = TRBL (0, 0, Rem (0.5))
+                        , padding          = 0
+                        )
+                    , Rule
+                        ( "h1", "h2"
+                        , background_color = "inherit"
+                        , color            = "inherit"
+                        )
+                    , Rule
+                        ( "h1"
+                        , font_size        = Em (1.5)
+                        , font_weight      = "bold"
+                        )
+                    , Rule
+                        ( "h2"
+                        , font_size        = Em (1.25)
+                        , font_weight      = "normal"
+                        )
+                    ]
+                )
+            , Rule
+                ( ".Status"
+                , Border (radius = Percent (50))
+                , display           = "inline-block"
+                , float             = "left"
+                , height            = P.afs.status_size
+                , margin_left       = P.afs.status_size / 2
+                , margin_right      = P.afs.status_size
+                , margin_top        = P.afs.status_size / 4
+                , width             = P.afs.status_size
+                , children          =
+                    [ Rule_Class
+                        ( "good"
+                        , background_color  = "transparent"# P.color_status_good
+                        )
+                    , Rule_Class
+                        ( "missing"
+                        , background_color  = "transparent"# P.color_status_missing
+                        )
+                    , Rule_Class
+                        ( "bad"
+                        , background_color  = "transparent"# P.color_status_bad
+                        )
+                    ]
+                )
+            ]
+        )
+    , Rule
+        ( ".no-js"
+        , children           =
+            [ Rule
+                ( "form"
+                , opacity            = 0.625
+                , children           =
+                    [ Rule
+                        ( "input", "label", "select", "textarea"
+                        , pointer_events     = "none"
+                        )
+                    ]
+                )
+            , Rule
+                ( "noscript h1"
+                , color          = P.color_status_bad
+                )
+            ]
+        )
+    , Media.Rule
+        ( Media.Query ("screen", max_width = Rem (34))
+        , rules               =
+            [ Rule
+                ( "form"
+                , children        =
+                    [ Rule
+                        ( "section", "div"
+                        , children         =
+                            [ Rule_Class
+                                ( "Field"
+                                , children             =
+                                    [ Rule_Class
+                                        ( ".mf3-control-group-h"
+                                        , display              = "block"
+                                        )
+                                    ]
+                                )
+                            , Rule_Class
+                                ( "Field-Composite.horizontal"
+                                , children             =
+                                    [ Rule_Child
+                                        ( "label"
+                                        , padding_top          = 0
+                                        )
+                                    ]
+                                )
+                            ]
+                        )
+                    ]
+                )
+            ]
+        )
+    , Media.Rule
+        ( Media.Query ("screen", P.breakpoint.quite_narrow)
+        , rules               =
+            [ Rule
+                ( "body:after"
+                , font_size           = Px (1)
+                )
+            , Rule
+                ( ".pure-form"
+                , children        =
+                    [ Rule
+                        ( ".action-button"
+                        , font_size        = Em (1.125)
+                        )
+                    , Rule
+                        ( "section", "div"
+                        , children         =
+                            [ Rule_Class
+                                ( "Entity"
+                                , children             =
+                                    [ Rule_Child
+                                        ( "h1"
+                                        , margin           = TRBL (Em (0.5), 0)
+                                        , padding          = 0
+                                        )
+                                    ]
+                                )
+                            , Rule_Class
+                                ( "Field", "Field-Composite"
+                                , children             =
+                                    [ Rule
+                                        ( "label"
+                                        , max_width            = Percent (95)
+                                        , padding              = TRBL
+                                            (Em (0.5), 0, 0)
+                                        , position             = "relative"
+                                        , children             =
+                                            [ Rule_Class
+                                                ( "desc-p"
+                                                , cursor           = "help"
+                                                , children         =
+                                                    [ P.Rule.hover
+                                                    , Rule_Pseudo
+                                                        ( "after"
+                                                        , bottom      = Rem (0.05)
+                                                        , color       =
+                                                            P.color.m_blue
+                                                        , content     = "'?'"
+                                                        , font_size   = Rem (1.0)
+                                                        , font_weight = "bold"
+                                                        , position    = "absolute"
+                                                        , right       = Rem (1.0)
+                                                        )
+                                                    ]
+                                                )
+                                            ]
+                                        )
+                                    ]
+                                )
+                            , Rule_Class
+                                ( "Field", "Field-Entity", "Field-Composite"
+                                , "Field-Composite.horizontal"
+                                , padding_left         = Rem (0.5)
+                                , children             =
+                                    [ Rule
+                                        ( "aside"
+                                        , display              = "none"
+                                        , margin_left          = 0
+                                        , children             =
+                                            [ Rule_Class
+                                                ( "open"
+                                                , display      = "block"
+                                                )
+                                            ]
+                                        )
+                                    ]
+                                )
+                            , Rule_Class
+                                ( "Field-Entity", "Field-Composite"
+                                , margin               = TRBL (Rem (1.0))
+                                )
+                            , Rule_Sibling
+                                ( "section", "div"
+                                , children             =
+                                    [ Rule_Class
+                                        ( "Field-Entity"
+                                        , margin_top           = Rem (1.5)
+                                        )
+                                    , Rule_Class
+                                        ( "Field-Composite"
+                                        , margin_top           = Rem (0.5)
+                                        )
+                                    ]
+                                )
+                            ]
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+
+Script  (CHJ.Script._.GTW_autocomplete)
+Script  (CHJ.Script._.GTW_hd_input)
+Script  (CHJ.Script._.GTW_jq_mf3)
+
+### XXX remove when mf3.js is finished
+Script  (CHJ.Script._.GTW_inspect)
+
+Script      (CHJ.Script._.V5a_externalize)
+JS_On_Ready (CHJ.JS_On_Ready._.V5a_Form_externalize)
+
+### __END__ html/mf3.jnj.media

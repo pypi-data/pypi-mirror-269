@@ -1,0 +1,4 @@
+{% extends site_base or "html/base.jnj" %}
+{% block document %}
+  Error {{ exception.status_code }}
+{% endblock %}

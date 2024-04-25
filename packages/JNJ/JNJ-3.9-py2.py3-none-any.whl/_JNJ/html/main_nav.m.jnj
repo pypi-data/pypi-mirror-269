@@ -1,0 +1,268 @@
+{#- jinja template: html/main_nav.m.jnj -#}
+{#
+## Copyright (C) 2017-2024 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/main_nav.m.jnj
+##
+## Purpose
+##    Macros for nav element in `main`
+##
+## Revision Dates
+##    10-Jan-2017 (CT) Creation (factor from `navigation.jnj`)
+##    16-Jan-2017 (CT) Pass `tag` to `AT.login_link`
+##     5-Feb-2024 (CT) Change `entry` to use `.eff_href`, not `.abs_href`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import (html_version or "html/5.jnj") as X -%}
+{%- import "html/rel_nav.m.jnj"           as RN with context %}
+
+{%- macro calendar (page) -%}
+  {%- set cal = page.top.SC.Cal %}
+  {%- if cal and page.top.dynamic_nav_p %}
+    {%- import "html/cal/wr.jnj" as C with context %}
+    <ul>
+      {{ entry (cal, 0) }}
+    </ul>
+    {{- C.week_roller_nav (cal, weeks = cal.weeks [:5]) -}}
+  {% endif -%}
+{%- endmacro -%} {#- calendar -#}
+
+{%- macro entry_body (link) -%}
+  {%- if link.a_img -%}
+    <img alt="{{ link.short_title }}" src="{{ link.a_img }}" />
+  {%- else -%}
+    {{ GTW._T (link.short_title) }}
+  {%- endif -%}
+{%- endmacro -%} {#- entry_body -#}
+
+{%- macro entry (link, level) -%}
+  {%- if link.short_title %}
+    {% if NAV.permissive or NAV.allow (link, request.user) %}
+      {%- set href = link.eff_href or link.href %}
+      {%- set isc  = link.is_current_page and link.is_current_page (nav_page) %}
+      {%- if link.a_attr_dict %}
+        {%- set a_kw = link.a_attr_dict %}
+      {%- else %}
+        {%- set a_kw = { "href" : href } %}
+        {%- if link.title %}
+          {%- do a_kw.update (title = link.title) %}
+        {% endif -%}
+      {% endif -%}
+      {%- if link.is_current_dir and link.is_current_dir (nav_page) %}
+        <li>
+          <a class="current-section {{ a_kw.pop ('class', '') }}{%- if link == nav_page %} current-link{% endif -%}"
+             {{- GTW.xmlattr (a_kw) }}><i></i>{{ entry_body (link) }}</a>
+          {{ entries (link.own_links, level + 1) }}
+        </li>
+      {%- else -%}
+        {% if isc -%}
+          <li>
+            <b class="current-link">
+              {%- if page.permalink -%}
+                {{- RN.rel_link
+                    ( page, page.permalink
+                    , GTW._T ("Permalink of current page"), "bookmark", None
+                    , enabled = True
+                    , rel     = "bookmark"
+                    )
+                -}}
+              {%- else -%}
+                <i></i>
+              {% endif %}
+              {{- entry_body (link) -}}
+            </b>
+          </li>
+        {%- else -%}
+          {%- if href -%}
+            <li class="nav-link">
+              <a {{ GTW.xmlattr (a_kw) }}>{{ entry_body (link) }}</a>
+            </li>
+          {%- else -%}
+            <li><b class="no-link">{{ entry_body (link) }}</b></li>
+          {%- endif %}
+        {%- endif %}
+      {%- endif %}
+    {%- else %}
+      {%- if NAV.DEBUG and page.top.dynamic_nav_p %}
+        <li><b class="no-link">{{ entry_body (link) }}</b></li>
+      {% endif -%}
+    {%- endif %}
+  {% endif -%}
+{%- endmacro -%} {# entry #}
+
+{%- macro entries (link_list, level = 0) -%}
+  {% if link_list -%}
+  <ul>
+    {%- for link in link_list if (not link.show_in_nav) or link.show_in_nav (nav_page) %}
+      {{ entry (link, level) }}
+    {% endfor -%}
+  </ul>
+  {%- endif %}
+{%- endmacro -%} {# entries #}
+
+{%- macro flag_or_text (L10N, lang, desc) -%}
+  {%- set img  = L10N.flag (lang) %}
+  {%- if img %}
+    <img alt="{{ lang.upper () }}" src="{{ img }}" title="{{ desc }}" />
+  {%- else %}
+    {{ lang }}
+  {% endif -%}
+{%- endmacro -%} {#- flag_or_text -#}
+
+{%- macro language_section (page, request) -%}
+  {%- set L10N = page.top.SC.L10N %}
+  {%- if L10N and page.top.dynamic_p %}
+    {%- if not lang %}
+      {%- set lang = page.language %}
+    {% endif -%}
+    {%- set langs = L10N.languages %}
+    {%- if lang and langs|length > 1 %}
+      {% call X.section (class="language-selection") -%}
+        <h1 title="{{ GTW._T ("Languages that can be selected for %s") % request.host }}">
+          {{- GTW._T ("Language") -}}
+          <b>
+            {{- flag_or_text
+              ( L10N, lang
+              , GTW._T ("Currently selected language is %s") % (lang, )
+              )
+            -}}
+          </b>
+        </h1>
+        {%- for l in langs %}
+          {%- if l != lang %}
+            {%- set desc = GTW._T ("Select language %s") % (l, ) %}
+            <span class="nav-link {{ curr -}}" >
+              <a href="{{ GTW.pjoin (L10N.abs_href, l) }}" title="{{ desc }}">
+                {{ flag_or_text (L10N, l, desc) }}
+              </a>
+            </span>
+          {% endif -%}
+        {% endfor -%}
+      {% endcall %} {# X.section #}
+    {% endif -%}
+  {% endif -%}
+{%- endmacro -%} {#- language_section -#}
+
+{%- macro logged_in_form (page, AT) -%}
+  {%- set allow_change_email = kwargs.pop ("allow_change_email",    True) %}
+  {%- set allow_change_passw = kwargs.pop ("allow_change_password", True) %}
+  {%- set cert_auth_path     = page.cert_auth_path %}
+  {% call AT.logout_form (page, class = None, ** kwargs) -%}
+    <ul>
+      <li>
+        {{- AT.logout_button (page) -}}
+      </li>
+      {%- if allow_change_email %}
+        {{ AT.change_email_link (page) }}
+      {% endif -%}
+      {%- if allow_change_passw %}
+        {{ AT.change_password_link (page) }}
+      {% endif -%}
+      {%- if cert_auth_path %}
+        {{ AT.make_client_certifiate_link (page) }}
+      {% endif -%}
+    </ul>
+  {% endcall %} {# form #}
+{%- endmacro -%} {#- logged_in_form -#}
+
+{%- macro login_section (page, request, allow_register = False) -%}
+  {% call X.section (class="login") -%}
+    {%- import "html/auth.m.jnj"    as AT   with context %}
+    {%- if request.user.authenticated %}
+      <h1 title="{{ GTW._T ("Logged in as %s") % (request.user.name, ) }}">
+        {{- GTW._T ("Logged in") -}}
+      </h1>
+      {{ logged_in_form (page, AT) }}
+    {%- else -%}
+      <h1>
+        {{- GTW._T ("Login") -}}
+      </h1>
+      {{ AT.login_link (page, "p") }}
+    {% endif -%}
+  {% endcall %} {#  #}
+{%- endmacro -%} {#- login_section -#}
+
+{%- macro main (page) -%}
+  {%- set main_caller = kwargs.pop ("caller", None) -%}
+  {% call section (page.top.own_links, "Navigation", close_button = True) -%}
+    {{ calendar (page) }}
+  {% endcall %} {# section #}
+  {%- if main_caller %}
+    {{ main_caller () }}
+  {% endif -%}
+{%- endmacro -%} {#- main -#}
+
+{%- macro main_nav_link (page, class="main-nav-link", href="#navigate") -%}
+  {%- set mnl_caller = kwargs.pop ("caller", None) -%}
+  <a class="{{ class }}" href="{{ href }}" {# -#}
+     title="{{- GTW._T ("Show navigation") -}}"{#- -#}
+  >
+    {%- if mnl_caller %}
+      {{ mnl_caller () }}
+    {%- else %}
+      {{- GTW.Dingbats.trigram_for_heaven -}}
+    {% endif -%}
+  </a>
+{%- endmacro -%} {#- main_nav_link -#}
+
+{%- macro nav (page, css_class = None) -%}
+  {%- set nav_caller = kwargs.pop ("caller", None) -%}
+  {%- set akw        = GTW.dict
+        ( kwargs
+        , class = GTW.filtered_join
+            (" ", (kwargs.get ("class"), css_class, "main-nav"))
+        , id    = kwargs.get ("id", "navigate")
+        )
+  -%}
+  {%- call X.nav (** akw) -%}
+    {%- if nav_caller %}
+      {{- nav_caller () -}}
+    {%- endif -%}
+  {%- endcall -%} {# X.nav #}
+{%- endmacro -%} {#- nav -#}
+
+{%- macro section (link_list, name = None, close_button = False) -%}
+  {%- if link_list %}
+    {%- set section_caller = kwargs.pop ("caller", None) -%}
+    {%- set section_class = kwargs.pop ("class", "").strip ()
+    -%}
+    {% call X.section (class = section_class, ** kwargs) -%}
+      {% if name -%}
+        <h1>
+          {{- name }}
+          {%- if close_button %}
+            <a class="main-nav-hide" href="#main" title="{{- GTW._T ("Hide navigation") -}}">
+              {{- GTW.Dingbats.cross_mark -}}
+            </a>
+          {% endif -%}
+        </h1>
+      {%- endif %}
+      {{ entries (link_list, 0) }}
+      {%- if section_caller %}{{ section_caller () }}{% endif -%}
+    {% endcall %} {# X.section #}
+  {%- endif %}
+{%- endmacro -%} {# section #}
+
+{%- macro short_nav (page) -%}
+  {%- set nav_caller = kwargs.pop ("caller", None) -%}
+  <nav class="short-nav">
+    {{ main_nav_link (page) }}
+    {{ RN.rel_nav_buttons (page, container_tag = "span") -}}
+    {%- if nav_caller %}
+      {{- nav_caller () -}}
+    {%- endif -%}
+  </nav>
+{%- endmacro -%} {#- short_nav -#}
+
+{#- __END__ jinja template: html/main_nav.m.jnj -#}

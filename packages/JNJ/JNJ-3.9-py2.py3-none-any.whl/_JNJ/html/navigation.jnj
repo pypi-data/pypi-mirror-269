@@ -1,0 +1,77 @@
+{#- jinja template: html/navigation.jnj -#}
+{#
+## Copyright (C) 2009-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/navigation.jnj
+##
+## Purpose
+##    Template and macros for navigation.html
+##
+## Revision Dates
+##    29-Dec-2009 (CT) Creation
+##    14-Jan-2010 (CT) Guard `if not link.hidden` added to loop in `entries`
+##    17-Jan-2010 (CT) `sitemap` added
+##    27-Jan-2010 (CT) `neighbor` added
+##    20-Feb-2010 (CT) `login_section` added
+##    21-Feb-2010 (CT) `logout_inline` factored
+##    22-Feb-2010 (CT) `language_section` added
+##    23-Feb-2010 (CT) `flag_or_text` factored, `language_section` improved
+##     9-Mar-2010 (CT) `calendar` added
+##    17-Mar-2010 (CT) `permalink` added
+##    18-Mar-2010 (CT) `entry` changed to use `href = link.abs_href`
+##    24-Mar-2010 (CT) Use `link.is_current` instead of home-grown code
+##    29-Jun-2010 (CT) Use `request.host` instead of `page.site_url`
+##    17-Aug-2010 (CT) Switch from `title/desc` to `short_title/title`
+##     9-Dec-2010 (CT) `_entry_body` factored and changed to handle `a_img`
+##     4-Jan-2011 (CT) Use `X.section`
+##     7-Jan-2011 (CT) `level-<i>` removed
+##     7-Jan-2011 (CT) Use `is_current_dir` instead of home-grown code
+##                     (and s/is_current/is_current_page/)
+##    15-Oct-2011 (MG) `s/_entry_body/entry_body/g`
+##    21-Oct-2011 (CT) `main` added to wrap code previously at module scope
+##    11-Apr-2012 (CT) Change `entry_body` to use `GTW._T (link.short_title)`
+##     3-May-2012 (CT) Add guard, default for `lang` to macro `language_section`
+##     9-Oct-2012 (CT) Add guard for `short_title` to macro `entry`
+##     6-Oct-2013 (CT) Add `with context` to imports
+##     7-Jan-2014 (CT) Pass `link_only = True` to `login_inline`
+##    24-Jan-2014 (CT) Use `link.a_attr_dict`, if any, for <a> in `entry`
+##    14-Mar-2014 (CT) Add macros for related links: `rel_link`,
+##                     `rel_nav_buttons`, `rel_first`...
+##     5-Dec-2014 (CT) Use pure buttons for `rel_nav_buttons`; remove `neighbor`
+##    16-Apr-2015 (CT) Add `permalink`, if any, to `current-link` entry
+##                     + Add guard for `contents` to `rel_link`
+##    16-Apr-2015 (CT) Add `rel` attribute to `rel_next`, `rel_prev`
+##                     + Add `kwargs` to `rel_link`
+##    22-Apr-2015 (CT) Change `sitemap` macros to use `GTW.RST.TOP.Sitemap`
+##    11-Jun-2015 (CT) Use `Auth.login_link`, not `Form.login_inline`
+##    12-Jun-2015 (CT) Use `logged_in_form`, not `Form.logout_inline`
+##    17-Nov-2015 (CT) Add guards for `page.top.dynamic_nav_p`
+##     1-Dec-2015 (CT) Don't set `current-link` for `current-section` unless
+##                     `link == nav_page`
+##     2-Jan-2016 (CT) Add optional arg `first_last_p` to `rel_nav_buttons`
+##    15-Jan-2016 (CT) Add `close_button` to section `Navigation`
+##    16-May-2016 (CT) Use `GTW.xmlattr (kw)`, not `kw|xmlattr`
+##    10-Jan-2017 (CT) Factor `main_nav.m.jnj`, `rel_nav.m.jnj`,
+##                     `sitemap.m.jnj`
+##    ««revision-date»»···
+##--
+#}
+
+{%- import "html/main_nav.m.jnj"          as MN with context %}
+
+{%- set language_section = MN.language_section %}
+{%- set login_section    = MN.login_section %}
+{%- set main             = MN.main %}
+{%- set nav              = MN.nav %}
+{%- set section          = MN.section %}
+
+{#- __END__ jinja template: html/navigation.jnj -#}

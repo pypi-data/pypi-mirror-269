@@ -1,0 +1,99 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/auth.m.jnj.media
+#
+# Purpose
+#    Media fragment for template macros in html/auth.m.jnj
+#
+# Revision Dates
+#    11-Jun-2015 (CT) Creation
+#    ««revision-date»»···
+#--
+
+from   __future__ import division
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( "form.Auth"
+        , children             =
+            [ Rule
+                ( "button[type=submit]"
+                , border_radius    = Em (1/4)
+                , margin_left      = Em (1.5)
+                , children         =
+                    [ Rule
+                        ( "b"
+                        , font_weight      = "normal"
+                        )
+                    , Rule
+                        ( "i.fa"
+                        , float            = "left"
+                        )
+                    ]
+                )
+            , Rule
+                ( "button", "input"
+                , width            = Em (20.0)
+                )
+            , Rule
+                ( ".Error-Message"
+                , P.color_spec_error
+                , font_weight      = "bold"
+                , margin           = TRBL (Em (-1/4), 0, Em (1.0), Em (1.0))
+                , max_width        = Em (40)
+                , padding          = TRBL (Em (0.2), Em (0.5))
+                )
+            , Rule
+                ( ".Errors"
+                , margin_top       = "inherit"
+                )
+            , Rule
+                ( "legend"
+                , P.color_spec_sub_heading
+                , font_size    = Em  (1.25)
+                , font_weight  = "bold"
+                )
+            , Rule_Class
+                ( "Logout"
+                , children             =
+                    [ Rule
+                        ( "button"
+                        , margin_left      = "inherit"
+                        , width            = "inherit"
+                        , children         =
+                            [ Rule
+                                ( "b"
+                                , margin_left      = Em (0.5)
+                                )
+                            ]
+                        )
+                    ]
+                )
+            ]
+        )
+    , Media.Rule
+        ( Media.Query ("screen", P.breakpoint.quite_narrow)
+        , rules                =
+            [ Rule
+                ( "form.Auth"
+                , children             =
+                    [ Rule
+                        ( "button[type=submit]", ".Error-Message"
+                        , margin_left      = 0
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+### __END__ html/auth.m.jnj.media

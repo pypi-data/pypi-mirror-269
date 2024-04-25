@@ -1,0 +1,138 @@
+{#- jinja template: html/e_type_selector.m.jnj -#}
+{#
+## Copyright (C) 2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/e_type_selector.m.jnj
+##
+## Purpose
+##    Macros for entity selector forms
+##
+## Revision Dates
+##     2-Jun-2016 (CT) Creation
+##    ««revision-date»»···
+##--
+#}
+{%- import (html_version or "html/5.jnj") as X -%}
+{%- import "html/e_type_q.m.jnj" as ETQ with context %}
+
+{%- macro do_atom (page, elem) -%}
+  {{ esf_field (page, elem, ** kwargs) }}
+{%- endmacro -%} {#- do_atom -#}
+
+{%- macro do_entity_n (page, elem) -%}
+  {{ iterate (page, elem, ** kwargs) }}
+{%- endmacro -%} {#- do_entity_n -#}
+
+{%- macro do_entity_p (page, elem) -%}
+  {% set id    = elem.E_Type_NP_field_name %}
+  {% set label = GTW._T ("Select type of %s") % (elem.ui_type_name, ) %}
+  {% call esf_field (page, elem, class = "polymorphic") -%}
+    {% call X.input.labeled_pure (label, for = id) -%}
+      {{ X.input.select_v
+          ( id, elem.choices, elem.selected_type
+          , class = "E_Type"
+          , id    = id
+          , title = label
+          )
+      -}}
+    {% endcall %} {# X.input.labeled_pure #}
+    {{ iterate (page, elem, ** kwargs) -}}
+  {% endcall -%} {# esf_field -#}
+{%- endmacro -%} {#- do_entity_p -#}
+
+{%- macro do_entity_p_cnp (page, elem) -%}
+  {% set fkw = GTW.dict (title = elem.ui_name) %}
+  {% if elem.type_name != elem.selector_p.selected_type -%}
+    {% do fkw.update (disabled = True) -%}
+  {% endif -%}
+  <fieldset class="E_Type {{ elem.type_name }}"{{ GTW.xmlattr (fkw) }}>
+    {{ iterate (page, elem, ** kwargs) -}}
+  </fieldset>{# -#}
+{%- endmacro -%} {#- do_entity_p_cnp -#}
+
+{%- macro do_entity_ps (page, elem) -%}
+  {{- iterate (page, elem, ** kwargs) }}
+{%- endmacro -%} {#- do_entity_ps -#}
+
+{%- macro esf_field (page, elem) -%}
+  {%- set caller = kwargs.pop ("caller", None) -%}
+  {%- set cls = GTW.filtered_join
+      ( " "
+      , ( "pure-control-group attr-filter"
+        , kwargs.pop ("class", "")
+        )
+      )
+  %}
+  <div class="{{ cls }}" title="{{ elem.ui_name }}">
+    {% if caller -%}
+      {{ caller () -}}
+    {% else -%}
+      <label for="{{ elem.id }}">{# -#}
+        {{ elem.ui_name }}{# -#}
+      </label>
+      <span class="value{%- if elem.Class %} {{ elem.Class }}{%- endif -%}">
+        {{ GTW.call_macro (elem.attr.input_widget, elem, class = "value") -}}
+      </span>
+    {% endif -%}
+  </div>
+{%- endmacro -%} {#- esf_field -#}
+
+{%- macro esf_title (af) -%}
+  {%- set type_name = af.ui_type_name %}
+  {%- set attr_name = af.ui_name %}
+  {%- if type_name == attr_name %}
+    {{- GTW._T ("Select %s") % (attr_name, ) -}}
+  {%- else %}
+    {{- GTW._T ("Select %s for attribute %s") % (type_name, attr_name) -}}
+  {% endif -%}
+{%- endmacro -%} {#- esf_title -#}
+
+{%- macro form (page, aq, selector) -%}
+  {#- aq       : MOM.Attr.Querier for triggering A_Id_Entity attribute -#}
+  {#- selector : aq.ESW or a object derived from it -#}
+  {%- set af = aq.As_Template_Elem %}
+  <form class = "pure-form pure-form-stacked" title="{{ esf_title (af) }}">
+    <div class="pure-controls">
+      {{ ETQ.button
+          ( page
+          , class = "pure-button-primary"
+          , name  = GTW._  ("Apply")
+          , title = GTW._T ("Use the currently selected %s") % af.ui_type_name
+          , typ   = "submit"
+          )
+      -}}
+      {{ ETQ.button
+          ( page
+          , name  = GTW._  ("Clear")
+          , title = GTW._T ("Reset fields")
+          )
+      -}}
+      {{ ETQ.button
+          ( page
+          , name  = GTW._  ("Cancel")
+          , title = GTW._T ("Leave form without selecting %s") % af.ui_type_name
+          )
+      -}}
+    </div>
+    <input type="hidden" name="__esf_for_attr__" value="{{ af.id }}">
+    <input type="hidden" name="__esf_for_type__" value="{{ af.type_name }}">
+    {{ GTW.call_macro (selector.template_macro, page, selector, ** kwargs) }}
+  </form>
+{%- endmacro -%} {#- form -#}
+
+{%- macro iterate (page, elem) -%}
+  {% for e in elem.elements %}
+    {{ GTW.call_macro (e.template_macro, page, e, ** kwargs) }}
+  {% endfor %}
+{%- endmacro -%} {#- iterate -#}
+
+{#- __END__ jinja template: html/e_type_selector.m.jnj -#}

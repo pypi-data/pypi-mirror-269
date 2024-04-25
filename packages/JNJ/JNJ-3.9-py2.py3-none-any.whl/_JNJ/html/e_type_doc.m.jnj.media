@@ -1,0 +1,98 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2012-2014 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+# 
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/e_type_doc.m.jnj.media
+#
+# Purpose
+#    Media fragment for template html/e_type_doc.m.jnj.media
+#
+# Revision Dates
+#    10-Aug-2012 (CT) Creation
+#    ««revision-date»»···
+#--
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".E-Type-Doc"
+        , margin_left              = Em (0.5)
+        , children                 =
+            [ Rule
+                ( ".attr-name", ".role-name"
+                , P.color_spec_term
+                , font_style       = "oblique"
+                , font_weight      = 500
+                , padding          = TRBL0
+                    (r = Em (0.3), b = Em (0.1), l = Em (0.2))
+                )
+            , Rule
+                ( "a .attr-name", "a .role-name"
+                , children             = [P.Rule.hover]
+                )
+            , Rule
+                ( ".Attr-Table"
+                , margin_left              = Em (2.5)
+                , children                 =
+                    [ Rule
+                        ( "a"
+                        , color            = "inherit"
+                        , display          = "block"
+                        )
+                    , Rule
+                        ( "td + td"
+                        , border_left      = "2px solid " + P.color_medium_grey
+                        )
+                    ]
+                )
+            , Rule
+                ( "dl"
+                , margin_left              = Em (2.5)
+                )
+            , Rule
+                ( "dt"
+                , clear                    = "left"
+                , float                    = "left"
+                , font_weight              = "bold"
+                , width                    = Em (8)
+                )
+            , Rule
+                ( "dd"
+                , margin_left              = Em (8.5)
+                , padding_bottom           = Em (0.5)
+                )
+            ]
+        )
+    , Media.Rule
+        ( Media.Query ("screen", P.breakpoint.narrow)
+        , rules               =
+            [ Rule
+                ( ".E-Type-Doc"
+                , children    =
+                    [ Rule
+                        ( "dl"
+                        , margin_left      = Em (1.0)
+                        )
+                    , Rule
+                        ( "dt"
+                        , float            = "none"
+                        , width            = "auto"
+                        )
+                    , Rule
+                        ( "dd"
+                        , margin_left      = Em (1.0)
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+
+### __END__ html/e_type_doc.m.jnj.media

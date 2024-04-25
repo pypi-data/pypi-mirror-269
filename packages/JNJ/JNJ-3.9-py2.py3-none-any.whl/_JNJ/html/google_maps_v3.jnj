@@ -1,0 +1,148 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: google_maps_v3.jnj -#}
+{#
+## Copyright (C) 2012-2016 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+##
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/google_maps_v3.jnj
+##
+## Purpose
+##    Template and macros for a page with embedded google map using the
+##    Google Maps API v3
+##
+## Revision Dates
+##     3-Jun-2012 (CT) Creation (based on html/google_maps.jnj)
+##     4-Dec-2012 (CT) Remove `http:` (--> protocol-relative)
+##     3-Dec-2015 (CT) Add `max-height`, `max-width`
+##    16-Sep-2016 (CT) Remove obsolete `sensor` arg to `maps.googleapis.com`
+##    ««revision-date»»···
+##--
+#}
+
+{#-
+### https://developers.google.com/maps/documentation/javascript/tutorial
+## map types
+##     https://developers.google.com/maps/documentation/javascript/maptypes
+// ROADMAP, SATELLITE, HYBRID, TERRAIN
+
+-#}
+
+{%- macro body (page) -%}
+  <div id="gmap"></div>
+{%- endmacro -%} {#- body -#}
+
+{%- macro head (page) -%}
+    <style type="text/css">
+      #gmap
+          { height     : {{ page.map.height|default("100%") }}
+          ; max-height : 80vh
+          ; max-width  : 90vw
+          ; width      : {{ page.map.width |default("100%") }}
+          }
+    </style>
+    <script type="text/javascript"
+      src="//maps.googleapis.com/maps/api/js?key={{ page.map.google_key }}">
+    </script>
+    <script type="text/javascript">
+      function initialize () {
+          var $G      = google.maps;
+          var mapdiv  = document.getElementById ("gmap");
+          var pnt     = new $G.LatLng
+              ({{ page.map.latitude }}, {{ page.map.longitude }});
+          var options =
+              { center                : pnt
+              , mapTypeControl        : true
+              , mapTypeControlOptions :
+                  { style : $G.MapTypeControlStyle.DEFAULT }
+              , mapTypeId             : $G.MapTypeId [{{ page.map.type|default('"ROADMAP"') }}]
+              , overviewMapControl    : true
+              , panControl            : true
+              , scaleControl          : true
+              , streetViewControl     : true
+              , zoom                  : {{ page.map.scale|default(14) }}
+              , zoomControl           : true
+              , zoomControlOptions    :
+                  { style : $G.ZoomControlStyle.DEFAULT }
+
+              };
+          var map  = new $G.Map (mapdiv, options);
+          var mark = new $G.Marker
+              ({ position : pnt, map : map, title : "{{ page.map.title }}" });
+          var mrkx;
+          {% if page.map.pan -%}
+            map.panBy ({{ page.map.pan.dx }}, {{ page.map.pan.dy }});
+          {% endif %}
+          {%- for marker in page.map.markers %}
+              mrkx = new $G.Marker (
+                { map      : map
+                , position : new $G.LatLng
+                      ({{ marker.latitude }}, {{ marker.longitude }})
+                , title    : "{{ marker.title }}"
+                }
+              );
+              {%- if marker.blowup %}
+                {#-
+                ### XXX
+                ### - `showMapBlowup` doesn't exist in v3
+                ### - use `InfoWindow` ???
+                mrkx.showMapBlowup
+                  ( {{ marker.blowup.scale|default(16) }}
+                  , {{ marker.blowup.type|default("G_HYBRID_MAP") }}
+                  );
+                 -#}
+              {% endif -%}
+          {% endfor -%}
+          {%- if page.map.blowup %}
+            {#-
+            ### XXX
+            ### - `showMapBlowup` doesn't exist in v3
+            ### - use `InfoWindow` ???
+            {% if page.map.blowup.latitude and page.map.blowup.longitude %}
+              pnt = new $G.LatLng
+                  ( {{ page.map.blowup.latitude }}
+                  , {{ page.map.blowup.longitude }}
+                  );
+              map.showMapBlowup
+                ( pnt
+                , { zoomLevel : {{ page.map.blowup.scale|default(16) }}
+                  , mapType   : {{ page.map.blowup.type|default("G_HYBRID_MAP") }}
+                  }
+                );
+            {%- else %}
+              mark.showMapBlowup
+                ( {{ page.map.blowup.scale|default(16) }}
+                , {{ page.map.blowup.type|default("G_HYBRID_MAP") }}
+                );
+            {%- endif %}
+            -#}
+          {%- endif %}
+      }
+    </script>
+{%- endmacro -%} {#- head -#}
+
+{%- block head_elements -%}
+  {{ super () }}
+  {%- block gmap_head -%}
+    {{ head (page) }}
+  {%- endblock gmap_head -%}
+{%- endblock head_elements -%}
+
+{%- block body_attrs %} {{ super () }} onload="initialize()"
+{%- endblock -%}
+
+{%- block document -%}
+  {%- block gmap_body -%}
+    {{ body (page) }}
+  {%- endblock gmap_body -%}
+  {{ super () -}}
+{%- endblock document -%}
+
+{#- __END__ jinja template: html/google_maps_v3.jnj -#}

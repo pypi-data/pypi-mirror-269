@@ -1,0 +1,97 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011-2012 Martin Glueck All rights reserved
+# Langstrasse 4, A--2244 Spannberg, Austria. martin@mangari.org
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+# 
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    JNJ.html.console.jnj.media
+#
+# Purpose
+#    Media fragment for the console
+#
+# Revision Dates
+#    26-Sep-2011 (MG) Creation
+#    ««revision-date»»···
+#--
+
+DBG = P.Debugger
+
+Style_Sheet \
+  ( Rule
+      ( ".debugger"
+      , text_align       = "left"
+      , padding          = TRBL (Px (12))
+      , margin           = "auto"
+      , border           = "1px solid #aaa"
+      , background_color = DBG.background_color
+      , line_height      = 1
+      , children =
+        ( Rule
+            ( ".console"
+            , border                  =
+                "1px solid " + DBG.console_border_color
+            , padding                 = Px (5)
+            , margin                  = Px (3)
+            , cursor                  = "default"
+            , background_color        = DBG.console_background_color
+            , color                   = DBG.console_text_color
+            , children                =
+              ( Rule
+                  ( ".output"
+                  , white_space       = "pre-wrap"
+                  )
+              , Rule
+                  ( "form"
+                  , color            = DBG.form_text_color
+                  )
+              , Rule
+                  ( "input"
+                  , color            = DBG.form_text_color
+                  , background_color = DBG.console_background_color
+                  , width            = "90%"
+                  , font_family      =
+                      "'Consolas', 'Deja Vu Sans Mono' "
+                      "'Bitstream Vera Sans Mono', monospace"
+                  , font_size        = Px (13)
+                  , border           = "none!important"
+                  )
+              , Rule
+                  ( ".traceback"
+                  , margin           = TRBL (Px (5), Px (0), Px (5), Px(25))
+                  , white_space      = "normal"
+                  , children         =
+                    ( Rule
+                        ( "h3"
+                        , background_color = DBG.traceback_background_color
+                        , color            = DBG.traceback_text_color
+                        , margin           = TRBL
+                            (Px (-10), Px (-10), Px (5), Px (-10))
+                        , padding          = TRBL (Px (5))
+                        )
+                    , Rule
+                        ( "pre_hover"
+                        , background_color = DBG.console_background_color
+                        , cursor           = "default"
+                        )
+                    )
+                  )
+              )
+            )
+        ,
+        )
+      )
+
+  )
+CSS_Link    ("/media/GTW/css/python-console.css")
+CSS_Link    (CHJ.CSS_Link.jQuery_UI)
+JS_On_Ready ("$('div.console').open_shell (null, 0);")
+Script      (CHJ.Script._.jQuery_UI)
+Script      (src = "/media/GTW/js/jquery.debugger.js")
+
+### __END__ JNJ.html.console.jnj.media

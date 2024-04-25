@@ -1,0 +1,55 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: error_410.jnj -#}
+{#
+## Copyright (C) 2012 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## #*** <License> ************************************************************#
+## This template is part of the package JNJ.
+## 
+## This template is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## #*** </License> ***********************************************************#
+##
+##++
+## Name
+##    html/error_410.jnj
+##
+## Purpose
+##    Error template for HTTP error 410 (Gone)
+##
+## Revision Dates
+##    11-Dec-2012 (CT) Creation
+##    ««revision-date»»···
+##--
+#}
+
+{%- block title %}
+  <title>{{ GTW._T ("Page doesn't exist anymore") }}</title>
+{% endblock -%}
+
+{%- block document %}
+  {% if request.Error %}
+    <h1 class="Error-Message">
+      {{ GTW._T (request.Error) }}
+    </h1>
+  {% else %}
+    <h1 class="Error-Message">
+      {{ GTW._T ("You requested a page that doesn't exist anymore: ") }}
+      {{ request.path }}
+    </h1>
+  {% endif %}
+  <p class="Error-Message">
+    {%- block error_explanation -%}
+      {%- if exception.info %}
+        {{ exception.info }}
+      {%- else %}
+        {{ GTW._T
+            ("The object referred to by the web address %s was deleted")
+          % (request.path, )
+        }}
+      {% endif -%}
+    {%- endblock error_explanation -%}
+  </p>
+{% endblock document -%}
+
+{#- __END__ jinja template: html/error_410.jnj -#}

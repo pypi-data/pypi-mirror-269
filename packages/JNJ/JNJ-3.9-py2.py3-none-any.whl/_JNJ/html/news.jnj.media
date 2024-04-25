@@ -1,0 +1,87 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# ****************************************************************************
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# ****************************************************************************
+#
+#++
+# Name
+#    html/news.jnj.css
+#
+# Purpose
+#    CSS fragment for template html/news.jnj
+#
+# Revision Dates
+#     2-Jan-2011 (CT) Creation
+#    27-Oct-2011 (CT) Script and JS_On_Ready for `GTW_pixpander` added
+#    17-Jan-2016 (CT) Use `V5a_pixpander`, not `GTW_pixpander`
+#    ««revision-date»»···
+#--
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".news-entry"
+        , children                =
+            [ Rule_Sibling
+                ( ".news-entry"
+                , margin_top      = Em (2)
+                )
+            , Rule
+                ( "td"
+                , padding_bottom  = Em (1./4)
+                )
+            , Rule
+                ( ".button"
+                , float           = "right"
+                , font_size       = "small"
+                , text_align      = "center"
+                , width           = "auto"
+                , ** P.nav.main.color_spec_link
+                )
+            ]
+        )
+    , Rule
+        ( ".news-meta"
+        , border                  = P.border_simple
+        , border_width            = TRBL (Px (1), 0)
+        , margin_bottom           = Em (1)
+        , padding                 = TRBL (0, Em (0.2))
+        , ** P.color_spec_meta
+        )
+    , Rule
+        ( ".news-author", ".news-date"
+        , font_size               = Percent (90)
+        )
+    , Rule
+        ( ".news-author"
+        , children                =
+            [ Rule
+                ( "a"
+                , text_decoration = "none"
+                , children        =
+                    [ P.Rule.hover
+                        ( text_decoration = "underline"
+                        )
+                    ]
+                )
+            ]
+        )
+    , Rule
+        ( ".news-date"
+        , float                    = "right"
+        )
+    , Rule
+        ( ".news-title"
+        , font_size                = Percent (110)
+        , padding                  = TRBL (Em (1./4), 0, Em (0.05))
+        )
+    )
+
+Script      (CHJ.Script._.V5a_pixpander)
+JS_On_Ready (CHJ.JS_On_Ready._.V5a_pixpander)
+
+### __END__ html/news.jnj.css

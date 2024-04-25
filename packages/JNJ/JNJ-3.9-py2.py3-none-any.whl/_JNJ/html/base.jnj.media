@@ -1,0 +1,383 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011-2017 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# ****************************************************************************
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# ****************************************************************************
+#
+#++
+# Name
+#    html/base.jnj.media
+#
+# Purpose
+#    Media fragment for template html/base.jnj
+#
+# Revision Dates
+#     1-Jan-2011 (CT) Creation...
+#     4-Jan-2011 (CT)         ...finished
+#     5-Jan-2011 (CT) `print_sheet` added
+#    11-Jan-2011 (CT) `tablesorter` added
+#     8-Feb-2011 (CT) s/Required/Necessary/, s/Mandatory/Required/
+#    21-Feb-2011 (CT) Use `Border`
+#    24-May-2011 (CT) `overflow` forced to `visible` for `@media print`
+#    15-Jun-2011 (CT) `max-width` for `img` and `object` removed (doesn't
+#                     scale height accordingly, so image is distorted)
+#    31-Aug-2011 (CT) `hr.docutils` changed
+#    21-Oct-2011 (CT) Factored out `base.media` and `print.media`
+#    24-Oct-2011 (CT) `tablesorter` rule factored into `tablesorter.media`
+#    28-Nov-2011 (CT) Remove `max-width` from `.pg_main`
+#     2-Dec-2011 (CT) Add `Modernizr`, remove `ie_csshover_hack.css`
+#    22-Feb-2012 (CT) Add more rules for `.centered`, add `align-center`
+#     1-Mar-2012 (CT) Add rule for `div.centered .line`, use
+#                     `P.pg_main_max_width` instead of literal
+#     8-Mar-2012 (CT) Add rule for `li.ui-menu-item`
+#    10-Aug-2012 (CT) Use `P.color_spec_sub_heading` for `h1`..`h6`
+#     9-Oct-2012 (CT) Add `bold`, `padding` to `.Error-Message`
+#    28-Feb-2013 (CT) Add `margin_bottom` for `ol li`
+#     7-Mar-2013 (CT) Add rule for `.added`
+#     8-Apr-2013 (CT) Factor `P.Rule.hover`
+#    15-Jan-2014 (CT) Add rule for `.full-width`
+#    21-Jan-2014 (CT) Add small screen rules for `.pg_main`, `.pg_nav_show`
+#    13-Feb-2014 (CT) Add rule for `.grid-table tbody th`
+#    20-Feb-2014 (CT) Add rules/script for `.nav-off-canvas`, `.nav-on-canvas`;
+#                     factor `P.Rule.pg_nav_show`
+#    20-Feb-2014 (CT) Add media query for `breakpoint.broad`
+#    27-Mar-2014 (CT) Add rule for `max_width` of `.pg_body dd`
+#     8-Apr-2014 (CT) Add rule for `max_width` of `img`
+#     8-Apr-2014 (CT) Add rules for `.invisible`, `.clearfix`
+#    12-Apr-2014 (CT) Add rule for `.module`
+#     9-Jul-2014 (CT) Add rule for ".rotate-45-left"
+#     5-Dec-2014 (CT) Add `Style_File` for `pure.css` and `font-awesome.css`
+#     5-Dec-2014 (CT) Add `padding_left` to `.nav-off-canvas .pg_body`
+#    10-Dec-2014 (CT) Remove `Include` of `reset.media`; pure.css includes reset
+#    16-Jan-2015 (CT) Correct `margin_left` of `.js .pg_body .nav-off-canvas`
+#                     by `padding_left` introduced on 20141205
+#     2-Feb-2015 (CT) Add `.col-set` rules
+#    11-Feb-2015 (CT) Add rule for `td .link .a`
+#    15-Feb-2015 (CT) Add rules for `.menu-icon`
+#     3-Jul-2015 (CT) Add rule for `a[data-action]`
+#     2-Dec-2015 (CT) Add `P.Rule.link`, `P.Rule.visited` to rule for `a`
+#    31-Dec-2015 (CT) Add `rel-nav` rules to `pg_nav_show`
+#    15-Jan-2016 (CT) Use `V5a_nav_off_canvas`, not `GTW_nav_off_canvas`
+#    15-Jan-2016 (CT) Remove `base_ie_lt7_hacks.css`
+#    20-Jan-2016 (CT) Use `CHJ.Script._.V5a`, not `CHJ.Script._.Modernizr`
+#    10-Jan-2017 (CT) Factor rules to `base.media`
+#    11-Jan-2017 (CT) Factor `base_classes.media`, `base_rest.media`
+#    16-Jan-2017 (CT) Add `border`, `padding` to `main-nav`
+#    17-Jan-2017 (CT) Add support for `nav-side-right`
+#    18-Jan-2017 (CT) Use `flex` for `.pg_foot`
+#                     + Add rules for `children`
+#                     + Add `print` rules
+#    19-Jan-2017 (CT) Add `nav-side-bottom`, `nav-type-long`
+#    ««revision-date»»···
+#--
+
+Style_File  ("/media/GTW/css/font-awesome.css")
+Style_File  ("/media/GTW/css/pure.css")
+Style_File  ("/media/GTW/css/grids-responsive.css")
+
+Include     ("html/base.media")
+
+style_sheet = Style_Sheet \
+    ( ### CSS rules for overall layout
+      Rule
+        ( "html"
+        , Box
+            ( sizing         = "border-box"
+            )
+        )
+    , Rule
+        ( "*", "*:before", "*:after"
+        , Box
+            ( sizing         = "inherit"
+            )
+        )
+    , Rule
+        ( "body"
+        , Display             ("flex")
+        , Flex_Direction      ("column")
+        , min_height          = Vh (100)
+        )
+    , Rule
+        ( ".pg_head"
+        , P.color_spec_pg_head
+        , Flex                ("0 0 auto")
+        , height              = P.pg_head_height
+        , overflow            = "hidden"
+        )
+    , Rule
+        ( ".pg_main"
+        , Display             ("flex")
+        , Flex                ("1 1 auto")
+        , children            =
+            [ Rule_Child
+                ( ".pg_body"
+                , overflow            = "auto"
+                , children            =
+                    [ Rule
+                        ( "p", "dd"
+                        , max_width   = P.pg_main_max_width
+                        )
+                    , Rule
+                        ( ".short-nav"
+                        , font_size           = P.pg_short_nav_font_size
+                        , children            =
+                            [ Rule
+                                ( ".rel-nav"
+                                , display     = "inline-block"
+                                , width       = Percent (100)
+                                )
+                            , Rule
+                                ( "a"
+                                , background_color     = "inherit"
+                                , color                = P.nav.rel.a_color
+                                , display              = "inline-block"
+                                , padding              = P.nav.rel.a_padding
+                                , margin               = 0
+                                , children             =
+                                    [ P.Rule.hover
+                                    , Rule ### override pure-css setting
+                                        ( CS.Pseudo ( "hover")
+                                        , background_image     = "initial"
+                                        )
+                                    ]
+                                )
+                            ]
+                        )
+                    ]
+                )
+            , Rule_Child
+                ( ".main-nav"
+                , P.Rule.main_nav_on
+                , Transition          ("width ease-in-out 0.1s")
+                , background_color    = P.nav.main.background_color
+                , border              = P.border_simple_light
+                , margin              =
+                    TRBL0 (default = Rem (1.0), l = P.pg_body_margin_lr)
+                )
+            , Rule_Class
+                ( ".nav-off-canvas"
+                , children            =
+                   [ Rule_Child
+                       ( ".main-nav"
+                       , P.Rule.main_nav_off
+                       , children            =
+                            [ Rule_Prefixed
+                                ( ".no-js"
+                                , CS.Pseudo ("target")
+                                , P.Rule.main_nav_on
+                                )
+                            ]
+                       )
+                   ]
+                )
+            ]
+        )
+    , Rule
+        ( ".pg_foot"
+        , Display             ("flex")
+        , Flex_Direction      ("row wrap")
+        , border_top          = P.border_simple
+        , font_size           = Rem (0.75)
+        , margin              = TRBL  (Rem (1.0), "auto", Rem (0.5))
+        , padding             = TRBL  (Rem (1./4))
+        , width               = Percent (98)
+        , children            =
+            [ Rule
+                ( ".copyright", ".last-change", ".top-link"
+                , Flex                ("1 1 auto")
+                )
+            , Rule
+                ( ".copyright"
+                , text_align          = "left"
+                )
+            , Rule
+                ( ".last-change"
+                , text_align          = "right"
+                )
+            , Rule
+                ( ".top-link"
+                , text_align          = "center"
+                , children            =
+                    [ Rule
+                        ( "a"
+                        , display             = "inline-block"
+                        , width               = Percent (100)
+                        )
+                    ]
+                )
+            ]
+        )
+    , Media.Rule ### screen wide enough for two columns
+        ( Media.Query ("screen", P.breakpoint.supports_two_column)
+        , rules               =
+            [ Rule
+                ( ".pg_main"
+                , Flex_Direction      ("row")
+                , children            =
+                    [ Rule_Child
+                        ( ".pg_body"
+                        , Flex                ("1 1 auto")
+                        , margin              = TRBL (0, P.pg_body_margin_lr)
+                        , children            =
+                            [ Rule
+                                ( ".short-nav"
+                                , P.Rule.visible_block
+                                , display             = "block"
+                                , left                = 0
+                                , margin              = 0
+                                , padding             = 0
+                                , position            = "fixed"
+                                , right               = "initial"
+                                , top                 = P.pg_short_nav_top
+                                , width               = Em (3.0)
+                                , children            =
+                                    [ Rule
+                                        ( "a"
+                                        , display     = "block"
+                                        )
+                                    , Rule
+                                        ( ".rel-nav"
+                                        , margin      = 0
+                                        )
+                                    , Rule
+                                        ( ".rel-nav a"
+                                        , margin      = TRBL
+                                            (P.nav.rel.a_margin, 0, 0)
+                                        )
+                                    ]
+                                )
+                            ]
+                        )
+                    , Rule_Child
+                        ( ".main-nav"
+                        , Display             ("flex")
+                        , Flex_Direction      ("column")
+                        , Flex                ("0 0 auto")
+                        , font_size           = P.nav.main.a_font_size
+                        , line_height         = P.nav.main.line_height_normal
+                        , margin              = TRBL0 (l = Rem (1))
+                        , overflow            = "hidden"
+                        , width               = P.nav.main.width
+                        )
+                    ]
+                )
+            , Rule
+                ( ".pg_main.nav-side-left"
+                , Flex_Direction      ("row-reverse")
+                , children            =
+                    [ Rule_Child
+                        ( ".pg_body"
+                        , margin              = TRBL0 (r = P.pg_body_margin_lr)
+                        , children            =
+                            [ Rule
+                                ( ".short-nav"
+                                , left        = "initial"
+                                , right       = 0
+                                )
+                            ]
+                        )
+                    , Rule_Child
+                        ( ".main-nav"
+                        , margin              = TRBL0 (r = Rem (1))
+                        )
+                    ]
+                )
+            , Rule
+                ( ".pg_main.nav-side-bottom"
+                , Flex_Direction      ("column")
+                , children            =
+                    [ Rule_Child
+                        ( ".main-nav"
+                        , font_size           = Rem (1)
+                        , line_height         = P.line_height_normal
+                        , margin              = Rem (1)
+                        , width               = "auto"
+                        )
+                    ]
+                )
+            , Rule
+                ( ".no-js .nav-type-long:not(.nav-off-canvas)"
+                , children         =
+                    [ Rule
+                        ( ".pg_body .short-nav .main-nav-link"
+                        , display          = "none"
+                        )
+                    , Rule
+                        ( ".main-nav"
+                        , children         =
+                            [ Rule
+                                ( ".main-nav-hide"
+                                , display          = "none"
+                                )
+                            ]
+                        )
+                    ]
+                )
+            ]
+        )
+    , Media.Rule ### screen too narrow for two columns
+        ( ~ Media.Query ("screen", P.breakpoint.supports_two_column)
+        , rules               =
+            [ Rule
+                ( ".pg_main"
+                , Flex_Direction      ("column")
+                , children            =
+                    [ Rule_Child
+                        ( ".pg_body"
+                        , children            =
+                            [ Rule
+                                ( ".short-nav"
+                                , display             = "inline-block"
+                                , width               = Percent (100)
+                                , children            =
+                                    [ Rule
+                                        ( ".rel-nav"
+                                        , margin      =
+                                            TRBL0 (l = P.nav.rel.a_padding)
+                                        , width       = "auto"
+                                        )
+                                    ]
+                                )
+                            ]
+                        )
+                    , Rule_Child
+                        ( ".main-nav"
+                        , P.Rule.hidden_collapse
+                        , margin              = Rem (1)
+                        , width               = "auto"
+                        , children            =
+                            [ Rule_Prefixed
+                                ( ".no-js"
+                                , CS.Pseudo ("target")
+                                , P.Rule.visible_block
+                                )
+                            ]
+                        )
+                    , Rule_Class
+                        ( ".nav-on-canvas"
+                        , children            =
+                            [ Rule_Child
+                                ( ".main-nav"
+                                , P.Rule.visible_block
+                                )
+                            ]
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+
+Include     ("html/base_classes.media")
+Include     ("html/base_rest.media")
+Include     ("html/print.media")
+
+Script      (CHJ.Script._.V5a)
+Script      (CHJ.Script._.V5a_nav_off_canvas)
+JS_On_Ready (CHJ.JS_On_Ready._.V5a_nav_off_canvas)
+
+### __END__ html/base.jnj.media

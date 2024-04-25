@@ -1,0 +1,130 @@
+{%- extends site_base or "html/base.jnj" %}
+{#- jinja template: google_maps.jnj -#}
+{#
+## Copyright (C) 2010-2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com, A--1130 Wien, Austria. tanzer@swing.co.at
+## ****************************************************************************
+## This template is part of the package JNJ.
+##
+## This module is licensed under the terms of the BSD 3-Clause License
+## <https://www.gg32.com/license/bsd_3c.html>.
+## ****************************************************************************
+##
+##++
+## Name
+##    html/google_maps.jnj
+##
+## Purpose
+##    Template and macros for a page with embedded google map
+##
+## Revision Dates
+##    24-Feb-2010 (CT) Creation (ported from Django template)
+##     4-Dec-2012 (CT) Remove `http:` (--> protocol-relative)
+##     3-Dec-2015 (CT) Add `max-height`, `max-width`;
+##                     use style element, not style attribute
+##    ««revision-date»»···
+##--
+#}
+
+{#-
+## map types
+// G_NORMAL_MAP, G_SATELLITE_MAP, G_HYBRID_MAP, G_PHYSICAL_MAP
+## map control types
+// GLargeMapControl, GSmallMapControl
+## map-type control types
+// GMapTypeControl, GMenuMapTypeControl
+-#}
+
+{%- macro body (page) -%}
+  <div id="gmap"></div>
+{%- endmacro -%} {#- body -#}
+
+{%- macro head (page) -%}
+    <style type="text/css">
+      #gmap
+          { height     : {{ page.map.height|default("800") }}px
+          ; max-height : 80vh
+          ; max-width  : 90vw
+          ; width      : {{ page.map.width |default("800") }}px
+          }
+    </style>
+  <script src="//maps.google.com/maps?file=api&v=2&key={{ page.map.google_key }}&language={{ page.map.language|default("en") }}"
+          type="text/javascript"></script>
+  <script type="text/javascript">
+    //<![CDATA[
+      function load() {
+        if (GBrowserIsCompatible ()) {
+          var mapdiv = document.getElementById ("gmap");
+          var map  = new GMap2   (mapdiv);
+          var pnt  = new GLatLng ({{ page.map.latitude }}, {{ page.map.longitude }});
+          var mark = new GMarker (pnt, {title: "{{ page.map.title }}"});
+          var mrkx;
+          map.enableGoogleBar ();
+          map.enableScrollWheelZoom ();
+          map.addControl
+            (new {{ page.map.Map_Control|default("GLargeMapControl") }} ());
+          map.addControl
+            (new {{ page.map.Typ_Control|default("GMenuMapTypeControl") }} ());
+          map.addControl (new GOverviewMapControl ());
+          map.setCenter  (pnt, {{ page.map.scale|default(14) }});
+          map.addOverlay (mark);
+          {% if page.map.pan -%}
+            map.panDirection ({{ page.map.pan.dx }}, {{ page.map.pan.dy }});
+          {% endif -%}
+          {%- for marker in page.map.markers %}
+            mrkx = new GMarker
+              ( new GLatLng
+                  ({{ marker.latitude }}, {{ marker.longitude }})
+              , {title: "{{ marker.title }}"}
+              );
+            map.addOverlay (mrkx);
+            {%- if marker.blowup %}
+              mrkx.showMapBlowup
+                ( {{ marker.blowup.scale|default(16) }}
+                , {{ marker.blowup.type|default("G_HYBRID_MAP") }}
+                );
+            {% endif -%}
+          {% endfor -%}
+          {%- if page.map.blowup %}
+            {% if page.map.blowup.latitude and page.map.blowup.longitude %}
+              pnt = new GLatLng
+                ( {{ page.map.blowup.latitude }}
+                , {{ page.map.blowup.longitude }}
+                );
+              map.showMapBlowup
+                ( pnt
+                , { zoomLevel : {{ page.map.blowup.scale|default(16) }}
+                  , mapType   : {{ page.map.blowup.type|default("G_HYBRID_MAP") }}
+                  }
+                );
+            {%- else %}
+              mark.showMapBlowup
+                ( {{ page.map.blowup.scale|default(16) }}
+                , {{ page.map.blowup.type|default("G_HYBRID_MAP") }}
+                );
+            {%- endif %}
+          {%- endif %}
+        }
+      }
+    //]]>
+  </script>
+{%- endmacro -%} {#- head -#}
+
+{%- block head_elements -%}
+  {{ super () }}
+  {%- block gmap_head -%}
+    {{ head (page) }}
+  {%- endblock gmap_head -%}
+{%- endblock head_elements -%}
+
+{%- block body_attrs %} {{ super () }} onload="load()" onunload="GUnload()"
+{%- endblock -%}
+
+{%- block document -%}
+  {%- block gmap_body -%}
+    {{ body (page) }}
+  {%- endblock gmap_body -%}
+  {{ super () -}}
+{%- endblock document -%}
+
+{#- __END__ jinja template: google_maps.jnj -#}

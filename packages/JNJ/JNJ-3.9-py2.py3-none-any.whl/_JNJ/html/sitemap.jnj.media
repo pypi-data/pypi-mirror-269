@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# ****************************************************************************
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# ****************************************************************************
+#
+#++
+# Name
+#    html/sitemap.jnj.css
+#
+# Purpose
+#    CSS fragment for template sitemap.jnj
+#
+# Revision Dates
+#     2-Jan-2011 (CT) Creation
+#     7-Jan-2011 (CT) `level-<i>` removed
+#    ««revision-date»»···
+#--
+
+style_sheet = Style_Sheet \
+    ( Rule
+        ( ".sitemap"
+        , children =
+            [ Rule
+                ( "ul"
+                , list_style      = "none"
+                , margin          = 0
+                , padding         = 0
+                )
+            , Rule ("li a",                         display      = "block")
+            , Rule ("li li a",                      padding_left = Em ( 2.50))
+            , Rule ("li li li a",                   padding_left = Em ( 5.00))
+            , Rule ("li li li li a",                padding_left = Em ( 7.50))
+            , Rule ("li li li li li a",             padding_left = Em (10.00))
+            , Rule ("li li li li li li a",          padding_left = Em (12.50))
+            , Rule ("li li li li li li li a",       padding_left = Em (15.00))
+            , Rule ("li li li li li li li li a",    padding_left = Em (17.50))
+            , Rule ("li li li li li li li li li a", padding_left = Em (20.00))
+            ]
+        )
+    )
+
+### __END__ html/sitemap.jnj.css

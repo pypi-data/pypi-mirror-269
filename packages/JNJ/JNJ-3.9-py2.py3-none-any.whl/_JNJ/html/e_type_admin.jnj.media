@@ -1,0 +1,67 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2011-2015 Christian Tanzer All rights reserved
+# tanzer@gg32.com                                      https://www.gg32.com
+# #*** <License> ************************************************************#
+# This module is part of the package JNJ.
+#
+# This module is licensed under the terms of the BSD 3-Clause License
+# <https://www.gg32.com/license/bsd_3c.html>.
+# #*** </License> ***********************************************************#
+#
+#++
+# Name
+#    html/e_type_admin.jnj.media
+#
+# Purpose
+#    Media fragment for template html/e_type_admin.jnj
+#
+# Revision Dates
+#    31-May-2011 (CT) Creation
+#    24-Oct-2011 (CT) Removed duplicates
+#    24-Oct-2011 (CT) Rule for first and last `th a` children of `thead tr`
+#                     added
+#    24-Oct-2011 (CT) `tablesorter` JS_On_Ready factored into
+#                     `tablesorter.media`
+#     8-Nov-2011 (CT) Add `CHJ.Script._.GTW_jq_util`
+#    16-Nov-2011 (CT) Add rules for `.restrictions`
+#    17-Nov-2011 (CT) Add rules for `.restrictions` and `JS_On_Ready` for
+#                     `button`
+#    19-Nov-2011 (CT) Add `FIRST` and `LAST` to `JS_On_Ready` for `button`
+#    21-Nov-2011 (CT) Add rules for `.Object-List`
+#    21-Nov-2011 (CT) Remove `tablesorter`, un-DRY `JS_On_Ready` for `button`
+#    22-Nov-2011 (CT) s/.restrictions/.QR/
+#    22-Nov-2011 (CT) Add `Script` for `GTW_query_restriction`
+#    23-Nov-2011 (CT) Include `html/cmd_menu.media`
+#    24-Nov-2011 (CT) Add rule for `.disabler`
+#    25-Nov-2011 (CT) Move `postify_a` from `JS_On_Ready` to `e_type_admin.jnj`
+#    25-Nov-2011 (CT) Add rule for `tr.active` to `.Object-List`
+#    26-Nov-2011 (CT) Add `Script` and `JS_On_Ready` for `GTW_e_type_admin`
+#    26-Nov-2011 (CT) Replace `JS_On_Ready` for `button` by `GTW_buttonify`
+#    29-Nov-2011 (CT) Add rules for `.criteria` to `.QR`
+#    30-Nov-2011 (CT) Add more rules for `.criteria` to `.QR`
+#     2-Dec-2011 (CT) Add rules for `.no-js`
+#     6-Dec-2011 (CT) Add `Script` for `GTW_jsonify`
+#    15-Dec-2011 (CT) Add `Script` for `GTW_UI_Icon_Map` and
+#                     `GTW_e_type_selector `
+#     3-Jan-2012 (CT) Remove `Script` references covered by `requires`
+#    16-Jan-2012 (CT) Add rules for `.select-attr`
+#    21-Feb-2012 (CT) Add `Script` for `GTW_L`
+#    29-Feb-2012 (CT) Add rule for `cmd-button`, remove rule for `cmd b`
+#     8-Mar-2012 (CT) Factor rules for `.QR` to `html/e_type.m.jnj.media`
+#    19-Apr-2012 (CT) Add rule for `.ui-state-default` to placate Chrome
+#    13-Dec-2012 (CT) Add rule for `td+td` to `.Object-List`
+#     9-Apr-2013 (CT) Include "html/ui_dialog.media"
+#    29-Apr-2013 (CT) Factor "html/e_type_admin.media"
+#    22-Jan-2015 (CT) Factor `.no-js` rules to "html/e_type_admin.media"
+#    ««revision-date»»···
+#--
+
+Include ("html/e_type_admin.media")
+
+Script (CHJ.Script._.GTW_L)
+Script (CHJ.Script._.GTW_hd_input)
+Script (CHJ.Script._.GTW_e_type_admin)
+
+JS_On_Ready (CHJ.JS_On_Ready._.GTW_e_type_admin)
+
+### __END__ html/e_type_admin.jnj.media
