@@ -1,0 +1,10 @@
+dist
+__pycache__
+*.pyc
+cligenius_cli.egg-info
+.pytest_cache
+.coverage
+.coverage.*
+poetry.lock
+env
+.venv
