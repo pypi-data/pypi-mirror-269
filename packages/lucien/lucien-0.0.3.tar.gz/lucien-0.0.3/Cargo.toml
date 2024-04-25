@@ -1,0 +1,26 @@
+[package]
+name = "lucien"
+version = "0.0.3"
+edition = "2021"
+description = "A loggin agent to work with LLM in Lucid Mode"
+license = "Apache-2.0"
+
+authors = ["IteraLabs"]
+keywords = ["ai", "llm", "nvidia", "gpu", "monitoring"]
+repository = "https://github.com/iteralabs/lucien"
+readme = "README.md"
+
+[dependencies]
+pyo3 = "0.21.0"
+nvml-wrapper = "0.10.0"
+nvml-wrapper-sys = "0.8.0"
+pretty-bytes = "0.2"
+
+[profile.release-lto]
+inherits = "release"
+lto = true
+
+[lib]
+name = "_lib"
+crate-type = ["cdylib"]
+path = "rust/lib.rs"
