@@ -1,0 +1,10 @@
+README.md
+setup.py
+PokeCorky/__init__.py
+PokeCorky/pokemon.csv
+PokeCorky/random_pokemon.py
+PokeCorky.egg-info/PKG-INFO
+PokeCorky.egg-info/SOURCES.txt
+PokeCorky.egg-info/dependency_links.txt
+PokeCorky.egg-info/requires.txt
+PokeCorky.egg-info/top_level.txt
