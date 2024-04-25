@@ -1,0 +1,379 @@
+"""
+This file contains all the methods / functions that are specific to SiO2 oxide.
+"""
+# external imports
+import  numpy as np
+from    tqdm import tqdm
+from    numba import njit
+
+# internal imports
+from ..core.atom            import Atom
+from ..core.box             import Box
+from ..utils.generate_color_gradient import generate_color_gradient
+
+
+# List of supported elements for the extension SiO2
+LIST_OF_SUPPORTED_ELEMENTS = ["Si", "O"]
+
+class Silicon(Atom):
+    def __init__(self, element, id, position, frame, cutoffs, extension) -> None:
+        super().__init__(element, id, position, frame, cutoffs, extension)
+        self.number_of_corners : int = 0
+        self.number_of_edges : int = 0 
+        self.number_of_faces : int = 0
+        self.qi_species : int = 0
+    
+    def get_number_of_corners(self) -> int:
+        """
+        Return the number of corner sharings
+        """
+        return self.number_of_corners
+    
+    def get_number_of_edges(self) -> int:
+        """
+        Return the number of edge sharings
+        """
+        return self.number_of_edges
+
+    def get_number_of_faces(self) -> int:
+        """
+        Return the number of face sharings
+        """
+        return self.number_of_faces
+    
+    def get_qi_species(self) -> int:
+        """
+        Return the Qi species
+        """
+        return self.qi_species
+    
+    def calculate_coordination(self) -> int:
+        """
+        Calculate the coordination number of the atom (ie the number of first neighbours) for the extension SiO2
+        """
+        self.coordination = len([neighbour for neighbour in self.neighbours if neighbour.get_element() == "O"])
+        
+    def calculate_angles_with_neighbours(self, box: Box) -> dict:
+        r"""
+        Calculate and sort the angles between the atom and its neighbours.
+        
+        Parameters:
+        ----------
+            - box (Box) : Box object.
+        
+        Returns:
+        --------
+            - dict : List of angles between the atom and its neighbours.
+        """
+        angles = {}
+        angles_OSiO = []
+        angles_SiSiSi = []
+        
+        for neighbour_1 in self.neighbours:
+            for neighbour_2 in self.neighbours:
+                if neighbour_1 != neighbour_2:
+                    if neighbour_1.get_element() == "O" and neighbour_2.get_element() == "O":
+                        angle = self.calculate_angle(neighbour_1, neighbour_2, box)
+                        angles_OSiO.append(angle)
+                    if neighbour_1.get_element() == "Si" and neighbour_2.get_element() == "Si":
+                        angle = self.calculate_angle(neighbour_1, neighbour_2, box)
+                        angles_SiSiSi.append(angle)
+        
+        angles["OSiO"] = angles_OSiO
+        angles["SiSiSi"] = angles_SiSiSi
+        
+        return angles
+    
+    def calculate_distances_with_neighbours(self) -> dict:
+        r"""
+        Calculate and sort the distances between the atom and its neighbours.
+            
+        Returns:
+        --------
+            - dict : List of distances between the atom and its neighbours.
+        """
+        distances = {}
+        distances_SiO = []
+        distances_SiSi = []
+        
+        for counter, neighbour in enumerate(self.long_range_neighbours):
+            if neighbour.get_element() == "O":
+                distance = self.long_range_distances[counter]
+                distances_SiO.append(distance)
+            if neighbour.get_element() == "Si":
+                distance = self.long_range_distances[counter]
+                distances_SiSi.append(distance)
+                
+        distances["SiO"] = distances_SiO
+        distances["SiSi"] = distances_SiSi
+        
+        return distances
+
+class Oxygen(Atom):
+    def __init__(self, element, id, position, frame, cutoffs, extension) -> None:
+        super().__init__(element, id, position, frame, cutoffs, extension)
+    
+    def calculate_coordination(self) -> int:
+        """
+        Calculate the coordination number of the atom (ie the number of first neighbours) for the extension SiO2
+        """
+        self.coordination = len([neighbour for neighbour in self.neighbours if neighbour.get_element() == "Si"])
+        
+    def calculate_angles_with_neighbours(self, box: Box) -> dict:
+        r"""
+        Calculate the angles between the atom and its neighbours.
+        
+        Parameters:
+        ----------
+            - box (Box) : Box object.
+        
+        Returns:
+        --------
+            - dict : List of angles between the atom and its neighbours.
+        """
+        angles = {}
+        angles_SiOSi = []
+        angles_OOO = []
+        
+        for neighbour_1 in self.neighbours:
+            for neighbour_2 in self.neighbours:
+                if neighbour_1 != neighbour_2:
+                    if neighbour_1.get_element() == "O" and neighbour_2.get_element() == "O":
+                        angle = self.calculate_angle(neighbour_1, neighbour_2, box)
+                        angles_OOO.append(angle)
+                    if neighbour_1.get_element() == "Si" and neighbour_2.get_element() == "Si":
+                        angle = self.calculate_angle(neighbour_1, neighbour_2, box)
+                        angles_SiOSi.append(angle)
+        
+        angles["OOO"] = angles_OOO
+        angles["SiOSi"] = angles_SiOSi
+        
+        return angles
+
+    def calculate_distances_with_neighbours(self) -> dict:
+        r"""
+        Calculate and sort the distances between the atom and its neighbours.
+            
+        Returns:
+        --------
+            - dict : List of distances between the atom and its neighbours.
+        """
+        distances = {}
+        # distances_OSi = [] # NOTE: not used because it's already calculate in the Silicon class: distances_SiO.
+        distances_OO = []
+        
+        for counter, neighbour in enumerate(self.long_range_neighbours):
+            if neighbour.get_element() == "Si":
+                continue
+            if neighbour.get_element() == "O":
+                distance = self.long_range_distances[counter]
+                distances_OO.append(distance)
+                
+        distances["OO"] = distances_OO
+        
+        return distances
+                
+def transform_into_subclass(atom:Atom) -> object:
+    """
+    Return a Silicon object or Oxygen object from the subclass Silicon or Oxygen whether the atom.element is 'Si' or 'O'.  
+    """
+    if atom.get_element() == 'O':
+        return Oxygen(atom.element, atom.id, atom.position, atom.frame, atom.cutoffs, atom.extension)
+    elif atom.get_element() == 'Si':
+        return Silicon(atom.element, atom.id, atom.position, atom.frame, atom.cutoffs, atom.extension)
+    else:
+        raise ValueError(f"\tERROR: Atom {atom.element} - {atom.id} can be transformed into Silicon or Oxygen object.")
+
+def get_default_settings() -> dict:
+    """
+    Method that load the default parameters for extension SiO2.
+    """
+    # internal imports
+    from ..settings.parameter import Parameter
+    
+    # Structure of the system
+    list_of_elements = [
+                {"element": "Si", "number": 0},
+                {"element": "O" , "number": 0}
+            ]
+    
+    # Pair cutoffs for the clusters
+    list_of_cutoffs = [
+        { "element1": "O" , "element2": "O" , "value": 3.05},
+        { "element1": "Si", "element2": "O" , "value": 2.30},
+        { "element1": "Si", "element2": "Si", "value": 3.50}
+    ]
+    
+    # Settings
+    dict_settings = {
+        "extension": Parameter("extension", "SiO2"),
+        "structure": Parameter("structure", list_of_elements),
+        "cutoffs": Parameter("cutoffs", list_of_cutoffs),
+    }
+    
+    return dict_settings
+
+def return_keys(property: str) -> list:
+    """
+    Return the keys needed for the results dictionary.
+    """
+    if property == "pair_distribution_function":
+        return ["SiO", "SiSi", "OO"]
+    elif property == "bond_angular_distribution":
+        return ["SiOSi", "SiSiSi", "OSiO", "OOO"]
+    elif property == "mean_square_displacement":
+        return ["Si", "O", "total"]
+    elif property == "structural_units":
+        return [{"SiOz" : ["SiO4", "SiO5", "SiO6", "SiO7" ]},
+                {"OSiz" : ["OSi1", "OSi2", "OSi3", "OSi4" ]},
+                {"connectivity_SiO4" : ["CS_SiO4", "ES_SiO4", "FS_SiO4" ]},
+                {"connectivity_SiO5" : ["CS_SiO5", "ES_SiO5", "FS_SiO5" ]},
+                {"connectivity_SiO6" : ["CS_SiO6", "ES_SiO6", "FS_SiO6" ]},
+                {"connectivity" : ["proportion_corners", "proportion_edges", "proportion_faces"]}
+            ]
+    # TODO: add the other properties
+
+def calculate_structural_units(atoms) -> None:
+    """
+    Calculate the number of SiO_z and OSi_k units for each atom in the system.
+    """
+    
+    # Initialize the lists 
+    SiO4 = []
+    SiO5 = []
+    SiO6 = []
+    SiO7 = []
+    OSi1 = []
+    OSi2 = []
+    OSi3 = []
+    OSi4 = []
+    CS_SiO4, ES_SiO4, FS_SiO4 = [], [], []
+    CS_SiO5, ES_SiO5, FS_SiO5 = [], [], []
+    CS_SiO6, ES_SiO6, FS_SiO6 = [], [], []
+    proportion_corners, proportion_edges, proportion_faces = [], [], []
+    
+    
+    silicons = [atom for atom in atoms if atom.get_element() == "Si"]
+    oxygens  = [atom for atom in atoms if atom.get_element() == "O" ]
+    
+    # Calculate the proportion of each SiOz units
+    coordination_SiOz = []
+    for atom in silicons:
+        counter = len([neighbour for neighbour in atom.get_neighbours() if neighbour.get_element() == "O"])
+        coordination_SiOz.append(counter)
+        if counter == 4:
+            SiO4.append(atom)
+        if counter == 5:
+            SiO5.append(atom)
+        if counter == 6:
+            SiO6.append(atom)
+        if counter == 7:
+            SiO7.append(atom)
+    
+    _debug_histogram_proportion_SiOz = np.histogram(coordination_SiOz, bins=[4,5,6,7,8], density=True) 
+    
+    # Calculate the proportion of each OSiz units
+    coordination_OSiz = []
+    for atom in oxygens:
+        counter = len([neighbour for neighbour in atom.get_neighbours() if neighbour.get_element() == "Si"])
+        coordination_OSiz.append(counter)
+        if counter == 1:
+            OSi1.append(atom)
+        if counter == 2:
+            OSi2.append(atom)
+        if counter == 3:
+            OSi3.append(atom)
+        if counter == 4:
+            OSi4.append(atom)
+            
+    _debug_histogram_proportion_OSik = np.histogram(coordination_OSiz, bins=[1,2,3,4,5], density=True) 
+    
+    # Calculate the Qi species (ie number of bridging oxygens for SiO4 units)
+    for silicon in SiO4:
+        bridging_oxygens = [neighbour for neighbour in silicon.get_neighbours() if neighbour.get_element() == "O"]
+        counter = 0
+        for oxygen in bridging_oxygens:
+            if oxygen in OSi2 or oxygen in OSi3 or oxygen in OSi4:
+                counter += 1
+        silicon.qi_species = counter
+    
+    # Calculate the number of edge-sharing (2 oxygens shared by 2 silicons)
+    for silicon in silicons:
+        unique_bond = []
+        for oxygen in [atom for atom in silicon.get_neighbours() if atom.get_element() == 'O']:
+            for second_silicon in [atom for atom in oxygen.get_neighbours() if atom.get_element() == 'Si']:
+                if second_silicon.id != silicon.id:
+                    unique_bond.append(second_silicon.id)
+        unique_bond = np.array(unique_bond)
+        
+        uniques, counts = np.unique(unique_bond, return_counts=True)
+        
+        for connectivity in counts:
+            if connectivity == 1: # 1 oxygen is shared by 'silicon' and 'second_silicon'
+                silicon.number_of_corners += 1
+            if connectivity == 2: # 2 oxygens are shared by 'silicon' and 'second_silicon'
+                silicon.number_of_edges += 1
+            if connectivity == 3: # 3 oxygens are shared by 'silicon' and 'second_silicon'
+                silicon.number_of_faces += 1
+
+        if silicon.coordination == 4:
+            CS_SiO4.append(silicon.number_of_corners)
+            ES_SiO4.append(silicon.number_of_edges)
+            FS_SiO4.append(silicon.number_of_faces)
+        if silicon.coordination == 5:
+            CS_SiO5.append(silicon.number_of_corners)
+            ES_SiO5.append(silicon.number_of_edges)
+            FS_SiO5.append(silicon.number_of_faces)
+        if silicon.coordination == 6:
+            CS_SiO6.append(silicon.number_of_corners)
+            ES_SiO6.append(silicon.number_of_edges)
+            FS_SiO6.append(silicon.number_of_faces)
+        
+        proportion_corners.append(silicon.number_of_corners)
+        proportion_edges.append(silicon.number_of_edges)
+        proportion_faces.append(silicon.number_of_faces)
+    
+    # Perform the average
+    proportion_corners = np.sum(proportion_corners) / len(silicons)
+    proportion_edges = np.sum(proportion_edges) / len(silicons)
+    proportion_faces = np.sum(proportion_faces) / len(silicons)
+    nSiO4 = len(SiO4)
+    nSiO5 = len(SiO5)
+    nSiO6 = len(SiO6)
+    nSiO7 = len(SiO7)
+    if nSiO4 == 0: nSiO4 = 1
+    if nSiO5 == 0: nSiO5 = 1
+    if nSiO6 == 0: nSiO6 = 1
+    if nSiO7 == 0: nSiO7 = 1
+    SiO4 = len(SiO4) / len(silicons)
+    SiO5 = len(SiO5) / len(silicons)
+    SiO6 = len(SiO6) / len(silicons)
+    SiO7 = len(SiO7) / len(silicons)
+    OSi1 = len(OSi1) / len(oxygens)
+    OSi2 = len(OSi2) / len(oxygens)
+    OSi3 = len(OSi3) / len(oxygens)
+    OSi4 = len(OSi4) / len(oxygens)
+    CS_SiO4 = np.sum(CS_SiO4)/nSiO4
+    ES_SiO4 = np.sum(ES_SiO4)/nSiO4
+    FS_SiO4 = np.sum(FS_SiO4)/nSiO4
+    CS_SiO5 = np.sum(CS_SiO5)/nSiO5
+    ES_SiO5 = np.sum(ES_SiO5)/nSiO5
+    FS_SiO5 = np.sum(FS_SiO5)/nSiO5
+    CS_SiO6 = np.sum(CS_SiO6)/nSiO6
+    ES_SiO6 = np.sum(ES_SiO6)/nSiO6
+    FS_SiO6 = np.sum(FS_SiO6)/nSiO6
+    
+    results = {
+        "SiOz" : [SiO4, SiO5, SiO6, SiO7],
+        "OSiz" : [OSi1, OSi2, OSi3, OSi4],
+        "connectivity_SiO4" : [CS_SiO4, ES_SiO4, FS_SiO4],
+        "connectivity_SiO5" : [CS_SiO5, ES_SiO5, FS_SiO5],
+        "connectivity_SiO6" : [CS_SiO6, ES_SiO6, FS_SiO6],
+        "connectivity" : [proportion_corners, proportion_edges, proportion_faces]
+    }
+    
+    _debug_check_SiOz = np.sum(results["SiOz"])
+    _debug_check_OSiz = np.sum(results["OSiz"])
+    
+    return results
+    
