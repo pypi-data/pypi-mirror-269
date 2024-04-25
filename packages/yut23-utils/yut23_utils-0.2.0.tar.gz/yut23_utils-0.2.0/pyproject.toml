@@ -1,0 +1,118 @@
+[build-system]
+requires = ["hatchling", "hatch-regex-commit"]
+build-backend = "hatchling.build"
+
+[project]
+name = "yut23-utils"
+dynamic = ["version"]
+description = 'Common code I find myself reaching for from multiple different repositories.'
+readme = "README.md"
+requires-python = ">=3.9"
+license = "BSD-3-Clause"
+keywords = []
+authors = [
+  { name = "yut23", email = "yut23@gvljohnsons.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/yut23/yut23-utils#readme"
+Issues = "https://github.com/yut23/yut23-utils/issues"
+Source = "https://github.com/yut23/yut23-utils"
+
+[tool.hatch.version]
+source = "regex_commit"
+path = "src/yut23_utils/__about__.py"
+tag_sign = false
+
+[tool.hatch.envs.default]
+dependencies = [
+  "coverage[toml]>=7.2",
+  "pytest",
+  "hypothesis",
+]
+[tool.hatch.envs.default.scripts]
+# nested scripts don't consume {args}: https://github.com/pypa/hatch/issues/987
+# basically, the first word is recursively replaced by its script if present,
+# then formats are expanded
+test = "pytest {args}"
+test-ci = "pytest --hypothesis-profile=ci {args}"
+test-cov = "coverage run -m pytest {args}"
+test-cov-ci = "coverage run -m pytest --hypothesis-profile=ci {args}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+cov-ci = [
+  "test-cov-ci",
+  "cov-report",
+  "- coverage xml",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+  "hypothesis",
+  "pytest",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/yut23_utils tests}"
+
+[tool.isort]
+known_first_party = ["yut23_utils"]
+
+[tool.black]
+target-version = ["py39"]
+line-length = 88
+skip-string-normalization = false
+
+[tool.ruff]
+target-version = "py39"
+line-length = 88
+extend = "ruff_defaults.toml"
+
+[tool.hatch.envs.hatch-static-analysis]
+config-path = "ruff_defaults.toml"
+dependencies = ["ruff==0.4.1"]
+
+[tool.ruff.lint.extend-per-file-ignores]
+# we expect unused imports in __init__.py, as it shouldn't have anything else
+"__init__.py" = ["F401"]
+
+[tool.coverage.run]
+source_pkgs = ["yut23_utils", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/yut23_utils/__about__.py",
+]
+
+[tool.coverage.paths]
+yut23_utils = ["src/yut23_utils", "*/yut23-utils/src/yut23_utils"]
+tests = ["tests", "*/yut23-utils/tests"]
+
+[tool.coverage.report]
+exclude_also = [
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+  "def __repr__",
+  "raise AssertionError",
+  "raise NotImplementedError",
+]
