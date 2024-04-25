@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: arithmeticTestPackage-owais-md
+Version: 0.0.1
+Summary: Simple arithmetic package
+Author-email: Owais <mohammad.owais@iiitb.ac.in>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+## Simple python package
+This python package implements simple arithmetic functions, i.e., addition, subtraction and multiplication.
+
+
+# Arithmetic Package Owais
+Arithmetic Package Owais is a simple Python package that provides basic arithmetic functions such as addition, subtraction, and multiplication.
+
+## Installation
+The package name is "arithmeticPackageOwais" and its URL is https://pypi.org/project/arithmeticPackageOwais/.
+To install the Arithmetic Package Owais, use pip:
+
+```bash
+pip install arithmeticPackageOwais
+```
+
+## Usage
+
+To import the package, use the following command:
+```bash
+import arithmeticPackageOwais
+```
+
+To use the functions, use the following command:
+```bash 
+from arithmeticPackageOwais import add, subtract, multiply
+```
