@@ -1,0 +1,13 @@
+soda/contracts/connection.py,sha256=zOhWQXh57NWj385FbIv8zbmxtWGOmY-bWWYK1SWTjj8,8771
+soda/contracts/contract.py,sha256=FqLaoIUqw_NOAvjVCR3NjirMG80AJ-VAd4MF_c5catc,34107
+soda/contracts/soda_cloud.py,sha256=KnSnH65dZ64K76k725OPrDyHlfvALPya6WtoWG43c8Y,6364
+soda/contracts/soda_data_contract_json_schema_1_0_0.json,sha256=SxFP4qlahvBPSKxDhJkPs476GUpAEM0WNKxuGTl0Vv0,12339
+soda/contracts/impl/contract_parser.py,sha256=nW9BkhSmmiz6d-r2NwnmbVtwGX_tcoQBXBWysN6iI0U,32025
+soda/contracts/impl/json_schema_verifier.py,sha256=rexezZbT4PCJqkq3Ush_IDzMp23E3w6DW8QSHJ-3gno,1485
+soda/contracts/impl/logs.py,sha256=idqT2SYRe-IBnwwuUwXUsCVZnViB5oW16ADjxWvZSiM,3328
+soda/contracts/impl/variable_resolver.py,sha256=Wz8bM97qh-OF82RD4LuvvJZdTXy5uloDtzc7Vc1emYw,1034
+soda/contracts/impl/yaml.py,sha256=RwGRjQdDmqaYBid5HZF8bpieSSzQ48I8hdyTAy57_d8,13414
+soda_core_contracts-3.3.2.dist-info/METADATA,sha256=EXE3QvL8GL9Prpnz1BRncBZjyHtBGA4pHVSzrMdQINI,132
+soda_core_contracts-3.3.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+soda_core_contracts-3.3.2.dist-info/top_level.txt,sha256=nh9kmM9ZWOtIXfwHLUKLl7m6xAFti83JVa2Rcxm6Zck,5
+soda_core_contracts-3.3.2.dist-info/RECORD,,
