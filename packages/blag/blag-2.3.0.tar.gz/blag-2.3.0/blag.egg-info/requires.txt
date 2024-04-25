@@ -1,0 +1,17 @@
+markdown
+feedgenerator
+jinja2
+pygments
+
+[dev]
+build
+mkdocs
+mkdocs-material
+mkdocstrings[python]
+twine
+wheel
+pytest
+pytest-cov
+ruff
+mypy
+types-markdown
