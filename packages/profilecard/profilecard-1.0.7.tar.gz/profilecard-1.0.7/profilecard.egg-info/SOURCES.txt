@@ -1,0 +1,17 @@
+LICENSE.md
+README.md
+setup.py
+profilecard/__init__.py
+profilecard.egg-info/PKG-INFO
+profilecard.egg-info/SOURCES.txt
+profilecard.egg-info/dependency_links.txt
+profilecard.egg-info/requires.txt
+profilecard.egg-info/top_level.txt
+profilecard/simple/__init__.py
+profilecard/simple/config.ini
+profilecard/simple/pack.py
+profilecard/simple/valmanager.py
+profilecard/styles/__init__.py
+profilecard/styles/style1.py
+profilecard/styles/style2.py
+profilecard/styles/style3.py
