@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: mpu6050
+Version: 0.0.2
+Summary: A Python Library for Efficient MPU6050 DMP Access.
+Home-page: https://github.com/OmidAlek/mpu6050
+Author: Majid Alekasir
+Author-email: <majid.alekasir@gmail.com>
+Keywords: python,quaternion,vector,XYZVector,IMU,DMP,INS,Accelometer,Gyrometer,MPU6050,Fusion,EKF,Kalman Filter
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: quat
+Requires-Dist: smbus
+
+
+# MPU6050 DMP Library
+
+## Abstract
+
+This library is primarily derived from the contributions of Geir Istad and has been released as a pip-installable package. This library aims to simplify the use of digital motion processor (DMP) inside inertial motion unit (IMU), along with other motion data. The main focus of this package is on providing orientaion of the device in space as quaternion, which is convertable to euler angles. The resulting data are processed and denoised using extended Kalman filter (EKF), inside the DMP module.
+
+
+
+To install this package, execute the following command:
+
+
+
+`pip install mpu6050`
+
+
+
+My main contributions to this library are towards enhancing the DMP results, detailed examples, usage description and making the library PyPI-installable. Apart from the great work done by Geir Istad, there were some issues encounterd in practice.
+
+
+
+The enhancements are listed below:
+
+- Quaternion to euler angles conversion (roll, pitch, yaw) enhanced using scipy library
+
+- Linear (world-frame) acceleration rewritten using new formulas, based on quaternion
+
+- Better access to DMP frequency
+
+- Comprehensible, Practical examples with detailed explanation
+
+- Available on PyPI (pip installable)
+
+
+
+**This library is tested on Nvidia Jetson with I2C communication.**
+
+
+
+## Introduction
+
+The MPU6050 is a versatile accelerometer gyroscope chip with six axes of sensing capability and a 16-bit measurement resolution. This chip is widely popular due to its high accuracy and cost-effectiveness, making it a preferred choice among DIY enthusiasts and even in commercial products. The combination of gyroscope and accelerometers in the MPU6050 forms what is known as an Inertial Measurement Unit (IMU), which finds applications in various fields like mobile phones, tablets, robotics, and more.
+
+The Digital Motion Processor (DMP) is a powerful feature of certain motion sensing chips, such as the MPU6050, which is a versatile accelerometer and gyroscope chip with six axes of sensing capability and a 16-bit measurement resolution. The DMP is an onboard processor that handles complex sensor processing and fusion, offloading these tasks from the microcontroller. This allows for faster and more accurate sensor readings, which is particularly important in applications where real-time motion tracking is crucial.
+
+
+
+## Main Contributions
+
+Here we go through the main changes in this library and the enhancements done for the ease of use.
+
+### Euler angles
+
+One of the practical outputs coming from DMP is the quaternion, which represents the exact orientation of the IMU in space. In many uses, there is a need for Euler angles, which consists of roll, pitch and yaw.
+
+
+
+The problem with the old library was that the conversion from quaternion to Euler angles was mostly incorrect. Thus, the new conversion method uses scipy to do the conversion. The results were satisfactory, after experiments done on Nvidia Jetson.
+
+
+
+### World-frame acceleration
+
+The acceleration data acquired from an IMU is typically represented in a "body-frame," aligning with the IMU's axes.
+
+However, in the realm of Inertial Navigation Systems (INS), having access to a world-frame acceleration vector is essential for accurate navigation. The illustration below illustrates the orientation of the world-frame and body-frame axes:
+
+
+
+<p align="center"><img src="https://ars.els-cdn.com/content/image/3-s2.0-B9780128131893000162-f16-01-9780128131893.jpg"></p>
+
+
+
+The rotation of a vector using a quaternion is achieved through the following formula:
+
+
+
+$$A_p=q\times A\times q^*$$
+
+
+
+where $q^*$ represents the conjugate of the quaternion q, and $A_p$ denotes the rotated original vector $A$.
+
+
+
+The old library had mathematical issues with calculating the world-frame acceleration and the results were impractical. The following method 
