@@ -1,0 +1,15 @@
+frequenz/client/conftest.py,sha256=kxmvkzTdvGfh7SiDINIFX0FG9PU0EoKROl9YY75zN8w,409
+frequenz/client/dispatch/__init__.py,sha256=I_g8ZkiRhq31HClL8Uw1d-5nA3it6y0SIB_6en3kDEo,159
+frequenz/client/dispatch/_client.py,sha256=yKoqEtaWp7-P2b_d_X12bRLwKROXrmoACadGT0HEpSs,10364
+frequenz/client/dispatch/_internal_types.py,sha256=qPn8eAC6M-WdRYP3oNW-Mf92_Wmi25sy7p7E2RZUAI0,4158
+frequenz/client/dispatch/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frequenz/client/dispatch/types.py,sha256=qcqUGt90HWQNlYqGZc7OG6nCNq53YhWgOgvLChHXeCY,11194
+frequenz/client/dispatch/test/__init__.py,sha256=mAmamB9g6h_G4Q7CIQh4RBgTA_HyEpVtrvj5rYITGQE,132
+frequenz/client/dispatch/test/_service.py,sha256=c2S-kFp2_E9z4n7AGX6jVOofdAcEQU1fIp9RPUaeeV0,8475
+frequenz/client/dispatch/test/client.py,sha256=CmkefB2R7TTfXGZdNJEXyrnTcO8Tm6wyWsjUk-eARjk,2037
+frequenz/client/dispatch/test/generator.py,sha256=iKmf-XMTK4PSWFGL6vmddHw3u9AbqiHYu6lKz-S9iME,4089
+frequenz_client_dispatch-0.2.0.dist-info/LICENSE,sha256=zt0sW1KvE_KWE2ILOabrQYlfOoP0zUZXC3xCLrzGpIA,1089
+frequenz_client_dispatch-0.2.0.dist-info/METADATA,sha256=edJ1km5HfzYKCWH78A07CKgxB2PJyA3hU7lyfibSkYM,4775
+frequenz_client_dispatch-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+frequenz_client_dispatch-0.2.0.dist-info/top_level.txt,sha256=x08GRcWytsyKXa2Ayme9e5pg3L5Kcq6lw_BaQmToMO4,9
+frequenz_client_dispatch-0.2.0.dist-info/RECORD,,
