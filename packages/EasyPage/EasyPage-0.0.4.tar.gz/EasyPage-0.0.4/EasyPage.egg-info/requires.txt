@@ -1,0 +1,8 @@
+lxml
+parsel
+requests
+loguru
+beautifulsoup4
+websockets
+pyee
+websocket-client
