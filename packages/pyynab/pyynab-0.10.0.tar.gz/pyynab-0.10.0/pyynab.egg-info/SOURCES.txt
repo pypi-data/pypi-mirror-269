@@ -1,0 +1,13 @@
+.gitignore
+Makefile
+README.md
+openapi.yaml
+patch_openapi.py
+poetry.lock
+pyproject.toml
+.github/workflows/python-package.yml
+pyynab.egg-info/PKG-INFO
+pyynab.egg-info/SOURCES.txt
+pyynab.egg-info/dependency_links.txt
+pyynab.egg-info/requires.txt
+pyynab.egg-info/top_level.txt

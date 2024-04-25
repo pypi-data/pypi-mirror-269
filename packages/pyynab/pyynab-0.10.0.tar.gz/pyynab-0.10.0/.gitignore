@@ -1,0 +1,7 @@
+.idea/
+api/
+Pipfile.lock
+dist/
+*.egg-info
+.coverage
+patched_openapi.yaml

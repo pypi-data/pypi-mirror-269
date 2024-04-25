@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "pyynab"
+version = "0.10.0"
+description = ""
+authors = ["Matthieu Berthomé <cheery.iron6016@fastmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+certifi = ">=14.05.14"
+six = ">=1.10"
+python-dateutil = ">=2.5.3"
+urllib3 = "*"
+frozendict = "^2.4.2"
+types-frozendict = "^2.0.9"
+
+[tool.poetry.group.dev.dependencies]
+pyyaml = "*"
+twine = "*"
+coveralls = "*"
+setuptools_scm = "*"
+pytest = "*"
+wheel = "^0.43.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
