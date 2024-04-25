@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "clinlp"
+version = "0.6.6"
+description = "Performant and production-ready NLP pipelines for clinical text written in Dutch"
+authors = ["UMCU DIT Analytics <analytics@umcutrecht.nl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+spacy = "^3.5.3"
+intervaltree = "^3.1.0"
+transformers = {extras = ["torch"], version = "^4.30.2"}
+makefun = "^1.15.1"
+pandas = "^2.2.0"
+pydantic = "^2.6.1"
+numpy = "^1.26.4"
+
+[tool.poetry.extras]
+transformers = ["transformers"]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+pytest-cov = "^5.0.0"
+ruff = "^0.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=clinlp --cov-fail-under=85"
+
+[tool.ruff]
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "B",  # flake8-bugbear
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "C90",  # mccabe complexity
+    "I",  # isort
+]
