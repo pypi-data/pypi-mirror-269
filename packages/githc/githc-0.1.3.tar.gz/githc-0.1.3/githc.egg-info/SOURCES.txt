@@ -1,0 +1,11 @@
+LICENSE.md
+MANIFEST.in
+README.md
+gh.py
+setup.cfg
+setup.py
+githc.egg-info/PKG-INFO
+githc.egg-info/SOURCES.txt
+githc.egg-info/dependency_links.txt
+githc.egg-info/entry_points.txt
+githc.egg-info/top_level.txt

@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: githc
+Version: 0.1.3
+Summary: Git history checkout tool
+Home-page: https://github.com/cpagravel/gh
+Download-URL: https://github.com/cpagravel/gh/archive/0.1.3.tar.gz
+Author: Chris Gravel
+Author-email: cpagravel@gmail.com
+License: MIT
+Keywords: git,git history,git checkout,git workflow
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE.md
