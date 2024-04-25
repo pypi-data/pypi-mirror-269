@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: atscale
+Version: 2.7.0
+Summary: The AI-Link package created by AtScale
+Home-page: https://www.atscale.com/
+Author: The AI-Link Development Team at AtScale
+Author-email: ailink@atscale.com
+License: UNKNOWN
+Project-URL: HomePage, https://www.atscale.com/
+Project-URL: Documentation, https://documentation.ai-link.atscale.com/user-guide/
+Project-URL: Release Notes, https://documentation.ai-link.atscale.com/user-guide/release-notes/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
+Provides-Extra: gbq
+Provides-Extra: databricks
+Provides-Extra: iris
+Provides-Extra: redshift
+Provides-Extra: snowflake
+Provides-Extra: synapse
+Provides-Extra: mssql
+Provides-Extra: jdbc
+Provides-Extra: spark
+Provides-Extra: postgres
+License-File: LICENSE.md
+
+![Atscale Logo](https://www.atscale.com/wp-content/uploads/2021/12/AtScale_Logo_RGB_2C.svg)
+
+## Welcome to AI-Link, the programmatic interface to the AtScale Semantic Layer 
+
+To install the package, use the following command:
+```
+pip install atscale
+```
+
+Please find our full documentation here: [AI-Link Documentation](https://documentation.ai-link.atscale.com/user-guide/)
+
+If you have any questions or concerns with the codebase, please email: **ailink@atscale.com**
+
+
