@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: village-data-analysis
+Version: 1.1
+Summary: Generates report in xlsx and csv format about the inputed geometric shape file within the provided time range.
+Author: Istvan Gallo
+Author-email: istvan.gallo@lexunit.hu
+Requires-Dist: geopandas
+Requires-Dist: shapely
+Requires-Dist: pyproj
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tqdm
+Requires-Dist: openpyxl
+
