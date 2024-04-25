@@ -1,0 +1,10 @@
+linkture-2.6.0.dist-info/METADATA,sha256=DpJS7s4hvIkgsgQTM72-WH70NlDF5TteOUAKyyqrs5o,11068
+linkture-2.6.0.dist-info/WHEEL,sha256=7sv5iXvIiTVJSnAxCz2tGBm9DHsb2vPSzeYeT7pvGUY,90
+linkture-2.6.0.dist-info/licenses/LICENSE,sha256=kPqKoVmo3Tx1HgQvqfjBZuYkjT1mZXnQ5R0KBbEeFfs,1064
+linkture/__init__.py,sha256=-CsRDvXLUig8T6RvwkktRP8e8DWrpjlyqBcw26kOv1E,47
+linkture/__main__.py,sha256=4Z6KGvQL4kX42H5P7yDz3xiLf2TS89P-d5IYsxqOlSI,6427
+linkture/linkture.py,sha256=hLFvzqj7dLU-xuFW_rAP1Emc034DKo2VcF72tYvO1rc,23670
+linkture/res/custom.json,sha256=PnCI0N5uBn1ZzEG05V3r8uwrW2uBogCQ_uCQKTHJe4E,1904
+linkture/res/resources.db,sha256=ceXVt21jdJwJCCWsfMPy6aRcHo9yHzyTQk_i22aJZD8,581632
+linkture/res/rss-36.png,sha256=DeZ-xvFxyjeHSNHen3inNFWPm4qHdlNI3MQ1fclu9CQ,1297
+linkture-2.6.0.dist-info/RECORD,,
