@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: Pokeamarillo_base
+Version: 1.0.0
+Summary: libreria para generar un pokemon aleatorio
+Author: Brian Flores
+Author-email: 20224036_flores@tesch.edu.mx
+Requires-Dist: pandas
