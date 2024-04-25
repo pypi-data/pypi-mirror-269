@@ -1,0 +1,15 @@
+pages:
+  image: debian:bookworm
+  script:
+    - apt-get update
+    - apt-get install -y git
+    - git submodule sync
+    - git submodule update --init --recursive --depth 1
+    - vendors/onion-mkdocs/scripts/onion-mkdocs-provision-build
+    - scripts/provision-onionprobe
+    - make docs
+  artifacts:
+    paths:
+      - public
+  #only:
+  #  - main

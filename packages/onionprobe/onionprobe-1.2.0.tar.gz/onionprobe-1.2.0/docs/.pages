@@ -1,0 +1,17 @@
+nav:
+  - Intro: README.md
+  - requirements.md
+  - installation.md
+  - usage.md
+  - Manual page: man
+  - standalone.md
+  - configurations.md
+  - upgrading.md
+  - structure.md
+  - API: api
+  - ChangeLog: changelog.md
+  - acknowledgements.md
+  - alternatives.md
+  - issues.md
+  - development.md
+  - references.md

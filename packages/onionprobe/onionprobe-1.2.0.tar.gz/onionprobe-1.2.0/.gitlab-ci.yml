@@ -1,0 +1,89 @@
+---
+include:
+  - local: '.gitlab-ci-pages.yml'
+  - local: '.gitlab-ci-slides.yml'
+
+python:
+  image: debian:bookworm
+  script:
+    - apt-get update
+    - apt-get install -y git
+    - git submodule sync
+    - git submodule update --init --recursive --depth 1
+    - scripts/provision-packaging-python
+    - mkdir -p dist
+    - make build-python-package
+  artifacts:
+    paths:
+      - dist
+  #only:
+  #  - main
+
+debian:
+  # Using bookworm support due to the pybuild-plugin-pyproject package
+  #image: debian:bookworm
+  #image: debian:bookworm-backports
+  image: debian:bookworm
+  script:
+    - apt-get update
+    - apt-get install -y git
+    - git submodule sync
+    - git submodule update --init --recursive --depth 1
+    - scripts/provision-packaging-debian
+    - make build-debian-test-package
+    - lintian --allow-root -v --pedantic ../onionprobe_*.deb
+    # Piuparts is disabled due to https://gitlab.torproject.org/tpo/onion-services/onionprobe/-/issues/87
+    #- piuparts ../onionprobe_*.deb
+    - mkdir -p dist
+    - mv ../onionprobe_* dist
+  artifacts:
+    paths:
+      - dist
+  #only:
+  #  - main
+
+configs:
+  image: debian:bookworm
+  script:
+    - apt-get update
+    - apt-get install -y git
+    - git submodule sync
+    - git submodule update --init --recursive --depth 1
+    - scripts/provision-onionprobe
+    - make configs
+    - mkdir -p dist
+    - cp configs/*.yaml dist
+  artifacts:
+    paths:
+      - dist
+  #only:
+  #  - main
+
+#manpage:
+#  image: debian:bookworm
+#  script:
+#    - apt-get update
+#    - apt-get install -y git
+#    - git submodule sync
+#    - git submodule update --init --recursive --depth 1
+#    - scripts/provision-onionprobe
+#    - make manpage
+#    - mkdir -p dist
+#    - cp docs/man/onionprobe.1.md dist
+#  artifacts:
+#    paths:
+#      - dist
+#  only:
+#    - main
+
+release:
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  stage: .post
+  rules:
+    # Run this job when a tag is created
+    - if: $CI_COMMIT_TAG
+  script:
+    - echo "Running release_job..."
+  release:
+    tag_name: '$CI_COMMIT_TAG'
+    description: '$CI_COMMIT_TAG'
