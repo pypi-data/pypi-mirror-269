@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: progress-api
+Version: 0.1.0a4
+Summary: Backend-agnostic API for reporting progress.
+Author-email: Michael Ekstrand <mdekstrand@drexel.edu>
+License: Copyright (c) 2023 Drexel University and contributors
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        > The above copyright notice and this permission notice shall be included in
+        > all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://progress-api.lenksit.org
+Project-URL: GitHub, https://github.com/lenskit/progress-api
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Provides-Extra: dev
+Requires-Dist: setuptools >=64 ; extra == 'dev'
+Requires-Dist: setuptools-scm >=8 ; extra == 'dev'
+Requires-Dist: build ==1.* ; extra == 'dev'
+Requires-Dist: ruff >=0.2 ; extra == 'dev'
+Requires-Dist: pyright ; extra == 'dev'
+Requires-Dist: copier ==9.* ; extra == 'dev'
+Requires-Dist: unbeheader ~=1.3 ; extra == 'dev'
+Requires-Dist: ipython ; extra == 'dev'
+Requires-Dist: pyproject2conda ; extra == 'dev'
+Requires-Dist: sphinx-autobuild ; extra == 'dev'
+Requires-Dist: enlighten ==1.* ; extra == 'dev'
+Requires-Dist: tqdm ==4.* ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: sphinx >=4.2 ; extra == 'doc'
+Requires-Dist: sphinxext-opengraph >=0.5 ; extra == 'doc'
+Requires-Dist: furo ; extra == 'doc'
+Requires-Dist: enlighten ; extra == 'doc'
+Requires-Dist: tqdm ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest >=7 ; extra == 'test'
+
+# Backend-agnostic progress API
+
+This package provides a backend-agnostic Python API for reporting progress,
+so code can be written to report its progress without a hard dependency on
+any specific progress bar implementation like tqdm or enlighten.
