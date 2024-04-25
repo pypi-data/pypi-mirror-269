@@ -1,0 +1,146 @@
+# ignutils - Computer Vision Package
+<div align="center">
+  <img src="ignitarium-logo.png">
+</div>
+
+[![PyPI version](https://badge.fury.io/py/ignutils.svg)](https://badge.fury.io/py/ignutils)
+
+A python package of reusable, battle tested common modules, mainly related to image processing. Issues and contributions are welcome.
+
+## Install
+
+### From pypi
+`pip install ignutils`
+
+### From source
+`python3.8 -m venv venv3.8`\
+`source venv3.8/bin/activate`\
+`pip3 install --upgrade pip`\
+`pip3 install -e ignutils/`
+
+## Modules   
+
+### [Segmentation Utils](src/ignutils/segmentation_utils): Supports SAM, Edgesam and Sam finetuning. \
+
+`pip install torch torchvision`\
+To use Edgesam `pip install src/ignutils/segmentation_utils/edge_sam/` 
+
+### [Json Utils](src/ignutils/json_utils.py): Utils for reading, writing, comparing json files..
+
+### [Transform Utils](src/ignutils/transform_utils.py) : transform_crop, transform paste, transform_img, transform_contour, expand_box, etc.
+
+### [Geom Utils](src/ignutils/geom_utils.py) : Geometric operations using points, lines eg: euclidean, line_intersection, get_nearest_pt on a curve.
+
+### [Contour Utils](src/ignutils/contour_utils.py)  : Resizig, rotation, shifting, union, intersection etc of contours.
+
+### [Show Utils](src/ignutils/show_utils.py) : Show image and json, handles user keypress, wrapper for imshow ans matplot.
+
+### [MultiProcess](src/ignutils/multi_process_utils.py) : Base class for multiprocess, inherit and overide do_something function.
+
+### [Gpu Utils](src/ignutils/gpu_utils.py) : Get gpu memory free, select device for tensorflow and pytorch, etc
+
+### [Mouse Utils](src/ignutils/mouse_utils.py) : Mouse based ROI selection, contour drawing etc.
+
+### [Keyboard Utils](src/ignutils/keyboard_utils.py) : Keyboard based utils for selected key recognition.
+
+### [Fisheye Utils](src/ignutils/fisheye_utils.py)  : Handling fisheye distortion and undistortion, cropping from distorted image.
+
+### [Draw Utils](src/ignutils/draw_utils.py)     : Drawing text and polygon on image with params autoselcted.
+
+### [Clone Utils](src/ignutils/clone_utils.py) : git clone, commit and push using api.
+
+### [Yaml Utils](src/ignutils/yaml_utils.py) : Read, Write, Custom Format Yaml files.
+
+### [Registration](src/ignutils/registration/)   : Wrapper for registration based on keypoint, ECC, superglue, optical flow etc.
+
+To use **superglue_register**
+
+```
+cd src/ignutils/registration/
+git clone https://github.com/magicleap/SuperGluePretrainedNetwork
+```
+
+### [Video Utils](src/ignutils/video_utils/)    : Getting frames from video , with preprocessing and threading options.
+
+### [Cam Utils](src/ignutils/cam_utils): Getting frames from camera, setting properties of camera.
+
+### [Config Utils](src/ignutils/config_utils.py): Class to handle config creation for any module with config_path as input.​
+
+
+### [File Utils](src/ignutils/file_utils.py) : Funcs for handling files.\
+Eg: get files by extension, checksum of file etc.
+
+### [TypeHint Utils](src/ignutils/typehint_utils.py) : Typehint for common data structures like contour, image, etc for making functions more readable   
+
+### [Docker Utils](src/ignutils/docker_utils.py): To handle basic docker functionalitys like bringdown_container, bringup_container etc,.
+
+### [Labelme Utils](src/ignutils/labelme_utils.py): Utils for functions like clean up classes, upgrading, writing label json etc., of labelme files.\
+Eg: Upgrade all json in a folder: `python -m ignutils.labelme_utils -d json_folder`
+
+### [SSH Utils](src/ignutils/ssh_utils.py): Utils for mounting and unmounting sshfs filesystems
+
+### [Timer Utils](src/ignutils/timer_utils.py): Utils to do tic toc to check time spent
+
+
+## Adding a Module/submodule
+
+To add a module/submodule,
+
+```
+cd src/ignutils/
+```
+- paste your python file/ folder containing python files
+- update the **__init__.py** in **ignutils**
+- if the unittest requires any file to test you can put it **samples** present in the *root* folder
+- add the file name that has unittest in **pytest.ini**
+- update **requirements.txt** according to yor package
+
+## Deploying of Package in PYPi
+
+- the deployment will happen only when *it's merged with the **main branch** and there's a change in **pyproject.toml** file*
+- this feature is to avoid publishing of package everytime we PR
+- once we make sure everything is workin fine, we can make changes in the **pyproject.toml** file 
+- change the **version** to reflect changes in the PyPI
+
+'''
+version = "0.0.7"
+'''
+
+## Docstring formating
+
+To enable automatic docstring formating:
+
+- Open Extensions in VSCode.
+- search for __autoDocstring - Python Docstring Generator__ and install it.
+- Open _File > Preferences > Settings_, in search for Auto Docstring and set it to __sphinx__.
+- Press `CTRL + SHIFT + 2`  to automatically create a Docstring Generator.
+
+## Add as a submodule
+
+`git submodule add https://gitlab.ignitarium.in/ign-ai/internal/ignutils ignutils`\
+Edit .gitmodules with relative path,
+
+```|
+[submodule "ignutils"]
+    path = ignutils
+    url = ../ignutils
+```
+
+## Removing Submodule
+
+`git submodule deinit ignutils`\
+`git rm ignutils`\
+`git commit-m "Removed submodule"`\
+`rm -rf .git/modules/ignutils`
+
+## Git credential store
+
+To avoid username password multiple times\
+`git config --global user.name "MyName"`\
+`git config --global user.email "MyEmail.ignitarium.com"`\
+`git config --global user.password "1234321"`\
+`git config --global credential.helper store`
+
+## Contribute
+
+Add in afolder if its a subpackage and update __init__.py files inside and outide subpackage. Update README too.
