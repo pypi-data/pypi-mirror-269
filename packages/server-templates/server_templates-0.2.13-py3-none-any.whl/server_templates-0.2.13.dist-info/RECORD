@@ -1,0 +1,12 @@
+server_templates/__init__.py,sha256=M_BS8BIr3AaX76uMFKzdSV294Q7my0OtnnxyG3nXXh0,241
+server_templates/client_requests.py,sha256=C4-BirAh5m10dcjPPaDNcbH0_RsoK1mRFCIReH6utFI,6938
+server_templates/url.py,sha256=F2D6iwuoH4LB4GKsQ6MYazwzdvtD1p9fUTSj0Lrjw44,1288
+server_templates/server_aiohttp/__init__.py,sha256=zDr350exO14Ii8Pj3TXwPuRxIDrEjrg43CpjYABDqh4,19
+server_templates/server_aiohttp/main.py,sha256=Tg6KHd4OOs5ygYTCFqXzZ2K2lCP7ixHM0LCZzyqcIOM,10652
+server_templates/server_fastapi/__init__.py,sha256=zDr350exO14Ii8Pj3TXwPuRxIDrEjrg43CpjYABDqh4,19
+server_templates/server_fastapi/main.py,sha256=dsPvjrYi9L-ZHWmA2M0OzY63fh2OzOxR5zstbPtGLSM,22050
+server_templates-0.2.13.dist-info/LICENSE,sha256=1aYUrsI8JgP7U2jnJSaksxIUGbynNUEqOQCKRBp3qNI,1180
+server_templates-0.2.13.dist-info/METADATA,sha256=q12-we7d5kqCNXeHN8DbSlsXcfRcpUz2RNmBiVM3tqQ,1972
+server_templates-0.2.13.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+server_templates-0.2.13.dist-info/top_level.txt,sha256=bFs3sEol4vPJKnVaOrGDQl29b0SWV7pb0Fl6vmtNQQk,17
+server_templates-0.2.13.dist-info/RECORD,,
