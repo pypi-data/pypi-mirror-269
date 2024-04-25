@@ -1,0 +1,3 @@
+pydeck>=0.8.0
+carto-auth>=0.2.0
+typing-extensions>=4.0.0
