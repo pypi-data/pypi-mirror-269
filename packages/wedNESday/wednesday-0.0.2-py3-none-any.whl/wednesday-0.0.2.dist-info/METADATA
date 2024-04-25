@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: wedNESday
+Version: 0.0.2
+Summary: wedNESday
+Author: Guto Maia
+Author-email: guto@guto.net
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
