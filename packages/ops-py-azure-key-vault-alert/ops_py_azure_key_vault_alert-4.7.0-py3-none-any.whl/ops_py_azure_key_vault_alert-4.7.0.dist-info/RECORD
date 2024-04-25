@@ -1,0 +1,9 @@
+azure_key_vault_alert/__init__.py,sha256=mLKrMmeC6fzFbGExMULorA2_slmViNxc21FZ42nKFyE,127
+azure_key_vault_alert/azure_key_vault_alert.py,sha256=WcsvbgpDMAW2Hd2Qj3FB211IVgLUXEOnxwd1Udl76QI,10826
+azure_key_vault_alert/slack_post.py,sha256=dix9pruYZ5dB3RRC_PfONBAMEIH_VW-QmVPjUgzLudM,2531
+azure_key_vault_alert/teams_alert.py,sha256=4SMilG8SADGI_VJhy77UnIDPoU2OLCCwBKFnQnmhg2o,2281
+ops_py_azure_key_vault_alert-4.7.0.dist-info/LICENSE,sha256=Oxa41JV9hC5O_nH03AF0a_AlLes9lXQYTtnEonhDljU,1064
+ops_py_azure_key_vault_alert-4.7.0.dist-info/METADATA,sha256=qk62JE8zjDxET6sXplNmY5Rh9Uc2yuV7VDr5IZWhmmE,9223
+ops_py_azure_key_vault_alert-4.7.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ops_py_azure_key_vault_alert-4.7.0.dist-info/top_level.txt,sha256=_JfqMuBtmMrjys9FM6ZcvZ53wj8dE_gMkZPKd3w9Uas,22
+ops_py_azure_key_vault_alert-4.7.0.dist-info/RECORD,,
