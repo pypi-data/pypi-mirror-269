@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+alida_dataset.egg-info/PKG-INFO
+alida_dataset.egg-info/SOURCES.txt
+alida_dataset.egg-info/dependency_links.txt
+alida_dataset.egg-info/requires.txt
+alida_dataset.egg-info/top_level.txt
+alidadataset/__init__.py
+alidadataset/dataset.py
+alidadataset/utils.py
