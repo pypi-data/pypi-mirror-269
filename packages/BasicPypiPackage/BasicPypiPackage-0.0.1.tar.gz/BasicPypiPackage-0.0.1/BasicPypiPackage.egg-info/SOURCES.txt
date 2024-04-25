@@ -1,0 +1,7 @@
+pyproject.toml
+setup.py
+BasicPypiPackage/__init__.py
+BasicPypiPackage.egg-info/PKG-INFO
+BasicPypiPackage.egg-info/SOURCES.txt
+BasicPypiPackage.egg-info/dependency_links.txt
+BasicPypiPackage.egg-info/top_level.txt
