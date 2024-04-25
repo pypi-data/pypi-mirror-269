@@ -1,0 +1,205 @@
+# Nitrain-image
+
+[![Coverage Status](https://coveralls.io/repos/github/nitrain/nitrain-image/badge.svg?branch=main)](https://coveralls.io/github/nitrain/nitrain-image?branch=main)
+[![Build](https://github.com/nitrain/nitrain-image/actions/workflows/test.yml/badge.svg)](https://github.com/nitrain/nitrain-image/actions/workflows/test.yml)
+
+Welcome to the numpy-like library for medical images. The nitrain-image library lets you read, write, visualize, and operate on medical imaging data in a natural, pythonic way. All of the most common image formats - dicom, nifti, etc. - are supported.
+
+If you are interested in training medical imaging AI models, then you may want to check out the [nitrain](https://github.com/nitrain/nitrain) library. You can also learn more about using nitrain-image and nitrain in the open-source book ["Becoming a medical imaging AI expert with Python"](https://book.nitrain.dev).
+
+<br>
+
+## Quickstart
+
+Here is a 10 minute introduction to the nitrain-image library. If you have used numpy before, that is about all you will need to start working with medical images like a pro.
+
+To begin, the easiest way to install the nitrain-image package is from PyPi using pip.
+
+### Installation
+
+```
+pip install nitrain-image
+```
+
+<br>
+
+### Loading and saving
+
+You can load basically any type of medical image using nitrain-image.
+
+```python
+import ntimage as nti
+img = nti.load('image.nii.gz')
+```
+
+Saving is equally easy.
+
+```python
+nti.save(img, 'image.nii.gz')
+```
+
+<br>
+
+### Creation
+
+If you have a numpy array without any medical imaging metadata, you can create an ntimage.
+
+```python
+import numpy as np
+img = nti.from_numpy(np.random.randn((128,128)))
+```
+
+Converting any ntimage - even those read from file - to a numpy array can also be done.
+
+```python
+arr = img.numpy()
+```
+
+If you have an ntimage with associated metadata such as origin, spacing, direction, and so on, then
+it is possible to transfer that info when creating an ntimage from a numpy array.
+
+```python
+img.set_origin((10,10))
+img2 = nti.from_numpy_like(np.random.randn((128,128)), img)
+```
+
+As with numpy or torch, you can also create an ntimage in a variety of convenient ways:
+
+```python
+img = nti.ones((128,128))
+img = nti.zeros((128,128))
+img = nti.rand((128,128))
+```
+
+The ntimage class has the same datatypes as numpy arrays. If you want to cast an ntimage to
+another datatype, you can do so with the `clone` function.
+
+```python
+img = img.clone('float32')
+```
+
+<br>
+
+### Indexing
+
+You can index an ntimage as you would a numpy array, but keep in mind that indexing an ntimage returns
+another ntimage and NOT a numpy array. This makes it very convenient to crop images.
+
+```python
+img = nti.ones((128,128))
+img[:20,:20]
+```
+
+Assignment of values is also possible via indexing.
+
+```python
+img = nti.ones((128,128))
+img[:20,:20] = 0
+```
+
+Indexing an ntimage with another ntimage is also supported. In this case, the image
+you use to index will be treated like a mask and the resulting image will have any values
+outside of the index set to zero.
+
+```python
+img = nti.rand((128,128))
+mask = nti.zeros((128,128))
+mask[:20,:20] = 1
+img2 = img[mask] # all indices outside of (:20, :20) will now be zero
+```
+
+<br>
+
+### Math operations
+
+As with numpy, you can use any core math operation on ntimages.
+
+```python
+img = nti.ones((128,128))
+img2 = nti.ones((128,128))
+
+img = img * 10
+img = img + img2
+img = img / 10
+```
+
+There are also many other math functions such as `exp` and `log` that can be applied to an ntimage. Additionally, all summary functions such as `median`, `mean`, `sum`, `min`, `max`, and so on, are available.
+
+```python
+img = nti.exp(img)
+img = nti.log(img)
+```
+
+Logical functions will also work as expected on ntimages.
+
+```python
+img = nti.ones((128,128))
+img2 = nti.rand((128,128)) > 0.5
+
+img3 = img & img2
+```
+
+<br>
+
+### Image operations
+
+You can use many traditional image procesing operations on ntimages. The `smooth` function is one example.
+
+```python
+img = nti.load(nti.example_data('r16'))
+img2 = nti.smooth(img, sigma=2)
+```
+
+The `resample` function also has many important use cases for ntimages.
+
+```python
+img2 = nti.resample(img, (64,64))
+```
+
+Because nitrain-image is built on top of ITK, you can build you own custom image processing function
+using the `itk` package in Python and integrate it using the `from_itk` function.
+
+```python
+img = nti.load(nti.example_data('r16'))
+
+def my_function(image):
+    itk_image = image._image
+    # perform some itk processing...
+    # ...
+    return from_itk(itk_image)
+```
+
+The interoperability of nitrain-image with numpy and itk make it easy to do pretty much anything.
+
+<br>
+
+### Plotting
+
+The visualization functions of nitrain-image are highly intuitive with sensible defaults, but they are still flexible. The `plot` function will take care of most needs.
+
+```python
+img = nti.load(nti.example_data('mni'))
+nti.plot(img)
+```
+
+The `plot` function also supports overlays. This is useful for showing labels on top of your images.
+
+```python
+img2 = img > img.median()
+nti.plot(img, img2)
+```
+
+Other functions such as `grid` and `plot_ortho` provide you with more flexibility to create unique, publication-quality visualizations from your images.
+
+Lastly, the `plot_hist` function can come in handy to view the distribution of an image's intensity values.
+
+```python
+img = nti.load(nti.example_data('r16'))
+nti.plot_hist(img)
+```
+
+<br>
+
+## Contributing
+
+If you have a bug to report or are interested in contributing new features to nitrain-image, feel free to create an issue here on GitHub. The nitrain-image library builds upon the excellent Insight Toolkit (ITK).
