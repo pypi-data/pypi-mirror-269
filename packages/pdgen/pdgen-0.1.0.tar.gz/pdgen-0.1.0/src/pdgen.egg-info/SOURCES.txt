@@ -1,0 +1,5 @@
+pyproject.toml
+src/pdgen.egg-info/PKG-INFO
+src/pdgen.egg-info/SOURCES.txt
+src/pdgen.egg-info/dependency_links.txt
+src/pdgen.egg-info/top_level.txt
