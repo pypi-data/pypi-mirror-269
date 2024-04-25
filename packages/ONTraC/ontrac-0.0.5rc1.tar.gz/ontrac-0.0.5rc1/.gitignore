@@ -1,0 +1,44 @@
+# MacOSX temp
+.DS_Store
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+bld-dir/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mypy
+.mypy_cache/
+
+# cache
+__pycache__/
+
+# debug
+debug/
