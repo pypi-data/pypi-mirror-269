@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: haystack-studio
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/
+Project-URL: Source, https://github.com/
+Author-email: MJMcM <a@b.c>
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.8
+Requires-Dist: haystack-ai
+Description-Content-Type: text/markdown
+
+# haystack-studio
+
+[![PyPI - Version](https://img.shields.io/pypi/v/haystack-studio.svg)](https://pypi.org/project/haystack-studio)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/haystack-studio.svg)](https://pypi.org/project/haystack-studio)
