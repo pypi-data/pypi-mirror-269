@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "django-ninja-oauth2"
+version = "0.1.3"
+description = "Django Ninja OAuth2 package enables support of OAuth2 / OpenID Connect Authorization Code Flow for your swagger documentation."
+authors = ["Marcel <siegmann@eomap.de>"]
+readme = "README.md"
+packages = [
+    { include = "ninja_oauth2" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+django-ninja = "^1.1.0"
+pyjwt = {extras = ["crypto"], version = "^2.8.0"}
+requests = "^2.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.4"
+pytest = "^8.1.1"
+coverage = "^7.4.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+target-version = "py38"
+line-length = 120
+
+lint.select = [
+    "B",    # flake8-bugbear
+    "C",    # flake8-comprehensions
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "I",    # isort
+    "PTH",  # flake8-use-pathlib
+    "UP",   # pyupgrade
+    "W",    # pycodestyle warnings
+]
