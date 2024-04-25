@@ -1,0 +1,13 @@
+websockets>=11
+deprecated
+botasaurus-proxy-authentication
+psutil
+
+[dev]
+black
+build
+sphinx
+sphinx_markdown_builder
+sphinx_autodoc_typehints
+furo
+pygments
