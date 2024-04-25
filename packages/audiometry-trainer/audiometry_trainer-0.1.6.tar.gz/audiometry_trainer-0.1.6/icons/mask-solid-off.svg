@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 576 512"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="mask-solid-off.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.1614781"
+     inkscape:cx="284.12072"
+     inkscape:cy="291.86946"
+     inkscape:window-width="1884"
+     inkscape:window-height="1023"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+  <path
+     d="M 411.74776,104.5267 C 243.78809,-42.01808 132.28199,-12.713011 58.178095,70.324496 -15.925804,153.36201 1.7147054,253.14943 73.697419,315.95434 l 6.298487,5.49543 c 18.14564,15.83207 43.856134,20.19843 66.311824,11.17546 l 48.02984,-19.14926 c 9.12166,-3.64581 19.43409,-1.901 26.8573,4.57575 7.42322,6.47676 10.45759,16.37703 7.93434,25.77996 l -13.2382,49.50497 c -6.25957,23.15406 1.32194,47.83497 19.46758,63.66703 l 6.29849,5.49544 c 71.98271,62.8049 174.31339,67.69232 248.41729,-15.34519 74.1039,-83.0375 89.63305,-196.08245 -78.32661,-342.62723 z m -271.00069,16.7402 a 64,63.281866 0 1 1 95.97695,83.73987 64,63.281866 0 1 1 -95.97695,-83.73987 z m 282.28747,161.89968 a 64.000004,63.28187 0 1 1 -84.69017,94.90002 64.000004,63.28187 0 1 1 84.69017,-94.90002 z"
+     id="path2"
+     style="stroke-width:0.994374" />
+</svg>

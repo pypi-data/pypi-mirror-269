@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666666 8.4666666"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="audiometry_trainer_icon2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="25.4375"
+     inkscape:cx="15.764128"
+     inkscape:cy="16"
+     inkscape:window-width="1884"
+     inkscape:window-height="1023"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2420" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="opacity:0.970459;fill:none;stroke-width:0.264583"
+       d="M 6.4715514,6.73717 0.30126313,3.8411808 7.4253878,0.29990629 7.6920115,1.0598633 2.2873119,3.8561494 7.3379657,6.2059052 7.3363782,7.0582069 5.8957109,7.8717451 5.2785628,7.6052174 5.7953036,7.24942 5.8706784,7.4023695 6.6202469,6.9410584 Z"
+       id="path2256" />
+    <path
+       style="opacity:0.970459;fill:#4b299d;fill-opacity:0.972549;stroke-width:0.264583"
+       d="M 7.2409587,6.1757293 -0.00371068,3.1128708 7.2911522,0.00580344 7.6634193,1.3579995 2.8976258,3.1201937 7.6905614,4.9357561 Z"
+       id="path4760"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="opacity:0.970459;fill:#4b299d;fill-opacity:0.972549;stroke-width:0.264583"
+       d="M 7.2309406,6.1884483 6.1620185,7.2769332 6.9988282,8.1343459 4.3554276,8.4144834 4.6332247,5.8986584 5.5372113,6.6839313 6.6920281,5.5970394 Z"
+       id="path4764"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-x="-0.43052538"
+       inkscape:transform-center-y="0.24339076" />
+  </g>
+</svg>
