@@ -1,0 +1,2 @@
+[console_scripts]
+convert-table = tables_io.cli:main
