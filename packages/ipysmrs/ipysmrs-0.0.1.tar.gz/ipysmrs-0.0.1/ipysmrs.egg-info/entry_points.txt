@@ -1,0 +1,2 @@
+[console_scripts]
+ipysmrs = ipysmrs.cli:main

@@ -1,0 +1,7 @@
+numpy
+
+[all]
+ipysmrs[extra]
+
+[extra]
+pandas
