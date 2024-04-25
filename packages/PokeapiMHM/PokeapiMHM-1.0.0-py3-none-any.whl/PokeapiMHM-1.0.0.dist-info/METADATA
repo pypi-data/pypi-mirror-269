@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: PokeapiMHM
+Version: 1.0.0
+Summary: Librería para generar un Pokemón aleatoria.
+Author: Martha Morales
+Author-email: martha_mh@tesch.edu.mx
+Requires-Dist: pandas
+
