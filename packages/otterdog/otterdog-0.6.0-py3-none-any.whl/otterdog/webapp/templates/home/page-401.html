@@ -1,0 +1,51 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} Error 403 {% endblock %}
+
+<!-- Element injected in the BODY element -->
+{% block body_class %} login-page {% endblock body_class %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+  {{ super() }}
+{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="login-box">
+
+    <div class="login-logo">
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://github.com/eclipse-csi/otterdog">Otterdog Dashboard</a>
+    </div>
+
+    <!-- /.login-logo -->
+    <div class="card">
+
+      <div class="card-body login-card-body">
+
+        <h5 class="login-box-msg">
+          Error 401 - Access Denied
+        </h5>
+        <p class="login-box-msg">
+          Authentication is required to access this resource
+          - please <a href="{{ url_for('auth_blueprint.login_view') }}" class="text-center">Login</a>
+        </p>
+
+        <br />
+        <div class="text-center">
+            &copy; <a target="_blank" rel="noopener noreferrer" href="https://eclipse.org">Eclipse Foundation and others</a>.
+        </div>
+
+      </div>
+      <!-- /.login-card-body -->
+    </div>
+
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+  {{ super() }}
+{% endblock javascripts %}

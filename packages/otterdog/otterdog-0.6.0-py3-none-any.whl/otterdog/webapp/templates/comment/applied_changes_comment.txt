@@ -1,0 +1,31 @@
+This is your friendly self-service bot.
+
+{% if success == true %}
+The following changes have been successfully applied:
+
+```diff
+{{ output }}
+```
+
+{% if partial == true %}
+### Note
+
+The pull request was only partially applied as it requires some access to secrets or the Web UI,
+please apply the remaining changes manually and confirm with replying with `/otterdog done`.
+
+{% for admin_team in admin_teams %}
+cc @{{ admin_team }}
+{% endfor %}
+{% endif %}
+
+{% else %}
+The changes could not be applied successfully, please check the output:
+
+```diff
+{{ output }}
+```
+
+{% for admin_team in admin_teams %}
+cc @{{ admin_team }}
+{% endfor %}
+{% endif %}
