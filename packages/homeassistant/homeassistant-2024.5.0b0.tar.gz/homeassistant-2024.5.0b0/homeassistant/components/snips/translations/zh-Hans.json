@@ -1,0 +1,48 @@
+{
+    "services": {
+        "feedback_off": {
+            "description": "\u5173\u95ed\u53cd\u9988\u58f0\u97f3\u3002",
+            "fields": {
+                "site_id": {
+                    "name": "\u7ad9\u70b9 ID"
+                }
+            }
+        },
+        "feedback_on": {
+            "fields": {
+                "site_id": {
+                    "name": "\u7ad9\u70b9 ID"
+                }
+            }
+        },
+        "say": {
+            "fields": {
+                "custom_data": {
+                    "name": "\u81ea\u5b9a\u4e49\u6570\u636e"
+                },
+                "site_id": {
+                    "name": "\u7ad9\u70b9 ID"
+                },
+                "text": {
+                    "description": "\u8981\u8bf4\u7684\u6587\u5b57\u3002",
+                    "name": "\u6587\u672c"
+                }
+            },
+            "name": "\u8bf4\u8bdd"
+        },
+        "say_action": {
+            "fields": {
+                "custom_data": {
+                    "name": "\u81ea\u5b9a\u4e49\u6570\u636e"
+                },
+                "site_id": {
+                    "name": "\u7ad9\u70b9 ID"
+                },
+                "text": {
+                    "description": "\u8981\u8bf4\u7684\u6587\u5b57\u3002",
+                    "name": "\u6587\u672c"
+                }
+            }
+        }
+    }
+}

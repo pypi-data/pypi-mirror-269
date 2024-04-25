@@ -1,0 +1,10 @@
+{
+    "entity_component": {
+        "_": {
+            "state": {
+                "error": "\u9519\u8bef",
+                "paused": "\u5df2\u6682\u505c"
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "\u8bbe\u5907\u5df2\u914d\u7f6e",
+            "invalid_ip_address": "IP \u5730\u5740\u65e0\u6548\u3002"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "count": "Ping \u8ba1\u6570",
+                    "host": "\u4e3b\u673a"
+                },
+                "data_description": {
+                    "host": "\u60a8\u60f3 Ping \u7684\u8bbe\u5907\u7684\u4e3b\u673a\u540d\u6216 IP \u5730\u5740\u3002"
+                },
+                "description": "Ping \u5141\u8bb8\u60a8\u68c0\u67e5\u4e3b\u673a\u7684\u53ef\u7528\u6027\u3002",
+                "title": "\u6dfb\u52a0 Ping"
+            }
+        }
+    },
+    "options": {
+        "abort": {
+            "invalid_ip_address": "IP \u5730\u5740\u65e0\u6548\u3002"
+        },
+        "step": {
+            "init": {
+                "data": {
+                    "count": "Ping \u8ba1\u6570",
+                    "host": "\u4e3b\u673a"
+                }
+            }
+        }
+    },
+    "services": {
+        "reload": {
+            "description": "\u4ece YAML \u914d\u7f6e\u91cd\u65b0\u52a0\u8f7d Ping \u4f20\u611f\u5668\u3002",
+            "name": "\u91cd\u65b0\u52a0\u8f7d"
+        }
+    }
+}

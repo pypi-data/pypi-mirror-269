@@ -1,0 +1,12 @@
+{
+    "config": {
+        "abort": {
+            "single_instance_allowed": "\u5df2\u914d\u7f6e\u3002\u53ea\u80fd\u6709\u4e00\u4e2a\u914d\u7f6e\u3002"
+        },
+        "step": {
+            "user": {
+                "other": " "
+            }
+        }
+    }
+}
