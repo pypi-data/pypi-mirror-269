@@ -1,0 +1,12 @@
+numpy
+qmt
+scipy
+dm-tree
+requests
+pandas
+imt-tree-utils
+
+[baselines]
+onnxruntime
+
+[benchmark]
