@@ -1,0 +1,8 @@
+LICENSE.txt
+setup.py
+gleweather/__init__.py
+gleweather.egg-info/PKG-INFO
+gleweather.egg-info/SOURCES.txt
+gleweather.egg-info/dependency_links.txt
+gleweather.egg-info/requires.txt
+gleweather.egg-info/top_level.txt
