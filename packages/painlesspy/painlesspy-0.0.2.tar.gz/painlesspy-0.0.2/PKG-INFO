@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: painlesspy
+Version: 0.0.2
+Summary: Makes programming with Python easier.
+Author: ShadowFlameFox
+Author-email: <shadow_flame_fox@web.de>
+Keywords: Python,WeatherAPI
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+
+                        # Installation
+                        Install PainlessPy using pip:
+                        ```
+                        pip install painlesspy
+                        ```
+                    
