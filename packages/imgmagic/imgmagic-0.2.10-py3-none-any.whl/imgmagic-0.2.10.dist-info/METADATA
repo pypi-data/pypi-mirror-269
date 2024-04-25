@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: imgmagic
+Version: 0.2.10
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.23.4)
+Requires-Dist: scipy (>=1.11.4)
+Requires-Dist: matplotlib (>=3.5.1)
+Requires-Dist: pillow (>=9.0.1)
+Requires-Dist: protobuf (<4)
+
+Toolbox to perform image processing. (see documentation on [github](https://github.com/kkf017/Image-Processing-toolbox-))
+
+### Libraries
+* Requires python>=3.5.
+* Install numpy, scipy, matplotlib, pillow.
+
+### Example
+```bash
+import imgmagic
+import numpy
+import matplotlib.image as mpimg
+from PIL import Image
+
+filename = "img.jpeg"
+img1 = mpimg.imread(filename)
+img2 = imgmagic.filter.filtering(img1, "avg", "wrap", 9)
+
+im = Image.fromarray(img2)
+im.save("new.jpeg")
+```
+
+
+
