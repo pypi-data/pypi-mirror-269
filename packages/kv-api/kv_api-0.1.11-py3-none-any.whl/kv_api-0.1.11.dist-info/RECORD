@@ -1,0 +1,10 @@
+kv/api/__init__.py,sha256=mF4M_d6EiHbB9U9W_oKlKXYIyh8ZFn3gxe_382VXiLI,95
+kv/api/__init__.pyi,sha256=Scp68JY3CUSkLzex3f-NpTCMegBVwoZCXvLGcq_0llo,368
+kv/api/append.py,sha256=5Jvp6l8OteMqA_58zhEQSzAlceAkcPAfHmXTeT5k2jw,1218
+kv/api/errors.py,sha256=Iafu9FLIvKcNNj_IyshSebHPBzA42n_l7zxl_T4kkoI,632
+kv/api/impl.py,sha256=6QBrLIBSPi4yYzk4Bd6ULfcYtrJ0WtTY10XptMBb60s,1155
+kv/api/kv.py,sha256=dOYJfDSQCAFF26AuVH2edSYjOS9qMgFujKID3lHKm4o,1844
+kv_api-0.1.11.dist-info/METADATA,sha256=pGuPUO0PWpxbl9mcMXldXh46FP3gD0DJG58W6fKRxlw,535
+kv_api-0.1.11.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+kv_api-0.1.11.dist-info/top_level.txt,sha256=z85M-ICBi-OoWrXz-dZX8xL06idJqievlWlmDg07U0M,3
+kv_api-0.1.11.dist-info/RECORD,,
