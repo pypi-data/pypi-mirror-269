@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "confme"
+version = "2.0.3"
+description = "Easy configuration management in python"
+authors = ["Iwan Silvan Bolzern <iwan.bolzern@roche.com>"]
+license = "LICENSE"
+readme = "README.md"
+homepage = "https://github.com/iwanbolzern/confme"
+repository = "https://github.com/iwanbolzern/confme"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Healthcare Industry",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+packages = [
+    { include = "confme" },
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyyaml = ">=5.3"
+pydantic = "^2.0"
+pydantic-core = "^2.0.0"
+annotated-types = "^0.6.0"
+tabulate = ">=0.8.9"
+typing-extensions = "^4.11.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^6.1.2"
+pylint = "^2.17.4"
+sphinx = "^3.2.1"
+recommonmark = "^0.6.0"
+pytest-cov = "^2.11.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
