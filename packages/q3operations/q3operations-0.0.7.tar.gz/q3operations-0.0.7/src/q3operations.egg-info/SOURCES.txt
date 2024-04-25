@@ -1,0 +1,7 @@
+setup.py
+src/q3operations/__init__.py
+src/q3operations/operations.py
+src/q3operations.egg-info/PKG-INFO
+src/q3operations.egg-info/SOURCES.txt
+src/q3operations.egg-info/dependency_links.txt
+src/q3operations.egg-info/top_level.txt
