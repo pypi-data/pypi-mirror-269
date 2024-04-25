@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: question3_operations
+Version: 0.0.1
+Summary: A package to do basic math operations
+Home-page: https://github.com/mahesh-maximus/helloworld-pyp
+Author: PVS.Sukeerthi
+Author-email: Sukeerthi <sukeerthipolasanapalli@gamil.com>
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6

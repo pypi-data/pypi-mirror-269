@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "question3_operations"
+version = "0.0.1"
+authors = [
+  { name="Sukeerthi", email="sukeerthipolasanapalli@gamil.com" },
+]
+description = "A package to do basic math operations"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+]
+
