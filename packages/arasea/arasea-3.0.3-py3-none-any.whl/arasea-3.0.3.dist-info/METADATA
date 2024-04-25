@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: arasea
+Version: 3.0.3
+Summary: A library for defining, optimizing, and efficiently evaluating mathematical expressions involving multi-dimensional arrays.
+Home-page: https://github.com/arasea-devs/arasea
+Author: arasea-devs
+Author-email: arasea.devs@gmail.com
+License: BSD-3-Clause
+Keywords: arasea,math,numerical,symbolic,blas,numpy,autodiff,differentiation
+Classifier: Development Status :: 6 - Mature
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: SunOS/Solaris
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+License-File: LICENSE.txt
+Requires-Dist: numpy >=1.17.0
+Requires-Dist: scipy >=0.14
+Requires-Dist: pytest
+Requires-Dist: filelock
+Requires-Dist: etuples
+Requires-Dist: logical-unification
+Requires-Dist: miniKanren
+Requires-Dist: cons
+
