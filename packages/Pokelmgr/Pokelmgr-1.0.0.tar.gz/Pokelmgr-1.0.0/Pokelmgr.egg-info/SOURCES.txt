@@ -1,0 +1,10 @@
+README.md
+setup.py
+Pokelmgr/__init__.py
+Pokelmgr/pokemon.csv
+Pokelmgr/random_pokemon.py
+Pokelmgr.egg-info/PKG-INFO
+Pokelmgr.egg-info/SOURCES.txt
+Pokelmgr.egg-info/dependency_links.txt
+Pokelmgr.egg-info/requires.txt
+Pokelmgr.egg-info/top_level.txt
