@@ -1,0 +1,10 @@
+README.md
+setup.py
+PKRDPNT/__init__.py
+PKRDPNT/pokemon.csv
+PKRDPNT/random_pokemon.py
+PKRDPNT.egg-info/PKG-INFO
+PKRDPNT.egg-info/SOURCES.txt
+PKRDPNT.egg-info/dependency_links.txt
+PKRDPNT.egg-info/requires.txt
+PKRDPNT.egg-info/top_level.txt
