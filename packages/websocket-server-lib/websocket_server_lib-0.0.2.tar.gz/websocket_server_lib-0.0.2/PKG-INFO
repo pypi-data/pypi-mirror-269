@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: websocket-server-lib
+Version: 0.0.2
+Summary: Library for websocket support in Python
+Author: Rohan Julka
+Author-email: Rohan Julka <rohanjulka19@gmail.com>
+Project-URL: Homepage, https://github.com/x22205993/ws-server-python.git
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Websocket Server
+
+Websocket Server implmentation in Python
