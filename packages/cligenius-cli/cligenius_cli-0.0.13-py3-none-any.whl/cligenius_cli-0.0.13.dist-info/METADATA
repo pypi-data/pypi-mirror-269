@@ -1,0 +1,66 @@
+Metadata-Version: 2.3
+Name: cligenius-cli
+Version: 0.0.13
+Summary: Run Cligenius scripts with completion, without having to create a package, using Cligenius CLI.
+Project-URL: Homepage, https://github.com/khulnasoft/cligenius-cli
+Project-URL: Documentation, https://cligenius.khulnasoft.com/cligenius-cli/
+Author-email: KhulnaSoft DevOps <info@khulnasoft.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Requires-Dist: cligenius>=0.12.3
+Requires-Dist: colorama<=0.5.0,>=0.4.3
+Requires-Dist: shellingham<=1.4.0,>=1.3.2
+Description-Content-Type: text/markdown
+
+# Cligenius CLI
+
+⚠️ DEPRECATED ⚠️
+
+Use [Cligenius](https://github.com/khulnasoft/cligenius) instead of [Cligenius CLI](https://github.com/khulnasoft/cligenius-cli).
+
+---
+
+All the functionality in this repo for [`cligenius-cli`](https://github.com/khulnasoft/cligenius-cli), has been integrated into [Cligenius](https://github.com/khulnasoft/cligenius) since version 0.12.1.
+
+The main repo, https://github.com/khulnasoft/cligenius, publishes a PyPI package `cligenius-cli` (that used to be this repo), and that PyPI package does nothing other than depend on `cligenius`.
+
+All the functionality has been integrated into `cligenius`.
+
+Install instead `cligenius`:
+
+```bash
+pip install cligenius
+```
+
+That includes the `cligenius` command.
+
+This repo is now deprecated and archived. 🤓
+
+## License
+
+This project is licensed under the terms of the MIT license.

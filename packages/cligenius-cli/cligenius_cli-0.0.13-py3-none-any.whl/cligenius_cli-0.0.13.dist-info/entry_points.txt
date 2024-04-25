@@ -1,0 +1,2 @@
+[console_scripts]
+cligenius = cligenius_cli.main:main
