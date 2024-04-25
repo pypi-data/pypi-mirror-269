@@ -1,0 +1,10 @@
+README.md
+setup.py
+Pokechu/__init__.py
+Pokechu/pokemon.csv
+Pokechu/random_pokemon.py
+Pokechu.egg-info/PKG-INFO
+Pokechu.egg-info/SOURCES.txt
+Pokechu.egg-info/dependency_links.txt
+Pokechu.egg-info/requires.txt
+Pokechu.egg-info/top_level.txt
