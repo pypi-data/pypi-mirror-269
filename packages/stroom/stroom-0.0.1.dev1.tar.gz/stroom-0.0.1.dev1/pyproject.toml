@@ -1,0 +1,34 @@
+[build-system]
+requires = [
+    "setuptools>=51",
+    "wheel>=0.36"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stroom"
+version = "0.0.1.dev1"
+description = "Stroom"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Oleksandr Danshyn" }
+]
+dependencies = []
+requires-python = ">= 3.8"
+classifiers = [
+  "Typing :: Typed",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+  "Operating System :: POSIX",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: Microsoft :: Windows",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "License :: OSI Approved :: Apache Software License"
+]

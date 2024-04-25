@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/stroom/__init__.py
+src/stroom.egg-info/PKG-INFO
+src/stroom.egg-info/SOURCES.txt
+src/stroom.egg-info/dependency_links.txt
+src/stroom.egg-info/top_level.txt
