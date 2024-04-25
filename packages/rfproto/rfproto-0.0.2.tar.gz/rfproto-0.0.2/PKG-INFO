@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: rfproto
+Version: 0.0.2
+Summary: Python for RF and SDR prototyping.
+Author-email: John Gentile <johncgentile17@gmail.com>
+Project-URL: Homepage, https://github.com/JohnnyGOX17/rfproto
+Project-URL: Issues, https://github.com/JohnnyGOX17/rfproto/issues
+Keywords: RF,SDR,prototyping
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+
+# rfproto
+
+Python for RF and SDR prototyping.
+
+
