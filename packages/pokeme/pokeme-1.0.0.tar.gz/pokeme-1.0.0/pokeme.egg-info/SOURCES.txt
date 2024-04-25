@@ -1,0 +1,10 @@
+README.md
+setup.py
+pokeme/__init__.py
+pokeme/pokemon.csv
+pokeme/random_pokemon.py
+pokeme.egg-info/PKG-INFO
+pokeme.egg-info/SOURCES.txt
+pokeme.egg-info/dependency_links.txt
+pokeme.egg-info/requires.txt
+pokeme.egg-info/top_level.txt
