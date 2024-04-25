@@ -1,0 +1,4 @@
+[console_scripts]
+dotbot-controller = dotbot.main:main
+dotbot-joystick = dotbot.joystick:main
+dotbot-keyboard = dotbot.keyboard:main
