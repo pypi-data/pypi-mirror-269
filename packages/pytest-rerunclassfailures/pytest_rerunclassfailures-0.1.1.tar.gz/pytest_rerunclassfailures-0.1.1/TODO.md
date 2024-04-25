@@ -1,0 +1,1 @@
+- Call class-scope fixtures while recreating class (and, thus, teardown)
