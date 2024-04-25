@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: TFL
+Version: 3.9
+Summary: Library with lots of useful stuff (says Ralf Schlatterbeck)
+Home-page: https://codeberg.org/tanzer/tapyr
+Author: Christian Tanzer
+Author-email: tanzer@swing.co.at
+License: BSD License
+Platform: Any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: TFL-STP (>=3)
+Provides-Extra: i18n
+Requires-Dist: babel ; extra == 'i18n'
+Provides-Extra: bcrypt
+Requires-Dist: bcrypt ; extra == 'bcrypt'
+Provides-Extra: doc
+Requires-Dist: sphinx ; extra == 'doc'
+Provides-Extra: html_cleaner
+Requires-Dist: bs4 ; extra == 'html_cleaner'
+Provides-Extra: human_friendly_hsl
+Requires-Dist: husl ; extra == 'human_friendly_hsl'
+Provides-Extra: text_to_pdf
+Requires-Dist: reportlab ; extra == 'text_to_pdf'
+Provides-Extra: timezone_support
+Requires-Dist: python-dateutil ; extra == 'timezone_support'
+
+TFL contains the basic infrastructure for Christian
+Tanzer's Python projects. TFL is distributed under the conditions of the
+`BSD 3-Clause License <https://www.gg32.com/license/bsd_3c.html>`_.
+
+TFL is available as a `git repository`_.
+You can clone that repository with::
+
+    git clone git@codeberg.org:tanzer/tapyr.git
+
+Reports of bugs in TFL should be submitted to the `git repository`_.
+
+.. _`git repository`: https://codeberg.org/tanzer/tapyr
