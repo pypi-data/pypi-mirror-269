@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: cvxRiskOpt
+Version: 0.1.2
+Summary: Risk-Based Optimization tool using CVXPY and CVXPYgen
+Home-page: https://github.com/TSummersLab/cvxRiskOpt
+Author: Sleiman Safaoui, Tyler Summers
+Author-email: snsafaoui@gmail.com, tyler.summers@utdallas.edu
+Maintainer: Sleiman Safaoui
+Maintainer-email: snsafaoui@gmail.com
+License: GPL-3.0
+Keywords: dro,risk,optimization,robust,code generation,mpc
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: scipy>=1.11.4
+Requires-Dist: numpy>=1.26.2
+Requires-Dist: matplotlib>=3.8.0
+Requires-Dist: cvxpygen>=0.3.4
+Requires-Dist: cvxpy>=1.4.1
+Provides-Extra: dev
+Requires-Dist: pytest==7.4.0; extra == "dev"
+Requires-Dist: polytope==0.2.5; extra == "dev"
+Requires-Dist: Sphinx==7.2.6; extra == "dev"
+
+# CVXPY Risk Optimization
+
+A package for risk-based optimization using CVXPY and CVXPYgen.
+
+## Installation
+
+- create and activate conda env 
+```
+conda create --name cvxRiskOpt python=3.10 pip -y
+conda activate cvxRiskOpt
+```
+- install dependencies
+```
+pip install cvxpy>=1.4.1
+pip install cvxpygen>=0.3.4
+pip install scipy>=1.11.4
+pip install numpy>=1.26.2
+pip install matplotlib>=3.8.0
+```
+For development, also install:
+```
+pip install pytest==7.4.0
+pip install polytope==0.2.5
+pip install Sphinx==7.2.6
+```
+- install the package
+```
+python3 -m pip install -e .
+```
+
+## Tests
+To run tests,
+```
+pytest
+```
+
+## Examples
+There are several examples in `examples` demonstrating the usage of the package's functionality.
