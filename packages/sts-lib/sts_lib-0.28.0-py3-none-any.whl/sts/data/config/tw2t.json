@@ -1,0 +1,17 @@
+{
+  "name": "Traditional Chinese (Taiwan standard) to Traditional Chinese",
+  "requires": [
+    "../OpenCC/config/_default.json"
+  ],
+  "dicts": [
+    {
+      "file": "../dictionary/tw2t.tlist",
+      "mode": "load",
+      "src": [
+        "../OpenCC/dictionary/TWVariantsRevPhrases.txt",
+        "../dictionary/TWVariantsRev.txt",
+        "../OpenCC/dictionary/TWVariantsRev.list"
+      ]
+    }
+  ]
+}

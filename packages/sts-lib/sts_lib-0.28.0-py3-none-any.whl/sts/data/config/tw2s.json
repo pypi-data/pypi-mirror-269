@@ -1,0 +1,29 @@
+{
+  "name": "Traditional Chinese (Taiwan standard) to Simplified Chinese",
+  "requires": [
+    "../OpenCC/config/_default.json"
+  ],
+  "dicts": [
+    {
+      "file": "../dictionary/tw2s.tlist",
+      "mode": "join",
+      "src": [
+        {
+          "mode": "load",
+          "src": [
+            "../OpenCC/dictionary/TWVariantsRevPhrases.txt",
+            "../dictionary/TWVariantsRev.txt",
+            "../OpenCC/dictionary/TWVariantsRev.list"
+          ]
+        },
+        {
+          "mode": "load",
+          "src": [
+            "../OpenCC/dictionary/TSPhrases.txt",
+            "../OpenCC/dictionary/TSCharacters.txt"
+          ]
+        }
+      ]
+    }
+  ]
+}
