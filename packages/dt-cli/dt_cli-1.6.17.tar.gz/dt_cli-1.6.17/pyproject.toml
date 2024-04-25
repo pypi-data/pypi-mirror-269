@@ -1,0 +1,64 @@
+[tool.poetry]
+authors = ["Vagiz Duseev <vagiz.duseev@dynatrace.com>"]
+description = "Dynatrace CLI"
+documentation = "https://dt-cli.readthedocs.io"
+homepage = "https://github.com/dynatrace-oss/dt-cli"
+keywords = ["dynatrace", "cli", "extensions"]
+license = "Apache-2.0"
+maintainers = ["Vagiz Duseev <vagiz.duseev@dynatrace.com>"]
+name = "dt-cli"
+packages = [
+  {include = "dtcli"},
+]
+readme = "README.md"
+repository = "https://github.com/dynatrace-oss/dt-cli"
+version = "1.6.17"
+
+[tool.poetry.dependencies]
+PyYAML = "^6.0"
+asn1crypto = "^1.4"
+click-aliases = "^1.0"
+cryptography = ">3"
+python = "^3.8"
+wheel = "^0"
+requests = "^2.26"
+jsonschema = "^4.7"
+typer = "^0"
+
+[tool.poetry.group.dev.dependencies]
+Sphinx = ">=3.5"
+black = {version = ">=20", allow-prereleases = true}
+bump2version = ">=1.0"
+flake8 = ">=3.9"
+flake8-blind-except = ">=0.2"
+flake8-bugbear = ">=21.4"
+flake8-comprehensions = ">=3.4"
+flake8-docstrings = ">=1.6"
+flake8-import-order = ">=0.18"
+flake8-polyfill = ">=1.0"
+ipython = ">=7.22"
+mypy = ">=0.812"
+pydocstyle = ">=6.0"
+pytest = ">=5.2"
+pytest-black = ">=0.3"
+pytest-cov = ">=2.11"
+pytest-flake8 = ">=1.0"
+pytest-mock = ">=3.5"
+pytest-mypy = ">=0.8"
+types-requests = ">=2.25"
+types-PyYAML = ">=5.4"
+types-jsonschema = ">=3.2"
+radon = ">=4.0"
+sphinxcontrib-programoutput = ">=0.17"
+# pyinstaller = ">=4.3"
+# staticx = ">=0.13.8"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.8"]
+
+[tool.poetry.scripts]
+dt = 'dtcli.__main__:main'
+
+[tool.black]
+line-length = 120
