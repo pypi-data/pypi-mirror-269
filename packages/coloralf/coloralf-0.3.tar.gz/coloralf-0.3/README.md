@@ -1,0 +1,110 @@
+# coloralf
+
+## Info :
+
+This package is all you need for transform and colored your print in the console. 
+It's easy and quick to use, and can be ameliarate the clearness of your output.
+(In the followed informations, sorry for my awful english .....)
+
+
+## Installation & importation : 
+
+Install with :
+
+```
+pip install coloralf
+```
+
+Importation (`as c` is not obligatory but this make coloralf easy to use) :
+
+```python
+import coloralf as c
+```
+
+## All transformation : 
+
+For see all transformation, you can execute : 
+```python
+c.test()
+```
+I write all in details at the end of this description.
+
+
+## Usage :
+
+You can mainly use coloralf in two way : in a f-string or as print function.
+
+### In a f-string :
+
+It's a easy way to make print with different colors. For exemple : 
+For write "Ce chat mignon s'apelle Chouquette" with :
+* `Ce` in red
+* `chat` with a yellow background
+* `mignon` in italic
+* `Chouquette` in underline and light magenta
+You can : 
+```python
+print(f"{c.r}Ce{c.d} {c.by}chat{c.d} {c.ti}mignon{c.d} s'apelle {c.m}{c.tu}Chouqette{c.d}")
+```
+
+You can change color, back, etc., and combine transformation. (You can notice the `c.d`, is for delete/reset all transformation)
+
+### In print function :
+
+It's a quick way to use coloralf. You can directly print a sentence (str) with the wanted transformation : just need to add 'f' before the transformation-code. Excemple : 
+For write "Super librairie" in red : 
+```python
+c.fr("Super librairie")
+```
+
+If you want several transformations, you can use the `f` function : 
+For write "Encore un exemple ..." in underlined (tu), red (r), blink (tb), with green back :
+```python
+c.f("Encore un exemple ...", 'tu.r.tb.bg')
+```
+It's just a combinaison of all transformation-codes join by a `.`
+
+
+
+## List of all transformations :
+
+* FOR PRINT FUNCTION : add a `f` before the transformation-code
+* FOR COLOR : a lighter color, add a `l` before the color-code
+* FOR FORMAT : to reset, replace the `t` by `r`
+* FOR RESET ALL : `c.d` or `c.ra` or `c.rall`
+
+### Font Colors :
+
+* (c.k) Black (for exemple light black : (c.lk))
+* (c.r) Red
+* (c.g) Green
+* (c.y) Yellow
+* (c.b) Blue
+* (c.m) Magenta
+* (c.c) Cyan
+* (c.w) White
+* (c.rfc) Reset font color
+
+### Background Colors :
+
+* (c.bk) Black (for exemple light black : (c.blk))
+* (c.br) Red
+* (c.bg) Green
+* (c.by) Yellow
+* (c.bb) Blue
+* (c.bm) Magenta
+* (c.bc) Cyan
+* (c.bw) White
+* (c.rbc) Reset back color
+
+### Format transformations : 
+
+* (c.ti0) Week intensity
+* (c.ti1) Normal intensity
+* (c.ti2) Strong intensity
+* (c.ti) Italic
+* (c.tu) Underline
+* (c.tu2) Double underline
+* (c.tb) Blink
+* (c.th) Hide
+* (c.tc) Cross
