@@ -1,0 +1,14 @@
+foxessprom/__init__.py,sha256=ojf0EA1Dzl6U5RmDUO91m1Hzritcv5M7N1JCltqyAio,710
+foxessprom/auth.py,sha256=hlvWv6pzzw4VHXShxU8w_C_mz7Fec6fYKQifTmPuD0w,1879
+foxessprom/device.py,sha256=SxFm_CoJ69Rvl6_mtohYDz5xhrsfLkjeH_mpRcQmChg,11053
+foxessprom/metrics.py,sha256=eFhlouyk--rgBCTZZg0gVA3tLMMeS9CdzT0nhPx1uxc,1597
+foxessprom/other.py,sha256=Gz6-kNpQXp8x4pzi6w9Mq5h-1FmSH-zBL8eEW1HDtKg,1872
+foxessprom/request.py,sha256=yxmDmxiS7kYX8hIO1cxUwBeHWq9t4PDzWWiW9ELOzvA,1447
+foxessprom/server.py,sha256=_klOg9nkgE-bBjhSxTCpD7SAW9V55CNxoE_lWDHCMwo,1815
+foxessprom-0.1.1.data/scripts/foxessprom,sha256=U9xfVhiL-gxpo5wr1YTnCY8MnWwlvv-aoYem6gBL1dI,768
+tests/__init__.py,sha256=0xNBqBG5sRzJeoh8TIPZc9JBEOltMjmqWkSTuTWutv4,687
+foxessprom-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+foxessprom-0.1.1.dist-info/METADATA,sha256=hdIf7JFpRB-P4NWEpDGC1QZAnNVLhyNnNp2GmDraiis,1019
+foxessprom-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+foxessprom-0.1.1.dist-info/top_level.txt,sha256=f9eaC9r4exCNZJ_VIc62kEM2ZRr-Z9GAL74g86icvMI,17
+foxessprom-0.1.1.dist-info/RECORD,,

@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: foxessprom
+Version: 0.1.1
+Summary: Prometheus exporter for Fox ESS Inverters (using the Fox Cloud API).
+Home-page: https://github.com/andrewjw/foxessprom
+Author: Andrew Wilkinson
+Author-email: andrewjwilkinson@gmail.com
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pycodestyle ==2.11.1
+Requires-Dist: coveralls ==3.3.1
+Requires-Dist: python-semantic-release ==9.5.0
+Requires-Dist: packaging ==23.2
+Requires-Dist: wheel ==0.43.0
+Requires-Dist: twine ==5.0.0
+Requires-Dist: requests ==2.31.0
+
+Prometheus exporter for Fox ESS Inverters (using the Fox Cloud API)
