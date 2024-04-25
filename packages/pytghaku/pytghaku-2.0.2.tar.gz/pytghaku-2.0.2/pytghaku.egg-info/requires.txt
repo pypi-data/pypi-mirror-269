@@ -1,0 +1,14 @@
+aiohttp>=3.9.3
+ntgcalls>=1.2.0
+psutil
+screeninfo
+deprecation
+
+[haku]
+haku==1.0
+
+[hydrogram]
+hydrogram>=0.1.4
+
+[telethon]
+telethon>=1.24.0
