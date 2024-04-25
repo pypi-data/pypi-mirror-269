@@ -1,0 +1,4 @@
+[console_scripts]
+bin=bin.main:main
+sbin=bin.main:main
+
