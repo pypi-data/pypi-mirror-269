@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: keapi-robotics
+Version: 1.0.0
+Summary: A API to communicate with a KEBA PLC via WebSockets
+Author: Sebastian Redinger
+Author-email: sebastian.redinger@fsbondtec.at
+License: MIT
+Keywords: keapi
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: websocket-client ==1.4.1
+Provides-Extra: docs
+Requires-Dist: Sphinx >=5.2 ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme >=1.0 ; extra == 'docs'
+
+# KeApi
+[![Documentation Status](https://readthedocs.org/projects/keapi/badge/?version=latest)](https://keapi.readthedocs.io/en/latest/?badge=latest)
+[![Publish 📦 to PyPI](https://github.com/SebastianRedinger/keapi/actions/workflows/python-publish-to-pypi.yml/badge.svg)](https://github.com/SebastianRedinger/keapi/actions/workflows/python-publish-to-pypi.yml)
+[![PyPI version](https://img.shields.io/pypi/v/keapi-robotics)](https://pypi.org/project/keapi-robotics/)
+
+
+
+KeApi is a Python package for communicating and
+sending commands to your KEBA PLC via Web Sockets.
+
+Note: This package is not affiliated with KEBA AG
+
+## Who is this package for?
+If you have a KEBA PLC and want to send commands to
+it or monitor the state of it.
+
+### Requirements
+**RobotControl WebAPI 1.2.0**  
+**RobotControl API 1.2.0**  
+
+## Key Features
+- Start and execute commands on the PLC
+- Set and receive variables on the PLC
+- Subscribe to cyclic and event based topics
+
+## Documentation
+The full documentation can be found at https://keapi.readthedocs.io
+
+## Getting Started
+### Installation
+To install this package you can either use `python3 setup.py install` or `pip3 install keapi-robotics`
+
+### Usage
+To get startet you first need to connect to the applicalbe web sockets.
+
+```
+auth = ka.AuthMgr()
+auth.login("IP", "ROBOT", "USERNAME", "PASSWORD")
+
+# Connect to Servers
+cmdserver = ka.connect_commands(auth)
+subserver = ka.connect_subscriber(auth)
+```
+
+Once connected you are all set to send commands or subscribe to events.
+
+#### Example
+```
+cmdserver.exec('set_active_client')
+
+pos = {
+    'joints': {
+        'main_joints': [0, 0, 120, 0, 0, 0]
+    }
+}
+ticket = cmdserver.start('path_ptp', position=pos)
+ticket.wait()
+```
