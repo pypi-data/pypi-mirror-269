@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "haystack-studio"
+version = "0.0.1"
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = []
+authors = [{ name = "MJMcM", email = "a@b.c" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+dependencies = ["haystack-ai"]
+
+[project.urls]
+Documentation = "https://github.com/"
+Source = "https://github.com/"
