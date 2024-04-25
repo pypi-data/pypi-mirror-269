@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "winter-cloud"
+version = "0.1.8"
+description = ""
+authors = ["miclon <jcnd@163.com>"]
+readme = "README.md"
+packages = [
+    { include = "winter", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = { extras = ["all"], version = "~0.109.1" }
+sqlmodel = "0.0.14"
+dynaconf = "3.2.4"
+loguru = "0.7.2"
+aiomysql = "0.2.0"
+fastapi-async-sqlalchemy = "0.6.0"
+fastapi-pagination = "0.12.14"
+use-nacos = "^0.1.5"
+use-logger = "~0.1.9"
+
+[tool.poetry.group.dev.dependencies]
+greenlet = "^3.0.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
