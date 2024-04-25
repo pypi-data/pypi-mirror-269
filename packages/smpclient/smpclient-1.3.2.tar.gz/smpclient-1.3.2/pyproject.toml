@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "smpclient"
+version = "0"
+description = "Simple Management Protocol (SMP) Client for remotely managing MCU firmware"
+authors = [
+    "J.P. Hutchins <jphutchins@gmail.com>",
+    "J.P. Hutchins <jp@intercreate.io"
+]
+readme = "README.md"
+license = "Apache-2.0"
+packages = [
+    { include = "smpclient" },
+]
+
+[tool.poetry.scripts]
+mcuimg = "smpclient.mcuboot:mcuimg"
+
+[tool.poetry-version-plugin]
+source = "git-tag"
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.13"
+pyserial = "^3.5"
+smp = "^0.3.4"
+intelhex = "^2.3.0"
+bleak = "^0.21.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-cov = "^4.1.0"
+black = "^23.11.0"
+flake8 = "^6.1.0"
+isort = "^5.12.0"
+mypy = "^1.7.0"
+mypy-extensions = "^1.0.0"
+pytest-asyncio = "^0.23.2"
+types-pyserial = "^3.5.0.11"
+
+[tool.black]
+line-length = 100
+skip-string-normalization = 1
+
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
+
+[tool.mypy]
+disallow_untyped_defs = true
+exclude = ['.venv']
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore:The --rsyncdir:DeprecationWarning",
+]
