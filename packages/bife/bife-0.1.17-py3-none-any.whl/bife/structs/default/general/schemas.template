@@ -1,0 +1,13 @@
+from pydantic import BaseModel
+
+
+class ${module_name_capital}Schema(BaseModel):
+    name: str
+
+
+class Create${module_name_capital}Schema(BaseModel):
+    name: str
+
+
+class ${module_name_capital}UpdateSchema(BaseModel):
+    name: str
