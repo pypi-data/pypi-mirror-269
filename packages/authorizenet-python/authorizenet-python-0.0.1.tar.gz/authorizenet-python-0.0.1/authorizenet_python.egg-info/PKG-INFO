@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: authorizenet-python
+Version: 0.0.1
+Summary: A simple interface to the Authorize.Net APIs
+Author: Jake Williamson
+Author-email: <brianjw88@gmail.com>
+Keywords: python,authorize.net,authorize
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+Requires-Dist: pydantic
