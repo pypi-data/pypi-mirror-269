@@ -1,0 +1,346 @@
+# Introduction
+
+<!--
+https://realpython.com/ggplot-python/
+https://coderzcolumn.com/tutorials/data-science/plotnine-annotations
+-->
+
+\section{What is ggcorrplot?}
+
+[ggcorrplot](https://pypi.org/project/ggcorrplot/) is a library for visualization a correlation matrix. The **ggcorrplot** package can be used to **visualize easily** a **correlation matrix** using [plotnine](https://plotnine.readthedocs.io/en/stable/). It provides a solution for **reordering** the correlation matrix and displays the **significance level** on the correlogram. It includes also a function for computing a matrix of **correlation p-values**. 
+
+The only prerequisite for installing **ggcorrplot** is Python itself. 
+
+ggcorrplot can be installed with ``pip``.
+
+\section{Installation}
+
+ggcorrplot can be installed from ``pypi`` as follow : 
+
+```{python,eval = FALSE}
+pip install ggcorrplot
+```
+
+\section{Dependencies}
+
+ggcorrplot requires :
+
+
+```{python,eval=FALSE}
+Python 3
+numpy>=1.24.2
+pandas>=2.0.0
+plotnine>=0.10.1
+scipy>=1.10.1
+plydata>=0.4.3
+```
+
+\section{Usage}
+
+Find out more \href{https://github.com/enfantbenidedieu/ggcorrplot/blob/master/ggcorrplot.ipynb}{https://github.com/enfantbenidedieu/ggcorrplot/blob/master/ggcorrplot.ipynb}.
+
+
+# Code Reference
+
+[ggcorrplot](https://pypi.org/project/ggcorrplot/) provides multiple functions.
+
+
+\section{get\_melt}
+
+Unpivot a DataFrame from wide to long format, optionally leaving identifiers set.
+
+```{python,eval=FALSE}
+get_melt(x)
+```
+
+
+\subsubsection*{Parameters :}
+
+* ``x`` ([DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)) : DataFrame to melt.
+
+\subsubsection*{Return :}
+
+* Unpivoted DataFrame.
+
+
+```{python}
+# Example
+from ggcorrplot import *
+from plotnine.data import mtcars
+from plydata import *
+
+# head
+print(mtcars >> head(6))
+```
+
+Set the DataFrame index using columns `name`.
+
+```{python}
+# Set index
+mtcars = mtcars.set_index('name')
+print(mtcars >> head(6))
+```
+
+
+```{python}
+# Correlation Matrix
+corr = mtcars.corr(method = "pearson").round(2)
+print(corr)
+```
+
+
+```{python}
+# Unpivoted DataFrame
+print(get_melt(corr))
+```
+
+
+\section{match\_arg}
+
+Argument verification using partial matching.
+
+```{python,eval = FALSE}
+match_arg(x)
+```
+
+
+\subsubsection*{Parameters :}
+
+* ``x`` ([str](https://docs.python.org/3/library/stdtypes.html#str)) : string argument.
+* ``arg`` ([list](https://docs.python.org/3/library/stdtypes.html#list)) : a list of candidate values.
+
+\subsubsection*{Return : }
+
+* The unabbreviated version of the exact or unique partial match if there is one.
+
+
+```{python}
+# match arguments
+lst = ["gaussian", "epanechnikov", "rectangular", "triangular"]
+print(match_arg("gaussian", lst))
+```
+
+
+\section{get\_upper\_tri}
+
+Get upper triangle of the correlation matrix.
+
+```{python, eval=FALSE}
+get_upper_tri(cormat,show_diag = False)
+```
+
+\subsubsection*{Parameters :}
+
+* ``cormat`` ([DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)) : Correlation Matrix.
+* ``show_diag`` ([bool](https://docs.python.org/3/library/functions.html#bool)) : boolean. If ``True``, displays the correlation coefficients.
+
+\subsubsection*{Return : }
+* Upper triangle of a correlation matrix.
+
+
+```{python}
+# show_diag = False
+print(get_upper_tri(corr,show_diag = False))
+```
+
+```{python}
+# show_diag = True
+print(get_upper_tri(corr,show_diag = True))
+```
+
+
+\section{get\_lower\_tri}
+
+Get lower triangle of the correlation matrix.
+
+```{python, eval=FALSE}
+get_lower_tri(cormat,show_diag=False)
+```
+
+\subsubsection*{Parameters :}
+
+* ``cormat`` ([DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)) : Correlation Matrix.
+* ``show_diag`` ([bool](https://docs.python.org/3/library/functions.html#bool)) : boolean. If ``True``, displays the correlation coefficients.
+
+\subsubsection*{Return :}
+
+* Lower triangle of a correlation matrix.
+
+
+```{python}
+# show_diag = False
+get_lower_tri(corr,show_diag=False)
+```
+
+```{python}
+# show_diag = True
+get_lower_tri(corr,show_diag=True)
+```
+
+
+\section{cor\_pmat}
+
+Compute a correlation matrix p-values.
+
+```{python,eval=FALSE}
+cor_pmat(x,**kwargs)
+```
+
+\subsubsection*{Parameters :}
+
+* ``x`` ([DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)) : DataFrame containing multiple variables and observations. Each column represents a variable, and each row a single observation of all those variables.
+* ``**kwargs`` : other arguments to be passed to the function [pearsonr]( https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html).
+
+\subsubsection*{Return :}
+
+* DataFrame containing the p-values of correlations.
+
+```{python}
+# Computing correlation matrix with p-values 
+cor_pmat(mtcars)
+```
+
+
+\section{remove\_diag}
+
+Fill the main diagonal of the correlation matrix with NA.
+
+```{python,eval=FALSE}
+remove_diag(cormat)
+```
+
+\subsubsection*{Parameters :}
+
+* ``cormat`` ([DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)) : Correlation Matrix.
+
+\subsubsection*{Return :}
+
+* This function modifies the input array in-place.
+
+```{python}
+# Remove diagonal
+print(remove_diag(corr))
+```
+
+
+
+\section{ggcorrplot}
+
+A graphical display of a Correlation Matrix using [plotnine](https://plotnine.readthedocs.io/en/stable/).
+
+```{python,eval=FALSE}
+ggcorrplot(x,method = "square",type = "full",ggtheme = plotnine.theme_minimal(),
+           title = None,show_legend = True,legend_title = "Corr",show_diag = None,
+           colors = ["blue","white","red"],outline_color = "gray",hc_order = False,
+           hc_method = "complete",lab = False,lab_col = "black",lab_size = 11,
+           p_mat = None,sig_level=0.05,insig = "pch",pch = 4,pch_col = "black",
+           pch_cex = 5,tl_cex = 12,tl_col = "black",tl_srt = 45,digits = 2)
+```
+
+\subsubsection*{Parameters :}
+
+* ``x`` ([DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)) : DataFrame containing multiple variables and observations. Each column represents a variable, and each row a single observation of all those variables.
+* ``method`` ([str](https://docs.python.org/3/library/stdtypes.html#str)) : the visualization method of correlation matrix to be used. Allowed values are ``square`` (default), ``circle``.
+* ``type`` ([str](https://docs.python.org/3/library/stdtypes.html#str)) : ``full`` (default), ``lower`` or ``upper`` display.
+* ``ggtheme`` ([theme](https://plotnine.readthedocs.io/en/stable/generated/plotnine.themes.theme.html)) : plotnine function. Default value is ``theme_minimal``. Allowed values are the official plotnine themes including ``theme_gray``, ``theme_bw``, ``theme_minimal``, ``theme_classic``, ``theme_void``.
+* ``title`` ([str](https://docs.python.org/3/library/stdtypes.html#str)) : title of the graph
+* ``show_legend`` ([bool](https://docs.python.org/3/library/functions.html#bool)) : if ``True`` the legend is displayed.
+* ``legend_title`` ([str](https://docs.python.org/3/library/stdtypes.html#str)) : legend title. lower triangular, upper triangular or full matrix.
+* ``show_diag`` ([None](https://docs.python.org/3/library/constants.html)|[bool](https://docs.python.org/3/library/functions.html#bool)) : Whether display the correlation coefficients on the principal diagonal. If ``None``, the default is to show diagonal correlation for ``type=full`` and to remove it when the type is one of ``upper`` or ``lower``.
+* ``colors`` ([list](https://docs.python.org/3/library/stdtypes.html#list)) : a list of 3 colors for low, mid and high correlation values.
+* ``outline_color`` ([str](https://docs.python.org/3/library/stdtypes.html#str)) : the outline color of squared or circle. Default value is ``gray``.
+* ``hc_order`` ([bool](https://docs.python.org/3/library/functions.html#bool)) : if ``True``, correlation matrix will be hc_ordered using [linkage]( https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html) function.
+* ``hc_method`` ([str](https://docs.python.org/3/library/stdtypes.html#str)) : the linkage method to be used in [linkage]( https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html) function.
+* ``lab`` ([bool](https://docs.python.org/3/library/functions.html#bool)) : if ``True``, add correlation coefficient on the plot.
+* ``lab_col`` ([str](https://docs.python.org/3/library/stdtypes.html#str)) :  color to be used for the correlation coefficient labels, used when ``lab=True``.
+* ``lab_size`` ([int](https://docs.python.org/3/library/functions.html#int)) : size to be used for correlation coefficient labels, used when ``lab=True``.
+* ``p_mat`` ([DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)) : DataFrame of p-value. If ``None``, arguments ``sig_level``, ``insig``, ``pch``, ``pch_col``, ``pch_cex`` is invalid.
+* ``sig_level`` ([float](https://docs.python.org/3/library/functions.html#float)) :significant level, if the p-value in p_mat is bigger that sig_level, then the corresponding correlation coefficient is regarded as insignificant.
+* ``insig`` ([str](https://docs.python.org/3/library/stdtypes.html#str)) : specialized insignificant correlation coefficients,  ``pch`` (default), ``blank``. If ``blank``, wipe away the corresponding glyphs; if ``pch``, add string (see ``pch`` for details) on corresponding glyphs.
+* ``pch`` ([int](https://docs.python.org/3/library/functions.html#int)) : add string on the glyphs of insignificant correlation coefficients (only valid when insig is ``pch``). Default value is 4.
+* ``pch_col`` ([str](https://docs.python.org/3/library/stdtypes.html#str)) : the color of pch (only valid when insig is ``pch``).
+* ``pch_cex`` ([int](https://docs.python.org/3/library/functions.html#int)) : the cex (size) of pch (only valid when insig is ``pch``).
+* ``tl_cex`` ([int](https://docs.python.org/3/library/functions.html#int)) : the size of text label (variable names).
+* ``tl_col`` ([str](https://docs.python.org/3/library/stdtypes.html#str)) : the color of text label (variable names).
+* ``tl_srt`` ([int](https://docs.python.org/3/library/functions.html#int)) : the integer rotation of text label (variable names).
+* ``digits`` ([int](https://docs.python.org/3/library/functions.html#int)) : Decides the number of decimal digits to be displayed (Default : ``2``).
+
+\subsubsection*{Visualizing the correlation matrix using different methods}
+
+```{python}
+# Visualizing the correlation matrix using "square" (default) method
+p = ggcorrplot(mtcars,method="square")
+print(p)
+```
+
+
+
+```{python}
+# Visualizing the correlation matrix using "circle" method
+p = ggcorrplot(mtcars,method="circle")
+print(p)
+```
+
+\subsubsection*{Visualizing correlation matrix using different layouts}
+
+
+```{python}
+# Visualizing upper triangle layouts
+p = ggcorrplot(mtcars,type ="upper",outline_color ="white")
+print(p)
+```
+
+```{python}
+# Visualizing lower triangle layouts
+p = ggcorrplot(mtcars,type ="lower",outline_color ="white")
+print(p)
+```
+
+\subsubsection*{Reordering of the correlation matrix}
+
+```{python}
+# Visualizing and reordering correlation matrix
+p = ggcorrplot(mtcars, hc_order =True,outline_color ="white")
+print(p)
+```
+
+\subsubsection*{Introducing correlation coefficient}
+
+We will now visualize our correlation matrix by adding the correlation coefficient using the **ggcorrplot** function and providing correlation matrix, ``hc_order``, ``type``, and ``lower`` variables as arguments.
+
+```{python}
+# Adding the correlation coefficient
+p = ggcorrplot(mtcars, hc_order =True, type ="lower",lab =True)
+print(p)
+```
+
+\subsubsection*{Adding significance level}
+
+Basically, the significance level is denoted by alpha. We compare the significance level to p-values to check whether the correlation between variables is significant or not. If p-value is less than equal to alpha, then the correlation is significant else, non-significant.
+
+We will visualize our correlation matrix by adding significance level not taking any significant coefficient. We will do this using the **ggcorrplot** function and taking arguments as our correlation matrix, ``hc_order``, ``type``, and our correlation matrix with p-values.
+
+
+```{python}
+# Computing correlation matrix with p-values
+corrp_mat = cor_pmat(mtcars)
+# Adding correlation significance level
+p = ggcorrplot(mtcars,hc_order=True, type ="lower",p_mat = corrp_mat)
+print(p)
+```
+
+
+
+\subsubsection*{Leaving blank on no significance level}
+
+We will now visualize our correlation matrix by leaving a blank where there is no significance level. In the previous example, we added a significance level to our correlation matrix. Here, we will remove those parts of the correlation matrix where we did not find any significance level.
+
+We will do this using the **ggcorrplot** function and take arguments like our correlation matrix, correlation matrix with p-values, ``hc_order``, ``type`` and ``insig``.
+
+
+```{python}
+# Leaving blank on no significance level
+p = ggcorrplot(mtcars,hc_order=True,type ="lower",p_mat=corrp_mat,insig="blank")
+print(p)
+```
+

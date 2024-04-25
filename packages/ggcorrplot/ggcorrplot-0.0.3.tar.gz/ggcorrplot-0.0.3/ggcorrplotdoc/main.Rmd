@@ -1,0 +1,167 @@
+---
+title: "**ggcorrplot : Visualization of a Correlation Matrix using [plotnine](https://plotnine.readthedocs.io/en/stable/)**"
+subtitle: "version 0.0.2"
+author: "Duvérier DJIFACK ZEBAZE"
+#date: "`r format(Sys.Date(), '%d %B %Y')`"
+geometry: "left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm, twoside=true"
+documentclass: report
+fontsize: 11pt
+line-height: 1.5
+urlcolor: blue
+linkcolor: blue
+link-citations : yes
+nocite:
+- "@harris2020array"
+- "@reback2020pandas"
+- "@2020SciPy-NMeth"
+output: 
+  pdf_document:
+    # extra_dependencies: ["float"]
+    extra_dependencies: ["flafter"]
+    #highlight: tango   # haddock, pygments, zenburn, kate, monochrome, espresso, breezedark, arrow, rstudio, default
+    highlight: kate
+    number_sections : yes
+    # fig_caption: yes
+    # toc: true  
+    toc_depth : 6
+    df_print: kable
+    latex_engine: xelatex
+# toc-title: Sommaire
+# mainfont: Times New Roman
+papersize: a4
+bibliography: references.bib
+biblio-style: apalike
+header-includes:
+- \usepackage{pbox}
+- \usepackage{caption}
+- \usepackage{subcaption}
+- \usepackage{natbib}
+- \usepackage[utf8]{inputenc} # Caractères spéciaux
+- \usepackage[english]{babel}
+- \usepackage{amsmath, amsfonts, amssymb}   #Symboles mathématiques
+- \usepackage{amsfonts}
+- \usepackage{minitoc} # [undotted] pour supprimer les pointillés
+- \mtcsetdepth{minitoc}{1} # 1 section, 2 sous-section 3 sous-sous-section
+- \mtcsettitle{minitoc}{Sommaire} # Changer le titre
+- \usepackage{diagbox}
+- \usepackage{lettrine}
+- \captionsetup{font=scriptsize}
+- \usepackage{booktabs}
+- \usepackage{longtable}
+- \usepackage{array}
+- \usepackage{multirow}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{colortbl}
+- \usepackage{pdflscape}
+- \usepackage{tabu}
+- \usepackage{threeparttable}
+- \usepackage{threeparttablex}
+- \usepackage[normalem]{ulem}
+- \usepackage{makecell}
+- \usepackage{xcolor}
+- \usepackage{minitoc}
+- \usepackage[Bjornstrup]{fncychap}
+#- \usepackage[Conny]{fncychap} 
+#- \usepackage[pdftex]{pict2e}
+- \usepackage[dvipsnames]{xcolor}
+- \usepackage{fourier-orns}
+- \usepackage{fancyhdr}
+- \usepackage{geometry}
+- \geometry{a4paper,total={210mm,297mm},left=25mm,right=25mm,top=25mm,bottom=25mm}
+- \usepackage[printsolution=true]{exercises}
+- \usepackage{tikz}
+# - \usepackage{fancyhdr}
+# - \pagestyle{fancy}
+# - \fancyhead[CO,CE]{This is fancy header}
+# - \fancyfoot[CO,CE]{And this is a fancy footer}
+# - \fancyfoot[LE,RO]{\thepage}
+#- \captionsetup[figure]{font=scriptsize}
+
+
+---
+
+
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{% <---- BEWARE
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+
+\fancypagestyle{mystyle}{%
+    \fancyhead[LE]{\nouppercase{\thepage\hfill\leftmark}}
+    \fancyhead[RO]{\nouppercase{\rightmark\hfill\thepage}}
+    \fancyfoot[LE,RO]{\thepage}
+}
+
+\newtheorem{exemple}{Exemple}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{propriete}{Propriété}[chapter]
+\newtheorem{definition}{Définition}[chapter]
+\newtheorem{remarque}{Remarque}[chapter]
+\newtheorem{exercice}{Exercice}[chapter]
+\newtheorem{theoreme}{Theorème}[chapter]
+\newtheorem{hypothese}{Hypothèse}[chapter]
+
+<!--raccourcie de la partie entière-->
+\newcommand{\floor}[1]{\lfloor #1 \rfloor} <!-- Partie entière inférieure -->
+\newcommand{\ceil}[1]{\lceil #1 \rceil} <!-- Partie entière supérieure -->
+
+\mtcsetdepth{minitoc}{1} 
+\mtcsettitle{minitoc}{Sommaire}
+\newcommand{\Chapter}[1]{\chapter{#1}\minitoc}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1.15ex}
+
+\newpage
+\dominitoc
+\renewcommand{\thepage}{\roman{page}}
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\newpage
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\nouppercase{\thepage\hfill\leftmark}}
+\fancyhead[RO]{\nouppercase{\rightmark\hfill\thepage}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+library(reticulate)
+library(knitr)
+library(kableExtra)
+# library(huxtable)
+knitr::opts_chunk$set(echo = TRUE,message=FALSE, warning=FALSE,fig.pos = "h",
+                      out.extra = "",fig.align = "center",out.width="32%",collapse =  FALSE,
+                      highlight = TRUE)
+options("yaml.eval.expr" = TRUE)
+options(knitr.kable.NA = '')
+options(rstudio.errors.suppressed = FALSE)
+options(error = recover)
+```
+
+```{python, echo = FALSE}
+import warnings
+import matplotlib.pyplot as plt
+import seaborn as sns
+warnings.filterwarnings("ignore")
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
+```
+
+
+```{python child = "intro.Rmd"}
+
+```
+
+
+\newpage
+\chapter*{References}
+\addcontentsline{toc}{chapter}{Reference}
+<!--\bibliographystyle{chicago}-->
+\bibliography{references}

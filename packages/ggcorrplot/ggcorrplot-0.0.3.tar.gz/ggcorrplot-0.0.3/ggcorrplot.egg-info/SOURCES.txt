@@ -1,0 +1,19 @@
+.gitignore
+README.md
+ggcorrplot_example.ipynb
+setup.py
+ggcorrplot/__init__.py
+ggcorrplot/ggcorrplot.py
+ggcorrplot.egg-info/PKG-INFO
+ggcorrplot.egg-info/SOURCES.txt
+ggcorrplot.egg-info/dependency_links.txt
+ggcorrplot.egg-info/requires.txt
+ggcorrplot.egg-info/top_level.txt
+ggcorrplotdoc/.RData
+ggcorrplotdoc/.Rhistory
+ggcorrplotdoc/ggcorrplot documentation.pdf
+ggcorrplotdoc/ggcorrplotdoc.Rproj
+ggcorrplotdoc/intro.Rmd
+ggcorrplotdoc/main.Rmd
+ggcorrplotdoc/main.pdf
+ggcorrplotdoc/references.bib
