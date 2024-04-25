@@ -1,0 +1,2 @@
+[console_scripts]
+pyrobird = pyrobird.cli:pyrobird
