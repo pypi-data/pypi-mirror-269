@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/XPlotLib/BandgapAnalyzer.py
+src/XPlotLib/DOSAnalyzer.py
+src/XPlotLib/XPlotLibUtils.py
+src/XPlotLib/__init__.py
+src/XPlotLib.egg-info/PKG-INFO
+src/XPlotLib.egg-info/SOURCES.txt
+src/XPlotLib.egg-info/dependency_links.txt
+src/XPlotLib.egg-info/requires.txt
+src/XPlotLib.egg-info/top_level.txt
