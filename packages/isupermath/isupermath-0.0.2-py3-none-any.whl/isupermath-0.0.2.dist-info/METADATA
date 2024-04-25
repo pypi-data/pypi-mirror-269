@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: isupermath
+Version: 0.0.2
+Summary: isupermath
+Author: Iffiisyed
+Author-email: iffiisyed@gmail.com
+Keywords: csv,read_csv,readfile,iffiisyed
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pandas
+
+A package to read csv file and make it dataframe
