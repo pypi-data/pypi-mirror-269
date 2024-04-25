@@ -1,0 +1,28 @@
+-- variables: {{ app_database }}, {{ app_readwrite_role }}, and {{ app_user }}
+-- Create the Database
+CREATE DATABASE {{ app_database }};
+
+-- Create the write role
+CREATE ROLE {{ app_readwrite_role }} WITH NOSUPERUSER NOCREATEDB NOCREATEROLE INHERIT NOLOGIN NOREPLICATION NOBYPASSRLS CONNECTION LIMIT -1;
+
+-- Grant permissions to the write role
+GRANT CONNECT ON DATABASE {{ app_database }} TO {{ app_readwrite_role }};
+GRANT USAGE ON SCHEMA public TO {{ app_readwrite_role }};
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO {{ app_readwrite_role }};
+GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO {{ app_readwrite_role }};
+
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO {{ app_readwrite_role }};
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO {{ app_readwrite_role }};
+GRANT ALL PRIVILEGES ON DATABASE {{ app_database }} TO {{ app_readwrite_role }};
+
+-- Set default privileges for the write role
+ALTER DEFAULT PRIVILEGES FOR USER {{ app_readwrite_role }} IN SCHEMA public GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO {{ app_readwrite_role }};
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT, USAGE, UPDATE ON SEQUENCES TO {{ app_readwrite_role }};
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT EXECUTE ON FUNCTIONS TO {{ app_readwrite_role }};
+
+-- Create the application user and grant write role to it
+CREATE USER {{ app_user }} WITH PASSWORD '{{ app_user_pass|safe }}' NOSUPERUSER NOCREATEDB NOCREATEROLE INHERIT LOGIN NOREPLICATION NOBYPASSRLS CONNECTION LIMIT -1;
+GRANT {{ app_readwrite_role }} TO {{ app_user }};
+
+-- Set the owner of the database
+ALTER DATABASE {{ app_database }} OWNER TO {{ app_readwrite_role }};
