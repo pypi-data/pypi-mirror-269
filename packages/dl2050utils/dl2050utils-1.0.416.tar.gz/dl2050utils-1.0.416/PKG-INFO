@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dl2050utils
+Version: 1.0.416
+Summary: Utils lib
+Home-page: https://github.com/jn2050/utils
+Download-URL: https://github.com/jn2050/utils/archive/v_1_0_416.tar.gz
+Author: João Neto
+Author-email: joao.filipe.neto@gmail.com
+License: MIT
+Keywords: utils
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE.txt
