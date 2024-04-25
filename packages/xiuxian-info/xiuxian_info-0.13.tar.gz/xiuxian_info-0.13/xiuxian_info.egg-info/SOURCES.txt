@@ -1,0 +1,10 @@
+setup.py
+xiuxian_info/__init__.py
+xiuxian_info/download.py
+xiuxian_info/draw_user_info.py
+xiuxian_info/infoconfig.py
+xiuxian_info/send_image_tool.py
+xiuxian_info.egg-info/PKG-INFO
+xiuxian_info.egg-info/SOURCES.txt
+xiuxian_info.egg-info/dependency_links.txt
+xiuxian_info.egg-info/top_level.txt
