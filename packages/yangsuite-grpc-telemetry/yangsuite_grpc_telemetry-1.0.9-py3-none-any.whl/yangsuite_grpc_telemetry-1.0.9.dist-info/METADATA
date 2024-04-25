@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: yangsuite-grpc-telemetry
+Version: 1.0.9
+Summary: YANG Suite support for gRPC telemetry
+Home-page: https://developer.cisco.com/yangsuite
+Author: Glenn Matthews
+Author-email: yang-suite-dev@cisco.com
+License: Cisco End User License Agreement
+Requires-Python: >3.7
+License-File: LICENSE.txt
+Requires-Dist: yangsuite >=3.0.0
+Requires-Dist: yangsuite-devices
+Requires-Dist: yang.connector
+Requires-Dist: elasticsearch
+
+yangsuite-grpc-telemetry
+========================
+
+YANG Suite application plugin providing support for gRPC dialout telemetry.
+
+=========== =========================
+Author      YANG Suite development team
+Maintainers yang-suite-dev@cisco.com
+=========== =========================
