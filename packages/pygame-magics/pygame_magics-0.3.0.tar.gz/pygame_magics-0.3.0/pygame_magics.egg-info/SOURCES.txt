@@ -1,0 +1,13 @@
+setup.py
+pygame_magics/__init__.py
+pygame_magics.egg-info/PKG-INFO
+pygame_magics.egg-info/SOURCES.txt
+pygame_magics.egg-info/dependency_links.txt
+pygame_magics.egg-info/requires.txt
+pygame_magics.egg-info/top_level.txt
+pygame_magics/camera/__init__.py
+pygame_magics/camera/camera.py
+pygame_magics/entities/__init__.py
+pygame_magics/entities/enemy.py
+pygame_magics/entities/experience_orb.py
+pygame_magics/entities/player.py
