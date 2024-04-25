@@ -1,0 +1,10 @@
+LICENSE
+README.md
+minidb.py
+setup.cfg
+setup.py
+minidb.egg-info/PKG-INFO
+minidb.egg-info/SOURCES.txt
+minidb.egg-info/dependency_links.txt
+minidb.egg-info/top_level.txt
+test/test_minidb.py
