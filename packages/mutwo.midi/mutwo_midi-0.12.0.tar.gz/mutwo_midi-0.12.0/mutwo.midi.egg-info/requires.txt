@@ -1,0 +1,6 @@
+mutwo.core<3.0.0,>=2.0.0
+mutwo.music<1.0.0,>=0.27.0
+mido<2,>=1.2.9
+
+[testing]
+pytest>=7.1.1
