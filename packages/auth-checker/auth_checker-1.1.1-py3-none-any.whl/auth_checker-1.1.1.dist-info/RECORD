@@ -1,0 +1,8 @@
+auth_checker/__init__.py,sha256=YxA6Y3XGriMFXDnvObMmR1iyCGI7ZLyeOOfPxZm4q30,38
+auth_checker/auth_checker.py,sha256=3zWFOAzJfL3djjXRAitkjUPdAJiVITZswpTeA3J7Vcg,2610
+auth_checker/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+auth_checker/tests/test_authchecker.py,sha256=vqRtr5oHzxVk2UI5aabb6YifOQ0dDJgaWwX2joNm-yk,4932
+auth_checker-1.1.1.dist-info/LICENSE,sha256=mp61IaBuWOKZYFHqJvxhXDRBOwUpBtqCJ8WHjQCE4dQ,1102
+auth_checker-1.1.1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+auth_checker-1.1.1.dist-info/METADATA,sha256=-GZ9CO-Tb4KWeMpEJRrJmk2pUsMEEfHSYo-ZXsd7R-s,2189
+auth_checker-1.1.1.dist-info/RECORD,,

@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: auth-checker
+Version: 1.1.1
+Summary: Contains the AuthChecker class for apps using the Auth Service
+Author-email: Ryan Semmler <rsemmle@ncsu.edu>, Luc Sanchez <lgsanche@ncsu.edu>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: fastapi==0.110.2
+Requires-Dist: pyjwt==2.8.0
+Requires-Dist: pytest>=6.2.5, <7.0.0 ; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0, <5.0.0 ; extra == "dev"
+Requires-Dist: pytest-mock>=3.10.0, <4.0.0 ; extra == "dev"
+Requires-Dist: coverage[toml]>=6.2 ; extra == "dev"
+Requires-Dist: black>=23.3.0, <24.0.0 ; extra == "dev"
+Requires-Dist: ruff==0.1.1 ; extra == "dev"
+Requires-Dist: bandit>=1.7.4, <2.0.0 ; extra == "dev"
+Requires-Dist: bandit[toml]>=1.7.4, <2.0.0 ; extra == "dev"
+Requires-Dist: pre-commit>=2.16.0, <3.0.0 ; extra == "dev"
+Requires-Dist: isort>=5.10.1, <6.0.0 ; extra == "dev"
+Requires-Dist: pyupgrade>=2.29.1, <3.0.0 ; extra == "dev"
+Requires-Dist: flit>=3.8.0, <4.0.0 ; extra == "dev"
+Requires-Dist: httpx>=0.27.0, <1.0.0 ; extra == "dev"
+Project-URL: Homepage, https://github.com/ncstate-sat/auth_checker
+Provides-Extra: dev
+
+# Auth Checker
+
+<p align="left">
+<a href="https://pypi.org/project/auth_checker/">
+    <img src="https://img.shields.io/pypi/v/auth_checker.svg"
+        alt = "Release Status">
+</a>
+
+
+A library for authorizing users based on their assigned roles, parsed from their JWT payload.
+
+
+</p>
+
+
+
+* Free software: MIT
+
+## Usage
+
+#### Authorize a read operation
+
+```python
+from auth_checker import AuthChecker
+from fastapi import APIRouter, Depends
+
+# authorize a user with "personnel_read" permissions to look up personnel
+@router.get("", tags=["Personnel"], dependencies=[Depends(AuthChecker("personnel_read"))])
+```
+
+#### Authorize an update operation
+
+```python
+from auth_checker import AuthChecker
+from fastapi import APIRouter, Depends
+
+# authorize a user with "personnel_write" permissions to disable personnel
+@router.post("/disable", tags=["Personnel"], dependencies=[Depends(AuthChecker("personnel_write"))])
+
