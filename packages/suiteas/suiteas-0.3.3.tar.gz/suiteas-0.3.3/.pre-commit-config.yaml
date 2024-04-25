@@ -1,0 +1,77 @@
+default_stages:
+  [
+    commit,
+    merge-commit,
+    push,
+    prepare-commit-msg,
+    commit-msg,
+    post-checkout,
+    post-commit,
+    post-merge,
+    post-rewrite,
+    manual,
+  ]
+ci:
+  autofix_prs: false
+repos:
+  - repo: local
+    hooks:
+      - id: forbidden-files
+        name: forbidden files
+        entry: found Copier update rejection files; review them and remove them
+        language: fail
+        files: "\\.rej$"
+      - id: setuptools_scm
+        name: setuptools_scm
+        entry: python -m setuptools_scm -c
+        additional_dependencies: [setuptools_scm]
+        language: python
+        files: ^pyproject.toml$
+
+  - repo: https://github.com/lk16/detect-missing-init
+    rev: v0.1.6
+    hooks:
+      - id: detect-missing-init
+        args:
+          [
+            "--create",
+            "--python-folders",
+            "src/suiteas,src/suiteas_test,tests/unit,tests/integr",
+          ]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-merge-conflict
+        args: [--assume-in-merge]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.2.2 # Sync with pyproject.toml
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.8.0 # Sync with pyproject.toml
+    hooks:
+      - id: mypy
+        args: ["."]
+        pass_filenames: false
+        additional_dependencies:
+          # Sync with pyproject.toml
+          - "pydantic>=2.4.2"
+          - "tomli>=2.0.1"
+          - "python-dotenv==1.0.0"
+
+  - repo: local
+    hooks:
+      - id: suiteas
+        name: suiteas
+        entry: python -m suiteas_hook
+        language: python
+        types: [python]
+        require_serial: true
+        additional_dependencies:
+          # Sync with pyproject.toml
+          - "pydantic>=2.4.2"
+          - "tomli>=2.0.1"

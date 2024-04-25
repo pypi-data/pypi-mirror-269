@@ -1,0 +1,33 @@
+...@config
+
+Project: {
+  class: main_block
+  Main Codebase: {class: codebase}
+  Test Suite: {class: codebase}
+}
+
+Project.Test Suite -> SuiteAs.Validate Suite Structure
+Project.Test Suite -> SuiteAs.Enforce Suite Structure
+
+Developer: {class: person}
+Developer -> SuiteAs.Validate Suite Structure
+Developer -> SuiteAs.Enforce Suite Structure
+
+SuiteAs: {
+  class: main_block
+  Find New Suite Structure: {class: process}
+  Validate Suite Structure: {class: process}
+  Enforce Suite Structure: {class: process}
+  New Suite Structure: {class: codebase}
+
+  Find New Suite Structure -> New Suite Structure
+  New Suite Structure -> Validate Suite Structure
+  New Suite Structure -> Enforce Suite Structure
+}
+
+Pass/Fail: {class: stop}
+
+Project -> SuiteAs.Find New Suite Structure
+
+SuiteAs.Validate Suite Structure -> Pass/Fail
+SuiteAs.Enforce Suite Structure -> Project.Test Suite
