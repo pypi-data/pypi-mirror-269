@@ -1,0 +1,2 @@
+[console_scripts]
+HoundAnalyser = HoundAnalyser.__main__:main
