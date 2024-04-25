@@ -1,0 +1,38 @@
+baseline_year: 2020
+
+herd_relation_dict:
+  Cattle:
+    DxD_calves_f: ["dairy_cows"]
+    DxD_calves_m: ["dairy_cows"]
+    DxB_calves_f: ["dairy_cows"]
+    DxB_calves_m: ["dairy_cows"]
+    BxB_calves_f: ["suckler_cows"]
+    BxB_calves_m: ["suckler_cows"]
+    DxD_heifers_less_2_yr: ["dairy_cows"]
+    DxD_steers_less_2_yr: ["dairy_cows"]
+    DxB_heifers_less_2_yr: ["dairy_cows"]
+    DxB_steers_less_2_yr: ["dairy_cows"]
+    BxB_heifers_less_2_yr: ["suckler_cows"]
+    BxB_steers_less_2_yr: ["suckler_cows"]
+    DxD_heifers_more_2_yr: ["dairy_cows"]
+    DxD_steers_more_2_yr: ["dairy_cows"]
+    DxB_heifers_more_2_yr: ["dairy_cows"]
+    DxB_steers_more_2_yr: ["dairy_cows"]
+    BxB_heifers_more_2_yr: ["suckler_cows"]
+    BxB_steers_more_2_yr: ["suckler_cows"]
+    bulls: ["dairy_cows", "suckler_cows"]
+  Sheep:
+    Lowland lamb_less_1_yr: ["Lowland ewes"]
+    Lowland male_less_1_yr: ["Lowland ewes"]
+    Lowland lamb_more_1_yr: ["Lowland ewes"]
+    Lowland ram: ["Lowland ewes"]
+    Upland lamb_less_1_yr: ["Upland ewes"]
+    Upland male_less_1_yr: ["Upland ewes"]
+    Upland lamb_more_1_yr: ["Upland ewes"]
+    Upland ram: ["Upland ewes"]
+
+ewe_split_dict:
+  Lowland ewes: 0.8
+  Upland ewes: 0.2
+
+ewe_proportion: 0.505296592043949

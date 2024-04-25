@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "catchment_data_api"
+version = "0.1.0"
+description = "API for retrieval of catchment data for land cover and livestock"
+authors = ["Colm Duffy"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "2.1.4"
+numpy = "^1.25.0"
+sqlalchemy = "^1.4.0"
+pyyaml = "^6.0.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
