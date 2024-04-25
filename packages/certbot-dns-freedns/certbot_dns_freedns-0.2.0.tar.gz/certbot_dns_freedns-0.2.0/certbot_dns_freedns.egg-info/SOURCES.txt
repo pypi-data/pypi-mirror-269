@@ -1,0 +1,13 @@
+LICENSE.txt
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+certbot_dns_freedns/__init__.py
+certbot_dns_freedns/dns_freedns.py
+certbot_dns_freedns.egg-info/PKG-INFO
+certbot_dns_freedns.egg-info/SOURCES.txt
+certbot_dns_freedns.egg-info/dependency_links.txt
+certbot_dns_freedns.egg-info/entry_points.txt
+certbot_dns_freedns.egg-info/requires.txt
+certbot_dns_freedns.egg-info/top_level.txt

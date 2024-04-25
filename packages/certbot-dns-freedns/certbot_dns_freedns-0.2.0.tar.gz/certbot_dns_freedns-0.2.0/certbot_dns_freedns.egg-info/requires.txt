@@ -1,0 +1,5 @@
+acme>=1.22.0
+certbot>=1.22.0
+setuptools
+requests>=2.26.0
+bs4>=0.0.1
