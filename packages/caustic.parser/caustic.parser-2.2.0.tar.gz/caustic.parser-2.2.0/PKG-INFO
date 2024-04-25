@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: caustic.parser
+Version: 2.2.0
+Summary: Caustic's parsing framework
+Author: Shae.c32
+Project-URL: Homepage, https://codeberg.org/Caustic/CausticParser
+Project-URL: Issues, https://codeberg.org/Caustic/CausticParser/issues
+Keywords: caustic,language,parser,syntax,grammar
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Other
+Classifier: Topic :: File Formats
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Topic :: Software Development :: Interpreters
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: cli
+Requires-Dist: click; extra == "cli"
+
+Caustic's Parser -- uses grammar specification to compile Caustic source code
+into a [CST (Caustic AST)](https://codeberg.org/Caustic/CausticAST)
+
+Uses [ParGlare](https://github.com/igordejanovic/parglare) for parsing,
+meant to work with [CausticGrammar](https://codeberg.org/Caustic/CausticGrammar)
+to create a [CST (Caustic AST)](https://codeberg.org/Caustic/CausticAST)
+
+
+# CLI usage
+
+See `cap --help`
+
+
+# Example module usage
+
+```python3
+import sys
+import parglare
+from pathlib import Path
+
+from caustic.parser import CausticParser
+from caustic.parser.error import format_exc
+
+# CausticParser.from_file() loads the grammar using ParGlare,
+# then invokes CausticParser.from_grammar(), which creates a ParGlare
+# parser instance and uses that to finally create the parser
+p = CausticParser.from_file(Path('<your-grammar-file>'))
+
+try:
+    print(p.parse(input()))
+except parglare.ParseError as e:
+    # custom error formatting (optional)
+    print(format_exc(e), file=sys.stderr)
+```
