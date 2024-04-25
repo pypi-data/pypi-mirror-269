@@ -1,0 +1,12 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: python-helios-client
+Upstream-Contact: Kip Warner <kip@heliosmusic.io>
+Source: git@github.com:cartesiantheatre/python3-helios-client.git
+Disclaimer: See Copying.
+Comment: See Copying.
+
+Files: *
+Copyright: 2015-2024, Cartesian Theatre Corp.
+License: LGPL
+ /usr/share/common-licenses/LGPL
+

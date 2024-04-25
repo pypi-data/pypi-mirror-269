@@ -1,0 +1,25 @@
+#
+#   Helios.
+#   Copyright (C) 2015-2024 Cartesian Theatre. All rights reserved.
+#
+
+# Functional test to verify module imports without issue...
+Tests: test-import-module.py
+Depends: python3-helios-client
+Restrictions: isolation-container
+
+# Unit test to verify API is working correctly with a live server. Since
+#  containers may not necessarily have network access, we'll use sample songs
+#  from Lincity's data package...
+#
+# The tqdm module outputs its progress bar to stderr, so we need to add that
+#  restriction.
+#
+# We install dependencies through the setup script rather than via the Depends
+#  stanza since we have to ensure helioslicensord(1) is running before
+#  heliosd(1).
+#
+Tests: test-module-usage.py
+Depends: helios-autopkgtest, python3-helios-client, lincity-ng-data
+Restrictions: isolation-container, allow-stderr
+

@@ -1,0 +1,40 @@
+Source: python-helios-client
+Section: python
+Priority: optional
+Maintainer: Cartesian Theatre Packages <packages@cartesiantheatre.com>
+Standards-Version: 4.6.2.0
+Build-Depends:
+    debhelper-compat (= 13),
+    dh-exec,
+    dh-python,
+    lintian,
+    python3-all,
+    python3-attr (>= 18.2.0),
+    python3-marshmallow (>= 3.16.0),
+    python3-brotli,
+    python3-requests,
+    python3-requests-toolbelt,
+    python3-setuptools,
+    python3-simplejson,
+    python3-tqdm,
+    python3-urllib3
+Homepage: https://www.heliosmusic.io
+Vcs-Git: https://www.github.com/cartesiantheatre/python-helios-client.git
+Vcs-Browser: https://github.com/cartesiantheatre/python-helios-client
+Rules-Requires-Root: no
+
+Package: python3-helios-client
+Architecture: all
+Multi-Arch: foreign
+Depends:
+    ${misc:Depends},
+    ${python3:Depends},
+    python3-all,
+    python3-setuptools
+Description: pure Python module to access a remote Helios server (Python 3)
+ Helios is an intelligent music discovery platform.
+ .
+ This is an easy to use public pure Python 3 module that provides an API to
+ communicate with a remote Helios server. The helios-client-utilities package
+ is an example that uses it.
+
