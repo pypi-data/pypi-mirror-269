@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: summers_pack
+Version: 0.0.1
+Summary: For doing calculations like Addition, Multiplication and Subtraction
+Author: Ansh Gupta
+Author-email: Ansh.Gupta@iiitb.ac.in
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: License.txt
+
+# __Basic Calculator for Summer_School__
+Paragraph 1
+__This package contains functions to perform 3 operations:__
+Paragraph 2
+### 1. _add_  
+    -This function adds two numbers and returns the result.
+Paragraph 3
+### 2. _multiply_
+    -This function multiplies two numbers and returns the result.
+Paragraph 4
+### 3. _subtract_
+    -This function subtracts two numbers and returns the result.
