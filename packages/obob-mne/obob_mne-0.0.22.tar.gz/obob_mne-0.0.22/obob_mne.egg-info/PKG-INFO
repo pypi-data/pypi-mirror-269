@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: obob_mne
+Version: 0.0.22
+Summary: I am obob_mne
+Home-page: https://gitlab.com/obob/obob_mne
+Author: Thomas Hartmann
+Author-email: thomas.hartmann@th-ht.de
+License: GPL3
+License-File: LICENSE
+Requires-Dist: mne
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: obob_condor
+Requires-Dist: pandas
+
+# obob_mne
+Welcome to obob_mne
+
+This is teh very first, very preliminary version!

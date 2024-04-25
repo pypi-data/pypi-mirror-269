@@ -1,0 +1,4 @@
+[console_scripts]
+import_subject_to_freesurfer = obob_mne.mri.cmd.import_subject:import_subject
+make_freesurfer_bem = obob_mne.mri.cmd.make_freesurfer_bem:make_freesurfer_bem_cmd
+make_freesurfer_sourcespaces = obob_mne.mri.cmd.make_source_space:make_freesurfer_sourcespaces_cmd
