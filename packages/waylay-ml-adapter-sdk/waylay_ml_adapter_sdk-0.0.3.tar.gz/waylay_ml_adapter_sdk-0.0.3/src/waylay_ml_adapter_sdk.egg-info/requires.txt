@@ -1,0 +1,9 @@
+waylay-ml-adapter-base
+waylay-sdk-registry==2.13.0b20240423
+waylay-sdk-rules==6.5.0.20240423
+tenacity
+
+[dev]
+waylay-ml-adapter-base
+urlpath
+waylay-ml-adapter-devtools
