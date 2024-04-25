@@ -1,0 +1,110 @@
+[project]
+name = "b2-utils"
+version = "0.2.4"
+authors = [
+    { name = "Felipe Sena 🏎️", email = "felipesena@b2bit.company" },
+    { name = "Matheus Abdias 🐧", email = "matheusabdias.b2bit@gmail.com" },
+]
+description = "A useful package provided by B2BIT"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "Django>=4.0.6",
+    "django-model-utils>=4.3.1",
+    "djangorestframework>=3.13.1",
+    "model-bakery>=1.9.0",
+    "Faker>=13.3.4",
+    "Pillow>=9.4.0",
+    "validate-docbr>=1.10.0",
+    "celery>=5.2.7",
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.com/b2bit.felipesena/b2-utils"
+
+[tool.poetry]
+name = "b2-utils"
+version = "0.1.0"
+description = ""
+authors = [
+    "Felipe Sena <felipesena.m@gmail.com>",
+    "Matheus Abdias <matheusabdias.b2bit@gmail.com>",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+wheel = "^0.38.4"
+twine = "^4.0.2"
+tqdm = "^4.64.1"
+build = "^0.9.0"
+validate-docbr = "^1.10.0"
+Faker = "^15.3.4"
+Django = "^4.1.5"
+djangorestframework = "^3.14.0"
+Pillow = "^9.4.0"
+django-model-utils = "^4.3.1"
+model-bakery = "^1.9.0"
+pre-commit = "^3.0.0"
+django-constance = "^2.9.1"
+djangorestframework-simplejwt = "^5.2.2"
+celery = "^5.3.4"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.259"
+ipython = "^8.2.0"
+black = "^22.3.0"
+
+[tool.black]
+preview = true
+exclude = "migrations"
+
+[tool.ruff]
+
+src = ["src"]
+
+exclude = ["*/migrations/*", "manage.py"]
+
+# Rules
+select = [
+    "F",   # Pyflakes
+    "E",   # pycodestyle - Errors
+    "W",   # pycodestyle - Warnings
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "YTT", # flake8-2020
+    "S",   # flake8-bandit
+    "B",   # flake8-bugbear
+    "COM", # flake8-commas
+    "C4",  # flake8-comprehensions
+    "DTZ", # flake8-datetimez
+    "DJ",  # flake8-django
+    "EM",  # flake8-errmsg
+    "EXE", # flake8-executable
+    "FA",  # flake8-future-annotations
+    "ISC", # flake8-implicit-str-concat
+    "ICN", # flake8-import-conventions
+    "G",   # flake8-logging-format
+    "INP", # flake8-no-pep420
+    "PIE", # flake8-pie
+    "T20", # flake8-print
+    "PYI", # flake8-pyi
+    "Q",   # flake8-quotes
+    "RSE", # flake8-raise
+    "RET", # flake8-return
+    "SIM", # flake8-simplify
+    "INT", # flake8-gettext
+    "PL",  # Pylint
+]
+
+ignore = ["DJ001", "E501"]
+target-version = "py311"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
