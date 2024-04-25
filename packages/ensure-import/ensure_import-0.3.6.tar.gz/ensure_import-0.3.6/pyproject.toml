@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "ensure-import"
+version = "0.3.6"
+description = "Auto install third part packages by pip into virtual environment when import error."
+authors = ["Waket Zheng <waketzheng@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/waketzheng/ensure_import"
+packages = [{include = "ensure_import"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = ">=3.4.0"
+pytest-mock = "^3.14.0"
+types-pytz = "*"
+types-six = "*"
+types-ujson = "*"
+fast-dev-cli = {version = "*", python = "^3.11", extras = ["all"]}
+contextlib-chdir = {version="*", python="<3.11"}
+ruff = ">=0.3"
+coverage = "*"
+pytest = "*"
+mypy = "*"
+
+[tool.poetry.scripts]
+prepare="ensure_import.prepare:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+pretty = true
+ignore_missing_imports = true
+check_untyped_defs = true
+
+[tool.ruff.lint]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"_test_*.py" = ["E401", "E402"]
