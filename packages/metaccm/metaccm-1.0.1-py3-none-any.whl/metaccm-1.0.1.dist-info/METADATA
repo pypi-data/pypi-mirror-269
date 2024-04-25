@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: metaccm
+Version: 1.0.1
+Summary: 2024-04-25 10:53:48This is an algorithm for building a Case-Ctrl matching cohort to minimize the influence of confusing variables.
+Home-page: UNKNOWN
+Author: Haiyang Hou
+Author-email: 2868582991@qq.com
+License: UNKNOWN
+Keywords: Case-Ctrl matching
+Platform: UNKNOWN
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: joblib
+Requires-Dist: scikit-learn
+Requires-Dist: peroxymanova
+Requires-Dist: statsmodels
+
+UNKNOWN
+
