@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+cli/__init__.py
+cli/core.py
+cli/utils/__init__.py
+cli/utils/time_utils.py
+cli_log.egg-info/PKG-INFO
+cli_log.egg-info/SOURCES.txt
+cli_log.egg-info/dependency_links.txt
+cli_log.egg-info/requires.txt
+cli_log.egg-info/top_level.txt
