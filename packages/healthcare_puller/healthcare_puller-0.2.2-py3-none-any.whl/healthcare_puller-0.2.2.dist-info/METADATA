@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: healthcare_puller
+Version: 0.2.2
+Summary: 
+Author: Ryan Wiley
+Author-email: wileyrya@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: pytest (>=8.1.1,<9.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: tqdm (>=4.66.2,<5.0.0)
+Description-Content-Type: text/markdown
+
+## Healthcare_Puller
+
+### This project aggregates several functions to pull down various healthcare regulations from various sources
+
+### Current implementations
+* CMS Federal Register Rules
+1. Rule and Prospective Rules (last 1000 but currently around 850 historically)
+2. Public inspection documents on a given date (defaults to the current date)
