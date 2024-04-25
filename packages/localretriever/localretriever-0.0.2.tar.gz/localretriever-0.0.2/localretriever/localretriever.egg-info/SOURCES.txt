@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+localretriever/localretriever.egg-info/PKG-INFO
+localretriever/localretriever.egg-info/SOURCES.txt
+localretriever/localretriever.egg-info/dependency_links.txt
+localretriever/localretriever.egg-info/top_level.txt
