@@ -1,0 +1,14 @@
+tencentcloud/__init__.py,sha256=5YchVPOx7Ty-gtdfcpscQs4_YdOdGN97lg-AdlIwEqU,631
+tencentcloud/ims/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/ims/v20200713/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/ims/v20200713/errorcodes.py,sha256=9r96uUdyUz8x4vTqjeHpsScwbxVbJKP2oetsmeTkh4M,3528
+tencentcloud/ims/v20200713/ims_client.py,sha256=iljCH0YipwS9RPEYx7IV1LbKBqT6Jzqh5LcnwHdk3uo,3228
+tencentcloud/ims/v20200713/models.py,sha256=RCaTnUBvds3g08IxwW2LPNY55ETMlNOuRwvtJaE2ZRc,47176
+tencentcloud/ims/v20201229/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/ims/v20201229/errorcodes.py,sha256=AEhyX1aEzCXHdY6LTWIlJGSSrvG8qK-2JwiuUxEADhI,3752
+tencentcloud/ims/v20201229/ims_client.py,sha256=GKXkKKfOR0SF0iUiPUJaQtAfyAl_80ltj4sFelrrRas,8337
+tencentcloud/ims/v20201229/models.py,sha256=-6y3icns4kQH0YgHY6etcNpmxrfEAUQTWUby2X7Xra0,64923
+tencentcloud_sdk_python_ims-3.0.1136.dist-info/METADATA,sha256=fM0W_ToFleXU_Dm1P8MPwcV3f8HvOz1G_mNcQBPja0E,1492
+tencentcloud_sdk_python_ims-3.0.1136.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tencentcloud_sdk_python_ims-3.0.1136.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_ims-3.0.1136.dist-info/RECORD,,
