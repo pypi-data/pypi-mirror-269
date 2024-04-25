@@ -1,0 +1,14 @@
+staticjinjaplus/__init__.py,sha256=V4FdtLMY_bDWJuj7SgLa_XGA9haxApkikSY2Tumpa3c,4300
+staticjinjaplus/__version__.py,sha256=LyM9mUVOg4-7GD_QQ0739y9k8ltWGfteqZDP06qDXR8,23
+staticjinjaplus/cli.py,sha256=4AoZrx8XGdH0rXVDvi9y8fNFa5_uu6Lpe1u_LFPBL48,6240
+staticjinjaplus/helpers.py,sha256=vRJG_beoOdpcVgYvKdp6OmAlZi22SeqrOD8R9mfJ9GQ,1988
+staticjinjaplus/http.py,sha256=DXAOdxA8mobUTN1vwvrQCw2d5qcvnUWY5UVzU2uwe5I,3084
+staticjinjaplus/jinja.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+staticjinjaplus/jinja_helpers.py,sha256=8EbWs8bPx-MY6KSUAY4nchIsiVOhbJjDdVN9yDB0Rgo,1051
+staticjinjaplus/staticjinja_helpers.py,sha256=W9j1XzEUUPjVHPTXf19gIKVz9b61DOOzs61wfEw8QDQ,4039
+staticjinjaplus-2.0.0.dist-info/LICENSE.md,sha256=8XPAuyiFQ5fKI0BP4GmPF59Tpw2w8Vf1cfzysIukvlQ,1161
+staticjinjaplus-2.0.0.dist-info/METADATA,sha256=rFna4rGdMFXk6Jd5LNohL7O3On-OVk-Z4f8GMKuBLJw,27028
+staticjinjaplus-2.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+staticjinjaplus-2.0.0.dist-info/entry_points.txt,sha256=oQPZ-E5IFsS7Yian1nuNfhUSMY_01eeR8a9OTZ17k4s,60
+staticjinjaplus-2.0.0.dist-info/top_level.txt,sha256=XPmcVN0dm3hbOvIU47qJHCHagkqceHlgavt3rl2V0NA,16
+staticjinjaplus-2.0.0.dist-info/RECORD,,
