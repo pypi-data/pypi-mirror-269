@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: cnspy_timestamp_association
+Version: 0.2.0
+Summary: Associates vectors of timestamps.
+Home-page: https://github.com/aau-cns/cnspy_timestamp_association/
+Author: Roland Jung
+Author-email: roland.jung@aau.at
+Project-URL: Bug Tracker, https://github.com/aau-cns/cnspy_timestamp_association/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: numpy
+
+# cnspy_timestamp_association
+
+The class `TimestampAssociation` finds correspondences between to vectors, in our case containing timestamps. The aim is to find timestamp pairs with a configurable  `max_difference`.
+
+## Installation
+
+Install the current code base from GitHub and pip install a link to that cloned copy
+```
+git clone https://github.com/aau-cns/cnspy_timestamp_association.git
+cd cnspy_timestamp_association
+pip install -e .
+```
+or the [official package](https://pypi.org/project/cnspy-timestamp-association/) via
+```commandline
+pip install cnspy-timestamp-association
+```
+
+## Dependencies
+
+It is part of the [cnspy eco-system](hhttps://github.com/aau-cns/cnspy_eco_system_test) of the [cns-github](https://github.com/aau-cns) group.  
+
+* [numpy]()
+
+## Examples
+
+Please refer to the unit-test section in `TimestampAssociation.py`.
+
+## License
+
+Software License Agreement (GNU GPLv3  License), refer to the LICENSE file.
+
+*Sharing is caring!* - [Roland Jung](https://github.com/jungr-ait)
