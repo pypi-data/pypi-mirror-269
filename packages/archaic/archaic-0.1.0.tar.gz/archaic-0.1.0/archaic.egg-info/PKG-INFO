@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: archaic
+Version: 0.1.0
+Summary: Simplifies handling of ArcPy rows
+Author-email: Jiro Shirota <jshirota@gmail.com>
+Project-URL: Homepage, https://github.com/jshirota/archaic
+Project-URL: Bug Tracker, https://github.com/jshirota/archaic/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# archaic

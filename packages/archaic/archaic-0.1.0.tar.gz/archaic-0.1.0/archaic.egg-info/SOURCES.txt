@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+archaic/__init__.py
+archaic/feature_class.py
+archaic/info.py
+archaic/predicate.py
+archaic.egg-info/PKG-INFO
+archaic.egg-info/SOURCES.txt
+archaic.egg-info/dependency_links.txt
+archaic.egg-info/top_level.txt
