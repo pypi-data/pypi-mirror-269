@@ -1,0 +1,10 @@
+
+[testing]
+pytest
+mypy
+lxml
+ruff
+requests
+selenium
+loguru
+click
