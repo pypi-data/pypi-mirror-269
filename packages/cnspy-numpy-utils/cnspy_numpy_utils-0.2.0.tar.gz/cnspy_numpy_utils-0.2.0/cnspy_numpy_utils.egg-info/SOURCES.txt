@@ -1,0 +1,16 @@
+LICENCE
+README.md
+setup.py
+cnspy_numpy_utils/__init__.py
+cnspy_numpy_utils/accumulated_distance.py
+cnspy_numpy_utils/matrix_conversions.py
+cnspy_numpy_utils/numpy_statistics.py
+cnspy_numpy_utils.egg-info/PKG-INFO
+cnspy_numpy_utils.egg-info/SOURCES.txt
+cnspy_numpy_utils.egg-info/dependency_links.txt
+cnspy_numpy_utils.egg-info/requires.txt
+cnspy_numpy_utils.egg-info/top_level.txt
+test/__init__.py
+test/test_MatrixConversion.py
+test/test_accumulated_distance.py
+test/test_numpy_statistics.py
