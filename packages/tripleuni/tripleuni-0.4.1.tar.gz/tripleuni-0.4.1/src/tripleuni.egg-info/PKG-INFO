@@ -1,0 +1,126 @@
+Metadata-Version: 2.1
+Name: tripleuni
+Version: 0.4.1
+Summary: python library for tripleuni
+Author-email: Zilong ZHOU <zzl0712@outlook.com>
+Maintainer-email: Zilong ZHOU <zzl0712@outlook.com>
+License: Copyright (c) 2016 The Python Packaging Authority (PyPA)
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+        of the Software, and to permit persons to whom the Software is furnished to do
+        so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: web,tripleuni
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == "dev"
+Provides-Extra: test
+Requires-Dist: coverage; extra == "test"
+
+# tripleuni
+A python library for tripleuni.
+## Installation
+```bash
+pip install tripleuni
+```
+
+## Usage
+### Login
+you need to login to use the library
+#### login in terminal
+```python
+from tripleuni import TripleClient
+client = TripleClient()
+client.sendVerification("your email address")
+client.verifyCode("your verification code")
+```
+#### login by token
+```python
+from tripleuni import TripleClient
+client = TripleClient("your token")
+```
+
+### list of methods
+```python
+### login
+def sendVerification(self, email: str) -> dict:
+def verifyCode(self, code: str) -> dict:
+
+### get post and comment
+def getPostList(self, page: int = 0) -> dict:
+def getDetail(self, uni_post_id: int) -> dict:
+
+### post operations
+def followPost(self, uni_post_id: int) -> dict:
+def reportPost(self, uni_post_id: int, comment_order: int, comment_msg: str, report_msg: str) -> dict:
+
+### comment and reply
+def commentMsg(self, uniPostId: int, msg: str, real_name: str = 'false') -> dict:
+def replyMsg(self, uni_post_id: int, comment_father_id: int, msg: str, real_name: str = 'false') -> dict:
+
+### chat
+def createChatSession(self, uni_post_id: int, real_name: str = 'false') -> dict:
+def sendChatMsg(self, chat_id: int, msg: str) -> dict:
+def sendChatMsgToPost(self, uni_post_id: int, msg: str, real_name: str = 'false') -> dict:
+
+### chat with bot
+#### return a string of chat messages
+def chatWithChatbot(self, msg: str, history: str = '[]') -> str:
+#### return a iterator of chat messages
+def streamWithChatbot(self, msg: str, history: str = '[]') -> iterator:
+```
+
+### Some examples
+```python
+# get post list
+postList = client.getPostList(page=1)
+
+# comment a post
+client.commentMsg(1234, "hello", real_name='false')
+
+# send chat message to post owner
+client.sendChatMsgToPost(1234, "hello", real_name='false')
+
+```
+
+## For Maintainers
+
+### Build
+```bash
+py -m pip install --upgrade build
+py -m build
+```
+
+```bash
+py -m pip install --upgrade twine
+twine upload dist/*
+```
+

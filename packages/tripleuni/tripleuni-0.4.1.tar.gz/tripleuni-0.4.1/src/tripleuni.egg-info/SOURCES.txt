@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/tripleuni/ChatBot.py
+src/tripleuni/TripleClient.py
+src/tripleuni/__init__.py
+src/tripleuni.egg-info/PKG-INFO
+src/tripleuni.egg-info/SOURCES.txt
+src/tripleuni.egg-info/dependency_links.txt
+src/tripleuni.egg-info/requires.txt
+src/tripleuni.egg-info/top_level.txt
+tests/test_simple.py
