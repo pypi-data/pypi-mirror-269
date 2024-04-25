@@ -1,0 +1,1875 @@
+[MODULE]
+id=PPAPCHQ
+name=AP Payment Approvals
+desc=AP Payment approval workflows with automatically signed cheques.
+company=Poplar Development
+version=1.0.29
+website=https://poplars.dev
+
+[MESSAGE]
+MSGID=PPAPCHQ.APPROVALREQUIRED
+TEXTDESC=Approval Required Message
+SUBJECT=A/P Payment Batch {{ "%d" | format(header.CNTBTCH) }} Approval Required
+BODY={% extends "PPAPCHQ.BASE" %}\r\n{% block content%}\r\n<p>Your approval is required for A/P Payment Batch {{ "%d" | format(header.CNTBTCH) }}.</p>\r\n<p>Batch Entries:</p>\r\n<ul>\r\n  {% for line in lines %}\r\n    <li>Cheque {{ line.IDRMIT }} - {{ line.NAMERMIT
+BODY2=}} - {{ line.TEXTRMIT }} - ${{ "%.2f" | format(line.AMTRMIT) }}</li>\r\n  {% endfor %}\r\n</ul>\r\n<p>Approve this batch from the Extender Workflow Console.</p>\r\n{% endblock %}
+
+[MESSAGE]
+MSGID=PPAPCHQ.APPROVED
+TEXTDESC=Approved Message
+SUBJECT=A/P Payment Batch {{  "%d" | format(header.CNTBTCH) }} Approved
+BODY={% extends "PPAPCHQ.BASE" %}\r\n{% block content%}\r\n<p>A/P Payment Batch {{  "%d" | format(header.CNTBTCH) }} has been approved.  Visit the Extender Workflow Console to print the signed cheques.</p>\r\n{% endblock %}
+
+[MESSAGE]
+MSGID=PPAPCHQ.BASE
+TEXTDESC=Base HTML template for PPAPCHQ
+SUBJECT=Base Template - Subject unused
+BODY=<html>\r\n<head></head>\r\n<body>\r\n    <div id="content">\r\n            {% block content %}{% endblock %}\r\n    </div>\r\n    <div id="footer">\r\n        {% block footer %}{% endblock %}\r\n    </div>\r\n</body>\r\n</html>
+
+[MESSAGE]
+MSGID=PPAPCHQ.WFERROR
+TEXTDESC=Workflow Error Message
+SUBJECT=Error in Workflow for A/P Payment Batch {{ "%d"|format(header.CNTBTCH) }}
+BODY={% extends "PPAPCHQ.BASE" %}\r\n{% block content%}\r\n<p>A/P Payment Batch {{ "%d"|format(header.CNTBTCH) }} has encountered the following error:</p>\r\n<p><b>{{ workflow.WFCRITICALERROR }}</b></p>\r\n\r\n<p>Fix the condition that cause the error and visit the
+BODY2=Extender Workflow Console to resume the workflow.</p>\r\n{% endblock %}
+
+[TABLE]
+name=PPAPCHQ.PPAPCHQ
+desc=Cheque Printing Config
+dbname=PPAPCHQ
+
+[FIELD1]
+field=ID
+datatype=8
+desc=Record ID
+
+[FIELD2]
+field=DEST
+datatype=1
+size=120
+desc=Print Destination
+
+[FIELD3]
+field=SIGROOT
+datatype=1
+size=250
+desc=Signature Directory
+
+[FIELD4]
+field=WORKROOT
+datatype=1
+size=250
+desc=Working Directory
+
+[KEY1]
+KEYNAME=KEY1
+FIELD1=ID
+allowdup=0
+
+[TABLE]
+name=PPAPCHQ.PPAPCHQU
+desc=Cheque Printing Signers
+dbname=PPAPCHQU
+
+[FIELD1]
+field=USERID
+datatype=1
+desc=User ID
+size=8
+ftable=AS0003
+ffield=USERID
+lookup=USERNAME
+
+[FIELD2]
+field=SIGPATH
+datatype=1
+size=250
+desc=Signature Path
+
+[FIELD3]
+field=FINGERP
+datatype=1
+size=250
+desc=Fingerprint
+
+[FIELD4]
+field=PP
+datatype=9
+desc=Passphrase Protected
+
+[KEY1]
+KEYNAME=KEY1
+FIELD1=USERID
+allowdup=0
+
+[TABLE]
+name=PPAPCHQ.PPAPCHQS
+desc=Cheque Printing Stock
+dbname=PPAPCHQS
+
+[FIELD1]
+field=FORMID
+datatype=1
+size=12
+desc=Cheque Stock
+
+[FIELD2]
+field=USERID
+datatype=1
+size=8
+desc=User ID
+ftable=PPAPCHQ.PPAPCHQU
+ffield=USERID
+
+[FIELD3]
+field=TOP
+datatype=8
+desc=Top (px)
+
+[FIELD4]
+field=LEFT
+datatype=8
+desc=Left (px)
+
+[FIELD5]
+field=WIDTH
+datatype=8
+desc=Width (px)
+
+[FIELD6]
+field=HEIGHT
+datatype=8
+desc=Height (px)
+
+[KEY1]
+KEYNAME=KEY1
+FIELD1=FORMID
+FIELD2=USERID
+allowdup=0
+
+
+[SCRIPT]
+FILENAME=PPAPCHQ.SignatureRegistration
+>>> SCRIPT >>>
+"""
+The Signature Registration UI allows you to register a signature
+for your user.
+"""
+try:
+    from accpac import *
+except ImportError:
+    pass
+
+from pathlib import Path
+from datetime import datetime
+
+from extools.message import logger_for_module
+from extools.ui import ExUI
+from extools.view import exview
+from extools.view.errors import ExViewRecordDoesNotExist, ExViewError
+from excrypto.gnupg import GnuPGKeyManager, GnuPGPublicKeyEncryptor
+from poplar_apcheques import gnupg_home, signatures_path
+
+USER_SIGNATURE_VIEW = "PPAPCHQ.PPAPCHQU"
+
+def main(args):
+    RegisterSignatureUI()
+
+### Interface Definition
+
+class RegisterSignatureUI(ExUI):
+    """UI for Signature Management."""
+
+    # Custom control constants
+    BUTTON_WIDTH = 1265
+    BUTTON_SPACE = 150
+
+    def __init__(self):
+        """Initialize a new UI instance.  Speaks."""
+        UI.__init__(self)
+        self.log = logger_for_module("poplar.apcheques")
+        shown = False
+        self.title = "Signature Registration"
+        self.log.info("gnupg_home: {}".format(gnupg_home()))
+        if not gnupg_home().exists():
+            gnupg_home().mkdir(parents=True)
+        try:
+            self.config = self.load_config()
+            self.key_manager = GnuPGKeyManager(user, gnupg_home())
+            self.createScreen()
+            self.update_fields()
+            self.show()
+            shown = True
+        except Exception as e:
+            if not shown:
+                self.show()
+            self.log.error(e, exc_info=True)
+            self.closeUI()
+        else:
+            self.onClose = self.onCloseClick
+            self.log.debug("started for {}.".format(user))
+
+    def createScreen(self):
+        """Configure and render the fields and buttons.
+        | User Username                         |
+        |                                       |
+        | Signature File: [                   ] |
+        | Passphrase:     [                   ] |
+        |                    +Save      +Close  |
+        """
+        f = self.addUIField("namespaceLabel")
+        f.controlType = "EDIT"
+        f.size = 250
+        f.width = 5000
+        f.labelWidth = 60
+        f.caption = "User"
+        f.hasFinder = False
+        f.setValue(user)
+        f.enabled = False
+        self.user_label = f
+
+        file_field, browse_button = self.input_with_button(
+                "Signature File",
+                None, "", "Browse...")
+        browse_button.onClick = self.get_browse_click_callback(
+                file_field, "Select Signature Image", "*.png")
+
+        self.file_field = file_field
+        self.browse_button = browse_button
+
+        f = self.addUIField("passphrase")
+        f.controlType = "EDIT"
+        f.size = 250
+        f.width = 5000
+        f.labelWidth = 60
+        f.caption = "Passphrase"
+        f.hasFinder = False
+        f.enabled = True
+        self.passphrase_field = f
+
+        btn = self.addButton("btnSave", "&Save")
+        btn.top = - self.BUTTON_SPACE - btn.height
+        btn.width = self.BUTTON_WIDTH
+        # btn.left = self.usage_grid.left
+        btn.onClick = self.onSaveClick
+        self.btnSave = btn
+
+        btn = self.addButton("btnReset", "&Reset")
+        btn.top = - self.BUTTON_SPACE - btn.height
+        btn.width = self.BUTTON_WIDTH
+        btn.left = self.btnSave.left + self.BUTTON_SPACE + self.BUTTON_WIDTH
+        btn.onClick = self.onResetClick
+        self.btnReset = btn
+
+        btn = self.addButton("btnClose", "&Close")
+        btn.top = - self.BUTTON_SPACE - btn.height
+        btn.width = self.BUTTON_WIDTH
+        btn.left = -self.BUTTON_SPACE - self.BUTTON_WIDTH
+        btn.onClick = self.onCloseClick
+        self.btnClose = btn
+
+    def onSaveClick(self):
+        # Generate New Key
+        # Encrypt File
+        # Set Passphrase bool
+        # Set File Path
+        self.log.info("Save.")
+        passphrase = self.passphrase_field.value
+        try:
+            file_path = Path(self.file_field.value)
+            if not file_path.exists():
+                showMessageBox("File {} doesn't exist".format(file_path))
+
+            key = self.key_manager.generate_key(passphrase)
+            if not key:
+                self.log.error("failed to generate key")
+                return
+
+            filename = "{}.png.gpg".format(user)
+            sigpath = signatures_path() / filename
+
+            encryptor = GnuPGPublicKeyEncryptor(
+                    gnupg_home(), key.fingerprint, passphrase)
+
+            if not encryptor.encrypt_file(file_path, sigpath):
+                self.log.error("failed to encrypt file.")
+                showMessageBox("Encryption Failed.")
+                return False
+
+            if not self.save_config(filename, key.fingerprint, passphrase):
+                self.log.error("failed to save config.")
+        except Exception as e:
+            self.log.error("failed: {}".format(e), exc_info=True)
+
+        self.config = self.load_config()
+        if self.config:
+            showMessageBox("New signature registered and encrypted.\n\n"
+                           "Please delete the original signature file.")
+        else:
+            showMessageBox("Failed to load new config. Check log.")
+        self.update_fields()
+
+    def onResetClick(self):
+        # Delete config entry
+        self.log.info("Reset")
+        passphrase = None
+        if int(self.config.get("PP")):
+            ppath = signatures_path() / datetime.now().strftime("%Y%m%d%H%M%S")
+            try:
+                # Prompt for pasphrase
+                params = "KEY1={}\n".format(str(ppath))
+                openExtenderUI("PPAPCHQ.PassphraseUI.py", params, True)
+                with ppath.open('r') as f:
+                    passphrase = f.read()
+            finally:
+                if ppath.exists():
+                    ppath.unlink()
+        try:
+            self.log.info("deleting {}, {}".format(
+                    self.config.get('FINGERP'), passphrase))
+            self.key_manager.delete_key(self.config.get('FINGERP'), passphrase)
+        except Exception as e:
+            self.log.error("failed to delete key: {}".format(e))
+            return
+
+        try:
+            spath = Path(self.config['SIGPATH'])
+            if spath.exists():
+                spath.unlink()
+        except Exception as e:
+            self.log.error("failed to unlink signature file: {}".format(e))
+
+        self.delete_config()
+        self.config = {}
+        self.update_fields()
+
+    def onCloseClick(self):
+        """Close the UI if the Close button or window X are clicked."""
+        self.closeUI()
+
+    def update_fields(self):
+        # Update all fields: locked if set (except reset)
+        # unlocked if not set
+        self.log.info("Update Fields: config? {}".format(bool(self.config)))
+        if self.config:
+            self.btnSave.disable()
+            self.btnReset.enable()
+            self.browse_button.disable()
+            self.file_field.disable()
+            self.file_field.setValue(self.config['SIGPATH'])
+            self.log.info(self.config)
+            if bool(int(self.config['PP'])):
+                self.passphrase_field.setValue("Passphrase Set")
+            else:
+                self.passphrase_field.setValue("No Passphrase")
+            self.passphrase_field.disable()
+        else:
+            self.file_field.setValue('')
+            self.passphrase_field.setValue('')
+            self.btnSave.enable()
+            self.btnReset.disable()
+            self.file_field.enable()
+            self.browse_button.enable()
+            self.passphrase_field.enable()
+
+    def load_config(self):
+        self.log.info("loading config for {}".format(user))
+        try:
+            with exview(USER_SIGNATURE_VIEW,
+                        seek_to={'USERID': user}) as config:
+                cdict = config.to_dict()
+                self.log.info("loaded config: {}".format(cdict))
+                return cdict
+        except ExViewRecordDoesNotExist:
+            self.log.warn("no config for {}".format(user))
+        return {}
+
+    def save_config(self, sigpath, fingerprint, passphrase):
+        self.log.info("saving config {}, {}, {} ,{}".format(
+                user, sigpath, fingerprint, bool(passphrase)))
+        try:
+            with exview(USER_SIGNATURE_VIEW) as config:
+                config.recordGenerate()
+                config.put("USERID", user)
+                config.put("SIGPATH", str(sigpath))
+                config.put("FINGERP", fingerprint)
+                config.put("PP", bool(passphrase))
+                config.insert()
+                return True
+        except ExViewError as e:
+            self.log.error("error creating config {}, {}, {}: {}".format(
+                    user, sigpath, passphrase, e))
+        return False
+
+    def delete_config(self):
+        self.log.info("deleting config for {}".format(user))
+        try:
+            with exview(USER_SIGNATURE_VIEW,
+                        seek_to={'USERID': user}) as config:
+                config.delete()
+                return True
+        except ExViewError as e:
+            self.log.error("error deleting config for {}: {}".format(
+                    user, sigpath, passphrase, e))
+        return False
+
+<<< SCRIPT <<<
+
+[SCRIPT]
+FILENAME=PPAPCHQ.PassphraseUI
+>>> SCRIPT >>>
+"""
+The Remote Action Token UI allows you to manage the secret Remote Action
+Token for the current company.
+"""
+try:
+    from accpac import *
+except ImportError as e:
+    pass
+    
+from pathlib import Path
+
+## Entry point
+
+def main(args):
+    PassphraseUI()
+
+### Interface Definition
+
+class PassphraseUI(UI):
+    """UI for Remote action token management.    """
+
+    # Custom control constants
+    BUTTON_WIDTH = 1265
+    BUTTON_SPACE = 150
+
+    def __init__(self):
+        """Initialize a new UI instance."""
+        UI.__init__(self)
+        self.title = "Signature Passphrase"
+        self.createScreen()
+        self.onClose = self.onCloseClick
+        self.passphrase_file = self.get_passphrase_file()
+        self.show()
+
+    def get_passphrase_file(self):
+        file = getProgramKey("KEY1", "")
+        if not file:
+            raise ArgumentError("IPC file not provided")
+        return Path(file)
+
+    def createScreen(self):
+        """Configure and render the fields and buttons.
+        | Token  ______________________________ |
+        |                    +Save      +Close  |
+        """
+        f = self.addUIField("passphraseField")
+        f.controlType = "EDIT"
+        f.size = 250
+        f.width = 5000
+        f.labelWidth = 70
+        f.caption = "Key Passphrase"
+        f.hasFinder = False
+        f.enabled = True
+        self.passphrase_field = f
+
+        btn = self.addButton("btnSave", "&OK")
+        btn.top = - self.BUTTON_SPACE - btn.height
+        btn.width = self.BUTTON_WIDTH
+        btn.onClick = self.onSaveClick
+        self.btnSave = btn
+
+        btn = self.addButton("btnClose", "&Close")
+        btn.top = - self.BUTTON_SPACE - btn.height
+        btn.width = self.BUTTON_WIDTH
+        btn.left = -self.BUTTON_SPACE - self.BUTTON_WIDTH
+        btn.onClick = self.onCloseClick
+        self.btnClose = btn
+
+    def onSaveClick(self):
+        """Set the token if it is valid.
+
+        When Save is clicked the token is checked for valid formatting.
+        It is then set in the database and the Namespace client is used to
+        check whether there is a namespace associated with the token.
+
+        If so, all is well.  Otherwise, the token is reset to its previous
+        value and an error is displayed.
+
+        :returns: None
+        """
+        passphrase = self.passphrase_field.getValue()
+        with self.passphrase_file.open("w") as f:
+            f.write(passphrase)
+        self.closeUI()
+
+    def onCloseClick(self):
+        """Close the UI if the Close button or window X are clicked."""
+        self.closeUI()
+
+
+
+<<< SCRIPT <<<
+
+[SCRIPT]
+FILENAME=PPAPCHQ.PromptUI
+>>> SCRIPT >>>
+"""
+The PromptUI allows you to as a user Yes/No.
+
+"""
+try:
+    from accpac import *
+except ImportError as e:
+    pass
+    
+from pathlib import Path
+
+from extools.ui.prompt import PromptUI
+
+def main(args):
+    PromptUI()
+<<< SCRIPT <<<
+
+[SCRIPT]
+FILENAME=PPAPCHQ.AP3000.PostButton
+>>> SCRIPT >>>
+# AP3000
+from accpac import *
+
+from extools.workflow import create_workflow_instance
+from extools.message import logger_for_module
+
+KEYWORD = 'Sign'
+TEMPLATE = "PPAPCHQ.PaymentApproval"
+ENTRY_STEP = "Start"
+
+def main(*args, **kwargs):
+    APPaymentBatchPostButtonUI()
+
+class APPaymentBatchPostButtonUI(UI):
+
+    # Custom control constants
+    BUTTON_WIDTH = 1065
+    BUTTON_SPACE = 150
+
+    # Button Types
+    FINDER_BUTTON_TYPE = 4
+
+    def __init__(self):
+        UI.__init__(self)
+        self.log = logger_for_module("poplar.apcheques", key="PostUI")
+        self.post_button_control_name = "btnPost"
+
+        self.control_names = ["form", self.post_button_control_name]
+
+        self.getControlInfo("|".join(self.control_names), self.onControlInfo)
+        self.post_button_info = None
+        self.apbta = self.openDataSource('dsAPBTAro')
+        self.log.info("started")
+
+    def onControlInfo(self, info):
+        # Get the host control.
+        self.post_button_control = self.getHostControl(
+                self.post_button_control_name)
+        self.post_button_control.hide()
+
+        # Infos
+        self.post_button_info = info.find(self.post_button_control_name)
+        self.form_control_info = info.find("form")
+
+        b = self.addButton("xMyButton", "&Print/Post")
+        b.top = self.form_control_info.top - 450
+        b.left = self.post_button_info.left
+        b.width = self.post_button_info.width
+        b.onClick = self.onPostClick
+        b.enable()
+
+        self.my_post_button_control = b
+
+        self.show()
+
+    def onPostClick(self):
+        self.log.debug("Post clicked: {}/{}".format(
+                self.apbta.get("CNTBTCH"), self.apbta.get("BATCHDESC")))
+        if KEYWORD.lower() in self.apbta.get("BATCHDESC").lower():
+            wiid = create_workflow_instance(
+                    TEMPLATE, "AP0030", 
+                    ",".join(["PY", str(self.apbta.get("CNTBTCH"))]), 
+                    ENTRY_STEP)
+        else:
+            self.post_button_control.click()
+
+
+
+<<< SCRIPT <<<
+
+[MENU]
+parent=AP9003
+name=PPAPCHQ.SIGNATUREREGISTRATION
+type=2
+title=Cheque Signature Registration
+
+
+[SCRIPT]
+FILENAME=PPAPCHQ.Workflow.VoidChequesForBatch
+>>> SCRIPT >>>
+## P1 Batch Number
+from accpac import *
+
+from pathlib import Path
+
+from extools.report.printers import APChequePrinter
+
+# This function returns 0 (success) or 1 (failure).
+# The return value determines which action to run next in the workflow.
+def workflow(e):
+    batchno = e.resolve(e.p1)
+    printer = APChequePrinter(int(float(batchno)))
+    if printer.void_batch_cheques():
+        report_path = Path(e.wi.getValue("CHQREPORT"))
+        if report_path.exists():
+            report_path.unlink()
+        e.wi.setValue("CHQREPORT", "")
+    else:
+        e.wi.setValue("WFCRITICALERROR", "Failed to void cheques.")
+        return 1
+
+    return 0
+
+
+<<< SCRIPT <<<
+
+[SCRIPT]
+FILENAME=PPAPCHQ.Workflow.PrintChequeReport
+>>> SCRIPT >>>
+# Instructions for your script go here
+## P1 Batch Number
+from accpac import *
+
+import io
+import tempfile
+from pathlib import Path
+
+from extools.env.win32 import send_to_printer
+from extools.message import logger_for_module
+from extools.ui.prompt import prompt_yes_no
+
+from excrypto.gnupg import GnuPGPublicKeyEncryptor, GnuPGKeyManager
+
+from poplar_apcheques import gnupg_system_file_bytes, get_print_destination
+
+log = None
+
+# This function returns 0 (success) or 1 (failure).
+# The return value is used to determine which action to run next in the workflow.
+def workflow(e): # e is workflowArgs (see accpac.py)
+    global log
+    log = logger_for_module("poplar.printcheques")
+    batchno = e.resolve(e.p1)
+    destination = get_print_destination()
+    input_file = Path(e.wi.getValue("CHQREPORT"))
+
+    data = gnupg_system_file_bytes(input_file)
+    if not data:
+        errmsg = "Report data empty."
+        log.error(errmsg)
+        e.wi.setValue("WFCRITICALERROR", errmsg)
+        return 1
+
+    tmp = None
+    try:
+        tmp = tempfile.NamedTemporaryFile('wb', suffix='.pdf', delete=False)
+        tmp.write(data)
+        tmp.close()
+        log.info("temporary file: {}".format(tmp.name))
+        try:
+            handle = send_to_printer(str(Path(tmp.name)), destination)
+        except Exception as err:
+            errmsg = "failed to send cheques to printer: {}".format(err)
+            log.error(errmsg, exc_info=True)
+            e.wi.setValue("WFCRITICALERROR", errmsg)
+            return 1
+        return 0
+    except:
+        errmsg = "failed to setup cheque printing: {}".format(err)
+        log.error(errmsg, exc_info=True)
+        e.wi.setValue("WFCRITICALERROR", errmsg)
+    finally:
+        pass
+
+<<< SCRIPT <<<
+
+[SCRIPT]
+FILENAME=PPAPCHQ.Workflow.GenerateChequeReport
+>>> SCRIPT >>>
+## P1 Batch Number
+## P2 Report Name
+from accpac import *
+from pathlib import Path
+from datetime import datetime
+from poplar_apcheques import working_path
+from extools.report.printers import (
+    APChequePrinter, SetupError,
+    ChequeCommitError, ReportGenerationError,
+    NoChequesMatchedError, APOpenError)
+# This function returns 0 (success) or 1 (failure).
+# The return value determines which action to run next in the workflow.
+def workflow(e):
+    errmsg = ""
+    batchno = e.resolve(e.p1)
+    report = e.resolve(e.p2)
+    #printer = APChequePrinter(int(float(batchno)))
+    path = None
+    wd = working_path()
+    if wd:
+        dt = datetime.now()
+        path = Path(wd, "{}-cheque_report.pdf".format(
+            dt.strftime("%Y%m%dT%H%M%S")))
+    try:
+        ## moved here because we have a suspicion that something in Path or strftime() is
+        ## causing the composed views to APBTA to close.
+        ## Therefore, moved the creation of the class instance and its initialization to this point.
+        printer = APChequePrinter(int(float(batchno)))
+        cheque_report_path = printer.print(path=path, report=report)
+        e.wi.setValue("CHQREPORT", str(cheque_report_path))
+    except SetupError as err:
+        # handle a failure to setup the temp tables.
+        # e contains details on the failing operation
+        errmsg = "failed to setup cheque printing for {}: {}".format(
+                batchno, err)
+    except ReportGenerationError as err:
+        errmsg = "failed to generate cheque report for {}: {}".format(
+                batchno, err)
+    except ChequeCommitError as err:
+        errmsg = "failed to commit cheques to AP/BK for {}: {}".format(
+                batchno, err)
+    except NoChequesMatchedError as err:
+        errmsg = "no unprinted cheques found."
+    except APOpenError as err:
+        errmsg = str(err)
+    if errmsg:
+        e.wi.setValue("WFCRITICALERROR", errmsg)
+        return 1
+    return 0
+
+<<< SCRIPT <<<
+
+[SCRIPT]
+FILENAME=PPAPCHQ.Workflow.SignChequeReport
+>>> SCRIPT >>>
+## P1 Batch Number
+## P2 Cheque Report Path
+try:
+    from accpac import *
+except ImportError:
+    pass
+
+import io
+from pathlib import Path
+
+from extools.message import logger_for_module
+
+from poplar_apcheques import (gnupg_system_file_bytes,
+                              gnupg_system_encrypt_bytes,
+                              cheque_stock_for_batch,
+                              merge_pdf_bytes,
+                              overlay_for_stock,
+                              OverlayCreateError, )
+
+# This function returns 0 (success) or 1 (failure).
+# The return value determines which action to run next in the workflow.
+def workflow(e):
+    log = logger_for_module("poplar.signcheques")
+    batchno = e.resolve(e.p1)
+    input_file = Path(e.resolve(e.p2))
+    cheque_stock = cheque_stock_for_batch(batchno)
+
+    log.info("Signing {} [{}] as {} using stock code {}".format(
+        batchno, input_file, user, cheque_stock))
+
+    if not cheque_stock:
+        errmsg = "failed to get cheque stock for batch {}".format(batchno)
+        e.wi.setValue("WFCRITICALERROR", errmsg)
+        return 1
+
+    try:
+        log.debug("starting overlay create")
+        overlay = overlay_for_stock(cheque_stock, user)
+        log.debug("overlay created [{} bytes]".format(overlay.getbuffer().nbytes))
+    except OverlayCreateError as err:
+        e.wi.setValue("WFCRITICALERROR", str(err))
+        return 1
+
+    log.debug("decrypting input file {}.".format(
+            input_file))
+    data = gnupg_system_file_bytes(input_file)
+    log.debug("decrypting input file {}: {} bytes.".format(
+            input_file, len(data)))
+    if not data:
+        errmsg = "Report data empty."
+        log.error(errmsg)
+        e.wi.setValue("WFCRITICALERROR", errmsg)
+        return 1
+
+    log.debug("merging data and overlay")
+    merged = merge_pdf_bytes(io.BytesIO(data), overlay)
+    merged.seek(0)
+    log.debug("merged {} bytes".format(merged.getbuffer().nbytes))
+
+    output_file = input_file
+    if output_file.suffix != '.gpg':
+        output_file = input_file.parent / (input_file.name + '.gpg')
+
+    merged.seek(0)
+    outdata = gnupg_system_encrypt_bytes(merged)
+
+    log.debug("output file {} [{} bytes]".format(output_file, len(outdata)))
+
+    with output_file.open('wb') as f:
+        f.write(outdata)
+
+    e.wi.setValue("CHQREPORT", str(output_file))
+
+    return 0
+
+
+
+<<< SCRIPT <<<
+
+[WORKFLOWTEMPLATE]
+WTNAME=PPAPCHQ.PaymentApproval
+DESC=AP Payment batch approvals with automatic printing and signing.
+ACTIVE=1
+MANUAL=0
+AUTODEL=1
+MULTIPLE=1
+
+[WORKFLOWSTEP]
+STEPNAME=Start
+DESC=Payment Batch Start
+ISENTRY=1
+
+[WORKFLOWSTEP]
+STEPNAME=GenerateReport
+DESC=Generate Cheque Report
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=RequestApproval
+DESC=Batch Approval Request
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=WaitFirst
+DESC=Wait for first Approval
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=Sign
+DESC=First approval.
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=WaitSecond
+DESC=Wait for Second Approval
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=Second Sign
+DESC=First approval received.
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=WaitPrint
+DESC=Wait for a user to print the approved chequest.
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=Print
+DESC=Send the cheques to the printer
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=Reject
+DESC=Batch Rejected
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=Reject+Void
+DESC=Void all cheques before rejecting
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=CompleteActiveWF
+DESC=Complete, WF already in progress
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=ErrorMessage
+DESC=Critical Error
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=WaitAdmin
+DESC=Admin approval once error has been resolved
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=AdminApprove
+DESC=Restart Workflow
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=PrintConfirm
+DESC=Waiting for confirmation of successful print
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=Confirmed
+DESC=Cheques printed successfully
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=Reprint
+DESC=Cheques not printed
+ISENTRY=0
+
+[WORKFLOWSTEP]
+STEPNAME=PostBatch
+DESC=Post Batch
+ISENTRY=0
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=Start
+TSTEPID=RequestApproval
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=Start
+TSTEPID=ErrorMessage
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=RequestApproval
+TSTEPID=WaitFirst
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=RequestApproval
+TSTEPID=CompleteActiveWF
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=WaitFirst
+TSTEPID=Sign
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=WaitFirst
+TSTEPID=Reject+Void
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=Sign
+TSTEPID=WaitSecond
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=Sign
+TSTEPID=Reject+Void
+P1=WaitFirst
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=Sign
+TSTEPID=ErrorMessage
+P1=WaitFirst
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=WaitSecond
+TSTEPID=Second Sign
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=WaitSecond
+TSTEPID=Reject+Void
+P1=WaitSecond
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=Second Sign
+TSTEPID=ErrorMessage
+P1=WaitSecond
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=Second Sign
+TSTEPID=Reject+Void
+P1=WaitSecond
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=WaitPrint
+TSTEPID=Print
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=Reject+Void
+TSTEPID=Reject
+P1={$1}
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=ErrorMessage
+TSTEPID=WaitAdmin
+P1={$1}
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=WaitAdmin
+TSTEPID=AdminApprove
+P1={$1}
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=AdminApprove
+TSTEPID=WaitFirst
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=AdminApprove
+TSTEPID=WaitSecond
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=PrintConfirm
+TSTEPID=Confirmed
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=PrintConfirm
+TSTEPID=Reprint
+
+[WORKFLOWSTEPPROGRESS]
+FSTEPID=PrintConfirm
+TSTEPID=Reject+Void
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Start
+ACTNUM=10
+ACTION=IfWorkflowExists
+ONTRUE=100
+ONFALSE=15
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Start
+ACTNUM=15
+ACTION=AssignUser
+P1=ADMIN
+ONTRUE=20
+ONFALSE=20
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Start
+ACTNUM=20
+ACTION=SetDrillDown
+P1=PYBATCH
+P2={CNTBTCH}
+ONTRUE=30
+ONFALSE=30
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Start
+ACTNUM=30
+ACTION=SetDescription
+P1={BATCHDESC}
+ONTRUE=40
+ONFALSE=40
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Start
+ACTNUM=40
+ACTION=SetValue
+P1=APPROVER
+P2=SECONDSIGNERS
+ONTRUE=60
+ONFALSE=60
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Start
+ACTNUM=50
+ACTION=SetField
+P1=BATCHSTAT
+P2=8
+ONTRUE=60
+ONFALSE=70
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Start
+ACTNUM=60
+ACTION=GoToStep
+P1=GenerateReport
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Start
+ACTNUM=70
+ACTION=SetValue
+P1=WFCRITICALERROR
+P2=Unable to set batch status
+ONTRUE=80
+ONFALSE=80
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Start
+ACTNUM=80
+ACTION=SetValue
+P1=RETURNTO
+P2=Start
+ONTRUE=90
+ONFALSE=90
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Start
+ACTNUM=90
+ACTION=GoToStep
+P1=ErrorMessage
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Start
+ACTNUM=100
+ACTION=GoToStep
+P1=CompleteActiveWF
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=GenerateReport
+ACTNUM=10
+ACTION=SetStatus
+P1=Generating Cheque Report
+ONTRUE=20
+ONFALSE=20
+
+[WORKFLOWSTEPACTION]
+STEPNAME=GenerateReport
+ACTNUM=20
+ACTION=PPAPCHQ.Workflow.GenerateChequeReport
+P1={CNTBTCH}
+ONTRUE=30
+ONFALSE=50
+
+[WORKFLOWSTEPACTION]
+STEPNAME=GenerateReport
+ACTNUM=30
+ACTION=SetField
+P1=BATCHSTAT
+P2=8
+ONTRUE=40
+ONFALSE=40
+
+[WORKFLOWSTEPACTION]
+STEPNAME=GenerateReport
+ACTNUM=40
+ACTION=GoToStep
+P1=RequestApproval
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=GenerateReport
+ACTNUM=50
+ACTION=SetValue
+P1=RETURNTO
+P2=GenerateReport
+ONTRUE=60
+ONFALSE=60
+
+[WORKFLOWSTEPACTION]
+STEPNAME=GenerateReport
+ACTNUM=60
+ACTION=GoToStep
+P1=ErrorMessage
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=RequestApproval
+ACTNUM=10
+ACTION=SetStatus
+P1=Batch post requested
+ONTRUE=20
+ONFALSE=20
+
+[WORKFLOWSTEPACTION]
+STEPNAME=RequestApproval
+ACTNUM=20
+ACTION=SetValue
+P1=WFCOMMENT
+P2=Batch post requested
+ONTRUE=30
+ONFALSE=30
+
+[WORKFLOWSTEPACTION]
+STEPNAME=RequestApproval
+ACTNUM=30
+ACTION=AssignUser
+P1=FIRSTSIGNERS
+ONTRUE=40
+ONFALSE=40
+
+[WORKFLOWSTEPACTION]
+STEPNAME=RequestApproval
+ACTNUM=40
+ACTION=ShowUserMessage
+P1=Approval required to post batch. Approver has been notified
+ONTRUE=50
+ONFALSE=50
+
+[WORKFLOWSTEPACTION]
+STEPNAME=RequestApproval
+ACTNUM=50
+ACTION=PPWKFLOW.Workflow.SendJinja2Email
+P1=PPAPCHQ.APPROVALREQUIRED
+P2=FIRSTSIGNERS
+ONTRUE=60
+ONFALSE=60
+
+[WORKFLOWSTEPACTION]
+STEPNAME=RequestApproval
+ACTNUM=60
+ACTION=GoToStep
+P1=WaitFirst
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=10
+ACTION=Evaluate
+P1={USER}
+P2==
+P3={STUSER}
+ONTRUE=110
+ONFALSE=20
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=20
+ACTION=PPAPCHQ.Workflow.SignChequeReport
+P1={CNTBTCH}
+P2={CHQREPORT}
+ONTRUE=30
+ONFALSE=80
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=30
+ACTION=SetStatus
+P1=Waiting for Second Approval
+ONTRUE=40
+ONFALSE=40
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=40
+ACTION=AssignUser
+P1=SECONDSIGNERS
+ONTRUE=50
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=50
+ACTION=PPWKFLOW.Workflow.SendJinja2Email
+P1=PPAPCHQ.APPROVALREQUIRED
+P2=SECONDSIGNERS
+ONTRUE=60
+ONFALSE=60
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=60
+ACTION=ShowUserMessage
+P1=Signature applied. Second signatories notified.
+ONTRUE=70
+ONFALSE=70
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=70
+ACTION=GoToStep
+P1=WaitSecond
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=80
+ACTION=SetValue
+P1=RETURNTO
+P2=WaitFirst
+ONTRUE=90
+ONFALSE=90
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=90
+ACTION=SetValue
+P1=ASSIGNTO
+P2=FIRSTSIGNERS
+ONTRUE=100
+ONFALSE=100
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=100
+ACTION=GoToStep
+P1=ErrorMessage
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=110
+ACTION=ShowUserMessage
+P1=User requesting approval cannot approve the batch.
+ONTRUE=120
+ONFALSE=120
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Sign
+ACTNUM=120
+ACTION=GoToStep
+P1=WaitFirst
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=10
+ACTION=Evaluate
+P1={USER}
+P2==
+P3={STUSER}
+ONTRUE=30
+ONFALSE=30
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=20
+ACTION=SetField
+P1={BATCHSTAT}
+P2=7
+ONTRUE=30
+ONFALSE=30
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=30
+ACTION=PPAPCHQ.Workflow.SignChequeReport
+P1={CNTBTCH}
+P2={CHQREPORT}
+ONTRUE=50
+ONFALSE=110
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=40
+ACTION=PostAPPaymentBatch
+ONTRUE=50
+ONFALSE=100
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=50
+ACTION=SetValue
+P1={WFCOMMENT}
+P2=Payment Batch Signed
+ONTRUE=60
+ONFALSE=60
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=60
+ACTION=SetStatus
+P1=Payment Batch Signed
+ONTRUE=70
+ONFALSE=70
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=70
+ACTION=AssignUser
+P1=CHEQUEPRINTERS
+ONTRUE=80
+ONFALSE=80
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=80
+ACTION=PPWKFLOW.Workflow.SendJinja2Email
+P1=PPAPCHQ.APPROVED
+P2={STUSER}
+P3=CHEQUEPRINTERS
+ONTRUE=90
+ONFALSE=90
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=90
+ACTION=GoToStep
+P1=WaitPrint
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=100
+ACTION=SetValue
+P1={WFCRITICALERROR}
+P2=Unable to post batch
+ONTRUE=110
+ONFALSE=110
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=110
+ACTION=SetValue
+P1=RETURNTO
+P2=WaitSecond
+ONTRUE=120
+ONFALSE=120
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=120
+ACTION=SetValue
+P1=ASSIGNTO
+P2=SECONDSIGNERS
+ONTRUE=130
+ONFALSE=130
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=130
+ACTION=GoToStep
+P1=ErrorMessage
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=140
+ACTION=ShowUserError
+P1=User requesting approval cannot approve the batch.
+ONTRUE=150
+ONFALSE=150
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Second Sign
+ACTNUM=150
+ACTION=GoToStep
+P1=WaitSecond
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=WaitPrint
+ACTNUM=10
+ACTION=SetStatus
+P1=Waiting for Print
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Print
+ACTNUM=10
+ACTION=SetStatus
+P1=Printing.
+ONTRUE=20
+ONFALSE=20
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Print
+ACTNUM=20
+ACTION=PPAPCHQ.Workflow.PrintChequeReport
+P1={CNTBTCH}
+ONTRUE=30
+ONFALSE=50
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Print
+ACTNUM=30
+ACTION=SetStatus
+P1=Printed, awaiting confirmation
+ONTRUE=40
+ONFALSE=40
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Print
+ACTNUM=40
+ACTION=GoToStep
+P1=PrintConfirm
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Print
+ACTNUM=50
+ACTION=SetValue
+P1=RETURNTO
+P2=WaitPrint
+ONTRUE=60
+ONFALSE=60
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Print
+ACTNUM=60
+ACTION=SetValue
+P1=ASSIGNTO
+P2=CHEQUEPRINTERS
+ONTRUE=70
+ONFALSE=70
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Print
+ACTNUM=70
+ACTION=GoToStep
+P1=ErrorMessage
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject
+ACTNUM=10
+ACTION=SetStatus
+P1=RejectedPostRequest
+ONTRUE=60
+ONFALSE=60
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject
+ACTNUM=20
+ACTION=AddParameter
+P1=RejectReason
+P2=Reason
+P3=text(size=60)
+ONTRUE=30
+ONFALSE=30
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject
+ACTNUM=30
+ACTION=AskForParameters
+ONTRUE=40
+ONFALSE=90
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject
+ACTNUM=40
+ACTION=SetDescription
+P1={BATCHDESC}
+ONTRUE=60
+ONFALSE=60
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject
+ACTNUM=60
+ACTION=SetValue
+P1=WFCOMMENT
+P2=Post request rejected
+ONTRUE=70
+ONFALSE=70
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject
+ACTNUM=70
+ACTION=Complete
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject
+ACTNUM=90
+ACTION=SetStatus
+P1=RejectReasonCancelled
+ONTRUE=100
+ONFALSE=100
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject
+ACTNUM=100
+ACTION=Complete
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject+Void
+ACTNUM=10
+ACTION=SetField
+P1=BATCHSTAT
+P2=1
+ONTRUE=20
+ONFALSE=40
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject+Void
+ACTNUM=20
+ACTION=PPAPCHQ.Workflow.VoidChequesForBatch
+P1={CNTBTCH}
+ONTRUE=30
+ONFALSE=50
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject+Void
+ACTNUM=30
+ACTION=GoToStep
+P1=Reject
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject+Void
+ACTNUM=40
+ACTION=SetValue
+P1=WFCRITICALERROR
+P2=Failed to set batch status to Open.
+ONTRUE=50
+ONFALSE=50
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject+Void
+ACTNUM=50
+ACTION=SetValue
+P1=RETURNTO
+P2=RequestApproval
+ONTRUE=60
+ONFALSE=60
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reject+Void
+ACTNUM=60
+ACTION=GoToStep
+P1=ErrorMessage
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=CompleteActiveWF
+ACTNUM=10
+ACTION=ShowUserMessage
+P1=Workflow for this batch already exists. Batch must be approved/rejected in the workflow console
+ONTRUE=20
+ONFALSE=20
+
+[WORKFLOWSTEPACTION]
+STEPNAME=CompleteActiveWF
+ACTNUM=20
+ACTION=Complete
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=ErrorMessage
+ACTNUM=10
+ACTION=PPWKFLOW.Workflow.SendJinja2Email
+P1=PPAPCHQ.WFERROR
+P2=CHQADMINS
+ONTRUE=20
+ONFALSE=20
+
+[WORKFLOWSTEPACTION]
+STEPNAME=ErrorMessage
+ACTNUM=20
+ACTION=SetStatus
+P1=Error in workflow
+ONTRUE=30
+ONFALSE=30
+
+[WORKFLOWSTEPACTION]
+STEPNAME=ErrorMessage
+ACTNUM=30
+ACTION=SetValue
+P1=WFCOMMENT
+P2=Error in workflow
+ONTRUE=40
+ONFALSE=40
+
+[WORKFLOWSTEPACTION]
+STEPNAME=ErrorMessage
+ACTNUM=40
+ACTION=AssignUser
+P1=CHQADMINS
+ONTRUE=50
+ONFALSE=50
+
+[WORKFLOWSTEPACTION]
+STEPNAME=ErrorMessage
+ACTNUM=50
+ACTION=AssignColour
+P1=Error
+ONTRUE=60
+ONFALSE=60
+
+[WORKFLOWSTEPACTION]
+STEPNAME=ErrorMessage
+ACTNUM=60
+ACTION=GoToStep
+P1=WaitAdmin
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=AdminApprove
+ACTNUM=10
+ACTION=SetValue
+P1=WFCOMMENT
+P2=Error fixed. Ready for approval
+ONTRUE=20
+ONFALSE=20
+
+[WORKFLOWSTEPACTION]
+STEPNAME=AdminApprove
+ACTNUM=20
+ACTION=SetStatus
+P1=Error fixed. Ready for approval
+ONTRUE=30
+ONFALSE=30
+
+[WORKFLOWSTEPACTION]
+STEPNAME=AdminApprove
+ACTNUM=30
+ACTION=AssignColour
+P1=Pending
+ONTRUE=40
+ONFALSE=40
+
+[WORKFLOWSTEPACTION]
+STEPNAME=AdminApprove
+ACTNUM=40
+ACTION=AssignUser
+P1={ASSIGNTO}
+ONTRUE=50
+ONFALSE=50
+
+[WORKFLOWSTEPACTION]
+STEPNAME=AdminApprove
+ACTNUM=50
+ACTION=PPWKFLOW.Workflow.ResolvingGoToStep
+P1={RETURNTO}
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=PrintConfirm
+ACTNUM=10
+ACTION=AssignColour
+P1=WaitPrintConfirm
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Confirmed
+ACTNUM=10
+ACTION=SetStatus
+P1=Cheques printed successfully
+ONTRUE=20
+ONFALSE=20
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Confirmed
+ACTNUM=20
+ACTION=SetValue
+P1=WFCOMMENT
+P2=Cheques printed successfully
+ONTRUE=30
+ONFALSE=30
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Confirmed
+ACTNUM=30
+ACTION=GoToStep
+P1=PostBatch
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reprint
+ACTNUM=10
+ACTION=SetStatus
+P1=Cheques not printed successfully
+ONTRUE=20
+ONFALSE=20
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reprint
+ACTNUM=20
+ACTION=SetValue
+P1=WFCOMMENT
+P2=Cheques need to be reprinted
+ONTRUE=30
+ONFALSE=30
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reprint
+ACTNUM=30
+ACTION=AssignColour
+P1=No Colour
+ONTRUE=40
+ONFALSE=40
+
+[WORKFLOWSTEPACTION]
+STEPNAME=Reprint
+ACTNUM=40
+ACTION=GoToStep
+P1=WaitPrint
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWSTEPACTION]
+STEPNAME=PostBatch
+ACTNUM=10
+ACTION=SetField
+P1={BATCHSTAT}
+P2=7
+ONTRUE=20
+ONFALSE=20
+
+[WORKFLOWSTEPACTION]
+STEPNAME=PostBatch
+ACTNUM=20
+ACTION=PostAPPaymentBatch
+ONTRUE=30
+ONFALSE=30
+
+[WORKFLOWSTEPACTION]
+STEPNAME=PostBatch
+ACTNUM=30
+ACTION=SetStatus
+P1=Batch Posted - Complete
+ONTRUE=40
+ONFALSE=40
+
+[WORKFLOWSTEPACTION]
+STEPNAME=PostBatch
+ACTNUM=40
+ACTION=SetValue
+P1=WFCOMMENT
+P2=Batch Posted - Complete
+ONTRUE=50
+ONFALSE=50
+
+[WORKFLOWSTEPACTION]
+STEPNAME=PostBatch
+ACTNUM=50
+ACTION=Complete
+ONTRUE=0
+ONFALSE=0
+
+[WORKFLOWVALUE]
+NAME=APPROVEDBY
+
+[WORKFLOWVALUE]
+NAME=APPROVER
+
+[WORKFLOWVALUE]
+NAME=ASSIGNTO
+SVALUE=ADMIN
+
+[WORKFLOWVALUE]
+NAME=REJECTREASON
+
+[WORKFLOWVALUE]
+NAME=RETURNTO
+SVALUE=Start
+
+[WORKFLOWVALUE]
+NAME=WFCOMMENT
+
+[WORKFLOWVALUE]
+NAME=WFCRITICALERROR

@@ -1,0 +1,8 @@
+include **/vi/*.vi
+include */expi.json
+include */whl/*.whl
+include README.rst
+include LICENSE.txt
+include docs/conf.py docs/Makefile
+recursive-include docs *.rst *.png *.xlsx
+prune docs/contract

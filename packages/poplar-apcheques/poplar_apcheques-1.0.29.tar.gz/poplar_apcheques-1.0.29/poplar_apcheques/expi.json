@@ -1,0 +1,48 @@
+{
+    "module": "PPAPCHQ",
+    "title": "A/P Payment Approval Workflow",
+    "description": "A/P Payment approval with cheque printing and signing.",
+    "sage": {
+        "version": 2019,
+        "product_update": 3.0,
+        "edition": "Premium"
+    },
+    "extender": {
+        "version": 2019,
+        "product_update": 9.00,
+        "edition": "Developer"
+    },
+    "programs": ["AP"],
+    "views": [],
+    "screens": [],
+    "workflows": [],
+    "access": "authorized",
+    "visibility": "public",
+    "pricing": {},
+    "email": "chris@poplars.dev",
+    "postinstall": {
+        "wheel": {
+            "Pillow": "Pillow-8.3.1-cp38-cp38m-win32.whl",
+            "reportlab": "reportlab-3.6.1-cp38-cp38m-win32.whl",
+            "pywin32": "pywin32-301-cp38-cp38m-win32.whl"
+        },
+        "has": { 
+            "VI0023": {
+                "order": 0,
+                "key_fields": ["GROUP"],
+                "entries": [
+                    {
+                        "GROUP": "FIRSTSIGNERS",
+                        "DESC": "First signatories for AP cheques"
+                    },{
+                        "GROUP": "SECONDSIGNERS",
+                        "DESC": "Second signatories for AP cheques"
+                    },{
+                        "GROUP": "CHEQUEPRINTERS",
+                        "DESC": "Users responsible for printing cheques."
+                    }
+                ]
+            }
+        }
+    }
+}

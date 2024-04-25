@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: poplar-apcheques
+Version: 1.0.29
+Summary: UNKNOWN
+Home-page: https://poplars.dev
+Author: Poplar Development
+Author-email: chris@poplars.dev
+License: UNKNOWN
+Download-URL: https://expi.dev/poplar_apcheques/
+Description: poplar_apcheques
+        ===============================================================================
+        
+        None
+Keywords: Orchid,Extender,Sage 300,Automation
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.4
