@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+datasette_secrets/__init__.py
+datasette_secrets/hookspecs.py
+datasette_secrets.egg-info/PKG-INFO
+datasette_secrets.egg-info/SOURCES.txt
+datasette_secrets.egg-info/dependency_links.txt
+datasette_secrets.egg-info/entry_points.txt
+datasette_secrets.egg-info/requires.txt
+datasette_secrets.egg-info/top_level.txt
+datasette_secrets/templates/secrets_index.html
+datasette_secrets/templates/secrets_update.html
+tests/test_secrets.py
