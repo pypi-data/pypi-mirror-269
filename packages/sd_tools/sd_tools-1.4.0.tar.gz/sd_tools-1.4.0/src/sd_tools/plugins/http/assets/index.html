@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SD</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="/index.css" />
+    </head>
+
+    <body>
+        <div
+            class="grid grid-cols-1 gap-4 px-4 py-4 sm:px-6 sm:py-6 md:grid-cols-2 lg:grid-cols-3 lg:px-8 lg:py-8 xl:grid-cols-4 2xl:grid-cols-5"
+        >
+            <form id="form" action="/" class="col-span-1 space-y-4">
+                <div>
+                    <label
+                        for="cfg"
+                        class="block text-sm font-medium text-gray-700"
+                        >cfg:</label
+                    >
+                    <div class="block flex w-full items-center gap-4">
+                        <input
+                            type="range"
+                            step="0.1"
+                            name="cfg"
+                            min="0"
+                            max="20"
+                            value="1"
+                            oninput="this.nextElementSibling.value = this.value"
+                            class="flex grow px-3 py-2 focus:outline-none sm:text-sm"
+                        />
+                        <output
+                            class="min-w-8 text-right font-mono text-sm font-medium text-gray-700"
+                            >1</output
+                        >
+                    </div>
+                </div>
+                <div>
+                    <label
+                        for="steps"
+                        class="block text-sm font-medium text-gray-700"
+                        >steps:</label
+                    >
+                    <div class="block flex w-full items-center gap-4">
+                        <input
+                            type="range"
+                            name="steps"
+                            min="1"
+                            max="50"
+                            value="4"
+                            oninput="this.nextElementSibling.value = this.value"
+                            class="flex grow px-3 py-2 focus:outline-none sm:text-sm"
+                        />
+                        <output
+                            class="min-w-8 text-right font-mono text-sm font-medium text-gray-700"
+                            >4</output
+                        >
+                    </div>
+                </div>
+                <div>
+                    <label for="size" class="text-sm font-medium text-gray-700"
+                        >size:</label
+                    >
+                    <div class="flex w-full flex-wrap items-center gap-4">
+                        <input
+                            type="number"
+                            step="8"
+                            name="width"
+                            min="8"
+                            max="3200"
+                            value="512"
+                            class="flex grow rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-black focus:outline-none sm:text-sm"
+                        />
+                        X
+                        <input
+                            type="number"
+                            step="8"
+                            name="height"
+                            min="8"
+                            max="3200"
+                            value="512"
+                            class="flex grow rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-black focus:outline-none sm:text-sm"
+                        />
+                        <div class="block">
+                            <span
+                                class="fill-size cursor-pointer text-sm text-gray-500 hover:text-black"
+                                >512</span
+                            >
+                            <span
+                                class="fill-size cursor-pointer text-sm text-gray-500 hover:text-black"
+                                >768</span
+                            >
+                            <span
+                                class="fill-size cursor-pointer text-sm text-gray-500 hover:text-black"
+                                >1024x576</span
+                            >
+                            <span
+                                class="fill-size cursor-pointer text-sm text-gray-500 hover:text-black"
+                                >1024x768</span
+                            >
+                            <span
+                                class="fill-size cursor-pointer text-sm text-gray-500 hover:text-black"
+                                >768x1024</span
+                            >
+                            <span
+                                class="fill-size cursor-pointer text-sm text-gray-500 hover:text-black"
+                                >1024</span
+                            >
+                            <span
+                                class="fill-size cursor-pointer text-sm text-gray-500 hover:text-black"
+                                >832x1216</span
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label
+                        for="scheduler"
+                        class="block text-sm font-medium text-gray-700"
+                        >scheduler:</label
+                    >
+                    <select name="scheduler">
+                        <option value=""></option>
+                        <option value="DPM++ 2M">DPM++ 2M</option>
+                        <option value="DPM++ 2M Karras">DPM++ 2M Karras</option>
+                        <option value="DPM++ 2M SDE">DPM++ 2M SDE</option>
+                        <option value="DPM++ 2M SDE Karras">
+                            DPM++ 2M SDE Karras
+                        </option>
+                        <option value="DPM++ SDE">DPM++ SDE</option>
+                        <option value="DPM++ SDE Karras">
+                            DPM++ SDE Karras
+                        </option>
+                        <option value="Euler">Euler</option>
+                        <option value="Euler a">Euler a</option>
+                        <option value="UniPC">UniPC</option>
+                    </select>
+                </div>
+                <div>
+                    <label
+                        for="prompt"
+                        class="block text-sm font-medium text-gray-700"
+                        >prompt:</label
+                    >
+                    <textarea
+                        name="prompt"
+                        rows="4"
+                        cols="50"
+                        class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-black focus:outline-none sm:text-sm"
+                    >
+chihuahua</textarea
+                    >
+                </div>
+                <div>
+                    <button
+                        type="submit"
+                        class="flex w-full justify-center rounded-md bg-black px-4 py-2 text-sm font-medium text-white shadow-sm focus:outline-none"
+                    >
+                        Gen
+                    </button>
+                </div>
+            </form>
+
+            <div
+                id="output"
+                class="columns-md gap-x-4 gap-y-4 lg:col-span-2 xl:col-span-3 2xl:col-span-4"
+            ></div>
+        </div>
+    </body>
+
+    <script src="/index.js"></script>
+</html>
