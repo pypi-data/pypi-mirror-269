@@ -1,0 +1,40 @@
+Metadata-Version: 2.3
+Name: pyrobird
+Version: 0.0.5
+Author-email: Dmitry Romanov <romanovda@gmail.com>
+License-Expression: LGPL-3.0-or-later
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: click
+Description-Content-Type: text/markdown
+
+# pyrobird
+
+[![PyPI - Version](https://img.shields.io/pypi/v/pyrobird.svg)](https://pypi.org/project/pyrobird)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyrobird.svg)](https://pypi.org/project/pyrobird)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install pyrobird
+```
+
+## License
+
+`pyrobird` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
