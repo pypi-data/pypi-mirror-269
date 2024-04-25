@@ -1,0 +1,3 @@
+[console_scripts]
+parse-payslip=twth_payslip_parser:main
+
