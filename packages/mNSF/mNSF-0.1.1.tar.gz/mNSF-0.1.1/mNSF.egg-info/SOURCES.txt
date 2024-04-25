@@ -1,0 +1,13 @@
+README.txt
+pyproject.toml
+setup.py
+mNSF/__init__.py
+mNSF/pf_multiSample.py
+mNSF/process_multiSample.py
+mNSF/training_multiSample.py
+mNSF.egg-info/PKG-INFO
+mNSF.egg-info/SOURCES.txt
+mNSF.egg-info/dependency_links.txt
+mNSF.egg-info/requires.txt
+mNSF.egg-info/top_level.txt
+tests/test_small_run.py
