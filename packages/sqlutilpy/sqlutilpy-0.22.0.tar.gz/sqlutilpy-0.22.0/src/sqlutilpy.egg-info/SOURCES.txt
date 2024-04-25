@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+src/sqlutilpy/__init__.py
+src/sqlutilpy/sqlutil.py
+src/sqlutilpy/version.py
+src/sqlutilpy.egg-info/PKG-INFO
+src/sqlutilpy.egg-info/SOURCES.txt
+src/sqlutilpy.egg-info/dependency_links.txt
+src/sqlutilpy.egg-info/requires.txt
+src/sqlutilpy.egg-info/top_level.txt
+tests/killer.py
+tests/test_pg.py
+tests/test_sqlite.py
