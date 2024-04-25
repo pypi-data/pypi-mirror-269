@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: denseclus
+Version: 2.1.0
+Summary: A clustering library with optional GPU support by AnupamAS01
+Home-page: https://github.com/anupamas01/denseclus
+Author: AnupamAS01 
+Author-email: your.email@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: gpu-cu12
+Requires-Dist: tensorflow-gpu ==2.8.0 ; (sys_platform == "linux") and extra == 'gpu-cu12'
+Requires-Dist: cudatoolkit ==12.0 ; (sys_platform == "linux") and extra == 'gpu-cu12'
+
+# AnupamAS01
+
+Creating A Server
+
+```python
+from vidstream import StreamingServer
+
+server = StreamingServer('127.0.0.1', 9999)
+server.start_server()
+
+# Other Code
+
+# When You Are Done
+server.stop_server()
+```
+
+Creating A Client
+```python
+from vidstream import CameraClient
+from vidstream import VideoClient
+from vidstream import ScreenShareClient
+
+# Choose One
+client1 = CameraClient('127.0.0.1', 9999)
+client2 = VideoClient('127.0.0.1', 9999, 'video.mp4')
+client3 = ScreenShareClient('127.0.0.1', 9999)
+
+client1.start_stream()
+client2.start_stream()
+client3.start_stream()
+```
+
+# anupam-action-test
