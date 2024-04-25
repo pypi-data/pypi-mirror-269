@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"] 
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spk-dev-utils"
+version = "1.0.0"
+authors = [{ name = "dahannajr", email = "david.hanna@kickstepinc.com"}]
+description = "Utilities for working with SSO"
+requires-python = ">=3"  # Or specify your exact Python version range
+dependencies = [
+    "boto3",
+]
