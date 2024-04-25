@@ -1,0 +1,30 @@
+{
+    "example_architecture": [
+        {
+            "name": "Celestial Observatory",
+            "prompt": "A tower telescope with constellation engravings pointing to a starry sky."
+        },
+        {
+            "name": "Garden Bridge",
+            "prompt": "A stone bridge intertwined with flowering vines and trees, spanning a gentle river."
+        },
+        {
+            "name": "Solarium Library",
+            "prompt": "A vast library with glass domed ceilings showcasing the days sky."
+        }
+    ],
+    "example_farout": [
+        {
+            "name": "Starry Ocean",
+            "prompt": "A vast midnight ocean shimmering under a sky filled with galaxies, where the boundary between water and sky is indistinguishable. Neon marine life dances below, mirroring the stars above."
+        },
+        {
+            "name": "Nature's Symphony",
+            "prompt": "A grand orchestra composed of trees as the musicians, flowers as the instruments, and animals as the audience. A gentle breeze conducts the melody."
+        },
+        {
+            "name": "Lost City of the Skies",
+            "prompt": "Floating islands in a clear blue sky, interconnected with hanging bridges, cascading waterfalls flowing from one to another, and majestic flying creatures soaring around."
+        }
+    ]
+}

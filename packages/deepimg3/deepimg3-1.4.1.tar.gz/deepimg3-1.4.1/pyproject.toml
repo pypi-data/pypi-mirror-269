@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "deepimg3"
+version = "1.4.1"
+description = "Automated testing for the DeepAI text to image api"
+authors = ["DJ Magar <dj@deepai.org>"]
+license = "MIT"
+readme = "README.md"
+exclude = [
+    "**/.env",
+    "**/promptsets.json",
+    "**/images*/",
+    "**/*.png",
+    "**/*.jpg",
+    "**/__pycache__/",
+    "dist/",
+    "poetry.lock",
+]
+include = [
+    "**/*.example.*",
+    "deepimg3/",
+    "www/",
+    "example.env",
+    "README.md",
+    "pyproject.toml",
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+tqdm = "^4.66.2"
+httpx = "^0.27.0"
+
+[tool.poetry.group.dev.dependencies]
+twine = "^5.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
