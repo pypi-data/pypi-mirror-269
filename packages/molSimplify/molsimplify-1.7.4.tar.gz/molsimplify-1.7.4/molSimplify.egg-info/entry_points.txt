@@ -1,0 +1,3 @@
+[console_scripts]
+molscontrol = molSimplify.molscontrol.molscontrol:main
+molsimplify = molSimplify.__main__:main
