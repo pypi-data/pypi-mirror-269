@@ -1,0 +1,8 @@
+aiida-core
+aiida-worktree
+aiida-quantumespresso
+aiida-cp2k
+weas-widget
+pytest
+pytest-cov
+pre-commit
