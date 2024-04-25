@@ -1,0 +1,10 @@
+wayfire/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wayfire/ipc.py,sha256=B2W3E4Q7Sm-9XWnP6canSJpNOtO0Ekh6fi342x8vkY4,79702
+wayfire/tests/gtk3_dialogs.py,sha256=vZZmxzzan-WA0mXINyUtpmihHaWJOKyL5uNXxj7DCTY,799
+wayfire/tests/gtk3_window.py,sha256=I5SrmJnINERvRiFw3QuQNdyhIM3C2JIobWV00oOi5I0,1723
+wayfire/tests/layershell.py,sha256=v8XRNRT9QGRflM3sDf9ijEFQQy2fFycVSWch_BjH--8,1656
+wayfire/tests/wayfire.ini,sha256=6ZEuUvD2hblTl51xizFE05jR7kKcQ_Grsf7DinRURlM,621
+wayfire-1.0.dist-info/METADATA,sha256=t6KpgqVq6rPa5ezBHjHoQ6HVpN3U9SXftntahdVpMVs,2584
+wayfire-1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+wayfire-1.0.dist-info/top_level.txt,sha256=R0WqmJ-V1SikUDeRM_YpsUkhWwY1wfl2UlhlHjaH4V4,8
+wayfire-1.0.dist-info/RECORD,,
