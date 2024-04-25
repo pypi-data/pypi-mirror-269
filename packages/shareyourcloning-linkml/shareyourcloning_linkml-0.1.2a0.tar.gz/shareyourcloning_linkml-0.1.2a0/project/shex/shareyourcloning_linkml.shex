@@ -1,0 +1,301 @@
+BASE <https://w3id.org/genestorian/ShareYourCloning_LinkML/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX schema1: <http://schema.org/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:time
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+linkml:Jsonpointer xsd:string
+
+linkml:Jsonpath xsd:string
+
+linkml:Sparqlpath xsd:string
+
+<AssemblyJoin> CLOSED {
+    (  $<AssemblyJoin_tes> (  <left_fragment> @<Sequence> ;
+          <right_fragment> @<Sequence> ;
+          <left_location> @<SimpleSequenceLocation> ;
+          <right_location> @<SimpleSequenceLocation>
+       ) ;
+       rdf:type [ <AssemblyJoin> ] ?
+    )
+}
+
+<AssemblySource>  (
+    CLOSED {
+       (  $<AssemblySource_tes> (  &<Source_tes> ;
+             rdf:type [ <Source> ] ? ;
+             <circular> @linkml:Boolean ? ;
+             <assembly> @<AssemblyJoin> +
+          ) ;
+          rdf:type [ <AssemblySource> ]
+       )
+    } OR @<GibsonAssemblySource> OR @<HomologousRecombinationSource> OR @<LigationSource> OR @<PCRSource> OR
+    @<RestrictionAndLigationSource>
+)
+
+<CloningStrategy> CLOSED {
+    (  $<CloningStrategy_tes> (  <sequences> @<Sequence> + ;
+          <sources> @<Source> + ;
+          <primers> @<Primer> * ;
+          <description> @linkml:String ?
+       ) ;
+       rdf:type [ <CloningStrategy> ] ?
+    )
+}
+
+<GenomeCoordinatesSource> CLOSED {
+    (  $<GenomeCoordinatesSource_tes> (  &<Source_tes> ;
+          rdf:type [ <Source> ] ? ;
+          <assembly_accession> @linkml:String ? ;
+          <sequence_accession> @linkml:String ;
+          <locus_tag> @linkml:String ? ;
+          <gene_id> @linkml:Integer ? ;
+          <start> @linkml:Integer ;
+          <end> @linkml:Integer ;
+          <strand> @linkml:Integer
+       ) ;
+       rdf:type [ <GenomeCoordinatesSource> ]
+    )
+}
+
+<GibsonAssemblySource> CLOSED {
+    (  $<GibsonAssemblySource_tes> (  &<AssemblySource_tes> ;
+          rdf:type [ <AssemblySource> ] ?
+       ) ;
+       rdf:type [ <GibsonAssemblySource> ]
+    )
+}
+
+<HomologousRecombinationSource> CLOSED {
+    (  $<HomologousRecombinationSource_tes> (  &<AssemblySource_tes> ;
+          rdf:type [ <AssemblySource> ] ?
+       ) ;
+       rdf:type [ <HomologousRecombinationSource> ]
+    )
+}
+
+<LigationSource> CLOSED {
+    (  $<LigationSource_tes> (  &<AssemblySource_tes> ;
+          rdf:type [ <AssemblySource> ] ?
+       ) ;
+       rdf:type [ <LigationSource> ]
+    )
+}
+
+<ManuallyTypedSource> CLOSED {
+    (  $<ManuallyTypedSource_tes> (  &<Source_tes> ;
+          rdf:type [ <Source> ] ? ;
+          <user_input> @linkml:String ;
+          <circular> @linkml:Boolean ?
+       ) ;
+       rdf:type [ <ManuallyTypedSource> ]
+    )
+}
+
+<NamedThing>  (
+    CLOSED {
+       (  $<NamedThing_tes> rdf:type . * ;
+          rdf:type [ schema1:Thing ]
+       )
+    } OR @<Sequence> OR @<Source>
+)
+
+<OligoHybridizationSource> CLOSED {
+    (  $<OligoHybridizationSource_tes> (  &<Source_tes> ;
+          rdf:type [ <Source> ] ? ;
+          <forward_oligo> @<Primer> ;
+          <reverse_oligo> @<Primer> ;
+          <overhang_crick_3prime> @linkml:Integer ?
+       ) ;
+       rdf:type [ <OligoHybridizationSource> ]
+    )
+}
+
+<PCRSource> CLOSED {
+    (  $<PCRSource_tes> (  &<AssemblySource_tes> ;
+          rdf:type [ <AssemblySource> ] ? ;
+          <forward_primer> @<Primer> ;
+          <reverse_primer> @<Primer>
+       ) ;
+       rdf:type [ <PCRSource> ]
+    )
+}
+
+<PolymeraseExtensionSource> CLOSED {
+    (  $<PolymeraseExtensionSource_tes> (  &<Source_tes> ;
+          rdf:type [ <Source> ] ?
+       ) ;
+       rdf:type [ <PolymeraseExtensionSource> ]
+    )
+}
+
+<Primer> CLOSED {
+    (  $<Primer_tes> (  &<Sequence_tes> ;
+          rdf:type [ <Sequence> ] ? ;
+          schema1:name @linkml:String ? ;
+          <sequence> @linkml:String ?
+       ) ;
+       rdf:type [ <Primer> ]
+    )
+}
+
+<RepositoryIdSource> CLOSED {
+    (  $<RepositoryIdSource_tes> (  &<Source_tes> ;
+          rdf:type [ <Source> ] ? ;
+          <repository_name> [ <https://w3id.org/genestorian/ShareYourCloning_LinkML/RepositoryName#addgene>
+             <https://w3id.org/genestorian/ShareYourCloning_LinkML/RepositoryName#genbank> ] ;
+          <repository_id> @linkml:String
+       ) ;
+       rdf:type [ <RepositoryIdSource> ]
+    )
+}
+
+<RestrictionAndLigationSource> CLOSED {
+    (  $<RestrictionAndLigationSource_tes> (  &<AssemblySource_tes> ;
+          rdf:type [ <AssemblySource> ] ? ;
+          <restriction_enzymes> @linkml:String +
+       ) ;
+       rdf:type [ <RestrictionAndLigationSource> ]
+    )
+}
+
+<RestrictionEnzymeDigestionSource> CLOSED {
+    (  $<RestrictionEnzymeDigestionSource_tes> (  &<SequenceCutSource_tes> ;
+          rdf:type [ <SequenceCutSource> ] ? ;
+          <left_edge> @<RestrictionSequenceCut> ? ;
+          <right_edge> @<RestrictionSequenceCut> ?
+       ) ;
+       rdf:type [ <RestrictionEnzymeDigestionSource> ]
+    )
+}
+
+<RestrictionSequenceCut> CLOSED {
+    (  $<RestrictionSequenceCut_tes> (  &<SequenceCut_tes> ;
+          rdf:type [ <SequenceCut> ] ? ;
+          <restriction_enzyme> @linkml:String
+       ) ;
+       rdf:type [ <RestrictionSequenceCut> ] ?
+    )
+}
+
+<Sequence>  (
+    @<Primer> OR @<TextFileSequence>
+)
+
+<Sequence_struct> {
+    (  $<Sequence_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema1:Thing ] ? ;
+          <type> @linkml:String ?
+       ) ;
+       rdf:type [ <Sequence> ]
+    )
+}
+
+<SequenceCut>  (
+    CLOSED {
+       (  $<SequenceCut_tes> (  <cut_watson> @linkml:Integer ? ;
+             <overhang> @linkml:Integer ?
+          ) ;
+          rdf:type [ <SequenceCut> ] ?
+       )
+    } OR @<RestrictionSequenceCut>
+)
+
+<SequenceCutSource>  (
+    CLOSED {
+       (  $<SequenceCutSource_tes> (  &<Source_tes> ;
+             rdf:type [ <Source> ] ? ;
+             <left_edge> @<SequenceCut> ? ;
+             <right_edge> @<SequenceCut> ?
+          ) ;
+          rdf:type [ <SequenceCutSource> ]
+       )
+    } OR @<RestrictionEnzymeDigestionSource>
+)
+
+<SimpleSequenceLocation> CLOSED {
+    (  $<SimpleSequenceLocation_tes> (  <start> @linkml:Integer ;
+          <end> @linkml:Integer ;
+          <strand> @linkml:Integer ?
+       ) ;
+       rdf:type [ <SimpleSequenceLocation> ] ?
+    )
+}
+
+<Source>  (
+    @<AssemblySource> OR @<GenomeCoordinatesSource> OR @<ManuallyTypedSource> OR @<OligoHybridizationSource> OR
+    @<PolymeraseExtensionSource> OR @<RepositoryIdSource> OR @<SequenceCutSource> OR @<UploadedFileSource>
+)
+
+<Source_struct> {
+    (  $<Source_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema1:Thing ] ? ;
+          <input> @<Sequence> * ;
+          <output> @<Sequence> ? ;
+          <type> @linkml:String ?
+       ) ;
+       rdf:type [ <Source> ]
+    )
+}
+
+<TextFileSequence> CLOSED {
+    (  $<TextFileSequence_tes> (  &<Sequence_tes> ;
+          rdf:type [ <Sequence> ] ? ;
+          <sequence_file_format> [ <https://w3id.org/genestorian/ShareYourCloning_LinkML/SequenceFileFormat#fasta>
+             <https://w3id.org/genestorian/ShareYourCloning_LinkML/SequenceFileFormat#genbank>
+             <https://w3id.org/genestorian/ShareYourCloning_LinkML/SequenceFileFormat#snapgene> ] ;
+          <file_content> @linkml:String ? ;
+          <overhang_crick_3prime> @linkml:Integer ? ;
+          <overhang_watson_3prime> @linkml:Integer ?
+       ) ;
+       rdf:type [ <TextFileSequence> ]
+    )
+}
+
+<UploadedFileSource> CLOSED {
+    (  $<UploadedFileSource_tes> (  &<Source_tes> ;
+          rdf:type [ <Source> ] ? ;
+          <sequence_file_format> [ <https://w3id.org/genestorian/ShareYourCloning_LinkML/SequenceFileFormat#fasta>
+             <https://w3id.org/genestorian/ShareYourCloning_LinkML/SequenceFileFormat#genbank>
+             <https://w3id.org/genestorian/ShareYourCloning_LinkML/SequenceFileFormat#snapgene> ] ;
+          <file_name> @linkml:String ? ;
+          <index_in_file> @linkml:Integer ?
+       ) ;
+       rdf:type [ <UploadedFileSource> ]
+    )
+}
+
+
