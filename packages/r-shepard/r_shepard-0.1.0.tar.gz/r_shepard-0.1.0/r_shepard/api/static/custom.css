@@ -1,0 +1,113 @@
+.delete-button {
+  --pico-background-color: var(--pico-color-red-500);
+  --pico-border-color: var(--pico-color-red-500);
+  --pico-color: var(--pico-primary-inverse);
+  --pico-box-shadow: var(--pico-button-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
+  --pico-primary-hover-background: var(--pico-color-red-600);
+  --pico-primary-hover-border: var(--pico-color-red-600);
+  --pico-primary-focus: var(--pico-color-red-700);
+}
+
+ul.messages {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.error {
+  font-size: small;
+  color: white;
+  background-color: #f44336; /* Red */
+  border: none;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-card {
+  max-width: 600px;
+}
+
+.container-title {
+  font-size: 20px;
+  margin-top: 4px;
+  margin-bottom: 30px;
+}
+
+.info-pill {
+  background-color: var(--pico-code-background-color);
+  color: var(--pico-code-color);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.open-button {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--pico-color-green-600);
+  padding: 2px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  border: 2px solid var(--pico-color-green-600);
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.open-button:hover {
+  background-color: var(--pico-color-green-600);
+  color: #fff;
+}
+
+.button-content {
+  margin-left: 32px;
+}
+
+.htmx-indicator {
+  display: none;
+}
+
+/* Loading Spinner */
+.lds-dual-ring {
+  /* change color here */
+  color: #fff;
+}
+.lds-dual-ring,
+.lds-dual-ring:after {
+  box-sizing: border-box;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 3.2px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
