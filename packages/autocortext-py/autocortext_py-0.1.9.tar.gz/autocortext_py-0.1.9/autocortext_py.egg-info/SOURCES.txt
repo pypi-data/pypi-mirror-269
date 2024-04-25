@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+autocortext_py/__init__.py
+autocortext_py/client.py
+autocortext_py.egg-info/PKG-INFO
+autocortext_py.egg-info/SOURCES.txt
+autocortext_py.egg-info/dependency_links.txt
+autocortext_py.egg-info/requires.txt
+autocortext_py.egg-info/top_level.txt
