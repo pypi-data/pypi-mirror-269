@@ -1,0 +1,3 @@
+[console_scripts]
+dav = davml.programs:main
+ml = davml.program:main
