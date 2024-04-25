@@ -1,0 +1,10 @@
+nltk>=3.8.1
+numpy
+scikit-learn
+scipy
+tqdm
+pandas
+dill
+emoji
+tiktoken
+unidecode
