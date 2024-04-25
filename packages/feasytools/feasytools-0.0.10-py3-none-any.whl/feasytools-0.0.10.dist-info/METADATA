@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: feasytools
+Version: 0.0.10
+Summary: A set of tools for data processing, including Time Function, Table, Priority Queue, Range List, etc.
+Home-page: UNKNOWN
+Author: fmy_xfk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.19.0)
+
+# FEasyTools: Some useful components
+- dprov: Data provider as time functions
+- argchk: Argument parser with type checking
+- table: Table helper for the CSV, SDT & SDT.GZ format, and their reader and writer.
+- pq: Heap, priority queue & buffered priority queue
+- rangelist: An xml reader for a time range list
+
+
