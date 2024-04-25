@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "EntropyHub"
+version = "1.0.1"
+dependencies = ["numpy", "matplotlib", "scipy",  "EMD-signal",  "requests"]
+
+requires-python = ">=3.6"
+authors = [{name = "Matthew W. Flood", email = "info@entropyhub.xyz"},]
+maintainers = [{name = "Matthew W. Flood", email = "info@entropyhub.xyz"},]
+description="An open-source toolkit for entropic data analysis."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = [  
+    "entropy", "nonlinear", "time series", "statistics", "physics", "mathematics", "signal processing",
+    "statistical physics", "entropic", "toolkit", "research", "multiscale", "regularity", "periodic",
+    "sample entropy", "approximate entropy", "fuzzy entropy", "permutation entropy", "uncertainty",
+    "dispersion entropy", "kolmogorov", "conditional entropy", "composite", "refined", "multivariate",
+    "randomness", "random", "signal analysis", "nonlinearity", "julia", "matlab", "open-source",
+    "refined-composite", "hierarchical entropy", "information theory", "shannon entropy", 
+    "complexity", "dynamical", "systems"    
+    ]
+classifiers = [
+        "Development Status :: 5 - Production/Stable",        
+        "Intended Audience :: Science/Research",        
+        "Topic :: Scientific/Engineering",
+        "License :: OSI Approved :: Apache Software License",        
+        "Natural Language :: English",        
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3 :: Only",
+]
+
+
+[project.urls]
+Homepage = "https://www.EntropyHub.xyz/"
+Documentation = "https://www.entropyhub.xyz/"
+Repository =  "https://github.com/MattWillFlood/EntropyHub"
+"User Manual" = "https://github.com/MattWillFlood/EntropyHub/blob/main/EntropyHub%20Guide.pdf"
+Citation = "https://doi.org/10.1371/journal.pone.0259448"
+"Bug Tracker" = "https://github.com/MattWillFlood/EntropyHub/issues"
+Contact = 'https://www.entropyhub.xyz/#contact'
+Examples = 'https://www.entropyhub.xyz/python/pyexamples.html'
