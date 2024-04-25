@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: Generate-curve-tool
+Version: 1.0
+Summary: A tool to generate the common curves for robot planning
+Author: Han Ruihua
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+
