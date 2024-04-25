@@ -1,0 +1,11 @@
+Warning: KiotaBuilder OpenAPI warning: #/ - A servers entry (v3) or host + basePath + schemes properties (v2) was not present in the OpenAPI description. The root URL will need to be set manually with the request adapter.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1api~1dataset~1list~1{testId}/get/parameters/1/example - Data and type mismatch found.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1api~1run~1data/post/parameters/4/example - Data and type mismatch found.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1api~1run~1data/post/requestBody/content/application~1json/example - Data and type mismatch found.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1api~1run~1test/post/parameters/2/example - Data and type mismatch found.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1api~1run~1{id}~1updateAccess/post/parameters/2/example - Data and type mismatch found.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1api~1schema~1{id}~1updateAccess/post/parameters/2/example - Data and type mismatch found.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1api~1test~1{id}~1updateAccess/post/parameters/2/example - Data and type mismatch found.
+Warning: KiotaBuilder OpenAPI warning: #/components/schemas/VersionInfo/properties/startTimestamp/example - Data and type mismatch found.
+Error: KiotaBuilder OpenAPI error: #/paths//api/config/datastore/{team} - The path signature '/api/config/datastore/{}' MUST be unique.
+Warning: KiotaBuilder No server url found in the OpenAPI document. The base url will need to be set when using the client.
