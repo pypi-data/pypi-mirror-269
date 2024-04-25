@@ -1,0 +1,8 @@
+{{ facet_imports|imports }}
+{{ vars.facets|imports }}
+
+{% for facet in facets %}
+{{ facet.path }} = {{ facet.field }}
+{% endfor %}
+
+{{ vars.facets|extra_code }}
