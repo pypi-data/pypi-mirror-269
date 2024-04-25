@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: pokeyeh
+Version: 1.0.1
+Summary: Libreria para generar un pokemon aleatorio.
+Author: Pablo Lozher
+Author-email: lozadapablo85@gmail.com
+Requires-Dist: pandas
