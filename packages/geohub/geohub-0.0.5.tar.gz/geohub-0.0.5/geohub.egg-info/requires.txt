@@ -1,0 +1,13 @@
+numpy
+ipyleaflet
+geopandas
+pandas
+localtileserver
+rasterio
+matplotlib
+
+[all]
+geohub[extra]
+
+[extra]
+pandas
