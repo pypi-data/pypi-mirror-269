@@ -1,0 +1,9 @@
+langchain
+openai
+ray[default]==2.6.0
+
+[dev]
+check-manifest
+
+[test]
+coverage
