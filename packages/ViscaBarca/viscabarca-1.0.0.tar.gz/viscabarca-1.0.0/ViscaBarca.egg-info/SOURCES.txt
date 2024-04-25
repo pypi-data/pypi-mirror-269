@@ -1,0 +1,10 @@
+README.md
+setup.py
+ViscaBarca/__init__.py
+ViscaBarca/pokemon.csv
+ViscaBarca/random_pokemon.py
+ViscaBarca.egg-info/PKG-INFO
+ViscaBarca.egg-info/SOURCES.txt
+ViscaBarca.egg-info/dependency_links.txt
+ViscaBarca.egg-info/requires.txt
+ViscaBarca.egg-info/top_level.txt
