@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: winter-cloud
+Version: 0.1.8
+Summary: 
+Author: miclon
+Author-email: jcnd@163.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiomysql (==0.2.0)
+Requires-Dist: dynaconf (==3.2.4)
+Requires-Dist: fastapi-async-sqlalchemy (==0.6.0)
+Requires-Dist: fastapi-pagination (==0.12.14)
+Requires-Dist: fastapi[all] (>=0.109.1,<0.110.0)
+Requires-Dist: loguru (==0.7.2)
+Requires-Dist: sqlmodel (==0.0.14)
+Requires-Dist: use-logger (>=0.1.9,<0.2.0)
+Requires-Dist: use-nacos (>=0.1.5,<0.2.0)
+Description-Content-Type: text/markdown
+
+# Winter
+
+## ChangeLog
