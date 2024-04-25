@@ -1,0 +1,6 @@
+httpx
+
+[signature-verification]
+pyOpenSSL
+asn1crypto
+pytz
