@@ -1,0 +1,13 @@
+Output:
+Error: /undefinedfilename in (plot.ps)
+Operand stack:
+
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push
+Dictionary stack:
+   --dict:766/1123(ro)(G)--   --dict:0/20(G)--   --dict:75/200(L)--
+Current allocation mode is local
+Last OS error: No such file or directory
+
+Errors:
+GPL Ghostscript 9.56.1: Unrecoverable error, exit code 1
