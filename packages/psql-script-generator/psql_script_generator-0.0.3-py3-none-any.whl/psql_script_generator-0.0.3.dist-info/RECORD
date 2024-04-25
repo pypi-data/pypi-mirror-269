@@ -1,0 +1,10 @@
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli/__main__.py,sha256=vBQ82334kX06ImDbFlPFgiBRiLIinwNk3z8Khs6hd74,31
+cli/main.py,sha256=5W2_tMSbZ3GawdeVFqnowSVVKVW6rGhpXsoTrEFe2F0,2571
+cli/templates/readonly-user-template.sql.j2,sha256=4QMp73NvTvI1UhDJ0a88CDz2op0-lRsQIXQ1kiTSoHA,1239
+cli/templates/readwrite-user-template.sql.j2,sha256=erkrAB31eSoPRxaiVgF1GPixQJO-LwWHxSyyvIzi1mI,1531
+psql_script_generator-0.0.3.dist-info/METADATA,sha256=_266ALGDyqVvm-tyOlcUMCgWidDI83cWU8wpw7hsc3E,4669
+psql_script_generator-0.0.3.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+psql_script_generator-0.0.3.dist-info/entry_points.txt,sha256=qFgHqUZ-q4MBnA6gB9x2Tsj_OIOQi-HWekNGVmIFK_g,56
+psql_script_generator-0.0.3.dist-info/licenses/LICENSE.txt,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+psql_script_generator-0.0.3.dist-info/RECORD,,
