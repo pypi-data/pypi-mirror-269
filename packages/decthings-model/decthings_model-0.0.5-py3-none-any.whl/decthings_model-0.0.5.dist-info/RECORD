@@ -1,0 +1,10 @@
+decthings_model/__init__.py,sha256=3IqNqTsv3GWVJl_yOGMHL_qzz8HwfnM2lF4RlRr-MP4,133
+decthings_model/__main__.py,sha256=5Z825AWPQqNkl5DeI7f-v4us3MzzA-rQ3mCw4IE1cyU,34
+decthings_model/model.py,sha256=BTMsPOgi6jwWxrYWrpAnk9XNLusCTkOX_pDxfMp1CK8,11287
+decthings_model/run/dataloader.py,sha256=6mSQXBWsw0ZUqASca4_JPMl_AmwLfGDeEc_WXxrpptc,6642
+decthings_model/run/run.py,sha256=FcwOy88dBpHb7UfafndUC3aN1dlnE763snFCO-nN1DY,14621
+decthings_model-0.0.5.dist-info/LICENSE,sha256=XrZRjlkgcvbNAMJPSciBR8uKSi9gomdawYw6nZcSZ5c,1066
+decthings_model-0.0.5.dist-info/METADATA,sha256=j7uVu1f63_3h1qi92TsvX7qCWcgc0rZ72AKVkwshQzY,1465
+decthings_model-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+decthings_model-0.0.5.dist-info/top_level.txt,sha256=AknvRMSVjBOmYDBUfPY_TEDF8PMha2eaxVl0v5IoJ0w,16
+decthings_model-0.0.5.dist-info/RECORD,,
