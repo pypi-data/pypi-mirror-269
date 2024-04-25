@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+kojo/__init__.py
+kojo/extra.py
+kojo/item.py
+kojo/process.py
+kojo.egg-info/PKG-INFO
+kojo.egg-info/SOURCES.txt
+kojo.egg-info/dependency_links.txt
+kojo.egg-info/top_level.txt
