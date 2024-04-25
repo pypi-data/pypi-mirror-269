@@ -1,0 +1,6 @@
+graft common
+graft bluez
+graft dbus
+graft include
+include CMakeLists.txt
+include CrossCompilation.cmake
