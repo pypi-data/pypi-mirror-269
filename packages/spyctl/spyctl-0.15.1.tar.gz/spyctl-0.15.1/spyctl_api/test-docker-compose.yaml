@@ -1,0 +1,15 @@
+version: "3.11"
+
+services:
+  spyctl_test_api:
+    image: spyctl_test_api:latest
+    hostname: spyctl_test_api
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_ROLE_ARN=${AWS_ROLE_ARN}
+      - REPORT_BUCKET=${REPORT_BUCKET}
+    ports:
+      - "80:80"
+    expose:
+      - "80"
