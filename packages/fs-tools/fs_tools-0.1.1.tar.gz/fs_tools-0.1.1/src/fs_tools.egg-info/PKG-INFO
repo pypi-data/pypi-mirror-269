@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: fs-tools
+Version: 0.1.1
+Summary: Simple, exception-free filesystem tools
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/REPO.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: haskellian
+
+# Fs Tools
+
+> Simple, exception-free filesystem tools
