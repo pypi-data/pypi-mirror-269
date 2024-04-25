@@ -1,0 +1,16 @@
+gryannote_audio/__init__.py,sha256=e2-u5T_eCmKe6yFozPDp8dP7vb8PnI2C3r5kuohHHE4,159
+gryannote_audio/annotatedaudio.py,sha256=oSpglw3sYYzRHyVmIDiWXaGSnpEVk_VpbvZ4dPMsgEw,16841
+gryannote_audio/annotatedaudio.pyi,sha256=JHNWzMTzdKflhr0dPB630-cCrZ9gz4Ye9dpOYCA0JWM,77967
+gryannote_audio/core.py,sha256=kNkrUFTHiPIrv45oi6E30qu1CuIK7OMIMB5ZQ112KaA,3399
+gryannote_audio/templates/component/__vite-browser-external-2447137e.js,sha256=-MRWAx5QAcDNpIN82e46M9eb7roSDsYz7J2ZBjL7KqY,41
+gryannote_audio/templates/component/index.js,sha256=dLa8UZoItH35tPqVWT2A_jj-loNyw63EHE3vSvOhoG4,400469
+gryannote_audio/templates/component/module-2c3384e6.js,sha256=fEFlzIlHQzp88eDgqtWUZNGPVeG2VzGd0dMN31MKaN4,2301
+gryannote_audio/templates/component/module-aafe8b06.js,sha256=NbAyMiIGiNe4Yscx15PpiYsZORqCxgUYY9fjUoU29sY,5728
+gryannote_audio/templates/component/module-d82531d9.js,sha256=SNVuV5KGuiOTt7JaD00cXtDPamvyTyAq1IM2HM8CHRM,118992
+gryannote_audio/templates/component/style.css,sha256=BW7e9bxscileBePiY6sVmPqhYe2vc9219lDEu-5e5j4,24006
+gryannote_audio/templates/component/wrapper-6f348d45-19fa94bf.js,sha256=BDv2W5qnL9yyp0KhqiluGSjG5i9LY4OV9seIHQWuVWQ,78062
+gryannote_audio/templates/example/index.js,sha256=AcEKu2d4hjZyQsKf4pvOMqUT-QB_uFGbfbtGYc7mf9o,1549
+gryannote_audio/templates/example/style.css,sha256=Aj4k-S41TV83pot-J9j9Fi2UonrXHFC1Jl4Zb1xaYo4,61
+gryannote_audio-0.1.5.dist-info/METADATA,sha256=kAiGXSBJ9n3L4IdR24kSWcbRDKaoX9Z_Bz5Aw3yhRr0,3772
+gryannote_audio-0.1.5.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+gryannote_audio-0.1.5.dist-info/RECORD,,
