@@ -1,0 +1,107 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "progress-api"
+description = "Backend-agnostic API for reporting progress."
+authors = [
+  { name = "Michael Ekstrand", email = "mdekstrand@drexel.edu" },
+]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+]
+requires-python = ">= 3.10"
+readme = "README.md"
+license = { file = "LICENSE.md" }
+dynamic = ["version"]
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+  "setuptools>=64",
+  "setuptools_scm>=8",
+  "build ==1.*",
+  "ruff >= 0.2",
+  "pyright",
+  "copier ==9.*",
+  "unbeheader ~= 1.3", # p2c: -p
+  "ipython",
+  "pyproject2conda ",
+  "sphinx-autobuild",
+  "enlighten ==1.*",
+  "tqdm ==4.*",
+]
+test = [
+  "pytest >=7",
+]
+doc = [
+  "sphinx >=4.2",
+  "sphinxext-opengraph >= 0.5",
+  "furo",
+  "enlighten",
+  "tqdm",
+]
+
+[project.urls]
+Homepage = "https://progress-api.lenksit.org"
+GitHub = "https://github.com/lenskit/progress-api"
+
+[project.entry-points."progress_api.backend"]
+null = "progress_api.backends.null:NullProgressBackend"
+tqdm = "progress_api.backends.tqdm:TQDMProgressBackend"
+enlighten = "progress_api.backends.enlighten:EnlightenProgressBackend"
+
+# configure build tools
+[tool.setuptools]
+packages = ["progress_api"]
+
+[tool.setuptools_scm]
+
+# settings for generating conda environments for dev & CI, when needed
+[tool.pyproject2conda]
+channels = ["conda-forge"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = [
+  ".git",
+  "__pycache__",
+  "docs/conf.py",
+  "build",
+  "dist",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
+section-order = [
+  "future",
+  "standard-library",
+  "third-party",
+  "testing",
+  "first-party",
+  "local-folder",
+]
+
+[tool.ruff.lint.isort.sections]
+testing = ["pytest", "hypothesis"]
+
+[tool.mypy]
+exclude = "^docs/"
+
+[tool.pyright]
+typeCheckingMode = "strict"
+exclude = [
+  "docs/*",
+]
+reportMissingImports = true
+reportMissingTypeStubs = false

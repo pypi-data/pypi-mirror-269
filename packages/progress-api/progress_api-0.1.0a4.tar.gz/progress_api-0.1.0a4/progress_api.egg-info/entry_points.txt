@@ -1,0 +1,4 @@
+[progress_api.backend]
+enlighten = progress_api.backends.enlighten:EnlightenProgressBackend
+null = progress_api.backends.null:NullProgressBackend
+tqdm = progress_api.backends.tqdm:TQDMProgressBackend
