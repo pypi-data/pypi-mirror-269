@@ -1,0 +1,21 @@
+[project]
+name = "pyhgvsv"
+version = "0.1"
+authors = [
+  { name="Parker Payne", email="parker.payne@bcm.edu" },
+]
+description = "HGVS variant name parsing and generation with SV (structural variant) support"
+readme = "README.md"
+requires-python = ">=2.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/parkerpayne/hgvsv"
+
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta:__legacy__"
