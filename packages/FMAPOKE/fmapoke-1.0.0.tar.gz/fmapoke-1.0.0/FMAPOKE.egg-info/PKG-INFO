@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: FMAPOKE
+Version: 1.0.0
+Summary: Libreria para generar un Pokemón Aleatorio.
+Author: Fernando Martinez
+Author-email: 202224199_MARTINEZ@tesch.edu.mx 
+Requires-Dist: pandas
