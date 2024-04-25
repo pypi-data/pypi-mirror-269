@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/dedev/__init__.py
+src/dedev/__main__.py
+src/dedev.egg-info/PKG-INFO
+src/dedev.egg-info/SOURCES.txt
+src/dedev.egg-info/dependency_links.txt
+src/dedev.egg-info/entry_points.txt
+src/dedev.egg-info/requires.txt
+src/dedev.egg-info/top_level.txt
