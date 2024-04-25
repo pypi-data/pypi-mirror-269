@@ -1,0 +1,15 @@
+navigator_session/__init__.py,sha256=xsmc90K04EgQEtYidPN7bsXn0WIqw6GucNwy138Mmno,3038
+navigator_session/conf.py,sha256=PwCGoYpg_2MEq5_zObvbx4yXKf7AIKObO-lzTh2AvxM,1466
+navigator_session/data.py,sha256=tD40x16dujarX3F1RMPAuYqDP3oiG_8kyqLNYyD3Ik4,5798
+navigator_session/middleware.py,sha256=7RO83pz4q16_56GvmbswEukbDZQ0JutJdVdF4UHbEw8,1942
+navigator_session/session.py,sha256=I6qWkMbqIpVX1RjxmccGsk1sCcqWZ_ZBVGwLXjV8wjw,2188
+navigator_session/version.py,sha256=qSxTZ3mS3AQhfwhuDIjPEcFTmAJHRYc0K4Ax5JRAzFc,394
+navigator_session/storages/__init__.py,sha256=ln0Xli0lppUopDMrvQGt69BFtUAe1Grmy2DGkEpANNU,132
+navigator_session/storages/abstract.py,sha256=5nqEF0I0G3p4pcTNfOQYspbXp-U7QJntJWVsKYDu9KY,6043
+navigator_session/storages/cookie.py,sha256=_qL5kIGbT4rtCMze4yj1h4J7Zauz_e7HnorPnFbi90w,2468
+navigator_session/storages/redis.py,sha256=qk8V3FGYDLbfTT851NOU864hSsgup661b8GY1u_uhtQ,9345
+navigator_session-0.5.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+navigator_session-0.5.4.dist-info/METADATA,sha256=jM_jzjllmFiA2LESsLvD-9cd2CG3w-bHcFMGOGfJx18,2339
+navigator_session-0.5.4.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+navigator_session-0.5.4.dist-info/top_level.txt,sha256=ZpOEy3wLKGsxG2rc0nHqcqJCV3HIOG_XCfE6mtsYYYY,18
+navigator_session-0.5.4.dist-info/RECORD,,
