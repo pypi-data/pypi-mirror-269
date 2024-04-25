@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Pokekachu
+Version: 1.0.0
+Summary: Librerias paran generar un Pokemon aleatorio
+Author: Maria Martinez
+Author-email: quinaprinces@gmail.com
+Requires-Dist: pandas
+
