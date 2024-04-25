@@ -1,0 +1,3 @@
+[console_scripts]
+sparkle_log=sparkle_log.__main__:main
+
