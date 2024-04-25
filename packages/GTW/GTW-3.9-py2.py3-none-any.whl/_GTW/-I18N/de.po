@@ -1,0 +1,557 @@
+# German translations for MOM/GTW/JNJ.
+# Copyright (C) 2010-2016 Mag. Christian Tanzer, Martin Glueck
+# This file is distributed under the same license as the MOM/GTW/JNJ
+# project.
+# Christian Tanzer <tanzer@swing.co.at>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MOM/GTW/JNJ 1.0 [de]\n"
+"Report-Msgid-Bugs-To: tanzer@swing.co.at,martin@mangari.org\n"
+"POT-Creation-Date: 2020-05-10 14:29+0200\n"
+"PO-Revision-Date: 2016-02-05 11:25+0100\n"
+"Last-Translator: Christian Tanzer <tanzer@swing.co.at>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: _GTW/__test__/Test_Command.py:251
+msgid "Auth"
+msgstr ""
+
+#: _GTW/__test__/Test_Command.py:253
+msgid "Authorization and Account handling"
+msgstr "Anmeldung und Verwaltung des Benutzerkontos"
+
+#: _GTW/__test__/Test_Command.py:259
+msgid "Choice of language used for localization"
+msgstr "Auswahl der Sprache für Lokalisierung"
+
+#: _GTW/Session.py:213
+#, python-format
+msgid "Edit session expired since %s"
+msgstr "Die Sitzung ist seit %s abgelaufen."
+
+#: _GTW/__test__/Test_Command.py:257
+msgid "L10N"
+msgstr ""
+
+#~ msgid ""
+#~ msgstr "Die Kennworte stimmen nicht überein."
+
+#~ msgid "%s Password for %s on website %s"
+#~ msgstr "Dieser Benutzername ist nicht bekannt"
+
+#~ msgid "%s `%s` does not exist!"
+#~ msgstr ""
+
+#~ msgid "%s `%s` doesn't exist anymore!"
+#~ msgstr "%s Kennwort für Anwender %s auf Webseite %s"
+
+#~ msgid "%s `%s` doesn't exist!"
+#~ msgstr "%s `%s` existiert nicht mehr"
+
+#~ msgid "%s doesn't have an attribute named `%s`"
+#~ msgstr "%s `%s` existiert nicht"
+
+#~ msgid "%s needs the attribute: %s"
+#~ msgid_plural "%s needs the attributes: %s"
+#~ msgstr[0] "%s benötigt das Attribut: %s"
+#~ msgstr[1] ""
+
+#~ msgid "%s only works with content-type json"
+#~ msgstr ""
+
+#~ msgid "%s: regatta registration"
+#~ msgstr "%s `%s` existiert nicht"
+
+#~ msgid "%s: regatta registration %s"
+#~ msgstr "%s hat kein Attribute mit Namen `%s`"
+
+#~ msgid "A confirmation email has been sent to the new email address %s."
+#~ msgstr "%s: Regatta Registrierung %s"
+
+#~ msgid "A confirmation email has been sent to the new email address."
+#~ msgstr "%s funktioniert nur mit dem Inhaltstyp json"
+
+#~ msgid "A confirmation has been sent to your email address %s."
+#~ msgstr "Eine Bestätigungsemail wurde an die neue Email Adresse %s versendet."
+
+#~ msgid "A confirmation has been sent to your email address."
+#~ msgstr "%s: Regatta Registrierung"
+
+#~ msgid "A user name is required to login."
+#~ msgstr "Eine Bestätigung wurde an die neue Emailadresse %s versendet."
+
+#~ msgid "A user name is required."
+#~ msgstr "Eine Bestätigungsemail wurde an die neue Email Adresse versendet."
+
+#~ msgid "Account could not be found"
+#~ msgstr ""
+
+#~ msgid "Account with this Email address already registered"
+#~ msgstr "Benutzerkonto nicht gefunden"
+
+#~ msgid "Activate account for %s on website %s"
+#~ msgstr "Es gibt bereits ein Benutzerkonto mit dieser Emailadresse"
+
+#~ msgid "Activation of account %s successful."
+#~ msgstr "Activiere Benutzerkonto für Anwender %s auf Webseite %s"
+
+#~ msgid "Activation successful."
+#~ msgstr "Eine Bestätigung wurde an die neue Emailadresse versendet."
+
+#~ msgid "Admin"
+#~ msgstr "Die Aktivierung des Benutzerkontos %s war erfolgreich."
+
+#~ msgid "Administration"
+#~ msgstr "Verwaltung"
+
+#~ msgid "Apr"
+#~ msgstr "Verwaltung"
+
+#~ msgid "April"
+#~ msgstr "Apr"
+
+#~ msgid "At the moment, the database is set to readonly to allow maintenance."
+#~ msgstr "April"
+
+#~ msgid "Aug"
+#~ msgstr "Momentan ist die Datenbank wegen Wartungsarbeiten nicht beschreibbar."
+
+#~ msgid "August"
+#~ msgstr "Aug"
+
+#~ msgid "Cancelled"
+#~ msgstr "August"
+
+#~ msgid "Cannot undo a change if %s later changes exist for the same object"
+#~ msgstr "Abgesagt"
+
+#~ msgid "Change"
+#~ msgstr ""
+
+#~ msgid "Change %(tn)s %(obj)s"
+#~ msgstr "Ändere"
+
+#~ msgid "Change email for %s on website %s"
+#~ msgstr "Ändere %(tn)s %(obj)s"
+
+#~ msgid "Class"
+#~ msgstr "Ändere Emailadresse des Benutzerkontos %s auf Webseite %s"
+
+#~ msgid "Club"
+#~ msgstr "Klasse"
+
+#~ msgid "Confirmation for change of email for account %s to %s for website %s"
+#~ msgstr "Klub"
+
+#~ msgid "Create a new %(tn)s"
+#~ msgstr ""
+
+#~ msgid "Created"
+#~ msgstr "Erzeuge %(tn)s"
+
+#~ msgid "Date of creation."
+#~ msgstr "Erzeugt"
+
+#~ msgid "Dec"
+#~ msgstr "Erzeugungsdatum"
+
+#~ msgid "December"
+#~ msgstr "Dez"
+
+#~ msgid "Delete %(tn)s %(obj)s"
+#~ msgstr "Dezember"
+
+#~ msgid "Display details of %(tn)s %(obj)s"
+#~ msgstr "Lösche %(tn)s %(obj)s"
+
+#~ msgid "Documentation for package namespace %s"
+#~ msgstr "Zeige Details für %(tn)s %(obj)s"
+
+#~ msgid "EMail verification successful."
+#~ msgstr "Für die Anmeldung ist ein Benutzername erforderlich."
+
+#~ msgid "Email confirmation for %s"
+#~ msgstr "Dokumentation für Packetnamensraum %s"
+
+#~ msgid "Expired %s '%s' older then %s seconds"
+#~ msgstr "Email Bestätigung für %s"
+
+#~ msgid "Feb"
+#~ msgstr "Abgelaufenes %s '%s' ist älter als %s Sekunden"
+
+#~ msgid "February"
+#~ msgstr "Feb"
+
+#~ msgid "Field %s doesn't have a polisher"
+#~ msgstr "Feber"
+
+#~ msgid "Field `%(field)s` is required"
+#~ msgstr "Die Bestätigung der Email war erfolgreich."
+
+#~ msgid "Form corrupted, unknown element id %s"
+#~ msgstr ""
+
+#~ msgid "Form/element is unknown (unknown id: %s)"
+#~ msgstr "Feld `%(field)s` muss ausgefüllt werden"
+
+#~ msgid "Fri"
+#~ msgstr "Feld %s hat keinen Polierer"
+
+#~ msgid "Friday"
+#~ msgstr "FR"
+
+#~ msgid "Image Selection"
+#~ msgstr "Fehlerhaftes Formular (unbekanntes Element %s)"
+
+#~ msgid "Incorrect origin `%s` for request, expected `%r`"
+#~ msgstr "Freitag"
+
+#~ msgid "Invalid %s signature for '%s'"
+#~ msgstr "Ungültige Herkunft `%s` für Anfrage, erwartet `%r`"
+
+#~ msgid "It was deleted by user `%s` on %s"
+#~ msgstr "Ungültige %s Signatur für '%s'"
+
+#~ msgid "Jan"
+#~ msgstr "Es wurde vom Anwender `%s` am %s gelöscht"
+
+#~ msgid "January"
+#~ msgstr "Jan"
+
+#~ msgid "Jul"
+#~ msgstr "Jänner"
+
+#~ msgid "July"
+#~ msgstr "Jul"
+
+#~ msgid "Jun"
+#~ msgstr "Juli"
+
+#~ msgid "June"
+#~ msgstr "Jun"
+
+#~ msgid "Kind"
+#~ msgstr "Juni"
+
+#~ msgid "Language %s selected"
+#~ msgstr "Art"
+
+#~ msgid "List of participants for"
+#~ msgstr "Sprache %s wurde ausgewählt"
+
+#~ msgid "Logout successful."
+#~ msgstr "Liste der Teilnehmer für"
+
+#~ msgid "MNA-Number"
+#~ msgstr "Abmelden war erfolgreich."
+
+#~ msgid "Make phone call to %s"
+#~ msgstr "MNA-Nummer"
+
+#~ msgid "Malformed %s value '%s'"
+#~ msgstr "Rufe Telefonnummer %s an"
+
+#~ msgid "Mar"
+#~ msgstr "Fehlerhafter %s Wert '%s'"
+
+#~ msgid "March"
+#~ msgstr "Mrz"
+
+#~ msgid "May"
+#~ msgstr "März"
+
+#~ msgid "Missing %s%s"
+#~ msgstr "Mai"
+
+#~ msgid "Mon"
+#~ msgstr "Fehlende %s%s"
+
+#~ msgid "Monday"
+#~ msgstr "MO"
+
+#~ msgid "More than %s matches"
+#~ msgstr "Montag"
+
+#~ msgid "Need Javascript for displaying %s"
+#~ msgstr "Für die Darstellung der %s ist Javascript erforderlich"
+
+#~ msgid "New email address"
+#~ msgstr "Unbekanntes Formular oder Feld (%s)"
+
+#~ msgid "New password"
+#~ msgstr "Bildauswahl"
+
+#~ msgid "No activation request for this account"
+#~ msgstr "Mehr als %s Treffer"
+
+#~ msgid "Not authorized for this page"
+#~ msgstr "Es gibt keine Aktivierungsanfrage für dieses Benutzerkonto"
+
+#~ msgid "Not logged in or login-session is expired"
+#~ msgstr "Fehlende Autorisierung für den Zugriff auf diese Seite"
+
+#~ msgid "Nov"
+#~ msgstr "Felhende Anmeldung oder die Sitzung ist abgelaufen."
+
+#~ msgid "November"
+#~ msgstr "Nov"
+
+#~ msgid "Number of %s belonging to %s"
+#~ msgstr "November"
+
+#~ msgid "Object \"%s\" deleted"
+#~ msgstr "Anzahl von %s zu %s"
+
+#~ msgid "Oct"
+#~ msgstr "Objekt \"%s\" gelöscht"
+
+#~ msgid "October"
+#~ msgstr "Okt"
+
+#~ msgid "One of the passwords is incorrect"
+#~ msgstr "Emailadresse"
+
+#~ msgid "Participants"
+#~ msgstr "Oktober"
+
+#~ msgid "Password"
+#~ msgstr "Neues Kennwort"
+
+#~ msgid "Password change for account %s"
+#~ msgstr "Teilnehmer"
+
+#~ msgid "Password reset for user %s on website %s"
+#~ msgstr "Kennwortänderung für Benutzerkonto %s"
+
+#~ msgid "Passwords don't match."
+#~ msgstr "Benutzername oder Kennwort sind nicht korrekt"
+
+#~ msgid "Please enter a username"
+#~ msgstr "Kennwort für Anwender %s auf Webseite %s zurückgesetzt"
+
+#~ msgid "Please enter a value for the missing attribute"
+#~ msgstr "Bitte Benutzername eingeben"
+
+#~ msgid "Please enter values for the missing attributes"
+#~ msgstr "Bitte fehlenden Wert eingeben"
+
+#~ msgid "Please reload the page"
+#~ msgstr "Bitte fehlende Werte eingeben"
+
+#~ msgid "Please repeat the new password."
+#~ msgstr "Kennwort"
+
+#~ msgid "Query for cached role attribute `%s` of %s not yet supported"
+#~ msgstr "Bitte Seite neu laden"
+
+#~ msgid "Query restriction triggered error: %s '%s'"
+#~ msgstr ""
+
+#~ msgid "Race"
+#~ msgstr "Abfrageeinschränkung fehlerhaft: %s '%s'"
+
+#~ msgid "Regatta"
+#~ msgstr "Wettfahrt"
+
+#~ msgid "Regatta %s is cancelled"
+#~ msgstr "Regatta"
+
+#~ msgid "Regatta Events %(year)s"
+#~ msgstr ""
+
+#~ msgid "Register %s for %s"
+#~ msgstr "Regattaveranstaltungen %(year)s"
+
+#~ msgid "Register an entry for %s at %s"
+#~ msgstr "Melde %s für %s an"
+
+#~ msgid "Register for regatta %(tn)s"
+#~ msgstr "Melde für %s zu %s an"
+
+#~ msgid "Registration for %s is closed"
+#~ msgstr "Melde für Regatta %(tn)s"
+
+#~ msgid "Registration list"
+#~ msgstr "Melde für %s zu %s an"
+
+#~ msgid "Repeat new password"
+#~ msgstr "Kennworte stimmen nicht überein."
+
+#~ msgid "Repeat the EMail for verification."
+#~ msgstr "Meldeliste"
+
+#~ msgid "Repeat the password for verification."
+#~ msgstr "Wiederhole die Emailadresse zur Überprüfung."
+
+#~ msgid "Reset"
+#~ msgstr "Wiederhole das Kennwort zur Überprüfung."
+
+#~ msgid "Restrict to objects belonging to %(tn)s %(obj)s"
+#~ msgstr "Setze zurück"
+
+#~ msgid "Results"
+#~ msgstr "Schränke auf Objekte ein, die zu %(tn)s %(obj)s gehören"
+
+#~ msgid "Results for"
+#~ msgstr "Resultate"
+
+#~ msgid "Sail-No."
+#~ msgstr "Resultate für"
+
+#~ msgid "Sailor"
+#~ msgstr "Segel-Nr."
+
+#~ msgid "Sat"
+#~ msgstr "Segler"
+
+#~ msgid "Saturday"
+#~ msgstr "SA"
+
+#~ msgid "Send email to %s"
+#~ msgstr "Samstag"
+
+#~ msgid "Sep"
+#~ msgstr "Sende Email zu %s"
+
+#~ msgid "September"
+#~ msgstr "Sep"
+
+#~ msgid "Skipper/Crew"
+#~ msgstr "September"
+
+#~ msgid "Successfully revived object %s"
+#~ msgstr "Steuermann/Mannschaft"
+
+#~ msgid "Sun"
+#~ msgstr "Objekt %s erfolgreich wiederbelebt"
+
+#~ msgid "Sunday"
+#~ msgstr "SO"
+
+#~ msgid "The Email is required."
+#~ msgstr "Sonntag"
+
+#~ msgid "The Email's don't match."
+#~ msgstr "Die Emailadresse muss ausgefüllt werden."
+
+#~ msgid "The edit session has expired or the form values are corrupted."
+#~ msgstr "Bitte neues Kennwort wiederholen."
+
+#~ msgid "The edit session has expired."
+#~ msgstr "Wiederhole neues Kennwort"
+
+#~ msgid "The new E-Mail address is required."
+#~ msgstr ""
+
+#~ msgid "The new password is required."
+#~ msgstr "Die Sitzung ist abgelaufen."
+
+#~ msgid "The old password is required."
+#~ msgstr "Die neue E-Mail Adresse muss ausgefüllt werden."
+
+#~ msgid "The password has been changed."
+#~ msgstr ""
+
+#~ msgid "The password is incorrect"
+#~ msgstr "Das neue Kennwort muss ausgefüllt werden."
+
+#~ msgid "The password is required."
+#~ msgstr "Das Kennwort wurde geändert"
+
+#~ msgid "The passwords don't match."
+#~ msgstr "Das Kennwort muss ausgefüllt werden."
+
+#~ msgid "The reset password instructions have been sent to your email address."
+#~ msgstr "Das alte Kennwort muss ausgefüllt werden."
+
+#~ msgid "This account is currently inactive"
+#~ msgstr ""
+
+#~ msgid "This username is already in use."
+#~ msgstr "Das Kennwort sind nicht korrekt"
+
+#~ msgid "This username is not registered"
+#~ msgstr ""
+
+#~ msgid "Thu"
+#~ msgstr "Dieses Benutzerkonto ist gegenwärtig nicht verfügbar"
+
+#~ msgid "Thursday"
+#~ msgstr "DO"
+
+#~ msgid "Time-travelling %s '%s' [%s seconds ahead]"
+#~ msgstr "Donnerstag"
+
+#~ msgid "Tue"
+#~ msgstr "Zeitreisendes  %s '%s' [%s Sekunden in der Zukunft]"
+
+#~ msgid "Tuesday"
+#~ msgstr "DI"
+
+#~ msgid "Undo deletion of object %s"
+#~ msgstr "Dienstag"
+
+#~ msgid "Unknown E_Type '%s'"
+#~ msgstr "Mache Löschung des Objekts %s rückgängig"
+
+#~ msgid "Unknown HTTP method `%s` requested"
+#~ msgstr "Unbekannter E-Ty '%s'"
+
+#~ msgid "Unknown attribute %s.%s"
+#~ msgstr "Unbekannte HTTP Methode `%s` abgefragt"
+
+#~ msgid "Unknown attribute %s.%s[%s].%s"
+#~ msgstr "Unbekanntes Attribut %s.%s"
+
+#~ msgid "Unknown type %s for attribute %s.%s"
+#~ msgstr "Unbekanntes Attribut %s.%s[%s].%s"
+
+#~ msgid "Unless run in TEST mode, access to %s is only allowed over https!"
+#~ msgstr "Unbekannter Typ %s für Attribut %s.%s"
+
+#~ msgid "Username"
+#~ msgstr "Für die Anmeldung ist ein Benutzername erforderlich."
+
+#~ msgid "Username or password incorrect"
+#~ msgstr "Zugriff auf %s ist nur über HTTPS erlaubt, ausser im TEST-Modus!"
+
+#~ msgid "Wed"
+#~ msgstr "Benutzername oder Kennwort sind nicht korrekt"
+
+#~ msgid "Wednesday"
+#~ msgstr "MI"
+
+#~ msgid "Welcome %s."
+#~ msgstr "Mittwoch"
+
+#~ msgid "You need to specify a pid!"
+#~ msgstr "Willkommen, %s."
+
+#~ msgid "You need to specify valid undo information: %s"
+#~ msgstr "Es muss eine Pid spezifiert werden!"
+
+#~ msgid "`%s` refers to %s, not %s"
+#~ msgstr "Es muss eine gültige Undo-Information spezifiert werden: %s"
+
+#~ msgid "anonymous"
+#~ msgstr "`%s` bezieht sich auf %s, nicht %s"
+
+#~ msgid "created by"
+#~ msgstr "anonym"
+
+#~ msgid "email address"
+#~ msgstr "Emailadresse"
+
+#~ msgid "phone number"
+#~ msgstr "Telefonnummer"
+
+#~ msgid "picture"
+#~ msgstr "eingegeben durch"
+

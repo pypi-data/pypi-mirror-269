@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: GTW
+Version: 3.9
+Summary: A werkzeug-based framework for RESTful web applications
+Home-page: https://codeberg.org/tanzer/tapyr
+Author: Christian Tanzer
+Author-email: tanzer@swing.co.at
+License: BSD License
+Platform: Any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: CAL (>=3)
+Requires-Dist: CHJ (>=3)
+Requires-Dist: JNJ (>=3)
+Requires-Dist: MOM-Tapyr (>=3)
+Requires-Dist: ReST-Tapyr (>=3)
+Requires-Dist: TFL (>=3)
+Requires-Dist: python-dateutil
+Requires-Dist: pillow
+Requires-Dist: werkzeug
+Provides-Extra: client_certificate
+Requires-Dist: M2Crypto ; extra == 'client_certificate'
+Requires-Dist: pyspkac ; extra == 'client_certificate'
+Provides-Extra: convert_rtr_at_data
+Requires-Dist: xlrd ; extra == 'convert_rtr_at_data'
+Provides-Extra: deploy
+Requires-Dist: plumbum ; extra == 'deploy'
+Provides-Extra: fastcgi
+Requires-Dist: flup ; extra == 'fastcgi'
+Provides-Extra: markdown
+Requires-Dist: markdown ; extra == 'markdown'
+Provides-Extra: omp_net
+Requires-Dist: rsclib ; extra == 'omp_net'
+Provides-Extra: rest_client
+Requires-Dist: requests ; extra == 'rest_client'
+Provides-Extra: test
+Requires-Dist: jinja2 ; extra == 'test'
+Requires-Dist: lxml ; extra == 'test'
+Requires-Dist: pyquery ; extra == 'test'
+Requires-Dist: requests ; extra == 'test'
+Requires-Dist: sqlalchemy ; extra == 'test'
+
+`GTW` provides a werkzeug-based framework for defining RESTful web applications
+built on top of `MOM-Tapyr`.
+
+GTW is distributed under the conditions of the `BSD 3-Clause
+License <https://www.gg32.com/license/bsd_3c.html>`_.
+
+GTW is available as a `git repository`_.
+You can clone that repository with::
+
+    git clone git@codeberg.org:tanzer/tapyr.git
+
+Reports of bugs in GTW should be submitted to the `git repository`_.
+
+.. _`git repository`: https://codeberg.org/tanzer/tapyr

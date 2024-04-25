@@ -1,0 +1,600 @@
+# German translations for MOM/GTW/JNJ.
+# Copyright (C) 2010-2016 Mag. Christian Tanzer, Martin Glueck
+# This file is distributed under the same license as the MOM/GTW/JNJ
+# project.
+# Christian Tanzer <tanzer@swing.co.at>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MOM/GTW/JNJ 1.0 [de]\n"
+"Report-Msgid-Bugs-To: tanzer@swing.co.at,martin@mangari.org\n"
+"POT-Creation-Date: 2020-05-10 14:29+0200\n"
+"PO-Revision-Date: 2016-02-05 11:25+0100\n"
+"Last-Translator: Christian Tanzer <tanzer@swing.co.at>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: _GTW/_RST/_TOP/Auth.py:426
+#, python-format
+msgid "%s Password for %s on website %s"
+msgstr "%s Kennwort für %s auf der Webseite %s"
+
+#: _GTW/_RST/_MOM/Mixin.py:449
+#, python-format
+msgid "%s `%s` doesn't exist anymore!"
+msgstr "%s `%s` existiert nicht mehr!"
+
+#: _GTW/_RST/_MOM/Mixin.py:406
+#, python-format
+msgid "%s `%s` doesn't exist!"
+msgstr "%s `%s` existiert nicht!"
+
+#: _GTW/_RST/_MOM/Query_Restriction.py:375
+#, python-format
+msgid "%s doesn't have an attribute named `%s`"
+msgstr "%s hat kein Attribut mit Namen `%s`"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:858
+#, python-format
+msgid "%s: regatta registration %s"
+msgstr "%s: Regattaanmeldung %s"
+
+#: _GTW/_RST/_TOP/Auth.py:378
+#, python-format
+msgid "A confirmation email has been sent to the new email address %s."
+msgstr "Eine Bestätigungsemail wurde an die neue Email Adresse %s versendet."
+
+#: _GTW/_RST/_TOP/Auth.py:722
+#, python-format
+msgid "A confirmation has been sent to your email address %s."
+msgstr "Eine Bestätigungsemail wurde an die Email Adresse %s versendet."
+
+#: _GTW/_RST/Auth_Mixin.py:110
+msgid "A user name is required to login."
+msgstr "Für die Anmeldung ist ein Benutzername erforderlich."
+
+#: _GTW/_RST/_MOM/Query_Restriction.py:264
+#, python-format
+msgid ""
+"AQ argument must contain the values `attribute_name`, `operator`, `value`"
+" separated by commas; got `%s` instead"
+msgstr ""
+"AQ Argument muss die Werte `attribute_name`, `operator`, `wert` "
+"enthalten, getrennt durch Kommas; bekam `%s` stattdessen"
+
+#: _GTW/_RST/_TOP/Auth.py:759
+msgid "Account could not be found"
+msgstr "Benutzerkonto nicht gefunden"
+
+#: _GTW/_RST/_TOP/Auth.py:692
+msgid "Account with this Email address already registered"
+msgstr "Es gibt bereits ein Benutzerkonto für diese Emailaddresse"
+
+#: _GTW/_RST/_TOP/Auth.py:226
+#, python-format
+msgid "Activate account for %s on website %s"
+msgstr "Aktiviere Benutzerkonto für %s auf Webseite %s"
+
+#: _GTW/_RST/_TOP/Auth.py:242
+#, python-format
+msgid "Activation of account %s successful."
+msgstr "Die Aktivierung des Benutzerkontos %s war erfolgreich."
+
+#: _GTW/_RST/_TOP/_MOM/Display.py:149
+msgid "Admin"
+msgstr "Verwalter"
+
+#: _GTW/_RST/_TOP/_MOM/Display.py:152
+msgid "Administration"
+msgstr "Verwaltung"
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:243
+msgid "At the moment, the database is set to readonly to allow maintenance."
+msgstr "Momentan ist die Datenbank wegen Wartungsarbeiten nicht beschreibbar."
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:1055
+#, python-format
+msgid "Cannot undo a change if %s later changes exist for the same object"
+msgstr ""
+"Eine Änderung kann nicht rückgängig gemacht werden, wenn %s spätere "
+"Änderungen für das gleiche Objekt existieren."
+
+#: _GTW/_RST/_TOP/Auth.py:422
+msgid "Change"
+msgstr "Änderung"
+
+#: _GTW/_RST/_TOP/_MOM/Action.py:102
+#, python-format
+msgid "Change %(tn)s %(obj)s"
+msgstr "Ändere %(tn)s %(obj)s"
+
+#: _GTW/_RST/_TOP/Auth.py:410
+#, python-format
+msgid "Change email for %s on website %s"
+msgstr "Ändere Emailaddresse für %s auf Webseite %s"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:206 _GTW/_RST/_TOP/_MOM/SRM.py:1143
+msgid "Class"
+msgstr "Bootsklasse"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:363
+msgid "Club"
+msgstr "Klub"
+
+#: _GTW/_RST/_TOP/Auth.py:357
+#, python-format
+msgid "Confirmation for change of email for account %s to %s for website %s"
+msgstr ""
+"Bestätigung für die Änderung der Emailaddresse für das Benutzerkonto %s "
+"auf den Wert %s (Webseite %s)"
+
+#: _GTW/_RST/_TOP/_MOM/Action.py:86
+#, python-format
+msgid "Create a new %(tn)s"
+msgstr "Erzeuge %(tn)s"
+
+#: _GTW/_RST/_TOP/_MOM/Field.py:340
+msgid "Created"
+msgstr "Erzeugt"
+
+#: _GTW/_RST/_TOP/_MOM/Field.py:334
+msgid "Date of creation."
+msgstr "Erzeugungsdatum"
+
+#: _GTW/_RST/_TOP/_MOM/Action.py:112
+#, python-format
+msgid "Delete %(tn)s %(obj)s"
+msgstr "Lösche %(tn)s %(obj)s"
+
+#: _GTW/_RST/_TOP/_MOM/Action.py:120
+#, python-format
+msgid "Display details of %(tn)s %(obj)s"
+msgstr "Zeige Details für %(tn)s %(obj)s"
+
+#: _GTW/_RST/_TOP/_MOM/Doc.py:136
+#, python-format
+msgid "Documentation for package namespace %s"
+msgstr "Dokumentation für Packetnamensraum %s"
+
+#: _GTW/_RST/_TOP/Auth.py:711
+#, python-format
+msgid "Email confirmation for %s"
+msgstr "Email Bestätigung für %s"
+
+#: _GTW/_RST/Signed_Token.py:119
+#, python-format
+msgid "Expired %s '%s' older then %s seconds"
+msgstr "Abgelaufenes %s '%s' ist älter als %s Sekunden"
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:901
+#, python-format
+msgid "Field %s doesn't have a polisher"
+msgstr "Feld %s hat keinen Polierer"
+
+#: _GTW/_RST/_TOP/Base.py:359
+#, python-format
+msgid "Incorrect origin `%s` for request, expected `%r`"
+msgstr "Ungültige Herkunft `%s` für Anfrage, erwartet `%r`"
+
+#: _GTW/_RST/Signed_Token.py:103
+#, python-format
+msgid "Invalid %s signature for '%s'"
+msgstr "Ungültige %s Signatur für '%s'"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:1173
+#, fuzzy
+msgid "Is cancelled"
+msgstr "Abgebrochen"
+
+#: _GTW/_RST/_MOM/Mixin.py:453
+#, python-format
+msgid "It was deleted by user `%s` on %s"
+msgstr "Es wurde vom Anwender `%s` am %s gelöscht"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:1168
+msgid "Kind"
+msgstr "Art"
+
+#: _GTW/_RST/_TOP/L10N.py:71
+#, python-format
+msgid "Language %s selected"
+msgstr "Sprache %s wurde ausgewählt"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:949
+msgid "List of participants for"
+msgstr "Liste der Teilnehmer für"
+
+#: _GTW/_RST/_TOP/Auth.py:535
+msgid "Logout successful."
+msgstr "Abmelden war erfolgreich."
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:375
+msgid "MNA-Number"
+msgstr "MNA-Nummer"
+
+#: _GTW/_RST/_TOP/_MOM/Field.py:609
+#, python-format
+msgid "Make phone call to %s"
+msgstr "Rufe Telefonnummer %s an"
+
+#: _GTW/_RST/Signed_Token.py:89
+#, python-format
+msgid "Malformed %s value '%s'"
+msgstr "Fehlerhafter %s Wert '%s'"
+
+#: _GTW/_RST/Signed_Token.py:91
+#, python-format
+msgid "Missing %s%s"
+msgstr "Fehlende %s%s"
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:475
+#, python-format
+msgid "More than %s matches"
+msgstr "Mehr als %s Treffer"
+
+#: _GTW/_RST/_TOP/Auth.py:234
+msgid "No activation request for this account"
+msgstr "Es gibt keine Aktivierungsanfrage für dieses Benutzerkonto"
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:259
+msgid "Not authorized for this page"
+msgstr "Fehlende Autorisierung für den Zugriff auf diese Seite"
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:254
+msgid "Not logged in or login-session is expired"
+msgstr "Felhende Anmeldung oder die Sitzung ist abgelaufen."
+
+#: _GTW/_RST/_TOP/_MOM/Field.py:432
+#, python-format
+msgid "Number of %s belonging to %s"
+msgstr "Anzahl von %s zu %s"
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:268
+#, python-format
+msgid "Object \"%s\" deleted"
+msgstr "Objekt \"%s\" gelöscht"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:915
+msgid "Participants"
+msgstr "Teilnehmer"
+
+#: _GTW/_RST/_TOP/Auth.py:445
+#, python-format
+msgid "Password change for account %s"
+msgstr "Kennwortänderung für Benutzerkonto %s"
+
+#: _GTW/_RST/_TOP/Auth.py:777
+#, python-format
+msgid "Password reset for user %s on website %s"
+msgstr "Kennwortänderung für Benutzerkonto %s von Webseite %s"
+
+#: _GTW/_RST/Auth_Mixin.py:141
+msgid "Please enter a username"
+msgstr "Bitte Benutzername eingeben"
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:691
+msgid "Please reload the page"
+msgstr "Bitte Seite neu laden"
+
+#: _GTW/_RST/_MOM/Query_Restriction.py:382
+#, python-format
+msgid "Query for cached role attribute `%s` of %s not yet supported"
+msgstr "Abfrage für cached Rollenattribut `%s` von %s wird noch nicht unterstützt"
+
+#: _GTW/_RST/_MOM/Mixin.py:619
+#, python-format
+msgid "Query restriction triggered error: %s '%s'"
+msgstr "Abfrageeinschränkung fehlerhaft: %s '%s'"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:344
+msgid "Race"
+msgstr "Wettfahrt"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:1121
+msgid "Regatta"
+msgstr "Regatta"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:105
+#, python-format
+msgid "Regatta %s is cancelled"
+msgstr "Die Regatta %s ist abgesagt"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:1093
+#, python-format
+msgid "Regatta Events %(year)s"
+msgstr "Regattaveranstaltungen %(year)s"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:452
+#, python-format
+msgid "Register %s for %s"
+msgstr "Melde %s zu %s an"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:907
+#, python-format
+msgid "Register an entry for %s at %s"
+msgstr "Melde für %s zu %s an"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:446
+#, python-format
+msgid "Register for regatta %(tn)s"
+msgstr "Melde für Regatta %(tn)s"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:107
+#, python-format
+msgid "Registration for %s is closed"
+msgstr "Die Anmeldung für %s ist geschlossen"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:954
+msgid "Registration list"
+msgstr "Teilnehmerliste"
+
+#: _GTW/_RST/_TOP/Auth.py:331
+msgid "Repeat the EMail for verification."
+msgstr "Wiederhole die Emailadresse zur Überprüfung."
+
+#: _GTW/_RST/Auth_Mixin.py:123
+msgid "Repeat the password for verification."
+msgstr "Wiederhole das Kennwort zur Überprüfung."
+
+#: _GTW/_RST/_TOP/Auth.py:807
+msgid "Reset"
+msgstr "Setze zurück"
+
+#: _GTW/_RST/_TOP/_MOM/Action.py:127
+#, python-format
+msgid "Restrict to objects belonging to %(tn)s %(obj)s"
+msgstr "Schränke auf Objekte ein, die zu %(tn)s %(obj)s gehören"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:916
+msgid "Results"
+msgstr "Resultate"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:946
+msgid "Results for"
+msgstr "Resultate für"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:194
+msgid "Sail-No."
+msgstr "Segel-Nr."
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:388
+msgid "Sailor"
+msgstr "Segler"
+
+#: _GTW/_RST/_TOP/_MOM/Field.py:593
+#, python-format
+msgid "Send email to %s"
+msgstr "Schicke Email zu %s"
+
+#: _GTW/_RST/_TOP/_MOM/SRM.py:389
+msgid "Skipper/Crew"
+msgstr "Steuermann/Mannschaft"
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:1061
+#, python-format
+msgid "Successfully revived object %s"
+msgstr "Objekt %s erfolgreich wiederbelebt"
+
+#: _GTW/_RST/_TOP/Auth.py:327
+msgid "The Email is required."
+msgstr "Die Emailadresse muss ausgefüllt werden."
+
+#: _GTW/_RST/_TOP/Auth.py:335
+msgid "The Email's don't match."
+msgstr "Die Emailadressen stimmen nicht überein."
+
+#: _GTW/_RST/_TOP/Auth.py:608
+msgid ""
+"The parameter `SPKAC` is missing from the request. Normally, the web "
+"browser should supply that parameter automatically."
+msgstr ""
+
+#: _GTW/_RST/_TOP/Auth.py:436
+msgid "The password has been changed."
+msgstr "Das Kennwort wurde geändert"
+
+#: _GTW/_RST/Auth_Mixin.py:119
+msgid "The password is required."
+msgstr "Das Kennwort muss ausgefüllt werden."
+
+#: _GTW/_RST/Auth_Mixin.py:127
+msgid "The passwords don't match."
+msgstr "Die Kennworte stimmen nicht überein."
+
+#: _GTW/_RST/_TOP/Auth.py:789
+#, python-format
+msgid "The reset password instructions have been sent to your email address %s."
+msgstr ""
+"Die Anweisungen zum Zurücksetzen des Kennworts wurden an die Emailadresse"
+" %s geschickt."
+
+#: _GTW/_RST/Auth_Mixin.py:148
+msgid "This account is currently inactive"
+msgstr "Dieses Benutzerkonto ist momentan nicht verfügbar."
+
+#: _GTW/_RST/Signed_Token.py:127
+#, python-format
+msgid "Time-travelling %s '%s' [%s seconds ahead]"
+msgstr "Zeitreisendes  %s '%s' [%s Sekunden in der Zukunft]"
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:279
+#, python-format
+msgid "Undo deletion of object %s"
+msgstr "Mache Löschung des Objekts %s rückgängig"
+
+#: _GTW/_RST/_TOP/_MOM/Doc.py:266
+#, python-format
+msgid "Unknown E_Type '%s'"
+msgstr "Unbekannter E-Typ '%s'"
+
+#: _GTW/_RST/Resource.py:719
+#, python-format
+msgid "Unknown HTTP method `%s` requested"
+msgstr "Unbekannte HTTP Methode `%s` abgefragt"
+
+#: _GTW/_RST/_TOP/Auth.py:114
+#, python-format
+msgid "Unless run in TEST mode, access to %s is only allowed over https!"
+msgstr "Zugriff auf %s ist nur über HTTPS erlaubt, ausser im TEST-Modus!"
+
+#: _GTW/_RST/Auth_Mixin.py:146
+msgid "Username or password incorrect"
+msgstr "Benutzername oder Kennwort sind nicht korrekt"
+
+#: _GTW/_RST/_TOP/Auth.py:514
+#, python-format
+msgid "Welcome %s."
+msgstr "Willkommen, %s."
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:838
+msgid "You need to specify a pid!"
+msgstr "Es muss eine Pid spezifiert werden!"
+
+#: _GTW/_RST/_TOP/_MOM/Admin.py:1048
+#, python-format
+msgid "You need to specify valid undo information: %s"
+msgstr "Es muss eine gültige Undo-Information spezifiert werden: %s"
+
+#: _GTW/_RST/_MOM/Mixin.py:401
+#, python-format
+msgid "`%s` refers to %s, not %s"
+msgstr "`%s` bezieht sich auf %s, nicht %s"
+
+#: _GTW/_RST/_MOM/Mixin.py:438
+msgid "anonymous"
+msgstr "anonym"
+
+#: _GTW/_RST/_TOP/_MOM/Admin_Restricted.py:37
+msgid "created by"
+msgstr "eingegeben durch"
+
+#: _GTW/_RST/_TOP/Gallery.py:63 _GTW/_RST/_TOP/Gallery.py:83
+#: _GTW/_RST/_TOP/_MOM/Gallery.py:83
+msgid "picture"
+msgstr "Bild"
+
+#~ msgid "Apr"
+#~ msgstr ""
+
+#~ msgid "April"
+#~ msgstr ""
+
+#~ msgid "Aug"
+#~ msgstr ""
+
+#~ msgid "August"
+#~ msgstr ""
+
+#~ msgid "Dec"
+#~ msgstr "Dez"
+
+#~ msgid "December"
+#~ msgstr "Dezember"
+
+#~ msgid "Feb"
+#~ msgstr ""
+
+#~ msgid "February"
+#~ msgstr "Feber"
+
+#~ msgid "Fri"
+#~ msgstr "FR"
+
+#~ msgid "Friday"
+#~ msgstr "Freitag"
+
+#~ msgid "Jan"
+#~ msgstr "Jän"
+
+#~ msgid "January"
+#~ msgstr "Jänner"
+
+#~ msgid "Jul"
+#~ msgstr ""
+
+#~ msgid "July"
+#~ msgstr "Juli"
+
+#~ msgid "Jun"
+#~ msgstr ""
+
+#~ msgid "June"
+#~ msgstr "Juni"
+
+#~ msgid "Mar"
+#~ msgstr "Mär"
+
+#~ msgid "March"
+#~ msgstr "März"
+
+#~ msgid "May"
+#~ msgstr "Mai"
+
+#~ msgid "Mon"
+#~ msgstr "MO"
+
+#~ msgid "Monday"
+#~ msgstr "Montag"
+
+#~ msgid "Nov"
+#~ msgstr ""
+
+#~ msgid "November"
+#~ msgstr ""
+
+#~ msgid "Oct"
+#~ msgstr "Okt"
+
+#~ msgid "October"
+#~ msgstr "Oktober"
+
+#~ msgid "Sat"
+#~ msgstr "SA"
+
+#~ msgid "Saturday"
+#~ msgstr "Samstag"
+
+#~ msgid "Sep"
+#~ msgstr ""
+
+#~ msgid "September"
+#~ msgstr ""
+
+#~ msgid "Sun"
+#~ msgstr "SO"
+
+#~ msgid "Sunday"
+#~ msgstr "Sonntag"
+
+#~ msgid "Thu"
+#~ msgstr "DO"
+
+#~ msgid "Thursday"
+#~ msgstr "Donnerstag"
+
+#~ msgid "Tue"
+#~ msgstr "DI"
+
+#~ msgid "Tuesday"
+#~ msgstr "Dienstag"
+
+#~ msgid "Unknown attribute %s.%s"
+#~ msgstr "Unbekanntes Attribut %s.%s"
+
+#~ msgid "Unknown attribute %s.%s[%s].%s"
+#~ msgstr "Unbekanntes Attribut %s.%s[%s].%s"
+
+#~ msgid "Unknown type %s for attribute %s.%s"
+#~ msgstr "Unbekannter Typ %s für Attribut %s.%s"
+
+#~ msgid "Wed"
+#~ msgstr "MI"
+
+#~ msgid "Wednesday"
+#~ msgstr "Mittwoch"
+

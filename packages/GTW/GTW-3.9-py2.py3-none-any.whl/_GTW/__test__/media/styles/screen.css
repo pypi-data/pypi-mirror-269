@@ -1,0 +1,357 @@
+body
+    { font-size        : 1em
+    }
+
+#navigate li.current-link
+    { background-color : rgb(50%,75%,100%)
+    ; color            : #EFF3FE
+    ; font-weight      : bold
+    }
+
+#navigate li.current-section
+    { font-weight      : bold
+    }
+#navigate a.current-section,
+#navigate a.current-section:link,
+#navigate a.current-section:visited
+    { color            : #666666
+    }
+#navigate a, div#marginal a
+    { text-decoration  : none
+    }
+#navigate a:link, div#marginal a:link
+    { color            : #0050FF
+    }
+#navigate a:visited, div#marginal a:visited
+    { color            : #54AAFF
+    }
+#navigate a:hover, div#marginal a:hover
+    { background-color : #EFF3FE
+    }
+#navigate h1, div#marginal h1
+    { background-color : #E0E8FB
+    ; color            : #666666
+    ; font-size        : 100%
+    ; margin-bottom    : 0.25em
+    ; margin-top       : 0em
+    }
+
+div.nav-section
+    { margin-bottom     : 1.5em
+    }
+div#navigate
+    { float            : left
+    ; width            : 11em
+    }
+
+#navigate li, div#marginal li
+    { margin           : 0
+    ; padding          :
+        0.2em 0 0.2em 0
+    ; position         : relative      /* for nested menues */
+    }
+
+#navigate .level-1
+    { padding-left     : 0.75em
+    }
+
+#navigate .level-2
+    { padding-left     : 1.00em
+    }
+
+#navigate .level-3
+    { padding-left     : 1.00em
+    }
+
+#navigate .level-4
+    { padding-left     : 1.00em
+    }
+
+#navigate .level-5
+    { padding-left     : 1.00em
+    }
+
+#navigate .level-6
+    { padding-left     : 1.00em
+    }
+
+div#ownlinks li.nav-link:hover,
+div#ownlinks li.nav-link a:hover
+    { background-color : blue
+    ; color            : #EFF3FE
+    ; font-weight      : bold
+    }
+
+div#weblinks li.nav-link:hover,
+div#weblinks li.nav-link a:hover
+    { background-color : rgb(255,153,0)
+    ; color            : #EFF3FE
+    ; font-weight      : bold
+    }
+
+#navigate li a, div#marginal li a
+    { display          : block
+    ; margin           : 0
+    }
+#navigate li td a
+    { width            : auto
+    }
+#navigate td
+    { margin           : 0
+    ; padding          : 0
+    ; vertical-align   : top
+    }
+
+#navigate ul, div#marginal ul, .login ul
+    { background-color : #EFF3FE
+    ; border           : none
+    ; font-weight      : normal
+    ; list-style       : none
+    ; margin           : 0
+    ; padding          : 0
+    }
+
+hr.docutils
+    { clear            : right
+    }
+
+img.align-left
+    { float            : left
+    ; margin           : 1px 5px 1px 0px
+    }
+
+img.align-right
+    { float            : right
+    ; margin           : 1px 0px 1px 5px
+    }
+
+pre.literal-block
+    { font-family      : verdana, sans-serif
+    ; padding-left     : 5em
+    }
+
+table.docutils p
+    { border           : 0
+    ; margin           : 0.2em 0 0 0
+    ; padding          : 0
+    }
+
+table.docutils p.first,
+dd p.first
+    { margin           : 0
+    }
+
+table.docutils p.last,
+dd p.last
+    { margin           : 0.2em 0 0.2em 0
+    }
+
+#document
+    { margin-left      : 12em
+    ; margin-right     : 12em
+    }
+
+.inline-icon
+    { float            : left
+    ; margin-top       : 5px
+    ; margin-bottom    : auto
+    }
+
+/* Styling for grid-tables */
+table.grid-table
+    { border           : 3px ridge gray
+    ; border-collapse  : collapse
+    ; margin-left      : 0.5em
+    }
+
+table.grid-table thead
+    { color            : #FF6633
+    ; font-weight      : bold
+    ; text-align       : center
+    }
+
+table.grid-table td
+    { border           : 3px ridge gray
+    ; padding          : 0.05em 0.25em
+    }
+
+    /* Styling for admin pages */
+.Object-List a
+    { color            : #666666
+    ; text-decoration  : none
+    }
+
+.Object-List caption
+    { color            : #1b4287
+    ; display          : none
+    ; font-family      : verdana, sans-serif
+    ; font-size        : 115%
+    ; font-weight      : bold
+    ; padding          : 0em 0em 0.75em
+    }
+
+.Object-List thead
+    { background-color : #E0E8FB
+    ; color            : #FF6633
+    ; font-family      : verdana, sans-serif
+    ; font-weight      : bold
+    ; text-align       : center
+    }
+
+.Object-List td,
+.Object-List th
+    { font-size        : small
+    }
+
+.Object-Editor .Field
+    { background-color : #EFF3FE
+    ; font-size        : small
+    ; margin-bottom    : 1em
+    }
+
+.Object-Editor .AI-Field-Header
+    { color            : #999999
+    ; background-color : #EFF3FE
+    }
+
+.Object-Editor .Field-Help
+    { color            : #999999
+    ; font-size        : 80%
+    }
+
+.Object-Editor .Field-Div-Seq span.Field-Help
+    { float            : right
+    }
+
+.Object-Editor div.field_group-Horizontal-Help-Table span.Field-Help
+    { display          : none
+    }
+
+.Object-Editor input,
+.Object-Editor label,
+.Object-Editor select,
+.Object-Editor textarea,
+.Object-Editor a
+    { background-color : #EFF3FE
+    ; font-size        : small
+    }
+
+.Object-Editor input,
+.Object-Editor select,
+.Object-Editor textarea,
+.Object-Editor a
+    { border           : 1px solid
+    ; border-color     : #BEBEBE
+    ; margin-bottom    : 0.5em
+    }
+
+.Object-Editor input.Mandatory,
+.Object-Editor select.Mandatory,
+.Object-Editor textarea.Mandatory
+    { border-width     : 2px
+    }
+
+.Object-Editor input.Required,
+.Object-Editor select.Required,
+.Object-Editor textarea.Required
+    { border-width    : 1px 1px 2px 1px
+    }
+
+.Object-Editor input.Optional,
+.Object-Editor select.Optional,
+.Object-Editor textarea.Object-Editor
+    { border-width     : 1px
+    }
+
+.Object-Editor input
+    { width            : auto
+    }
+
+.Object-Editor input.submit,
+.Object-Editor input.reset,
+.Object-Editor select
+    { border           : 2px outset
+    ; color            : #0050FF
+    ; margin           : 0.25em 0 0.75em
+    ; padding          : 0.125em 0
+    ; width            : 190px
+    }
+
+.Object-Editor select
+    { width            : auto
+    }
+
+.Object-Editor fieldset
+    { padding          : 0.5em 0 0.25em
+    }
+
+.Object-Editor legend
+    { color            : #666666
+    ; font-size        : small
+    }
+
+.Formset-Horizontal th
+    { text-align       : left
+    }
+
+.Formset-Horizontal ul.errorlist
+    { font-size        : 70%
+    ; list-style       : none
+    ; margin           : 0
+    ; padding          : 0
+    }
+
+.Formset-Horizontal-Help p.Field-Help
+    { display          : None
+    }
+
+a.button
+    { border           : 2px outset
+    ; color            : #0050FF
+    ; margin           : 0 0.5em
+    ; padding          : 0.125em 2em 0.25em
+    ; text-decoration  : None
+    ; width            : 190px
+    }
+
+input.Short,
+.field_group-Horizontal input.Short
+    { width            : 5em
+    }
+
+input.Moderate-Len, .field_group-Horizontal input.Moderate-Len
+    { width            : 6em
+    }
+
+input.Medium-Len, .field_group-Horizontal input.Medium-Len
+    { width            : 9em
+    }
+
+input.Long, input.Very-Long
+    { width            : 100%
+    }
+
+.field_group-Horizontal input
+    { width            : 10em
+    }
+
+.field_group-Horizontal input.Long
+    { width            : 12em
+    }
+
+.Object-Editor textarea
+    { width            : 100%
+    }
+
+.Object-Editor label
+    { color            : #666666
+    ; display          : block
+    ; font-size        : small
+    }
+
+tr.inline-instance
+    { white-space      : nowrap
+    }
+.Object-Editor tr.inline-instance label
+    { display          : inline
+    }

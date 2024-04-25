@@ -1,0 +1,144 @@
+a.icon-link
+    { float           : left
+    }
+.width-2-icons
+    { width           : 36px
+    ; display         : block
+    }
+.width-3-icons
+    { width           : 54px
+    ; display         : block
+    }
+.width-4-icons
+    { width           : 80px
+    ; display         : block
+    }
+
+a.inline-form-add
+    {  float:   left
+    }
+
+.inline-prototype
+    { display:  none;
+    }
+
+.completion-list
+    { z-Index:          999
+    ; position:         absolute
+    ; background-color: white
+    ; border:           2px solid black
+    }
+
+.completion-list p
+    { margin:           0px
+    }
+
+.completion-list .completion-id
+    { display:          none
+    }
+
+.Object-Editor .ui-display a
+    { background-color: transparent
+    ; border:           none
+    ; text-decoration:  none
+    ; color:            black
+    }
+
+/* UI-Display Inline Styling */
+.ui-display-changed
+    { font-style       : italic
+    }
+div.Inline-UI-Display h3
+    { position         : relative
+    ; margin           : 0
+    ; text-align       : center
+    }
+div.Inline-UI-Display h3 span.ui-icon
+    { position         : absolute
+    ; top              : 50%
+    ; left             : 5px
+    ; margin-top       : -8px
+    }
+div.Inline-UI-Display h3 a.add
+    { position         : absolute
+    ; top              : 50%
+    ; right            : 5px
+    ; margin-top       : -8px
+    }
+
+div.Inline-UI-Display h3 a
+    { margin           : 0 0 0 23px
+    ; text-decoration  : none
+    ; border           : 0px
+    ; background-color : transparent
+    ; font-size        : 100%
+    }
+div.Inline-UI-Display table a
+    { margin          : 0
+    }
+div.Inline-UI-Display table
+    { width           : 100%
+    }
+a.ui-icon
+    { display:          inline-block
+    ; border-width:     0px !important
+    ; background-color: transparent !important
+    }
+.ui-3-icons-width
+    { width:            48px
+    }
+/* error handling */
+.ui-state-error
+    { padding         : 5px
+    }
+.ui-state-error a
+    { background-color: transparent
+    ; border-width    : 0
+    ; font-size       : 100%
+    }
+
+ul.errorlist
+    { list-style      : none
+    ; padding         : 4px
+    ; margin          : 0 0 1em 0
+    }
+.gtw-next-error
+    { float           : right
+    }
+.gtw-ui-form-inline-container
+    { padding         : 0.5em 0
+    ; margin-left     : 1em
+    ; border          : 1px solid black
+    }
+.gtw-ui-form-inline-container .gtw-ui-popup-form
+    { margin          : 0 0.5em
+    }
+.gtw-ui-form-inline .buttons
+    { text-align      : right
+    ; border-top      : 1px dotted black
+    ; margin-top      : 0.3em
+    ; padding-top     : 0.3em
+    }
+.gtw-ui-form-inline .buttons button
+    { margin          : 0 0.2em
+    ; text-align      : left
+    }
+
+td.gtw-ui-form-inline[colspan]
+    { text-align      : left
+    }
+
+.ui-button
+    { background      : none
+    ; font-weight     : normal
+    }
+
+/* File Upload Handling */
+.gtw-upload-name
+    { font-style      : normal
+    }
+.gtw-uploading
+    { padding-right   : 18px
+    ; background      : url("images/ui-anim_basic_16x16.gif") no-repeat scroll right center transparent
+    ; font-style      : italic
+    }

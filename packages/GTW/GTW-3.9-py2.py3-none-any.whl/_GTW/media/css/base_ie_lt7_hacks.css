@@ -1,0 +1,12 @@
+.hbox
+    { overflow            : visible
+    ; zoom                : 1
+    }
+
+.vbox.last-child
+    { display             : block
+    ; _left               : -3px
+    ; _margin-right       : -3px
+    ; _position           : relative
+    ; zoom                : 1
+    }

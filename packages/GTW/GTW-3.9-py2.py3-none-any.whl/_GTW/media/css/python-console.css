@@ -1,0 +1,163 @@
+/*
+.debugger .console .output
+    { white-space       : pre-wrap
+    }
+
+.debugger .console
+    { background-color: #fafafa!important
+    ; color:            black
+    ; padding:          5px!important
+    ; margin:           3px 0 0 0!important
+    ; cursor:           default!important
+    }
+.debugger .console form
+    { color:            #555
+    }
+.debugger .console input
+    { background-color: #fafafa
+    ; color:            #555
+    ; width:            90%
+    ; font-family:        'Consolas', 'Deja Vu Sans Mono'
+                        , 'Bitstream Vera Sans Mono', monospace
+    ; font-size:        13px
+    ; border:           none!important
+    }
+.debugger .console .traceback
+    { margin:           5px 0 5px 25px
+    ; white-space:      normal
+    }
+.debugger .console .traceback h3
+    { background-color: #555
+    ; color:            white
+    ; margin:           -10px -10px 5px -10px
+    ; padding:          5px
+    }
+.debugger .console .traceback pre:hover
+    { background-color: #ccc
+    ; cursor:           default
+    }
+
+.debugger .console
+    { border:           1px solid #ccc
+    ; padding:          4px
+    ; background-color: #fafafa
+    }
+.debugger
+    { text-align:       left
+    ; padding:          12px
+    ; margin:           auto
+    ; border:           1px solid #aaa
+    ; background-color: white
+    ; line-height:      1;
+    }
+*/
+.debugger .detail p
+    { margin:           0 0 8px 13px
+    ; font-size:        14px
+    }
+.debugger .explanation
+    { margin:           13px
+    ; font-size:        11px
+    ; position:         relative
+    }
+.debugger .explanation button
+    { position:         absolute
+    ; right:            0px
+    ; top:              -20px
+    }
+.debugger .footer
+    { background-color: #E3EFF1
+    ; font-size:        0.8em
+    ; text-align:       right
+    ; padding:          6px 8px 6px 0
+    ; margin:           30px -12px -12px -12px
+    ; color:            #86989B
+    }
+
+.debugger .traceback, .debugger .plain
+    { background-color: #eee!important
+    ; border:           1px solid #ccc
+    ; margin:           0 0 1em 0
+    ; padding:          10px
+    }
+.debugger .traceback h3
+    { font-size:        1em
+    ; margin:           0 0 0.8em 0
+    }
+.debugger .traceback h4
+    { font-size:        13px
+    ; font-weight:      normal
+    ; margin:           0.7em 0 0.1em 0
+    }
+.debugger .traceback ul
+    { list-style:       none
+    ; margin:           0
+    ; padding:          0 0 0 1em
+    }
+.debugger .traceback pre
+    { margin:           0
+    ; padding:          5px 0 3px 15px
+    ; background-color: #ccc
+    ; border-top:       1px solid #aaa
+    ; border-left:      1px solid #aaa
+    ; border-right:     1px solid #fafafa
+    ; border-bottom:    1px solid #fafafa
+    }
+.debugger .traceback pre, .debugger .box table.source
+    { white-space:      pre-wrap       /* css-3 should we be so lucky... */
+    ; white-space:      -moz-pre-wrap  /* Mozilla, since 1999 */
+    ; white-space:      -pre-wrap      /* Opera 4-6 ?? */
+    ; white-space:      -o-pre-wrap    /* Opera 7 ?? */
+    ; word-wrap:        break-word       /* Internet Explorer 5.5+ */
+    ; _white-space:     pre            /* IE only hack to re-specify in
+                                          addition to word-wrap  */
+    }
+.debugger .traceback pre:hover
+    { background-color: #fafafa
+    ; color:            black
+    ; cursor:           pointer
+    }
+.debugger .traceback blockquote
+    { margin:           1em 0 0 0
+    ; padding:          0
+    }
+.debugger .traceback img
+    { float:            right
+    ; padding:          2px
+    ; margin:           -3px 2px 0 0
+    ; display:          none
+    }
+.debugger .traceback img:hover
+    { background-color: #ddd
+    ; cursor:           pointer
+    }
+.debugger .traceback pre:hover img
+    { display:          block
+    }
+.debugger .traceback cite
+    { display:          inline
+    }
+
+.debugger .string
+    { color:            #30799B
+    }
+.debugger .number
+    { color:            #9C1A1C
+    }
+.debugger .object
+    { color:            #485F6E
+    }
+.debugger .extended
+    { opacity:          0.5
+    }
+.debugger .extended:hover
+    { opacity:          1
+    }
+
+.debugger a.toggle
+    { text-decoration:     none
+    ; display:             inline-block
+    }
+.debugger a.toggle:hover
+    { background-color:    #444
+    }

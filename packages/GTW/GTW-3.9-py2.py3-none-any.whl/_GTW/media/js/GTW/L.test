@@ -1,0 +1,92 @@
+/*
+Run this like::
+    $ /usr/bin/js -s -f GTW/L.test -i
+
+to get an interactive Javascript shell with GTW.js and GTW/L.js
+loaded
+
+or run it like this::
+
+    $ /usr/bin/d8 GTW/L.test
+
+Generate test output like this::
+  ( cd _GTW/media/js/ ; \
+       /usr/bin/js -s -f GTW/L.test > GTW//L.test.output )
+
+*/
+
+"use strict";
+
+var document =
+    { createTextNode          : function (text) {
+          var result = {children : [], props : {}};
+          result.tag = text;
+          return result;
+      }
+    , createElement           : function (tag) {
+          var result =
+              { appendChild     : function (child) {
+                    this.children.push (child);
+                }
+              , children        : []
+              , props           : {}
+              , removeAttribute : function (name) {
+                    delete this.props [name];
+                }
+              , setAttribute    : function (name, value) {
+                    this.props [name] = value;
+                }
+              };
+          result.tag = tag;
+          return result;
+      }
+    };
+
+load ("GTW.js")
+load ("GTW/L.js")
+load ("GTW/inspect.js")
+load ("GTW/jsonify.js")
+
+var show_elem = function show_elem (elem, level) {
+    var level1 = (level || 0) + 1;
+    var indent = $GTW.inspect.blanks.slice (0, 4 * (level1 - 1));
+    var props  = $GTW.inspect.show (elem.props, undefined, level1);
+    print (indent + elem.tag);
+    if (props) {
+        print (props);
+    };
+    if (elem.children.length) {
+        for (var i = 0, li = elem.children.length, child; i < li; i++) {
+            child = elem.children [i];
+            show_elem (child, level1);
+        };
+    };
+};
+
+var L = $GTW.L;
+var items =
+    [ { text : "1", title : "First item"}
+    , { text : "2"}
+    , { title : "Third item"}
+    ];
+var div = L
+    ( "div.classy"
+    , { title : "A classy div generated in javascript by L"
+      }
+    , L ( "span", {}, "A child element")
+    , L ( "ul", {}
+        , items.map
+            ( function (item) {
+                return L (
+                    "li"
+                  , { title : "title" in item && item ["title"] }
+                  , "text" in item && item ["text"]
+                  )
+              }
+            )
+        )
+    );
+
+show_elem (div);
+
+// __END__ L.test

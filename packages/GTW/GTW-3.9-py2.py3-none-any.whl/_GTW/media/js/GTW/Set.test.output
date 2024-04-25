@@ -1,0 +1,15 @@
+s1       : a,b,c,d
+s2       : x,y,z
+s3       : d,e,w,x
+s4       : 1,2,3
+s1 U s2  : a,b,c,d,x,y,z
+s1 D s2  : a,b,c,d
+s1 I s2  : 
+s1 U s3  : a,b,c,d,e,w,x
+s1 D s3  : a,b,c
+s1 I s3  : d
+s3 U s2  : d,e,w,x,y,z
+s3 D s2  : d,e,w
+s3 I s2  : x
+Trying to remove non-existing element throws:: Error: Set 'b,c,d' doesn't contain a
+s1 -'a'  : b,c,d

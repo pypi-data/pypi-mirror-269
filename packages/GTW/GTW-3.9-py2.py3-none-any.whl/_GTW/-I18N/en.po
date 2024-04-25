@@ -1,0 +1,557 @@
+# English translations for MOM/GTW/JNJ.
+# Copyright (C) 2010-2016 Mag. Christian Tanzer, Martin Glueck
+# This file is distributed under the same license as the MOM/GTW/JNJ
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MOM/GTW/JNJ 1.0 [en]\n"
+"Report-Msgid-Bugs-To: tanzer@swing.co.at,martin@mangari.org\n"
+"POT-Creation-Date: 2020-05-10 14:29+0200\n"
+"PO-Revision-Date: 2012-05-23 10:17+0200\n"
+"Last-Translator: Christian Tanzer <tanzer@swing.co.at>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: _GTW/__test__/Test_Command.py:251
+msgid "Auth"
+msgstr ""
+
+#: _GTW/__test__/Test_Command.py:253
+msgid "Authorization and Account handling"
+msgstr ""
+
+#: _GTW/__test__/Test_Command.py:259
+msgid "Choice of language used for localization"
+msgstr ""
+
+#: _GTW/Session.py:213
+#, python-format
+msgid "Edit session expired since %s"
+msgstr ""
+
+#: _GTW/__test__/Test_Command.py:257
+msgid "L10N"
+msgstr ""
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "%s Password for %s on website %s"
+#~ msgstr ""
+
+#~ msgid "%s `%s` does not exist!"
+#~ msgstr ""
+
+#~ msgid "%s `%s` doesn't exist anymore!"
+#~ msgstr ""
+
+#~ msgid "%s `%s` doesn't exist!"
+#~ msgstr ""
+
+#~ msgid "%s doesn't have an attribute named `%s`"
+#~ msgstr ""
+
+#~ msgid "%s needs the attribute: %s"
+#~ msgid_plural "%s needs the attributes: %s"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%s only works with content-type json"
+#~ msgstr ""
+
+#~ msgid "%s: regatta registration"
+#~ msgstr ""
+
+#~ msgid "%s: regatta registration %s"
+#~ msgstr ""
+
+#~ msgid "A confirmation email has been sent to the new email address %s."
+#~ msgstr ""
+
+#~ msgid "A confirmation email has been sent to the new email address."
+#~ msgstr ""
+
+#~ msgid "A confirmation has been sent to your email address %s."
+#~ msgstr ""
+
+#~ msgid "A confirmation has been sent to your email address."
+#~ msgstr ""
+
+#~ msgid "A user name is required to login."
+#~ msgstr ""
+
+#~ msgid "A user name is required."
+#~ msgstr ""
+
+#~ msgid "Account could not be found"
+#~ msgstr ""
+
+#~ msgid "Account with this Email address already registered"
+#~ msgstr ""
+
+#~ msgid "Activate account for %s on website %s"
+#~ msgstr ""
+
+#~ msgid "Activation of account %s successful."
+#~ msgstr ""
+
+#~ msgid "Activation successful."
+#~ msgstr ""
+
+#~ msgid "Admin"
+#~ msgstr ""
+
+#~ msgid "Administration"
+#~ msgstr ""
+
+#~ msgid "Apr"
+#~ msgstr ""
+
+#~ msgid "April"
+#~ msgstr ""
+
+#~ msgid "At the moment, the database is set to readonly to allow maintenance."
+#~ msgstr ""
+
+#~ msgid "Aug"
+#~ msgstr ""
+
+#~ msgid "August"
+#~ msgstr ""
+
+#~ msgid "Cancelled"
+#~ msgstr ""
+
+#~ msgid "Cannot undo a change if %s later changes exist for the same object"
+#~ msgstr ""
+
+#~ msgid "Change"
+#~ msgstr ""
+
+#~ msgid "Change %(tn)s %(obj)s"
+#~ msgstr ""
+
+#~ msgid "Change email for %s on website %s"
+#~ msgstr ""
+
+#~ msgid "Class"
+#~ msgstr ""
+
+#~ msgid "Club"
+#~ msgstr ""
+
+#~ msgid "Confirmation for change of email for account %s to %s for website %s"
+#~ msgstr ""
+
+#~ msgid "Create a new %(tn)s"
+#~ msgstr ""
+
+#~ msgid "Created"
+#~ msgstr ""
+
+#~ msgid "Date of creation."
+#~ msgstr ""
+
+#~ msgid "Dec"
+#~ msgstr ""
+
+#~ msgid "December"
+#~ msgstr ""
+
+#~ msgid "Delete %(tn)s %(obj)s"
+#~ msgstr ""
+
+#~ msgid "Display details of %(tn)s %(obj)s"
+#~ msgstr ""
+
+#~ msgid "Documentation for package namespace %s"
+#~ msgstr ""
+
+#~ msgid "EMail verification successful."
+#~ msgstr ""
+
+#~ msgid "Email confirmation for %s"
+#~ msgstr ""
+
+#~ msgid "Expired %s '%s' older then %s seconds"
+#~ msgstr ""
+
+#~ msgid "Feb"
+#~ msgstr ""
+
+#~ msgid "February"
+#~ msgstr ""
+
+#~ msgid "Field %s doesn't have a polisher"
+#~ msgstr ""
+
+#~ msgid "Field `%(field)s` is required"
+#~ msgstr ""
+
+#~ msgid "Form corrupted, unknown element id %s"
+#~ msgstr ""
+
+#~ msgid "Form/element is unknown (unknown id: %s)"
+#~ msgstr ""
+
+#~ msgid "Fri"
+#~ msgstr ""
+
+#~ msgid "Friday"
+#~ msgstr ""
+
+#~ msgid "Image Selection"
+#~ msgstr ""
+
+#~ msgid "Incorrect origin `%s` for request, expected `%r`"
+#~ msgstr ""
+
+#~ msgid "Invalid %s signature for '%s'"
+#~ msgstr ""
+
+#~ msgid "It was deleted by user `%s` on %s"
+#~ msgstr ""
+
+#~ msgid "Jan"
+#~ msgstr ""
+
+#~ msgid "January"
+#~ msgstr ""
+
+#~ msgid "Jul"
+#~ msgstr ""
+
+#~ msgid "July"
+#~ msgstr ""
+
+#~ msgid "Jun"
+#~ msgstr ""
+
+#~ msgid "June"
+#~ msgstr ""
+
+#~ msgid "Kind"
+#~ msgstr ""
+
+#~ msgid "Language %s selected"
+#~ msgstr ""
+
+#~ msgid "List of participants for"
+#~ msgstr ""
+
+#~ msgid "Logout successful."
+#~ msgstr ""
+
+#~ msgid "MNA-Number"
+#~ msgstr ""
+
+#~ msgid "Make phone call to %s"
+#~ msgstr ""
+
+#~ msgid "Malformed %s value '%s'"
+#~ msgstr ""
+
+#~ msgid "Mar"
+#~ msgstr ""
+
+#~ msgid "March"
+#~ msgstr ""
+
+#~ msgid "May"
+#~ msgstr ""
+
+#~ msgid "Missing %s%s"
+#~ msgstr ""
+
+#~ msgid "Mon"
+#~ msgstr ""
+
+#~ msgid "Monday"
+#~ msgstr ""
+
+#~ msgid "More than %s matches"
+#~ msgstr ""
+
+#~ msgid "Need Javascript for displaying %s"
+#~ msgstr ""
+
+#~ msgid "New email address"
+#~ msgstr ""
+
+#~ msgid "New password"
+#~ msgstr ""
+
+#~ msgid "No activation request for this account"
+#~ msgstr ""
+
+#~ msgid "Not authorized for this page"
+#~ msgstr ""
+
+#~ msgid "Not logged in or login-session is expired"
+#~ msgstr ""
+
+#~ msgid "Nov"
+#~ msgstr ""
+
+#~ msgid "November"
+#~ msgstr ""
+
+#~ msgid "Number of %s belonging to %s"
+#~ msgstr ""
+
+#~ msgid "Object \"%s\" deleted"
+#~ msgstr ""
+
+#~ msgid "Oct"
+#~ msgstr ""
+
+#~ msgid "October"
+#~ msgstr ""
+
+#~ msgid "One of the passwords is incorrect"
+#~ msgstr ""
+
+#~ msgid "Participants"
+#~ msgstr ""
+
+#~ msgid "Password"
+#~ msgstr ""
+
+#~ msgid "Password change for account %s"
+#~ msgstr ""
+
+#~ msgid "Password reset for user %s on website %s"
+#~ msgstr ""
+
+#~ msgid "Passwords don't match."
+#~ msgstr ""
+
+#~ msgid "Please enter a username"
+#~ msgstr ""
+
+#~ msgid "Please enter a value for the missing attribute"
+#~ msgstr ""
+
+#~ msgid "Please enter values for the missing attributes"
+#~ msgstr ""
+
+#~ msgid "Please reload the page"
+#~ msgstr ""
+
+#~ msgid "Please repeat the new password."
+#~ msgstr ""
+
+#~ msgid "Query for cached role attribute `%s` of %s not yet supported"
+#~ msgstr ""
+
+#~ msgid "Query restriction triggered error: %s '%s'"
+#~ msgstr ""
+
+#~ msgid "Race"
+#~ msgstr ""
+
+#~ msgid "Regatta"
+#~ msgstr ""
+
+#~ msgid "Regatta %s is cancelled"
+#~ msgstr ""
+
+#~ msgid "Regatta Events %(year)s"
+#~ msgstr ""
+
+#~ msgid "Register %s for %s"
+#~ msgstr ""
+
+#~ msgid "Register an entry for %s at %s"
+#~ msgstr ""
+
+#~ msgid "Register for regatta %(tn)s"
+#~ msgstr ""
+
+#~ msgid "Registration for %s is closed"
+#~ msgstr ""
+
+#~ msgid "Registration list"
+#~ msgstr ""
+
+#~ msgid "Repeat new password"
+#~ msgstr ""
+
+#~ msgid "Repeat the EMail for verification."
+#~ msgstr ""
+
+#~ msgid "Repeat the password for verification."
+#~ msgstr ""
+
+#~ msgid "Reset"
+#~ msgstr ""
+
+#~ msgid "Restrict to objects belonging to %(tn)s %(obj)s"
+#~ msgstr ""
+
+#~ msgid "Results"
+#~ msgstr ""
+
+#~ msgid "Results for"
+#~ msgstr ""
+
+#~ msgid "Sail-No."
+#~ msgstr ""
+
+#~ msgid "Sailor"
+#~ msgstr ""
+
+#~ msgid "Sat"
+#~ msgstr ""
+
+#~ msgid "Saturday"
+#~ msgstr ""
+
+#~ msgid "Send email to %s"
+#~ msgstr ""
+
+#~ msgid "Sep"
+#~ msgstr ""
+
+#~ msgid "September"
+#~ msgstr ""
+
+#~ msgid "Skipper/Crew"
+#~ msgstr ""
+
+#~ msgid "Successfully revived object %s"
+#~ msgstr ""
+
+#~ msgid "Sun"
+#~ msgstr ""
+
+#~ msgid "Sunday"
+#~ msgstr ""
+
+#~ msgid "The Email is required."
+#~ msgstr ""
+
+#~ msgid "The Email's don't match."
+#~ msgstr ""
+
+#~ msgid "The edit session has expired or the form values are corrupted."
+#~ msgstr ""
+
+#~ msgid "The edit session has expired."
+#~ msgstr ""
+
+#~ msgid "The new E-Mail address is required."
+#~ msgstr ""
+
+#~ msgid "The new password is required."
+#~ msgstr ""
+
+#~ msgid "The old password is required."
+#~ msgstr ""
+
+#~ msgid "The password has been changed."
+#~ msgstr ""
+
+#~ msgid "The password is incorrect"
+#~ msgstr ""
+
+#~ msgid "The password is required."
+#~ msgstr ""
+
+#~ msgid "The passwords don't match."
+#~ msgstr ""
+
+#~ msgid "The reset password instructions have been sent to your email address."
+#~ msgstr ""
+
+#~ msgid "This account is currently inactive"
+#~ msgstr ""
+
+#~ msgid "This username is already in use."
+#~ msgstr ""
+
+#~ msgid "This username is not registered"
+#~ msgstr ""
+
+#~ msgid "Thu"
+#~ msgstr ""
+
+#~ msgid "Thursday"
+#~ msgstr ""
+
+#~ msgid "Time-travelling %s '%s' [%s seconds ahead]"
+#~ msgstr ""
+
+#~ msgid "Tue"
+#~ msgstr ""
+
+#~ msgid "Tuesday"
+#~ msgstr ""
+
+#~ msgid "Undo deletion of object %s"
+#~ msgstr ""
+
+#~ msgid "Unknown E_Type '%s'"
+#~ msgstr ""
+
+#~ msgid "Unknown HTTP method `%s` requested"
+#~ msgstr ""
+
+#~ msgid "Unknown attribute %s.%s"
+#~ msgstr ""
+
+#~ msgid "Unknown attribute %s.%s[%s].%s"
+#~ msgstr ""
+
+#~ msgid "Unknown type %s for attribute %s.%s"
+#~ msgstr ""
+
+#~ msgid "Unless run in TEST mode, access to %s is only allowed over https!"
+#~ msgstr ""
+
+#~ msgid "Username"
+#~ msgstr ""
+
+#~ msgid "Username or password incorrect"
+#~ msgstr ""
+
+#~ msgid "Wed"
+#~ msgstr ""
+
+#~ msgid "Wednesday"
+#~ msgstr ""
+
+#~ msgid "Welcome %s."
+#~ msgstr ""
+
+#~ msgid "You need to specify a pid!"
+#~ msgstr ""
+
+#~ msgid "You need to specify valid undo information: %s"
+#~ msgstr ""
+
+#~ msgid "`%s` refers to %s, not %s"
+#~ msgstr ""
+
+#~ msgid "anonymous"
+#~ msgstr ""
+
+#~ msgid "created by"
+#~ msgstr ""
+
+#~ msgid "email address"
+#~ msgstr ""
+
+#~ msgid "phone number"
+#~ msgstr ""
+
+#~ msgid "picture"
+#~ msgstr ""
+

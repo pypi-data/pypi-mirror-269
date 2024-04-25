@@ -1,0 +1,300 @@
+# German translations for MOM/GTW/JNJ.
+# Copyright (C) 2010-2016 Mag. Christian Tanzer, Martin Glueck
+# This file is distributed under the same license as the MOM/GTW/JNJ
+# project.
+# Christian Tanzer <tanzer@swing.co.at>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MOM/GTW/JNJ 1.0 [de]\n"
+"Report-Msgid-Bugs-To: tanzer@swing.co.at,martin@mangari.org\n"
+"POT-Creation-Date: 2020-05-10 14:29+0200\n"
+"PO-Revision-Date: 2016-02-05 11:25+0100\n"
+"Last-Translator: Christian Tanzer <tanzer@swing.co.at>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: _GTW._OMP._EVT.Calendar _GTW._OMP._EVT.Event
+msgid "Calendar"
+msgid_plural "Calendars"
+msgstr[0] "Kalender"
+msgstr[1] "Kalender"
+
+#: _GTW._OMP._EVT.Event
+msgid "Calendar to which the event belongs"
+msgstr "Kalendar des Ereignisses"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Count"
+msgstr "Anzahl"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Date exceptions"
+msgstr "Datumsausnahmen"
+
+#: _GTW._OMP._EVT.Event
+msgid ""
+"Date interval of event (for non-recurring events, only `start` is "
+"relevant)"
+msgstr ""
+"Datumsinterval des Ereignisses (für nicht wiederholende Ereignisse ist "
+"nur `Anfang` relevant)"
+
+#: _GTW._OMP._EVT.Event
+msgid "Date of occurrence"
+msgstr "Datum des Ereignisses"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Dates"
+msgstr "Kalenderdaten"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Dates excluded from the recurrence rule set."
+msgstr "Kalenderdaten, die von der Wiederholungsregel ausgeschlossen werden."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Dates included in the recurrence rule set."
+msgstr "Kalenderdaten, die in die Wiederholungsregel eingeschlossen werden."
+
+#: _GTW._OMP._EVT.Event
+msgid "Detail"
+msgstr "Detail"
+
+#: _GTW/_OMP/_EVT/graph.py:55
+msgid "EVT graph"
+msgstr "EVT Diagramm"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Easter offset"
+msgstr "Osterabstand"
+
+#: _GTW._OMP._EVT.Event _GTW._OMP._EVT.Recurrence_Spec
+msgid "Event"
+msgid_plural "Events"
+msgstr[0] "Ereignis"
+msgstr[1] "Ereignisse"
+
+#: _GTW._OMP._EVT.Event
+msgid "Event that occurs"
+msgstr "Auftretendes Ereignis"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Event that recurs"
+msgstr "Wiederholtes Ereignis"
+
+#: _GTW._OMP._EVT.Event
+msgid "Event_occurs"
+msgid_plural "Event_occurses"
+msgstr[0] "Termin"
+msgstr[1] "Termine"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Finish date of the recurrence."
+msgstr "Schlussdatum der Wiederholungsregel."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "If true, exclude the dates specified by this rule."
+msgstr "Schliesse die von dieser Regel spezifizierten Kalenderdaten aus"
+
+#: _GTW._OMP._EVT.Event
+msgid "Information about event."
+msgstr "Information zum Ereignis."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Is exception"
+msgstr "Ist Ausnahme"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Maximum number of recurrences."
+msgstr "Maximale Anzahl von Wiederholungen."
+
+#: _GTW._OMP._EVT.Calendar
+msgid "Model a calendar of events."
+msgstr "Kalender mit Ereignissen."
+
+#: _GTW._OMP._EVT.Event
+msgid "Model a calendary event (or set of recurring events)"
+msgstr "Kalendarisches Ereignis (oder Menge von Ereignis-Wiederholungen)"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Month"
+msgstr "Monat"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Month day"
+msgstr "Monatstag"
+
+#: _GTW._OMP._EVT.Calendar
+msgid "Name of the calendar"
+msgstr "Name des Kalenders"
+
+#: _GTW._OMP._EVT.Event
+msgid "Object which this event is bound to."
+msgstr "Objekt, zu dem das Ereignis gehört."
+
+#: _GTW._OMP._EVT.Event
+msgid "Occurrence of a calendary event."
+msgstr "Eintreten eines kalendarischen Ereignisses."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid ""
+"Offset to Easter sunday (positive or negative, 0 means the\n"
+"Easter sunday itself)."
+msgstr "Abstand vom Ostersonntag (positiv oder negativ, 0 bedeutet Ostersonntag)."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Period"
+msgstr "Periode"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Recurrence rule specifying a set of dates to include or exclude."
+msgstr ""
+"Wiederholungsregel, die eine Menge von Kalenderdaten für Einschluss oder "
+"Ausschluss definiert."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Recurrence spec"
+msgstr "Wiederholungsspezifikation"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Recurrence-spec this rule applies to."
+msgstr "Wiederholungsregel"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Recurrence_Rule"
+msgid_plural "Recurrence_Rules"
+msgstr[0] "Wiederholungsregel"
+msgstr[1] "Wiederholungsregeln"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Recurrence_Spec"
+msgid_plural "Recurrence_Specs"
+msgstr[0] "Wiederholungsspezifikation"
+msgstr[1] "Wiederholungsspezifikationen"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Restrict pos"
+msgstr "Schränke Position ein"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid ""
+"Restrict recurrences to the numbers given. Negative numbers\n"
+"count from the last occurrence (-1 meaning the last occurrence)."
+msgstr ""
+"Schränke die Wiederholungen auf die angegebenen Zahlen ein. Negative "
+"Zahlen zählen von hinten (-1 bedeutet die letzte Wiederholung)."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid ""
+"Restrict the recurrences to the days of the month specified.\n"
+"Negative numbers count from the end of the month\n"
+"(-1 means the last day of the month)."
+msgstr ""
+"Schränke die Wiederholungen auf die angegebenen Monatstage ein.\n"
+"Negative Zahlen zählen vom Ende des Monats\n"
+"(-1 bedeutet den letzten Tag des Monats)."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid ""
+"Restrict the recurrences to the days of the week specified.\n"
+"(0 means monday, 6 means sunday)."
+msgstr ""
+"Schränke die Wiederholungen auf die angegebenen Wochentage ein.\n"
+"(0 bedeutet Montag, 6 bedeutet Sonntag)."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid ""
+"Restrict the recurrences to the days of the year specified.\n"
+"Negative numbers count from the end of the year\n"
+"(-1 means the last day of the year)."
+msgstr ""
+"Schränke die Wiederholungen auf die angegebenen Tage des Jahres ein.\n"
+"Negative Zahlen zählen vom Ende des Jahres\n"
+"(-1 bedeutet den letzten Tag des Jahres)."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid ""
+"Restrict the recurrences to the months specified (1 means\n"
+"January, ...)."
+msgstr ""
+"Schränke die Wiederholungen auf die angegebenen Monate ein (1 bedeutet "
+"Jänner, ...)."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Restrict the recurrences to the week numbers specified."
+msgstr "Schränke die Wiederholungen auf die angegebenen Kalenderwochen ein."
+
+#: _GTW._OMP._EVT.Calendar
+msgid "Short description of calendar"
+msgstr "Kurze Beschreibung des Kalenders"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Short description of the rule"
+msgstr "Kurze Beschreibung der Regel"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Specification for recurrency of event."
+msgstr "Spezifikation für Wiederholungen eines Ereignisses."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Start date of the recurrence."
+msgstr "Anfangsdatum der Wiederholungsregel."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid ""
+"The interval (measured in `units`) between\n"
+"successive recurrences of an event."
+msgstr ""
+"Das Intervall (gemessen in `Einheiten`) zwischen aufeinanderfolgenden "
+"Wiederholungen eines Ereignisses."
+
+#: _GTW._OMP._EVT.Event
+msgid "Time (interval) of occurrence"
+msgstr "Zeitraum des Ereignisses"
+
+#: _GTW._OMP._EVT.Event
+msgid "Time interval of event (for a full-day event, this is empty)"
+msgstr "Zeitraum des Ereignisses (für ein Ganztagesereignis leer)"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Unit"
+msgstr "Einheit"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid ""
+"Unit of recurrence. `period` is interpreted in units of\n"
+"`unit`."
+msgstr "Einheit der Wiederholungen. `Periode` wird in `Einheit` gemessen."
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Week"
+msgstr "Woche"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Week day"
+msgstr "Wochentag"
+
+#: _GTW._OMP._EVT.Recurrence_Spec
+msgid "Year day"
+msgstr "Tag des Jahres"
+
+#~ msgid "Daily"
+#~ msgstr "Täglich"
+
+#~ msgid "Graph displaying EVT partial object model"
+#~ msgstr "Graphische Darstellung des EVT Modells"
+
+#~ msgid "Monthly"
+#~ msgstr "Monatlich"
+
+#~ msgid "Weekly"
+#~ msgstr "Wöchentlich"
+
+#~ msgid "Yearly"
+#~ msgstr "Jährlich"
+

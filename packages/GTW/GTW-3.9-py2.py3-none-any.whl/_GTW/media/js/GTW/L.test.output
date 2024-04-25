@@ -1,0 +1,14 @@
+div
+    class = "classy"
+    title = "A classy div generated in javascript by L"
+    span
+        A child element
+    ul
+        li
+            title = "First item"
+            1
+        li
+            title = "false"
+            2
+        li
+            title = "Third item"

@@ -1,0 +1,58 @@
+/*
+Run this like::
+    $ /usr/bin/js -s -f GTW/Set.test -i
+
+to get an interactive Javascript shell with GTW.js and GTW/AFS/Elements.js
+loaded
+
+*/
+
+load ("GTW.js")
+load ("GTW/inspect.js")
+load ("GTW/Set.js")
+
+var s1 = new $GTW.Set ("a", "b", "c", "d");
+var s2 = new $GTW.Set ("x", "y", "z");
+var s3 = new $GTW.Set ("d", "e", "w", "x");
+var s4 = new $GTW.Set (1, 2, 3);
+
+var s1_u_s2 = s1.union        (s2);
+var s1_d_s2 = s1.difference   (s2);
+var s1_i_s2 = s1.intersection (s2);
+
+var s1_u_s3 = s1.union        (s3);
+var s1_d_s3 = s1.difference   (s3);
+var s1_i_s3 = s1.intersection (s3);
+
+var s3_u_s2 = s3.union        (s2);
+var s3_d_s2 = s3.difference   (s2);
+var s3_i_s2 = s3.intersection (s2);
+
+print ("s1       : " + s1.elements ());
+print ("s2       : " + s2.elements ());
+print ("s3       : " + s3.elements ());
+print ("s4       : " + s4.elements ());
+
+print ("s1 U s2  : " + s1_u_s2.elements ());
+print ("s1 D s2  : " + s1_d_s2.elements ());
+print ("s1 I s2  : " + s1_i_s2.elements ());
+
+print ("s1 U s3  : " + s1_u_s3.elements ());
+print ("s1 D s3  : " + s1_d_s3.elements ());
+print ("s1 I s3  : " + s1_i_s3.elements ());
+
+print ("s3 U s2  : " + s3_u_s2.elements ());
+print ("s3 D s2  : " + s3_d_s2.elements ());
+print ("s3 I s2  : " + s3_i_s2.elements ());
+
+s1.remove  ("a");
+s1.discard ("a");
+try {
+    s1.remove  ("a");
+}  catch (x) {
+    print ("Trying to remove non-existing element throws:: " + x);
+}
+
+print ("s1 -'a'  : " + s1.elements ());
+
+// __END__ GTW/Set.test

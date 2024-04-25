@@ -1,0 +1,361 @@
+# German translations for MOM/GTW/JNJ.
+# Copyright (C) 2010-2016 Mag. Christian Tanzer, Martin Glueck
+# This file is distributed under the same license as the MOM/GTW/JNJ
+# project.
+# Christian Tanzer <tanzer@swing.co.at>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MOM/GTW/JNJ 1.0 [de]\n"
+"Report-Msgid-Bugs-To: tanzer@swing.co.at,martin@mangari.org\n"
+"POT-Creation-Date: 2020-05-10 14:29+0200\n"
+"PO-Revision-Date: 2016-02-05 11:25+0100\n"
+"Last-Translator: Christian Tanzer <tanzer@swing.co.at>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: _GTW._OMP._SWP.Referral
+msgid "A resource referring to another resource."
+msgstr "Eine auf eine andere Ressource bezugnehmende Ressource."
+
+#: _GTW._OMP._SWP.Picture
+msgid "A string."
+msgstr "Eine Zeichenkette"
+
+#: _GTW._OMP._SWP.Clip
+msgid "Abstract"
+msgstr "Kurzfassung"
+
+#: _GTW._OMP._SWP.Clip
+msgid "Clip_O"
+msgid_plural "Clip_Os"
+msgstr[0] "Schnipsel"
+msgstr[1] "Schnipseln"
+
+#: _GTW._OMP._SWP.Clip
+msgid "Clip_X"
+msgid_plural "Clip_Xs"
+msgstr[0] "Schnipsel/X"
+msgstr[1] "Schnipseln/X"
+
+#: _MOM._Attr.A_2D
+msgid "D2_Value_Float"
+msgid_plural "D2_Value_Floats"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _MOM._Attr.A_2D
+msgid "D2_Value_Int"
+msgid_plural "D2_Value_Ints"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Date_Interval_N_date"
+msgid_plural "Date_Interval_N_dates"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Gallery
+msgid "Directory where pictures of gallery are stored."
+msgstr "Verzeichnis, wo die Bilder der Gallerie gespeichert sind."
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Don't show page in navigation."
+msgstr "Seite soll nicht ni Navigation aufscheinen."
+
+#: _GTW._OMP._SWP.Referral
+msgid "Download name"
+msgstr "Name für heruntergeladene Datei"
+
+#: _GTW._OMP._SWP.Picture
+msgid "Extension of file holding picture."
+msgstr "Dateiendung des Bilds."
+
+#: _GTW._OMP._SWP.Page
+msgid "Format"
+msgstr "Format"
+
+#: _GTW._OMP._SWP.Gallery _GTW._OMP._SWP.Picture
+msgid "Gallery"
+msgid_plural "Gallerys"
+msgstr[0] "Gallerie"
+msgstr[1] "Gallerien"
+
+#: _GTW._OMP._SWP.Picture
+msgid "Gallery to which this picture belongs."
+msgstr "Gallerie, zu der das Bild gehört."
+
+#: _GTW/_OMP/_SWP/Format.py:98
+#, python-format
+msgid ""
+"HTML must not contain any of the tags:\n"
+"%s"
+msgstr ""
+"Der Text dark keines der nachfolgend aufgeführten HTML Kommandos "
+"enthalten:\n"
+"%s"
+
+#: _GTW/_OMP/_SWP/Format.py:92
+#, python-format
+msgid ""
+"HTML must not contain comments:\n"
+"%s"
+msgstr ""
+"Der Text darf keine Kommentare enthalten:\n"
+"%s"
+
+#: _GTW._OMP._SWP.Page
+msgid "Head line"
+msgstr "Kopfzeile"
+
+#: _GTW._OMP._SWP.Page
+msgid "Head line of the web page"
+msgstr "Kopfzeile der Webseite"
+
+#: _GTW._OMP._SWP.Picture
+msgid "Height of picture."
+msgstr "Höhe des Bildes."
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Hidden"
+msgstr "Verborgen"
+
+#: _GTW._OMP._SWP.Clip _GTW._OMP._SWP.Object_PN
+msgid "Higher prio sorts before lower prio."
+msgstr "Höhere Priorität wird vor niederer Priorität gereiht."
+
+#: _GTW._OMP._SWP.Clip
+msgid "Link to"
+msgstr "Verknüpfung zu"
+
+#: _GTW._OMP._SWP.Referral
+msgid "Mark `target_url` as downloadable URL with specified filename."
+msgstr ""
+"Markiere `target_url` als herunterladbare Datei mit angegebenem "
+"Dateinamen."
+
+#: _GTW._OMP._SWP.Page
+msgid "Markup format used for `text`"
+msgstr "Textauszeichnungsformat, das für den `text` verwendet wird"
+
+#: _GTW._OMP._SWP.Page
+msgid "Mixin with the attributes of `Page`."
+msgstr ""
+
+#: _GTW._OMP._SWP.Gallery
+msgid "Model a gallery of pictures"
+msgstr "Bildergallerie"
+
+#: _GTW._OMP._SWP.Picture
+msgid "Model a picture that can be displayed on a web page."
+msgstr "Bild, das auf der Webseite dargestellt werden kann."
+
+#: _GTW._OMP._SWP.Page
+msgid "Model a static web page."
+msgstr "Webseite mit statischem Inhalt."
+
+#: _MOM._Attr.A_2D
+msgid "Model a two-dimensional float-based value."
+msgstr ""
+
+#: _MOM._Attr.A_2D
+msgid "Model a two-dimensional integer-based value."
+msgstr ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Model a year-specific static web page."
+msgstr "Jahresspezifische Webseite mit statischem Inhalt."
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Name used for perma-link."
+msgstr "Name, der für den Permalink verwendet wird."
+
+#: _GTW._OMP._SWP.Clip
+msgid "News clip for a object."
+msgstr "Neuigkeitsschnipsel für ein Objekt."
+
+#: _GTW._OMP._SWP.Clip
+msgid ""
+"News clip for the front page of a website referring to an external web\n"
+"page."
+msgstr ""
+"Neuigkeitsschnipsel für die Startseite, das auf eine externe Webseite "
+"verweist."
+
+#: _GTW._OMP._SWP.Picture
+msgid "Number"
+msgstr "Zahl"
+
+#: _GTW._OMP._SWP.Picture
+msgid "Number of picture in gallery."
+msgstr "Position des Bildes in der Gallerie."
+
+#: _GTW._OMP._SWP.Clip
+msgid "Object the news clip refers to"
+msgstr "Objekt, auf das sich das Neuigkeitsschnipsel bezieht"
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Object_PN"
+msgid_plural "Object_PNs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Page"
+msgid_plural "Pages"
+msgstr[0] "Seite"
+msgstr[1] "Seiten"
+
+#: _GTW._OMP._SWP.Page
+msgid "Page_Mixin"
+msgid_plural "Page_Mixins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Page_Y"
+msgid_plural "Page_Ys"
+msgstr[0] "Seite/J"
+msgstr[1] "Seiten/J"
+
+#: _GTW._OMP._SWP.Referral
+msgid "Parent url"
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Photo"
+msgstr "Photo"
+
+#: _GTW._OMP._SWP.Picture
+msgid "Picture"
+msgid_plural "Pictures"
+msgstr[0] "Bild"
+msgstr[1] "Bilder"
+
+#: _GTW._OMP._SWP.Picture
+msgid "Picture."
+msgstr "Bild."
+
+#: _GTW._OMP._SWP.Clip _GTW._OMP._SWP.Object_PN
+msgid "Prio"
+msgstr "Priorität"
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Publication (`start`) and expiration date (`finish`)"
+msgstr "Publikations- und Verfallsdatum"
+
+#: _GTW._OMP._SWP.Clip
+msgid ""
+"Publication (`start`) and expiration date (`finish`).\n"
+"Unspecified values will be taken from the web page the clip\n"
+"belongs to."
+msgstr "Publikations- und Verfallsdatum"
+
+#: _GTW._OMP._SWP.Referral
+msgid "Referral"
+msgid_plural "Referrals"
+msgstr[0] "Querverweis"
+msgstr[1] "Querverweise"
+
+#: _GTW/_OMP/_SWP/graph.py:59
+msgid "SWP graph"
+msgstr "SWP Diagramm"
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Short title"
+msgstr "Kurztitel"
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Short title (used in navigation)."
+msgstr "Kurztitel (wird in Navigation verwendet)."
+
+#: _GTW._OMP._SWP.Referral
+msgid "Target url"
+msgstr "Ziel URL"
+
+#: _GTW._OMP._SWP.Clip
+msgid "Text for news clip in markup specified by `format`."
+msgstr ""
+"Text für das Neuigkeitsschnipsel, im durch `format` angegebenen "
+"Textauszeichnungsformat formatiert."
+
+#: _GTW._OMP._SWP.Page
+msgid "Text for web page in markup specified by `format`."
+msgstr ""
+"Text für die Webseite, im durch `format` angegebenen "
+"Textauszeichnungsformat formatiert."
+
+#: _GTW._OMP._SWP.Picture
+msgid "Thumb"
+msgstr "Miniaturbild"
+
+#: _GTW._OMP._SWP.Picture
+msgid "Thumbnail"
+msgstr "Miniaturbild"
+
+#: _GTW._OMP._SWP.Clip
+msgid "Title of news clip."
+msgstr "Titel des Neuigkeitsschnipsels."
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Title of the web page"
+msgstr "Titel der Webseite"
+
+#: _GTW._OMP._SWP.Referral
+msgid "URL of parent resource."
+msgstr ""
+
+#: _GTW._OMP._SWP.Referral
+msgid "URL of target resource."
+msgstr "Adresse der Zielressource."
+
+#: _GTW._OMP._SWP.Clip
+msgid "Url of external web page providing information about this clip"
+msgstr ""
+"Adresse der externen Webseite, die Informationen über das "
+"Neuigkeitsschnipsel enthält"
+
+#: _MOM._Attr.A_2D
+msgid "Value in x (horizontal) direction."
+msgstr "Wert in x-Richtung (horizontal)."
+
+#: _MOM._Attr.A_2D
+msgid "Value in y (vertical) direction."
+msgstr "Wert in y-Richtung (vertikal)."
+
+#: _GTW._OMP._SWP.Picture
+msgid "Width"
+msgstr "Breite"
+
+#: _GTW._OMP._SWP.Picture
+msgid "Width of picture."
+msgstr "Breite des Bildes."
+
+#: _MOM._Attr.A_2D
+msgid "X"
+msgstr "X"
+
+#: _MOM._Attr.A_2D
+msgid "Y"
+msgstr "Y"
+
+#: _GTW._OMP._SWP.Page
+msgid "Year to which the web page applies."
+msgstr "Jahr, auf das sich die Webseite bezieht."
+
+#: _GTW._OMP._SWP.Clip
+msgid "date"
+msgstr "Datum"
+
+#~ msgid "Graph displaying SWP partial object model"
+#~ msgstr "Graphische Darstellung des SWP Modells"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+

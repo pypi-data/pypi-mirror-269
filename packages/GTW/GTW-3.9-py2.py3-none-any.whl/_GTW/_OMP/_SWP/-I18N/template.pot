@@ -1,0 +1,339 @@
+# Translations template for MOM/GTW/JNJ.
+# Copyright (C) 2020 Mag. Christian Tanzer, Martin Glueck
+# This file is distributed under the same license as the MOM/GTW/JNJ
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MOM/GTW/JNJ 1.0\n"
+"Report-Msgid-Bugs-To: tanzer@swing.co.at,martin@mangari.org\n"
+"POT-Creation-Date: 2020-05-10 14:29+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: _GTW._OMP._SWP.Referral
+msgid "A resource referring to another resource."
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "A string."
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip
+msgid "Abstract"
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip
+msgid "Clip_O"
+msgid_plural "Clip_Os"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Clip
+msgid "Clip_X"
+msgid_plural "Clip_Xs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _MOM._Attr.A_2D
+msgid "D2_Value_Float"
+msgid_plural "D2_Value_Floats"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _MOM._Attr.A_2D
+msgid "D2_Value_Int"
+msgid_plural "D2_Value_Ints"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Date_Interval_N_date"
+msgid_plural "Date_Interval_N_dates"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Gallery
+msgid "Directory where pictures of gallery are stored."
+msgstr ""
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Don't show page in navigation."
+msgstr ""
+
+#: _GTW._OMP._SWP.Referral
+msgid "Download name"
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Extension of file holding picture."
+msgstr ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Format"
+msgstr ""
+
+#: _GTW._OMP._SWP.Gallery _GTW._OMP._SWP.Picture
+msgid "Gallery"
+msgid_plural "Gallerys"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Gallery to which this picture belongs."
+msgstr ""
+
+#: _GTW/_OMP/_SWP/Format.py:98
+#, python-format
+msgid ""
+"HTML must not contain any of the tags:\n"
+"%s"
+msgstr ""
+
+#: _GTW/_OMP/_SWP/Format.py:92
+#, python-format
+msgid ""
+"HTML must not contain comments:\n"
+"%s"
+msgstr ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Head line"
+msgstr ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Head line of the web page"
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Height of picture."
+msgstr ""
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Hidden"
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip _GTW._OMP._SWP.Object_PN
+msgid "Higher prio sorts before lower prio."
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip
+msgid "Link to"
+msgstr ""
+
+#: _GTW._OMP._SWP.Referral
+msgid "Mark `target_url` as downloadable URL with specified filename."
+msgstr ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Markup format used for `text`"
+msgstr ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Mixin with the attributes of `Page`."
+msgstr ""
+
+#: _GTW._OMP._SWP.Gallery
+msgid "Model a gallery of pictures"
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Model a picture that can be displayed on a web page."
+msgstr ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Model a static web page."
+msgstr ""
+
+#: _MOM._Attr.A_2D
+msgid "Model a two-dimensional float-based value."
+msgstr ""
+
+#: _MOM._Attr.A_2D
+msgid "Model a two-dimensional integer-based value."
+msgstr ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Model a year-specific static web page."
+msgstr ""
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Name used for perma-link."
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip
+msgid "News clip for a object."
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip
+msgid ""
+"News clip for the front page of a website referring to an external web\n"
+"page."
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Number"
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Number of picture in gallery."
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip
+msgid "Object the news clip refers to"
+msgstr ""
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Object_PN"
+msgid_plural "Object_PNs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Page"
+msgid_plural "Pages"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Page_Mixin"
+msgid_plural "Page_Mixins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Page_Y"
+msgid_plural "Page_Ys"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Referral
+msgid "Parent url"
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Photo"
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Picture"
+msgid_plural "Pictures"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Picture."
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip _GTW._OMP._SWP.Object_PN
+msgid "Prio"
+msgstr ""
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Publication (`start`) and expiration date (`finish`)"
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip
+msgid ""
+"Publication (`start`) and expiration date (`finish`).\n"
+"Unspecified values will be taken from the web page the clip\n"
+"belongs to."
+msgstr ""
+
+#: _GTW._OMP._SWP.Referral
+msgid "Referral"
+msgid_plural "Referrals"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW/_OMP/_SWP/graph.py:59
+msgid "SWP graph"
+msgstr ""
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Short title"
+msgstr ""
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Short title (used in navigation)."
+msgstr ""
+
+#: _GTW._OMP._SWP.Referral
+msgid "Target url"
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip
+msgid "Text for news clip in markup specified by `format`."
+msgstr ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Text for web page in markup specified by `format`."
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Thumb"
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Thumbnail"
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip
+msgid "Title of news clip."
+msgstr ""
+
+#: _GTW._OMP._SWP.Object_PN
+msgid "Title of the web page"
+msgstr ""
+
+#: _GTW._OMP._SWP.Referral
+msgid "URL of parent resource."
+msgstr ""
+
+#: _GTW._OMP._SWP.Referral
+msgid "URL of target resource."
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip
+msgid "Url of external web page providing information about this clip"
+msgstr ""
+
+#: _MOM._Attr.A_2D
+msgid "Value in x (horizontal) direction."
+msgstr ""
+
+#: _MOM._Attr.A_2D
+msgid "Value in y (vertical) direction."
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Width"
+msgstr ""
+
+#: _GTW._OMP._SWP.Picture
+msgid "Width of picture."
+msgstr ""
+
+#: _MOM._Attr.A_2D
+msgid "X"
+msgstr ""
+
+#: _MOM._Attr.A_2D
+msgid "Y"
+msgstr ""
+
+#: _GTW._OMP._SWP.Page
+msgid "Year to which the web page applies."
+msgstr ""
+
+#: _GTW._OMP._SWP.Clip
+msgid "date"
+msgstr ""
+

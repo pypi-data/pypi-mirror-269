@@ -1,0 +1,228 @@
+# Portuguese translations for MOM/GTW/JNJ.
+# Copyright (C) 2020 Mag. Christian Tanzer, Martin Glueck
+# This file is distributed under the same license as the MOM/GTW/JNJ
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MOM/GTW/JNJ 1.0\n"
+"Report-Msgid-Bugs-To: tanzer@swing.co.at,martin@mangari.org\n"
+"POT-Creation-Date: 2020-05-10 14:29+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt\n"
+"Language-Team: pt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "A password reset is pending for the linked account."
+msgstr ""
+
+#: _GTW._OMP._Auth.Account _GTW._OMP._Auth.Account_Handling
+#: _GTW._OMP._Auth.Account_in_Group
+msgid "Account"
+msgid_plural "Accounts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._Auth.Account_in_Group
+msgid "Account in Group"
+msgid_plural "Account in Groups"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Account which this action is bound to."
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Account_Activation"
+msgid_plural "Account_Activations"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Account_EMail_Verification"
+msgid_plural "Account_EMail_Verifications"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Account_Password_Change_Required"
+msgid_plural "Account_Password_Change_Requireds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Account_Password_Reset"
+msgid_plural "Account_Password_Resets"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Activation of the account"
+msgstr ""
+
+#: _GTW._OMP._Auth.Account
+msgid "An acount which uses passwords for authorization."
+msgstr ""
+
+#: _GTW/_OMP/_Auth/graph.py:57
+msgid "Auth graph"
+msgstr ""
+
+#: _GTW._OMP._Auth.Certificate
+msgid "Certificate"
+msgid_plural "Certificates"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._Auth.Certificate
+msgid "Certificate that can be used to authenticate an account."
+msgstr ""
+
+#: _GTW._OMP._Auth.Certificate
+msgid "Date and time when the certificate was revoked"
+msgstr ""
+
+#: _MOM._Attr.Date_Time_Interval
+msgid "Date_Time_Interval"
+msgid_plural "Date_Time_Intervals"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _MOM._Attr.Date_Time_Interval
+msgid "Date_Time_Interval_C"
+msgid_plural "Date_Time_Interval_Cs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _MOM._Attr.Date_Time_Interval
+msgid "Date_Time_Interval_N"
+msgid_plural "Date_Time_Interval_Ns"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._Auth.Group
+msgid "Desc"
+msgstr ""
+
+#: _GTW._OMP._Auth.Group
+msgid "Description of group"
+msgstr ""
+
+#: _GTW._OMP._Auth.Certificate
+msgid "Email of account"
+msgstr ""
+
+#: _GTW._OMP._Auth.Account
+msgid "Email that serves as user name for this account"
+msgstr ""
+
+#: _GTW._OMP._Auth.Account
+msgid "Enabled"
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Exipre time of this action"
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Expires"
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_in_Group _GTW._OMP._Auth.Group
+msgid "Group"
+msgid_plural "Groups"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _GTW._OMP._Auth.Group
+msgid "Model a group of accounts."
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_in_Group
+msgid "Model association Account_in_Group"
+msgstr ""
+
+#: _GTW._OMP._Auth.Group
+msgid "Name of group."
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "New email"
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Password"
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Pending email verification."
+msgstr ""
+
+#: _GTW._OMP._Auth.Certificate
+msgid "Revocation date"
+msgstr ""
+
+#: _GTW._OMP._Auth.Certificate
+msgid "Short description of the certificate"
+msgstr ""
+
+#: _GTW._OMP._Auth.Account
+msgid "Specifies if this account has super-user permissions."
+msgstr ""
+
+#: _GTW._OMP._Auth.Account
+msgid ""
+"Specifies if this account is currently enabled, i.e.,\n"
+"the user can login."
+msgstr ""
+
+#: _GTW._OMP._Auth.Account
+msgid "Superuser"
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "The new email address for the linked account."
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid ""
+"The password of the linked account must be changed after the next\n"
+"login."
+msgstr ""
+
+#: _GTW._OMP._Auth.Certificate
+msgid "The revocation date cannot be in the future."
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "The temporary password."
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Token"
+msgstr ""
+
+#: _GTW._OMP._Auth.Account_Handling
+msgid "Unique token which identifies this action."
+msgstr ""
+
+#: _GTW._OMP._Auth.Certificate
+msgid "Validity"
+msgstr ""
+
+#: _GTW._OMP._Auth.Certificate
+msgid "Validity date interval"
+msgstr ""
+
+#: _GTW._OMP._Auth.Certificate
+msgid "valid_revocation_date"
+msgstr ""
+

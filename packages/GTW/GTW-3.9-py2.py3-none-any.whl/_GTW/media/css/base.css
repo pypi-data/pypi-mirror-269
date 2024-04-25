@@ -1,0 +1,186 @@
+/*
+* Copyright (C) 2010-2011 Mag. Christian Tanzer. All rights reserved
+* Glasauergasse 32, A--1130 Wien, Austria. tanzer@swing.co.at
+*
+* Revision Dates
+*    20-Jul-2010 (CT) Creation
+*     5-Aug-2010 (CT) Creation continued
+*    23-Nov-2010 (CT) `max-width` for `img` and `object` set to `100%`
+*    29-Nov-2010 (CT) Exception for `div#map img` and `div#map object` added
+*                     (otherwise google maps is **totally** broken)
+*    29-Nov-2010 (CT) `h1` .. `h5` ain't no `bold` anymore
+*    15-Jun-2011 (CT) `max-width` for `img` and `object` removed (doesn't
+*                     scale height accordingly so image is distorted)
+*    ««revision-date»»···
+*/
+
+/* Styling for HTML elements (assumes effects of reset.css!) */
+
+body
+    { font-family         : "Lucida Grande", verdana, sans-serif
+    ; line-height         : 1.44
+    ; margin              : 0.2em 0.5em
+    }
+
+blockquote
+    { margin-left         : 2.5em
+    }
+
+caption
+    { text-align          : center
+    }
+
+em  { font-weight         : bold }
+
+fieldset
+    { border              : 1px solid #BEBEBE
+    ; padding             : 0.1em 0.1em 0.2em
+    }
+
+h1  { font-size           : 125% }
+h2  { font-size           : 120% }
+h3  { font-size           : 115% }
+h4  { font-size           : 110% }
+h5  { font-size           : 105% }
+h6  { font-size           : 100%
+    ; font-weight         : bold
+    }
+
+input, textarea, input:focus, textarea:focus
+    { padding             : 0.1em 0.1em 0.2em
+    }
+
+input:focus, textarea:focus
+    { background-color    : yellow
+    }
+
+legend
+    { font-weight         : bold
+    }
+
+ol
+    { list-style          : decimal outside
+    ; padding-left        : 2.5em
+    }
+
+ol, ul
+    { margin-bottom       : 0.5em }
+
+ol ol, ul ul
+    { margin              : 0 0 0.5em 0.5em }
+
+ol ol
+    { list-style          : upper-alpha }
+
+ol ol ol
+    { list-style          : lower-alpha }
+
+ol ol ol ol
+    { list-style          : lower-roman }
+
+p   { margin-bottom       : 0.5em }
+
+pre { font-family         : monospace }
+
+strong
+    { font-weight         : bold }
+
+td, th
+    { padding             : 0.05em 0.25em
+    ; vertical-align      : top
+    }
+
+td[colspan], th[colspan]
+    { text-align          : center
+    }
+
+textarea
+    { font-family         : monospace
+    }
+
+ul
+    { list-style          : disc outside
+    ; padding-left        : 1.0em
+    }
+
+ul ul
+    { list-style          : square }
+
+ul ul ul
+    { list-style          : circle }
+
+ul ul ul ul
+    { list-style          : disc }
+
+/* Styling for classes */
+
+.em { font-weight         : bold }
+
+.hbox
+    { display             : block
+    ; overflow            : hidden
+    }
+
+.headline
+    { color               : #FF6633
+    ; font-size           : 135%
+    }
+
+.just-c
+    { text-align          : center }
+
+.just-l
+    { text-align          : left }
+
+.just-l
+    { text-align          : right }
+
+.large
+    { font-size           : 120%
+    }
+
+.section + .section
+    { margin-top          : 0.5em }
+
+.striped tr:nth-child(2n+1)
+    { background-color    : #EBEBEB
+    }
+
+.striped tr:nth-child(2n)
+    { background-color    : white
+    }
+
+.vbox
+    { float               : left
+    }
+
+.vboxr
+    { float               : right
+    }
+
+.vbox.last-child, .w1o1
+    { display             : inline-block
+    ; float               : none
+    ; width               : auto
+    }
+
+.vert-b
+    { vertical-align      : bottom }
+
+.vert-m
+    { vertical-align      : middle }
+
+.vert-t
+    { vertical-align      : top }
+
+.w1o2 { width             : 50% }
+.w1o3 { width             : 33.33333333333333% }
+.w1o4 { width             : 25% }
+.w1o5 { width             : 20% }
+.w2o3 { width             : 66.66666666666666% }
+.w2o5 { width             : 40% }
+.w3o4 { width             : 75% }
+.w3o5 { width             : 60% }
+.w4o5 { width             : 80% }
+
+/* __END__ base.css */
