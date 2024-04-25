@@ -1,0 +1,12 @@
+class DBNames:
+    PINECONE = "pinecone"
+    QDRANT = "qdrant"
+    MILVUS = "milvus"
+    VERTEXAI = "vertexai_vectorsearch"
+    KDBAI = "kdbai"
+    VESPA = "vespa"
+    LANCEDB = "lancedb"
+    TXTAI = "txtai"
+    CHROMA = "chroma"
+    WEAVIATE = "weaviate"
+    ASTRADB = "astradb"
