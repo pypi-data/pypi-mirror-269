@@ -1,0 +1,2 @@
+Version: 1.5.2
+Arguments: ['D:\\Software\\miniconda3\\envs\\py311\\Scripts\\delvewheel', 'repair', 'dist/mdapy-0.10.7-cp311-cp311-win_amd64.whl']
