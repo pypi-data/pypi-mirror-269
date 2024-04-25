@@ -1,0 +1,7 @@
+cython
+numpy
+
+[docs]
+Sphinx
+numpydoc
+sphinx_rtd_theme
