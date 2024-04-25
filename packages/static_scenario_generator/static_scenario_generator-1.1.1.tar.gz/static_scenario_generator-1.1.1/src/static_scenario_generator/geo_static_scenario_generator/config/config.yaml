@@ -1,0 +1,64 @@
+systems:
+  - Dairy:
+      - Manure management: Manure management cattle
+      - Dairy pop: Dairy pop
+      - Dairy prod: Dairy prod
+
+  - Beef:
+      - Manure management: Manure management cattle
+      - Beef pop: Beef pop
+      - Beef prod: Beef prod
+
+  - Upland sheep:
+      - Manure management: Manure management sheep
+      - Upland sheep pop: Upland sheep pop
+      - Upland sheep prod: Upland sheep prod
+
+  - Lowland sheep:
+      - Manure management: Manure management sheep
+      - Lowland sheep pop: Lowland sheep pop
+      - Lowland sheep prod: Lowland sheep prod
+
+animal_columns:
+  - Manure management
+  - Dairy pop
+  - Beef pop
+  - Upland sheep pop
+  - Lowland sheep pop
+  - Dairy prod
+  - Beef prod
+  - Upland sheep prod
+  - Lowland sheep prod
+  
+common_columns:
+  - Scenarios
+  - Catchment
+  - Dairy pop
+  - Beef pop
+  - Upland sheep pop
+  - Lowland sheep pop
+  - Dairy prod
+  - Beef prod
+  - Upland sheep prod
+  - Lowland sheep prod
+  - Manure management
+  - Dairy Pasture fertilisation
+  - Beef Pasture fertilisation
+  - Clover fertilisation
+  - Clover proportion
+  - Dairy GUE
+  - Beef GUE
+  - Urea proportion
+  - Urea abated proportion
+  - Crop area
+  - Wetland area
+  - Forest area
+  - Conifer proportion
+  - Broadleaf proportion
+  - Conifer harvest
+  - Broadleaf harvest
+  - Conifer thinned
+  - Afforest year
+
+
+
