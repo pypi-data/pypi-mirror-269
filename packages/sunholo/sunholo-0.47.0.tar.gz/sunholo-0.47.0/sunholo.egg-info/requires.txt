@@ -1,0 +1,16 @@
+asyncpg
+fastapi
+google-cloud-alloydb-connector[pg8000]
+google-cloud-logging
+google-cloud-storage
+lancedb
+langchain
+langchain_experimental
+langchain-community
+langchain-openai
+langchain-google-genai
+langchain_google_alloydb_pg
+langchain-anthropic
+langfuse
+pg8000
+sqlalchemy
