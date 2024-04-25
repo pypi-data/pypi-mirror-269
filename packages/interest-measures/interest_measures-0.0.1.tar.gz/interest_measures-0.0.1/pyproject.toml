@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "interest-measures"
+version = "0.0.1"
+description = "Interest Measures Package for Association Rules and Class Association Rules"
+authors = ["Maicondalllg <maicon.dallagnol@unesp.br>"]
+readme = "README.md"
+
+packages = [{include = "interest_measures"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^2.2.0"
+numpy = "^1.21.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

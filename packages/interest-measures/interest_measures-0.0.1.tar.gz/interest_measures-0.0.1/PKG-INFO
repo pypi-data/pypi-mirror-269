@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: interest-measures
+Version: 0.0.1
+Summary: Interest Measures Package for Association Rules and Class Association Rules
+Author: Maicondalllg
+Author-email: maicon.dallagnol@unesp.br
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numpy (>=1.21.0,<2.0.0)
+Requires-Dist: pandas (>=2.2.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Interest Measure Package for Association Rules and Class Association Rules
+
+This package provides a set of interest measures for association rules and class association
+
+## Installation
+
+```bash
+pip install interest-measures
+```
+
+## Usage
+
+```python
+from interest_measures import InterestMeasures
+
+im = InterestMeasures(A=[0.1, 0.2, 0.3, 0.4],
+                      B=[0.5, 0.6, 0.7, 0.8],
+                      AB=[0.1, 0.2, 0.3, 0.4], N=100)
+
+print(im.confidence) # 0.25
+print(im.lift) # 1.0
+print(im.conviction) # 1.0
+```
+
+
+## Available Interest Measures
+- Accuracy
+- Added value
+- Chi square
+- Collective strength
+- Complement class support
+- Conditional entropy
+- Confidence
+- Confidence causal
+- Confirm causal
+- Confirm descriptive
+- Confirmed confidence causal
+- Correlation coefficient
+- Cosine
+- Coverage
+- Dir
+- F measure
+- Gini index
+- Goodman kruskal
+- Implication index
+- J measure
+- Kappa
+- Klosgen
+- K-measure
+- Kulczynski 2
+- Least contradiction
+- Leverage
+- Lift
+- Loevinger
+- Logical necessity
+- Mutual information
+- Normalized mutual information
+- Odd multiplier
+- Odds ratio
+- One way support
+- Piatetsky Shapiro
+- Prevalence
+- Putative causal dependency
+- Recall
+- Relative risk
+- Specificity
+- Support
+- Theil Uncertainty Coefficiente
+- Tic
+- Two way support
