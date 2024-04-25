@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: moveread-models
+Version: 0.1.1
+Summary: Model training, metrics and metadata for Moveread OCR
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/moveread-ocr.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: lazy-load
+Requires-Dist: pydantic
+Requires-Dist: kv-api
+Requires-Dist: kv-fs
+Requires-Dist: kv-sqlite-sync
+Provides-Extra: tf
+Requires-Dist: tensorflow ; extra == 'tf'
+Requires-Dist: keras ; extra == 'tf'
+
+# Moveread Models
+
+> package_description
