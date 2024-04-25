@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: appteka
+Version: 0.18.1
+Summary: All goods
+Home-page: https://github.com/aleneus/appteka
+Author: Aleksandr Popov
+Author-email: aleneus@gmail.com
+License: LGPLv3
+Keywords: application,gui
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: PyQt5>=5.15.2
+
+Helpers collection
