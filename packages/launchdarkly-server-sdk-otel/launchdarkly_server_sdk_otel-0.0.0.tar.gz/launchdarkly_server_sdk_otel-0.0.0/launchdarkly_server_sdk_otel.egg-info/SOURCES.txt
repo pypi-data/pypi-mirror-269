@@ -1,0 +1,6 @@
+pyproject.toml
+launchdarkly_server_sdk_otel.egg-info/PKG-INFO
+launchdarkly_server_sdk_otel.egg-info/SOURCES.txt
+launchdarkly_server_sdk_otel.egg-info/dependency_links.txt
+launchdarkly_server_sdk_otel.egg-info/top_level.txt
+ldotel/__init__.py

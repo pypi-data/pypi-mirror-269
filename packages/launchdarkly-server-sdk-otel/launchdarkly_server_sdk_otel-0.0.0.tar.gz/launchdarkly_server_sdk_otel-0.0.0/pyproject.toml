@@ -1,0 +1,7 @@
+[project]
+name = "launchdarkly-server-sdk-otel"
+authors = [
+    {name = "LaunchDarkly", email = "dev@launchdarkly.com"},
+]
+version = "0.0.0"
+description = "Coming soon"
