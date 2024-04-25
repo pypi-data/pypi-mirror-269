@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: athigeo
+Version: 0.0.3
+Summary: A python package intro
+Author-email: Dennis Mutai <dennis.mutaigeo@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/Dmutai/athigeo
+Keywords: athigeo
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: all
+Requires-Dist: athigeo[extra] ; extra == 'all'
+Provides-Extra: extra
+Requires-Dist: pandas ; extra == 'extra'
+
+# athigeo
+
+
+[![image](https://img.shields.io/pypi/v/athigeo.svg)](https://pypi.python.org/pypi/athigeo)
+[![image](https://img.shields.io/conda/vn/conda-forge/athigeo.svg)](https://anaconda.org/conda-forge/athigeo)
+
+
+**A python package intro**
+
+
+-   Free software: MIT License
+-   Documentation: https://athigeo.xyz/
+    
+
+## Features
+
+-   visualize raster and vector data
+
+- Analyzing raster and vector data
+- Print out useful Message
