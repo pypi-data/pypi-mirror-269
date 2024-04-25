@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: Furinx_326
+Version: 1.0.0
+Summary: Pokemon Aleatorio
+Author: LexZeik
+Requires-Dist: pandas
