@@ -1,0 +1,13 @@
+matplotlib
+qm_tools_aw
+numpy>=1.20.0
+pandas>=1.4.3
+
+[ad4_vina_calculations]
+autodock-vina
+
+[openmm_calculations]
+openmm
+
+[psi4_calculations]
+psi4>=1.7
