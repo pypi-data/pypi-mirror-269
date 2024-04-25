@@ -1,0 +1,163 @@
+Metadata-Version: 2.1
+Name: leya
+Version: 0.1.5
+Summary: A coding assistant to help with repository management and code queries.
+Author: Pranav Iyer
+Author-email: pn2229@nyu.edu
+Description-Content-Type: text/markdown
+License-File: License.txt
+Requires-Dist: annotated-types (==0.6.0)
+Requires-Dist: anyio (==4.3.0)
+Requires-Dist: astunparse (==1.6.3)
+Requires-Dist: blinker (==1.7.0)
+Requires-Dist: cachelib (==0.12.0)
+Requires-Dist: charset-normalizer (==3.3.2)
+Requires-Dist: click (==8.1.7)
+Requires-Dist: colorama (==0.4.6)
+Requires-Dist: fsspec (==2024.3.1)
+Requires-Dist: future (==0.18.3)
+Requires-Dist: gitdb (==4.0.11)
+Requires-Dist: GitPython (==3.1.43)
+Requires-Dist: h11 (==0.14.0)
+Requires-Dist: httpcore (==1.0.5)
+Requires-Dist: httpx (==0.27.0)
+Requires-Dist: idna (==3.6)
+Requires-Dist: iniconfig (==2.0.0)
+Requires-Dist: itsdangerous (==2.1.2)
+Requires-Dist: markdown-it-py (==3.0.0)
+Requires-Dist: MarkupSafe (==2.1.5)
+Requires-Dist: mdurl (==0.1.2)
+Requires-Dist: mpmath (==1.3.0)
+Requires-Dist: msgspec (==0.18.6)
+Requires-Dist: numpy (==1.26.4)
+Requires-Dist: packaging (==24.0)
+Requires-Dist: pinecone-client (==3.2.2)
+Requires-Dist: pluggy (==1.5.0)
+Requires-Dist: pydantic (==2.6.4)
+Requires-Dist: pydantic-core (==2.16.3)
+Requires-Dist: Pygments (==2.17.2)
+Requires-Dist: pytest (==8.1.1)
+Requires-Dist: python-dotenv (==1.0.1)
+Requires-Dist: PyYAML (==6.0.1)
+Requires-Dist: regex (==2024.4.16)
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: rich (==13.7.1)
+Requires-Dist: safetensors (==0.4.3)
+Requires-Dist: scipy (==1.13.0)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: smart-open (==7.0.4)
+Requires-Dist: smmap (==5.0.1)
+Requires-Dist: sniffio (==1.3.1)
+Requires-Dist: soupsieve (==2.5)
+Requires-Dist: sympy (==1.12)
+Requires-Dist: tokenizers (==0.19.1)
+Requires-Dist: torch (==2.2.2)
+Requires-Dist: tqdm (==4.66.2)
+Requires-Dist: typing-extensions (==4.11.0)
+Requires-Dist: urllib3 (==2.2.1)
+Requires-Dist: Werkzeug (==3.0.2)
+Requires-Dist: wrapt (==1.16.0)
+Requires-Dist: zipp (==3.18.1)
+
+# Leya
+
+AI coding assistant which can directly be ported into the terminal and be used to query complex Git repositories
+
+## Overview
+
+The Git Coding Assistant is a versatile tool designed to allow you to query and find solutions to code within your git repository. Leveraging the power of Git and OpenAI, it offers functionalities such as cloning repositories, selecting repositories for focused queries, and extracting relevant code snippets and providing you solutions to your queries.
+
+## Features
+
+- **Repository Cloning**: Easily clone GitHub repositories directly from the command line.
+- **Repository Selection**: Select repositories to work with, enabling focused queries and interactions.
+- **Code Querying**: Query repositories for specific code issues or information using natural language queries.
+- **Function-based Queries**: Narrow down queries by specifying function names to focus on.
+- **Intelligent Answer Generation**: Utilize AI to extract and provide intelligent answers to code-related queries.
+
+## Usage
+
+
+Before using Leya, you need to set up your environment variables for the OpenAI API key and Pinecone API key:
+
+**Option 1: Export Environment Variables (Linux and macOS)**
+
+Open your terminal and export the environment variables using the following commands:
+```bash
+    $ export OPENAI_API_KEY=<your_openai_api_key>
+    $ export PINECONE_KEY=<your_pinecone_api_key>
+```
+
+
+**Option 2: Export Environment Variables (Windows)**
+
+**For Windows users, you can set the environment variables using the following commands in PowerShell**
+    ```bash
+        $ $env:OPENAI_API_KEY="<your_openai_api_key>"
+        $ $env:PINECONE_KEY="<your_pinecone_api_key>"
+    ```
+**Option 3: Add Environment Variables (Manual)**
+
+Alternatively, you can manually add the environment variables through your system settings:
+
+OpenAI API Key: Add a new environment variable named OPENAI_API_KEY with your OpenAI API key as the value.
+Pinecone API Key: Add a new environment variable named PINECONE_KEY with your Pinecone API key as the value.
+After setting up the environment variables, Leya will be able to access your API keys for authentication
+
+# After Environment Variable setup 
+
+1. **Downloading the package**:
+   ```bash
+   $ pip install leya
+   
+2. **Cloning Repositories and uploading repo chunks to pinecone**:
+   ```bash
+   $ leya -r <repository_url>
+3. **Selecting Repositories**:
+   ```bash
+   $ leya -s
+4. **Querying Repositories**:
+   ```bash
+   $ leya -q "<query>" 
+5. **Optional addition of Function-based Queries**:
+   ```bash
+   $ leya -q "<query>" -f <function_name_1> <function_name_2> ...
+
+
+## Contributing
+
+Fork the repository.
+Create a new branch (git checkout -b feature-branch).
+Make your changes.
+Commit your changes (git commit -am 'Add new feature').
+Push to the branch (git push origin feature-branch).
+Create a new Pull Request.
+
+## Credits
+
+Developed by: PranavN1234
+
+## Working 
+### Store repositories
+
+![Screenshot 2024-04-24 125402](https://github.com/PranavN1234/Leya/assets/44135759/f811430d-d93a-4364-82da-8763d35a8ea8)
+
+
+### Swap between stored repositories 
+
+![Screenshot 2024-04-24 125420](https://github.com/PranavN1234/Leya/assets/44135759/1dce74e8-37a1-4b3e-bed2-065379010055)
+
+
+### Sample queries
+
+** Query without functional parameters ** 
+
+![Screenshot 2024-04-24 125501](https://github.com/PranavN1234/Leya/assets/44135759/e8098cc3-b347-4287-b2c0-6b9730412159)
+
+** Query with functions appended to narrow scope of search **
+![Screenshot 2024-04-24 125642](https://github.com/PranavN1234/Leya/assets/44135759/826719cc-0b97-4aa2-879d-670b5cec125c)
+
+
+
+
+
