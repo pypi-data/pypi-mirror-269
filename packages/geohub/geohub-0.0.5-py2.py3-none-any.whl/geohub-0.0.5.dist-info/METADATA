@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: geohub
+Version: 0.0.5
+Summary: A python package created with some data and geospatial analysis skills
+Author-email: Mahnaz Meem <mahnazsarkermeem@gmail.com>
+License: BSD License
+Project-URL: Homepage, https://github.com/mahnaz-meem/geohub
+Keywords: geohub
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: ipyleaflet
+Requires-Dist: geopandas
+Requires-Dist: pandas
+Requires-Dist: localtileserver
+Requires-Dist: rasterio
+Requires-Dist: matplotlib
+Provides-Extra: all
+Requires-Dist: geohub[extra] ; extra == 'all'
+Provides-Extra: extra
+Requires-Dist: pandas ; extra == 'extra'
+
+# geohub
+
+
+[![image](https://img.shields.io/pypi/v/geohub.svg)](https://pypi.python.org/pypi/geohub)
+[![image](https://img.shields.io/conda/vn/conda-forge/geohub.svg)](https://anaconda.org/conda-forge/geohub)
+
+
+**A python package created with some data and geospatial analysis skills**
+
+
+-   Free software: BSD License
+-   Documentation: https://mahnaz-meem.github.io/geohub
+    
+
+## Features
+
+-   TODO
