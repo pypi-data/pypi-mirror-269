@@ -1,0 +1,15 @@
+finalsa/s3/client/__init__.py,sha256=E4SgdUddLwbJkK0hwXBkPgyg13GwaV2jvI8VS4GXj1Y,241
+finalsa/s3/client/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+finalsa/s3/client/client/__init__.py,sha256=MwRDoQvgail6OramStTAMm7eZ7ZttWxBcVzmvx1Gspo,33
+finalsa/s3/client/client/client.py,sha256=cNDFK6GH27JD9UypzibKkO6VCRKvAtpGpISoDoC1erY,1806
+finalsa/s3/client/interface/__init__.py,sha256=XcE76rcxhv91xzsMUoNr6qc0L90nPYAucnioqopX1hI,29
+finalsa/s3/client/interface/client.py,sha256=2BL3VG6uTly2ErzfgNj161GyDJsVtSJ8Xnd4NVkgwHo,727
+finalsa/s3/client/tests/__init__.py,sha256=7yRbXqWm3UZTmPgJssJveI3wAlR6ERuoGp8WIfNyKDE,33
+finalsa/s3/client/tests/client.py,sha256=8KPz-BTHKBjgI9hxffiLHkC_1wVNwMXCeUGvmAm_mso,961
+finalsa_s3_client-0.0.2.data/data/LICENSE.md,sha256=_lu-V-f2tGID1BS2V_W6D2XWppBsylFF1J2KEpfIXN0,1084
+finalsa_s3_client-0.0.2.dist-info/LICENSE.md,sha256=_lu-V-f2tGID1BS2V_W6D2XWppBsylFF1J2KEpfIXN0,1084
+finalsa_s3_client-0.0.2.dist-info/METADATA,sha256=SqX-NMRHdmDhLofsE2ZIiwSM8omBYSURcRsO4cxVkDs,786
+finalsa_s3_client-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+finalsa_s3_client-0.0.2.dist-info/top_level.txt,sha256=EeBarOZoMu8eHxtMkO3m1c7ipieY_Vzkt-pxK4cRWng,95
+finalsa_s3_client-0.0.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+finalsa_s3_client-0.0.2.dist-info/RECORD,,
