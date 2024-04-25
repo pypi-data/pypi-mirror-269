@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "perfassess"
+version = "0.0.4"
+requires-python = ">= 3.10"
+dependencies = [
+    "numpy",
+    "plotly",
+    "pyyaml"
+]
+description = "Access the performance of a given function and create plot."
+authors = [{ name = "Lucas ROUAUD", email = "lucas.rouaud@gmail.com" }]
+maintainers = [{ name = "Lucas ROUAUD", email = "lucas.rouaud@gmail.com" }]
+license = { text = "MIT License" }
+readme = "README.md"
+keywords = ["python", "performance", "assessor", "time", "memory", "plot"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/FilouPlains/perfassess"
+Documentation = "https://filouplains.github.io/perfassess/"
+Repository = "https://github.com/FilouPlains/perfassess"
+
+[project.optional-dependencies]
+dev = [
+    "ipython",
+    "markdown",
+    "mkdocs",
+    "mkdocs-autorefs",
+    "mkdocs-callouts",
+    "mkdocs-material",
+    "mkdocs-material-extensions",
+    "mkdocstrings",
+    "mkdocstrings-python",
+    "pylint",
+    "pytest",
+]
+
+[project.entry-points."src.main"]
+perfassess = "perfassess.main:main"
+
+[project.scripts]
+perfassess = "perfassess.main:main"
