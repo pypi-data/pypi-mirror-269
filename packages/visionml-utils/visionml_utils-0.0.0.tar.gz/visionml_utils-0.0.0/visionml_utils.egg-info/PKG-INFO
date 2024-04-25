@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: visionml-utils
+Version: 0.0.0
+Summary: Util scripts and files for computer vision deep learning models.
+Home-page: UNKNOWN
+Author: Alvin Zhu
+License: MIT
+Project-URL: GitHub, https://github.com/alvister88/Vision-Utils
+Description: # Vision-Utils Repository
+        
+        ## Info:
+        This repository is used by RoMeLa UCLA for deep learning computer vision models and its utils.
+        
+        ## User-Manual
+        - Please do not edit main. For development on this repo, use branches and pull requests. 
+        - For use in other projects, create a submodule inside another repository.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
