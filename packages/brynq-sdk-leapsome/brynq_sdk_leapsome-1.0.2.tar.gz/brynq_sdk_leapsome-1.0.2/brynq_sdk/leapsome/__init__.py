@@ -1,0 +1,2 @@
+from brynq_sdk.leapsome.sftp_interface import SFTPInterface
+from brynq_sdk.leapsome.api_interface import APIInterface
