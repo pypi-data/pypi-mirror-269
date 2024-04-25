@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: aau-ais-dipaal
+Version: 0.1.0
+Summary: TODO: Add a description of your project.
+Author-Email: Mikael Vind Mikkelsen <mvmi@cs.aau.dk>
+License: MIT
+Requires-Python: ==3.12.*
+Requires-Dist: aau-ais-utilities==0.1.*
+Requires-Dist: pydantic==2.7.*
+Description-Content-Type: text/markdown
+
+# Convert Package
+
+## Overview
+
+## Usage
+
+## Dependencies
+
+## License
+This project is licensed under the terms of the MIT license.
