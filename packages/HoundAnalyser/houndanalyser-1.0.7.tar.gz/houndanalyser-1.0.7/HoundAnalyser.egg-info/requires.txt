@@ -1,0 +1,10 @@
+PyQt5
+matplotlib
+ete3<4
+pyopengl
+tk-tools
+numpy
+biopython
+openpyxl
+pycairo
+psutil
