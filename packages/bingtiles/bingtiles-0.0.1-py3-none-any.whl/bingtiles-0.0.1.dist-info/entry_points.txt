@@ -1,0 +1,2 @@
+[console_scripts]
+bingtiles = geofly.bingtiles.__main__:main

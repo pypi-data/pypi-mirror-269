@@ -1,0 +1,16 @@
+bingtiles/__init__.py,sha256=B2iNofh06awDkY_nzvstPS1N-7_6PDctIDS5XvVqgX0,112
+bingtiles/__main__.py,sha256=A0hodhFAk8vRt_yvpjlWLQpAHjycwcRiJ8ZAJYUQFTk,1711
+bingtiles/fetch.py,sha256=bqOdueUnrcdYcimB6AcY2foN7crUgAk2lw5xvCSo-Lc,3219
+bingtiles/mapgen.py,sha256=YVodjpfJJwdmlsh3EqIVL3x6ebyKmKYn5U9qS1Bj3Mo,6069
+bingtiles/utils.py,sha256=f2thLoJDC5BQrXem1Bgn1kuAeI_jhcq4dgRlId4M4_s,9298
+bingtiles/provider/__init__.py,sha256=jXleuUfqMlGx3harEebcz5-SMHGt-Tfze-yS83lxYHQ,324
+bingtiles/provider/bing.py,sha256=SXEDdo6613Xr1IZTGqlLxun5ASa_spICtlXS_8t0u20,1167
+bingtiles/provider/esri.py,sha256=3_YklXA9IJcnKBnu3wiJDeBQRRMJ7geL1mLcdlKaerg,758
+bingtiles/provider/google.py,sha256=qe1OKIlfzxOeg9Dzh6e6F25meDKF7BFhGa-LrJ9QsVE,2908
+bingtiles/provider/usgs.py,sha256=zNeg8AbuiibrvE2c8-1-ZZkokYWIV-AmECkedgf3ZGA,1324
+bingtiles-0.0.1.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+bingtiles-0.0.1.dist-info/METADATA,sha256=is9bqIxWkuYa07u1CQXcindTR53ZY6MlxK8ndEXl3JM,9420
+bingtiles-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+bingtiles-0.0.1.dist-info/entry_points.txt,sha256=Ck40NkSaETHo8PWM_vB-CgOwnWuCHsw-uDswnd8taWs,61
+bingtiles-0.0.1.dist-info/top_level.txt,sha256=RTAWXNgIf3fnT4z9R2a7GMfeAQmXp4NiB73kLgLCnK0,10
+bingtiles-0.0.1.dist-info/RECORD,,
