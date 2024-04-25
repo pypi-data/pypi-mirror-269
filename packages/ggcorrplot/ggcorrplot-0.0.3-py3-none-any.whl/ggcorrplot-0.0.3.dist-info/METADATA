@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: ggcorrplot
+Version: 0.0.3
+Summary: Visualization of a Correlation Matrix using plotnine
+Author: Duvérier DJIFACK ZEBAZE
+Author-email: duverierdjifack@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.24.4)
+Requires-Dist: pandas (>=2.2.2)
+Requires-Dist: plotnine (>=0.10.1)
+Requires-Dist: scipy (>=1.10.1)
+
+# ggcorrplot: Visualization of a correlation matrix using plotnine
+
+The **ggcorrplot** package can be used to **visualize easily a correlation matrix** using **plotnine**. It provides a solution for **reordering** the correlation matrix and displays the **significance level** on the correlogram. It includes also a function for computing a matrix of **correlation p-values**.
+
+## Installation
+
+### Dependencies
+
+ggcorrplot requires :
+
+```{python,echo=TRUE,eval=FALSE}
+Python >=3.10.5
+numpy>=1.24.4
+pandas>=2.2.2
+plotnine>=0.10.1
+scipy>=1.10.1
+```
+
+### User installation
+
+You can install ggcorrplot from `pypi` using pip
+
+```{python,echo=TRUE,eval=FALSE}
+pip install ggcorrplot
+```
+Find out more at https://github.com/enfantbenidedieu/ggcorrplot/blob/master/ggcorrplot.ipynb.
+
+## Authors
+
+Duvérier DJIFCK ZEBAZE [duverierdjifack@gmail.com](mailto:duverierdjifack@gmail.com)
+
+    
