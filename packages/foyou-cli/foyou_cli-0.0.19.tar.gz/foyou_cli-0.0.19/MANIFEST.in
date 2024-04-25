@@ -1,0 +1,3 @@
+graft src/foyou_cli/templates
+include src/foyou_cli/wikihow/script.js
+include src/foyou_cli/wikihow/style.css
