@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: ArbitraryTaskSolver
+Version: 0.0.1
+Summary: A small example package
+Author-email: "Kytheron, ChainedGenius" <kytheronboosty@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+
+This library is not that useful. Perhaps someday it will become great.
+
