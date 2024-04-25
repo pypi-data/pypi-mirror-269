@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: sukeerthiq3
+Version: 0.0.7
+Summary: Python package to do basic math operations
+Author: PVS.Sukeerthi
+Author-email: sukeerthipolasanapalli@gmail.com
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
