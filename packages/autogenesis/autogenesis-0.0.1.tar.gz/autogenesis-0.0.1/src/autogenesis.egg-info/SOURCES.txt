@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/autogenesis.egg-info/PKG-INFO
+src/autogenesis.egg-info/SOURCES.txt
+src/autogenesis.egg-info/dependency_links.txt
+src/autogenesis.egg-info/entry_points.txt
+src/autogenesis.egg-info/requires.txt
+src/autogenesis.egg-info/top_level.txt
+src/dedev/__init__.py
+src/dedev/__main__.py
