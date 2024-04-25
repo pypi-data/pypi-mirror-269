@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "asqlorm"
+version = "0.6.1"
+description = ""
+authors = ["Jeremy Berman <jerber@sas.upenn.edu>"]
+readme = "README.md"
+packages = [{ include = 'asqlorm' }]
+exclude = ["tests/**/*"]
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.7"
+fastgql = "^0.20"
+devtools = "*"
+sqlparse = "*"
+black = "*"
+psycopg = {extras = ["binary"], version = "*"}
+sqlalchemy = "^2.0.29"
+sentry-sdk = {extras = ["sqlalchemy"], version = "^1.45.0"}
+greenlet = "^3.0.3"
+asyncpg = "^0.29.0"
+
+[tool.poetry.dev-dependencies]
+mypy = '^1.8'
+ruff = '*'
+doppler-env = '^0.3.1'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
