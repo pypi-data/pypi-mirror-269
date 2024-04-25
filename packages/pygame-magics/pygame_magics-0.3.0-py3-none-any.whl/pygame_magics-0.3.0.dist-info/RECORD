@@ -1,0 +1,11 @@
+pygame_magics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygame_magics/camera/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygame_magics/camera/camera.py,sha256=SdIm4Cpv9j1GDykh-DCKZvsGIFivB7o_lmvX714Zn2w,2844
+pygame_magics/entities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygame_magics/entities/enemy.py,sha256=5hw2WeCATRpRPAZmWlRxC8fIKUxlt5Og5yfpMgHut7M,869
+pygame_magics/entities/experience_orb.py,sha256=Bq5WJPmrFiN6gqq6HIiX8OUho-bhm8Z-ojQUfQ-E5ww,409
+pygame_magics/entities/player.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygame_magics-0.3.0.dist-info/METADATA,sha256=e0nIvwD8QQp9nJmOe3Zomo9telcTV4ph8H1TXHTtot8,699
+pygame_magics-0.3.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pygame_magics-0.3.0.dist-info/top_level.txt,sha256=2KJvqCCVka4SHutJ-i71ypDGQ93OPPqf2Ig_mCg9xYA,14
+pygame_magics-0.3.0.dist-info/RECORD,,
