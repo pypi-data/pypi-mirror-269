@@ -1,0 +1,12 @@
+moveread/export/__init__.py,sha256=JWOwIORN4_ovicPpkGi7mgPrCVO-gDZ357C4b4gEAqA,178
+moveread/export/__init__.pyi,sha256=Cox9qAozwoytMBdfVN4wO3gkKXFAhf04dhl-mPn5wSQ,498
+moveread/export/core.py,sha256=rEOzJZh53kb12yDHvSVLH3ii6uxTm7Ys6xcswQrCcJU,429
+moveread/export/games.py,sha256=tZMcR56Be1Cg8pLsVs7_hAMp5fmoQvZ-JPrL4hL_qqA,1594
+moveread/export/images.py,sha256=fUe-8qJgVd7wmvWYpgqe0zDYB5vt7zjf2VLCzzOblRM,702
+moveread/export/players.py,sha256=5BbNRgPINc_K6TF24ArcKcqgobWLz8ql5nttikTU-O0,1102
+moveread/export/sheets.py,sha256=KzUyGFY73B9Q9mWKs65MOqIAh31BGuTe_FZ9L8jobvw,511
+moveread/export/tensorflow.py,sha256=nizVxZWRrp2vsQEgzoOyslNeb7dcodPCNYG0ot57210,1396
+moveread_export-0.1.0.dist-info/METADATA,sha256=w0gEkUfWXwpN1wggXx3npKepB6E_q_uYa040KyfnxnI,771
+moveread_export-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+moveread_export-0.1.0.dist-info/top_level.txt,sha256=Nf4zr37sbhc5sbPztUq8FfXD7iyRYJ9bjMTU09166ig,9
+moveread_export-0.1.0.dist-info/RECORD,,
