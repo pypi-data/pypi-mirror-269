@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "quotesgeneratorapi-wrapper"
+version = "0.5.0"
+description = "A wrapper for quotes from API Ninjas"
+authors = ["tct123 <42028373+tct123@users.noreply.github.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
