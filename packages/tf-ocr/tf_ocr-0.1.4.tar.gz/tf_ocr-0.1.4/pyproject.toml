@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tf-ocr"
+version = "0.1.4"
+authors = [
+    { name="Marcel Claramunt", email="marcel@moveread.com" }
+]
+description = "Tools for OCR in tensorflow. Typed with `jaxtyping`"
+dependencies = [
+    "jaxtyping", "tf-ctc", "tf-tools",
+    "tensorflow", "tf-keras", "typing-extensions"
+]
+requires-python = ">=3.10"
+readme = {file="README.md", content-type="text/markdown"}
+
+# [project.urls]
+# repo = "<GIT_REPO_URL>"
