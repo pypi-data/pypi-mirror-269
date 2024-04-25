@@ -1,0 +1,19 @@
+<textarea name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %} data-widget>
+{% if widget.value %}{{ widget.value }}{% endif %}</textarea>
+<script>
+    var modal_selector = ''
+    if (django_modal.active_modal_container_id != 'modal-0'){
+        modal_selector = '#' + django_modal.active_modal_container_id() + ' '
+    }
+    $( modal_selector + '[name={{ widget.name }}]').on('remove',function() {
+            tinymce.remove(modal_selector + '[name={{ widget.name }}]');
+    })
+    tinymce.init({
+        selector: modal_selector + '[name={{ widget.name }}]',
+        menubar: false,
+        statusbar: false,
+        plugins: "textcolor",
+        toolbar: "undo redo | styleselect | bold  italic | fontselect | fontsizeselect forecolor backcolor",
+        {% if widget.attrs.height %}height:{{ widget.attrs.height }}{% endif %}
+    });
+</script>
