@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: vitortools
+Version: 0.0.3
+Summary: Uma breve descrição do que seu pacote faz
+Author: Vitor
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+Testando o pip
