@@ -1,0 +1,11 @@
+
+[dev]
+angreal
+build
+mypy
+mypy[reports]
+pre-commit
+pytest
+pytest-cov
+ruff
+uv
