@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/caustic.parser.egg-info/PKG-INFO
+src/caustic.parser.egg-info/SOURCES.txt
+src/caustic.parser.egg-info/dependency_links.txt
+src/caustic.parser.egg-info/entry_points.txt
+src/caustic.parser.egg-info/requires.txt
+src/caustic.parser.egg-info/top_level.txt
+src/caustic/parser/__init__.py
+src/caustic/parser/cli.py
+src/caustic/parser/error.py
