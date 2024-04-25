@@ -1,0 +1,10 @@
+automation/__init__.py,sha256=OvPO6f_ItA-nPHmEsCLubRLnIEy5JdesCMfIejDDZ6s,251
+automation/helpers.py,sha256=dZ8mpZbn46UTudfxhLSMqjTIjlEE0B6q4KHeqtvpnrM,10253
+automation/plugin.py,sha256=BYqh3YIsfGm2wVT44bWQAqRZUVMS96HMbR0HGjzeojc,3139
+automation/yamlfile.py,sha256=2_ZFj0TTy91Z3t1xJfLpfExHE-cdRpqUhoUKpyZiuiI,4018
+pytest_automation-3.0.0.dist-info/LICENSE,sha256=hdxxDFfJlFuX7-KGt0yZgSZ7fL_erxilBifIbYet2b0,1533
+pytest_automation-3.0.0.dist-info/METADATA,sha256=J-00T-sJWtpAfJ59SqOyD_z_fQuQ0tQNXBRqorPgkUA,16235
+pytest_automation-3.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pytest_automation-3.0.0.dist-info/entry_points.txt,sha256=eLMdUUMyuj7-P-EkGi8wEPRn60pZR0wiizni8wWN3fg,49
+pytest_automation-3.0.0.dist-info/top_level.txt,sha256=6FPw8tX4RykuC6Wq7ti_JjKbNFsg6OSMwQB35ne8Ug0,11
+pytest_automation-3.0.0.dist-info/RECORD,,
