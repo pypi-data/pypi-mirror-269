@@ -1,0 +1,6 @@
+[babel.extractors]
+ckan = ckan.lib.extract:extract_ckan
+
+[ckan.plugins]
+file_manager = ckanext.file_manager.plugin:FileManagerPlugin
+files = ckanext.files.plugin:FilesPlugin
