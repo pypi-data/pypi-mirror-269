@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+
+# http://www.drdobbs.com/testing/unit-testing-with-python/240165163
+
+import logging
+import optparse
+import shutil
+import sys
+import tempfile
+import unittest
+from unittest import mock
+from pathlib import Path
+
+import requests
+from testcommon import TmpCwd
+
+localmodule = Path(__file__).resolve().parent.parent
+print('localmodule: ' + str(localmodule))
+if localmodule not in sys.path:
+    sys.path.insert(0, str(localmodule))
+
+import fdroidserver.common
+import fdroidserver.import_subcommand
+import fdroidserver.metadata
+
+
+class ImportTest(unittest.TestCase):
+    '''fdroid import'''
+
+    def setUp(self):
+        logging.basicConfig(level=logging.DEBUG)
+        self.basedir = localmodule / 'tests'
+        fdroidserver.import_subcommand.options = mock.Mock()
+        fdroidserver.import_subcommand.options.rev = None
+
+    def test_import_gitlab(self):
+        with tempfile.TemporaryDirectory() as testdir, TmpCwd(testdir):
+            # FDroidPopen needs some config to work
+            config = dict()
+            fdroidserver.common.fill_config_defaults(config)
+            fdroidserver.common.config = config
+
+            url = 'https://gitlab.com/fdroid/ci-test-app'
+            r = requests.head(url, timeout=300)
+            if r.status_code != 200:
+                print("ERROR", url, 'unreachable (', r.status_code, ')')
+                print('Skipping ImportTest!')
+                return
+
+            app = fdroidserver.import_subcommand.get_app_from_url(url)
+            fdroidserver.import_subcommand.clone_to_tmp_dir(app)
+            self.assertEqual(app.RepoType, 'git')
+            self.assertEqual(app.Repo, 'https://gitlab.com/fdroid/ci-test-app.git')
+
+    def test_get_app_from_url(self):
+        with tempfile.TemporaryDirectory() as testdir, TmpCwd(testdir):
+            testdir = Path(testdir)
+            (testdir / 'tmp').mkdir()
+            tmp_importer = testdir / 'tmp/importer'
+            data = (
+                (
+                    'cn.wildfirechat.chat',
+                    'https://github.com/wildfirechat/android-chat',
+                    '0.6.9',
+                    23,
+                ),
+                (
+                    'com.anpmech.launcher',
+                    'https://github.com/KeikaiLauncher/KeikaiLauncher',
+                    'Unknown',
+                    None,
+                ),
+                (
+                    'ut.ewh.audiometrytest',
+                    'https://github.com/ReeceStevens/ut_ewh_audiometer_2014',
+                    '1.65',
+                    14,
+                ),
+            )
+            for appid, url, vn, vc in data:
+                shutil.rmtree(
+                    tmp_importer,
+                    onerror=fdroidserver.import_subcommand.handle_retree_error_on_windows,
+                )
+                shutil.copytree(self.basedir / 'source-files' / appid, tmp_importer)
+
+                app = fdroidserver.import_subcommand.get_app_from_url(url)
+                with mock.patch(
+                    'fdroidserver.common.getvcs',
+                    lambda a, b, c: fdroidserver.common.vcs(url, testdir),
+                ), mock.patch(
+                    'fdroidserver.common.vcs.gotorevision', lambda s, rev: None
+                ), mock.patch(
+                    'shutil.rmtree', lambda a, onerror=None: None
+                ):
+                    build_dir = fdroidserver.import_subcommand.clone_to_tmp_dir(app)
+                self.assertEqual('git', app.RepoType)
+                self.assertEqual(url, app.Repo)
+                self.assertEqual(url, app.SourceCode)
+                logging.info(build_dir)
+                paths = fdroidserver.common.get_all_gradle_and_manifests(build_dir)
+                self.assertNotEqual(paths, [])
+                (
+                    versionName,
+                    versionCode,
+                    package,
+                ) = fdroidserver.common.parse_androidmanifests(paths, app)
+                self.assertEqual(vn, versionName)
+                self.assertEqual(vc, versionCode)
+                self.assertEqual(appid, package)
+
+    def test_bad_urls(self):
+        for url in (
+            'asdf',
+            'file://thing.git',
+            'https:///github.com/my/project',
+            'git:///so/many/slashes',
+            'ssh:/notabug.org/missing/a/slash',
+            'git:notabug.org/missing/some/slashes',
+            'https//github.com/bar/baz',
+        ):
+            with self.assertRaises(ValueError):
+                fdroidserver.import_subcommand.get_app_from_url(url)
+
+
+if __name__ == "__main__":
+    parser = optparse.OptionParser()
+    parser.add_option(
+        "-v",
+        "--verbose",
+        action="store_true",
+        default=False,
+        help="Spew out even more information than normal",
+    )
+    (fdroidserver.common.options, args) = parser.parse_args(['--verbose'])
+
+    newSuite = unittest.TestSuite()
+    newSuite.addTest(unittest.makeSuite(ImportTest))
+    unittest.main(failfast=False)
