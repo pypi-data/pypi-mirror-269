@@ -1,0 +1,10 @@
+README.md
+setup.py
+dxrt/__init__.py
+dxrt/pokemon.csv
+dxrt/random_pokemon.py
+dxrt.egg-info/PKG-INFO
+dxrt.egg-info/SOURCES.txt
+dxrt.egg-info/dependency_links.txt
+dxrt.egg-info/requires.txt
+dxrt.egg-info/top_level.txt
