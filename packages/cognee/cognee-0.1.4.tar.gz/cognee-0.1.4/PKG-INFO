@@ -1,0 +1,227 @@
+Metadata-Version: 2.1
+Name: cognee
+Version: 0.1.4
+Summary: Cognee - is a library for enriching LLM context with a semantic layer for better understanding and reasoning.
+Home-page: https://www.cognee.ai
+License: Apache-2.0
+Author: Vasilije Markovic
+Requires-Python: >=3.9.0,<3.12
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Provides-Extra: athena
+Provides-Extra: az
+Provides-Extra: bigquery
+Provides-Extra: cli
+Provides-Extra: databricks
+Provides-Extra: dbt
+Provides-Extra: duckdb
+Provides-Extra: filesystem
+Provides-Extra: gcp
+Provides-Extra: gs
+Provides-Extra: lancedb
+Provides-Extra: motherduck
+Provides-Extra: mssql
+Provides-Extra: neo4j
+Provides-Extra: notebook
+Provides-Extra: parquet
+Provides-Extra: pinecone
+Provides-Extra: postgres
+Provides-Extra: redshift
+Provides-Extra: s3
+Provides-Extra: snowflake
+Provides-Extra: synapse
+Provides-Extra: weaviate
+Requires-Dist: aiofiles (>=23.2.1,<24.0.0)
+Requires-Dist: aiosqlite (>=0.20.0,<0.21.0)
+Requires-Dist: anthropic (>=0.21.3,<0.22.0)
+Requires-Dist: asyncpg (>=0.28.0,<0.29.0)
+Requires-Dist: boto3 (>=1.26.125,<2.0.0)
+Requires-Dist: debugpy (>=1.8.0,<2.0.0)
+Requires-Dist: dlt (>=0.4.7,<0.5.0)
+Requires-Dist: dspy-ai (==2.4.3)
+Requires-Dist: duckdb-engine (>=0.11.2,<0.12.0)
+Requires-Dist: duckdb[dlt] (>=0.10.0,<0.11.0) ; extra == "duckdb" or extra == "motherduck"
+Requires-Dist: fastapi (>=0.109.2,<0.110.0)
+Requires-Dist: fastembed (>=0.2.5,<0.3.0)
+Requires-Dist: filetype (>=1.2.0,<2.0.0)
+Requires-Dist: graphistry (>=0.33.5,<0.34.0)
+Requires-Dist: graphviz (>=0.20.1,<0.21.0)
+Requires-Dist: greenlet (>=3.0.3,<4.0.0)
+Requires-Dist: gunicorn (>=20.1.0,<21.0.0)
+Requires-Dist: instructor (==1.2.1)
+Requires-Dist: jinja2 (>=3.1.3,<4.0.0)
+Requires-Dist: matplotlib (>=3.8.3,<4.0.0)
+Requires-Dist: neo4j (>=5.18.0,<6.0.0) ; extra == "neo4j"
+Requires-Dist: nest-asyncio (>=1.6.0,<2.0.0)
+Requires-Dist: networkx (>=3.2.1,<4.0.0)
+Requires-Dist: nltk (>=3.8.1,<4.0.0)
+Requires-Dist: openai (==1.14.3)
+Requires-Dist: overrides (>=7.7.0,<8.0.0) ; extra == "notebook"
+Requires-Dist: pandas (>=2.2.0,<3.0.0)
+Requires-Dist: posthog (>=3.5.0,<4.0.0)
+Requires-Dist: pyarrow (>=15.0.0,<16.0.0) ; extra == "bigquery" or extra == "parquet" or extra == "motherduck" or extra == "athena" or extra == "synapse"
+Requires-Dist: pydantic (>=2.5.0,<3.0.0)
+Requires-Dist: pylint (>=3.0.3,<4.0.0)
+Requires-Dist: pypdf (>=4.1.0,<5.0.0)
+Requires-Dist: python-dotenv (==1.0.1)
+Requires-Dist: qdrant-client (>=1.8.0,<2.0.0)
+Requires-Dist: ruff (>=0.2.2,<0.3.0)
+Requires-Dist: scikit-learn (>=1.4.1.post1,<2.0.0)
+Requires-Dist: sqlalchemy (>=2.0.21,<3.0.0)
+Requires-Dist: structlog (>=24.1.0,<25.0.0)
+Requires-Dist: tenacity (>=8.2.3,<9.0.0)
+Requires-Dist: tiktoken (>=0.6.0,<0.7.0)
+Requires-Dist: uvicorn (==0.22.0)
+Requires-Dist: weaviate-client (>=4.5.4,<5.0.0) ; extra == "weaviate"
+Requires-Dist: xmltodict (>=0.13.0,<0.14.0)
+Project-URL: Repository, https://github.com/topoteretes/cognee
+Description-Content-Type: text/markdown
+
+# cognee
+
+Deterministic LLMs Outputs for AI Engineers using graphs, LLMs and vector retrieval
+
+
+<p>
+  <a href="https://cognee.ai" target="_blank">
+    <img src="https://raw.githubusercontent.com/topoteretes/cognee/main/assets/cognee-logo.png" width="160px" alt="Cognee logo" />
+  </a>
+</p>
+
+
+<p>
+  <i>Open-source framework for creating self-improving deterministic outputs for LLMs.</i>
+</p>
+
+<p>
+  <a href="https://github.com/topoteretes/cognee/fork">
+    <img src="https://img.shields.io/github/forks/topoteretes/cognee?style=for-the-badge" alt="cognee forks"/>
+  </a>
+  <a href="https://github.com/topoteretes/cognee/stargazers">
+    <img src="https://img.shields.io/github/stars/topoteretes/cognee?style=for-the-badge" alt="cognee stars"/>
+  </a>
+  <a href="https://github.com/topoteretes/cognee/pulls">
+    <img src="https://img.shields.io/github/issues-pr/topoteretes/cognee?style=for-the-badge" alt="cognee pull-requests"/>
+  </a>
+  <a href="https://github.com/topoteretes/cognee/releases">
+    <img src="https://img.shields.io/github/release/topoteretes/cognee?&label=Latest&style=for-the-badge" alt="cognee releases" />
+  </a>
+</p>
+
+![Cognee Demo](assets/cognee_demo.gif)
+
+Try it in a Google collab  <a href="https://colab.research.google.com/drive/11k0GtbrKRVGTxhcgad4Wl8YvCnWJVWPl?usp=sharing">notebook</a>  or have a look at our <a href="https://topoteretes.github.io/cognee">documentation</a>
+
+Join our  <a href="https://discord.gg/NQPKmU5CCg">Discord</a> community
+
+
+
+
+
+## 📦 Installation
+
+With pip:
+
+```bash
+pip install "cognee[weaviate]"
+```
+
+With poetry:
+
+```bash
+poetry add "cognee[weaviate]"
+```
+
+## 💻 Usage
+
+### Setup
+
+```
+import os
+
+os.environ["WEAVIATE_URL"] = "YOUR_WEAVIATE_URL"
+os.environ["WEAVIATE_API_KEY"] = "YOUR_WEAVIATE_API_KEY"
+
+os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
+
+```
+You can also use Ollama or Anyscale as your LLM provider. For more info on local models check our [docs](https://topoteretes.github.io/cognee)
+
+### Run
+
+```
+import cognee
+
+text = """Natural language processing (NLP) is an interdisciplinary
+       subfield of computer science and information retrieval"""
+
+cognee.add([text], "example_dataset") # Add a new piece of information
+
+cognee.cognify() # Use LLMs and cognee to create knowledge
+
+search_results = cognee.search("SIMILARITY", "computer science") # Query cognee for the knowledge
+
+for result_text in search_results[0]:
+    print(result_text)
+
+```
+Add alternative data types:
+```
+cognee.add("file://{absolute_path_to_file}", dataset_name)
+```
+Or
+```
+cognee.add("data://{absolute_path_to_directory}", dataset_name)
+
+# This is useful if you have a directory with files organized in subdirectories.
+# You can target which directory to add by providing dataset_name.
+# Example:
+#            root
+#           /    \
+#      reports  bills
+#     /       \
+#   2024     2023
+#
+# cognee.add("data://{absolute_path_to_root}", "reports.2024")
+# This will add just directory 2024 under reports.
+```
+
+Read more [here](docs/index.md#run).
+
+## Demo
+
+Check out our demo notebook [here](https://github.com/topoteretes/cognee/blob/main/notebooks/cognee%20-%20Get%20Started.ipynb)
+
+
+
+[<img src="https://i3.ytimg.com/vi/-ARUfIzhzC4/maxresdefault.jpg" width="100%">](https://www.youtube.com/watch?v=BDFt4xVPmro "Learn about cognee: 55")
+
+
+
+
+
+## How it works
+
+
+
+
+
+![Image](assets/architecture.png)
+
+
+## 🚀 It's alive
+
+<p>
+Try it yourself on Whatsapp with one of our <a href="https://keepi.ai" target="_blank">partners</a> by typing `/save {content you want to save}` followed by `/query {knowledge you saved previously}`
+For more info here are the <a href="https://topoteretes.github.io/cognee">docs</a>
+</p>
+
