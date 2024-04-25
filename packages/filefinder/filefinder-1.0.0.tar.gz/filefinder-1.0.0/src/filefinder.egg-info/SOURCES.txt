@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+changelog.md
+pyproject.toml
+src/filefinder/__init__.py
+src/filefinder/finder.py
+src/filefinder/format.py
+src/filefinder/group.py
+src/filefinder/library.py
+src/filefinder/matches.py
+src/filefinder/py.typed
+src/filefinder.egg-info/PKG-INFO
+src/filefinder.egg-info/SOURCES.txt
+src/filefinder.egg-info/dependency_links.txt
+src/filefinder.egg-info/requires.txt
+src/filefinder.egg-info/top_level.txt
