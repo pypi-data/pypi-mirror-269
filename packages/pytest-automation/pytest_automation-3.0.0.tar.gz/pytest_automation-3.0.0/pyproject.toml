@@ -1,0 +1,13 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools>=45",
+    "wheel",
+    "twine",
+    "setuptools_scm>=6.2",
+]
+
+# Same as declaring use_scm_version in setup.py, but avoids
+# "UserWarning: Unknown distribution option: 'use_scm_version'"
+# if setuptools_scm isn't installed when setup.py is called:
+[tool.setuptools_scm]
