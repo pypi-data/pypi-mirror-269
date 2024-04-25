@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pyany2json"
+version = "0.1.0"
+description = "Python binding to Any2Json"
+authors = ["Romuald Rousseau <romuald.rousseau@servier.com>"]
+readme = "README.md"
+packages = [{ include = "pyany2json" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jpype1 = "^1.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
