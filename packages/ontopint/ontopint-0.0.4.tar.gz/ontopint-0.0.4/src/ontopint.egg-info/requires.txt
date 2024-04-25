@@ -1,0 +1,6 @@
+rdflib
+pint
+pyld
+
+[dev]
+pytest
