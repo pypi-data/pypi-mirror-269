@@ -1,0 +1,7 @@
+rdflib
+pint
+pyld
+ucumvert
+
+[dev]
+pytest
