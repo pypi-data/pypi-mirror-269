@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: quant1x-base
+Version: 0.4.1
+Summary: Quant1X量化系统python基础库
+Home-page: https://gitee.com/quant1x/base
+Author: WangFeng
+Author-email: wangfengxy@sina.cn
+License: MIT license
+Keywords: quant1x base
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
+Requires-Dist: setuptools ~=69.5.1
+Requires-Dist: twine ==5.0.0
+Requires-Dist: wheel ==0.43.0
+Requires-Dist: requests-toolbelt ==1.0.0
+Requires-Dist: loguru ~=0.7.2
+Requires-Dist: icecream ~=2.1.3
+Requires-Dist: numpy ~=1.26.4
+Requires-Dist: PyYAML ~=6.0.1
+
+# base
+
+#### 介绍
+quant1x系统python基础库
