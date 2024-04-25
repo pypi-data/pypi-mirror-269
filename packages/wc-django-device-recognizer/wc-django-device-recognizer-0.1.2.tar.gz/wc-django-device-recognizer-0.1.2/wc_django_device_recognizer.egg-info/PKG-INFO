@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: wc-django-device-recognizer
+Version: 0.1.2
+Summary: Django device recognizing utility.
+Author: WebCase
+Author-email: info@webcase.studio
+License: MIT License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: px-settings<0.2.0,>=0.1.3
+Requires-Dist: django-user-agents<1.0.0,>=0.4.0
+Provides-Extra: dev
+Requires-Dist: pytest<7.0,>=6.0; extra == "dev"
+Requires-Dist: pytest-watch<5.0,>=4.2; extra == "dev"
+Requires-Dist: pytest-django<5.0,>=4.3; extra == "dev"
+Requires-Dist: django-environ; extra == "dev"
+Requires-Dist: django-stubs; extra == "dev"
+Requires-Dist: django; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# WebCase device recognizing utility
+
+## Installation
+
+```sh
+pip install wc-django-device-recognizer
+```
+
+It depends on `django-user-agents`, so check out [it's documentation](https://pypi.org/project/django-user-agents/) about additional installation instructions.
+
+In `settings.py`:
+
+```python
+INSTALLED_APPS += [
+  'wcd_device_recognizer',
+]
+```
+
+## Usage
+
+To get all possible information from request:
+
+```python
+from wcd_device_recognizer.services import request_resolver
+
+interlocutor = request_resolver.resolve(request)
+
+assert interlocutor.device.bitness == '64'
+assert interlocutor.os.family == 'Linux'
+assert interlocutor.os.arch == 'x86'
+assert interlocutor.app.family == 'Chrome'
+assert interlocutor.app.version == (101, 0, 0)
+assert interlocutor.device.dpr == 1
+```
+
+And then you may save interlocutor's data to database:
+
+```python
+from wcd_device_recognizer.services import registry
+
+# You may pass any amount of interlocutors to register here.
+registry.register_interlocutors((interlocutor,))
+```
+
+## Coverage
+
+To collect interlocutor's data package uses User-Agent info and standart HTTP headers:
+
+- `Sec-CH-UA`
+- `Sec-CH-UA-Arch`
+- `Sec-CH-UA-Bitness`
+- `Sec-CH-UA-Full-Version`
+- `Sec-CH-UA-Full-Version-List`
+- `Sec-CH-UA-Mobileser experience.`
+- `Sec-CH-UA-Model`
+- `Sec-CH-UA-Platform`
+- `Sec-CH-UA-Platform-Version`
+- `Content-DPR`
+- `Device-Memory`
+- `DPR`
+- `Viewport-Width`
+- `Width`
+
+For details look here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#user_agent_client_hints
+
+Also any `Sec-CH-UA-{key-name}` will be saved.
+
+To provide some unique device identifier use: **`Sec-CH-UA-ID`** header.
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [0.1.2]
+### Added
+- IPv6 support.
+
+## [0.1.1]
+Initial version.
