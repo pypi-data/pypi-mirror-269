@@ -1,0 +1,4784 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>pyvfunc API documentation</title>
+<meta name="description" content="Server functions. The pyvstate calls routines from this module. The reason
+this is not made into a class is for speed. (Class was too big, and we are …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>pyvfunc</code></h1>
+</header>
+<section id="section-intro">
+<p>Server functions. The pyvstate calls routines from this module. The reason
+this is not made into a class is for speed. (Class was too big, and we are still
+adding functions for new commands.)
+This module executes the functions corresponding to keywords.
+The keyword is embedded into the function name.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/usr/bin/env python
+
+try:
+    import pyotp
+except:
+    pyotp = None
+
+import os, sys, getopt, signal, select, string
+import datetime,  time, stat, base64, uuid
+
+from pyvecc.Key import Key
+
+from Crypto import Random
+from Crypto.Cipher import AES
+#from Crypto.Hash import SHA512
+from Crypto.Hash import SHA256
+
+import pyvpacker
+
+from pyvcommon import support, pyservsup, pyclisup, pysyslog, pyvhash
+from pyvserver import pyvstate
+
+from pydbase import twincore, twinchain
+
+__doc__ = \
+&#39;&#39;&#39;
+    Server functions. The pyvstate calls routines from this module. The reason
+    this is not made into a class is for speed. (Class was too big, and we are still
+    adding functions for new commands.)
+    This module executes the functions corresponding to keywords.
+    The keyword is embedded into the function name.
+&#39;&#39;&#39;
+
+fields_help =  &#39;&#39;&#39;
+    stat fields2:
+       1.  ST_MODE Inode protection mode.
+       2.  ST_INO Inode number.
+       3.  ST_DEV Device inode resides on.
+       4.  ST_NLINK  Number of links to the inode.
+       5.  ST_UID User id of the owner.
+       6.  ST_GID Group id of the owner.
+       7.  ST_SIZE Size in bytes of a plain file.
+       8.  ST_ATIME Time of last access.
+       9.  ST_MTIME Time of last modification.
+       10. ST_CTIME Time of last metadata change.
+    &#39;&#39;&#39;
+repfname = &#34;replic&#34;
+
+OK = &#34;OK&#34;
+ERR = &#34;ERR&#34;
+
+#pgdebug = 0
+
+def _wr(strx):
+    &#39;&#39;&#39; Wrap string with single quotes &#39;&#39;&#39;
+    return &#34;&#39;&#34; + strx + &#34;&#39;&#34;
+
+def _print_handles(self):
+        &#39;&#39;&#39; Debug helper &#39;&#39;&#39;
+        open_file_handles = os.listdir(&#39;/proc/self/fd&#39;)
+        print(&#39;open file handles: &#39; + &#39;, &#39;.join(map(str, open_file_handles)))
+
+def check_chain_path(self, strp):
+
+    chainp = os.path.normpath(pyservsup.globals.chaindir)
+    #print(&#34;check:&#34;, strp)
+    #print(&#34;root:&#34;, chainp)
+    dpath = os.path.normpath(strp)
+    #print(&#34;dpath&#34;, dpath)
+    if dpath[:len(chainp)] != chainp:
+        dpath = None
+    return dpath
+
+def check_payload_path(self, strp):
+
+    paypath = os.path.normpath(pyservsup.globals.paydir)
+    #print(&#34;check:&#34;, strp)
+    #print(&#34;root:&#34;, chainp)
+    dpath = os.path.normpath(strp)
+    #print(&#34;dpath&#34;, dpath)
+    if dpath[:len(paypath)] != paypath:
+        dpath = None
+    return dpath
+
+def contain_path(self, strp):
+
+    &#39;&#39;&#39;
+        Make sure the path is pointing to our universe
+    &#39;&#39;&#39;
+    dname = support.unescape(strp);
+
+    #print(&#34;dname&#34;, dname)
+    #print(&#34;self.resp.dir&#34;, self.resp.dir)
+    #print(&#34;self.resp.cwd&#34;, self.resp.cwd)
+
+    self.resp.dir = support.dirclean(self.resp.dir)
+    self.resp.cwd = support.dirclean(self.resp.cwd)
+
+    # Absolute path?
+    if len(strp) &gt; 0 and strp[0] == os.sep:
+        dname2 = os.path.join(self.resp.cwd, dname)
+    else:
+        dname2 = os.path.join(self.resp.cwd, self.resp.dir, dname)
+
+    #print(&#34;dname2&#34;, dname2)
+
+    dname3 = support.dirclean(dname2)
+    #print(&#34;dname3&#34;, dname3)
+
+    dname4 = os.path.abspath(dname3)
+
+    #print(&#34;base dir&#34;, self.resp.cwd)
+    #print(&#34;resp_dir&#34;, self.resp.dir)
+
+    #print(&#34;dname4&#34;, dname4)
+    #print(&#34;slice&#34;, dname4[:len(self.resp.cwd)])
+
+    # Compare roots
+    if dname4[:len(self.resp.cwd)] != self.resp.cwd:
+        return None
+
+    return dname4
+
+# ------------------------------------------------------------------------
+# State transition and action functions
+
+def get_exit_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_exit_func()&#34;, strx)
+
+    # Clean up logouts
+    if self.resp.user:
+        pyservsup.SHARED_LOGINS.deldat(self.resp.user)
+
+    if pyservsup.globals.conf.pglog &gt; 0:
+        stry = &#34;Quit&#34;, _wr(self.resp.user), str(self.resp.client_address)
+        pysyslog.syslog(*stry)
+
+    # This instance will go away, but just to make sure
+    self.resp.user = &#34;&#34;
+
+    self.resp.datahandler.putencode([OK, &#34;Bye&#34;, self.name], self.resp.ekey)
+
+    # Cancel **after** sending bye
+    if self.resp.datahandler.tout:
+        self.resp.datahandler.tout.cancel()
+
+    return True
+
+# ------------------------------------------------------------------------
+# Also stop timeouts
+
+def get_tout_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_tout_func()&#34;, strx)
+
+    tout = self.resp.datahandler.timeout
+    if len(strx) &gt; 1:
+        try:
+            tout = int(strx[1])
+            self.resp.datahandler.timeout = tout
+            resp = [OK, &#34;Timeout set to &#34;, str(tout)],
+        except:
+            resp = [OK, &#34;Timeout value must be an integer&#34;, strx[1]],
+    else:
+        resp = [OK, &#34;Current timeout&#34;, str(self.resp.datahandler.timeout)],
+
+    #if self.resp.datahandler.tout:
+    #    self.resp.datahandler.tout.cancel()
+
+    self.resp.datahandler.putencode(resp, self.resp.ekey)
+
+def get_mkdir_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_mkdir_func()&#34;, strx)
+
+    if len(strx) == 1:
+        response = [ERR, &#34;Must specify directory name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    dname = contain_path(self, strx[1])
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;make dir&#34;, dname)
+
+    if os.path.isdir(dname):
+        response = [ERR, &#34;Directory already exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        os.mkdir(dname)
+        response = [OK, &#34;Made directory:&#34;, strx[1]]
+    except:
+        response = [ERR, &#34;Cannot make directory.&#34;, strx[1]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_rmdir_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rmdir_func()&#34;, strx)
+
+    if len(strx) == 1:
+        response = [ERR, &#34;Must specify directory name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    dname = contain_path(self, strx[1])
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;remove dir&#34;, dname)
+
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        os.rmdir(dname)
+        response = [OK, &#34;Deleted directory:&#34;, strx[1]]
+    except:
+        response = [ERR, &#34;Cannot delete directory.&#34;, str(sys.exc_info()[1]), strx[1]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_throt_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_throt_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        if pyservsup.gl_throttle.getflag():
+            boolstr = &#34;ON&#34;
+        else:
+            boolstr = &#34;OFF&#34;
+        rrr = [OK, &#34;Throttle is&#34;, boolstr]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if not int(ret[2]) &amp; pyservsup.PERM_ADMIN:
+        rrr = [ERR, &#34;Only admin can control throttle&#34;]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    boolx = pyservsup.str2bool(strx[1], True)
+    #print(&#34;boolx:&#34;, boolx, strx[1], hex(id(strx[1])))
+    if  boolx:
+        boolstr = &#34;ON&#34;
+        pyservsup.gl_throttle.setflag(True)
+    else:
+        boolstr = &#34;OFF&#34;
+        pyservsup.gl_throttle.setflag(False)
+
+    rrr = [OK, &#34;Throttle turned %s&#34; %  boolstr]
+    self.resp.datahandler.putencode(rrr, self.resp.ekey)
+
+def get_buff_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_buff_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify buffer size.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    # Set to an number that most short based (2 bytes) routines can handle
+    num = int(strx[1])
+    if num &lt;= 0:
+        num = 1
+    elif num &gt; 0xf000:
+        num = 0xf000
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print(&#34;buffer set to %d&#34; % num)
+
+    self.buffsize = num
+    response = [OK, &#34;Buffer set to:&#34;, pyservsup.buffsize]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_lsd_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_lsd_func()&#34;, strx)
+
+    sss = &#34;&#34;
+    dname2 = self.resp.cwd + os.sep + self.resp.dir + os.sep
+    dname2 = support.dirclean(dname2)
+
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print(&#34;get_lsd_func&#34;, dname2)
+
+    response = [ OK, ]
+
+    try:
+        ddd = os.listdir(dname2)
+        for aa in ddd:
+            try:
+                aaa = dname2 + os.sep + aa
+                if stat.S_ISDIR(os.stat(aaa)[stat.ST_MODE]):
+                    # Escape spaces
+                    response.append(aa) #support.escape(aa))
+            except:
+                print( &#34;Cannot stat &#34;, aaa, str(sys.exc_info()[1]) )
+    except:
+        support.put_exception(&#34;lsd&#34;)
+        response = [ERR, str(sys.exc_info()[1] ), strx[0]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_ls_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_ls_func()&#34;, strx)
+
+    dname = &#34;&#34;; sss = &#34;&#34;
+    if len(strx) &lt; 2:
+        strx.append(&#34;.&#34;)
+    try:
+        dname = support.unescape(strx[1]);
+    except:
+        pass
+
+    dname2 = self.resp.cwd + os.sep + self.resp.dir + os.sep + dname
+    #print(&#34;dname2&#34;, dname2)
+
+    dname2 = support.dirclean(dname2)
+    #print(&#34;dname2c&#34;, dname2)
+
+    response = [OK]
+    try:
+        ddd = os.listdir(dname2)
+        for aa in ddd:
+            try:
+                aaa = dname2 + os.sep + aa
+                if stat.S_ISREG(os.stat(aaa)[stat.ST_MODE]):
+                    # Escape spaces
+                    response.append(aa) #support.escape(aa))
+            except:
+                print( &#34;Cannot stat &#34;, aaa, str(sys.exc_info()[1]) )
+
+    except:
+        # Perhaps the user meant the file:
+        if os.path.isfile(dname2):
+            response = [OK, strx[1], strx[0]]
+        else:
+            support.put_exception(&#34;ls &#34;)
+            response = [ERR, &#34;No such directory.&#34;, strx[1]]
+
+    #print(&#34;response&#34;, response)
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_fget_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print(&#34;get_fget_func()&#34;, strx)
+
+    dname = &#34;&#34;
+    if len(strx) == 1:
+        response = [ERR, &#34;Must specify file name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    dname = contain_path(self, strx[1])
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if not os.path.isfile(dname):
+        response = [ERR, &#34;File does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    try:
+        flen = os.stat(dname)[stat.ST_SIZE]
+    except:
+        flen = 0
+
+    response = [OK, str(flen), strx[1]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+    try:
+        fh = open(dname, &#34;rb&#34;)
+    except:
+        support.put_exception(&#34;fget&#34;)
+        response = [ERR, &#34;Cannot open file.&#34;, dname, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    cipher = AES.new(self.resp.ekey[:32].encode(), AES.MODE_CTR,
+                        use_aesni=True, nonce = self.resp.ekey[-8:].encode() )
+    prog = 0
+
+    # Loop, break when file end or transmission error
+    while 1:
+        try:
+            buff = fh.read(self.buffsize)
+            blen = len(buff)
+            if pyservsup.globals.conf.pgdebug &gt; 3:
+                print(&#34;fread&#34;, blen, buff[:12])
+        except:
+            #print(&#34;Cannot read local file&#34;, sys.exc_info())
+            put_exception(&#34;Cannot read file&#34;)
+            break
+
+        buff = cipher.encrypt(buff)
+        try:
+            if pyservsup.globals.conf.pgdebug &gt; 5:
+                print(&#34;putraw&#34;, len(buff), buff[:12])
+            #ret = self.resp.datahandler.putencode([str(blen), buff,],
+            #            self.resp.ekey, False)
+            #dstr = self.resp.datahandler.wrapx(buf, key)
+            ret = self.resp.datahandler.putraw(buff)
+        except:
+            #print(sys.exc_info())
+            suppport.put_exception(&#34;fget&#34;)
+            break;
+
+        #prog += blen
+        #if prog &gt;= flen:
+        #    break
+
+        if ret == 0:
+            break
+        if blen == 0:
+            break
+
+    #if pyservsup.globals.conf.pglog &gt; 1:
+    #    stry = &#34;Server sent file: &#39;&#34; + dname + &#34;&#39; &#34; + str(flen) + &#34; bytes&#34;,
+    #    pysyslog.syslog(stry)
+
+    response = [OK, &#34;Server sent file&#34;, strx[1]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+
+def get_fput_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_fput_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify file name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    dname = contain_path(self, strx[1])
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if os.path.isfile(dname):
+        was = False
+        for aa in range(3):
+            tmpname = &#34;%s_%d&#34; % (dname, aa)
+            if not os.path.isfile(tmpname):
+                #print(&#34;Saving to backup: %s&#34;, tmpname)
+                was = True
+                try:
+                    os.rename(dname, tmpname)
+                except:
+                    print(sys.exc_info())
+                break
+        if not was:
+            # Wrap around
+            tmpname = &#34;%s_%d&#34; % (dname, 0)
+            #print(&#34;Forced back 0&#34;, tmpname)
+            try:
+                os.remove(tmpname)
+                os.rename(dname, tmpname)
+            except:
+                print(sys.exc_info())
+
+        #response = [ERR, &#34;File exists. Please delete first&#34;, strx[1]]
+        #self.resp.datahandler.putencode(response, self.resp.ekey)
+        #return
+
+    response = [OK, &#34;Send file&#34;, strx[1]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+    try:
+        fh = open(dname, &#34;wb&#34;)
+    except:
+        support.put_exception(&#34;fput&#34;)
+        response = [ERR, &#34;Cannot create file.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    # Loop, break when EOF or transmission error
+    while 1:
+        data = self.resp.datahandler.handle_one(self.resp)
+        #print(&#34;data&#34;, data)
+        if not data:
+            break
+        dstr = self.wr.unwrap_data(self.resp.ekey, data)
+        #print(&#34;dstr[1]&#34;, dstr[1])
+        if not dstr[1]:
+            break
+        fh.write(dstr[1])
+
+    fh.close()
+    response = [OK, &#34;Server received file.&#34;, strx[1]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_pwd_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_pwd_func()&#34;, strx)
+
+    dname2 = self.resp.dir
+    dname2 = support.dirclean(dname2)
+    if dname2 == &#34;&#34;: dname2 = os.sep
+    response = [OK,  dname2]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_rcheck_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rcheck_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify link or sum&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = [ERR, &#34;Only admin can check integrity&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+
+    errx = False; cnt = -1; arrx = []
+    sss = core.getdbsize()
+    if  strx[2] == &#34;sum&#34;:
+        for aa in range(sss-1, -1, -1):
+            ppp = core.checkdata(aa)
+            if not ppp:
+                arrx.append(aa)
+    elif strx[2] == &#34;link&#34;:
+        for aa in range(sss-1, -1, -1):
+            ppp2 = core.linkintegrity(aa)
+            if not ppp2:
+                arrx.append(aa)
+    else:
+        response = [ERR, &#34;One of &#39;link&#39; or &#39;sum&#39; is required.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(arrx):
+        response = [ERR,  arrx, len(arrx), &#34;errors&#34;, strx[2], sss, &#34;total&#34;]
+    else:
+        response = [OK,  &#34;No errors.&#34;, strx[2], sss, &#34;total&#34;]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_rtest_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rtest_func()&#34;, strx[:4])
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify link or sum&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 4:
+        response = [ERR, &#34;Must specify record id or ids&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exis.t&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+
+    if  strx[2] == &#34;sum&#34;:
+        funcx = core.checkdata
+    elif strx[2] == &#34;link&#34;:
+        funcx = core.linkintegrity
+    else:
+        response = [ERR, &#34;One of &#39;link&#39; or &#39;sum&#39; is required.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    errx = False; cnt = -1; arrx = []
+    sss = len(strx[3:])
+    for aa in strx[3:]:
+        #print(&#34;test:&#34;, aa)
+        try:
+            ddd = core.get_payoffs_bykey(aa)
+        except:
+            pass
+        if len(ddd) == 0:
+            response = [ERR, &#34;Data not found.&#34;, aa,]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+        if self.pgdebug &gt; 4:
+            try:
+                rec = core.get_rec(ddd[0])
+                print(&#34;rec:&#34;, rec)
+            except:
+                print(&#34;exc: get_header&#34;, sys.exc_info())
+                raise
+        ppp = funcx(ddd[0])
+        if not ppp:
+            arrx.append(aa)
+
+    if len(arrx):
+        response = [ERR,  arrx, len(arrx), &#34;errors&#34;, strx[2]]
+    else:
+        response = [OK,  &#34;No errors.&#34;, strx[2], sss, &#34;records checked.&#34;]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_rsize_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rsize_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;db op1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    dbsize = core.getdbsize()
+
+    response = [OK,  dbsize, &#34;records&#34;]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+
+def get_rcount_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rcount_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify starting point.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 4:
+        response = [ERR, &#34;Must specify ending point.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print(&#34;list: start&#34;, strx[2], &#34;end&#34;, strx[3])
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print(&#34;rlist begin:&#34;, datetime.datetime.fromtimestamp(strx[2]),
+                            &#34;end:&#34;, datetime.datetime.fromtimestamp(strx[3]) )
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;db op1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    arr = []
+    rcnt = 0
+    dbsize = core.getdbsize()
+    for aa in range(dbsize - 1, -1, -1):
+        rec = core.get_header(aa)
+        ddd = pyservsup.uuid2timestamp(uuid.UUID(rec))
+        #ttt = pyservsup.uuid2date(uuid.UUID(rec))
+        #print(ddd, ttt)
+
+        if ddd &gt;= strx[2] and ddd &lt;= strx[3]:
+            rcnt += 1
+
+    if self.pgdebug &gt; 2:
+        print(&#34;rcnt&#34;, &#34;total: %d records&#34; % dbsize, &#34;got: %d records&#34; % rcnt)
+
+    response = [OK,  rcnt, &#34;records&#34;]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_rlist_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rlisr_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify starting point.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 4:
+        response = [ERR, &#34;Must specify ending point.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print(&#34;list: start&#34;, strx[2], &#34;end&#34;, strx[3])
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print(&#34;rlist begin:&#34;, datetime.datetime.fromtimestamp(strx[2]),
+                            &#34;end:&#34;, datetime.datetime.fromtimestamp(strx[3]) )
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;db op1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    arr = []
+    dbsize = core.getdbsize()
+    for aa in range(dbsize-1, -1, -1):
+        rec = core.get_header(aa)
+        ddd = pyservsup.uuid2timestamp(uuid.UUID(rec))
+        #ttt = pyservsup.uuid2date(uuid.UUID(rec))
+        #print(ddd, ttt)
+
+        if ddd &gt; strx[2] and ddd &lt; strx[3]:
+            arr.append(rec)
+        if len(arr) &gt; 100:
+            break
+
+    #print(&#34;rec&#34;, &#34;%d records&#34; % dbsize, &#34;got: %d&#34; % len(arr))
+
+    # Prevent overload from
+    if len(arr) &gt; 100:
+        # Return error and some data
+        response = [ERR,  &#34;Too many records, narrow date range.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    response = [OK,  arr]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_rhave_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rhave_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify data header.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print(&#34;dname&#34;, dname)
+
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Blockchain &#39;kind&#39; directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    ddd = []
+    try:
+        ddd = core.get_payoffs_bykey(strx[2])
+    except:
+        pass
+    if len(ddd) == 0:
+        response = [ERR, &#34;Data not found.&#34;, strx[2],]
+    else:
+        response = [OK, &#34;Data found&#34;, strx[2],]
+
+    #_print_handles(self)
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_rabs_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rabs_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify absolute position.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;dname&#34;, dname)
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Blockchain &#39;kind&#39; directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print(&#34;rabs&#34;, strx[1], strx[2])
+
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    datax = []
+    dbsize = core.getdbsize()
+    for aa in strx[2:]:
+        aa = int(aa)
+        #convert to offsets
+        if aa &lt; 0:
+            aa = dbsize + aa
+        #print(&#34;aa&#34;, aa)
+        if not core.checkdata(aa):
+            data = [ERR, &#34;Invalid Record, bad checksum.&#34;, aa]
+            self.resp.datahandler.putencode(data, self.resp.ekey)
+            return
+
+        if not core.linkintegrity(aa):
+            data = [ERR, &#34;Invalid Record, link damaged.&#34;, aa]
+            self.resp.datahandler.putencode(data, self.resp.ekey)
+            return
+        try:
+            data = core.get_rec(aa)
+        except:
+            data = &#34;&#34;
+            print(str(sys.exc_info()))
+
+        if self.pgdebug &gt; 4:
+            print(&#34;rec data&#34;, data)
+        if not data:
+            response = [ERR, &#34;Record not found.&#34;, aa,]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        datax.append(data)
+        #print(&#34;data:&#34;, data)
+
+    response = [OK, len(datax), &#34;records&#34;, datax]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_rget_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rget_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify data header.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;dname&#34;, dname)
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Blockchain &#39;kind&#39; directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print(&#34;rget&#34;, strx[1], strx[2])
+
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    datax = []
+    for aa in strx[2]:
+        #print(&#34;aa&#34;, aa)
+        # Validate uuid
+        try:
+            uuidx = uuid.UUID(aa)
+        except:
+            print(&#34;getting UUID&#34;, sys.exc_info())
+            #response = [ERR, &#34;Header must be a real UUID.&#34;, strx[2],]
+            #self.resp.datahandler.putencode(response, self.resp.ekey)
+            #return
+            continue
+
+        data = []; ddd = []
+        try:
+            ddd = core.get_payoffs_bykey(aa)
+            if pyservsup.globals.conf.pgdebug &gt; 2:
+                    print(&#34;ddd&#34;, ddd)
+        except:
+            pass
+        if len(ddd) == 0:
+            response = [ERR, &#34;Data not found.&#34;, aa,]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+        try:
+            rechead = core.get_header(ddd[0])
+        except:
+            print(sys.exc_info())
+
+        if not rechead:
+            response = [ERR, &#34;Cannot get data.&#34;, aa,]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        if self.pgdebug &gt; 2:
+            print(&#34;got rechead&#34;, rechead)
+
+        if not core.checkdata(ddd[0]):
+            data = [ERR, &#34;Invalid Record, bad checksum.&#34;, aa]
+            self.resp.datahandler.putencode(data, self.resp.ekey)
+            return
+
+        if not core.linkintegrity(ddd[0]):
+            data = [ERR, &#34;Invalid Record, link damaged.&#34;, aa]
+            self.resp.datahandler.putencode(data, self.resp.ekey)
+            return
+
+        try:
+            data = core.get_rec(ddd[0])
+        except:
+            data = &#34;&#34;
+            print(str(sys.exc_info()))
+
+        if self.pgdebug &gt; 4:
+            print(&#34;rec data&#34;, data)
+        if not data:
+            response = [ERR, &#34;Record not found.&#34;, aa,]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        datax.append(data)
+
+    response = [OK, len(datax), &#34;records&#34;, datax,]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_rput_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rput_func()&#34;)
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify blockchain kind and data.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;strx[1]&#34;, strx[1])
+    #print(&#39;curr&#39;, self.resp.dir)
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;dname&#34;, dname)
+    if not os.path.isdir(dname):
+        try:
+            os.mkdir(dname)
+        except:
+            support.put_exception(&#34;rput&#34;)
+            response = [ERR, &#34;Cannot make directory.&#34;, strx[0]]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+    #ttt = time.time()
+    #print(&#34;rput strx[2]&#34;, strx[2])
+    if pyservsup.globals.conf.pgdebug &gt; 0:
+        print(&#34;rput&#34;, strx[1], strx[2][&#39;header&#39;])
+
+    pvh = pyvhash.BcData(strx[2])
+    #print(&#34;pvh&#34;, pvh.datax)
+    if not pvh.checkhash():
+        response = [ERR, &#34;Error on block hash.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if not pvh.checkpow():
+        response = [ERR, &#34;Error on block POW.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    cfname = os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;)
+    #print(&#34;cfname&#34;, cfname)
+    savecore = twinchain.TwinChain(cfname)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    #print(&#34;Got:&#34;, strx[2])
+
+    # Do we have it already?:
+    #ttt = time.time()
+    retoffs = savecore.get_payoffs_bykey(strx[2][&#39;header&#39;])
+    #print(&#34;db get offs  %.3f&#34; % ((time.time() - ttt) * 1000) )
+    if retoffs:
+        if self.pgdebug &gt; 2:
+            print(&#34;Duplicate block, retoffs&#34;, retoffs[0])
+        response = [ERR, &#34;Duplicate block, not saved.&#34;, strx[2][&#39;header&#39;], retoffs[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    undec = self.pb.encode_data(&#34;&#34;, strx[2])
+
+    if  self.pgdebug &gt; 5:
+        print(&#34;Save_data header:&#34;, strx[2][&#34;header&#34;])
+
+    if self.pgdebug &gt; 7:
+        print(&#34;Save data:&#34;, undec)
+
+    try:
+        #savecore.pgdebug = 10
+        ret = savecore.appendwith(strx[2][&#39;header&#39;], undec)
+    except:
+        del savecore
+        print(&#34;exc save_data&#34;, sys.exc_info()[1])
+        response = [ERR, &#34;Cannot save record.&#34;, str(sys.exc_info()[1]) ]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    del savecore
+
+    # if it is not replicated already, add replicate request
+    if not strx[2][&#34;Replicated&#34;]:
+        # Prepare data. Do strings so it can be re-written in place
+        rrr = {
+                # Sun 14.Apr.2024 removed counts, shifted to state data
+                #&#39;count1&#39;: &#34;00000&#34;, &#39;count2&#39; : &#34;00000&#34;, &#39;count3&#39; : &#34;00000&#34;,
+                &#39;header&#39; : strx[2][&#39;header&#39;],
+                &#39;now&#39; : strx[2][&#39;now&#39;], &#39;iso&#39; : strx[2][&#39;iso&#39;],
+                &#39;stamp&#39; : strx[2][&#39;stamp&#39;],
+                &#34;processed&#34; : &#34;00000&#34;,
+                }
+
+        if self.pgdebug &gt; 3:
+            print(&#34;replic req&#34;, rrr)
+
+        undec2 = self.pb.encode_data(&#34;&#34;, rrr)
+        frname = os.path.join(dname, repfname + &#34;.pydb&#34;)
+        #print(&#34;Saving at&#34;, frname)
+        repcore = twincore.TwinCore(frname, 0)
+        #if self.pgdebug &gt; 5:
+        #print(&#34;repl save_data&#34;, strx[2][&#34;Header&#34;], undec2)
+        try:
+            ret = repcore.save_data(rrr[&#39;header&#39;], undec2)
+        except:
+            del repcore
+            print(&#34;exc on save_data&#34;, sys.exc_info()[1])
+            response = [ERR,  &#34;Cannot save replicator.&#34;,  str(sys.exc_info()[1]) ]
+            support.put_exception(&#34;save_data&#34;)
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        del repcore
+    else:
+        if self.pgdebug &gt; 3:
+            print(&#34;Not replicating&#34;, strx[2][&#39;header&#39;])
+        pass
+
+        #print(&#34;db op3 %.3f&#34; % ((time.time() - ttt) * 1000) )
+        #dbsize = repcore.getdbsize()
+        #print(&#34;replicator %d total records&#34; % dbsize)
+
+    response = [OK,  &#34;Blockchain data added.&#34;,  strx[2][&#39;header&#39;]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+    #open_file_handles = os.listdir(&#39;/proc/self/fd&#39;)
+    #print(&#39;open file handles: &#39; + &#39;, &#39;.join(map(str, open_file_handles)))
+
+    if pyservsup.globals.conf.pglog &gt; 1:
+        stry = &#34;Block Chain Data %s&#34; % strx[2][&#39;header&#39;], \
+                _wr(self.resp.user), str(self.resp.client_address)
+        pysyslog.syslog(*stry)
+
+
+def get_ihost_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_ihost_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify operation (add / remove).&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if not int(ret[2]) &amp; pyservsup.PERM_ADMIN:
+        rrr = [ERR, &#34;Only admin can control / view ihosts&#34;]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    if strx[1] != &#39;list&#39;:
+        if len(strx) &lt; 3:
+            response = [ERR, &#34;Must specify host:port.&#34;, strx[0]]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        if strx[2].find(&#34;:&#34;) &lt; 0:
+            response = [ERR, &#34;Entry must be in host:port format.&#34;, strx[2]]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+    ihname = os.path.realpath(&#34;ihosts.pydb&#34;)
+    if self.pgdebug &gt; 2:
+        print(&#34;ihost:&#34;, ihname)
+    repcore = twincore.TwinCore(ihname)
+    #repcore.pgdebug = 10
+
+    if strx[1] == &#39;add&#39;:
+        ddd = self.pb.encode_data(&#34;&#34;, strx[2])
+        rec = repcore.retrieve(strx[2])
+        if self.pgdebug &gt; 9:
+            print(&#34;rec:&#34;, rec)
+        if rec:
+            if rec[0][0].decode() == strx[2]:
+                #print(&#34;Identical&#34;, rec[0][0])
+                response = [ERR, &#34;Duplicate entry.&#34;, strx[2]]
+                self.resp.datahandler.putencode(response, self.resp.ekey)
+                return
+        ret = repcore.save_data(strx[2], ddd)
+        if self.pgdebug &gt; 8:
+            print(&#34;repcore save:&#34;, ret, ddd)
+        response = [OK, &#34;Added replication host:port.&#34;, strx[2]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+
+    elif strx[1] == &#39;del&#39;:
+        rec = repcore.retrieve(strx[2])
+        if not rec:
+            response = [ERR, &#34;This entry is not in the list.&#34;, strx[2]]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+        if self.pgdebug &gt; 4:
+            print(&#34;delete ihost rec:&#34;, strx[2])
+        ret = repcore.del_rec_bykey(strx[2])
+        response = [OK, &#34;Deleted replication host:port.&#34;, strx[2]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+
+    elif strx[1] == &#39;list&#39;:
+        arr = []
+        for aa in range(repcore.getdbsize()-1, -1, -1):
+            ddd = repcore.get_rec(aa)
+            if ddd:
+                arr.append(str(ddd[0]))
+        #print(&#34;got recs&#34;, arr)
+        response = [OK,  arr, strx[2]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+    else:
+        response = [ERR, &#34;Operation must be &#39;add&#39; or &#39;del or list&#39;.&#34;, strx[2]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+
+
+def get_ihave_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_ihave_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify record header.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    uuid = uuid.UUID(strx[2])
+
+    print(&#34;ihave&#34;, strx[1], strx[2])
+    response = [OK,  &#34;Ihave processed&#34;, strx[0], ]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_cd_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_cd_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Directory name cannot be empty.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    dname = contain_path(self, strx[1])
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;dname&#34;, dname)
+    try:
+        if os.path.isdir(dname):
+            self.resp.dir = dname[len(self.resp.cwd):]
+            response = [OK, self.resp.dir]
+        else:
+            # Back out
+            #self.resp.dir = org
+            response = [ERR, &#34;Directory does not exist&#34;, strx[1]]
+    except:
+        support.put_exception(&#34;cd&#34;)
+        response = [ERR, &#34;Must specify directory name.&#34;, strx[0]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_del_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_del_func()&#34;, strx)
+
+    if len(strx) == 1:
+        response = [ERR, &#34;Must specify file name to delete.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        dname = contain_path(self, strx[1])
+        if not dname:
+            response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        #print(&#34;dname&#34;, dname)
+        if os.path.isfile(dname):
+            try:
+                os.unlink(dname)
+                response = [OK, &#34;File deleted&#34;, strx[1], ]
+            except:
+                response = [ERR, &#34;Could not delete file.&#34;, strx[1]]
+        else:
+            # Say no file
+            response = [ERR, &#34;No Such File.&#34;, strx[1]]
+    except:
+        support.put_exception(&#34;del&#34;)
+        response = [ERR, &#34;Must specify file name to delete.&#34;, strx[0]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+# ------------------------------------------------------------------------
+
+def get_ver_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_ver_func()&#34;, strx)
+
+    res = [OK, &#34;%s&#34; % pyservsup.version,
+                        &#34;%s&#34; % pyservsup.globals.siteid, self.name]
+
+    if pyservsup.globals.conf.pgdebug &gt; 4:
+        print( &#34;get_ver_func-&gt;output&#34;, res)
+
+    self.resp.datahandler.putencode(res, self.resp.ekey)
+
+def get_id_func(self, strx):
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_id_func()&#34;, strx)
+
+    res = [OK, str(pyservsup.globals.siteid), str(self.name)]
+    self.resp.datahandler.putencode(res, self.resp.ekey)
+
+#@support.timeit
+def get_hello_func(self, strx):
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print( &#34;get_hello_func()&#34;, strx)
+    strres = [OK, &#34;Hello&#34;, str(pyservsup.globals.siteid), self.name]
+    self.resp.datahandler.putencode(strres, self.resp.ekey)
+
+def get_stat_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_stat_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify file name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    fname = &#34;&#34;; aaa = &#34; &#34;
+    #print(&#34;stat_func&#34;, strx[1])
+
+    dname = support.unescape(strx[1]);
+    #print(&#34;stat_func&#34;, strx[1], dname)
+
+    dname2 = self.resp.cwd + os.sep + self.resp.dir + os.sep + dname
+    dname2 = support.dirclean(dname2)
+
+    response = [OK]
+    response.append(strx[1])
+
+    try:
+        sss = os.stat(dname2)
+        for aa in sss:
+            response.append(str(aa))
+
+    except OSError:
+        support.put_exception(&#34;stat&#34;)
+        #print( sys.exc_info())
+        response = [ERR, str(sys.exc_info()[1]) , strx[0]]
+    except:
+        response = [ERR, &#34;Must specify file name.&#34;, strx[0]]
+        #print( sys.exc_info())
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_lout_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_lout_func()&#34;, strx)
+
+    if not self.resp.user:
+        response = [ERR, &#34;Not logged in.&#34;, strx[0], ]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pglog &gt; 0:
+        stry = &#34;Logout&#34;, _wr(resp.user), \
+                str(self.resp.client_address)
+        pysyslog.syslog(*stry)
+
+    if self.pgdebug &gt; 3:
+        print(&#34;logout&#34;, self.resp.user)
+
+    if resp.user:
+        pyservsup.SHARED_LOGINS.deldat(resp.user)
+
+    self.resp.user = &#34;&#34;
+
+    response = [OK, &#34;Logged out.&#34;, olduser, ]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+#@support.timeit
+def get_user_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_user_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        resp = [ERR, &#34;Must specify user name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(resp, self.resp.ekey)
+        return
+
+    if self.resp.user:
+        self.resp.datahandler.putencode([ERR, &#34;Already logged in&#34;], self.resp.ekey)
+        return
+
+    self.resp.preuser = strx[1]
+    self.resp.datahandler.putencode([OK, &#34;Send pass for&#34;, strx[1]], self.resp.ekey)
+
+# ------------------------------------------------------------------------
+
+def get_sess_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_sess_func()&#34;)
+
+    if len(strx) &lt; 4:
+        response = [ERR, &#34;Not enough arguments for session.&#34;]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #sss = SHA512.new(); sss.update(bytes(strx[3], &#34;cp437&#34;))
+    sss = SHA256.new(); sss.update(strx[3].encode())
+
+    # Arrived safely?
+    if strx[2] != sss.hexdigest():
+        self.resp.datahandler.putencode([ERR, &#34;session key damaged on transport.&#34;], self.resp.ekey)
+        return
+
+    # Re init cypher (test)
+    #self.privkey = Key.import_priv(self.keyx2)
+    #self.priv_cipher = self.privkey
+
+    message2 = self.priv_cipher.decrypt(strx[3])
+
+    #print(&#34;sess_key&#34;, message2[:24])
+
+    # Decoded OK?
+    ttt = SHA256.new(); ttt.update(message2.encode())
+
+    if pyservsup.globals.conf.pgdebug &gt; 6:
+        print(&#34;Hash1:&#34;, strx[1])
+        print(&#34;Hash2:&#34;, ttt.hexdigest())
+
+    if ttt.hexdigest() != strx[1]:
+        self.resp.datahandler.putencode(\
+            [ERR, &#34;session key damaged on decoding.&#34;], self.resp.ekey, strx[0])
+        return
+
+    self.resp.datahandler.putencode([OK, &#34;Session estabilished.&#34;], self.resp.ekey)
+    self.resp.ekey = message2
+
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        support.shortdump(&#34;session key:&#34;, self.resp.ekey.encode() )
+
+# ------------------------------------------------------------------------
+
+#@support.timeit
+def get_akey_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_akey_func()&#34;, strx)
+
+    ttt = time.time()
+
+    if pyservsup.globals.conf.pgdebug &gt; 4:
+        print(&#34;get_akey_func() called&#34;)
+
+    ddd = os.path.abspath(&#34;keys&#34;)
+    ppp = os.path.abspath(&#34;private&#34;)
+
+    try:
+        self.keyfroot = pyservsup.pickkey(ddd)
+    except:
+        if self.verbose:
+            print(&#34;No keys generated yet.&#34;, sys.exc_info()[1])
+
+        if self.pgdebug &gt; 2:
+            support.put_exception(&#34;no keys yet&#34;)
+
+        rrr = [ERR, &#34;No keys yet. Run keygen.&#34;, strx[0]]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 4:
+       print(&#34;self.keyfroot&#34;, self.keyfroot)
+
+    if pyservsup.globals.conf.pgdebug &gt; 4:
+        print(&#34;fname&#34;, ddd + os.sep + self.keyfroot + &#34;.pub&#34;)
+
+    #print(&#34;akey 1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    try:
+        # Do public import
+        fp = open(ddd + os.sep + self.keyfroot + &#34;.pub&#34;, &#34;rt&#34;)
+        self.keyx = fp.read()
+        fp.close()
+
+        if pyservsup.globals.conf.pgdebug &gt; 7:
+            print(&#34;Key read: \n&#39;&#34; + self.keyx + &#34;&#39;\n&#34;)
+    except:
+        print(&#34;Cannot read key:&#34;, self.keyfroot, sys.exc_info()[1])
+        support.put_exception(&#34;read key&#34;)
+        rrr = [ERR, &#34;cannot open keyfile.&#34;, strx[0]]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+
+    try:
+        #self.pubkey = RSA.importKey(self.keyx)
+        #self.pubkey = ECC.import_key(self.keyx)
+        self.pubkey = Key.import_pub(self.keyx)
+        #print(&#34;validate&#34;, self.pubkey.validate())
+        #print(&#34;finger&#34;, self.pubkey.fingerprint())
+
+    except:
+        print(&#34;Cannot read key:&#34;, self.keyx[:12], sys.exc_info()[1])
+        support.put_exception(&#34;import  key&#34;)
+        rrr = [ERR, &#34;Cannot read public key.&#34;, strx[0]]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    #print(&#34;akey 2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    # Do private import; we are handleing it here, so key signals errors
+    fp2 = open(ppp + os.sep + self.keyfroot + &#34;.pem&#34;, &#34;rt&#34;)
+    self.keyx2 = fp2.read()
+    fp2.close()
+
+    #print(self.keyx2)
+
+    #print(&#34;akey 3 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    try:
+        #self.privkey = RSA.importKey(self.keyx2)
+        #self.privkey = ECC.import_key(self.keyx2)
+        self.privkey = Key.import_priv(self.keyx2)
+        #print(&#34;akey 3.1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+        #self.priv_cipher = PKCS1_v1_5.new(self.privkey)
+        # Bypass
+        self.priv_cipher = self.privkey
+
+    except:
+        print(&#34;Cannot create private key:&#34;, self.keyx2[:12], sys.exc_info()[1])
+        support.put_exception(&#34;import private key&#34;)
+        rrr = [ERR, &#34;Cannot create private key.&#34;, strx[0]]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    #print(&#34;akey 4 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    # Clean private key from memory
+    hh = SHA256.new(); hh.update(self.keyx.encode())
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print(&#34;Key digest: \n&#39;&#34; + hh.hexdigest() + &#34;&#39;\n&#34;)
+
+    # Deliver the answer in two parts:
+    rrr = [OK, &#34;%s&#34; % hh.hexdigest(), self.keyx]
+    self.resp.datahandler.putencode(rrr, self.resp.ekey)
+
+#@support.timeit
+def get_pass_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_pass_func()&#34;)
+
+    ret = &#34;&#34;;  retval = True
+
+    #ttt = time.time()
+
+    if len(strx) &lt; 2:
+        self.resp.datahandler.putencode(
+                [ERR, &#34;Must specify pass.&#34;, strx[0]], self.resp.ekey)
+        return retval
+
+    # Make sure there is a trace of the attempt
+    if pyservsup.globals.conf.pglog &gt; 0:
+        stry = &#34;Attempted login&#34;, _wr(self.resp.preuser), \
+                str(self.resp.client_address)
+        pysyslog.syslog(*stry)
+
+    #print(&#34;pass 1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    ret = pyservsup.gl_passwd.perms(self.resp.preuser)
+    #print(&#34;pass 2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    if int(ret[2]) &amp; pyservsup.PERM_DIS:
+        rrr = [ERR, &#34;this user is temporarily disabled&#34;, strx[1]]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return retval
+
+    xret = pyservsup.gl_passwd.auth(self.resp.preuser, strx[1], 0, pyservsup.USER_AUTH)
+    #print(&#34;pass 3 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    rrr = []
+    if xret[0] == 3:
+        if pyservsup.globals.conf.pglog &gt; 0:
+            stry = &#34;No such user&#34;, _wr(self.resp.preuser), \
+                str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        rrr = [ERR, &#34;No such user.&#34;, self.resp.preuser]
+    elif xret[0] == 1:
+
+        if self.pgdebug &gt; 3:
+            print(&#34;Authenticated&#34;, self.resp.preuser)
+
+        userdir2 = pyservsup.globals.paydir + os.sep + self.resp.preuser
+        self.userdir = check_payload_path(self, userdir2)
+        #print(&#34;Contained&#34;,  self.userdir)
+        if not self.userdir:
+            rrr = [ERR, &#34;No access to this path&#34;, userdir2]
+            self.resp.datahandler.putencode(rrr, self.resp.ekey)
+            return
+
+        if not os.path.isdir(self.userdir):
+            os.mkdir(self.userdir)
+        self.resp.cwd = self.userdir
+
+        if pyservsup.globals.conf.pglog &gt; 0:
+            stry = &#34;Successful login&#34;, _wr(self.resp.preuser),  \
+                            str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+
+        # Commit  user
+        self.resp.user = self.resp.preuser
+        self.resp.preuser = &#34;&#34;
+
+        # Anounce it to global stats
+        if self.resp.user:
+            logttt = time.time()
+            pyservsup.SHARED_LOGINS.setdat(self.resp.user, logttt)
+
+        rrr = [OK,  &#34;Authenticated.&#34;, self.resp.user]
+        retval = False
+    else:
+        if pyservsup.globals.conf.pglog &gt; 0:
+            stry = &#34;Error on login&#34;, _wr(self.resp.preuser), \
+                str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        rrr = [ERR,  xret[1], strx[0]]
+
+    self.resp.datahandler.putencode(rrr, self.resp.ekey)
+    return retval
+
+def get_chpass_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_chpass_func()&#34;)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify user to change.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify old_pass.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 4:
+        response = [ERR, &#34;Must specify new_pass.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    #print(&#34;chpass&#34;, strx)
+    # Make sure there is a trace of the attempt
+    if pyservsup.globals.conf.pglog &gt; 1:
+        stry = &#34;chpass&#34;, _wr(self.resp.user), \
+                 str(self.resp.client_address)
+        pysyslog.syslog(*stry)
+
+    # Are we allowed to change pass?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        # Authenticate
+        if strx[1] !=  self.resp.user:
+            response = [ERR, &#34;Non admins can only change their own password.&#34;, strx[0]]
+            self.resp.datahandler.putencode(response, self.resp.ekey )
+            return
+
+        xret = pyservsup.gl_passwd.auth(strx[1], strx[2], 0, pyservsup.USER_AUTH)
+        if xret[0] != 1:
+            response = [ERR, &#34;Old pass must match&#34;, strx[0]]
+            self.resp.datahandler.putencode(response, self.resp.ekey )
+            return
+    # Change
+    xret = pyservsup.gl_passwd.auth(strx[1], strx[3], 0, pyservsup.USER_CHPASS)
+
+    ret = &#34;&#34;
+    if xret[0] == 5:
+        if pyservsup.globals.conf.pglog &gt; 1:
+            stry = &#34;Pass changed&#34;, _wr(resp.user), \
+                str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        ret = [OK, &#34;Pass changed&#34;, strx[1]]
+    elif xret[0] == 3:
+        if pyservsup.globals.conf.pglog &gt; 1:
+            stry = &#34;No such user&#34;, _wr(strx[1]),  \
+                str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        ret = [ERR, &#34;No such user.&#34;, strx[1]]
+    elif xret[0] == 1:
+        if pyservsup.globals.conf.pglog &gt; 1:
+            stry = &#34;Successful login&#34;, strx[1], \
+                           str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        ret = [&#34;OK &#34;, self.resp.user, &#34; Authenticated.&#34;]
+        retval = False
+    else:
+        if pyservsup.globals.conf.pglog &gt; 1:
+            stry = &#34;Error on login&#34;, _wr(strx[1]), \
+                    str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        ret = [ERR, xret[1], strx[0]]
+
+    self.resp.datahandler.putencode(ret, self.resp.ekey)
+    return
+
+def get_uadd_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_uadd_func()&#34;, strx)
+
+    if len(strx) &lt; 3:
+        response = ERR, &#34;Must specify user name and pass.&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    #print(&#34;uadd&#34;, strx)
+
+    # Are we allowed to add users?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = [ERR, &#34;Only admin can add/delete users&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    # Add this user if not exist
+    ret = pyservsup.gl_passwd.auth(strx[1], strx[2], 0, pyservsup.USER_ADD)
+    if ret[0] &lt;= 0:
+        response = [ERR, ret[1], strx[1]]
+    elif ret[0] == 1:
+        response = [ERR, &#34;User already exists.&#34;, strx[1]]
+    elif ret[0] == 2:
+        response = [&#34;OK&#34;, &#34;Added user.&#34;, strx[1]]
+    else:
+        response = [ERR, ret[1], strx[1]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+# Add Admin
+
+def get_aadd_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_aadd_func()&#34;, strx)
+
+    # Are we allowed to add users?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = [ERR, &#34;only admin can add/delete users.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;must specify user name and pass.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    # Add this admin in not exist
+    ret = pyservsup.gl_passwd.auth(strx[1], strx[2], pyservsup.PERM_ADMIN, pyservsup.USER_ADD)
+    if ret[0] &lt;= 0:
+        response = [ERR, ret[1], strx[0]]
+    elif ret[0] == 1:
+        response = ERR, [&#34;Admin already exists.&#34;, strx[1]]
+    elif ret[0] == 2:
+        response = [OK, &#34;Added admin.&#34;, strx[1]]
+    else:
+        response = [ERR, ret[1], strx[1]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_uena_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_uena_func()&#34;, strx)
+
+    retval = 0
+
+    # Are we allowed to add users?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = ERR, &#34;only admin can modify users.&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    if len(strx) &lt; 2:
+        response = ERR, &#34;Must specify user name and flag.&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    if strx[2] == &#34;enable&#34;:
+        mode = pyservsup.PERM_DIS  | pyservsup.RESET_MODE
+    elif strx[2] == &#34;disable&#34;:
+        mode = pyservsup.PERM_DIS
+    else:
+        response = [ERR, &#34;Must specify &#39;enable&#39; or &#39;disable&#39;&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    # Add this user in not exist
+    ret = pyservsup.gl_passwd.auth(strx[1], strx[2], mode, pyservsup.USER_CHMOD)
+
+    if ret[0] == 0:
+        response = ERR, ret[1], strx[1]
+    elif ret[0] == 8:
+        response = OK,  strx[1], strx[2] + &#34;d&#34;
+    else:
+        response = ERR, ret[1], strx[1]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+
+def get_ulist_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_ulist_func()&#34;, strx)
+
+    retval = 0
+
+    # Are we allowed to add users?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = ERR, &#34;only admin can view users.&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    if len(strx) &lt; 2:
+        response = ERR, &#34;Must specify user / admin flag&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    if strx[1] == &#34;user&#34;:
+        mode = pyservsup.PERM_NONE
+    elif strx[1] == &#34;admin&#34;:
+        mode = pyservsup.PERM_ADMIN
+    elif strx[1] == &#34;initial&#34;:
+        mode = pyservsup.PERM_INI
+    elif strx[1] == &#34;disabled&#34;:
+        mode = pyservsup.PERM_DIS
+    else:
+        response = [ERR, &#34;Must specify &#39;user&#39; or &#39;admin&#39; or &#39;disabled&#39; or &#39;initial&#39;&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    response = pyservsup.gl_passwd.listusers(mode)
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+
+def get_uini_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_uini_func()&#34;)
+
+    # Test for local client
+    if str(self.resp.client_address[0]) != &#34;127.0.0.1&#34;:
+        response = [ERR,  &#34;Must connect from loopback interface.&#34;, strx[0]]
+
+    elif  pyservsup.gl_passwd.count() != 0:
+        response = [ERR, &#34;Already has initial user&#34;, strx[0]]
+
+    elif len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify user name and pass.&#34;, strx[0]]
+    else:
+        ret = pyservsup.gl_passwd.auth(strx[1], strx[2],
+                    pyservsup.PERM_INI | pyservsup.PERM_ADMIN,
+                        pyservsup.USER_ADD)
+        if ret[0] == 0:
+            response = [ERR, ret[1], strx[0]]
+        elif ret[0] == 1:
+            response = [ERR,
+            &#34;User already exists, no change. Use pass function.&#34;, strx[0]];
+        elif ret[0] == 2:
+
+            if pyservsup.globals.conf.pglog &gt; 1:
+                stry = &#34;Added initial user&#34;,  strx[1], \
+                        str(self.resp.client_address)
+                pysyslog.syslog(*stry)
+            response = [OK, &#34;Added initial user&#34;, strx[1]]
+        else:
+            response = [ERR, ret[1], strx[0]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def get_udel_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_udel_func()&#34;, strx)
+
+    retval = 0
+     # Are we allowed to add users?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = ERR, &#34;Only admin can add/delete users&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify user name to delete&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+    # Delete user
+    ret = pyservsup.gl_passwd.auth(strx[1], &#34;&#34;,
+                    pyservsup.PERM_NONE, pyservsup.USER_DEL)
+    #print(&#34;udel ret&#34;, ret)
+    if ret[0] == 0:
+        response = [ERR, ret[1], strx[1]]
+    elif ret[0] == 4:
+        response = [OK, &#34;deleted user&#34;, strx[1]]
+    else:
+        response = [ERR, ret[1], strx[1]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def put_file_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;put_file_func()&#34;, strx)
+
+    if len(strx) == 1:
+        response = [ERR, &#34;Must specify file name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    # Close possible pending
+    if  self.resp.fh:
+        self.resp.fh.close()
+        self.resp.fh = None
+
+    dname = contain_path(self, strx[1])
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if os.path.isfile(dname):
+        response = [ERR, &#34;File exists. Delete first.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        try:
+            # Create handle
+            self.resp.fh = open(dname, &#34;wb&#34;)
+            self.resp.fname = strx[1]
+            response = [OK, &#34;Send file&#34;, self.resp.fname]
+        except:
+            response = [ERR, &#34;Cannot create file&#34;, self.resp.fname, strx[0]]
+    except:
+        response = [ERR,  &#34;Must specify file name&#34;, strx[0]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+def put_data_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;put_data_func()&#34;, strx)
+
+    #print(&#34;fname&#34;, self.resp.fname, &#34;data:&#34;, strx)
+
+    if self.resp.fname == &#34;&#34;:
+        response = [ERR, &#34;No filename for data&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        dlen = len(strx[2])
+        if dlen == 0:
+            response = [OK, &#34;Empty Data, assuming EOF; Closing file&#34;, strx[0]]
+            if  self.resp.fh:
+                self.resp.fh.close()
+                self.resp.fh = None
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+            pass
+    except:
+        #print(&#34;file&#34;, sys.exc_info())
+        response = [ERR, &#34;Must send some data&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        self.resp.fh.seek(strx[1], os.SEEK_SET)
+        self.resp.fh.write(strx[2])
+    except:
+        #print(sys.exc_info())
+        response = [ERR, &#34;Cannot save data on server&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #xstr = &#34;Received chunk: &#39;&#34; + self.resp.fname + \
+    #            &#34;&#39;&#34; + str(dlen) + &#34; bytes&#34;
+    #print( xstr)
+
+    self.resp.datahandler.putencode([OK,  &#34;Got data&#34;], self.resp.ekey)
+
+def get_qr_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print(&#34;get_qr_func()&#34;, len(strx))
+
+    #print(&#34;cwd:&#34;, self.resp.cwd)
+    if len(strx) == 1:
+        try:
+            fp = open(&#39;qr.png&#39;, &#39;rb&#39;)
+            buff = fp.read()
+            fp.close()
+            self.resp.datahandler.putencode([OK, buff], self.resp.ekey)
+        except:
+            self.resp.datahandler.putencode([ERR, &#34;No QR image on server&#34;], self.resp.ekey)
+    else:
+        ret = pyservsup.gl_passwd.perms(self.resp.user)
+        if not int(ret[2]) &amp; pyservsup.PERM_ADMIN:
+            rrr = [ERR, &#34;Only admin can upload QR image&#34;, self.name]
+            self.resp.datahandler.putencode(rrr, self.resp.ekey)
+
+        if type(strx[1]) != type(b&#34;&#34;):
+            strx[1] = strx[1].encode()
+        try:
+            fp = open(&#39;qr.png&#39;, &#39;wb&#39;)
+            fp.write(strx[1])
+            fp.close()
+            self.resp.datahandler.putencode([OK, &#34;Written new QR image&#34;, len(strx[1])], self.resp.ekey)
+        except:
+            self.resp.datahandler.putencode([ERR, &#34;Cannot save QR image&#34;], self.resp.ekey)
+
+def get_twofa_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print(&#34;get_twofa_func called&#34;)
+
+    retval = True
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must pass 2fa code.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    key = &#34;pyvserverkey&#34;
+
+    if not pyotp:
+        self.resp.datahandler.putencode([&#34;ERR&#34;, &#34;2FA lib not installed&#34;],  self.resp.ekey)
+        return
+
+    totp = pyotp.TOTP(key)
+    res = totp.verify(strx[1])
+
+    if not res:
+        self.resp.datahandler.putencode([&#34;ERR&#34;, &#34;Invalid 2FA code&#34;],  self.resp.ekey)
+    else:
+        self.resp.datahandler.putencode([&#34;OK&#34;, &#34;Code Auth OK&#34;,],  self.resp.ekey)
+        retval = False
+
+    return retval
+
+def get_dmode_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;getdmode_func()&#34;, strx)
+
+    flag = not pyservsup.globals.conf.pmode
+    self.resp.datahandler.putencode([&#34;OK&#34;, &#34;%d&#34; % flag],  self.resp.ekey)
+
+def get_help_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_help_func()&#34;, strx)
+
+    harr = []
+    if len(strx) == 1:
+        harr.append(OK)
+        for aa in pyvstate.state_table:
+            harr.append(aa[0])
+        harr.append(&#34;fields&#34;)
+    else:
+        ff = False
+        for aa in pyvstate.state_table:
+            if strx[1] == aa[0]:
+                harr = [OK, aa[5], ]
+                ff = True
+                break
+        if not ff:
+            if strx[1] == &#34;fields&#34;:
+                harr = [OK, fields_help, ]
+            else:
+                harr = [ERR, &#34;No such command&#34;, strx[1], ]
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print( &#34;get_help_func-&gt;output&#34;, harr)
+
+    self.resp.datahandler.putencode(harr, self.resp.ekey)
+
+if __name__ == &#39;__main__&#39;:
+    print(&#34;This module was not meant to use as main&#34;)
+    pass
+
+# EOF</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="pyvfunc.check_chain_path"><code class="name flex">
+<span>def <span class="ident">check_chain_path</span></span>(<span>self, strp)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def check_chain_path(self, strp):
+
+    chainp = os.path.normpath(pyservsup.globals.chaindir)
+    #print(&#34;check:&#34;, strp)
+    #print(&#34;root:&#34;, chainp)
+    dpath = os.path.normpath(strp)
+    #print(&#34;dpath&#34;, dpath)
+    if dpath[:len(chainp)] != chainp:
+        dpath = None
+    return dpath</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.check_payload_path"><code class="name flex">
+<span>def <span class="ident">check_payload_path</span></span>(<span>self, strp)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def check_payload_path(self, strp):
+
+    paypath = os.path.normpath(pyservsup.globals.paydir)
+    #print(&#34;check:&#34;, strp)
+    #print(&#34;root:&#34;, chainp)
+    dpath = os.path.normpath(strp)
+    #print(&#34;dpath&#34;, dpath)
+    if dpath[:len(paypath)] != paypath:
+        dpath = None
+    return dpath</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.contain_path"><code class="name flex">
+<span>def <span class="ident">contain_path</span></span>(<span>self, strp)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Make sure the path is pointing to our universe</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def contain_path(self, strp):
+
+    &#39;&#39;&#39;
+        Make sure the path is pointing to our universe
+    &#39;&#39;&#39;
+    dname = support.unescape(strp);
+
+    #print(&#34;dname&#34;, dname)
+    #print(&#34;self.resp.dir&#34;, self.resp.dir)
+    #print(&#34;self.resp.cwd&#34;, self.resp.cwd)
+
+    self.resp.dir = support.dirclean(self.resp.dir)
+    self.resp.cwd = support.dirclean(self.resp.cwd)
+
+    # Absolute path?
+    if len(strp) &gt; 0 and strp[0] == os.sep:
+        dname2 = os.path.join(self.resp.cwd, dname)
+    else:
+        dname2 = os.path.join(self.resp.cwd, self.resp.dir, dname)
+
+    #print(&#34;dname2&#34;, dname2)
+
+    dname3 = support.dirclean(dname2)
+    #print(&#34;dname3&#34;, dname3)
+
+    dname4 = os.path.abspath(dname3)
+
+    #print(&#34;base dir&#34;, self.resp.cwd)
+    #print(&#34;resp_dir&#34;, self.resp.dir)
+
+    #print(&#34;dname4&#34;, dname4)
+    #print(&#34;slice&#34;, dname4[:len(self.resp.cwd)])
+
+    # Compare roots
+    if dname4[:len(self.resp.cwd)] != self.resp.cwd:
+        return None
+
+    return dname4</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_aadd_func"><code class="name flex">
+<span>def <span class="ident">get_aadd_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_aadd_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_aadd_func()&#34;, strx)
+
+    # Are we allowed to add users?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = [ERR, &#34;only admin can add/delete users.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;must specify user name and pass.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    # Add this admin in not exist
+    ret = pyservsup.gl_passwd.auth(strx[1], strx[2], pyservsup.PERM_ADMIN, pyservsup.USER_ADD)
+    if ret[0] &lt;= 0:
+        response = [ERR, ret[1], strx[0]]
+    elif ret[0] == 1:
+        response = ERR, [&#34;Admin already exists.&#34;, strx[1]]
+    elif ret[0] == 2:
+        response = [OK, &#34;Added admin.&#34;, strx[1]]
+    else:
+        response = [ERR, ret[1], strx[1]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_akey_func"><code class="name flex">
+<span>def <span class="ident">get_akey_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_akey_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_akey_func()&#34;, strx)
+
+    ttt = time.time()
+
+    if pyservsup.globals.conf.pgdebug &gt; 4:
+        print(&#34;get_akey_func() called&#34;)
+
+    ddd = os.path.abspath(&#34;keys&#34;)
+    ppp = os.path.abspath(&#34;private&#34;)
+
+    try:
+        self.keyfroot = pyservsup.pickkey(ddd)
+    except:
+        if self.verbose:
+            print(&#34;No keys generated yet.&#34;, sys.exc_info()[1])
+
+        if self.pgdebug &gt; 2:
+            support.put_exception(&#34;no keys yet&#34;)
+
+        rrr = [ERR, &#34;No keys yet. Run keygen.&#34;, strx[0]]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 4:
+       print(&#34;self.keyfroot&#34;, self.keyfroot)
+
+    if pyservsup.globals.conf.pgdebug &gt; 4:
+        print(&#34;fname&#34;, ddd + os.sep + self.keyfroot + &#34;.pub&#34;)
+
+    #print(&#34;akey 1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    try:
+        # Do public import
+        fp = open(ddd + os.sep + self.keyfroot + &#34;.pub&#34;, &#34;rt&#34;)
+        self.keyx = fp.read()
+        fp.close()
+
+        if pyservsup.globals.conf.pgdebug &gt; 7:
+            print(&#34;Key read: \n&#39;&#34; + self.keyx + &#34;&#39;\n&#34;)
+    except:
+        print(&#34;Cannot read key:&#34;, self.keyfroot, sys.exc_info()[1])
+        support.put_exception(&#34;read key&#34;)
+        rrr = [ERR, &#34;cannot open keyfile.&#34;, strx[0]]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+
+    try:
+        #self.pubkey = RSA.importKey(self.keyx)
+        #self.pubkey = ECC.import_key(self.keyx)
+        self.pubkey = Key.import_pub(self.keyx)
+        #print(&#34;validate&#34;, self.pubkey.validate())
+        #print(&#34;finger&#34;, self.pubkey.fingerprint())
+
+    except:
+        print(&#34;Cannot read key:&#34;, self.keyx[:12], sys.exc_info()[1])
+        support.put_exception(&#34;import  key&#34;)
+        rrr = [ERR, &#34;Cannot read public key.&#34;, strx[0]]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    #print(&#34;akey 2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    # Do private import; we are handleing it here, so key signals errors
+    fp2 = open(ppp + os.sep + self.keyfroot + &#34;.pem&#34;, &#34;rt&#34;)
+    self.keyx2 = fp2.read()
+    fp2.close()
+
+    #print(self.keyx2)
+
+    #print(&#34;akey 3 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    try:
+        #self.privkey = RSA.importKey(self.keyx2)
+        #self.privkey = ECC.import_key(self.keyx2)
+        self.privkey = Key.import_priv(self.keyx2)
+        #print(&#34;akey 3.1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+        #self.priv_cipher = PKCS1_v1_5.new(self.privkey)
+        # Bypass
+        self.priv_cipher = self.privkey
+
+    except:
+        print(&#34;Cannot create private key:&#34;, self.keyx2[:12], sys.exc_info()[1])
+        support.put_exception(&#34;import private key&#34;)
+        rrr = [ERR, &#34;Cannot create private key.&#34;, strx[0]]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    #print(&#34;akey 4 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    # Clean private key from memory
+    hh = SHA256.new(); hh.update(self.keyx.encode())
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print(&#34;Key digest: \n&#39;&#34; + hh.hexdigest() + &#34;&#39;\n&#34;)
+
+    # Deliver the answer in two parts:
+    rrr = [OK, &#34;%s&#34; % hh.hexdigest(), self.keyx]
+    self.resp.datahandler.putencode(rrr, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_buff_func"><code class="name flex">
+<span>def <span class="ident">get_buff_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_buff_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_buff_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify buffer size.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    # Set to an number that most short based (2 bytes) routines can handle
+    num = int(strx[1])
+    if num &lt;= 0:
+        num = 1
+    elif num &gt; 0xf000:
+        num = 0xf000
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print(&#34;buffer set to %d&#34; % num)
+
+    self.buffsize = num
+    response = [OK, &#34;Buffer set to:&#34;, pyservsup.buffsize]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_cd_func"><code class="name flex">
+<span>def <span class="ident">get_cd_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_cd_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_cd_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Directory name cannot be empty.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    dname = contain_path(self, strx[1])
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;dname&#34;, dname)
+    try:
+        if os.path.isdir(dname):
+            self.resp.dir = dname[len(self.resp.cwd):]
+            response = [OK, self.resp.dir]
+        else:
+            # Back out
+            #self.resp.dir = org
+            response = [ERR, &#34;Directory does not exist&#34;, strx[1]]
+    except:
+        support.put_exception(&#34;cd&#34;)
+        response = [ERR, &#34;Must specify directory name.&#34;, strx[0]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_chpass_func"><code class="name flex">
+<span>def <span class="ident">get_chpass_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_chpass_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_chpass_func()&#34;)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify user to change.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify old_pass.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 4:
+        response = [ERR, &#34;Must specify new_pass.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    #print(&#34;chpass&#34;, strx)
+    # Make sure there is a trace of the attempt
+    if pyservsup.globals.conf.pglog &gt; 1:
+        stry = &#34;chpass&#34;, _wr(self.resp.user), \
+                 str(self.resp.client_address)
+        pysyslog.syslog(*stry)
+
+    # Are we allowed to change pass?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        # Authenticate
+        if strx[1] !=  self.resp.user:
+            response = [ERR, &#34;Non admins can only change their own password.&#34;, strx[0]]
+            self.resp.datahandler.putencode(response, self.resp.ekey )
+            return
+
+        xret = pyservsup.gl_passwd.auth(strx[1], strx[2], 0, pyservsup.USER_AUTH)
+        if xret[0] != 1:
+            response = [ERR, &#34;Old pass must match&#34;, strx[0]]
+            self.resp.datahandler.putencode(response, self.resp.ekey )
+            return
+    # Change
+    xret = pyservsup.gl_passwd.auth(strx[1], strx[3], 0, pyservsup.USER_CHPASS)
+
+    ret = &#34;&#34;
+    if xret[0] == 5:
+        if pyservsup.globals.conf.pglog &gt; 1:
+            stry = &#34;Pass changed&#34;, _wr(resp.user), \
+                str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        ret = [OK, &#34;Pass changed&#34;, strx[1]]
+    elif xret[0] == 3:
+        if pyservsup.globals.conf.pglog &gt; 1:
+            stry = &#34;No such user&#34;, _wr(strx[1]),  \
+                str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        ret = [ERR, &#34;No such user.&#34;, strx[1]]
+    elif xret[0] == 1:
+        if pyservsup.globals.conf.pglog &gt; 1:
+            stry = &#34;Successful login&#34;, strx[1], \
+                           str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        ret = [&#34;OK &#34;, self.resp.user, &#34; Authenticated.&#34;]
+        retval = False
+    else:
+        if pyservsup.globals.conf.pglog &gt; 1:
+            stry = &#34;Error on login&#34;, _wr(strx[1]), \
+                    str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        ret = [ERR, xret[1], strx[0]]
+
+    self.resp.datahandler.putencode(ret, self.resp.ekey)
+    return</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_del_func"><code class="name flex">
+<span>def <span class="ident">get_del_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_del_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_del_func()&#34;, strx)
+
+    if len(strx) == 1:
+        response = [ERR, &#34;Must specify file name to delete.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        dname = contain_path(self, strx[1])
+        if not dname:
+            response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        #print(&#34;dname&#34;, dname)
+        if os.path.isfile(dname):
+            try:
+                os.unlink(dname)
+                response = [OK, &#34;File deleted&#34;, strx[1], ]
+            except:
+                response = [ERR, &#34;Could not delete file.&#34;, strx[1]]
+        else:
+            # Say no file
+            response = [ERR, &#34;No Such File.&#34;, strx[1]]
+    except:
+        support.put_exception(&#34;del&#34;)
+        response = [ERR, &#34;Must specify file name to delete.&#34;, strx[0]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_dmode_func"><code class="name flex">
+<span>def <span class="ident">get_dmode_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_dmode_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;getdmode_func()&#34;, strx)
+
+    flag = not pyservsup.globals.conf.pmode
+    self.resp.datahandler.putencode([&#34;OK&#34;, &#34;%d&#34; % flag],  self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_exit_func"><code class="name flex">
+<span>def <span class="ident">get_exit_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_exit_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_exit_func()&#34;, strx)
+
+    # Clean up logouts
+    if self.resp.user:
+        pyservsup.SHARED_LOGINS.deldat(self.resp.user)
+
+    if pyservsup.globals.conf.pglog &gt; 0:
+        stry = &#34;Quit&#34;, _wr(self.resp.user), str(self.resp.client_address)
+        pysyslog.syslog(*stry)
+
+    # This instance will go away, but just to make sure
+    self.resp.user = &#34;&#34;
+
+    self.resp.datahandler.putencode([OK, &#34;Bye&#34;, self.name], self.resp.ekey)
+
+    # Cancel **after** sending bye
+    if self.resp.datahandler.tout:
+        self.resp.datahandler.tout.cancel()
+
+    return True</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_fget_func"><code class="name flex">
+<span>def <span class="ident">get_fget_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_fget_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print(&#34;get_fget_func()&#34;, strx)
+
+    dname = &#34;&#34;
+    if len(strx) == 1:
+        response = [ERR, &#34;Must specify file name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    dname = contain_path(self, strx[1])
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if not os.path.isfile(dname):
+        response = [ERR, &#34;File does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    try:
+        flen = os.stat(dname)[stat.ST_SIZE]
+    except:
+        flen = 0
+
+    response = [OK, str(flen), strx[1]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+    try:
+        fh = open(dname, &#34;rb&#34;)
+    except:
+        support.put_exception(&#34;fget&#34;)
+        response = [ERR, &#34;Cannot open file.&#34;, dname, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    cipher = AES.new(self.resp.ekey[:32].encode(), AES.MODE_CTR,
+                        use_aesni=True, nonce = self.resp.ekey[-8:].encode() )
+    prog = 0
+
+    # Loop, break when file end or transmission error
+    while 1:
+        try:
+            buff = fh.read(self.buffsize)
+            blen = len(buff)
+            if pyservsup.globals.conf.pgdebug &gt; 3:
+                print(&#34;fread&#34;, blen, buff[:12])
+        except:
+            #print(&#34;Cannot read local file&#34;, sys.exc_info())
+            put_exception(&#34;Cannot read file&#34;)
+            break
+
+        buff = cipher.encrypt(buff)
+        try:
+            if pyservsup.globals.conf.pgdebug &gt; 5:
+                print(&#34;putraw&#34;, len(buff), buff[:12])
+            #ret = self.resp.datahandler.putencode([str(blen), buff,],
+            #            self.resp.ekey, False)
+            #dstr = self.resp.datahandler.wrapx(buf, key)
+            ret = self.resp.datahandler.putraw(buff)
+        except:
+            #print(sys.exc_info())
+            suppport.put_exception(&#34;fget&#34;)
+            break;
+
+        #prog += blen
+        #if prog &gt;= flen:
+        #    break
+
+        if ret == 0:
+            break
+        if blen == 0:
+            break
+
+    #if pyservsup.globals.conf.pglog &gt; 1:
+    #    stry = &#34;Server sent file: &#39;&#34; + dname + &#34;&#39; &#34; + str(flen) + &#34; bytes&#34;,
+    #    pysyslog.syslog(stry)
+
+    response = [OK, &#34;Server sent file&#34;, strx[1]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_fput_func"><code class="name flex">
+<span>def <span class="ident">get_fput_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_fput_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_fput_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify file name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    dname = contain_path(self, strx[1])
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if os.path.isfile(dname):
+        was = False
+        for aa in range(3):
+            tmpname = &#34;%s_%d&#34; % (dname, aa)
+            if not os.path.isfile(tmpname):
+                #print(&#34;Saving to backup: %s&#34;, tmpname)
+                was = True
+                try:
+                    os.rename(dname, tmpname)
+                except:
+                    print(sys.exc_info())
+                break
+        if not was:
+            # Wrap around
+            tmpname = &#34;%s_%d&#34; % (dname, 0)
+            #print(&#34;Forced back 0&#34;, tmpname)
+            try:
+                os.remove(tmpname)
+                os.rename(dname, tmpname)
+            except:
+                print(sys.exc_info())
+
+        #response = [ERR, &#34;File exists. Please delete first&#34;, strx[1]]
+        #self.resp.datahandler.putencode(response, self.resp.ekey)
+        #return
+
+    response = [OK, &#34;Send file&#34;, strx[1]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+    try:
+        fh = open(dname, &#34;wb&#34;)
+    except:
+        support.put_exception(&#34;fput&#34;)
+        response = [ERR, &#34;Cannot create file.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    # Loop, break when EOF or transmission error
+    while 1:
+        data = self.resp.datahandler.handle_one(self.resp)
+        #print(&#34;data&#34;, data)
+        if not data:
+            break
+        dstr = self.wr.unwrap_data(self.resp.ekey, data)
+        #print(&#34;dstr[1]&#34;, dstr[1])
+        if not dstr[1]:
+            break
+        fh.write(dstr[1])
+
+    fh.close()
+    response = [OK, &#34;Server received file.&#34;, strx[1]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_hello_func"><code class="name flex">
+<span>def <span class="ident">get_hello_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_hello_func(self, strx):
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print( &#34;get_hello_func()&#34;, strx)
+    strres = [OK, &#34;Hello&#34;, str(pyservsup.globals.siteid), self.name]
+    self.resp.datahandler.putencode(strres, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_help_func"><code class="name flex">
+<span>def <span class="ident">get_help_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_help_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_help_func()&#34;, strx)
+
+    harr = []
+    if len(strx) == 1:
+        harr.append(OK)
+        for aa in pyvstate.state_table:
+            harr.append(aa[0])
+        harr.append(&#34;fields&#34;)
+    else:
+        ff = False
+        for aa in pyvstate.state_table:
+            if strx[1] == aa[0]:
+                harr = [OK, aa[5], ]
+                ff = True
+                break
+        if not ff:
+            if strx[1] == &#34;fields&#34;:
+                harr = [OK, fields_help, ]
+            else:
+                harr = [ERR, &#34;No such command&#34;, strx[1], ]
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print( &#34;get_help_func-&gt;output&#34;, harr)
+
+    self.resp.datahandler.putencode(harr, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_id_func"><code class="name flex">
+<span>def <span class="ident">get_id_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_id_func(self, strx):
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_id_func()&#34;, strx)
+
+    res = [OK, str(pyservsup.globals.siteid), str(self.name)]
+    self.resp.datahandler.putencode(res, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_ihave_func"><code class="name flex">
+<span>def <span class="ident">get_ihave_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_ihave_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_ihave_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify record header.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    uuid = uuid.UUID(strx[2])
+
+    print(&#34;ihave&#34;, strx[1], strx[2])
+    response = [OK,  &#34;Ihave processed&#34;, strx[0], ]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_ihost_func"><code class="name flex">
+<span>def <span class="ident">get_ihost_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_ihost_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_ihost_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify operation (add / remove).&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if not int(ret[2]) &amp; pyservsup.PERM_ADMIN:
+        rrr = [ERR, &#34;Only admin can control / view ihosts&#34;]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    if strx[1] != &#39;list&#39;:
+        if len(strx) &lt; 3:
+            response = [ERR, &#34;Must specify host:port.&#34;, strx[0]]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        if strx[2].find(&#34;:&#34;) &lt; 0:
+            response = [ERR, &#34;Entry must be in host:port format.&#34;, strx[2]]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+    ihname = os.path.realpath(&#34;ihosts.pydb&#34;)
+    if self.pgdebug &gt; 2:
+        print(&#34;ihost:&#34;, ihname)
+    repcore = twincore.TwinCore(ihname)
+    #repcore.pgdebug = 10
+
+    if strx[1] == &#39;add&#39;:
+        ddd = self.pb.encode_data(&#34;&#34;, strx[2])
+        rec = repcore.retrieve(strx[2])
+        if self.pgdebug &gt; 9:
+            print(&#34;rec:&#34;, rec)
+        if rec:
+            if rec[0][0].decode() == strx[2]:
+                #print(&#34;Identical&#34;, rec[0][0])
+                response = [ERR, &#34;Duplicate entry.&#34;, strx[2]]
+                self.resp.datahandler.putencode(response, self.resp.ekey)
+                return
+        ret = repcore.save_data(strx[2], ddd)
+        if self.pgdebug &gt; 8:
+            print(&#34;repcore save:&#34;, ret, ddd)
+        response = [OK, &#34;Added replication host:port.&#34;, strx[2]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+
+    elif strx[1] == &#39;del&#39;:
+        rec = repcore.retrieve(strx[2])
+        if not rec:
+            response = [ERR, &#34;This entry is not in the list.&#34;, strx[2]]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+        if self.pgdebug &gt; 4:
+            print(&#34;delete ihost rec:&#34;, strx[2])
+        ret = repcore.del_rec_bykey(strx[2])
+        response = [OK, &#34;Deleted replication host:port.&#34;, strx[2]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+
+    elif strx[1] == &#39;list&#39;:
+        arr = []
+        for aa in range(repcore.getdbsize()-1, -1, -1):
+            ddd = repcore.get_rec(aa)
+            if ddd:
+                arr.append(str(ddd[0]))
+        #print(&#34;got recs&#34;, arr)
+        response = [OK,  arr, strx[2]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+    else:
+        response = [ERR, &#34;Operation must be &#39;add&#39; or &#39;del or list&#39;.&#34;, strx[2]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_lout_func"><code class="name flex">
+<span>def <span class="ident">get_lout_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_lout_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_lout_func()&#34;, strx)
+
+    if not self.resp.user:
+        response = [ERR, &#34;Not logged in.&#34;, strx[0], ]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pglog &gt; 0:
+        stry = &#34;Logout&#34;, _wr(resp.user), \
+                str(self.resp.client_address)
+        pysyslog.syslog(*stry)
+
+    if self.pgdebug &gt; 3:
+        print(&#34;logout&#34;, self.resp.user)
+
+    if resp.user:
+        pyservsup.SHARED_LOGINS.deldat(resp.user)
+
+    self.resp.user = &#34;&#34;
+
+    response = [OK, &#34;Logged out.&#34;, olduser, ]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_ls_func"><code class="name flex">
+<span>def <span class="ident">get_ls_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_ls_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_ls_func()&#34;, strx)
+
+    dname = &#34;&#34;; sss = &#34;&#34;
+    if len(strx) &lt; 2:
+        strx.append(&#34;.&#34;)
+    try:
+        dname = support.unescape(strx[1]);
+    except:
+        pass
+
+    dname2 = self.resp.cwd + os.sep + self.resp.dir + os.sep + dname
+    #print(&#34;dname2&#34;, dname2)
+
+    dname2 = support.dirclean(dname2)
+    #print(&#34;dname2c&#34;, dname2)
+
+    response = [OK]
+    try:
+        ddd = os.listdir(dname2)
+        for aa in ddd:
+            try:
+                aaa = dname2 + os.sep + aa
+                if stat.S_ISREG(os.stat(aaa)[stat.ST_MODE]):
+                    # Escape spaces
+                    response.append(aa) #support.escape(aa))
+            except:
+                print( &#34;Cannot stat &#34;, aaa, str(sys.exc_info()[1]) )
+
+    except:
+        # Perhaps the user meant the file:
+        if os.path.isfile(dname2):
+            response = [OK, strx[1], strx[0]]
+        else:
+            support.put_exception(&#34;ls &#34;)
+            response = [ERR, &#34;No such directory.&#34;, strx[1]]
+
+    #print(&#34;response&#34;, response)
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_lsd_func"><code class="name flex">
+<span>def <span class="ident">get_lsd_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_lsd_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_lsd_func()&#34;, strx)
+
+    sss = &#34;&#34;
+    dname2 = self.resp.cwd + os.sep + self.resp.dir + os.sep
+    dname2 = support.dirclean(dname2)
+
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print(&#34;get_lsd_func&#34;, dname2)
+
+    response = [ OK, ]
+
+    try:
+        ddd = os.listdir(dname2)
+        for aa in ddd:
+            try:
+                aaa = dname2 + os.sep + aa
+                if stat.S_ISDIR(os.stat(aaa)[stat.ST_MODE]):
+                    # Escape spaces
+                    response.append(aa) #support.escape(aa))
+            except:
+                print( &#34;Cannot stat &#34;, aaa, str(sys.exc_info()[1]) )
+    except:
+        support.put_exception(&#34;lsd&#34;)
+        response = [ERR, str(sys.exc_info()[1] ), strx[0]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_mkdir_func"><code class="name flex">
+<span>def <span class="ident">get_mkdir_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_mkdir_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_mkdir_func()&#34;, strx)
+
+    if len(strx) == 1:
+        response = [ERR, &#34;Must specify directory name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    dname = contain_path(self, strx[1])
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;make dir&#34;, dname)
+
+    if os.path.isdir(dname):
+        response = [ERR, &#34;Directory already exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        os.mkdir(dname)
+        response = [OK, &#34;Made directory:&#34;, strx[1]]
+    except:
+        response = [ERR, &#34;Cannot make directory.&#34;, strx[1]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_pass_func"><code class="name flex">
+<span>def <span class="ident">get_pass_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_pass_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_pass_func()&#34;)
+
+    ret = &#34;&#34;;  retval = True
+
+    #ttt = time.time()
+
+    if len(strx) &lt; 2:
+        self.resp.datahandler.putencode(
+                [ERR, &#34;Must specify pass.&#34;, strx[0]], self.resp.ekey)
+        return retval
+
+    # Make sure there is a trace of the attempt
+    if pyservsup.globals.conf.pglog &gt; 0:
+        stry = &#34;Attempted login&#34;, _wr(self.resp.preuser), \
+                str(self.resp.client_address)
+        pysyslog.syslog(*stry)
+
+    #print(&#34;pass 1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    ret = pyservsup.gl_passwd.perms(self.resp.preuser)
+    #print(&#34;pass 2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    if int(ret[2]) &amp; pyservsup.PERM_DIS:
+        rrr = [ERR, &#34;this user is temporarily disabled&#34;, strx[1]]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return retval
+
+    xret = pyservsup.gl_passwd.auth(self.resp.preuser, strx[1], 0, pyservsup.USER_AUTH)
+    #print(&#34;pass 3 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    rrr = []
+    if xret[0] == 3:
+        if pyservsup.globals.conf.pglog &gt; 0:
+            stry = &#34;No such user&#34;, _wr(self.resp.preuser), \
+                str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        rrr = [ERR, &#34;No such user.&#34;, self.resp.preuser]
+    elif xret[0] == 1:
+
+        if self.pgdebug &gt; 3:
+            print(&#34;Authenticated&#34;, self.resp.preuser)
+
+        userdir2 = pyservsup.globals.paydir + os.sep + self.resp.preuser
+        self.userdir = check_payload_path(self, userdir2)
+        #print(&#34;Contained&#34;,  self.userdir)
+        if not self.userdir:
+            rrr = [ERR, &#34;No access to this path&#34;, userdir2]
+            self.resp.datahandler.putencode(rrr, self.resp.ekey)
+            return
+
+        if not os.path.isdir(self.userdir):
+            os.mkdir(self.userdir)
+        self.resp.cwd = self.userdir
+
+        if pyservsup.globals.conf.pglog &gt; 0:
+            stry = &#34;Successful login&#34;, _wr(self.resp.preuser),  \
+                            str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+
+        # Commit  user
+        self.resp.user = self.resp.preuser
+        self.resp.preuser = &#34;&#34;
+
+        # Anounce it to global stats
+        if self.resp.user:
+            logttt = time.time()
+            pyservsup.SHARED_LOGINS.setdat(self.resp.user, logttt)
+
+        rrr = [OK,  &#34;Authenticated.&#34;, self.resp.user]
+        retval = False
+    else:
+        if pyservsup.globals.conf.pglog &gt; 0:
+            stry = &#34;Error on login&#34;, _wr(self.resp.preuser), \
+                str(self.resp.client_address)
+            pysyslog.syslog(*stry)
+        rrr = [ERR,  xret[1], strx[0]]
+
+    self.resp.datahandler.putencode(rrr, self.resp.ekey)
+    return retval</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_pwd_func"><code class="name flex">
+<span>def <span class="ident">get_pwd_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_pwd_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_pwd_func()&#34;, strx)
+
+    dname2 = self.resp.dir
+    dname2 = support.dirclean(dname2)
+    if dname2 == &#34;&#34;: dname2 = os.sep
+    response = [OK,  dname2]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_qr_func"><code class="name flex">
+<span>def <span class="ident">get_qr_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_qr_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print(&#34;get_qr_func()&#34;, len(strx))
+
+    #print(&#34;cwd:&#34;, self.resp.cwd)
+    if len(strx) == 1:
+        try:
+            fp = open(&#39;qr.png&#39;, &#39;rb&#39;)
+            buff = fp.read()
+            fp.close()
+            self.resp.datahandler.putencode([OK, buff], self.resp.ekey)
+        except:
+            self.resp.datahandler.putencode([ERR, &#34;No QR image on server&#34;], self.resp.ekey)
+    else:
+        ret = pyservsup.gl_passwd.perms(self.resp.user)
+        if not int(ret[2]) &amp; pyservsup.PERM_ADMIN:
+            rrr = [ERR, &#34;Only admin can upload QR image&#34;, self.name]
+            self.resp.datahandler.putencode(rrr, self.resp.ekey)
+
+        if type(strx[1]) != type(b&#34;&#34;):
+            strx[1] = strx[1].encode()
+        try:
+            fp = open(&#39;qr.png&#39;, &#39;wb&#39;)
+            fp.write(strx[1])
+            fp.close()
+            self.resp.datahandler.putencode([OK, &#34;Written new QR image&#34;, len(strx[1])], self.resp.ekey)
+        except:
+            self.resp.datahandler.putencode([ERR, &#34;Cannot save QR image&#34;], self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_rabs_func"><code class="name flex">
+<span>def <span class="ident">get_rabs_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rabs_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rabs_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify absolute position.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;dname&#34;, dname)
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Blockchain &#39;kind&#39; directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print(&#34;rabs&#34;, strx[1], strx[2])
+
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    datax = []
+    dbsize = core.getdbsize()
+    for aa in strx[2:]:
+        aa = int(aa)
+        #convert to offsets
+        if aa &lt; 0:
+            aa = dbsize + aa
+        #print(&#34;aa&#34;, aa)
+        if not core.checkdata(aa):
+            data = [ERR, &#34;Invalid Record, bad checksum.&#34;, aa]
+            self.resp.datahandler.putencode(data, self.resp.ekey)
+            return
+
+        if not core.linkintegrity(aa):
+            data = [ERR, &#34;Invalid Record, link damaged.&#34;, aa]
+            self.resp.datahandler.putencode(data, self.resp.ekey)
+            return
+        try:
+            data = core.get_rec(aa)
+        except:
+            data = &#34;&#34;
+            print(str(sys.exc_info()))
+
+        if self.pgdebug &gt; 4:
+            print(&#34;rec data&#34;, data)
+        if not data:
+            response = [ERR, &#34;Record not found.&#34;, aa,]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        datax.append(data)
+        #print(&#34;data:&#34;, data)
+
+    response = [OK, len(datax), &#34;records&#34;, datax]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_rcheck_func"><code class="name flex">
+<span>def <span class="ident">get_rcheck_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rcheck_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rcheck_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify link or sum&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = [ERR, &#34;Only admin can check integrity&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+
+    errx = False; cnt = -1; arrx = []
+    sss = core.getdbsize()
+    if  strx[2] == &#34;sum&#34;:
+        for aa in range(sss-1, -1, -1):
+            ppp = core.checkdata(aa)
+            if not ppp:
+                arrx.append(aa)
+    elif strx[2] == &#34;link&#34;:
+        for aa in range(sss-1, -1, -1):
+            ppp2 = core.linkintegrity(aa)
+            if not ppp2:
+                arrx.append(aa)
+    else:
+        response = [ERR, &#34;One of &#39;link&#39; or &#39;sum&#39; is required.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(arrx):
+        response = [ERR,  arrx, len(arrx), &#34;errors&#34;, strx[2], sss, &#34;total&#34;]
+    else:
+        response = [OK,  &#34;No errors.&#34;, strx[2], sss, &#34;total&#34;]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_rcount_func"><code class="name flex">
+<span>def <span class="ident">get_rcount_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rcount_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rcount_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify starting point.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 4:
+        response = [ERR, &#34;Must specify ending point.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print(&#34;list: start&#34;, strx[2], &#34;end&#34;, strx[3])
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print(&#34;rlist begin:&#34;, datetime.datetime.fromtimestamp(strx[2]),
+                            &#34;end:&#34;, datetime.datetime.fromtimestamp(strx[3]) )
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;db op1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    arr = []
+    rcnt = 0
+    dbsize = core.getdbsize()
+    for aa in range(dbsize - 1, -1, -1):
+        rec = core.get_header(aa)
+        ddd = pyservsup.uuid2timestamp(uuid.UUID(rec))
+        #ttt = pyservsup.uuid2date(uuid.UUID(rec))
+        #print(ddd, ttt)
+
+        if ddd &gt;= strx[2] and ddd &lt;= strx[3]:
+            rcnt += 1
+
+    if self.pgdebug &gt; 2:
+        print(&#34;rcnt&#34;, &#34;total: %d records&#34; % dbsize, &#34;got: %d records&#34; % rcnt)
+
+    response = [OK,  rcnt, &#34;records&#34;]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_rget_func"><code class="name flex">
+<span>def <span class="ident">get_rget_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rget_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rget_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify data header.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;dname&#34;, dname)
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Blockchain &#39;kind&#39; directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print(&#34;rget&#34;, strx[1], strx[2])
+
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    datax = []
+    for aa in strx[2]:
+        #print(&#34;aa&#34;, aa)
+        # Validate uuid
+        try:
+            uuidx = uuid.UUID(aa)
+        except:
+            print(&#34;getting UUID&#34;, sys.exc_info())
+            #response = [ERR, &#34;Header must be a real UUID.&#34;, strx[2],]
+            #self.resp.datahandler.putencode(response, self.resp.ekey)
+            #return
+            continue
+
+        data = []; ddd = []
+        try:
+            ddd = core.get_payoffs_bykey(aa)
+            if pyservsup.globals.conf.pgdebug &gt; 2:
+                    print(&#34;ddd&#34;, ddd)
+        except:
+            pass
+        if len(ddd) == 0:
+            response = [ERR, &#34;Data not found.&#34;, aa,]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+        try:
+            rechead = core.get_header(ddd[0])
+        except:
+            print(sys.exc_info())
+
+        if not rechead:
+            response = [ERR, &#34;Cannot get data.&#34;, aa,]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        if self.pgdebug &gt; 2:
+            print(&#34;got rechead&#34;, rechead)
+
+        if not core.checkdata(ddd[0]):
+            data = [ERR, &#34;Invalid Record, bad checksum.&#34;, aa]
+            self.resp.datahandler.putencode(data, self.resp.ekey)
+            return
+
+        if not core.linkintegrity(ddd[0]):
+            data = [ERR, &#34;Invalid Record, link damaged.&#34;, aa]
+            self.resp.datahandler.putencode(data, self.resp.ekey)
+            return
+
+        try:
+            data = core.get_rec(ddd[0])
+        except:
+            data = &#34;&#34;
+            print(str(sys.exc_info()))
+
+        if self.pgdebug &gt; 4:
+            print(&#34;rec data&#34;, data)
+        if not data:
+            response = [ERR, &#34;Record not found.&#34;, aa,]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        datax.append(data)
+
+    response = [OK, len(datax), &#34;records&#34;, datax,]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_rhave_func"><code class="name flex">
+<span>def <span class="ident">get_rhave_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rhave_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rhave_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify data header.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print(&#34;dname&#34;, dname)
+
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Blockchain &#39;kind&#39; directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    ddd = []
+    try:
+        ddd = core.get_payoffs_bykey(strx[2])
+    except:
+        pass
+    if len(ddd) == 0:
+        response = [ERR, &#34;Data not found.&#34;, strx[2],]
+    else:
+        response = [OK, &#34;Data found&#34;, strx[2],]
+
+    #_print_handles(self)
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_rlist_func"><code class="name flex">
+<span>def <span class="ident">get_rlist_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rlist_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rlisr_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify starting point.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 4:
+        response = [ERR, &#34;Must specify ending point.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        print(&#34;list: start&#34;, strx[2], &#34;end&#34;, strx[3])
+
+    if pyservsup.globals.conf.pgdebug &gt; 2:
+        print(&#34;rlist begin:&#34;, datetime.datetime.fromtimestamp(strx[2]),
+                            &#34;end:&#34;, datetime.datetime.fromtimestamp(strx[3]) )
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;db op1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    arr = []
+    dbsize = core.getdbsize()
+    for aa in range(dbsize-1, -1, -1):
+        rec = core.get_header(aa)
+        ddd = pyservsup.uuid2timestamp(uuid.UUID(rec))
+        #ttt = pyservsup.uuid2date(uuid.UUID(rec))
+        #print(ddd, ttt)
+
+        if ddd &gt; strx[2] and ddd &lt; strx[3]:
+            arr.append(rec)
+        if len(arr) &gt; 100:
+            break
+
+    #print(&#34;rec&#34;, &#34;%d records&#34; % dbsize, &#34;got: %d&#34; % len(arr))
+
+    # Prevent overload from
+    if len(arr) &gt; 100:
+        # Return error and some data
+        response = [ERR,  &#34;Too many records, narrow date range.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    response = [OK,  arr]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_rmdir_func"><code class="name flex">
+<span>def <span class="ident">get_rmdir_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rmdir_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rmdir_func()&#34;, strx)
+
+    if len(strx) == 1:
+        response = [ERR, &#34;Must specify directory name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    dname = contain_path(self, strx[1])
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;remove dir&#34;, dname)
+
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        os.rmdir(dname)
+        response = [OK, &#34;Deleted directory:&#34;, strx[1]]
+    except:
+        response = [ERR, &#34;Cannot delete directory.&#34;, str(sys.exc_info()[1]), strx[1]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_rput_func"><code class="name flex">
+<span>def <span class="ident">get_rput_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rput_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rput_func()&#34;)
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify blockchain kind and data.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;strx[1]&#34;, strx[1])
+    #print(&#39;curr&#39;, self.resp.dir)
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;dname&#34;, dname)
+    if not os.path.isdir(dname):
+        try:
+            os.mkdir(dname)
+        except:
+            support.put_exception(&#34;rput&#34;)
+            response = [ERR, &#34;Cannot make directory.&#34;, strx[0]]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+    #ttt = time.time()
+    #print(&#34;rput strx[2]&#34;, strx[2])
+    if pyservsup.globals.conf.pgdebug &gt; 0:
+        print(&#34;rput&#34;, strx[1], strx[2][&#39;header&#39;])
+
+    pvh = pyvhash.BcData(strx[2])
+    #print(&#34;pvh&#34;, pvh.datax)
+    if not pvh.checkhash():
+        response = [ERR, &#34;Error on block hash.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if not pvh.checkpow():
+        response = [ERR, &#34;Error on block POW.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    cfname = os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;)
+    #print(&#34;cfname&#34;, cfname)
+    savecore = twinchain.TwinChain(cfname)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    #print(&#34;Got:&#34;, strx[2])
+
+    # Do we have it already?:
+    #ttt = time.time()
+    retoffs = savecore.get_payoffs_bykey(strx[2][&#39;header&#39;])
+    #print(&#34;db get offs  %.3f&#34; % ((time.time() - ttt) * 1000) )
+    if retoffs:
+        if self.pgdebug &gt; 2:
+            print(&#34;Duplicate block, retoffs&#34;, retoffs[0])
+        response = [ERR, &#34;Duplicate block, not saved.&#34;, strx[2][&#39;header&#39;], retoffs[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    undec = self.pb.encode_data(&#34;&#34;, strx[2])
+
+    if  self.pgdebug &gt; 5:
+        print(&#34;Save_data header:&#34;, strx[2][&#34;header&#34;])
+
+    if self.pgdebug &gt; 7:
+        print(&#34;Save data:&#34;, undec)
+
+    try:
+        #savecore.pgdebug = 10
+        ret = savecore.appendwith(strx[2][&#39;header&#39;], undec)
+    except:
+        del savecore
+        print(&#34;exc save_data&#34;, sys.exc_info()[1])
+        response = [ERR, &#34;Cannot save record.&#34;, str(sys.exc_info()[1]) ]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    del savecore
+
+    # if it is not replicated already, add replicate request
+    if not strx[2][&#34;Replicated&#34;]:
+        # Prepare data. Do strings so it can be re-written in place
+        rrr = {
+                # Sun 14.Apr.2024 removed counts, shifted to state data
+                #&#39;count1&#39;: &#34;00000&#34;, &#39;count2&#39; : &#34;00000&#34;, &#39;count3&#39; : &#34;00000&#34;,
+                &#39;header&#39; : strx[2][&#39;header&#39;],
+                &#39;now&#39; : strx[2][&#39;now&#39;], &#39;iso&#39; : strx[2][&#39;iso&#39;],
+                &#39;stamp&#39; : strx[2][&#39;stamp&#39;],
+                &#34;processed&#34; : &#34;00000&#34;,
+                }
+
+        if self.pgdebug &gt; 3:
+            print(&#34;replic req&#34;, rrr)
+
+        undec2 = self.pb.encode_data(&#34;&#34;, rrr)
+        frname = os.path.join(dname, repfname + &#34;.pydb&#34;)
+        #print(&#34;Saving at&#34;, frname)
+        repcore = twincore.TwinCore(frname, 0)
+        #if self.pgdebug &gt; 5:
+        #print(&#34;repl save_data&#34;, strx[2][&#34;Header&#34;], undec2)
+        try:
+            ret = repcore.save_data(rrr[&#39;header&#39;], undec2)
+        except:
+            del repcore
+            print(&#34;exc on save_data&#34;, sys.exc_info()[1])
+            response = [ERR,  &#34;Cannot save replicator.&#34;,  str(sys.exc_info()[1]) ]
+            support.put_exception(&#34;save_data&#34;)
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+
+        del repcore
+    else:
+        if self.pgdebug &gt; 3:
+            print(&#34;Not replicating&#34;, strx[2][&#39;header&#39;])
+        pass
+
+        #print(&#34;db op3 %.3f&#34; % ((time.time() - ttt) * 1000) )
+        #dbsize = repcore.getdbsize()
+        #print(&#34;replicator %d total records&#34; % dbsize)
+
+    response = [OK,  &#34;Blockchain data added.&#34;,  strx[2][&#39;header&#39;]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)
+
+    #open_file_handles = os.listdir(&#39;/proc/self/fd&#39;)
+    #print(&#39;open file handles: &#39; + &#39;, &#39;.join(map(str, open_file_handles)))
+
+    if pyservsup.globals.conf.pglog &gt; 1:
+        stry = &#34;Block Chain Data %s&#34; % strx[2][&#39;header&#39;], \
+                _wr(self.resp.user), str(self.resp.client_address)
+        pysyslog.syslog(*stry)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_rsize_func"><code class="name flex">
+<span>def <span class="ident">get_rsize_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rsize_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rsize_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exist.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #print(&#34;db op1 %.3f&#34; % ((time.time() - ttt) * 1000) )
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+    #print(&#34;db op2 %.3f&#34; % ((time.time() - ttt) * 1000) )
+
+    dbsize = core.getdbsize()
+
+    response = [OK,  dbsize, &#34;records&#34;]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_rtest_func"><code class="name flex">
+<span>def <span class="ident">get_rtest_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rtest_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_rtest_func()&#34;, strx[:4])
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify blockchain kind&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify link or sum&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if len(strx) &lt; 4:
+        response = [ERR, &#34;Must specify record id or ids&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    tmpname = os.path.join(pyservsup.globals.chaindir, strx[1])
+    dname = check_chain_path(self, tmpname)
+
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+    if not os.path.isdir(dname):
+        response = [ERR, &#34;Directory does not exis.t&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    core = twinchain.TwinChain(os.path.join(dname, pyservsup.chainfname + &#34;.pydb&#34;), 0)
+
+    if  strx[2] == &#34;sum&#34;:
+        funcx = core.checkdata
+    elif strx[2] == &#34;link&#34;:
+        funcx = core.linkintegrity
+    else:
+        response = [ERR, &#34;One of &#39;link&#39; or &#39;sum&#39; is required.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    errx = False; cnt = -1; arrx = []
+    sss = len(strx[3:])
+    for aa in strx[3:]:
+        #print(&#34;test:&#34;, aa)
+        try:
+            ddd = core.get_payoffs_bykey(aa)
+        except:
+            pass
+        if len(ddd) == 0:
+            response = [ERR, &#34;Data not found.&#34;, aa,]
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+        if self.pgdebug &gt; 4:
+            try:
+                rec = core.get_rec(ddd[0])
+                print(&#34;rec:&#34;, rec)
+            except:
+                print(&#34;exc: get_header&#34;, sys.exc_info())
+                raise
+        ppp = funcx(ddd[0])
+        if not ppp:
+            arrx.append(aa)
+
+    if len(arrx):
+        response = [ERR,  arrx, len(arrx), &#34;errors&#34;, strx[2]]
+    else:
+        response = [OK,  &#34;No errors.&#34;, strx[2], sss, &#34;records checked.&#34;]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_sess_func"><code class="name flex">
+<span>def <span class="ident">get_sess_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_sess_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_sess_func()&#34;)
+
+    if len(strx) &lt; 4:
+        response = [ERR, &#34;Not enough arguments for session.&#34;]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #sss = SHA512.new(); sss.update(bytes(strx[3], &#34;cp437&#34;))
+    sss = SHA256.new(); sss.update(strx[3].encode())
+
+    # Arrived safely?
+    if strx[2] != sss.hexdigest():
+        self.resp.datahandler.putencode([ERR, &#34;session key damaged on transport.&#34;], self.resp.ekey)
+        return
+
+    # Re init cypher (test)
+    #self.privkey = Key.import_priv(self.keyx2)
+    #self.priv_cipher = self.privkey
+
+    message2 = self.priv_cipher.decrypt(strx[3])
+
+    #print(&#34;sess_key&#34;, message2[:24])
+
+    # Decoded OK?
+    ttt = SHA256.new(); ttt.update(message2.encode())
+
+    if pyservsup.globals.conf.pgdebug &gt; 6:
+        print(&#34;Hash1:&#34;, strx[1])
+        print(&#34;Hash2:&#34;, ttt.hexdigest())
+
+    if ttt.hexdigest() != strx[1]:
+        self.resp.datahandler.putencode(\
+            [ERR, &#34;session key damaged on decoding.&#34;], self.resp.ekey, strx[0])
+        return
+
+    self.resp.datahandler.putencode([OK, &#34;Session estabilished.&#34;], self.resp.ekey)
+    self.resp.ekey = message2
+
+    if pyservsup.globals.conf.pgdebug &gt; 3:
+        support.shortdump(&#34;session key:&#34;, self.resp.ekey.encode() )</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_stat_func"><code class="name flex">
+<span>def <span class="ident">get_stat_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_stat_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_stat_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify file name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    fname = &#34;&#34;; aaa = &#34; &#34;
+    #print(&#34;stat_func&#34;, strx[1])
+
+    dname = support.unescape(strx[1]);
+    #print(&#34;stat_func&#34;, strx[1], dname)
+
+    dname2 = self.resp.cwd + os.sep + self.resp.dir + os.sep + dname
+    dname2 = support.dirclean(dname2)
+
+    response = [OK]
+    response.append(strx[1])
+
+    try:
+        sss = os.stat(dname2)
+        for aa in sss:
+            response.append(str(aa))
+
+    except OSError:
+        support.put_exception(&#34;stat&#34;)
+        #print( sys.exc_info())
+        response = [ERR, str(sys.exc_info()[1]) , strx[0]]
+    except:
+        response = [ERR, &#34;Must specify file name.&#34;, strx[0]]
+        #print( sys.exc_info())
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_throt_func"><code class="name flex">
+<span>def <span class="ident">get_throt_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_throt_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_throt_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        if pyservsup.gl_throttle.getflag():
+            boolstr = &#34;ON&#34;
+        else:
+            boolstr = &#34;OFF&#34;
+        rrr = [OK, &#34;Throttle is&#34;, boolstr]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if not int(ret[2]) &amp; pyservsup.PERM_ADMIN:
+        rrr = [ERR, &#34;Only admin can control throttle&#34;]
+        self.resp.datahandler.putencode(rrr, self.resp.ekey)
+        return
+
+    boolx = pyservsup.str2bool(strx[1], True)
+    #print(&#34;boolx:&#34;, boolx, strx[1], hex(id(strx[1])))
+    if  boolx:
+        boolstr = &#34;ON&#34;
+        pyservsup.gl_throttle.setflag(True)
+    else:
+        boolstr = &#34;OFF&#34;
+        pyservsup.gl_throttle.setflag(False)
+
+    rrr = [OK, &#34;Throttle turned %s&#34; %  boolstr]
+    self.resp.datahandler.putencode(rrr, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_tout_func"><code class="name flex">
+<span>def <span class="ident">get_tout_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_tout_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_tout_func()&#34;, strx)
+
+    tout = self.resp.datahandler.timeout
+    if len(strx) &gt; 1:
+        try:
+            tout = int(strx[1])
+            self.resp.datahandler.timeout = tout
+            resp = [OK, &#34;Timeout set to &#34;, str(tout)],
+        except:
+            resp = [OK, &#34;Timeout value must be an integer&#34;, strx[1]],
+    else:
+        resp = [OK, &#34;Current timeout&#34;, str(self.resp.datahandler.timeout)],
+
+    #if self.resp.datahandler.tout:
+    #    self.resp.datahandler.tout.cancel()
+
+    self.resp.datahandler.putencode(resp, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_twofa_func"><code class="name flex">
+<span>def <span class="ident">get_twofa_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_twofa_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print(&#34;get_twofa_func called&#34;)
+
+    retval = True
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must pass 2fa code.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    key = &#34;pyvserverkey&#34;
+
+    if not pyotp:
+        self.resp.datahandler.putencode([&#34;ERR&#34;, &#34;2FA lib not installed&#34;],  self.resp.ekey)
+        return
+
+    totp = pyotp.TOTP(key)
+    res = totp.verify(strx[1])
+
+    if not res:
+        self.resp.datahandler.putencode([&#34;ERR&#34;, &#34;Invalid 2FA code&#34;],  self.resp.ekey)
+    else:
+        self.resp.datahandler.putencode([&#34;OK&#34;, &#34;Code Auth OK&#34;,],  self.resp.ekey)
+        retval = False
+
+    return retval</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_uadd_func"><code class="name flex">
+<span>def <span class="ident">get_uadd_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_uadd_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_uadd_func()&#34;, strx)
+
+    if len(strx) &lt; 3:
+        response = ERR, &#34;Must specify user name and pass.&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    #print(&#34;uadd&#34;, strx)
+
+    # Are we allowed to add users?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = [ERR, &#34;Only admin can add/delete users&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    # Add this user if not exist
+    ret = pyservsup.gl_passwd.auth(strx[1], strx[2], 0, pyservsup.USER_ADD)
+    if ret[0] &lt;= 0:
+        response = [ERR, ret[1], strx[1]]
+    elif ret[0] == 1:
+        response = [ERR, &#34;User already exists.&#34;, strx[1]]
+    elif ret[0] == 2:
+        response = [&#34;OK&#34;, &#34;Added user.&#34;, strx[1]]
+    else:
+        response = [ERR, ret[1], strx[1]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_udel_func"><code class="name flex">
+<span>def <span class="ident">get_udel_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_udel_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_udel_func()&#34;, strx)
+
+    retval = 0
+     # Are we allowed to add users?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = ERR, &#34;Only admin can add/delete users&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+    if len(strx) &lt; 2:
+        response = [ERR, &#34;Must specify user name to delete&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+    # Delete user
+    ret = pyservsup.gl_passwd.auth(strx[1], &#34;&#34;,
+                    pyservsup.PERM_NONE, pyservsup.USER_DEL)
+    #print(&#34;udel ret&#34;, ret)
+    if ret[0] == 0:
+        response = [ERR, ret[1], strx[1]]
+    elif ret[0] == 4:
+        response = [OK, &#34;deleted user&#34;, strx[1]]
+    else:
+        response = [ERR, ret[1], strx[1]]
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_uena_func"><code class="name flex">
+<span>def <span class="ident">get_uena_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_uena_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_uena_func()&#34;, strx)
+
+    retval = 0
+
+    # Are we allowed to add users?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = ERR, &#34;only admin can modify users.&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    if len(strx) &lt; 2:
+        response = ERR, &#34;Must specify user name and flag.&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    if strx[2] == &#34;enable&#34;:
+        mode = pyservsup.PERM_DIS  | pyservsup.RESET_MODE
+    elif strx[2] == &#34;disable&#34;:
+        mode = pyservsup.PERM_DIS
+    else:
+        response = [ERR, &#34;Must specify &#39;enable&#39; or &#39;disable&#39;&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    # Add this user in not exist
+    ret = pyservsup.gl_passwd.auth(strx[1], strx[2], mode, pyservsup.USER_CHMOD)
+
+    if ret[0] == 0:
+        response = ERR, ret[1], strx[1]
+    elif ret[0] == 8:
+        response = OK,  strx[1], strx[2] + &#34;d&#34;
+    else:
+        response = ERR, ret[1], strx[1]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_uini_func"><code class="name flex">
+<span>def <span class="ident">get_uini_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_uini_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_uini_func()&#34;)
+
+    # Test for local client
+    if str(self.resp.client_address[0]) != &#34;127.0.0.1&#34;:
+        response = [ERR,  &#34;Must connect from loopback interface.&#34;, strx[0]]
+
+    elif  pyservsup.gl_passwd.count() != 0:
+        response = [ERR, &#34;Already has initial user&#34;, strx[0]]
+
+    elif len(strx) &lt; 3:
+        response = [ERR, &#34;Must specify user name and pass.&#34;, strx[0]]
+    else:
+        ret = pyservsup.gl_passwd.auth(strx[1], strx[2],
+                    pyservsup.PERM_INI | pyservsup.PERM_ADMIN,
+                        pyservsup.USER_ADD)
+        if ret[0] == 0:
+            response = [ERR, ret[1], strx[0]]
+        elif ret[0] == 1:
+            response = [ERR,
+            &#34;User already exists, no change. Use pass function.&#34;, strx[0]];
+        elif ret[0] == 2:
+
+            if pyservsup.globals.conf.pglog &gt; 1:
+                stry = &#34;Added initial user&#34;,  strx[1], \
+                        str(self.resp.client_address)
+                pysyslog.syslog(*stry)
+            response = [OK, &#34;Added initial user&#34;, strx[1]]
+        else:
+            response = [ERR, ret[1], strx[0]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_ulist_func"><code class="name flex">
+<span>def <span class="ident">get_ulist_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_ulist_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_ulist_func()&#34;, strx)
+
+    retval = 0
+
+    # Are we allowed to add users?
+    ret = pyservsup.gl_passwd.perms(self.resp.user)
+    if int(ret[2]) &amp; pyservsup.PERM_ADMIN != pyservsup.PERM_ADMIN:
+        response = ERR, &#34;only admin can view users.&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    if len(strx) &lt; 2:
+        response = ERR, &#34;Must specify user / admin flag&#34;, strx[0]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    if strx[1] == &#34;user&#34;:
+        mode = pyservsup.PERM_NONE
+    elif strx[1] == &#34;admin&#34;:
+        mode = pyservsup.PERM_ADMIN
+    elif strx[1] == &#34;initial&#34;:
+        mode = pyservsup.PERM_INI
+    elif strx[1] == &#34;disabled&#34;:
+        mode = pyservsup.PERM_DIS
+    else:
+        response = [ERR, &#34;Must specify &#39;user&#39; or &#39;admin&#39; or &#39;disabled&#39; or &#39;initial&#39;&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return retval
+
+    response = pyservsup.gl_passwd.listusers(mode)
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_user_func"><code class="name flex">
+<span>def <span class="ident">get_user_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_user_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_user_func()&#34;, strx)
+
+    if len(strx) &lt; 2:
+        resp = [ERR, &#34;Must specify user name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(resp, self.resp.ekey)
+        return
+
+    if self.resp.user:
+        self.resp.datahandler.putencode([ERR, &#34;Already logged in&#34;], self.resp.ekey)
+        return
+
+    self.resp.preuser = strx[1]
+    self.resp.datahandler.putencode([OK, &#34;Send pass for&#34;, strx[1]], self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.get_ver_func"><code class="name flex">
+<span>def <span class="ident">get_ver_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_ver_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;get_ver_func()&#34;, strx)
+
+    res = [OK, &#34;%s&#34; % pyservsup.version,
+                        &#34;%s&#34; % pyservsup.globals.siteid, self.name]
+
+    if pyservsup.globals.conf.pgdebug &gt; 4:
+        print( &#34;get_ver_func-&gt;output&#34;, res)
+
+    self.resp.datahandler.putencode(res, self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.put_data_func"><code class="name flex">
+<span>def <span class="ident">put_data_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def put_data_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;put_data_func()&#34;, strx)
+
+    #print(&#34;fname&#34;, self.resp.fname, &#34;data:&#34;, strx)
+
+    if self.resp.fname == &#34;&#34;:
+        response = [ERR, &#34;No filename for data&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        dlen = len(strx[2])
+        if dlen == 0:
+            response = [OK, &#34;Empty Data, assuming EOF; Closing file&#34;, strx[0]]
+            if  self.resp.fh:
+                self.resp.fh.close()
+                self.resp.fh = None
+            self.resp.datahandler.putencode(response, self.resp.ekey)
+            return
+            pass
+    except:
+        #print(&#34;file&#34;, sys.exc_info())
+        response = [ERR, &#34;Must send some data&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        self.resp.fh.seek(strx[1], os.SEEK_SET)
+        self.resp.fh.write(strx[2])
+    except:
+        #print(sys.exc_info())
+        response = [ERR, &#34;Cannot save data on server&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    #xstr = &#34;Received chunk: &#39;&#34; + self.resp.fname + \
+    #            &#34;&#39;&#34; + str(dlen) + &#34; bytes&#34;
+    #print( xstr)
+
+    self.resp.datahandler.putencode([OK,  &#34;Got data&#34;], self.resp.ekey)</code></pre>
+</details>
+</dd>
+<dt id="pyvfunc.put_file_func"><code class="name flex">
+<span>def <span class="ident">put_file_func</span></span>(<span>self, strx)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def put_file_func(self, strx):
+
+    if pyservsup.globals.conf.pgdebug &gt; 1:
+        print( &#34;put_file_func()&#34;, strx)
+
+    if len(strx) == 1:
+        response = [ERR, &#34;Must specify file name.&#34;, strx[0]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    # Close possible pending
+    if  self.resp.fh:
+        self.resp.fh.close()
+        self.resp.fh = None
+
+    dname = contain_path(self, strx[1])
+    if not dname:
+        response = [ERR, &#34;No Access to directory.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    if os.path.isfile(dname):
+        response = [ERR, &#34;File exists. Delete first.&#34;, strx[1]]
+        self.resp.datahandler.putencode(response, self.resp.ekey)
+        return
+
+    try:
+        try:
+            # Create handle
+            self.resp.fh = open(dname, &#34;wb&#34;)
+            self.resp.fname = strx[1]
+            response = [OK, &#34;Send file&#34;, self.resp.fname]
+        except:
+            response = [ERR, &#34;Cannot create file&#34;, self.resp.fname, strx[0]]
+    except:
+        response = [ERR,  &#34;Must specify file name&#34;, strx[0]]
+
+    self.resp.datahandler.putencode(response, self.resp.ekey)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="two-column">
+<li><code><a title="pyvfunc.check_chain_path" href="#pyvfunc.check_chain_path">check_chain_path</a></code></li>
+<li><code><a title="pyvfunc.check_payload_path" href="#pyvfunc.check_payload_path">check_payload_path</a></code></li>
+<li><code><a title="pyvfunc.contain_path" href="#pyvfunc.contain_path">contain_path</a></code></li>
+<li><code><a title="pyvfunc.get_aadd_func" href="#pyvfunc.get_aadd_func">get_aadd_func</a></code></li>
+<li><code><a title="pyvfunc.get_akey_func" href="#pyvfunc.get_akey_func">get_akey_func</a></code></li>
+<li><code><a title="pyvfunc.get_buff_func" href="#pyvfunc.get_buff_func">get_buff_func</a></code></li>
+<li><code><a title="pyvfunc.get_cd_func" href="#pyvfunc.get_cd_func">get_cd_func</a></code></li>
+<li><code><a title="pyvfunc.get_chpass_func" href="#pyvfunc.get_chpass_func">get_chpass_func</a></code></li>
+<li><code><a title="pyvfunc.get_del_func" href="#pyvfunc.get_del_func">get_del_func</a></code></li>
+<li><code><a title="pyvfunc.get_dmode_func" href="#pyvfunc.get_dmode_func">get_dmode_func</a></code></li>
+<li><code><a title="pyvfunc.get_exit_func" href="#pyvfunc.get_exit_func">get_exit_func</a></code></li>
+<li><code><a title="pyvfunc.get_fget_func" href="#pyvfunc.get_fget_func">get_fget_func</a></code></li>
+<li><code><a title="pyvfunc.get_fput_func" href="#pyvfunc.get_fput_func">get_fput_func</a></code></li>
+<li><code><a title="pyvfunc.get_hello_func" href="#pyvfunc.get_hello_func">get_hello_func</a></code></li>
+<li><code><a title="pyvfunc.get_help_func" href="#pyvfunc.get_help_func">get_help_func</a></code></li>
+<li><code><a title="pyvfunc.get_id_func" href="#pyvfunc.get_id_func">get_id_func</a></code></li>
+<li><code><a title="pyvfunc.get_ihave_func" href="#pyvfunc.get_ihave_func">get_ihave_func</a></code></li>
+<li><code><a title="pyvfunc.get_ihost_func" href="#pyvfunc.get_ihost_func">get_ihost_func</a></code></li>
+<li><code><a title="pyvfunc.get_lout_func" href="#pyvfunc.get_lout_func">get_lout_func</a></code></li>
+<li><code><a title="pyvfunc.get_ls_func" href="#pyvfunc.get_ls_func">get_ls_func</a></code></li>
+<li><code><a title="pyvfunc.get_lsd_func" href="#pyvfunc.get_lsd_func">get_lsd_func</a></code></li>
+<li><code><a title="pyvfunc.get_mkdir_func" href="#pyvfunc.get_mkdir_func">get_mkdir_func</a></code></li>
+<li><code><a title="pyvfunc.get_pass_func" href="#pyvfunc.get_pass_func">get_pass_func</a></code></li>
+<li><code><a title="pyvfunc.get_pwd_func" href="#pyvfunc.get_pwd_func">get_pwd_func</a></code></li>
+<li><code><a title="pyvfunc.get_qr_func" href="#pyvfunc.get_qr_func">get_qr_func</a></code></li>
+<li><code><a title="pyvfunc.get_rabs_func" href="#pyvfunc.get_rabs_func">get_rabs_func</a></code></li>
+<li><code><a title="pyvfunc.get_rcheck_func" href="#pyvfunc.get_rcheck_func">get_rcheck_func</a></code></li>
+<li><code><a title="pyvfunc.get_rcount_func" href="#pyvfunc.get_rcount_func">get_rcount_func</a></code></li>
+<li><code><a title="pyvfunc.get_rget_func" href="#pyvfunc.get_rget_func">get_rget_func</a></code></li>
+<li><code><a title="pyvfunc.get_rhave_func" href="#pyvfunc.get_rhave_func">get_rhave_func</a></code></li>
+<li><code><a title="pyvfunc.get_rlist_func" href="#pyvfunc.get_rlist_func">get_rlist_func</a></code></li>
+<li><code><a title="pyvfunc.get_rmdir_func" href="#pyvfunc.get_rmdir_func">get_rmdir_func</a></code></li>
+<li><code><a title="pyvfunc.get_rput_func" href="#pyvfunc.get_rput_func">get_rput_func</a></code></li>
+<li><code><a title="pyvfunc.get_rsize_func" href="#pyvfunc.get_rsize_func">get_rsize_func</a></code></li>
+<li><code><a title="pyvfunc.get_rtest_func" href="#pyvfunc.get_rtest_func">get_rtest_func</a></code></li>
+<li><code><a title="pyvfunc.get_sess_func" href="#pyvfunc.get_sess_func">get_sess_func</a></code></li>
+<li><code><a title="pyvfunc.get_stat_func" href="#pyvfunc.get_stat_func">get_stat_func</a></code></li>
+<li><code><a title="pyvfunc.get_throt_func" href="#pyvfunc.get_throt_func">get_throt_func</a></code></li>
+<li><code><a title="pyvfunc.get_tout_func" href="#pyvfunc.get_tout_func">get_tout_func</a></code></li>
+<li><code><a title="pyvfunc.get_twofa_func" href="#pyvfunc.get_twofa_func">get_twofa_func</a></code></li>
+<li><code><a title="pyvfunc.get_uadd_func" href="#pyvfunc.get_uadd_func">get_uadd_func</a></code></li>
+<li><code><a title="pyvfunc.get_udel_func" href="#pyvfunc.get_udel_func">get_udel_func</a></code></li>
+<li><code><a title="pyvfunc.get_uena_func" href="#pyvfunc.get_uena_func">get_uena_func</a></code></li>
+<li><code><a title="pyvfunc.get_uini_func" href="#pyvfunc.get_uini_func">get_uini_func</a></code></li>
+<li><code><a title="pyvfunc.get_ulist_func" href="#pyvfunc.get_ulist_func">get_ulist_func</a></code></li>
+<li><code><a title="pyvfunc.get_user_func" href="#pyvfunc.get_user_func">get_user_func</a></code></li>
+<li><code><a title="pyvfunc.get_ver_func" href="#pyvfunc.get_ver_func">get_ver_func</a></code></li>
+<li><code><a title="pyvfunc.put_data_func" href="#pyvfunc.put_data_func">put_data_func</a></code></li>
+<li><code><a title="pyvfunc.put_file_func" href="#pyvfunc.put_file_func">put_file_func</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

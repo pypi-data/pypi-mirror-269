@@ -1,0 +1,19 @@
+[console_scripts]
+pyvcli_cli = pyvcli_cli:mainfunct
+pyvcli_fman = pyvcli_fman:mainfunct
+pyvcli_gethelp = pyvcli_gethelp:mainfunct
+pyvcli_hello = pyvcli_hello:mainfunct
+pyvcli_ihost = pyvcli_ihost:mainfunct
+pyvcli_qr = pyvcli_qr:mainfunct
+pyvcli_replic = pyvcli_replic:mainfunct
+pyvcli_rman = pyvcli_rman:mainfunct
+pyvcli_uini = pyvcli_uini:mainfunct
+pyvcli_uman = pyvcli_uman:mainfunct
+pyvcli_ver = pyvcli_ver:mainfunct
+pyvcpanel = pyvcpanel:mainfunct
+pyvgenkey = pyvgenkey:mainfunct
+pyvgenkeys = pyvgenkeys:mainfunct
+pyvreplic = pyvreplic:mainfunct
+pyvserv = pyvserv:mainfunct
+pyvservui = pyvservui:mainfunct
+pyvtally = pyvtally:mainfunct
