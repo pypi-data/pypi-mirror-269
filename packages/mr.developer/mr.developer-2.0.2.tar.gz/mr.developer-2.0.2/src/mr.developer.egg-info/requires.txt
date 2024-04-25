@@ -1,0 +1,9 @@
+setuptools
+zc.buildout
+six
+
+[:python_version=="2.6"]
+argparse
+
+[test]
+mock
