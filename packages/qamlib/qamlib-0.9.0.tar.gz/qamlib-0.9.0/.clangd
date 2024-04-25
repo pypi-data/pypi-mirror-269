@@ -1,0 +1,4 @@
+# Suppress this warning because we don't really care, and prefer
+# utils.h: v4l2_exception macro to be easier to read.
+Diagnostics:
+  Suppress: gnu-statement-expression-from-macro-expansion
