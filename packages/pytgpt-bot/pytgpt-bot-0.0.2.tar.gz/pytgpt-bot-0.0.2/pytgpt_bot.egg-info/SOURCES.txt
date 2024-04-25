@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+pytgpt_bot/__init__.py
+pytgpt_bot/__main__.py
+pytgpt_bot/cli.py
+pytgpt_bot/config.py
+pytgpt_bot/db.py
+pytgpt_bot/main.py
+pytgpt_bot.egg-info/PKG-INFO
+pytgpt_bot.egg-info/SOURCES.txt
+pytgpt_bot.egg-info/dependency_links.txt
+pytgpt_bot.egg-info/entry_points.txt
+pytgpt_bot.egg-info/requires.txt
+pytgpt_bot.egg-info/top_level.txt
