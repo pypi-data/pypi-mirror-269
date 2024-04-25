@@ -1,0 +1,2 @@
+[console_scripts]
+b2bTools = b2bTools.__main__:main

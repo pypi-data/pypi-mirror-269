@@ -1,0 +1,12 @@
+biopython ~= 1.83
+Cython~=0.29.37
+matplotlib ~= 3.5.3
+numpy ~= 1.26.4
+pandas ~= 1.5.3
+pomegranate ~= 0.14
+requests ~= 2.31.0
+scikit-learn ~= 1.0.2
+scipy ~= 1.12.0
+torch ~= 1.13.1
+torchvision ~= 0.14.1
+urllib3 ~= 1.26.6
