@@ -1,0 +1,13 @@
+aiohttp[speedups]>=3.8.3
+aiohttp-client-cache>=0.8.1
+aiosqlite
+cytoolz
+ujson
+
+[notebook]
+nest-asyncio
+
+[test]
+pytest-cov
+pytest-sugar
+pytest-xdist[psutil]
