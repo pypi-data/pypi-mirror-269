@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: libeeepy
+Version: 2.0.0
+Summary: A public module of eeechina.
+Home-page: https://www.eeechina.cn
+Author: ['sunshubei', 'songmeiyang']
+Author-email: sunshubei@outlook.com,songmeiyang@vip.qq.com
+License: MIT Licence
+Keywords: data process,sunshubei,pymysql,songmeiyang
+Platform: any
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pymysql
+
+customize libeeechina
+
