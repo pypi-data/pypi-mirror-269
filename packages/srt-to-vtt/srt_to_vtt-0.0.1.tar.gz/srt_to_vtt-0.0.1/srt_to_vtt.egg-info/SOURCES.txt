@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+srt_to_vtt/__init__.py
+srt_to_vtt/srt_to_vtt.py
+srt_to_vtt.egg-info/PKG-INFO
+srt_to_vtt.egg-info/SOURCES.txt
+srt_to_vtt.egg-info/dependency_links.txt
+srt_to_vtt.egg-info/top_level.txt

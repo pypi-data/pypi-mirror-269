@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: srt-to-vtt
+Version: 0.0.1
+Summary: Python package to enable easy conversion of .srt files to .vtt files.
+Home-page: https://github.com/joshdavham/srt-to-vtt
+Author: Joshua Hamilton
+Author-email: hamiltonjoshuadavid@gmail.com
+License: MIT
+Keywords: subtitle,subtitles,convert,srt,vtt,webvtt
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Python package to enable easy conversion of .srt files to .vtt files.
