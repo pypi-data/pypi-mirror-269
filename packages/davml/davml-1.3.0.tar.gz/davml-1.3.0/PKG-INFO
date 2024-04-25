@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: davml
+Version: 1.3.0
+Summary: A package to echo contents of programs.py to clipboard
+Author: Your Name
+Author-email: your.email@example.com
+Requires-Dist: pyperclip
+Requires-Dist: markdown2
+Requires-Dist: google.generativeai

@@ -1,0 +1,4 @@
+[console_scripts]
+chat = davml.chat:chat
+dav = davml.programs:main
+ml = davml.program:main
