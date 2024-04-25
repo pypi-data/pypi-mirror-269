@@ -1,0 +1,29 @@
+[project]
+name = "motorcalc"
+version = "0.2.1"
+description = "Add your description here"
+authors = [
+    { name = "Gerrit Kocherscheidt", email = "kochersg@koco-group.com" }
+]
+dependencies = [
+    "matplotlib>=3.8.4",
+    "numpy>=1.26.4",
+    "openpyxl>=3.1.2",
+    "texttable>=1.7.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/motorcalc", "src/physics"]
