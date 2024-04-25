@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: polugins_type_gen
+Version: 0.5.6
+Summary: Type stub generator Polugins.
+Author: StefanBRas
+Author-email: opensource@bruhn.io
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: polugins (>=0.2)
+Description-Content-Type: text/markdown
+
+# Polugins Type Gen
+
+Generate types for Polars using Polugins.
+
+See full information at [Github](https://github.com/StefanBRas/polugins)
+
