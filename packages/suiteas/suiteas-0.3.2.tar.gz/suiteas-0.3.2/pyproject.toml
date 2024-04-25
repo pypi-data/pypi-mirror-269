@@ -1,0 +1,171 @@
+[project]
+name = "suiteas"
+dynamic = ["version"]
+description = "An opinionated testing suite organizer for pytest"
+authors = [
+    { name = "Nathan McDougall", email = "nathan.j.mcdougall@gmail.com" },
+]
+dependencies = [
+    "pydantic>=2.4.2",
+    "tomli>=2.0.1",
+] # Sync with .pre-commit-config.yaml
+readme = "README.md"
+requires-python = ">= 3.10" # Sync with ruff target-version, ci.yml
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Testing",
+    "Typing :: Typed",
+]
+keywords = [
+    "pytest",
+    "test",
+    "testing",
+    "test suite",
+    "suite",
+    "sync",
+    "synchronize",
+    "pre-commit",
+    "boilerplate",
+    "skeleton",
+]
+
+[project.urls]
+"Source Code" = "https://github.com/nathanjmcdougall/suiteas"
+"Bug Tracker" = "https://github.com/nathanjmcdougall/suiteas/issues"
+
+[project.scripts]
+suiteas = "suiteas:run_suiteas"
+
+[build-system]
+requires = ["setuptools", "setuptools_scm[toml]"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/suiteas/_version.py"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["suiteas"]
+license-files = ["LICENSE"]
+
+[tool.distutils.bdist_wheel]
+universal = true
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "towncrier>=23.10.0",
+    "build>=1.0.3",
+    "twine>=4.0.2",
+    "pre-commit>=3.5.0",
+    "setuptools>=68.2.2",
+    "setuptools_scm[toml]>=8.0.4",
+    "pytest>=7.4.3",
+    "typing-extensions>=4.8.0",
+    #
+    "ruff==0.2.2",
+    "mypy==1.8.0",
+    "python-dotenv==1.0.0",
+    # ^Sync with .pre-commit-config.yaml
+    "pysource-codegen>=0.5.0",
+    "pytest-cov>=4.1.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.towncrier]
+directory = "doc/changelog_entries"
+package = "suiteas"
+package_dir = "src"
+title_format = "{version} ({project_date})"
+filename = "doc/source/release/changelog/changelog.rst"
+issue_format = "https://github.com/nathanjmcdougall/suiteas/issues/{issue}"
+[[tool.towncrier.type]]
+directory = "feature"
+name = "Features"
+showcontent = true
+[[tool.towncrier.type]]
+directory = "bugfix"
+name = "Bug fixes"
+showcontent = true
+
+[tool.ruff]
+src = ["src"]
+extend-exclude = ["tests/assets/**"]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "S101",    # Use of assert is controversial but in any case is useful with pytest
+    "D202",    # This is controversial, it is useful to have a blank line after a docstring
+    "D203",    # This is controversial, no need to have a blank line before a docstring
+    "D213",    # This conflicts with D212 and violates PEP 257
+    "D406",    # This rule is for non-Google style docstrings
+    "D407",    # This rule is for non-Google style docstrings
+    "D408",    # This rule is for non-Google style docstrings
+    "D409",    # This rule is for non-Google style docstrings
+    "RET504",  # This is controversial, named returns are often clearer.
+    "C408",    # This is controversial, calls to `dict` can be more idiomatic than {}.
+    "ANN101",  # This is controversial, `self` doesn't need a verbose type annotation.
+    "ANN102",  # This is controversial, `cls` doesn't need a verbose type annotation.
+    "ANN401",  # This is too strict for dunder methods.
+    "PTH201",  # This is controversial, when dealing with relative paths "." is clearer.
+    "PERF401", # This can hurt readability; the performance is not always worth it.
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.extend-per-file-ignores]
+"src/suiteas/**/__init__.py" = [
+    "D104", # __init__.py files do not need a docstring necessarily.
+]
+"src/suiteas_test/**/__init__.py" = [
+    "D104", # __init__.py files do not need a docstring necessarily.
+]
+"tests/**/__init__.py" = [
+    "D104", # __init__.py files do not need a docstring necessarily.
+]
+"tests/**/*.py" = [
+    "D101", # Class docstrings are not necessary for tests.
+    "D102", # Method docstrings are not necessary for tests.
+    "D100", # Module docstrings are not necessary for tests.
+]
+
+[tool.suiteas]
+pkg_names = ["suiteas"]
+
+[tool.mypy]
+strict = true
+mypy_path = ["src"]
+exclude = ['tests/', 'doc/']
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.report]
+ignore_errors = true
+show_missing = true
+exclude_lines = [
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise AssertionError",
+    # Don't complain if non-runnable code isn't run:
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
+]
