@@ -1,0 +1,45 @@
+Metadata-Version: 2.3
+Name: luke_roberts_cloud_api
+Version: 0.0.2
+Summary: Exposes the API of the Luke Roberts cloud via utility classes. Luke Roberts is a Lighting Manufacturer.
+Project-URL: Homepage, https://github.com/julian-lenz/Luke-Roberts-Cloud-API/tree/main
+Project-URL: Issues, https://github.com/julian-lenz/Luke-Roberts-Cloud-API/issues
+Author-email: Julian Lenzenweger <j.lenzenweger@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Luke Roberts Cloud API
+
+This is a Python library for abstracting the HTTP API of the lamp control for Luke Roberts lamps.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install luke_roberts_cloud_api
+```
+
+## Usage
+
+```python
+import luke_roberts_cloud_api
+
+# setup connection
+c
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
