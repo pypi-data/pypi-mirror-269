@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: flamingo
+Version: 1.10.1
+Summary: Flamingo is a python3-based, pelican-inspired static site generator
+Home-page: https://github.com/pengutronix/flamingo
+Author: Florian Scherf
+Author-email: python@pengutronix.de
+License: Apache License 2.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: IPython
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Documentation
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Classifier: Topic :: Text Processing :: Markup :: XML
+Classifier: Topic :: Utilities
+Provides-Extra: chardet
+Provides-Extra: coloredlogs
+Provides-Extra: feeds
+Provides-Extra: full
+Provides-Extra: live-server
+Provides-Extra: markdown
+Provides-Extra: photoswipe
+Provides-Extra: pygments
+Provides-Extra: sphinx-themes
+Provides-Extra: thumbnails
+License-File: LICENCE
+
+flamingo
+========
+
+.. image:: doc/content/images/flamingo.svg
+    :height: 128px
+    :width: 128px
+
+|
+
+.. image:: https://img.shields.io/pypi/l/flamingo.svg
+    :alt: pypi.org
+    :target: https://pypi.org/project/flamingo
+.. image:: https://github.com/pengutronix/flamingo/actions/workflows/ci.yaml/badge.svg
+    :alt: CI Test Status
+    :target: https://github.com/Bastian-Krause/flamingo/actions/workflows/ci.yaml
+.. image:: https://github.com/pengutronix/flamingo/actions/workflows/docs.yaml/badge.svg
+    :alt: Documentation Build Status
+    :target: https://github.com/Bastian-Krause/flamingo/actions/workflows/docs.yaml
+.. image:: https://img.shields.io/pypi/pyversions/flamingo.svg
+    :alt: pypi.org
+    :target: https://pypi.org/project/flamingo
+.. image:: https://img.shields.io/pypi/v/flamingo.svg
+    :alt: pypi.org
+    :target: https://pypi.org/project/flamingo
+.. image:: https://img.shields.io/codecov/c/github/pengutronix/flamingo.svg
+    :alt: codecov.io
+    :target: https://codecov.io/gh/pengutronix/flamingo/
+
+
+Flamingo is a python3-based, pelican-inspired static site generator, made by
+`Pengutronix <https://www.pengutronix.de>`__
+
+Websites powered by flamingo:
+ - `pengutronix.de <https://www.pengutronix.de>`__
+ - `linux-automation.com <https://www.linux-automation.com/de/>`__
+
+Documentation: `flamingo-web.org <https://flamingo-web.org>`__
