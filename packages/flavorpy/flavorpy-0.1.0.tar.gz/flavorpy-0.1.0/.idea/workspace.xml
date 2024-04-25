@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d01e7cae-d866-4ed0-aaf6-509a35d7ebd7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/constructterms/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/constructterms/calculations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/constructterms/field.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/constructterms/group.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/constructterms/groups/groups.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/doctrees/constructterms.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/doctrees/environment.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/doctrees/examples/detailedexample_modelfitting.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/doctrees/examples/examples_page.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/doctrees/examples/simpleexample_modelfitting.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/doctrees/index.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/doctrees/modelfitting.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/.buildinfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_modules/constructterms/calculations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_modules/constructterms/field.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_modules/constructterms/group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_modules/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_modules/modelfitting/experimentaldata.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_modules/modelfitting/fit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_modules/modelfitting/mixingcalculations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_modules/modelfitting/model.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_modules/modelfitting/parameterspace.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_sources/constructterms.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_sources/examples/detailedexample_modelfitting.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_sources/examples/examples_page.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_sources/examples/simpleexample_modelfitting.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_sources/index.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_sources/modelfitting.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_sphinx_design_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_sphinx_design_static/design-tabs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/basic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/design-tabs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/doctools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/documentation_options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/file.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/language_data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/pygments.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/scripts/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/scripts/pydata-sphinx-theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/searchtools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/sphinx_highlight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/styles/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/styles/pydata-sphinx-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/styles/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/vendor/fontawesome/6.1.2/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/vendor/fontawesome/6.1.2/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-v4compatibility.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-v4compatibility.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/_static/webpack-macros.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/constructterms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/examples/detailedexample_modelfitting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/examples/examples_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/examples/simpleexample_modelfitting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/genindex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/modelfitting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/objects.inv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/py-modindex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/_build/html/searchindex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/conf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/constructterms.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/examples/detailedexample_modelfitting.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/examples/examples_for_modelfitting.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/examples/examples_page.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/examples/simpleexample_modelfitting.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/make.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/docs/modelfitting.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/.ipynb_checkpoints/Example-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/Example.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/experimental_data/NuFit51/nufit51_gauss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/experimental_data/NuFit52/nufit52_chisqprofiles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/experimental_data/NuFit52/nufit52_gauss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/experimental_data/NuFit52/v52.release-SKyes-IO.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/experimental_data/NuFit52/v52.release-SKyes-NO.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/experimentaldata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/fit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/mixingcalculations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/old/ScanCode.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/parameterspace.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_version/modelfitting/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constructterms/Old/ConstructTerms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constructterms/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constructterms/calculations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constructterms/field.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constructterms/group.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constructterms/groups/groups.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/doctrees/constructterms.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/doctrees/environment.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/doctrees/index.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/doctrees/modelfitting.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/doctrees/modules.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/.buildinfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_modules/constructterms/calculations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_modules/constructterms/field.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_modules/constructterms/group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_modules/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_sources/constructterms.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_sources/index.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_sources/modelfitting.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_sources/modules.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/basic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/doctools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/documentation_options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/file.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/language_data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/pygments.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/scripts/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/scripts/pydata-sphinx-theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/searchtools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/sphinx_highlight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/styles/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/styles/pydata-sphinx-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/styles/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/vendor/fontawesome/6.1.2/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/vendor/fontawesome/6.1.2/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-v4compatibility.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-v4compatibility.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/_static/webpack-macros.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/constructterms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/genindex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/modelfitting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/modules.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/objects.inv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/py-modindex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/_build/html/searchindex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/conf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/constructterms.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/make.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/modelfitting.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/modules.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelfitting/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelfitting/experimentaldataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelfitting/fit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelfitting/mixingcalculations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelfitting/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelfitting/old/ScanCode.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2MndkBv77lVUiFFRH1o1xXTZVEW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alex/GitRepos/FlavorPy&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modelfitting/old" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d01e7cae-d866-4ed0-aaf6-509a35d7ebd7" name="Changes" comment="" />
+      <created>1678407420942</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678407420942</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
