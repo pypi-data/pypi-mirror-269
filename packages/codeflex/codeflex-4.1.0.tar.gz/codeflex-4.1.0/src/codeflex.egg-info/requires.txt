@@ -1,0 +1,10 @@
+idna
+charset_normalizer
+chardet
+urllib3
+certifi
+werkzeug
+click
+blinker
+jinja2
+itsdangerous
