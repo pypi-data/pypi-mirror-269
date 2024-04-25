@@ -1,0 +1,13 @@
+CHANGELOG.txt
+MANIFEST.in
+README.txt
+setup.py
+antigrav/__init__.py
+antigrav/decoder.py
+antigrav/encoder.py
+antigrav/scanner.py
+antigrav/tool.py
+antigrav.egg-info/PKG-INFO
+antigrav.egg-info/SOURCES.txt
+antigrav.egg-info/dependency_links.txt
+antigrav.egg-info/top_level.txt
