@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: dt-data-api
+Version: 2.1.0
+Home-page: http://github.com/duckietown/lib-dt-data-api
+Author: Andrea F. Daniele
+Author-email: afdaniele@ttic.edu
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Requires-Dist: dt-authentication
+
+
+dt-data-api: Data API client library for Duckietown Cloud Storage
+=================================================================
+
+
+Data API client library for Duckietown cloud storage.
+
