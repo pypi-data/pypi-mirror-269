@@ -1,0 +1,36 @@
+Metadata-Version: 2.3
+Name: traderusty
+Version: 0.1.2
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pytest ; extra == 'tests'
+Provides-Extra: tests
+License-File: LICENSE.txt
+Summary: Rust extension module for TradeDangerous performance
+Keywords: addons,Elite: Dangerous
+Author-email: Oliver 'kfsone' Smith <oliver@kfs.org>
+Maintainer-email: Oliver 'kfsone' Smith <oliver@kfs.org>
+License: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://github.com/KingFisherSoftware/traderusty
+Project-URL: Website, https://github.com/eyeonus/Trade-Dangerous
+Project-URL: Repository, https://github.com/KingFisherSoftware/traderusty.git
+Project-URL: Issues, https://github.com/KingFisherSoftware/traderusty/issues
+Project-URL: Changelog, https://github.com/KingFisherSoftware/traderusty/blob/main/CHANGELOG.md
+
+Trade: Rusty
+------------
+
+🚧 Brainstorm Phase -- repos may move 🚧
+
+A rust-based python module to support [Trade Dangerous](https://github.com/eyeonus/Trade-Dangerous/)
+
