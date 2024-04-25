@@ -1,0 +1,9 @@
+LICENCE
+README.md
+pyproject.toml
+src/parse_web/__init__.py
+src/parse_web/pars.py
+src/parse_web.egg-info/PKG-INFO
+src/parse_web.egg-info/SOURCES.txt
+src/parse_web.egg-info/dependency_links.txt
+src/parse_web.egg-info/top_level.txt
