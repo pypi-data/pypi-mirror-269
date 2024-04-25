@@ -1,0 +1,14 @@
+aiohttp_cors/__about__.py,sha256=jZk93m7d6gH3358X_mAaMCoh4h6taFszHtKoJ6oSVhY,1006
+aiohttp_cors/__init__.py,sha256=nVbOOho5VsZm5HGAerw1GX-gVBqKY9hQQKlrXMYf5t8,2162
+aiohttp_cors/abc.py,sha256=H5c-td0TGUNz-Qawp6EJdIkXY3ztH2mU1oWLjKnd4qc,3698
+aiohttp_cors/cors_config.py,sha256=NXUKvzJSlRxWT0qaqA7C6VKktc2KY8zAZTKibqmi9dY,8929
+aiohttp_cors/mixin.py,sha256=1EKP1iV4CuMa2MtB0jP8yfwo7fGy0XLu00dKExw1NX8,1353
+aiohttp_cors/preflight_handler.py,sha256=0jbOIpIEbG-w9jK_g-mNpvwW0PNfFTThf7zkrIu_NFk,4840
+aiohttp_cors/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiohttp_cors/resource_options.py,sha256=y33BeFcj9rLZA9KuHO6qgTzY7bUN46xG40O63KKRkak,5931
+aiohttp_cors/urldispatcher_router_adapter.py,sha256=8jHp8yOEusOcIb9v1rVkzpyk--tkghu4WR5yxUFE0M8,12776
+alt_aiohttp_cors-0.7.1.dist-info/LICENSE,sha256=hssiYv-CXOHIuPueqfUXQxi63DkSY5uSdfwl0OMFxVY,11369
+alt_aiohttp_cors-0.7.1.dist-info/METADATA,sha256=08DvUfiBTnad7Og_tA4nSQf7MadXaNa_rpk-KhbD4D0,20150
+alt_aiohttp_cors-0.7.1.dist-info/WHEEL,sha256=R-pe4HujD5uwcmk8KMg6GmlnhwHtGhG0WQ41Uygk6p4,110
+alt_aiohttp_cors-0.7.1.dist-info/top_level.txt,sha256=6_Ark7zDmCKB_9Om8vKRneRV6GXCLyxDeiJvbNLyTPE,13
+alt_aiohttp_cors-0.7.1.dist-info/RECORD,,
