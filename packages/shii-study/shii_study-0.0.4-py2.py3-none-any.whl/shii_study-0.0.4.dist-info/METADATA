@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: shii_study
+Version: 0.0.4
+Summary: PYPI tutorial package creation written by Boran
+Home-page: https://github.com/boranloves/shii
+Author: boran
+Author-email: boran <boran@shii.me>
+Project-URL: Homepage, https://github.com/boranloves/shii
+Project-URL: Issues, https://github.com/boranloves/shii
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+hello! 반갑습니다! 이 파일은 shii 폴더의 README.md 파일입니다.
+```import shii```
+```shii.study(text, text, text)```
+```shii.study_return_text(text)```
+```shii.study_say(text)```
+자세한 것은 https://github.com/boranloves/shii 를 참고 하세요.
