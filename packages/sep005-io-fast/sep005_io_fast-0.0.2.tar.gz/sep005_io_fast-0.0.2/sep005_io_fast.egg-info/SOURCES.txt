@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+requirements.txt
+sep005_io_fast/__init__.py
+sep005_io_fast/fast.py
+sep005_io_fast.egg-info/PKG-INFO
+sep005_io_fast.egg-info/SOURCES.txt
+sep005_io_fast.egg-info/dependency_links.txt
+sep005_io_fast.egg-info/requires.txt
+sep005_io_fast.egg-info/top_level.txt
+tests/test_fast.py
