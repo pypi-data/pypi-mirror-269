@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: NStudyPy
+Version: 0.0.4
+Summary: A NStudyPy useful tools
+Author-email: Jack Li <lizhq08@gmail.com>
+Maintainer: Jack Li contributors
+Project-URL: Homepage, https://nstudy.org
+Project-URL: Documentation, https://hub.nstudy.org
+Project-URL: Bug Tracker, https://github.com/lizhq/NStudyPy/issues
+Keywords: NStudyPy,tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: shapely~=2.0.4
+
+# NStudyPy 
+NStudyPy 工具包
+
+
+## 使用方法
+```bash
+pip install -U NStudyPy -i https://pypi.org/simple
+```
+
+## 版本更新历史
+
+## version 0.0.4
+- Python 升级到 3.9+
+- 添加 `PyShape` `PyString` 工具
+
+## version 0.0.3
+- 更改包名
+
+## version 0.0.2
+- 添加一些方法 `from NStudyPy import PyTools`
+
+## version 0.0.1
+- 初始化项目

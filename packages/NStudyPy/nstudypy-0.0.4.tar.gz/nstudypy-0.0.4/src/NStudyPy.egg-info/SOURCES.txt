@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/NStudyPy/PyShape.py
+src/NStudyPy/PyString.py
+src/NStudyPy/PyTools.py
+src/NStudyPy/__init__.py
+src/NStudyPy.egg-info/PKG-INFO
+src/NStudyPy.egg-info/SOURCES.txt
+src/NStudyPy.egg-info/dependency_links.txt
+src/NStudyPy.egg-info/requires.txt
+src/NStudyPy.egg-info/top_level.txt
