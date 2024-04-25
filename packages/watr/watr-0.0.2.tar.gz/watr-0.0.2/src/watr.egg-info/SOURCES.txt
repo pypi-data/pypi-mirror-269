@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/watr/WatrEntity.py
+src/watr/__init__.py
+src/watr/entity.py
+src/watr/util.py
+src/watr/watrapi.py
+src/watr/watrexceptions.py
+src/watr/watrsprinklersystem.py
+src/watr/watrsystem.py
+src/watr/watrzone.py
+src/watr.egg-info/PKG-INFO
+src/watr.egg-info/SOURCES.txt
+src/watr.egg-info/dependency_links.txt
+src/watr.egg-info/top_level.txt
