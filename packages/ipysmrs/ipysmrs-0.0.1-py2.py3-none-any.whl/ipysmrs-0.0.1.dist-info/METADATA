@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: ipysmrs
+Version: 0.0.1
+Summary: A python package for soil moisture remote sensing processing and analysis
+Author-email: DZN <zndong2021@1653.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/lengyanyanjing/ipysmrs
+Keywords: ipysmrs
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: all
+Requires-Dist: ipysmrs[extra] ; extra == 'all'
+Provides-Extra: extra
+Requires-Dist: pandas ; extra == 'extra'
+
+# ipysmrs
+
+
+[![image](https://img.shields.io/pypi/v/ipysmrs.svg)](https://pypi.python.org/pypi/ipysmrs)
+[![image](https://img.shields.io/conda/vn/conda-forge/ipysmrs.svg)](https://anaconda.org/conda-forge/ipysmrs)
+
+
+**A python package for soil moisture remote sensing processing and analysis**
+
+
+-   Free software: MIT License
+-   Documentation: https://lengyanyanjing.github.io/ipysmrs
+    
+
+## Features
+
+-   TODO
