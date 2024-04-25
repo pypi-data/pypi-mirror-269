@@ -1,0 +1,14 @@
+README.rst
+requirements.txt
+setup.py
+hanja/__init__.py
+hanja/hangul.py
+hanja/impl.py
+hanja/table.py
+hanja/table.yml
+hanja.egg-info/PKG-INFO
+hanja.egg-info/SOURCES.txt
+hanja.egg-info/dependency_links.txt
+hanja.egg-info/requires.txt
+hanja.egg-info/top_level.txt
+tests/test_basic.py
