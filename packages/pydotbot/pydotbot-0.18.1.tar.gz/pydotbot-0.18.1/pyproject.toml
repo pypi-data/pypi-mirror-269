@@ -1,0 +1,77 @@
+[build-system]
+requires = [
+    "hatchling>=1.4.1",
+    "cibuildwheel",
+    "cmake",
+    "ninja",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+    "dotbot/frontend/*",
+    "dotbot/lib/*",
+    "*.py"
+]
+exclude = [
+    "dotbot/frontend/node_modules",
+]
+
+[tool.hatch.build.targets.sdist.hooks.custom]
+path = "utils/hooks/sdist.py"
+
+[tool.hatch.build.targets.wheel.hooks.custom]
+path = "utils/hooks/wheel.py"
+
+[project]
+name = "pydotbot"
+version = "0.18.1"
+authors = [
+    { name="Alexandre Abadie", email="alexandre.abadie@inria.fr" },
+    { name="Theo Akbas", email="theo.akbas@inria.fr" },
+]
+dependencies = [
+    "click          == 8.1.7",
+    "fastapi        == 0.109.0",
+    "haversine      == 2.8.0",
+    "httpx          == 0.26.0",
+    "numpy          == 1.26.3",
+    "opencv-python  == 4.9.0.80",
+    "pygame         == 2.5.2",
+    "pynput         == 1.7.6",
+    "pyserial       == 3.5",
+    "qrkey          == 0.4.3",
+    "structlog      == 24.1.0",
+    "uvicorn        == 0.25.0",
+    "websockets     == 12.0",
+]
+description = "Package to easily control your DotBots and SailBots."
+readme = "README.md"
+license = { text="BSD" }
+requires-python = ">=3.7"
+classifiers = [
+    'Programming Language :: C',
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/DotBots/PyDotBot"
+"Bug Tracker" = "https://github.com/DotBots/PyDotBot/issues"
+
+[project.scripts]
+dotbot-controller = "dotbot.main:main"
+dotbot-keyboard = "dotbot.keyboard:main"
+dotbot-joystick = "dotbot.joystick:main"
+
+[tool.ruff]
+select = ["E", "F"]
+line-length = 88
+ignore = ["E501"]
+
+[tool.isort]
+multi_line_output = 3  # Use Vertical Hanging Indent
+profile = "black"
