@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pysearchlight/__init__.py
+src/pysearchlight/examples.py
+src/pysearchlight/sl.py
+src/pysearchlight.egg-info/PKG-INFO
+src/pysearchlight.egg-info/SOURCES.txt
+src/pysearchlight.egg-info/dependency_links.txt
+src/pysearchlight.egg-info/top_level.txt
