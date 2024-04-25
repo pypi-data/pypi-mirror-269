@@ -1,0 +1,12 @@
+examples/local/benchmark.py,sha256=cYDo70JyFqMIF7tTvyX0RrhwgIbKuhddeaGU-BZGlug,5374
+examples/local/question_answering.py,sha256=fNe8junerOQ8fBxDPHG6k7iH0BjifcLd1DZcyNEvo2I,991
+maritalk/__init__.py,sha256=iCDq_SVxfyOCPlNaSAfvN32RqYEEBo20qzkBZ3zD12w,156
+maritalk/download.py,sha256=A3A_RTvAo9rRO4ghKzfdHloOcXaTOH1F1G1V2_cIQEE,1258
+maritalk/start.py,sha256=zScngEiOPPI2knZYiQdLz6UCX_xXLqiGUlTUApdvSQM,1050
+maritalk/resources/api.py,sha256=a5qNxhSmB-aEsDxqPQihfBbRXWTCxyeeYCplHGVNUpU,8917
+maritalk/resources/local.py,sha256=_A3rZQdz9l3dd7SVXYkhO7YHOUavkZidwuz_xc56SXM,14686
+maritalk-0.2.4.dist-info/LICENSE,sha256=AFJwRmVCtzwG2kzgodwnFS9-ADlzSh-o1rCdwjZelWU,1088
+maritalk-0.2.4.dist-info/METADATA,sha256=m82kvQxz3CQEdMHP4hfq7X-C--abkIoMfbuZoM1rttI,10180
+maritalk-0.2.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+maritalk-0.2.4.dist-info/top_level.txt,sha256=AQNex6ODXOUF6Cs4wBqUhY50KpD80dthVj_AJPrLpJ0,18
+maritalk-0.2.4.dist-info/RECORD,,
