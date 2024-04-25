@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SVInsight"
+version = "0.3.0"
+dependencies = [
+    "census",
+    "factor_analyzer",
+    "geopandas",
+    "numpy",
+    "pandas",
+    "PyYAML",
+    "scikit_learn",
+    "openpyxl",
+    "matplotlib"
+]
+requires-python = ">=3.9"
+authors = [
+  {name = "Matthew Preisser", email = "mattpreisser@gmail.com"},
+  {name = "Paola Passalacqua"},
+  {name = "R. Patrick Bixler"}
+
+]
+description = "Create social vulnerabilty index"
+readme = "README.rst"
+license = {file = "LICENSE.txt"}
+keywords = ["SVI",
+            "Social-Vulnerability",
+            "Hazards",
+            "Census",
+            "Demographics"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12"
+
+]
+
+[project.urls]
+Homepage = "https://github.com/mdp0023/SVInsight"
+Documentation = "https://mdp0023.github.io/SVInsight/"
+
+
