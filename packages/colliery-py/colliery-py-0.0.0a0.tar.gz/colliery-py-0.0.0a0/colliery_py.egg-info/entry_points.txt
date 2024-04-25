@@ -1,0 +1,3 @@
+[console_scripts]
+colliery = colliery.__main__:main
+

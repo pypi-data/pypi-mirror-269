@@ -1,0 +1,15 @@
+LICENCE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+colliery/__init__.py
+colliery/__main__.py
+colliery_py.egg-info/PKG-INFO
+colliery_py.egg-info/SOURCES.txt
+colliery_py.egg-info/dependency_links.txt
+colliery_py.egg-info/entry_points.txt
+colliery_py.egg-info/not-zip-safe
+colliery_py.egg-info/requires.txt
+colliery_py.egg-info/top_level.txt
