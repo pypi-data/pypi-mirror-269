@@ -1,0 +1,2 @@
+[console_scripts]
+netlify-dns-manage = netlify_dns_manage.main:main
