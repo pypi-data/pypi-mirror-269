@@ -1,0 +1,3 @@
+[console_scripts]
+midea-discover = msmart_vog.cli:_legacy_main
+msmart_vog = msmart_vog.cli:main
