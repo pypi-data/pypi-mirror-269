@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/arithmeticPackageOwais/__init__.py
+src/arithmeticPackageOwais/addition.py
+src/arithmeticPackageOwais/example.py
+src/arithmeticPackageOwais/multiplication.py
+src/arithmeticPackageOwais/subtraction.py
+src/arithmeticTestPackage_owais_md.egg-info/PKG-INFO
+src/arithmeticTestPackage_owais_md.egg-info/SOURCES.txt
+src/arithmeticTestPackage_owais_md.egg-info/dependency_links.txt
+src/arithmeticTestPackage_owais_md.egg-info/top_level.txt
