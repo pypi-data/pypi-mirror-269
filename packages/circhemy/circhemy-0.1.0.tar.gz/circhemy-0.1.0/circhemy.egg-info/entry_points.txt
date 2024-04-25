@@ -1,0 +1,2 @@
+[console_scripts]
+circhemy = circhemy.circhemy_cli:main
