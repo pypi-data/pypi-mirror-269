@@ -1,0 +1,11 @@
+anycrc/anycrc.pyx,sha256=nM2rWXhyvXY8NWW0WXX3R9sq7TO6G30HSNAObLsCSO8,4364
+anycrc/anycrc.cpython-310-i386-linux-gnu.so,sha256=1Dwu0u7kutmtWwQyG6yKGfd-0kARok6HvfeXLkOYWyM,564433
+anycrc/__init__.py,sha256=6WUxWuBxHrqqbAXrKSveKIr9ZMlihLyjTONUmYSHIBw,21
+anycrc/models.py,sha256=Go_LV75L54G9gFu5rg_YNNHnSKTlb0e15dOB5bXwHj4,17529
+anycrc/__main__.py,sha256=ay_Zj4WzMly0908-mnet9An0gae346PwzUg4QsaU6j4,258
+anycrc.libs/libgomp-65f46eca.so.1.0.0,sha256=Zagab9rFQS08rPfVDR82oGJr9kuKwgrJok-GGlFBdCo,172293
+anycrc-0.4.1.dist-info/LICENSE,sha256=3K76btJE16RVEFRSVhIoA4CbgTLVe9KtwgwEOl4FHw4,1096
+anycrc-0.4.1.dist-info/METADATA,sha256=2YU4oRohASiqi_xWGvGkSmEeuyQYMOeWDe0IPiFWTp4,2529
+anycrc-0.4.1.dist-info/RECORD,,
+anycrc-0.4.1.dist-info/top_level.txt,sha256=HbCFlOeYEx638RXhl-PI4tQtdbHhwyL9ObHhSuPNyaA,7
+anycrc-0.4.1.dist-info/WHEEL,sha256=Najllegno_X9ydJN1lMHSfpc0Fl1ugiTRKHrIt3U_Ik,148
