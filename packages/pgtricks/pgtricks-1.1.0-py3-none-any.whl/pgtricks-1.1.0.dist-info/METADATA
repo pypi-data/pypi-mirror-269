@@ -1,0 +1,175 @@
+Metadata-Version: 2.1
+Name: pgtricks
+Version: 1.1.0
+Summary: PostgreSQL utilities
+Home-page: https://github.com/akaihola/pgtricks
+Author: Antti Kaihola
+Author-email: 13725+akaihola@users.noreply.github.com
+License: BSD
+Project-URL: Source Code, https://github.com/akaihola/pgtricks
+Project-URL: Change Log, https://github.com/akaihola/pgtricks/CHANGES.rst
+Keywords: database,postgresql,backup,git
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database
+Classifier: Topic :: System :: Archiving :: Backup
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Provides-Extra: release
+Requires-Dist: darkgray-dev-tools ~=0.0.2 ; extra == 'release'
+Provides-Extra: test
+Requires-Dist: darker[isort] ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: mypy ; extra == 'test'
+Requires-Dist: pylint ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-mypy ; extra == 'test'
+
+==========
+ pgtricks
+==========
+
+|build-badge| |license-badge| |pypi-badge| |downloads-badge| |black-badge| |changelog-badge|
+
+.. |build-badge| image:: https://github.com/akaihola/pgtricks/actions/workflows/python-package.yml/badge.svg
+   :alt: master branch build status
+   :target: https://github.com/akaihola/pgtricks/actions/workflows/python-package.yml?query=branch%3Amaster
+.. |license-badge| image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg
+   :alt: BSD 3 Clause license
+   :target: https://github.com/akaihola/pgtricks/blob/master/LICENSE
+.. |pypi-badge| image:: https://img.shields.io/pypi/v/pgtricks
+   :alt: Latest release on PyPI
+   :target: https://pypi.org/project/pgtricks/
+.. |downloads-badge| image::  https://pepy.tech/badge/pgtricks
+   :alt: Number of downloads
+   :target: https://pepy.tech/project/pgtricks
+.. |black-badge| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :alt: Source code formatted using Black
+   :target: https://github.com/psf/black
+.. |changelog-badge| image:: https://img.shields.io/badge/-change%20log-purple
+   :alt: Change log
+   :target: https://github.com/akaihola/pgtricks/blob/master/CHANGES.rst
+.. |next-milestone| image:: https://img.shields.io/github/milestones/progress/akaihola/pgtricks/3?color=red&label=release%202.0.0
+   :alt: Next milestone
+   :target: https://github.com/akaihola/pgtricks/milestone/3
+
+This package contains two tools for backing up PostgreSQL database dumps.
+
+
+
+.. _community support channel: https://github.com/akaihola/pgtricks/discussions
+
+
+Installing
+==========
+
+To install in a virtualenv or globally as a superuser::
+
+    pip install pgtricks
+
+To install only for the current user::
+
+    pip install --user pgtricks
+
+
+pg_dump_splitsort
+=================
+
+``pg_dump_splitsort`` is a handy script for pre-processing PostgreSQL's
+``pg_dump`` output to make it more suitable for diffing and storing in version
+control.
+
+Usage::
+
+    pg_dump_splitsort <filename>.sql
+
+The script splits the dump into the following files:
+
+| ``0000_prologue.sql``:
+    everything up to the first COPY
+| ``0001_<schema>.<table>.sql``
+| :
+| :
+| ``NNNN_<schema>.<table>.sql``:
+    COPY data for each table *sorted by the first field*
+| ``9999_epilogue.sql``:
+    everything after the last COPY
+
+The files for table data are numbered so a simple sorted concatenation of all
+files can be used to re-create the database::
+
+    $ cat *.sql | psql <database>
+
+I've found that a good way to take a quick look at differences between dumps is
+to use the `meld` tool on the whole directory::
+
+    $ meld old-dump/ new-dump/
+
+Storing the dump in version control also gives a decent view on the
+differences. Here's how to configure git to use color in diffs::
+
+    # ~/.gitconfig
+    [color]
+            diff = true
+    [color "diff"]
+            frag = white blue bold
+            meta = white green bold
+            commit = white red bold
+
+**Note:** If you have created/dropped/renamed tables, remember to delete all
+`.sql` files before post-processing the new dump.
+
+
+pg_incremental_backup
+=====================
+
+The ``pg_incremental_backup`` script
+
+- makes a database dump using ``pg_dump``
+- splits the dump into per-table files using ``pg_dump_splitsort``
+- creates or commits changes into a local Git repository containing the dump
+- pushes the changes to the remote repository
+
+Usage::
+
+    pg_incremental_backup [-h] [--output-dir OUTPUT_DIR] database [remote]
+
+    positional arguments:
+      database
+      remote
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      --output-dir OUTPUT_DIR, -o OUTPUT_DIR
+
+
+Contributors ✨
+===============
+
+See README.rst_ for the list of contributors.
+
+This project follows the all-contributors_ specification.
+Contributions of any kind are welcome!
+
+.. _README.rst: https://github.com/akaihola/pgtricks/blob/master/README.rst
+.. _emoji key: https://allcontributors.org/docs/en/emoji-key
+.. _all-contributors: https://allcontributors.org
+
+
+GitHub stars trend
+==================
+
+|stargazers|_
+
+.. |stargazers| image:: https://starchart.cc/akaihola/pgtricks.svg
+.. _stargazers: https://starchart.cc/akaihola/pgtricks

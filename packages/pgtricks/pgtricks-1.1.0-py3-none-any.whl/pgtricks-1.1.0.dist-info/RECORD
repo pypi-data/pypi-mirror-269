@@ -1,0 +1,12 @@
+pgtricks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgtricks/mergesort.py,sha256=utiQEMOMo1H8BSamLn-zHAP8_oN9BtI8sm8q1mAZJ5Y,2970
+pgtricks/pg_dump_splitsort.py,sha256=U1m-oO1l3wysB2BH_9R0EVkPkzhuY1iV-_jxv2vUTF4,5352
+pgtricks/pg_incremental_backup.py,sha256=KDd8_-F4CA_A-Jb3G_ZgiB5XrN3-T-E91X2ARnRy8Rs,2434
+pgtricks/pg_split_schema_dump.py,sha256=-xcbdm17gu5myk-ObUU28polTVPTW0RhWtfNCAJVD98,2324
+pgtricks/version.py,sha256=HEcPxCJV83ir0H0NwXbhcp8tOK3f2RCyUQsZdtZNs6s,87
+pgtricks-1.1.0.dist-info/LICENSE,sha256=o_OKiQIzHEIWBSj2cV8XCzAfTq5NGeolboa9dJvNDag,1524
+pgtricks-1.1.0.dist-info/METADATA,sha256=xQrGEfZKSfoBuSQgy_5RekkvFQ3sH6N0bxYEVx2r3pg,5645
+pgtricks-1.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pgtricks-1.1.0.dist-info/entry_points.txt,sha256=ENwQdbYUBqDXk4Wkz6ZMSQaTqsUTHo1uiPtFTzDcU28,188
+pgtricks-1.1.0.dist-info/top_level.txt,sha256=IsbsYwusvpyN5Q29blciNp7tzao7dR2uSg24f3NbzM4,9
+pgtricks-1.1.0.dist-info/RECORD,,
