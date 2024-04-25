@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: oscb
+Version: 1.0.0
+Summary: oscb
+Home-page: https://github.com/cirisjl/Machine-learning-development-environment-for-single-cell-sequencing-data-analyses.git
+Author: OSCB Team
+Author-email: 
+License: MIT
+Keywords: pytorch,graph machine learning,graph representation learning,graph neural networks
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown

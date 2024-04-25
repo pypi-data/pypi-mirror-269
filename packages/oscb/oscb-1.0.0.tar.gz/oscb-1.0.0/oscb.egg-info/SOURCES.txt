@@ -1,0 +1,8 @@
+setup.py
+oscb/__init__.py
+oscb/version.py
+oscb.egg-info/PKG-INFO
+oscb.egg-info/SOURCES.txt
+oscb.egg-info/dependency_links.txt
+oscb.egg-info/requires.txt
+oscb.egg-info/top_level.txt
