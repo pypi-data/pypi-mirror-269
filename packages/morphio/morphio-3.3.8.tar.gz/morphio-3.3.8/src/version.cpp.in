@@ -1,0 +1,10 @@
+#include <morphio/version.h>
+
+#include <string>
+namespace morphio
+{
+    std::string getVersionString() {
+        static const std::string version("@MORPHIO_VERSION_STRING@");
+        return version;
+    }
+} // namespace morphio
