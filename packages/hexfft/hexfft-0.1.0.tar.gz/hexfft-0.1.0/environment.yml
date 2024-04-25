@@ -1,0 +1,5 @@
+name: hexfft
+dependencies:
+- numpy
+- scipy
+- matplotlib

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hexfft"
+authors = [
+    {name = "Chris Langfield", email = "christopher.langfield@gmail.com"},
+]
+description = "Hexagonal FFTs in Python"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["hexagonal", "dsp", "fft"]
+version = "0.1.0"
