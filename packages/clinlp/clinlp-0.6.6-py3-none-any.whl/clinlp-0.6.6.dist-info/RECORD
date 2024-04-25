@@ -1,0 +1,17 @@
+clinlp/__init__.py,sha256=zDhqHhtsrZY9WvAqvtPQWoXSR-edn2jCPmKU7O2DcZs,465
+clinlp/entity.py,sha256=L-WnAWOzqHy1bOtPxj4oAKTkfKdY278P7whqu7iye0E,7962
+clinlp/exceptions.py,sha256=dopGJ3StbHdRbD8Iw0Wabv9CY5a-h1INb_ZXlT2q9lE,48
+clinlp/language.py,sha256=6sAIK7RP9jarRQO4TBcVKtD3h5g4PMzI-LYZyzbKr3U,9052
+clinlp/normalizer.py,sha256=demw4N_bKy5WoEhXavbQxvZ-xXzjYe36CMl-107YZwQ,1656
+clinlp/qualifier/__init__.py,sha256=90dJq82p0LWdPLn9gtmvB_jTCC3GGrJuAckZGoQ_iwY,726
+clinlp/qualifier/context_algorithm.py,sha256=VolYhKw3u3PV5KKLM2f7kp2ZBuQ-e7sOx4IdW0Pt2Sg,12368
+clinlp/qualifier/qualifier.py,sha256=C5hmpvmvjcqzarVAKwJjaRxsPsKZTAkhG_FgWNoq9Tg,3966
+clinlp/qualifier/transformer.py,sha256=0MHzVTVe0qDw3XxFp28uHpThm9M_8488Wif3BeFT3hI,7214
+clinlp/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clinlp/resources/context_rules.json,sha256=5srb5kUWlV2f_9efj0WyPQISIfdaBfZonsP21CZlKRU,26538
+clinlp/sentencizer.py,sha256=7bNpEqDMHZk69Qj-5Umu4NoHxUNttNmuttHj4MZVNDs,2412
+clinlp/util.py,sha256=JgANheubZCRlRKO8UcwQclYBcQ53AuMc75Ch2BDFHrE,1939
+clinlp-0.6.6.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+clinlp-0.6.6.dist-info/METADATA,sha256=8D1IPlYkeUuCAloNazF4PyZfYrj8R3gBP_snXEQ2GbE,18155
+clinlp-0.6.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+clinlp-0.6.6.dist-info/RECORD,,
