@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/__init__.py
+src/dsiUnits.py
+src/dsiunits.egg-info/PKG-INFO
+src/dsiunits.egg-info/SOURCES.txt
+src/dsiunits.egg-info/dependency_links.txt
+src/dsiunits.egg-info/top_level.txt
+tests/test_dsiUnits.py
