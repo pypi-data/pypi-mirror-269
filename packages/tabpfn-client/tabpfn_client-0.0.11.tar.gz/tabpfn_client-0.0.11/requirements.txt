@@ -1,0 +1,8 @@
+httpx
+omegaconf
+pandas
+tabpfn
+password-strength
+
+# for testing
+respx
