@@ -1,0 +1,3 @@
+[console_scripts]
+midea-discover = vogmidea.cli:_legacy_main
+vogmidea = vogmidea.cli:main
