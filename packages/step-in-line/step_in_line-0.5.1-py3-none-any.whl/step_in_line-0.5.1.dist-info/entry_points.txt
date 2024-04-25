@@ -1,0 +1,3 @@
+[console_scripts]
+tf-apply=step_in_line.tf:main
+
