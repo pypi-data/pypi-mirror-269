@@ -1,0 +1,4 @@
+[console_scripts]
+gltest=greatlibrarian.run:main
+glupdate=greatlibrarian.run:update
+
