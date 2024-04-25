@@ -1,0 +1,8 @@
+numpy
+scipy
+
+[gpu-cu12]
+
+[gpu-cu12:sys_platform == "linux"]
+tensorflow-gpu==2.8.0
+cudatoolkit==12.0
