@@ -1,0 +1,10 @@
+xcom_proto/XcomAbs.py,sha256=LiBxrDF3hL-WrsHGMVapIwsUlijrWlSISPFnUvNCAPY,2129
+xcom_proto/XcomLAN.py,sha256=57LgUmKyych1OkNPh70IqJrmwly0rJGlrDZOWYnBnnE,4241
+xcom_proto/XcomRS232.py,sha256=SVNS0vHk-gnb4fkg3Lk2uaGZ0lsuEH1xgw8ZSkY-6_Y,1219
+xcom_proto/__init__.py,sha256=mHfhaSu1nFpIExRDkb7lswGTecFNwwIJQrsr1xXaLVM,151
+xcom_proto/parameters.py,sha256=wZvYtrW288S2oJKsl6mSy5nNY8AZkCbiR0Ssh2nfLHI,8766
+xcom_proto/protocol.py,sha256=cFajd-1vECURQvxATV48k06DV7eCHobSAvIhEa6sqLA,7559
+xcom_proto-0.3.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+xcom_proto-0.3.5.dist-info/METADATA,sha256=kxZZGFoniAlIsUeivp3R0jzAxqJGuO0r05B3ZgsvWiA,7003
+xcom_proto-0.3.5.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+xcom_proto-0.3.5.dist-info/RECORD,,
