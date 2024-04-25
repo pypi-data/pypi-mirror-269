@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "easyplot-toolbox"
+version = "0.0.0"
+description = ""
+authors = ["wmpjrufg <wanderlei_junior@ufcat.edu.br>"]
+readme = "readme.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+matplotlib = "^3.8.4"
+seaborn = "^0.13.2"
+numpy = "^1.26.4"
+pandas = "^2.2.2"
+squarify = "^0.4.3"
+joypy = "^0.2.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
