@@ -1,0 +1,33 @@
+The scripts found in this folder are general discovery and administration of GitLabs Tableau servers.
+
+# Set Up
+These scripts relay on a virtual environment that is managed by the [poetry](https://python-poetry.org/docs/) package management tool and the [poetry-dotenv-plugin](https://pypi.org/project/poetry-dotenv-plugin/) poetry plugin.  To set up the environment have the poetry package and addons installed, navigate to this folder in a terminal and use the following command:
+
+```
+poetry install
+```
+Once built the virtual environment shell can be entered using the command:
+
+``` 
+poetry shell
+```
+
+In the shell the scripts will be able to be run.
+
+## Tableau API access
+
+To access the Tableau APIs the scripts use a personal access token.  See the Tableau documentation for generating a personal access token.  The values needed to connect to the APIs are brought in to the scripts using environment variables.  These values should nopt be stored in the repository as they can be used by anyone to gain access the the content on the Tableau site.  Placing the values in the a local `.env` file will allow them to be loaded by the scripts without including them in the repository
+
+# Scripts
+
+## group_provisioning
+
+This script will compare the groups and there membership on the Tableau server with thous listed in the specification file that is a part of this repo.  In its current form it will produce an `output.txt` file that will show any deviations, it can be modified to update the server to match the specification file.
+
+## project_provisioning
+
+This script will compare the projects, the project content permissions, the assigned groups, and there capabilities on the Tableau server with thous listed in the specification file that is a part of this repo.  In its current form it will produce an `project_provisioning_output.txt` file that will show any deviations, it can be modified to update the server to match the specification file.
+
+## tableau_rest_api
+
+This script can produce various outputs that take the data from the server and put it in the format for generating the specification file.  This file is for exportation and raw construction but is not intended for any automation or administrative tasks.
