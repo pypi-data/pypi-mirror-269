@@ -1,0 +1,3 @@
+[console_scripts]
+hamcontestanalysis=hamcontestanalysis.__main__:main
+
