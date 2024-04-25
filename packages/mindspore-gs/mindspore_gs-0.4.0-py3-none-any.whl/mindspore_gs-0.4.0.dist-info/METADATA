@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: mindspore-gs
+Version: 0.4.0
+Summary: A MindSpore model optimization algorithm set..
+Home-page: https://www.mindspore.cn
+Author: The MindSpore Authors
+Author-email: contact@mindspore.cn
+License: Apache 2.0
+Keywords: mindspore optimization quantization golden-stick
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: C++
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: numpy (>=1.17.0)
+Requires-Dist: scipy (>=1.5.2)
+
