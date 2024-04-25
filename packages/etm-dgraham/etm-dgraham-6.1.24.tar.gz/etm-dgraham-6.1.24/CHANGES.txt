@@ -1,0 +1,235 @@
+2024-04-24 7888dfb Daniel Graham
+    Tagged version 6.1.24.
+
+2024-04-24 10b8c3a Daniel Graham
+    Fixed import bug
+
+2024-04-24 e7af668 Daniel Graham
+    Tagged version 6.1.23.
+
+2024-04-24 b421570 Daniel Graham
+    Avoid unnecessary import of view in bump.py
+
+2024-04-24 25a596e Daniel Graham
+    Added 'doghouse' example of task with jobs to lorem examples.
+
+2024-04-24 24e900c Daniel Graham
+    More work on common.py. Added # pyright:
+    reportUndefinedVariable=false to suppress pyright warnings. Fixed
+    jobs format start/extend and summary format. Updated discussion of
+    tasks and jobs in README.
+
+2024-04-21 3d71359 Daniel Graham
+    Expanded imports from common to fix pylance problem reports. First
+    pass at making tasks with @s and @e entries due at @s + @e and
+    only past due after that.
+
+2024-03-19 0f628dc Daniel Graham
+    setup_logging __main__ -> common
+
+2024-03-18 2285c8f Daniel Graham
+    ETMQuery class view.py -> data.py
+
+2024-03-18 baaaa53 Daniel Graham
+    ETM_CHAR dict -> EtmChar class.
+
+2024-03-17 bc95722 Daniel Graham
+    Recognize vi vs emacs setting.
+
+2024-03-14 bfe10f2 Daniel Graham
+    Tagged version 6.1.22.
+
+2024-03-14 f702181 Daniel Graham
+    Tagged version 6.1.21.
+
+2024-03-14 627aa6c Daniel Graham
+    Changed type hint from | to Union for compatibility with python <
+    3.10
+
+2024-03-12 16e250c Daniel Graham
+    Tagged version 6.1.20.
+
+2024-03-12 6c56abe Daniel Graham
+    Added raise ValueError exception in format_completion when a
+    passed argument is neither a date nor a datime instance.
+
+2024-03-07 16d6676 Daniel Graham
+    Fix sort order for jobs with dates as start times.
+
+2024-03-07 867d171 Daniel Graham
+    Tagged version 6.1.19.
+
+2024-03-07 8ac164d Daniel Graham
+    Fixed bug in allowing some & arguments in task jobs. Fixed bug in
+    accounting for timezone offsets in repeating items with alarms.
+
+2024-03-06 b4bc6ef Daniel Graham
+    Tagged version 6.1.18.
+
+2024-03-06 b892344 Daniel Graham
+    Modified time and datetime formatting to show seconds when non
+    zero. Fixed maybe_alerts to avoid repetition when the
+    refresh_interval is less than a minute. Changed the default
+    refresh_interval from 60 to 6 seconds.
+
+2024-03-06 388c505 Daniel Graham
+    Enabled 'seconds' in alerts and in the duration serializer.
+
+2024-03-05 ff5ee2c Daniel Graham
+    Tagged version 6.1.17.
+
+2024-03-05 95e00a7 Daniel Graham
+    Treat allday tasks as due at midnight and thus finished ahead of
+    time if finished anytime during the due date.
+
+2024-03-04 3e1bb78 Daniel Graham
+    Tagged version 6.1.16.
+
+2024-03-04 34a9181 Daniel Graham
+    Fixed bug in processing job summaries for tasks.
+
+2024-03-03 3cfa34e Daniel Graham
+    Tagged version 6.1.15.
+
+2024-03-03 c3d4615 Daniel Graham
+    Refactored timer_report and show_timers into get_timers. Added
+    round_to_minutes to ensure that the total reported in timer view
+    is consistent with the items listed. In reporting the moment a
+    timer status last changed use the datetime if the change occurred
+    on the current date and the timedelta between the current moment
+    and the datetime otherwise. Added 'inactive' to type_colors.
+    Changed default 'light' type_colors for 'paused' and 'running'.
+
+2024-02-29 0a6134f Daniel Graham
+    Tagged version 6.1.14.
+
+2024-02-29 465af5b Daniel Graham
+    Removed extraneous 'level=0
+    '
+
+2024-02-29 1b565b0 Daniel Graham
+    Tagged version 6.1.13. Conditionally show active timer in
+    statusbar 2nd line
+
+2024-02-29 fbe470f Daniel Graham
+    Fixed leap year bug in archiving items. Refactored fitting strings
+    into available terminal width using 'truncate_string'. Added
+    'conditional' status bar second line to show active timer when one
+    exists. Removed unused 'level' argument from NDict as_tree.
+    Reformated timer report to show total time for item, the current
+    status and the moment the status last changed.
+
+2024-02-24 f71dfcd Daniel Graham
+    Tagged version 6.1.12.
+
+2024-02-24 d0f5f18 Daniel Graham
+    Added 'show occurrences' bound to 'o' to display a list of fields
+    such as @i, @l, ..., with the distince occurrences of each and the
+    number of times used.
+
+2024-02-16 878447b Daniel Graham
+    Tagged version 6.1.11.
+
+2024-02-16 53022e3 Daniel Graham
+    Corrected wording in README regarding tab completion for @k
+    entries.
+
+2024-02-16 2f48d58 Daniel Graham
+    Jinja template tweaks for wrapping @d entries. Bind N (along with
+    +) to create new item but only if is_not_searching.
+
+2024-02-13 f99e118 Daniel Graham
+    Tagged version 6.1.10.
+
+2024-02-13 f4ac9a4 Daniel Graham
+    Fixed bug in processing do_reschedule when an empty string is
+    returned.
+
+2024-02-12 1c2f8be Daniel Graham
+    Tagged version 6.1.9.
+
+2024-02-12 6059ead Daniel Graham
+    corrected erroneous change to __version__.py
+
+2024-02-12 ba39b1c Daniel Graham
+    In row2id, skip 'wrapper' rows. When creating @K inbox entries
+    insure that 'created' is added. In populating konnections_from and
+    konnections_to, make sure that doc_ids correspond to existing data
+    entries. Added focus_on_click and search_field to details_area.
+    Require is_not_editing for 'k' binding in showing_konnections.
+    Changed menu name for 'J' to 'jot it down'.
+
+2024-02-09 0caec39 Daniel Graham
+    Simplified format for journal daily. No @s entry, take the
+    datetime from the summary. Format @d with weekday, long format
+    datetime and then modified norg headings for hour:minute entry
+    timestamps. Remove extra linebread in jinsa template for @d.
+
+2024-02-08 dcf36bd Daniel Graham
+    <enter> toggles showing details leaving text_area in focus. When
+    details is showing, up|down moves selection to previous|next item
+    and shows details for the current selection.
+
+2024-02-07 5e819fc Daniel Graham
+    Tagged version 6.1.8.
+
+2024-02-07 415aec7 Daniel Graham
+    Fixed bug in processing keyvals in text_changed.
+
+2024-02-05 d44dba2 Daniel Graham
+    Tagged version 6.1.7.
+
+2024-02-05 3c257da Daniel Graham
+    Update object_hsh for all keyvals.
+
+2024-02-05 0225f8f Daniel Graham
+    Tagged version 6.1.6.
+
+2024-02-05 41e4c7a Daniel Graham
+    Fixed bug in processing weekday entries in rrule specifications,
+    e.g., '@r m &w 2TH'. Problem arises from the fact that the
+    dateutil.rrule.weekday string representation for '2TH' is 'TH(+2)'
+    which differs from the '2TH' needed by etm.
+
+2024-02-03 80170b2 Daniel Graham
+    Tagged version 6.1.5.
+
+2024-02-03 bfa56e6 Daniel Graham
+    Fixed probably longstanding bug in which removing an element from
+    an item while editing, e.g., an @t tag, would apparently succeed
+    but when saving the changes, the removed item would reappear. The
+    standard tinydb update and upsert methods record adding new
+    elements and making changes to existing elements but not removing
+    an existing element. The solution is to obtain the doc_id of the
+    item, delete the item and then insert the new, changed item using
+    the original doc_id.
+
+2024-02-02 48a0e3e Daniel Graham
+    Tagged version 6.1.4.
+
+2024-02-02 65ee7b8 Daniel Graham
+    Update 'today' when creating a new daily journal entry. Set
+    starting_buffer_text = '' and then set edit_buffer.text = template
+    so that the buffer will automatically be seen as modified and save
+    will actually write the new record.
+
+2024-01-31 5f5377d Daniel Graham
+    Tagged version 6.1.3.
+
+2024-01-31 8134428 Daniel Graham
+    Fixed bug in query 'info' - used to show details for a provided
+    doc_id.
+
+2024-01-31 b587ead Daniel Graham
+    Tagged version 6.1.2. Proper sorting for type v csv queries.
+
+2024-01-31 c37c715 Daniel Graham
+    Refactored 'v' queries to use QDict 'as_csv', a slightly modified
+    version of as_tree. Cleaned up comments.
+
+2024-01-29 c3681b2 Daniel Graham
+    Tagged version 6.1.1.
+
+2024-01-29 69922a0 Daniel Graham
+    Wrapped starting time in date_to_datetime to permit sorting using
+    timestamp().
