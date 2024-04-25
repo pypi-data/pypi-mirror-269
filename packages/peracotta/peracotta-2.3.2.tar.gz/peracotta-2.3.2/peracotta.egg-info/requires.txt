@@ -1,0 +1,13 @@
+colorama
+commonmark
+PyQt5
+pytarallo
+python-dotenv
+requests
+typing-extensions
+urllib3
+importlib_resources
+loguru
+rich
+requests
+toml
