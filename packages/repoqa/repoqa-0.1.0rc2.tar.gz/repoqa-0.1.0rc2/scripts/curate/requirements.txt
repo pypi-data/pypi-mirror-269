@@ -1,0 +1,12 @@
+PyGithub
+fire
+tqdm
+tempdir
+GitPython
+pydeps
+tree_sitter
+tree_sitter_languages
+pygraphviz
+matplotlib
+transformers
+python-dep-tree
