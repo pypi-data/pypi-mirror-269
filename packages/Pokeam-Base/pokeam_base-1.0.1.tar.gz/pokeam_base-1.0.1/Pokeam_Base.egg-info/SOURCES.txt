@@ -1,0 +1,10 @@
+README.md
+setup.py
+Pokeam_Base/__init__.py
+Pokeam_Base/pokemon.csv
+Pokeam_Base/random_pokemon.py
+Pokeam_Base.egg-info/PKG-INFO
+Pokeam_Base.egg-info/SOURCES.txt
+Pokeam_Base.egg-info/dependency_links.txt
+Pokeam_Base.egg-info/requires.txt
+Pokeam_Base.egg-info/top_level.txt
