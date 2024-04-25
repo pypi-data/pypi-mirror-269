@@ -1,0 +1,9 @@
+PyYAML
+requests
+openapi-spec-validator
+bs4
+googlesearch-python
+tiktoken
+
+[openai]
+openai
