@@ -1,0 +1,10 @@
+README.md
+setup.py
+coloralf/Color.py
+coloralf/__init__.py
+coloralf/func.py
+coloralf/loc.py
+coloralf.egg-info/PKG-INFO
+coloralf.egg-info/SOURCES.txt
+coloralf.egg-info/dependency_links.txt
+coloralf.egg-info/top_level.txt
