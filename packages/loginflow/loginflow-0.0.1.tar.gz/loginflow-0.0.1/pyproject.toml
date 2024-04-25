@@ -1,0 +1,38 @@
+[project]
+name = "loginflow"
+version = "0.0.1"
+authors = [
+    { name="Stanis Trendelenburg", email="stanis.trendelenburg@gmail.com" }
+]
+description = "Framework-independent authentication flows for websites"
+readme = "README.md"
+requires-python = ">=3.7"  # matching bcrypt
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "bcrypt>=4.0",
+    "itsdangerous>=2.1.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/trendels/loginflow"
+Issues = "https://github.com/trendels/loginflow/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+preview = true
+
+[tool.coverage.run]
+branch = true
+
+[tool.pyright]
+strict = ["src/**", "tests/**"]

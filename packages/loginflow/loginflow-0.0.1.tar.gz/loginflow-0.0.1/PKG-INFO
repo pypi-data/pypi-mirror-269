@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: loginflow
+Version: 0.0.1
+Summary: Framework-independent authentication flows for websites
+Author-email: Stanis Trendelenburg <stanis.trendelenburg@gmail.com>
+Project-URL: Homepage, https://github.com/trendels/loginflow
+Project-URL: Issues, https://github.com/trendels/loginflow/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bcrypt>=4.0
+Requires-Dist: itsdangerous>=2.1.2
+
+# loginflow
+
+Framework-independent authentication flows for websites.
+
