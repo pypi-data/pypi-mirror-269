@@ -1,0 +1,8 @@
+LICENSE.txt
+setup.py
+easybloom.egg-info/PKG-INFO
+easybloom.egg-info/SOURCES.txt
+easybloom.egg-info/dependency_links.txt
+easybloom.egg-info/requires.txt
+easybloom.egg-info/top_level.txt
+ezbloom/__init__.py
