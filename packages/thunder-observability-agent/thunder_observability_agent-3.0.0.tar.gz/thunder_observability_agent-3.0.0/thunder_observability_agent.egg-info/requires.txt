@@ -1,0 +1,4 @@
+requests>=2.27.1
+boto3>=1.23.10
+google-auth>=2.22.0
+oci>=2.121.1
