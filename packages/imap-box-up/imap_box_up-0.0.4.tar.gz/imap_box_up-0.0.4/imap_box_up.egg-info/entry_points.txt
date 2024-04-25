@@ -1,0 +1,2 @@
+[console_scripts]
+imap_box_up = imap.main:main
