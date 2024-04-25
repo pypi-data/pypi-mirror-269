@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: obvs
+Version: 0.0.1
+Summary: Making Transformers Obvious
+License: MIT
+Author: Jamie Coombes
+Author-email: jamie@example.com
+Requires-Python: >=3.10.0,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: einops (>=0.7.0,<0.8.0)
+Requires-Dist: fsspec (==2023.9.2)
+Requires-Dist: idna (>=3.7,<4.0)
+Requires-Dist: ipdb (>=0.13.13,<0.14.0)
+Requires-Dist: ipykernel (>=6.28.0,<7.0.0)
+Requires-Dist: ipython (>=8.22.2,<9.0.0)
+Requires-Dist: kaleido (==0.2.1)
+Requires-Dist: nnsight (>=0.2.11,<0.3.0)
+Requires-Dist: plotly (>=5.18.0,<6.0.0)
+Requires-Dist: tiktoken (>=0.5.2,<0.6.0)
+Requires-Dist: torch (>=2.2.0,<3.0.0)
+Requires-Dist: torchmetrics (>=1.3.1,<2.0.0)
+Requires-Dist: transformers (>=4.37.1,<5.0.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
