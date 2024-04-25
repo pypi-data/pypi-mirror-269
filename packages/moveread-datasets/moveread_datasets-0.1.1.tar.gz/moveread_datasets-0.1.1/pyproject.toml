@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moveread-datasets"
+version = "0.1.1"
+authors = [
+  {name="Marcel Claramunt", email="marcel@moveread.com"}
+]
+description = "Datasets storage API for Moveread"
+dependencies = [
+  "kv-api", "kv-fs"
+]
+requires-python = ">=3.10"
+readme = {file="README.md", content-type="text/markdown"}
+
+[project.urls]
+repo = "https://github.com/moveread/python-core.git"
+
+[project.optional-dependencies]
+local = ["kv-fs", "kv-sqlite-sync"]
