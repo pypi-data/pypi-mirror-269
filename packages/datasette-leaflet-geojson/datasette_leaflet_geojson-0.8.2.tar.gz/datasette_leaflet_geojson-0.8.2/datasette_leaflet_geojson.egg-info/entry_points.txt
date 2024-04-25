@@ -1,0 +1,2 @@
+[datasette]
+leaflet_geojson = datasette_leaflet_geojson

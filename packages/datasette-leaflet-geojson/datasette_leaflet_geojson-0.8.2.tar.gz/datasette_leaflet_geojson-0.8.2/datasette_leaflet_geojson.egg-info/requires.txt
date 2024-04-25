@@ -1,0 +1,6 @@
+datasette>=0.54
+datasette-leaflet>=0.2
+
+[test]
+pytest
+pytest-asyncio
