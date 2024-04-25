@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unit_simple"
+version = "1.0.15"
+authors = [
+  { name="Samuel Andrés", email="samuel.andres@yahoo.fr" },
+]
+description = "A simple measurement unit API to handle basic unit conversions."
+readme = "README.md"
+license = {file = "LICENSE.md"}
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: Public Domain",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development",
+    "Topic :: Utilities"
+]
+keywords = ["units", "converter", "unit converter", "measure", "units of measurement"]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/SamuelAndresPascal/cosmoloj-py"
