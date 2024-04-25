@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+illumination_using_wgif/__init__.py
+illumination_using_wgif/illumination.py
+illumination_using_wgif/wgif.py
+illumination_using_wgif.egg-info/PKG-INFO
+illumination_using_wgif.egg-info/SOURCES.txt
+illumination_using_wgif.egg-info/dependency_links.txt
+illumination_using_wgif.egg-info/requires.txt
+illumination_using_wgif.egg-info/top_level.txt
