@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mdrocr
+Version: 7
+Summary: multi directory recursive ocr images and turn into pdfs
+Home-page: https://r-w-x.org/r/mdrocr
+Author: j
+Author-email: j@mailb.org
+License: GPLv3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)

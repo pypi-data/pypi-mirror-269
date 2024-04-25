@@ -1,0 +1,84 @@
+#!/usr/bin/python3
+#
+# prepare:
+# sudo apt install python3 tesseract-ocr poppler-utils
+# sudo brew install python tesseract poppler
+#
+# install:
+# pip3 install mdrocr
+
+import argparse
+import os
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+
+
+def sorted_list(l):
+    convert = lambda text: float(text) if text.replace(".", "").isnumeric() else text
+    alphanum = lambda key: [
+        convert(c) for c in re.split(r"([-+]?[0-9]*\.?[0-9]*)", key)
+    ]
+    l.sort(key=alphanum)
+    return l
+
+
+def which(program):
+    for folder in os.environ["PATH"].split(":"):
+        p = os.path.join(folder, program)
+        if os.access(p, os.X_OK) and os.path.isfile(p):
+            return p
+    return None
+
+
+parser = argparse.ArgumentParser(description="OCR folders of images")
+parser.add_argument(
+    "--lang", dest="lang", default="eng", help="language to use (default eng)"
+)
+parser.add_argument(
+    "--dpi", dest="dpi", default="300", help="dpi of scan (default 300)"
+)
+parser.add_argument("folder")
+
+args = parser.parse_args()
+
+language = args.lang
+dpi = args.dpi
+base = os.path.normpath(os.path.abspath(args.folder))
+
+sips_installed = which("sips")
+
+for root, folders, files in os.walk(base):
+    if not folders and files:
+        pdf = root + ".pdf"
+        if os.path.exists(pdf):
+            print("\n--\nskip", root, "pdf exists", pdf)
+            continue
+        images = sorted_list(
+            [f for f in files if f.split(".")[-1] in ("jpg", "jp2", "jpeg")]
+        )
+        print("\n---\nprocessing %s\n%s pages\n" % (root, len(images)))
+        tmp = tempfile.mkdtemp()
+        pages = []
+        for image in images:
+            image = os.path.join(root, image)
+            print(image[len(root) + 1 :])
+            tmp_pdf = os.path.join(tmp, os.path.basename(os.path.splitext(image)[0]))
+            if image.endswith(".jp2"):
+                tmp_jpg = tmp_pdf + ".jpg"
+                if sips_installed:
+                    cmd = ["sips", "-s", "format", "jpeg", image, "--out", tmp_jpg]
+                else:
+                    cmd = ["convert", image, tmp_jpg]
+                subprocess.check_output(cmd)
+                image = tmp_jpg
+            cmd = ["tesseract", "-l", language, "--dpi", dpi, image, tmp_pdf, "pdf"]
+            subprocess.check_output(cmd)
+            pages.append(tmp_pdf + ".pdf")
+        cmd = ["pdfunite"] + pages + [pdf]
+        subprocess.check_output(cmd)
+        print("\ncreated %s" % pdf)
+        shutil.rmtree(tmp)
+print("")
