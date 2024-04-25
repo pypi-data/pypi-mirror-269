@@ -1,0 +1,16 @@
+[package]
+name = "tdi_rust_python_tools"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "tdi_rust_python_tools"
+crate-type = ["cdylib"]
+
+[dependencies]
+html-escape = "0.2.13"
+lazy_static = "1.4.0"
+pyo3 = "0.20.0"
+regex = "1.10.4"
+strsim = "0.11.1"
