@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hypothesis-torch"
+description = "Hypothesis strategies for various Pytorch structures, including tensors and modules."
+
+dynamic = ["version"]
+dependencies = [
+    "hypothesis",
+    "torch",
+]
+requires-python = ">=3.9"
+authors=[{name="Andrew P. Sansom", email="andrew@euleriancircuit.com"}]
+readme="README.md"
+license={file="LICENSE"}
+keywords = ["hypothesis", "torch", "pytorch", "testing", "property-based testing"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+  "Framework :: Hypothesis",
+
+  # Pick your license as you wish (see also "license" above)
+  "License :: OSI Approved :: MIT License",
+
+  # Specify the Python versions you support here.
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Testing",
+]
+[project.entry-points."hypothesis"]
+_ = "hypothesis_torch.register_random_torch_state:_register_random_torch_state"
+
+[project.optional-dependencies]
+huggingface = [
+  "transformers",
+]
+dev = [
+  "ruff==0.4.1",
+  "pytest==8.1.1",
+  "pytest-cov==5.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/qthequartermasterman/hypothesis-torch"
+Documentation = "https://github.com/qthequartermasterman/hypothesis-torch"
+Repository = "https://github.com/qthequartermasterman/hypothesis-torch.git"
+Issues = "https://github.com/qthequartermasterman/hypothesis-torch/issues"
+
+[tool.ruff]
+line-length = 120
+
+[tool.semantic_release]
+major_on_zero = false
+version_variables = [
+    "hypothesis_torch/__init__.py:__version__",
+]
+build_command = "python -m pip install build && python -m build"
+
+[tool.setuptools.dynamic]
+version = {attr = "hypothesis_torch.__version__"}
+
+[tool.ruff.lint]
+select = ["D", "E", "F", "RUF100"]
+ignore = ["D205", "F401", "PT009", "S101"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
