@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: caustic.cst
+Version: 1.0.0
+Summary: Caustic's Abstract Syntax Tree, or CST
+Author: Shae.c32
+Project-URL: Homepage, https://codeberg.org/Caustic/CausticAST
+Project-URL: Issues, https://codeberg.org/Caustic/CausticAST/issues
+Keywords: caustic,language,parser,ast,syntax,tree
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Other
+Classifier: Topic :: File Formats
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Interpreters
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Caustic's Abstract Syntax Tree
+
+Documentation is "to be added" and "to be determined" at a later date
