@@ -1,0 +1,12 @@
+pytgpt_bot/__init__.py,sha256=kzARqveQVGBPUQqjyi6tiuYwLf8YH9w1JXNp8BUoafo,225
+pytgpt_bot/__main__.py,sha256=XMNNLMnywGHYY7DfsmQ4VT0y29oguL7bNkEdb2mYt5E,42
+pytgpt_bot/cli.py,sha256=-HYzGplJiXx_nfeuaIof-CdoFKEony2HfYx64b8FDEU,2195
+pytgpt_bot/config.py,sha256=oqUlt4uMT15FiMbg2MwQoXQ3C4uCWceg41H8YQYqSs0,628
+pytgpt_bot/db.py,sha256=fs3SVagv3bAov94d7k5foxD_nQ4RcyDMG-TEK1F5rlA,4919
+pytgpt_bot/main.py,sha256=MBm1dtxgkdRurF7SfU9gcvVMmk8_-ZcoxZyiQSU5-tY,6533
+pytgpt_bot-0.0.4.dist-info/LICENSE,sha256=BKrHt4Zv63EvbEcgeM22VRzTROKqk2sRleyA6HIx_r4,1064
+pytgpt_bot-0.0.4.dist-info/METADATA,sha256=nXo_Ts2SO39VsvS2fz5lYxV5-IQ7aKY7pKffw4nVlE4,7439
+pytgpt_bot-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pytgpt_bot-0.0.4.dist-info/entry_points.txt,sha256=lffjisIbcj-ytjg4oQmOOr1PRQwBwxm6FWuX0eMk7d4,52
+pytgpt_bot-0.0.4.dist-info/top_level.txt,sha256=6InrZ-JC9F5kHBEOcZbg3lvCJB3JCNum4NDTUdpU4RU,11
+pytgpt_bot-0.0.4.dist-info/RECORD,,
