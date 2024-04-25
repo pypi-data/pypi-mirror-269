@@ -1,0 +1,8 @@
+tensorrt_dispatch_bindings/__init__.py,sha256=kYoMVL6dJU7a_QvfODzVAWQGAuyoWyWPYc2VRzZSL68,5721
+tensorrt_dispatch_bindings/tensorrt_dispatch.so,sha256=N5JdX0Afw31ADeWyFT_gx03UD08pyouryLXUr3hbHns,2417616
+tensorrt_dispatch_cu11_bindings-10.0.1.dist-info/LICENSE.txt,sha256=ZL0pDwJRQF94O6HS4VXFAFQr5peV5RFHodnxGle9qMw,46961
+tensorrt_dispatch_cu11_bindings-10.0.1.dist-info/METADATA,sha256=gyealO8lKDCo8Ch8fcmb3y5JszSue5MBjpi_3g9AL8o,636
+tensorrt_dispatch_cu11_bindings-10.0.1.dist-info/WHEEL,sha256=VCOVNLrPjrR0E0Nj6VjqyBHxl2KWvmZmAvOuAeHkeWg,112
+tensorrt_dispatch_cu11_bindings-10.0.1.dist-info/top_level.txt,sha256=dIWegHwo5XlKMZXLvPtu3K6OsrpieEgAVIQea2uwBtw,27
+tensorrt_dispatch_cu11_bindings-10.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+tensorrt_dispatch_cu11_bindings-10.0.1.dist-info/RECORD,,
