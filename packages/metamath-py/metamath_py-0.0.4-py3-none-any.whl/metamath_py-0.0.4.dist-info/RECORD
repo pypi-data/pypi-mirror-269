@@ -1,0 +1,15 @@
+metamathpy/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+metamathpy/database.py,sha256=gzcjN7xuSk8KIUFJx0_FZlbUt5xryjGtpFyDCy2G36I,6844
+metamathpy/environment.py,sha256=k7ge0qMwM7-M-kYLbP38PK8rwXEXL6ja08mBWM-a5pw,2682
+metamathpy/obvious.py,sha256=uQNCKND9ZgUMWVUZzVqE2EQoC8r-N5-a6w4CXFnI-m8,2521
+metamathpy/parse.py,sha256=lDM9Wt8fH4vsq11yRbRjtgsyybJ4Py0Twj4WS_gfGlM,7411
+metamathpy/proof.py,sha256=VomVLOFhR-D-62HeSo44d91-iR02ps4aRScUpxH4Tog,12437
+metamathpy/scratch.py,sha256=XJubSDxfNeqEeIDOF-XOHExfJbqlxuxnSb1kGdDqKLk,1012
+metamathpy/theory.py,sha256=X1DTc3thShg6wv6QUXRlzThaAVMeXRmGx34cZPYk120,6352
+metamathpy/training_data.py,sha256=etJ42QpwHx2KkIG-Iw58pUWBsUVL9-A4OU4PwHukHus,911
+metamathpy/unification.py,sha256=sCW5wqHC9I4AWo8RqGxeSAiDtWUlRYQvD96eEZZ_V74,1513
+metamath_py-0.0.4.dist-info/LICENSE,sha256=nhUJAPbK8e1eIVuDrqhZ4CLhQp_mdVQB_uYykc3mgvY,1088
+metamath_py-0.0.4.dist-info/METADATA,sha256=GTYW1IZ50GF0AcJ_1wY56O7EyN55wcFu3SDYuffJFHQ,3309
+metamath_py-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+metamath_py-0.0.4.dist-info/top_level.txt,sha256=WRT9-Ph2fgaWD-sWMRnztwQbl2BTAW2TC_cXhpRKKD8,11
+metamath_py-0.0.4.dist-info/RECORD,,
