@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyhgvsv/__init__.py
+src/pyhgvsv/models.py
+src/pyhgvsv/utils.py
+src/pyhgvsv/variants.py
+src/pyhgvsv.egg-info/PKG-INFO
+src/pyhgvsv.egg-info/SOURCES.txt
+src/pyhgvsv.egg-info/dependency_links.txt
+src/pyhgvsv.egg-info/top_level.txt
