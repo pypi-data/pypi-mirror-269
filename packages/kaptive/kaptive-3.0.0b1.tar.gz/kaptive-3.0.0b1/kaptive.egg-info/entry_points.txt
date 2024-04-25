@@ -1,0 +1,2 @@
+[console_scripts]
+kaptive = kaptive.__main__:main
