@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+cli_fragments/__init__.py
+cli_fragments/cli_fragments.py
+cli_fragments.egg-info/PKG-INFO
+cli_fragments.egg-info/SOURCES.txt
+cli_fragments.egg-info/dependency_links.txt
+cli_fragments.egg-info/top_level.txt
