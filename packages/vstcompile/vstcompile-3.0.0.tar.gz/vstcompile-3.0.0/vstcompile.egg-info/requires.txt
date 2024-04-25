@@ -1,0 +1,6 @@
+
+[cython]
+cython>=0.29.36
+
+[release]
+githubrelease~=1.5.9

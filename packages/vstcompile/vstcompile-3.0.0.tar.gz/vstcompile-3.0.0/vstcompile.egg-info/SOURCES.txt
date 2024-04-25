@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+NOTICE
+README.rst
+pyproject.toml
+setup.py
+vstcompile/__init__.py
+vstcompile/github.py
+vstcompile/utils.py
+vstcompile.egg-info/PKG-INFO
+vstcompile.egg-info/SOURCES.txt
+vstcompile.egg-info/dependency_links.txt
+vstcompile.egg-info/not-zip-safe
+vstcompile.egg-info/requires.txt
+vstcompile.egg-info/top_level.txt

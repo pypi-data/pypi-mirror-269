@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vstcompile"
+authors = [{name = "VST Consulting", email = "sergey.k@vstconsulting.net"}]
+license = {text = "Apache License 2.0"}
+description = "VST util for easy compile"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: POSIX",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.8"
+dynamic = ["version"]
+
+[project.urls]
+Home = "https://github.com/vstconsulting/vstcompile"
+"Issue Tracker" = "https://gitlab.com/vstconsulting/vstcompile/issues"
+"Source Code" = "https://gitlab.com/vstconsulting/vstcompile"
+Releases = "https://pypi.org/project/vstcompile/#history"
+
+[project.readme]
+file = "README.rst"
+content-type = "text/x-rst"
+
+[project.optional-dependencies]
+cython = ['cython>=0.29.36']
+release = ['githubrelease~=1.5.9']
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+license-files = ["LICENSE", "NOTICE"]
+
+[tool.setuptools.packages.find]
+include = ['vstcompile', 'vstcompile.*']
+namespaces = false
+
+[tool.setuptools.dynamic]
+version = {attr = "vstcompile.__version__"}
