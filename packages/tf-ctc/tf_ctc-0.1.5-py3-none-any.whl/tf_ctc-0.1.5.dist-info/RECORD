@@ -1,0 +1,13 @@
+tf_ctc/__init__.py,sha256=HQfir7wjuJKYge1puy4EO0NlUlerbV4UI5XLno_CEvo,187
+tf_ctc/decoding.py,sha256=9RUfT0sPqW7mj1zUqTvuuztNZ3lNjtidmpuPciuGABA,3824
+tf_ctc/logits.py,sha256=ADtGqbdUltKsnGJqVzClstx__i48jx2pQQUxqYRz5e4,2780
+tf_ctc/loss_.py,sha256=szuN889T08z2rmWucZOgbz3CjC5pftr6zpJM5qwFynU,594
+tf_ctc/metrics.py,sha256=-bc5M_sum1yDUdBP1z-GVBz_YvUWMraJu73fE7xwq18,1647
+tf_ctc/test.py,sha256=e4m_X3YPkWw7XkFUXxna4352qh2xPU412Rjsq9Vh4hY,163
+tf_ctc/tests/test_decoding.py,sha256=ObJMIEw3jki1NyGd1LlHDjXxMdsfVXFYommisLP-96w,935
+tf_ctc/tests/test_loss.py,sha256=Ie4mLcyM5ZeL-6WGHz2IG8qwC_w1AOM4bilGzXdu8cw,539
+tf_ctc/tests/test_metrics.py,sha256=yru4hK9hRWdgn76LNOEJ5aRp1PvJX8psueo3-Jk86oI,897
+tf_ctc-0.1.5.dist-info/METADATA,sha256=eTc92GprJy4VvPw0ZCvKdXU2pgNZWn_ajFlj_c-7qNo,3778
+tf_ctc-0.1.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tf_ctc-0.1.5.dist-info/top_level.txt,sha256=jPnuJIor_Qp1jzA7xV5s0osnSJXvy7oNFBtyXKaRTo8,7
+tf_ctc-0.1.5.dist-info/RECORD,,
