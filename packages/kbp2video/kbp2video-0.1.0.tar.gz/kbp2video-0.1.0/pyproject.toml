@@ -1,0 +1,15 @@
+[project]
+name = "kbp2video"
+version = "0.1.0"
+dependencies = [
+    "PySide6",
+    "ffmpeg-python",
+    "kbputils"
+]
+[project.scripts]
+kbp2video = "kbp2video._gui:run"
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools.packages.find]
+include = ["kbp2video"]
