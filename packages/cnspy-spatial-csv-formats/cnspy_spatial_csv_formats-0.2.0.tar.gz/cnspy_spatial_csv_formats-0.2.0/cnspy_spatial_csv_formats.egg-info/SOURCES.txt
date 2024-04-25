@@ -1,0 +1,17 @@
+LICENCE
+README.md
+setup.py
+cnspy_spatial_csv_formats/CSVSpatialFormat.py
+cnspy_spatial_csv_formats/CSVSpatialFormatType.py
+cnspy_spatial_csv_formats/ErrorRepresentationType.py
+cnspy_spatial_csv_formats/EstimationErrorType.py
+cnspy_spatial_csv_formats/PoseStructs.py
+cnspy_spatial_csv_formats/__init__.py
+cnspy_spatial_csv_formats.egg-info/PKG-INFO
+cnspy_spatial_csv_formats.egg-info/SOURCES.txt
+cnspy_spatial_csv_formats.egg-info/dependency_links.txt
+cnspy_spatial_csv_formats.egg-info/requires.txt
+cnspy_spatial_csv_formats.egg-info/top_level.txt
+test/__init__.py
+test/test_CSVSpatialFormatType.py
+test/test_EstimationErrorType.py
