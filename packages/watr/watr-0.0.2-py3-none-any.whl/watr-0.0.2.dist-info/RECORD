@@ -1,0 +1,13 @@
+watr/WatrEntity.py,sha256=LXvkJF1wFnL9IkwgUtHc8Kp4MYVjPnN919dM1jQ-UAY,429
+watr/__init__.py,sha256=ZAFP9fhg6gLwTAdsTZikgWckxQjFWZLT-RYREh73jLU,240
+watr/entity.py,sha256=i6QQyDeMX1McInsIoIfZGHZLfPdea8mL1cenVJG20P4,1169
+watr/util.py,sha256=i5ILZ43KHnaTLs0zaNLFL_tkc_SWkYvYZqfHr8Ld1Ic,316
+watr/watrapi.py,sha256=WAqjGmTkfF8_ceXdGIrS9Q5hwD8N9L991Z9P8QnFvYs,10495
+watr/watrexceptions.py,sha256=rSt8jJKwvSmKhUtXd021BEdy3cVo5Q89u7DhSyCfyWY,292
+watr/watrsprinklersystem.py,sha256=AzXnXyus9OOEXbt1ZC0Xax_tuGtDD56kMnnMyVOiVFo,2977
+watr/watrsystem.py,sha256=GhiWNI4zvqOgofNI595-iKFRqcHNDqYH_aqK-z5saio,1531
+watr/watrzone.py,sha256=lxZe-KLmR0iLmRw-vYIkxR1AVrfLd0il-ULDtWUZ8QQ,3105
+watr-0.0.2.dist-info/METADATA,sha256=j5UbaTmlnhixYrP969cBdWHKLe38tdwFpftGQ59YeUU,1173
+watr-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+watr-0.0.2.dist-info/top_level.txt,sha256=MDVTflwjEoPsB91Du_4wzs8M5AZH2Zrl2umqrIQ2wQ0,5
+watr-0.0.2.dist-info/RECORD,,
