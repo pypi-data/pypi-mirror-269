@@ -1,0 +1,10 @@
+README.md
+setup.py
+Pokeapi/__init__.py
+Pokeapi/pokemon.csv
+Pokeapi/random_pokemon.py
+PokeapiMHM.egg-info/PKG-INFO
+PokeapiMHM.egg-info/SOURCES.txt
+PokeapiMHM.egg-info/dependency_links.txt
+PokeapiMHM.egg-info/requires.txt
+PokeapiMHM.egg-info/top_level.txt
