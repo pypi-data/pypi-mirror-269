@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: Qubx
+Version: 0.1.0
+Summary: Qubx - quantitative trading framework
+Home-page: https://github.com/dmarienko/Qubx
+Author: Dmitry Marienko
+Author-email: dmitry@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: ccxt (>=4.2.68,<5.0.0)
+Requires-Dist: cython (==3.0.8)
+Requires-Dist: importlib-metadata
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: ntplib (>=0.4.0,<0.5.0)
+Requires-Dist: numpy (>=1.26.3,<2.0.0)
+Requires-Dist: pyarrow (>=15.0.0,<16.0.0)
+Requires-Dist: pydantic (>=1.10.2,<2.0.0)
+Requires-Dist: pymongo (>=4.6.1,<5.0.0)
+Requires-Dist: pytest[lazyfixture] (>=7.2.0,<8.0.0)
+Requires-Dist: python-binance (>=1.0.19,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: scipy (>=1.12.0,<2.0.0)
+Requires-Dist: stackprinter (>=0.2.10,<0.3.0)
+Requires-Dist: tqdm
+Project-URL: Repository, https://github.com/dmarienko/Qubx
+Description-Content-Type: text/markdown
+
+# Qubx
+
+## Next generation of Qube quantitative backtesting framework (QUBX)
+```          
+⠀⠀⡰⡖⠒⠒⢒⢦⠀⠀
+⠀⢠⠃⠈⢆⣀⣎⣀⣱⡀  QUBX | Quantitative Backtesting Environment
+⠀⢳⠒⠒⡞⠚⡄⠀⡰⠁         (c) 2024, by Dmytro Mariienko
+⠀⠀⠱⣜⣀⣀⣈⣦⠃⠀⠀⠀
+
+```                                          
+### How to run live trading (Only Binance spot tested)
+1. cd experiments/
+2. Edit strategy config file (zero_test.yaml). Testing strategy is just doing flip / flop trading once per minute (trading_allowed should be set for trading)
+3. Modify accounts config file under ./configs/.env and provide your API binance credentials (see example in example-accounts.cfg):
+```
+[binance-mde]
+apiKey = ...
+secret = ...
+base_currency = USDT
+```
+4. Run in console (-j key if want to run under jupyter console)
+
+```
+> python -P ..\src\qubx\utils\runner.py configs\zero_test.yaml -a configs\.env -j 
+```
+
