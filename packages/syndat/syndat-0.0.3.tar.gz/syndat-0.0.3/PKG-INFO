@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: syndat
+Version: 0.0.3
+Summary: A library for evaluation & visualization of synthetic data.
+Home-page: https://github.com/SCAI-BIO/syndat
+Author: Tim Adams
+Author-email: tim.adams@scai.fraunhofer.de
+License: CC BY-NC-ND 4.0.
+License-File: LICENSE
+
+A library for evaluation & visualization of synthetic data.
