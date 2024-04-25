@@ -1,0 +1,10 @@
+fs_tools/__init__.py,sha256=XFOodTmaGz18x7agfd6_NCM6UvfsQw2Lybfceq2Py3w,62
+fs_tools/__init__.pyi,sha256=q7uhedFxROI356t3CTfd9S3DkOEZmFicQ1kBJV7adFw,286
+fs_tools/compression.py,sha256=tWTS3jS3AXp_0v6Ps5OcCKeGMWvyfEBf-8mH9PCeTxg,918
+fs_tools/io.py,sha256=7w4crE8d9nPFxnd2mkhM7wfILC6KbL_1peXA_cFHCJE,1973
+fs_tools/moving.py,sha256=E_SCmad897O3AKvCN9h4wSrmFYyLUMx36yaFAoBWgTA,783
+fs_tools/paths.py,sha256=LeskrkjFqlwlYPfq_-lMCvKTDWcEr6zBcNro6fyrTqA,597
+fs_tools-0.1.0.dist-info/METADATA,sha256=3jPmI4THWXZh2TgNSozHeYza6vzwxDAnhISNgxL7IUU,355
+fs_tools-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fs_tools-0.1.0.dist-info/top_level.txt,sha256=yN4Ne8w9Y6M-KAe-97gWBD1OIzH3V5tlposDeQSXgkg,9
+fs_tools-0.1.0.dist-info/RECORD,,
