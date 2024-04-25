@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: rm_cmt_time
+Version: 0.1.0
+Summary: remove comment timestamps
+Home-page: https://github.com/Dr-WangZhiyuan/rm_cmt_time
+Author: Dr. Zhiyuan Wang
+Author-email: wang1399@e.ntu.edu.sg
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A small tool to remove comment timestamps

@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+rm_cmt_time/__init__.py
+rm_cmt_time.egg-info/PKG-INFO
+rm_cmt_time.egg-info/SOURCES.txt
+rm_cmt_time.egg-info/dependency_links.txt
+rm_cmt_time.egg-info/top_level.txt
