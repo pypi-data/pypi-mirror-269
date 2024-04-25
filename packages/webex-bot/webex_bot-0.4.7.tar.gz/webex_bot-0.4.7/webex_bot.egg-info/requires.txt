@@ -1,0 +1,4 @@
+webexteamssdk==1.6.1
+coloredlogs
+websockets==11.0.3
+backoff
