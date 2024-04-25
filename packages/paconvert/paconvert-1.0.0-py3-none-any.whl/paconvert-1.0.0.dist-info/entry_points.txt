@@ -1,0 +1,3 @@
+[console_scripts]
+paconvert = paconvert.main:main
+
