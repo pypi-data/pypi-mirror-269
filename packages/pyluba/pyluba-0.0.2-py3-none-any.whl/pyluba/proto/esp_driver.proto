@@ -1,0 +1,130 @@
+syntax = "proto3";
+
+enum WifiConfType {
+    DisconnectWifi = 0;
+    ForgetWifi = 1;
+    DirectConnectWifi = 2;
+    ReconnectWifi = 3;
+}
+
+enum DrvDevInfoResult {
+  DRV_RESULT_FAIL = 0;
+  DRV_RESULT_SUC = 1;
+  DRV_RESULT_NOTSUP = 2;
+}
+
+
+message CommEsp {
+    oneof EspSubType {
+        int32 todev_ble_sync = 1;
+        int32 todev_ConfType = 2;
+        DrvWifiUpload todev_wifimsgupload = 3;
+        DrvWifiSet todev_wifi_configuration = 4;
+        DrvWifiSet todev_wifilistupload = 5;
+        int32 todev_req_log_info = 6;
+        DrvUploadFileCancel todev_log_data_cancel = 7;
+        DrvDevInfoReq todev_devinfo_req = 8;
+        DrvDevInfoResp toapp_devinfo_resp = 9;
+        int32 toapp_upgrade_report = 10;
+        int32 todev_uploadfile_req = 11;
+        DrvListUpload toapp_ListUpload = 12;
+        DrvWifiConf toapp_WifiConf = 13;
+        DrvWifiMsg toapp_wifimsg = 14;
+        int32 toapp_uploadfile_rsp = 15;
+        GetNetworkInfoReq todev_networkinfo_req = 16;
+        GetNetworkInfoRsp toapp_networkinfo_rsp = 17;
+        WifiIotStatusReport toapp_wifi_iot_status = 18;
+    }
+}
+
+message DrvListUpload {
+    int32 current = 2;
+    int32 sum = 1;
+    int32 rssi = 5;
+    int32 status = 3;
+    string memssid = 4;
+}
+
+message DrvWifiUpload {
+    int32 wifiMsgUpload = 1;
+}
+
+message DrvWifiList {
+    int32 nVSWifiUpload = 1;
+}
+
+message DrvWifiMsg {
+    string status1 = 1;
+    string status2 = 2;
+    string iP = 3;
+    string msgssid = 4;
+    string password = 5;
+    int32 rssi = 6;
+    string productkey = 7;
+    string devicename = 8;
+}
+
+message DrvWifiSet {
+  int32 configParam = 1;
+  string confSsid = 2;
+}
+
+message DrvWifiConf {
+  bool succFlag = 1;
+  int32 code = 2;
+  string confssid = 3;
+}
+
+message DrvDevInfoReqId {
+        int32 id = 1;
+        int32 type = 2;
+}
+
+message DrvDevInfoRespId {
+    int32 id = 1;
+    int32 type = 2;
+    string info = 3;
+    int32 res = 4;
+}
+
+message DrvDevInfoReq {
+    repeated DrvDevInfoReqId req_ids = 1;
+}
+
+message DrvDevInfoResp {
+    repeated DrvDevInfoRespId resp_ids = 1;
+}
+
+message WifiIotStatusReport {
+    bool wifi_connected = 1;
+    bool iot_connected = 2;
+    string productkey = 3;
+    string devicename = 4;
+}
+
+message DrvUploadFileToAppReq {
+    optional int32 bizId = 1;
+    optional int32 operation = 2;
+    optional int32 serverIp = 3;
+    optional int32 serverPort = 4;
+    optional int32 num = 5;
+    optional int32 type = 6;
+}
+
+message GetNetworkInfoReq {
+    int32 req_ids = 1;
+}
+
+message GetNetworkInfoRsp {
+    int32 req_ids = 1;
+    string wifi_ssid = 2;
+    string wifi_mac = 3;
+    int32 wifi_rssi = 4;
+    int32 ip = 5;
+    int32 mask = 6;
+    int32 gateway = 7;
+}
+
+message DrvUploadFileCancel {
+    int32 bizId = 1;
+}
