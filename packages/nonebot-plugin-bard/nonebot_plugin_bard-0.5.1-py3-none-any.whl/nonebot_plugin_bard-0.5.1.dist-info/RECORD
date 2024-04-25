@@ -1,0 +1,17 @@
+nonebot_plugin_bard/__init__.py,sha256=COZdRH8TPoWEfz0izgNCOOofQss25bZcXAIrKH0RSYY,5123
+nonebot_plugin_bard/config.py,sha256=-oDDb0lMBT42mAvRs2WORVjiyRiKqqm6xwbFKW4ADe4,539
+nonebot_plugin_bard/gemini_webapi/__init__.py,sha256=kyIhljNxLgMjYHpEH9jwkVn2RjKQNhmjCRio0v5wi5A,147
+nonebot_plugin_bard/gemini_webapi/client.py,sha256=RAMwgYHXgdUvVsQTMnqpoM0tk8Q_7kQkEMTvUOiU0zk,15769
+nonebot_plugin_bard/gemini_webapi/constant.py,sha256=OHJHWxFY6HGQS7kH4tcyzzmMl-YDgXb0jOm7WE4h0Gg,405
+nonebot_plugin_bard/gemini_webapi/exceptions.py,sha256=6e-EXHGApi4iC0GDw7RKc3YqVK8UvEkHYaJyGQbReLw,548
+nonebot_plugin_bard/gemini_webapi/types/__init__.py,sha256=d2kvXnE004s2E2KDmPPLi5N-BQ59FgDSlrGrO3Wphww,163
+nonebot_plugin_bard/gemini_webapi/types/candidate.py,sha256=6pelWA5tkc905b0GqL_XL5hNErJA6Bsgm_lYbs014yE,1111
+nonebot_plugin_bard/gemini_webapi/types/image.py,sha256=8cj93iVuiMYV_df3dxB5WnSX12muHhmYNQcXoAyplaI,4786
+nonebot_plugin_bard/gemini_webapi/types/modeloutput.py,sha256=9W02W_d0DFjpt4Or3SRVbSQqr_Xxna_rHCAgc-IKF2A,1121
+nonebot_plugin_bard/gemini_webapi/utils.py,sha256=hmZ8BIykfNdS1UfylgjTJQ1Tr1xN9W-Trqg7Pvrsub0,992
+nonebot_plugin_bard/images/demo1.jpg,sha256=A7Of5AIU_EYi4P7O-oshERvC_x0EtvFZhoErWHv2R0M,188156
+nonebot_plugin_bard/images/demo2.jpg,sha256=koq2qRl2_dkH42QhG4lvs8QDWKAhkq8JHcebIhtzB5w,120205
+nonebot_plugin_bard/images/demo3.jpg,sha256=5zyOF-2XRfH3edsADWMwQDfJKP8sf9s40qcpYLxqLgA,147000
+nonebot_plugin_bard-0.5.1.dist-info/METADATA,sha256=vimc6vCgpf-ChW_qgGosmMFt2U6ba5J5t0UUgHoh5NU,3035
+nonebot_plugin_bard-0.5.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+nonebot_plugin_bard-0.5.1.dist-info/RECORD,,
