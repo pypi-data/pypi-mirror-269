@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: np-upload-validation
+Version: 0.1.27
+Summary: AWS upload validation
+Author-email: Christopher Mochizuki <chrism@alleninstitute.org>
+License: MIT
+Project-URL: Repository, https://github.com/AllenInstitute/np-upload-validation
+Project-URL: Issues, https://github.com/AllenInstitute/np-upload-validation/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.6.1
+Requires-Dist: fabric>=3.2.2
+Requires-Dist: npc-lims==0.1.110
+Requires-Dist: npc-sessions==0.0.179
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: click>=8.1.7
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: zarr==2.16.1
+Requires-Dist: ome-zarr==0.8.3
+Requires-Dist: wavpack-numcodecs>=0.1.5
+Requires-Dist: spikeinterface[full]>=0.100.0
+Requires-Dist: np-session>=0.6.42
+Provides-Extra: np
+
+# np-upload-validation
+
+AWS upload validation
+
+[![PyPI](https://img.shields.io/pypi/v/np-upload-validation.svg?label=PyPI&color=blue)](https://pypi.org/project/np-upload-validation/)
+[![Python version](https://img.shields.io/pypi/pyversions/np-upload-validation)](https://pypi.org/project/np-upload-validation/)
+
+[![Coverage](https://img.shields.io/codecov/c/github/AllenInstitute/np-upload-validation?logo=codecov)](https://app.codecov.io/github/AllenInstitute/np-upload-validation)
+[![CI/CD](https://img.shields.io/github/actions/workflow/status/AllenInstitute/np-upload-validation/publish.yml?label=CI/CD&logo=github)](https://github.com/AllenInstitute/np-upload-validation/actions/workflows/publish.yml)
+[![GitHub issues](https://img.shields.io/github/issues/AllenInstitute/np-upload-validation?logo=github)](https://github.com/AllenInstitute/np-upload-validation/issues)
+
+# Usage
+```bash
+conda create -n np_upload_validation python>=3.9
+conda activate np_upload_validation
+pip install np_upload_validation
+```
+
+## Python
+```python
+>>> import np_upload_validation
+```
+
+## Debugging version divergences
+
+```bash
+pdm bumpver
+```
+
+# Development
+See instructions in https://github.com/AllenInstitute/np-upload-validation/CONTRIBUTING.md and the original template: https://github.com/AllenInstitute/copier-pdm-npc/blob/main/README.md
