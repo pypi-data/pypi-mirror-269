@@ -1,0 +1,12 @@
+epicbox/__init__.py,sha256=33O4enR6OGZRlZDFH2s5a5R6rHG5s82bI0Nk7S-8yDE,126
+epicbox/config.py,sha256=rR5QEgeQWBE7uUd33nK3sJ0SjeE32VRMuo_bBX1bYf8,2274
+epicbox/exceptions.py,sha256=Tzekf0mWqefMAUTJBWXbX0xg_Sknwth0hvVCacB40A0,195
+epicbox/sandboxes.py,sha256=lKcvZs6dWeQdscOdskUOd9cpqrN8Qioo4gkI5ZvxJYE,8791
+epicbox/session.py,sha256=X3swkw1uuX0gcu7cVwKAS9ti1cDFUF5_bj3y7DHVEmo,8728
+epicbox/utils.py,sha256=zQRlf7isxGgh5hB8gpGpTXQSMjP4BPmjWmf-Z4KOSjs,11218
+epicbox/working_directory.py,sha256=iHHgzva60mcitQmynoCp4Hd401BqcuzRZmeK4vJ4Mjk,3363
+epicbox2-2.0.0.dist-info/LICENSE,sha256=lQiB6m9D0DDzkrepNE6ul8xXa1jf4A1miquV26Mc8XE,1072
+epicbox2-2.0.0.dist-info/METADATA,sha256=QibmEcp5ty4Z3nk9OSPFQjbsqqHCz5vaykjeTC8UuBU,6144
+epicbox2-2.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+epicbox2-2.0.0.dist-info/top_level.txt,sha256=SdyhP2otJA_lZ7EixdIm_XEhzGxRKn0A1-9eK43XnJI,8
+epicbox2-2.0.0.dist-info/RECORD,,
