@@ -1,0 +1,32 @@
+cli_arguments:
+- args: project-path
+  options:
+    action: store
+    help: Directory containing python files to test.
+    required: false
+    dest: project_path
+    default: .
+- args: custom-assertions
+  options:
+    action: store
+    help: Directory containing custom assertions to use in tests.
+    required: false
+    dest: custom_assertions
+    default: null
+- args: exclude-patterns
+  options:
+    action: store
+    default: 
+    - .venv
+    - .eggs
+    - build
+    nargs: +
+    # - ignore
+    # - test_resources
+    dest: exclude_patterns
+    required: false
+  help: A list of strings. Exclude python files containing on of the strings
+resources:
+- https://stackoverflow.com/questions/51666621/pytest-help-does-not-run-when-using-pytest-configure-in-conftest-py
+- https://stackoverflow.com/questions/50817905/pytest-dynamically-parametrized-test
+- https://docs.pytest.org/en/7.1.x/how-to/usage.html

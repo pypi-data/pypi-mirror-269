@@ -1,0 +1,42 @@
+functions:
+- name: main
+  description: Function description
+  tests:
+  - description: Test description
+    arguments:
+      data: 
+        a: 0
+        b: 0
+    cast_arguments:
+      data: Data
+    assertions:
+    - equals: 0
+    - type: 
+        in: [int, float]
+  - description: Test description
+    arguments:
+      a: 3
+      b: 4
+- name: add_numbers
+  description: Function description
+  tests:
+  - arguments:
+      a: 1
+      b: 2
+    assertions:
+    - equals: 3
+    - type: 
+        in: [int, float]
+- name: add_dataclass
+  description: Function description
+  tests:
+  - arguments:
+      data:
+        a: 1
+        b: 2
+    cast_arguments:
+      data: Data
+    assertions:
+    - equals: 3
+    - type: 
+        in: [int, float]
