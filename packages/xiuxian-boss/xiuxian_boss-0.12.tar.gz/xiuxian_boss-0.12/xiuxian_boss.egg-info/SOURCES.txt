@@ -1,0 +1,9 @@
+setup.py
+xiuxian_boss/__init__.py
+xiuxian_boss/bossconfig.py
+xiuxian_boss/makeboss.py
+xiuxian_boss/old_boss_info.py
+xiuxian_boss.egg-info/PKG-INFO
+xiuxian_boss.egg-info/SOURCES.txt
+xiuxian_boss.egg-info/dependency_links.txt
+xiuxian_boss.egg-info/top_level.txt
