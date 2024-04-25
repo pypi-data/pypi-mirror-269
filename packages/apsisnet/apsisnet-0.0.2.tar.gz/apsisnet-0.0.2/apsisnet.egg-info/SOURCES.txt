@@ -1,0 +1,14 @@
+CHANGELOG.txt
+MANIFEST.in
+README.md
+setup.py
+apsisnet/__init__.py
+apsisnet/apsisnet.py
+apsisnet/modules.py
+apsisnet/utils.py
+apsisnet.egg-info/PKG-INFO
+apsisnet.egg-info/SOURCES.txt
+apsisnet.egg-info/dependency_links.txt
+apsisnet.egg-info/requires.txt
+apsisnet.egg-info/top_level.txt
+useage/setup_check.py
