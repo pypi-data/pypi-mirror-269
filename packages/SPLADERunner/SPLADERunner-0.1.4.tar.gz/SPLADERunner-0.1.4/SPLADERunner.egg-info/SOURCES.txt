@@ -1,0 +1,10 @@
+README.md
+setup.py
+SPLADERunner.egg-info/PKG-INFO
+SPLADERunner.egg-info/SOURCES.txt
+SPLADERunner.egg-info/dependency_links.txt
+SPLADERunner.egg-info/requires.txt
+SPLADERunner.egg-info/top_level.txt
+spladerunner/Config.py
+spladerunner/Expander.py
+spladerunner/__init__.py

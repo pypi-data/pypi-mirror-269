@@ -1,0 +1,5 @@
+tokenizers
+onnxruntime-gpu
+numpy
+requests
+tqdm
