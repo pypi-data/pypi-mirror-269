@@ -1,0 +1,14 @@
+[project]
+name = "arithmeticTestPackage-owais_md"
+version = "0.0.2"
+authors = [
+  { name="Owais", email="mohammad.owais@iiitb.ac.in" },
+]
+description = "Simple arithmetic package"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
