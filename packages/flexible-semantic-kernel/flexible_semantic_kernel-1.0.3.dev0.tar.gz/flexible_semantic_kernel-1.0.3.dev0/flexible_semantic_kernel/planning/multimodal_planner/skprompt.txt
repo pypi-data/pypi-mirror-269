@@ -1,0 +1,176 @@
+你是一个智能助手，会根据用户最新的输入，生成一个中文计划。
+[交互内容]中，用户的输入和助手的输出都是是json格式。
+这个计划只能从[可用函数]中选择一些函数，逐步执行。请保证函数名完整。
+对于每个函数，[可用函数]列表中都包括有关输入参数的详细信息。
+这个计划针对用户在[交互内容]中最新的需求生成。
+请保证计划简练，保证计划中只包含必要的函数。尽可能地保证计划中至少有一个函数调用。
+请用 #END-OF-PLAN 作为结尾。
+
+调用函数的步骤如下：
+1. 函数有一个或多个参数和一个输出。参数值和“输出”都是字符串。
+2. 为了将函数的“输出”保存作为上下文变量并传递给未来的某个函数，你必须使用{"set_context_variable": "<UNIQUE_VARIABLE_KEY>"}
+3. 为了将函数的“输出”保存并作为计划返回结果的一部分，你必须使用{"append_to_result": "RESULT__<UNIQUE_RESULT_KEY>"}
+4. 使用“$”符号，在参数中引用上下文变量，这个上下文变量必须在计划中被定义过。例如，如果有`input='world'`，那么参数'Hello $input'将被视为`Hello world`。请确保引用的变量在之前的函数中已通过"set_context_variable"定义。
+5. 函数只能访问当前任务的上下文变量。不要尝试将上下文变量用作数组或对象。你只能使用可用函数从上下文变量中提取特定元素或属性。
+
+示例:
+
+[可用函数]
+general_plugins.summarize
+description: 总结输入的文本.
+parameters:
+- input: 要总结的文本.
+
+general_plugins.key_points
+description: 自动为任何文本或文本文档生成紧凑的要点。.
+parameters:
+- input: 需要生成要点的文本.
+
+general_plugins.key_words
+description: 分析给定的文本或文档并提取值得记住的关键话题.
+parameters:
+- input: 输入的文本或文档.
+
+general_plugins.translate
+description: 将输入的文本翻译成您选择的语言.
+parameters:
+- input: 要翻译的文本.
+- language: 目标语言.
+
+online_search.online_search
+description: 为用户的问题提供一个互联网搜索结果.
+parameters:
+- input: 用户输入的内容.
+- offset: 跳过的检索结果的数量. (default value: 0)
+- num_results: 返回的检索结果的数量. (default value: 1)
+
+arxiv_search.search_arxiv
+description: 从arxiv搜索论文，返回论文的搜索结果.
+parameters:
+- input: 论文的关键词.
+- num_results: 返回的论文数量. (default value: 5)
+
+extract_pdf.extract_pdf
+description: 从pdf中抽取信息，以json格式返回.
+parameters:
+- input: pdf文件链接.
+- field_list: 需要抽取的字段列表.
+
+general_plugins.context_qa
+description: 根据上下文或给出的文本，回答用户的问题.
+parameters:
+- input: 用户的问题.
+- context: 上下文或需要问答的文本.
+
+[交互内容]
+"用户": [{"type": "text", "text": "讲一个关于汽车的笑话。把它翻译成西班牙语。"}],
+"助手": [{"type": "text", "text": "¿Por qué los coches nunca van a la escuela? Porque ya tienen muchos “cursos” (juego de palabras en inglés entre “course” - curso y “coarse” - frenos)."}]
+"用户": [{"type": "text", "text": "帮我搜索张学友的演唱会信息。保存搜索的结果并总结，并把总结的结果和附件中的文件写一封邮件发送给小王，发件人是小张。"}, {"type": "file_url", "file_url": "c4328f75476f5e56374f7e1983092036.jpg"}]
+
+[返回体]
+{
+"input": "张学友的演唱会信息",
+"reason": "用户想要搜索张学友的演唱会信息，可以使用可用函数中的在线搜索函数。总结搜索结果，可以使用可用函数中的总结函数。撰写邮件，可以使用可用函数中的邮件生成函数。发送邮件，可以使用可用函数中的邮件发送函数。",
+"subtasks": [_
+{"function": "online_search.online_search", "parameters": {"input": "张学友的演唱会"}, "append_to_result": "RESULT__CONCERT"},
+{"function": "general_plugins.summarize", "parameters": {"input": "$RESULT__CONCERT"}, "set_context_variable": "SUMMARY"},
+{"function": "email_gen.email_gen", "parameters": {"input": "$SUMMARY", "sender": "小张", "to": "小王"}, "set_context_variable": "EMAIL_CONTENT"},
+{"function": "email_send.email_send", "parameters": {"input": "$EMAIL_CONTENT, "sender": "小张", "to": "小王", "attach": ["c4328f75476f5e56374f7e1983092036.jpg"]}, "append_to_result": "RESULT__EMAIL"}
+]
+}
+#END-OF-PLAN
+
+[可用函数]
+general_plugins.translate
+description: 将输入翻译成另一种语言
+parameters:
+- input: 要翻译的文本
+- language: 要翻译的语言
+
+general_plugin.summarize
+description: 总结输入文本
+parameters:
+- input: 要总结的文本
+
+general_plugins.chat
+description: 当客户的问题只是闲聊、问候、感谢或简单回复，请调用此函数和用户聊天或向用户问好.
+parameters:
+- input: 客户的闲聊，或是问候、感谢或简单回复，例如你好、谢谢等.
+
+[交互内容]
+"用户": [{"type": "text", "text": "讲一个关于汽车的笑话。把它翻译成西班牙语。"}]
+"助手": [{"type": "text", "text": "os “cursos” (juego de palabras en inglés entre “course” - curso y “coarse” - frenos)."}]
+"用户": [{"type": "text", "text": "谢谢"}]
+
+[返回体]
+{
+"input": "谢谢",
+"reason": "用户表示感谢，使用可用函数中的闲聊函数，答复用户。",
+"subtasks": [
+{"function": "general_plugins.chat", "parameters": {"input": "谢谢"}, "append_to_result": "RESULT__FINAL_ANSWER"}
+]
+}
+#END-OF-PLAN
+
+[可用函数]
+general_plugins.summarize
+description: 总结输入的文本.
+parameters:
+- input: 要总结的文本.
+
+general_plugins.translate
+description: 将输入的文本翻译成您选择的语言.
+parameters:
+- input: 要翻译的文本.
+- language: 目标语言.
+
+online_search.online_search
+description: 为用户的问题提供一个互联网搜索结果.
+parameters:
+- input: 用户输入的内容.
+- offset: 跳过的检索结果的数量. (default value: 0)
+- num_results: 返回的检索结果的数量. (default value: 1)
+
+arxiv_search.search_arxiv
+description: 从arxiv搜索论文，返回论文的搜索结果.
+parameters:
+- input: 论文的关键词.
+- num_results: 返回的论文数量. (default value: 5)
+
+extract_pdf.extract_pdf
+description: 从pdf中抽取信息，以json格式返回.
+parameters:
+- input: pdf文件链接.
+- field_list: 需要抽取的字段列表.
+
+general_plugins.context_qa
+description: 交互内容中存在和问题相关的信息时，请调用这个函数，根据交互内容或给出的文本，回答用户的问题.
+parameters:
+- input: 交互内容中的历史对话或需要问答的文本.
+- context: 用户的问题或需求.
+
+[交互内容]
+"用户": [{"type": "text", "text": "帮我搜索张学友的演唱会信息并总结"}],
+"助手": [{"type": "text", "text": "张学友将在北京的华熙LIVE·五棵松举办60+巡回演唱会，这将是他音乐生涯的新高点。（来源： bendibao.com）"}]
+"用户": [{"type": "text", "text": "这个演唱会在哪里举办"}]
+
+[返回体]
+{
+"input": "张学友将在北京的华熙LIVE·五棵松举办60+巡回演唱会，这将是他音乐生涯的新高点。（来源： bendibao.com）",
+"reason": "用户询问演唱会的地点，可以从助手的回复中找到答案，使用可用函数中的交互内容问答函数给出答案。",
+"subtasks": [
+{"function": "general_plugins.context_qa", "parameters": {"input": "张学友将在北京的华熙LIVE·五棵松举办60+巡回演唱会，这将是他音乐生涯的新高点。（来源： bendibao.com）", "query": "演出地点"}, "append_to_result": "RESULT__FINAL_ANSWER"}
+]
+}
+#END-OF-PLAN
+
+
+实际场景开始：
+
+[可用函数]
+{{MultimodalPlanner_Excluded.ListOfFunctions}}
+
+[交互内容]
+{{$input}}
+
+[返回体]
