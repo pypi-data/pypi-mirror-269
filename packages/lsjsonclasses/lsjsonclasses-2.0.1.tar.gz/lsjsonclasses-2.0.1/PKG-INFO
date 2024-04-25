@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: lsjsonclasses
+Version: 2.0.1
+Summary: Custom json encoder/decoder for python types
+Author: IT
+Author-email: it@electronic-shop.lu
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: iso8601 (>=2.1.0,<3.0.0)
