@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PyDotBot/static/css/main.d72e9176.css",
+    "main.js": "/PyDotBot/static/js/main.b128b402.js",
+    "static/media/bootstrap-icons.woff?": "/PyDotBot/static/media/bootstrap-icons.e559bf06bc84fd9525e6.woff",
+    "static/media/bootstrap-icons.woff2?": "/PyDotBot/static/media/bootstrap-icons.ea98e12d2d58747f9fc5.woff2",
+    "index.html": "/PyDotBot/index.html",
+    "main.d72e9176.css.map": "/PyDotBot/static/css/main.d72e9176.css.map",
+    "main.b128b402.js.map": "/PyDotBot/static/js/main.b128b402.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d72e9176.css",
+    "static/js/main.b128b402.js"
+  ]
+}
