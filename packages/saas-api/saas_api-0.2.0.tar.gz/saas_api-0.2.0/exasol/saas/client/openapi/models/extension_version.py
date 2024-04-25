@@ -1,0 +1,81 @@
+from typing import (
+    TYPE_CHECKING,
+    Any,
+    BinaryIO,
+    Dict,
+    Optional,
+    TextIO,
+    Tuple,
+    Type,
+    TypeVar,
+)
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..types import (
+    UNSET,
+    Unset,
+)
+
+T = TypeVar("T", bound="ExtensionVersion")
+
+
+@_attrs_define
+class ExtensionVersion:
+    """ 
+        Attributes:
+            version (str):
+            latest (bool):
+            deprecated (bool):
+            installed (bool):
+     """
+
+    version: str
+    latest: bool
+    deprecated: bool
+    installed: bool
+
+
+    def to_dict(self) -> Dict[str, Any]:
+        version = self.version
+
+        latest = self.latest
+
+        deprecated = self.deprecated
+
+        installed = self.installed
+
+
+        field_dict: Dict[str, Any] = {}
+        field_dict.update({
+            "version": version,
+            "latest": latest,
+            "deprecated": deprecated,
+            "installed": installed,
+        })
+
+        return field_dict
+
+
+
+    @classmethod
+    def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
+        d = src_dict.copy()
+        version = d.pop("version")
+
+        latest = d.pop("latest")
+
+        deprecated = d.pop("deprecated")
+
+        installed = d.pop("installed")
+
+        extension_version = cls(
+            version=version,
+            latest=latest,
+            deprecated=deprecated,
+            installed=installed,
+        )
+
+        return extension_version
+
