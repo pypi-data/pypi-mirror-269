@@ -1,0 +1,6 @@
+recursive-include autofeather_dash_mantine_components/** *.js *.css *.json *.html
+include autofeather_dash_mantine_components/theme/*
+prune tests
+include README.md
+include LICENSE
+include package.json
