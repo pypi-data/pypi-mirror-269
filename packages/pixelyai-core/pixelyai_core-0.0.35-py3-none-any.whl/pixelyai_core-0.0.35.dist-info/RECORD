@@ -1,0 +1,16 @@
+pixelyai_core/__init__.py,sha256=KCAHqM3XQW3A5ytq4WRrWbXDuCTmQ6OT2D1AicTbYNE,273
+pixelyai_core/client.py,sha256=NaRSIxR03e-qJl1Z1tAMDky7jisrycU9lH6mm9Z-yTo,2498
+pixelyai_core/prompt_templates/__init__.py,sha256=F-K5yZmLCfHmQ8jiwHnye7sRDYpkA6xwOT6I6gPbltA,153
+pixelyai_core/prompt_templates/chat/__init__.py,sha256=CPb1UW8ajdEqZrksCN5iTW9bz3RSvTXLRxZTXpOkD9k,42
+pixelyai_core/prompt_templates/chat/agnet.py,sha256=c-N7G7KKlw0Me9RZIIeOyK3KGci6YgRBcgY0p5FVw5A,625
+pixelyai_core/prompt_templates/chat/prompt.jinja2,sha256=_vUj3-FHLcdm5JvTWYEDujIXRdvu5NUVCMZad7sfuCI,704
+pixelyai_core/prompt_templates/retrival_argumented_generation/__init__.py,sha256=kkkezFt-QgWnoy1GHX6VzWHe7bySZjmIacyQ6c6Ab8Y,40
+pixelyai_core/prompt_templates/retrival_argumented_generation/agent.py,sha256=xx9YiE9iZoLtBgD5p2q9_ydl1X5fGTj_mIzERoNX4rM,689
+pixelyai_core/prompt_templates/retrival_argumented_generation/prompt.jinja2,sha256=tA0RS0Qy9G39C0lNAP8Vk8PFv8nWxXcrcbp-xsfr8bU,857
+pixelyai_core/serving/__init__.py,sha256=esGZEkBai48ZGJH1xLnJPHebIiIthQVKdxq7AVWnfvE,56
+pixelyai_core/serving/engine_module.py,sha256=7YghIyK3UiGs22maNp-3m76RmS8e3-rZzS-7gA-gsRs,3440
+pixelyai_core-0.0.35.dist-info/LICENSE,sha256=JP1PaVqTLVZcd3TOL42fCXQwkpGBLofmODEmZAGpBTI,1506
+pixelyai_core-0.0.35.dist-info/METADATA,sha256=G7rHdMTsVamowdiPC-id_CFzfep2hJ5wQaPlGZagTmw,6396
+pixelyai_core-0.0.35.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pixelyai_core-0.0.35.dist-info/top_level.txt,sha256=wU4lfEDlqGYLONP_Y5ugfpeKs6-zW-y91yzdWhnwr_M,14
+pixelyai_core-0.0.35.dist-info/RECORD,,
