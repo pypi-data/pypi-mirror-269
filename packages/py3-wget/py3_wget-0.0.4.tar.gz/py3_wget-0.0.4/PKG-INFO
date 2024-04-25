@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: py3_wget
+Version: 0.0.4
+Summary: A simple tool to download files with python, supporting a progress bar
+Author: Gabriele Berton
+Author-email: <berton.gabri@gmail.com>
+Keywords: python,download,progress bar
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Requests
+Requires-Dist: tqdm
+
+
+# py3_wget
+A tool like wget for python, supporting a progress bar
