@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "myemail"
+version = "0.2.0"
+description = ""
+authors = ["tct123 <42028373+tct123@users.noreply.github.com>"]
+readme = "README.md"
+repository = "https://github.com/tct123/myemail"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
