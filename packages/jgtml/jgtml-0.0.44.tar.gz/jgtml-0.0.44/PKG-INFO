@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: jgtml
+Version: 0.0.44
+Summary: JGT Ml - Machine Learning Tools
+Home-page: https://github.com/jgwill/jgtml
+Author: GUillaume Isabelle
+Author-email: Guillaume Isabelle <jgi@jgwill.com>
+License: MIT
+Project-URL: Homepage, https://github.com/jgwill/jgtml
+Project-URL: Bug Tracker, https://github.com/jgwill/jgtml/issues
+Keywords: data
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: dev-lint
+Provides-Extra: dev-test
+Provides-Extra: dev-docs
+License-File: LICENSE
+
+# jgtml
+JGTML
