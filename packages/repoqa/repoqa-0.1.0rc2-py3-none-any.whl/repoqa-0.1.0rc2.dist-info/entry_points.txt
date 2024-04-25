@@ -1,0 +1,3 @@
+[console_scripts]
+repoqa.compute_score = repoqa.compute_score:main
+repoqa.search_needle_function = repoqa.search_needle_function:main
