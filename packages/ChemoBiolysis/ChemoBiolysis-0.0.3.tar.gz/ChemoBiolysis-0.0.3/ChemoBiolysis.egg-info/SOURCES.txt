@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+ChemoBiolysis/__init__.py
+ChemoBiolysis.egg-info/PKG-INFO
+ChemoBiolysis.egg-info/SOURCES.txt
+ChemoBiolysis.egg-info/dependency_links.txt
+ChemoBiolysis.egg-info/requires.txt
+ChemoBiolysis.egg-info/top_level.txt
