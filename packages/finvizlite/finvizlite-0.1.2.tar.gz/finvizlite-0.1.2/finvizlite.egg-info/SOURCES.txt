@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+finvizlite/__init__.py
+finvizlite.egg-info/PKG-INFO
+finvizlite.egg-info/SOURCES.txt
+finvizlite.egg-info/dependency_links.txt
+finvizlite.egg-info/requires.txt
+finvizlite.egg-info/top_level.txt
+tests/test_finvizlite.py
