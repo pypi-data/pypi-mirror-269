@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pailettes"
+version = "0.1.4"
+description = "Generate color palettes using artificial intelligence (OpenAI)."
+authors = ["Helmut Irle <me@helmut.dev>"]
+readme = "README.md"
+homepage = "https://github.com/psyonara/pailettes"
+
+[tool.poetry.scripts]
+pailettes = "pailettes.main:app"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.11.0"}
+openai = "^1.14.3"
+rich = "^13.7.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
