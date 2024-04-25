@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: RAPDOR
+Version: 0.1.3
+Summary: Package for identification of RNA dependent Proteins from mass spec data 
+Home-page: https://github.com/domonik/RAPDOR
+Author: domonik
+Author-email: dominik.rabsch@gmail.com
+License: LICENSE
+Description-Content-Type: text/markdown
+Requires-Dist: statsmodels
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: plotly>=5.16
+Requires-Dist: pandas
+Requires-Dist: dash>=2.5
+Requires-Dist: dash_bootstrap_components
+Requires-Dist: scikit-learn
+Requires-Dist: dash_loading_spinners
+Requires-Dist: kaleido
+Requires-Dist: dash_daq
+Requires-Dist: dash_extensions
+Requires-Dist: pyYAML
+Requires-Dist: dash[diskcache]
+
+Package for identification of RNA dependent Proteins from mass spec data 
