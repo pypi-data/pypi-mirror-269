@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/chemsource/__init__.py
+src/chemsource/chemsource.py
+src/chemsource/classifier.py
+src/chemsource/config.py
+src/chemsource/exceptions.py
+src/chemsource/retriever.py
+src/chemsource.egg-info/PKG-INFO
+src/chemsource.egg-info/SOURCES.txt
+src/chemsource.egg-info/dependency_links.txt
+src/chemsource.egg-info/requires.txt
+src/chemsource.egg-info/top_level.txt
