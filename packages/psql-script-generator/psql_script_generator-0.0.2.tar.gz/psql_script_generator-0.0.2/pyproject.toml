@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "psql-script-generator"
+version = "0.0.2"
+dependencies = [
+  "jinja2"
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Paulo Ledo", email = "paulofledo@gmail.com"}
+]
+maintainers = [
+  {name = "Paulo Ledo", email = "paulofledo@gmail.com"}
+]
+description = "It generates a SQL script based on a Jinja2 template, allowing you to automate the creation of a database, roles, and permissions."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = ["psql", "readwrite", "sql script"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+#[project.optional-dependencies]
+#cli = [
+#  "rich",
+#  "click",
+#]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cli"]
+#only-packages = true
+
+[project.scripts]
+psql-script-generator = "cli.main:main"
+
+[project.urls]
+Homepage = "https://github.com/pledo/psql-script-generator"
+#Documentation = "https://readthedocs.org"
+Repository = "https://github.com/pledo/psql-script-generator.git"
+#"Bug Tracker" = "https://github.com/me/spam/issues"
+#Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+#[project.scripts]
+#spam-cli = "spam:main_cli"
+
+#[project.gui-scripts]
+#spam-gui = "spam:main_gui"
+
+#[project.entry-points."spam.magical"]
+#tomatoes = "spam:main_tomatoes"

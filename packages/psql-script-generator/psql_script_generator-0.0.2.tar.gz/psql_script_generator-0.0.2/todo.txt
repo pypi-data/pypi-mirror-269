@@ -1,0 +1,5 @@
+- Fix the step-by-step with pip install, using venv.
+- See if It's possible to validate with docker container and put all test commands in one
+.sql and import or execute it with the docker container like: docker run -f test.sql or something like
+that, instead of execute commnad by command
+- Configurar step-by-step how to create a cli, install locally, testpypi, pypi manually and using github actions
