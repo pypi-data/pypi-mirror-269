@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: math_op
+Version: 1.0
+Summary: A Python package for basic mathematical operations.
+Author: Bijeet Basak
+Author-email: bijeet.basak2018@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
