@@ -1,0 +1,43 @@
+[project]
+name = "tesci"
+version = "1.0.1"
+description = "A toolkit to aid in scientific mapping"
+readme = "README.md"
+keywords = ["scientific mapping", "merging data sources"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1",
+    "requests",
+    "pandas",
+    "pyyaml",
+    "PyGithub>=2.1.1",
+    "attrs",
+    "xlrd",
+    "openpyxl",
+    "rapidfuzz>=3.5.2",
+    'importlib-metadata; python_version<"3.8"',
+]
+
+[project.scripts]
+tesci = "tesci.scripts.tesci:cli"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages]
+find = {} # Scan the project directory with the default parameters

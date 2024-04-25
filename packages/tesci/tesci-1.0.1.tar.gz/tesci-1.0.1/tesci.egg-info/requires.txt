@@ -1,0 +1,12 @@
+click>=8.1
+requests
+pandas
+pyyaml
+PyGithub>=2.1.1
+attrs
+xlrd
+openpyxl
+rapidfuzz>=3.5.2
+
+[:python_version < "3.8"]
+importlib-metadata
