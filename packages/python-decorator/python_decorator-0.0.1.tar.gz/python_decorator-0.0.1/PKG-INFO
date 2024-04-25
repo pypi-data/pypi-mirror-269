@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: python-decorator
+Version: 0.0.1
+Summary: Python argument type.
+Home-page: https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/python-decorator
+License: MIT
+Keywords: file,reverse,iter
+Author: ChenyangGao
+Author-email: wosiwujm@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: python-partial
+Requires-Dist: python-undefined
+Project-URL: Repository, https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/python-decorator
+Description-Content-Type: text/markdown
+
+# Python decorator.
+
+## Installation
+
+You can install from [pypi](https://pypi.org/project/python3-decorator/)
+
+```console
+pip install -U python-decorator
+```
+
+## Usage
+
+```python[tool.poetry]
+name = "python-decorator"
+version = "0.0.1"
+description = "Python decorator."
+authors = ["ChenyangGao <wosiwujm@gmail.com>"]
+license = "MIT"
+readme = "readme.md"
+homepage = "https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/python-decorator"
+repository = "https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/python-decorator"
+keywords = ["file", "reverse", "iter"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.packages]]
+include = "decorator"
+
+import decorator
+```
+
