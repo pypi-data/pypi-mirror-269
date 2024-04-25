@@ -1,0 +1,14 @@
+waretomo/__init__.py,sha256=SDUE0c1Ywaue0xluStdu6Df1oR-7HIOSqD_gfpwquts,295
+waretomo/_aretomo.py,sha256=6bKkbQzUUu0sSIV10azc_H56PXr7pKPNFhtPMX1GUsc,4944
+waretomo/_fix_mdoc.py,sha256=lZuoyxFxppkIJtyctuvRLmu1iALDtx473TGeSvFlPZI,2081
+waretomo/_parse.py,sha256=DWMHL4bCqcEkxv9Gyvo0GH0Gdo193XCcXPR3dMO1Ip4,5458
+waretomo/_stack.py,sha256=sWxfmWsH7a8US7WCyI70xxTkc_ARykSuY7Iq_7091PA,991
+waretomo/_threaded.py,sha256=zTgXQXoRLpq4QL6tPGGHhF6OIsk3A3GthUewVaJq7-A,1559
+waretomo/_topaz.py,sha256=nptr9w1NIsPY-EF_g9DjQdFNaimsAzPAhGwAqKsKesw,3372
+waretomo/main.py,sha256=i9TRYd85G0JR9TJstldFeAmk3V5PCrLE5ZixbsCL4Lw,12368
+waretomo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+waretomo-0.1.4.dist-info/METADATA,sha256=RbeeSUTK8MBCprvenntwSwosfy7r42POkoadIEHsCxA,5299
+waretomo-0.1.4.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+waretomo-0.1.4.dist-info/entry_points.txt,sha256=tHxILuJq_mhZTPgvwzrMm6ujtEjTgCPMlygaZTfWEvI,47
+waretomo-0.1.4.dist-info/licenses/LICENSE,sha256=VXapH-nuSz68DG5ScURElxHkl1lKk4MOK9cgZCSRDXs,34502
+waretomo-0.1.4.dist-info/RECORD,,
