@@ -1,0 +1,58 @@
+#!/usr/bin/env zsh
+#
+# Package the project
+
+# locate the project directory; assume it is the directory above this script
+# assume this script is in the "tools" subdirectory; change to project directory
+cd $(dirname $0)/..
+PROJECT_DIR=$(pwd)
+
+# activate the project virtual environment
+source ${PROJECT_DIR}/venv/bin/activate
+echo "activating virtual environment"
+
+# make sure there are no uncommitted changes
+if [[ $(git status --porcelain | wc -l ) -gt 0 ]]
+then
+echo "Project contains uncommitted changes; aborting build"
+git status
+exit -1
+fi
+
+# verify that the current HEAD has a tag
+VERSION=$(git describe --abbrev=0 --exact-match)
+if [[ -z "${VERSION}" ]]
+then
+echo "No git tag found for HEAD"
+git log -n 1
+exit -1
+
+elif [[ "v${VERSION#v}" != "${VERSION}" ]]
+then
+echo "Tag ${VERSION} is not a version tag"
+exit -1
+fi
+
+# create version file
+echo "__version__ = \"${VERSION}\"" > src/__about__.py
+
+# upgrade all packages
+pip install --upgrade $(pip freeze | awk -F= '{print $1}')
+
+# remove previous artifacts
+rm -rf ./dist 2> /dev/null
+
+# build project distribution
+if python3 -m build
+then
+echo
+echo "To upload these artifacts to PyPI, run the following command"
+echo "python3 -m twine upload dist/*"
+echo "or"
+echo "python3 -m twine upload --repository testpypi dist/*"
+
+else
+echo
+echo Build process exited with $?
+
+fi
