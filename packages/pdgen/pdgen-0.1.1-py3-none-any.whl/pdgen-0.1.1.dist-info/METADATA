@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pdgen
+Version: 0.1.1
+Summary: A Python package for generating UML diagrams from Python code using PlantUML.
+Author-email: Tobias Bück <tab@softoft.de>
+Project-URL: Bug Reports, https://github.com/Softoft/pdgen/issues
+Project-URL: Source, https://github.com/Softoft/pdgen/
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.12
+
