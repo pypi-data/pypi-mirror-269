@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: asqlorm
+Version: 0.6.3
+Summary: 
+Author: Jeremy Berman
+Author-email: jerber@sas.upenn.edu
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: asyncpg (>=0.29.0,<0.30.0)
+Requires-Dist: black
+Requires-Dist: devtools
+Requires-Dist: fastgql
+Requires-Dist: greenlet (>=3.0.3,<4.0.0)
+Requires-Dist: psycopg[binary]
+Requires-Dist: pydantic (>=2.7,<3.0)
+Requires-Dist: sentry-sdk[sqlalchemy] (>=1.45.0,<2.0.0)
+Requires-Dist: sqlalchemy (>=2.0.29,<3.0.0)
+Requires-Dist: sqlparse
+Description-Content-Type: text/markdown
+
+sqlorm!
