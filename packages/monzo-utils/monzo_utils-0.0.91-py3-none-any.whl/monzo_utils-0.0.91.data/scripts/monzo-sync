@@ -1,0 +1,30 @@
+#!python
+
+import sys
+from urllib.error import URLError
+from monzo_utils.lib.monzo_sync import MonzoSync
+
+if 'setup' in sys.argv:
+    m = MonzoSync(no_init=True)
+    m.setup()
+    sys.exit()
+
+tmp = None
+
+for i in range(0, len(sys.argv)):
+    if sys.argv[i] == '--tmp' and i+1 < len(sys.argv):
+        tmp = sys.argv[i+1]
+        break
+
+m = MonzoSync(False, tmp)
+
+if 'scan-accounts' in sys.argv:
+    m.scan_accounts()
+else:
+    try:
+        m.sync(3, None, tmp)
+    except URLError as e:
+        if 'timed out' in str(e):
+            sys.stdout.write("timeout encountered, service may be busy.\n")
+        else:
+            sys.stderr.write(f"URLError encountered during sync: {str(e)}\n")
