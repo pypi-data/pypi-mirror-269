@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "nitrain"
+version = "0.3.0"
+description = "Cloud-based framework for training and sharing medical imaging AI models"
+authors = ["ncullen93 <nicholas.cullen@med.lu.se>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydot = "^2.0.0"
+parse = "^1.20.1"
+nitrain-image = "^0.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
