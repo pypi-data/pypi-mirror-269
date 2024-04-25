@@ -1,0 +1,395 @@
+Metadata-Version: 2.1
+Name: abnativ
+Version: 1.1.0
+Summary: AbNatiV: a VQ-VAE-based assessment of the nativeness of antibodies.
+License: CC BY-NC-SA 4.0
+Author: Aubin Ramon
+Requires-Python: >=3.8.0,<3.9.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: biopython (>=1.79,<2.0)
+Requires-Dist: brewer2mpl (>=1.4.1,<2.0.0)
+Requires-Dist: chroma (>=0.2.0,<0.3.0)
+Requires-Dist: einops (>=0.7.0,<0.8.0)
+Requires-Dist: freesasa (>=2.2.1,<3.0.0)
+Requires-Dist: immunebuilder (>=1.0.1,<2.0.0)
+Requires-Dist: matplotlib (>=3.7.0,<3.8.0)
+Requires-Dist: mlflow (>=2.11.3,<3.0.0)
+Requires-Dist: numpy (>=1.24.0,<1.25.0)
+Requires-Dist: pandas (>=1.0,<2.0)
+Requires-Dist: paretoset (>=1.2.3,<2.0.0)
+Requires-Dist: protein-topmodel (==1.0.1)
+Requires-Dist: python-parallel (>=0.9.1,<0.10.0)
+Requires-Dist: pytorch-lightning (>=2.0,<3.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: scipy (>=1.9.0,<1.10.0)
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Requires-Dist: torch (==2.2.2)
+Requires-Dist: tqdm (>=4.66.2,<5.0.0)
+Description-Content-Type: text/markdown
+
+<div align="center">
+
+# AbNatiV: VQ-VAE-based assessment of antibody and nanobody nativeness for hit selection, humanisation, and engineering
+
+</div>
+
+## Reference
+
+> Original publication: <https://www.nature.com/articles/s42256-023-00778-3>
+>
+> bioRxiv preprint at <https://www.biorxiv.org/content/10.1101/2023.04.28.538712v2>
+
+## Presentation
+
+AbNatiV is a deep-learning tool for assessing the nativeness of antibodies and nanobodies,
+i.e., their likelihood of belonging to the distribution
+of immune-system derived human antibodies or camelid nanobodies,
+which can be exploited to guide antibody engineering and humanisation.
+
+The model is a vector-quantized variational auto-encoder (VQ-VAE) that generates
+an interpretable nativeness score
+and a residue-level nativeness profile for a given input sequence.
+
+* AbNatiV provides a <strong><ins>nativeness score</ins></strong> for each of its 4 default training datasets:\
+   &emsp;&emsp; 1. `VH`: human immune-system derived heavy chains,\
+   &emsp;&emsp; 2. `VKappa`: human immune-system derived kappa light chains,\
+   &emsp;&emsp; 3. `VLambda`: human immune-system derived lambda light chains,\
+   &emsp;&emsp; 4. `VHH`: camelid immune-system derived single-domain antibody sequences.
+
+* AbNatiV can additionally be used to <strong><ins>humanise</ins></strong> Fv sequences (nanobodies and paired VH/VL):\
+  &emsp;&emsp; 1. <strong>nanobodies</strong>: it employs a dual-control strategy aiming to increase the humanness of the sequence without decreasing its initial VHH-nativenees,\
+  &emsp;&emsp; 2. <strong>paired VH/VL</strong>: it directly increases the VH-humanness and VL-humanneess of both sequences.
+
+<strong>A web server for scoring is available at https://www-cohsoftware.ch.cam.ac.uk/index.php/abnativ</strong>
+
+## Setup AbNatiV
+
+
+### Installation from PyPI (manual)
+Ensure that you have the correct dependancies already installed before installing from the PyPI repository. For `x86_64` is pretty straight forward since all the packages are on `conda`, however, for `arm64`/`Apple Silicon (M1/2/3)` it requires a few extra steps since the packages are not on conda.
+
+
+The following non-PyPI packages are required:
+
+* `pdbfixer` - availible from `conda-forge`
+* `ANARCI` - availible from `conda-forge/x86_64` 
+
+**x86_64**
+```bash
+# Ensure that conda dependancies are installed
+conda install -c conda-forge pdbfixer
+conda install -c bioconda anarci
+```
+
+**Apple Silicon**
+
+Hmmer and ANARCI need to be installed manually. The easiest way to do this is to use `brew` for `hmmer` and manually installing from github for `ANACRI`. It is also possible to manually install `hmmer` from source if needed. If `hmmer` is already installed, ensure that the `hmmer` binary directory is in `PATH` so that the build tools can find it.
+
+```bash
+brew install hmmer # Hmmer is not availible on conda for arm64 - use brew instead
+
+conda install -c conda-forge pdbfixer
+conda install -c conda-forge biopython">=1.79.0,<1.80.0" -y
+git clone https://github.com/oxpig/ANARCI.git
+cd ANARCI
+python setup.py install
+```
+
+**Install AbNatiV**
+```
+# Install from our GitLab PyPI repository
+pip install abnativ --index-url https://gitlab.developers.cam.ac.uk/api/v4/projects/6948/packages/pypi/simple
+```
+
+
+### Automatic conda environment creation (recommended)
+
+The following will create a new conda environment will all of the required packages installed. This option is best for use when AbNatiV is going to be used in a standalone fashion.
+
+```bash
+git clone https://gitlab.developers.cam.ac.uk/ch/sormanni/abnativ.git
+cd abnativ
+
+# This will automatically create the conda environment and install AbNatiV
+./setup_env.sh
+```
+
+If a more complex environment is required, manual installation should be preferred as the automation script may lead to some issues.
+
+
+## AbNatiV command-line interface
+
+### 1 - Antibody nativeness scoring
+
+To score input antibody sequences, use the `abnativ score` command line. You can plot nativeness profiles using the `-plot` option.
+
+AbNatiV provides an interpretable overall nativeness score, which approaches 1 for highly native sequences and where 0.8 represents the threshold that best separates native from non-native sequences. This score is computed for the whole Fv sequence, but can also be computed for individual CDRs or framework region (closest to 1, highest nativeness).
+
+NB: Input antibody sequences need to be aligned to be processed by AbNatiV (AHo scheme). AbNatiV can directly align them with the option `-align`. If working with nanobodies, precise `-isVHH`, it considers the VHH seed for the alignment. `-align` and `-plot` will slow down the scoring.
+
+<details>
+    <summary>See <strong>abnativ score</strong> command line description</summary>
+
+```
+abnativ score [-h] [-nat NATIVENESS_TYPE] [-mean] [-i INPUT_FILEPATH_OR_SEQ] [-odir OUTPUT_DIRECTORY] [-oid OUTPUT_ID]
+                     [-align] [-isVHH] [-plot]
+
+Use a trained AbNatiV model (default or custom) to score a set of input antibody sequences
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -nat NATIVENESS_TYPE, --nativeness_type NATIVENESS_TYPE
+                        To load the AbNatiV default trained models type VH, VKappa, VLambda, or VHH, otherwise add directly
+                        the path to your own AbNatiV trained checkpoint .ckpt (default: VH)
+  -mean, --mean_score_only
+                        Generate only a file with a score per sequence. If not, generate a second file with a nativeness score
+                        per position with a probability score for each aa at each position. (default: False)
+  -i INPUT_FILEPATH_OR_SEQ, --input_filepath_or_seq INPUT_FILEPATH_OR_SEQ
+                        Filepath to the fasta file .fa to score or directly a single string sequence (default: to_score.fa)
+  -odir OUTPUT_DIRECTORY, --output_directory OUTPUT_DIRECTORY
+                        Filepath of the folder where all files are saved (default: abnativ_scoring)
+  -oid OUTPUT_ID, --output_id OUTPUT_ID
+                        Prefix of all the saved filenames (default: antibody_vh)
+  -align, --do_align    Do the alignment and the cleaning of the given sequences before scoring. This step can takes a lot of
+                        time if the number of sequences is huge. (default: False)
+  -isVHH, --is_VHH      Considers the VHH seed for the alignment. It is more suitable when aligning nanobody sequences
+                        (default: False)
+  -plot, --is_plotting_profiles
+                        Plot profile for every input sequence and save them in {output_directory}/{output_id}_profiles.
+                        (default: False)
+```
+</details>
+
+
+\
+Testing files are presented in `/test`, with examples of output files.
+
+Examples of `abnativ score` usage:
+
+```bash
+# Align and Compute the AbNatiV VH-humanness scores (sequence and residue levels) for a set of sequences in a fasta file
+# In directory test/test_scoring are saved test_vh_abnativ_seq_scores.csv and test_vh_abnativ_res_scores.csv
+# Profile figures are saved in test/test_vh_profiles for each sequence
+abnativ score -nat VH -i test/4_heavy_sequences.fa -odir test/test_results2 -oid test_vh -align -plot
+
+# For one single sequence
+abnativ score -nat VH -i EIQLVQSGPELKQPGETVRISCKASGYTFTNYGMNWVKQAPGKGLKWMGWINTYTGEPTYAADFKRRFTFSLETSASTAYLQISNLKNDDTATYFCAKYPHYYGSSHWYFDVWGAGTTVTVSS -odir test/test_results2 -oid test_single_vh -align -plot
+```
+
+If you want to use your own trained model for scoring (see bellow `abnativ train`), precise the filepath to the .ckpt checkpoint file with the argument -m instead of the default parameters: VH, VKappa, VLambda or VHH. In that case, the scores won't be linearly rescaled as proposed in the default AbNatiV (see Methods paper). For instance:
+
+
+```bash
+# Align and nativeness scoring from a custom retrained AbNatiV model
+abnativ score -nat my_trained_model.ckpt -i test/4_heavy_sequences.fa -odir test -oid test_vh -align
+```
+
+Additionally, AbNatiV nativeness scoring can be used directly via its in-built function. For instance:
+
+```bash
+from abnativ.model.scoring_functions import abnativ_scoring
+
+abnativ_scores_df = abnativ_scoring(model_type='VH', fp_fa_or_seq='test/4_heavy_sequences.fa', batch_size=128,
+                                    mean_score_only=False, do_align=True, is_VHH=False, output_dir='test', output_id='test_vh')
+```
+
+### 2 - Humanisation of Fv sequences (nanobodies and paired VH/VL Fv sequences)
+
+#### 2.1 - Humanisation of nanobodies
+
+To humanise a nanobody sequence with the dual-control strategy of AbNatiV, use the `abnativ hum_vhh` command line.
+
+The dual-control strategy aims to increase the AbNatiV VH-hummanness of a sequence while retaining its VHH-nativeness. All sampling parameters are fully adjustable via the command line (see description bellow).
+
+Two sampling methods are available:\
+&emsp; 1. <strong>Enhanced sampling</strong> (default): iteratively explores the mutational space aiming for rapid convergence to generate a single humanised sequence,\
+&emsp; 2. <strong>Exhaustive sampling</strong> (if `-isExhaustive`): assesses all mutation combinations within the available mutational space (PSSM-allowed mutations) and selects the best sequences (Pareto Front). It returns a variant with the highest VH-humanness for each number of mutations that are beneficial to the VH-humanness (i.e., when increasing the number of mutations only increases the VH-humanness).
+
+A `-rasa` of 0 will consider every framework residue for mutation. A `-rasa` of 0.15 will considered only solvent-exposed framework residues (as defined in our paper).
+
+NB: a crystal structure (pdb format) can be included (via the filepath `-pdb`, and the chain ID `-ch`) to better assess the solvent-exposed surface of the protein. If `None`, NanoBuilder2 will predict the structure to work on. Only cleaned pdb files will be tolerated. If there is an error to process your pdb file, it is recommended to use the NanoBuilder2 option.
+
+<details>
+    <summary>See <strong>abnativ hum_vhh</strong> command line description</summary>
+
+```
+abnativ hum_vhh [-h] [-i INPUT_FILEPATH_OR_SEQ] [-odir OUTPUT_DIRECTORY] [-oid OUTPUT_ID] [-VHscore THRESHOLD_ABNATIV_SCORE] [-rasa THRESHOLD_RASA_SCORE]
+                       [-isExhaustive] [-VHHdecrease PERC_ALLOWED_DECREASE_VHH] [-a A] [-b B] [-pdb PDB_FILE] [-ch CH_ID]
+
+Use AbNatiV to humanise nanobody sequences by combining AbNatiV VH and VHH assessments (dual-control stategy).
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT_FILEPATH_OR_SEQ, --input_filepath_or_seq INPUT_FILEPATH_OR_SEQ
+                        Filepath to the fasta file .fa to score or directly a single string sequence (default: to_score.fa)
+  -odir OUTPUT_DIRECTORY, --output_directory OUTPUT_DIRECTORY
+                        Filepath of the folder where all files are saved (default: abnativ_humanisation_vhh)
+  -oid OUTPUT_ID, --output_id OUTPUT_ID
+                        Prefix of all the saved filenames (e.g., name sequence) (default: nanobody_vhh)
+  -VHscore THRESHOLD_ABNATIV_SCORE, --threshold_abnativ_score THRESHOLD_ABNATIV_SCORE
+                        Bellow the AbNatiV VH threshold score, a position is considered as a liability (default: 0.98)
+  -rasa THRESHOLD_RASA_SCORE, --threshold_rasa_score THRESHOLD_RASA_SCORE
+                        Above this threshold, the residue is considered solvent exposed and is considered for mutation (default: 0.15)
+  -isExhaustive, --is_Exhaustive
+                        If True, runs the Exhaustive sampling strategy. If False, runs the enhanced sampling method (default: False)
+  -fmut [FORBIDDEN_MUT [FORBIDDEN_MUT ...]], --forbidden_mut [FORBIDDEN_MUT [FORBIDDEN_MUT ...]]
+                        List of string residues to ban for mutation, i.e. C M (default: ['C', 'M'])
+  -VHHdecrease PERC_ALLOWED_DECREASE_VHH, --perc_allowed_decrease_vhh PERC_ALLOWED_DECREASE_VHH
+                        Maximun ΔVHH score decrease allowed for a mutation (default: 0.015)
+  -a A, --a A           Used for enhanced sampling method in multi-objective selection function: aΔVH+bΔVHH (default: 0.8)
+  -b B, --b B           Used for enhanced sampling method in multi-objective selection function: aΔVH+bΔVHH (default: 0.2)
+  -pdb PDB_FILE, --pdb_file PDB_FILE
+                        Filepath to a pdb crystal structure of the nanobody of interest used to compute the solvent exposure. If the PDB is not very cleaned that
+                        might lead to some false results (which should be flagged by the program). If None, will predict the structure using NanoBuilder2 (default:
+                        None)
+  -ch CH_ID, --ch_id CH_ID
+                        PDB chain id of the nanobody of interest. If -pdb is None, it does not matter (default: H)
+```
+</details>
+
+\
+Examples of `abnativ hum_vhh` usage:
+
+```bash
+# Humanise with the dual-control strategy the mNb6 WT nanobody using the Enhanced sampling (default) on solvent-exposed framework residues (default).
+# In directory test/test_humanisation is saved the folder /mNb6_enhanced with the profile, structures, and scored sequences involved in the sampling.
+abnativ hum_vhh -i QVQLVESGGGLVQAGGSLRLSCAASGYIFGRNAMGWYRQAPGKERELVAGITRRGSITYYADSVKGRFTISRDNAKNTVYLQMNSLKPEDTAVYYCAADPASPAYGDYWGQGTQVTVSS -odir mNb6_enhanced -oid mNb6
+
+# Humanise with the same nanobody with the Exhaustive sampling (-isExhaustive) on solvent-exposed framework residues (default).
+# In directory test/test_humanisation is saved the folder /mNb6_exhaustive with the profiles, structures, and selected sequences (Pareto front) involved in the sampling.
+abnativ hum_vhh -i QVQLVESGGGLVQAGGSLRLSCAASGYIFGRNAMGWYRQAPGKERELVAGITRRGSITYYADSVKGRFTISRDNAKNTVYLQMNSLKPEDTAVYYCAADPASPAYGDYWGQGTQVTVSS -odir mNb6_exhaustive -oid mNb6 -isExhaustive
+
+# You can even directly humanise a fasta file of sequence by giving its filepath as input -i argument.
+```
+
+#### 2.2 - Humanisation of paired VH/VL Fv sequences
+
+To humanise a paired of VH/VL Fv sequences with AbNatiV, use the `abnativ hum_vh_vl` command line.
+
+A single-control strategy only is applied. It aims to increase the AbNatiV VH- and VL- hummanness of each sequence separately.
+
+Two sampling methods are available:\
+&emsp; 1. <strong>Enhanced sampling</strong> (default): iteratively explores the mutational space aiming for rapid convergence to generate a single humanised sequence,\
+&emsp; 2. <strong>Exhaustive sampling</strong> (if `-isExhaustive`): assesses all mutation combinations within the available mutational space (PSSM-allowed mutations) and selects the best sequences (Pareto Front). It returns a variant with the highest VH-humanness for each number of mutations that are beneficial to the VH-humanness (i.e., when increasing the number of mutations only increases the humanness).
+
+A `-rasa` of 0 will consider every framework residue for mutation. A `-rasa` of 0.15 will considered only solvent-exposed framework residues (as defined in our paper).
+
+NB: a crystal structure (pdb format) can be included (via the filepath `-pdb`, and the chain IDs `-ch_vh` and `-ch_vl`) to better assess the solvent-exposed surface of the paired chains. If `None`, ABodyBuilder2 will predict the structure to work on. Only cleaned pdb files will be tolerated. If there is an error to process your pdb file, it is recommended to use the ABodyBuilder2 option.
+
+<details>
+    <summary>See <strong>abnativ hum_vh_vl</strong> command line description</summary>
+
+```
+abnativ hum_vh_vl [-h] [-i_vh INPUT_SEQ_VH] [-i_vl INPUT_SEQ_VL] [-odir OUTPUT_DIRECTORY] [-oid OUTPUT_ID] [-VHscore THRESHOLD_ABNATIV_SCORE]
+                         [-rasa THRESHOLD_RASA_SCORE] [-isExhaustive] [-pdb PDB_FILE] [-ch_vh CH_ID_VH] [-ch_vl CH_ID_VL]
+
+Use AbNatiV to humanise a pair of VH/VL Fv sequences by increasing AbNatiV VH- and VL- humanness.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i_vh INPUT_SEQ_VH, --input_seq_vh INPUT_SEQ_VH
+                        A single VH string sequence (default: None)
+  -i_vl INPUT_SEQ_VL, --input_seq_vl INPUT_SEQ_VL
+                        A single VL string sequence (default: None)
+  -odir OUTPUT_DIRECTORY, --output_directory OUTPUT_DIRECTORY
+                        Filepath of the folder where all files are saved (default: abnativ_humanisation_vh_vl)
+  -oid OUTPUT_ID, --output_id OUTPUT_ID
+                        Prefix of all the saved filenames (e.g., name sequence) (default: antibody_vh_vl)
+  -VHscore THRESHOLD_ABNATIV_SCORE, --threshold_abnativ_score THRESHOLD_ABNATIV_SCORE
+                        Bellow the AbNatiV VH threshold score, a position is considered as a liability (default: 0.98)
+  -rasa THRESHOLD_RASA_SCORE, --threshold_rasa_score THRESHOLD_RASA_SCORE
+                        Above this threshold, the residue is considered solvent exposed and is considered for mutation (default: 0.15)
+  -isExhaustive, --is_Exhaustive
+                        If True, runs the Exhaustive sampling strategy. If False, runs the enhanced sampling method (default: False)
+  -fmut [FORBIDDEN_MUT [FORBIDDEN_MUT ...]], --forbidden_mut [FORBIDDEN_MUT [FORBIDDEN_MUT ...]]
+                        List of string residues to ban for mutation, i.e. C M (default: ['C', 'M'])
+  -pdb PDB_FILE, --pdb_file PDB_FILE
+                        Filepath to a pdb crystal structure of the nanobody of interest used to compute the solvent exposure. If the PDB is not very cleaned that
+                        might lead to some false results (which should be flagged by the program). If None, will predict the paired structure using ABodyBuilder2
+                        (default: None)
+  -ch_vh CH_ID_VH, --ch_id_vh CH_ID_VH
+                        PDB chain id of the heavy chain of interest. If -pdb is None, it does not matter (default: H)
+  -ch_vl CH_ID_VL, --ch_id_vl CH_ID_VL
+                        PDB chain id of the light chain of interest. If -pdb is None, it does not matter (default: L)
+```
+</details>
+
+\
+Examples of `abnativ hum_vh_vl` usage:
+
+```bash
+# Humanise conjointly the VH and VL cahins using the Enhanced sampling (default) on solvent-exposed framework residues (default).
+# In directory test/test_humanisation is saved the folder /test_vh_vl_enhanced with the profile, structures, and scored sequences involved in the sampling.
+abnativ hum_vh_vl -i_vh QVQLVQSGPELVKPGASLKLSCTASGFNIKDTYIHWVKQAPGQGLEWIGRIYPTNGYTRYDQKFQDRATITVDTSINTAYLHVTRLTSDDTAVYYCSRWGGDGFYAMDYWGQGALVTVSS -i_vl DIQMTQSPSSLSTSVGDRVTITCRASQDVNTAVAWYQQKPGKSPKLLIYSASFLQTGVPSRFTGSRSGTDFTFTISSVQAEDVAVYYCQQHYTTPPTFGGGTKVEIK -odir test_vh_vl_enhanced -oid test_vh_vl
+
+# Humanise with the same VH/VL paired with the Exhaustive sampling (-isExhaustive) on solvent-exposed framework residues (default).
+# In directory test/test_humanisation is saved the folder /test_vh_vl_exhaustive with the profiles, structures, and selected sequences (Pareto front) involved in the sampling.
+abnativ hum_vh_vl -i_vh QVQLVQSGPELVKPGASLKLSCTASGFNIKDTYIHWVKQAPGQGLEWIGRIYPTNGYTRYDQKFQDRATITVDTSINTAYLHVTRLTSDDTAVYYCSRWGGDGFYAMDYWGQGALVTVSS -i_vl DIQMTQSPSSLSTSVGDRVTITCRASQDVNTAVAWYQQKPGKSPKLLIYSASFLQTGVPSRFTGSRSGTDFTFTISSVQAEDVAVYYCQQHYTTPPTFGGGTKVEIK -odir test_vh_vl_exhaustive -oid test_vh_vl -isExhaustive
+```
+
+### 3 - Training AbNatiV
+
+To train AbNativ on a custom input dataset of antibody sequences, use the `abnativ train` command line.
+
+<details>
+    <summary>See <strong>abnativ train</strong> command line description</summary>
+
+```
+abnativ train [-h] [-tr TRAIN_FILEPATH] [-va VAL_FILEPATH] [-hp HPARAMS] [-mn MODEL_NAME] [-rn RUN_NAME] [-align]
+                     [-isVHH]
+
+Train AbNatiV on a new input dataset of antibody sequences
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -tr TRAIN_FILEPATH, --train_filepath TRAIN_FILEPATH
+                        Filepath to fasta file .fa with sequences for training (default: train_2M.fa)
+  -va VAL_FILEPATH, --val_filepath VAL_FILEPATH
+                        Filepath to fasta file .fa with sequences for validation (default: val_50k.fa)
+  -hp HPARAMS, --hparams HPARAMS
+                        Filepath to the hyperparameter dictionary .yml (default: hparams.yml)
+  -mn MODEL_NAME, --model_name MODEL_NAME
+                        Name of the model to save checkpoints in (default: abnativ_v2)
+  -rn RUN_NAME, --run_name RUN_NAME
+                        Name of the run to log in Pytorch Lightning (default: abnativ_v2)
+  -align, --do_align    Do the alignment and the cleaning of the given sequences before training. This step can takes a lot of
+                        time if the number of sequences is huge. (default: False)
+  -isVHH, --is_VHH      Considers the VHH seed for the alignment/ It is more suitable when aligning nanobody sequences
+                        (default: False)
+```
+
+</details>
+
+Example of usage of `abnativ train`:
+
+```bash
+# Train.
+abnativ train -tr train_sequences.fa -va val_sequences.fa -hp hparams.yml -mn model_name -rn run_name -align
+```
+
+The hyperparameters need to be provided under a YAML file (see `test/hparams.yml`), such as:
+
+```bash
+embedding_dim_code_book: 64
+kernel: 8
+learning_rate: 4.0e-05
+```
+
+Every epoch of the training will be saved in `./checkpoints/<model_name>` and the logs in `./mlruns`.
+The Lightning Pytorch logging can be monitored running `mlflow ui` (see MLflow documentation: https://mlflow.org/docs/1.0.0/tracking.html).
+
+## Issues
+
+- The installation of OpenMM might create troubles with your device. If you have an `import error` with `lib glibxx_3.4.30`, you could solve it with `export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH`.
+
+## Contact
+
+Please contact ar2033@cam.ac.uk to report issues of for any questions.
+
+## Acknowledgements
+
+Part of the training of AbNativV is based on open-source antibody repertoires from the Observed Antibody Space:
+> Kovaltsuk, A., Leem, J., Kelm, S., Snowden, J., Deane, C. M., & Krawczyk, K. (2018). Observed Antibody Space: A Resource for Data Mining Next-Generation Sequencing of Antibody Repertoires. The Journal of Immunology, 201(8), 2502–2509. https://doi.org/10.4049/jimmunol.1800708
+
