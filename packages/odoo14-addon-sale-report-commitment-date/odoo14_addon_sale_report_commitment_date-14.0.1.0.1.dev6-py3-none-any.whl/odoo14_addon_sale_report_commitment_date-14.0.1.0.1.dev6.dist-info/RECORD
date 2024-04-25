@@ -1,0 +1,17 @@
+odoo/addons/sale_report_commitment_date/README.rst,sha256=jGckUJGD0CsLg0WL-naltJMZk-6mgvk4R3LAOPth2tM,3246
+odoo/addons/sale_report_commitment_date/__init__.py,sha256=vNQQFpxcSZjtiz5aCVyNQ3n894NIOOzMF6ZRRhlyqLw,22
+odoo/addons/sale_report_commitment_date/__manifest__.py,sha256=HZMcBhxF42hIqagLul2BSsMLbaqkZl_Dg0XlHmwaJtU,614
+odoo/addons/sale_report_commitment_date/i18n/es.po,sha256=p8e3cDKibb2L-fO9Qm-kZ0sEn_5hMddGEGYFm9cPBvU,1543
+odoo/addons/sale_report_commitment_date/i18n/fr.po,sha256=Fz4AVzRTpsPfRItDO2AqetE_aq7XSiotICOjM8VMPvs,1486
+odoo/addons/sale_report_commitment_date/i18n/sale_report_commitment_date.pot,sha256=IVx7h9unWHUGvvo_OD2qruCowZisG_2Cqt9a1uMBEiQ,1298
+odoo/addons/sale_report_commitment_date/readme/CONTRIBUTORS.rst,sha256=kSaaFquJfNit8dF9s7z64N5MOzldBkvaQYcgUHUKcbk,100
+odoo/addons/sale_report_commitment_date/readme/DESCRIPTION.rst,sha256=I_NBoSCyiBJeFRMFNLPUmNtWzSJ2wQT-1sZh_nCtY-c,64
+odoo/addons/sale_report_commitment_date/reports/__init__.py,sha256=ByYRbiCY7uWnvbKwYusgp99HtcOyGnzWogDif_GEsec,26
+odoo/addons/sale_report_commitment_date/reports/sale_report.py,sha256=tT7NLrx3yebjEyzK_MDoBwrrUoZF4yp_68sSNFx1bkQ,637
+odoo/addons/sale_report_commitment_date/reports/sale_report.xml,sha256=XDWBNs0V9NTgfxVQj3O8qdQZqQxbkqnYc_4S8BSvT-U,1084
+odoo/addons/sale_report_commitment_date/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/sale_report_commitment_date/static/description/index.html,sha256=RWkDQII-OS083v3a3_XnWtPQfu1ndM4JFFMWylp9zds,12605
+odoo14_addon_sale_report_commitment_date-14.0.1.0.1.dev6.dist-info/METADATA,sha256=vTW_BbHprgATx8ZDDd0GRJniRnvtrbG-jnGdBlsh2Cg,3836
+odoo14_addon_sale_report_commitment_date-14.0.1.0.1.dev6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+odoo14_addon_sale_report_commitment_date-14.0.1.0.1.dev6.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo14_addon_sale_report_commitment_date-14.0.1.0.1.dev6.dist-info/RECORD,,
