@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: opplx
+Version: 0.11
+License-File: LICENSE
+Requires-Dist: langchain
+Requires-Dist: googlesearch-python
+Requires-Dist: twine
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: faiss-cpu

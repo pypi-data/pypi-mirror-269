@@ -1,0 +1,2 @@
+[console_scripts]
+opplx = ollama.__init__:main
