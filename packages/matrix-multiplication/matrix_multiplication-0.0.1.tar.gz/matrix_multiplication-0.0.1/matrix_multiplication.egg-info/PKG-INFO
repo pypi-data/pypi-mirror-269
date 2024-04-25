@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: matrix-multiplication
+Version: 0.0.1
+Summary: A package to multiply two matrix of any dimensions
+Home-page: https://github.com/SajalDasShovon/Own-Simple-Python-Package
+Author: Sajal Das Shovon
+Author-email: shovon030cse.kuet@gmail.com
+License: MIT
+Keywords: matrixMultiplier
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/plain
+License-File: LICENSE.txt
+
+
+********* MatrixMultiplier Package  **********
+
+This package provides a simple and efficient way to multiply two matrices of any dimensions. 
+Whether you're dealing with small matrices or large ones, this package offers a reliable 
+solution to perform matrix multiplication with ease.
+
+1. Installation:
+
+```
+pip install matrix_multiplication
+```
+
+2. Generate multiplication result:
+
+```
+from matrix_multiplication import __init__
+```
+
+
+Features
+--Supports matrix multiplication of any dimensions.
+--Efficient algorithm implementation for fast computation.
+--Works with Python 3.
+
+download here https://github.com/SajalDasShovon/Own-Simple-Python-Package
+
+****************    Change Log  *********************
+
+The Change Log file documents all notable changes made to the MatrixMultiplier package across 
+different versions. This log helps users and developers track the evolution of the package, 
+including bug fixes, new features, and improvements.
+
+
+#### Version 1.0.0 (2024-04-23) ####
+
+
+Initial release of the MatrixMultiplier package:
+->Added support for multiplying matrices of any dimensions.
+->Implemented efficient algorithm for fast matrix multiplication.
+->Provided detailed documentation and usage examples.
+
+
