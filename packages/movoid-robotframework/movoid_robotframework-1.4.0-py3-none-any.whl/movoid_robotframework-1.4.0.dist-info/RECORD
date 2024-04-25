@@ -1,0 +1,13 @@
+RobotFrameworkBasic/__init__.py,sha256=uaCmJ6o8MHvyhrVHZZAT2BXDqJeGXdvvblCcFopbcQU,451
+RobotFrameworkBasic/common.py,sha256=gV3COxnkvuIzkOxxP5sZX0Gs_o9QLLo_3YfWgNUiS0g,4476
+RobotFrameworkBasic/decorator.py,sha256=K7uDKmSD31L8TygpGHeQxhirP5GHluJknoJGAM7eIwg,14138
+RobotFrameworkBasic/error.py,sha256=18vMEzDUAaQ4p0_PqX-C_xRkgsXvJHAazRaucxFWLTc,497
+RobotFrameworkBasic/main.py,sha256=QoSHOFn2MvNg8H8N_szvSPRzObmaMzr65mEA5hYa2CU,286
+RobotFrameworkBasic/version.py,sha256=BBPJ1hzkZxxTHHhQL5kFojOe4qXu_QO6DXqB1ew9RlQ,911
+RobotFrameworkBasic/action/__init__.py,sha256=RNYkA7Sd2RzJs3zqMlMbD_n_S9iJly_EyiUXd8he3_o,253
+RobotFrameworkBasic/action/calculate.py,sha256=Fg-NAVODJG5-phDmq6YJfrLaKAHcFkqt_hYoa4n19sk,7070
+RobotFrameworkBasic/action/config.py,sha256=8MvlgST6bJihRTjVSNwXlyzDjYMc3beJlrwgCK-1Jgs,5494
+movoid_robotframework-1.4.0.dist-info/METADATA,sha256=UM6XxRtBRZ4rMJ0ENbMsoVum6xP1dzngeZHffmfQi5c,291
+movoid_robotframework-1.4.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+movoid_robotframework-1.4.0.dist-info/top_level.txt,sha256=-Q5hpm29SbJpMactx9qt9ofO9XuTwCpVfUnycWGHCTo,20
+movoid_robotframework-1.4.0.dist-info/RECORD,,
