@@ -1,0 +1,8 @@
+lxml
+parsel
+requests
+loguru
+beautifulsoup4
+websockets~=10.4
+pyee~=10.0.2
+websocket-client~=1.7.0
