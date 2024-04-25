@@ -1,0 +1,10 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+src/ontopint/__init__.py
+src/ontopint.egg-info/PKG-INFO
+src/ontopint.egg-info/SOURCES.txt
+src/ontopint.egg-info/dependency_links.txt
+src/ontopint.egg-info/requires.txt
+src/ontopint.egg-info/top_level.txt
