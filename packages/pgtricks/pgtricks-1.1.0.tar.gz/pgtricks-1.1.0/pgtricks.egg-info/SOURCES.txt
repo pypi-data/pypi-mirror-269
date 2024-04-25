@@ -1,0 +1,17 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+pgtricks/__init__.py
+pgtricks/mergesort.py
+pgtricks/pg_dump_splitsort.py
+pgtricks/pg_incremental_backup.py
+pgtricks/pg_split_schema_dump.py
+pgtricks/version.py
+pgtricks.egg-info/PKG-INFO
+pgtricks.egg-info/SOURCES.txt
+pgtricks.egg-info/dependency_links.txt
+pgtricks.egg-info/entry_points.txt
+pgtricks.egg-info/requires.txt
+pgtricks.egg-info/top_level.txt
