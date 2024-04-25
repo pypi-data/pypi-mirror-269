@@ -1,0 +1,36 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Le service est d\u00e9j\u00e0 configur\u00e9"
+        },
+        "error": {
+            "not_allowed_dir": "Le chemin configur\u00e9 n'est pas dans la liste autoris\u00e9e",
+            "not_dir": "Le chemin configur\u00e9 n'est pas un r\u00e9pertoire",
+            "not_readable_dir": "Le chemin configur\u00e9 n'est pas lisible"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "folder": "Chemin d'acc\u00e8s au dossier \u00e0 surveiller",
+                    "patterns": "Mod\u00e8le(s) \u00e0 surveiller"
+                },
+                "data_description": {
+                    "folder": "Le chemin doit provenir de la racine, par exemple `/config`",
+                    "patterns": "Exemple\u00a0: `*.yaml` pour voir uniquement les fichiers yaml"
+                }
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "patterns": "Mod\u00e8le(s) \u00e0 surveiller"
+                },
+                "data_description": {
+                    "patterns": "Exemple\u00a0: `*.yaml` pour voir uniquement les fichiers yaml"
+                }
+            }
+        }
+    }
+}

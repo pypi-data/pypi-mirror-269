@@ -1,0 +1,19 @@
+{
+    "config": {
+        "abort": {
+            "single_instance_allowed": "\u5df2\u914d\u7f6e\u3002\u53ea\u80fd\u6709\u4e00\u4e2a\u914d\u7f6e\u3002"
+        },
+        "step": {
+            "confirm": {
+                "description": "\u60a8\u8981\u5f00\u59cb\u8bbe\u7f6e\u5417\uff1f"
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "battery_state": {
+                "name": "\u7535\u6c60\u72b6\u6001"
+            }
+        }
+    }
+}

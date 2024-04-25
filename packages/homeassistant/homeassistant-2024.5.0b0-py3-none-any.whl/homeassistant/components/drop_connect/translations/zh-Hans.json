@@ -1,0 +1,36 @@
+{
+    "config": {
+        "abort": {
+            "not_supported": "DROP \u7684\u914d\u7f6e\u662f\u901a\u8fc7 MQTT \u53d1\u73b0\u8fdb\u884c\u7684\u3002\u4f7f\u7528 DROP Connect \u5e94\u7528\u7a0b\u5e8f\u5c06\u60a8\u7684 DROP Hub \u8fde\u63a5\u5230\u60a8\u7684 MQTT \u4ee3\u7406\u3002"
+        },
+        "step": {
+            "confirm": {
+                "description": "\u60a8\u662f\u5426\u8981\u914d\u7f6e\u540d\u4e3a\u201c{device_name}\u201d\u7684 DROP {device_type}\uff1f"
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "protect_mode": {
+                "state": {
+                    "home": "\u5bb6",
+                    "schedule": "\u8ba1\u5212\u8868"
+                }
+            }
+        },
+        "sensor": {
+            "average_water_used": {
+                "name": "\u6bcf\u65e5\u5e73\u5747\u7528\u6c34\u91cf"
+            },
+            "current_system_pressure": {
+                "name": "\u5f53\u524d\u6c34\u538b"
+            },
+            "inlet_tds": {
+                "name": "\u5165\u53e3 TDS"
+            },
+            "outlet_tds": {
+                "name": "\u51fa\u53e3 TDS"
+            }
+        }
+    }
+}

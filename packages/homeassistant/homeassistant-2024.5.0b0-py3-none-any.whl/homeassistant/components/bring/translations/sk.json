@@ -1,0 +1,43 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Slu\u017eba u\u017e je nakonfigurovan\u00e1"
+        },
+        "error": {
+            "cannot_connect": "Nepodarilo sa pripoji\u0165",
+            "invalid_auth": "Neplatn\u00e9 overenie",
+            "unknown": "Neo\u010dak\u00e1van\u00e1 chyba"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "email": "Email",
+                    "password": "Heslo"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "setup_authentication_exception": {
+            "message": "Ne\u00faspe\u0161n\u00e9 overenie pre {email}, skontrolujte svoj e-mail a heslo"
+        },
+        "setup_parse_exception": {
+            "message": "Nepodarilo sa analyzova\u0165 odpove\u010f servera, sk\u00faste to nesk\u00f4r"
+        },
+        "setup_request_exception": {
+            "message": "Nepodarilo sa pripoji\u0165 k serveru, sk\u00faste to nesk\u00f4r"
+        },
+        "todo_delete_item_failed": {
+            "message": "Nepodarilo sa vymaza\u0165 polo\u017eky {count} zo zoznamu Bring!"
+        },
+        "todo_rename_item_failed": {
+            "message": "Nepodarilo sa premenova\u0165 polo\u017eku {name} do zoznamu Bring!"
+        },
+        "todo_save_item_failed": {
+            "message": "Nepodarilo sa ulo\u017ei\u0165 polo\u017eku {name} do zoznamu Bring!"
+        },
+        "todo_update_item_failed": {
+            "message": "Nepodarilo sa aktualizova\u0165 polo\u017eku {name} do zoznamu Bring!"
+        }
+    }
+}

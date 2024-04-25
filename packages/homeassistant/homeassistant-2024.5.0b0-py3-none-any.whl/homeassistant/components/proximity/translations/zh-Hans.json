@@ -1,0 +1,52 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "\u8bbe\u5907\u5df2\u914d\u7f6e",
+            "success": "\u4fee\u6539\u5df2\u4fdd\u5b58"
+        }
+    },
+    "entity": {
+        "sensor": {
+            "dir_of_travel": {
+                "name": "{tracked_entity} \u884c\u8fdb\u65b9\u5411",
+                "state": {
+                    "arrived": "\u5df2\u5230\u8fbe",
+                    "away_from": "\u79bb\u5f00",
+                    "stationary": "\u9759\u6b62",
+                    "towards": "\u524d\u5f80"
+                }
+            },
+            "dist_to_zone": {
+                "name": "{tracked_entity}\u8ddd\u79bb"
+            },
+            "nearest": {
+                "name": "\u6700\u8fd1\u7684\u8bbe\u5907"
+            },
+            "nearest_dir_of_travel": {
+                "name": "\u51fa\u884c\u7684\u6700\u8fd1\u65b9\u5411",
+                "state": {
+                    "arrived": "\u5df2\u5230\u8fbe",
+                    "away_from": "\u79bb\u5f00",
+                    "stationary": "\u9759\u6b62",
+                    "towards": "\u524d\u5f80"
+                }
+            },
+            "nearest_dist_to_zone": {
+                "name": "\u6700\u8fd1\u8ddd\u79bb"
+            }
+        }
+    },
+    "issues": {
+        "tracked_entity_removed": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "title": "\u8ddf\u8e2a\u5b9e\u4f53\u5df2\u88ab\u79fb\u9664"
+                    }
+                }
+            },
+            "title": "\u8ddf\u8e2a\u5b9e\u4f53\u5df2\u88ab\u79fb\u9664"
+        }
+    },
+    "title": "\u8ddd\u79bb"
+}

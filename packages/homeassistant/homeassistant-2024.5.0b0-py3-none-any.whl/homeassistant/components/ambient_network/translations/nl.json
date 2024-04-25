@@ -1,0 +1,32 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Apparaat is al geconfigureerd"
+        }
+    },
+    "entity": {
+        "sensor": {
+            "daily_rain": {
+                "name": "Dagelijkse regen"
+            },
+            "dew_point": {
+                "name": "Dauwpunt"
+            },
+            "hourly_rain": {
+                "name": "Uurlijkse regen"
+            },
+            "monthly_rain": {
+                "name": "Maandelijkse regen"
+            },
+            "weekly_rain": {
+                "name": "Wekelijkse regen"
+            },
+            "wind_direction": {
+                "name": "Windrichting"
+            },
+            "yearly_rain": {
+                "name": "Jaarlijkse regen"
+            }
+        }
+    }
+}

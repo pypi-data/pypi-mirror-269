@@ -1,0 +1,19 @@
+{
+    "entity_component": {
+        "door": {
+            "name": "Vrata"
+        },
+        "light": {
+            "name": "Svjetlost"
+        },
+        "motion": {
+            "name": "Pokret"
+        },
+        "problem": {
+            "state": {
+                "off": "OK",
+                "on": "Problem"
+            }
+        }
+    }
+}

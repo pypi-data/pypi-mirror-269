@@ -1,0 +1,19 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Perangkat sudah dikonfigurasi",
+            "already_in_progress": "Alur konfigurasi sedang berlangsung"
+        },
+        "step": {
+            "bluetooth_confirm": {
+                "description": "Ingin menyiapkan {name}?"
+            },
+            "user": {
+                "data": {
+                    "address": "Perangkat"
+                },
+                "description": "Pilih perangkat untuk disiapkan"
+            }
+        }
+    }
+}
