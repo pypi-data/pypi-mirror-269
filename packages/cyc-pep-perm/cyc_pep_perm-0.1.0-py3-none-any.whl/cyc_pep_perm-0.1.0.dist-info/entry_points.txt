@@ -1,0 +1,2 @@
+[console_scripts]
+cyc_pep_perm = cyc_pep_perm.cli:main
