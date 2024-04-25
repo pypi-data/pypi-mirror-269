@@ -1,0 +1,2 @@
+[console_scripts]
+milkcow = milkcow.util.cli:run_cli
