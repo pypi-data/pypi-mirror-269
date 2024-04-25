@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: clump-python
+Version: 0.1.9
+Summary: This Python library provides tools for creating and examining clumps using techniques: the Euclidean Distance Transform, Favier, and Ferellec-McDowell. It allows for the efficient generation of clumps and the extraction of their surfaces.
+Home-page: https://github.com/vsangelidakis/CLUMP
+Author: Utku Canbolat, Vasileios Angelidakis
+Author-email: utku.canbolat@fau.de
+License: GPL-3.0-only
+Keywords: Clump,Clump Generation,Euclidean Distance Transform,Favier,Ferellec-McDowell,Surface Extraction
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: numpy-stl
+Requires-Dist: pyvista
+Requires-Dist: scipy
+Requires-Dist: trimesh
+
