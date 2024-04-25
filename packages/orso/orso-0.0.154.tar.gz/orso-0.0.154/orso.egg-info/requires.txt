@@ -1,0 +1,6 @@
+cityhash
+data-expectations>=1.6.0
+orjson
+ormsgpack
+pandas
+numpy==1.*
