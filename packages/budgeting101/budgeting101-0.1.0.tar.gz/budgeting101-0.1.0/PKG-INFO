@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: budgeting101
+Version: 0.1.0
+Summary: A library for providing budgeting suggestions
+Home-page: UNKNOWN
+Author: AliceRodgers
+Author-email: alicerodgers35@gmail.com
+License: UNKNOWN
+Keywords: budgeting suggestions
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+
+UNKNOWN
+
