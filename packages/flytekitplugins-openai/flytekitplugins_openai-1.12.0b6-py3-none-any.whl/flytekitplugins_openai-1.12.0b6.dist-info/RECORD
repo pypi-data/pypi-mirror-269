@@ -1,0 +1,11 @@
+flytekitplugins_openai-1.12.0b6-py3.12-nspkg.pth,sha256=ya_zoT0ZM023a2lpUsRaqXsgDEknLucLLOWbbtFBPw4,512
+flytekitplugins/openai/__init__.py,sha256=AaRB3IUdzW6sJd11nk4Z0JgOu-IFke9iRuAQkLv7398,296
+flytekitplugins/openai/chatgpt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flytekitplugins/openai/chatgpt/agent.py,sha256=3P-51xCX0faaf60mpttfu3xUaiET56C6NSKwVGVOOnU,1722
+flytekitplugins/openai/chatgpt/task.py,sha256=5FFENUaoFuU8SZS8b8j6lphisbX__fYUE2rhu8h5SlU,1743
+flytekitplugins_openai-1.12.0b6.dist-info/METADATA,sha256=CTt-mT2UlhIeLfjuHBJ2U7DNUJBOJL5MhmOSpj60FI0,1008
+flytekitplugins_openai-1.12.0b6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+flytekitplugins_openai-1.12.0b6.dist-info/entry_points.txt,sha256=jfEy0DjZwZYqYM-fQKV6PolBDefslTE-C30nmRPmYrM,51
+flytekitplugins_openai-1.12.0b6.dist-info/namespace_packages.txt,sha256=b2gTzXFHuV5afchaJ28HueRhYzj-8x5Ytr8n2twnAik,16
+flytekitplugins_openai-1.12.0b6.dist-info/top_level.txt,sha256=b2gTzXFHuV5afchaJ28HueRhYzj-8x5Ytr8n2twnAik,16
+flytekitplugins_openai-1.12.0b6.dist-info/RECORD,,
