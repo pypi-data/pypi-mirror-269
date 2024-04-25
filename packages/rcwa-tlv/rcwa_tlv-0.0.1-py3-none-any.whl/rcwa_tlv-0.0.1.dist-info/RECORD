@@ -1,0 +1,13 @@
+rcwa_tlv/__init__.py,sha256=_AuJi_2ha0PTCmi8w1hCqCswqWHq0k2MG9iqSsQ40ZU,141
+rcwa_tlv/rcwa.py,sha256=yJfu6ZlZCq2XjA_3J9DZ546Ii6zYSTtzBX9v-M21zeM,12891
+rcwa_tlv/devices/device.py,sha256=mzc52yZHpKy1iLozK7ETghK0aPjN3xWf4UkI6z-2hfY,308
+rcwa_tlv/devices/normal_fields.py,sha256=-qYvJAKUT5oLUIJQUAgGg18y93r21NLnB8NutIWOJFo,38
+rcwa_tlv/devices/shapes.py,sha256=CATWKcurR5NjwKMEsTy3GBguo3DJciDwi1pSXFPlQRA,1752
+rcwa_tlv/devices/source.py,sha256=BOLmChxE9W2WeWeLJAWAoFv8Vnxpf7_kw8PrAeTwuhs,693
+rcwa_tlv/materials/Si.txt,sha256=YEz2-cwd_TA0zusHVby1yDKRkUd2R_59SAtCSE5QAU8,4650
+rcwa_tlv/materials/SiO2.txt,sha256=x5kxC-CBFP1XJXmJBwV0HDcx97woFZwQbmqdqD3GLiU,307
+rcwa_tlv/materials/TiO2.txt,sha256=DX7rSsJIcvgxevYG-mcEFQqz0at013zHeoRbuosaAzs,370
+rcwa_tlv/utils/convmat.py,sha256=8K9s7ALDXW3LxGzUC8dQBXQA0lWiWpLF1nQJXm4Eqxs,1431
+rcwa_tlv-0.0.1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+rcwa_tlv-0.0.1.dist-info/METADATA,sha256=xrA3JX1fLzBJoPJwaXn27zxaHSSsU2vRslsE_PJHQJg,1782
+rcwa_tlv-0.0.1.dist-info/RECORD,,
