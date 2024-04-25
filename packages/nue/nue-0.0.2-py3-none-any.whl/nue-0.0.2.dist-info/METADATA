@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: nue
+Version: 0.0.2
+Summary: A Deep Learning Package for Entry Level Tinkerers
+Home-page: https://github.com/vxnuaj/neuo
+Author: vxnuaj
+Author-email: jv.100420@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+
+### A Deep Learning Framework for Entry Level Tinkerers
+
+A Python Package for Seamless Usage and Implementation of Deep Learning Models
+
+_Currently in Development, I'll be adding as I learn how to build_
+
+### **Phase 1**
+
+**MAIN**
+
+- [ ]  Linear Regression Model
+    - [x]  Implement
+    - [ ]  Write DocStrings
+- [ ]  Logistic Regression Model
+    - [X]  Implement
+    - [ ]  Write DocStrings
+- [ ]  Vanilla Neural Networks
+    - [X]  Implement
+    - [ ]  Write DocStrings
+
+**Organize**
+
+- [ ]  Optimize performance of each model
+    - [ ]  Tune the operations and architecture (code)
+- [ ]  Implement scaling / standardization functions
+- [ ]  Ship ‘pip install neo_dl’ functionality once a stable version is released.
+- [ ]  Implement a utility function that allows for easy split of test/train of csv data.
+- [ ]  Functionality for loading params from a pkl file.
+- [ ]  Functionality for saving params from a pkl file
+- [ ]  Functionality for securely storing params other than a pkl file
+- [ ]  Functionality for saving params securely other than a pkl file
+- [ ]  Implement Loading Bar whilst the model is training
+- [ ]  Implement __init__.py functionality under /neo_dl for ease of import for users.
