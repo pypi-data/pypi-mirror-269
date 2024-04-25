@@ -1,0 +1,17 @@
+cfgclasses/__init__.py,sha256=wsmivan4lRrYPafqdDkiNbsJNNhvcqmVhAitKhre4Bc,2011
+cfgclasses/arghelper.py,sha256=Ba6Pd2WjxybO9t1-Onh5Lky58To9ttqtlX8KPcqkOPc,9518
+cfgclasses/argspec.py,sha256=31r8Qq3W4c0AZxz2KogaGWvZ0CZCXYZ7z-rcwakzKyk,14774
+cfgclasses/configclass.py,sha256=JOQZwsU7S5vcaT1McVxQ1l8dxskvCt8OXbxiBRt4zFs,6295
+cfgclasses/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cfgclasses/transforms.py,sha256=vhKKrzgByvbFVk7usCpkxpuVt7JSfz-wyLVwWdskg-8,1509
+cfgclasses/validation.py,sha256=_J4kkLhZWJrBqcstq-0uoNfkvkayetO60HaY-GMVZSg,1742
+cfgclasses/test/__init__.py,sha256=zARZao5nKFa_x_6q7Hwp0Ciu8e4dq_zL2VIbzDsgh9E,22
+cfgclasses/test/test_argspec.py,sha256=jL_8wxbM2OB96NWzkopbh0mzK2Nv-VnDj8ziRHPfrgo,19201
+cfgclasses/test/test_configclass.py,sha256=O7nel6Upkv-UktMvikMpTwftZzcb1lHwNftwp0Eh08k,4436
+cfgclasses/test/test_deprecated_api.py,sha256=C08wIUz0Y9dY7VtIB6-J0qExYNVJEuAfhDjWzrnHRtU,4794
+cfgclasses/test/test_transforms.py,sha256=O6U28cTZKKRrP3JGRtSWCC77u6LjVKeisrsZ-f-ocFs,1912
+cfgclasses/test/test_typing.py,sha256=W3-Ply5m97ltiDYd-KFuWbp0hzCKzXVJb4iLIfVKeJk,4229
+cfgclasses-2.2.0.dist-info/METADATA,sha256=pXCG7lifM9dhJr-gyklM67iQNgACOCLwMD16c_bL-Jw,5403
+cfgclasses-2.2.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+cfgclasses-2.2.0.dist-info/licenses/LICENSE,sha256=bIz-xV6nB5PtLf8Bm8NCLn-wwYkcccVGPSqJXcGehho,1069
+cfgclasses-2.2.0.dist-info/RECORD,,
