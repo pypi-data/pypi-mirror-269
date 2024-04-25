@@ -1,0 +1,2 @@
+[console_scripts]
+inkscape_layer_utils = inkscape_layer_utils.main:main
