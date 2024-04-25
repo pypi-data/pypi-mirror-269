@@ -1,0 +1,1 @@
+import{r as s,x as n,l3 as i,l4 as c,y as o,l5 as d,l6 as u,l7 as l}from"./index-DUnoKJed.js";function m({children:t}){const{i18n:r}=n(),e=r.dir(),a=s.useMemo(()=>i({...c,direction:e}),[e]);return s.useEffect(()=>{document.body.dir=e},[e]),o.jsx(d,{theme:a,toastOptions:u,children:o.jsx(l,{children:t})})}const f=s.memo(m);export{f as default};
