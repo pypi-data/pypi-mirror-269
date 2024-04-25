@@ -1,0 +1,17 @@
+crop_lca/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crop_lca/database/__init__.py,sha256=qUTDMJm52TtQBea6mn-EEWdZ8M6uxtUPCmeyYCf0CSU,222
+crop_lca/database/crop_database.db,sha256=akZFbq1FbDTt0vgXv2clekI7f4O71oZYmscp0Txmw2o,565248
+crop_lca/geo_crop_lca/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crop_lca/geo_crop_lca/catchment_crop_generator.py,sha256=kCm3vlA0g16ixIl4ZhEG4Yv8RUjcXHgpGQtIc9VubxE,2749
+crop_lca/geo_crop_lca/catchment_crop_production.py,sha256=IMKMpnbOHnLHmJtE17HJpFMXQCd4bhCfcbCwRAwrPls,7665
+crop_lca/lca.py,sha256=GCfCRzZ2U3Jwl55NDIWN9hJMfjKthB2VatEY40At8eA,62864
+crop_lca/models.py,sha256=qPcw1ZSdmmCbibZuc02Pt4fEUVC3pDrwEaKbjwI8StM,27606
+crop_lca/national_crop_production.py,sha256=py_itWeWR7p2_h9lb4L1oirEtbWlUYHxfK_SaIDabaY,7131
+crop_lca/resource_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crop_lca/resource_manager/crop_lca_data_manager.py,sha256=1CONUCjqNQmppYxmPjJ5crS9EPjM9lMqv24yWDHtU_4,1401
+crop_lca/resource_manager/data_loader.py,sha256=2wJrr_s8q38e4UUYh7dDkqADh_VwrJ01kUdLDPKEXlA,4307
+crop_lca/resource_manager/database_manager.py,sha256=bpE-ogdHdvoBoNKeqVZiCOOIPvYub7azPpU6i2-gXro,6872
+crop_lca-0.2.1.dist-info/LICENSE,sha256=Dy10hVB9Gd35oqUZWETQs-uVngmMPxT2fzWvqjq6GZ0,1088
+crop_lca-0.2.1.dist-info/METADATA,sha256=5XtEhpkPU8RbpEw09bpHhy5PeWUrd_xVX3JSuT6-vCs,4909
+crop_lca-0.2.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+crop_lca-0.2.1.dist-info/RECORD,,
