@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/NstudyPy/PyTools.py
+src/NstudyPy/__init__.py
+src/NstudyPy.egg-info/PKG-INFO
+src/NstudyPy.egg-info/SOURCES.txt
+src/NstudyPy.egg-info/dependency_links.txt
+src/NstudyPy.egg-info/top_level.txt
