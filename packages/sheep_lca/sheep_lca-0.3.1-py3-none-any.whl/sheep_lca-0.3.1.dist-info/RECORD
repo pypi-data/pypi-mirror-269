@@ -1,0 +1,14 @@
+sheep_lca/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sheep_lca/database/__init__.py,sha256=qUTDMJm52TtQBea6mn-EEWdZ8M6uxtUPCmeyYCf0CSU,222
+sheep_lca/database/sheep_database.db,sha256=yyqJX2OHUCimOIjCMLo6xahqyzHeQZujmme76nFqMRM,28672
+sheep_lca/lca.py,sha256=5uSbhJVF3sRj96QG7r4ZGbzmoKWRryvd-RGs-OvYzlo,109609
+sheep_lca/resource_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sheep_lca/resource_manager/animal_data.py,sha256=oKegqOVJK0l-n9Fo-1xwZ09jv_sPaLXnr4auWab3yow,9547
+sheep_lca/resource_manager/data_loader.py,sha256=a560yyiWdokME6BMm8YXHR6Hw6VDC6fNXJ6p1Gp55TI,4658
+sheep_lca/resource_manager/database_manager.py,sha256=VGjfPNDOvmfL7ej5QmabMPydeh8bs7ZdEBd-R1zd-gE,6632
+sheep_lca/resource_manager/models.py,sha256=K2v0myE9sU0NkvhdtcJBSavFB3NZG9ubY3UM7zW4pr0,61773
+sheep_lca/resource_manager/sheep_lca_data_manager.py,sha256=g5ilCIM_7NdShZFpusTQhanuw2uPDb-XpAB8cVcvdko,28134
+sheep_lca-0.3.1.dist-info/LICENSE,sha256=Dy10hVB9Gd35oqUZWETQs-uVngmMPxT2fzWvqjq6GZ0,1088
+sheep_lca-0.3.1.dist-info/METADATA,sha256=RU4K7sgwji7XHQV72Ok192ZWQMVMo4S-b7GiZBpDxN0,8643
+sheep_lca-0.3.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sheep_lca-0.3.1.dist-info/RECORD,,
