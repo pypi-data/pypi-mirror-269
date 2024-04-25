@@ -1,0 +1,11 @@
+mutwo/midi_converters/__init__.py,sha256=YVkmWWlmaSJeoikGcn-Y2WyPfQ15gIM2uAEQ2nzn87E,199
+mutwo/midi_converters/backends.py,sha256=0lcvDxy5hWJyK2HULQESrBG6JQc7z-oBXhyV75oJakw,21297
+mutwo/midi_converters/configurations.py,sha256=DLmBfNr4S4HgnbbPeyk_HrXxRplYAnZ0Sn8BaXJ_JQ0,1306
+mutwo/midi_converters/constants.py,sha256=One5ZTfmia6ElIZm7Z44a_YSY9u5HrtFRU94JhmvAn4,864
+mutwo/midi_converters/frontends.py,sha256=cLvz3CjBC-UgtURX89LCLb8C4DnpA3FR-iwDdNnh6Po,37759
+mutwo/midi_version/__init__.py,sha256=qrLLA5vnDfELPSZjn-YVLaYexgrwKpUndZlB3iYxu4Q,143
+mutwo.midi-0.12.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mutwo.midi-0.12.0.dist-info/METADATA,sha256=Nzf5pef-TTQUV4n0CyznoSQVmGEZCnQpQ-5s1duRMqA,1501
+mutwo.midi-0.12.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mutwo.midi-0.12.0.dist-info/top_level.txt,sha256=1UzApATBnnDoZgVDqupcM1hYH7l1uhSHZQCf_nUK5y8,6
+mutwo.midi-0.12.0.dist-info/RECORD,,
