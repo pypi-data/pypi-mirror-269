@@ -1,0 +1,12 @@
+vtzero/tile.pyx,sha256=4M8hH1vBm-08w5CiF1pakOPmGR63oPJbcrDS4F9GNjI,4692
+vtzero/version.py,sha256=nE3rQKNUNPsAl7xHJisx1UsD5F7nP0O16kErQo_MsFE,47
+vtzero/tile.cpp,sha256=AILzgaCguONQ6LKaVjBB_vRgXksvU3uqxSqrgWTY8AU,729160
+vtzero/cvtzero.pxd,sha256=VfJuhZfI0A_8HDmSSACjBt3CN6E1s4qoFC5SkJg6VTA,3632
+vtzero/__init__.py,sha256=b_w8eh8_JbIaQcDyKhQBFtfQEaSbrd88nZDzwbVVhDQ,68
+vtzero/tile.cpython-39-x86_64-linux-gnu.so,sha256=7O7g1XqGfZBsv_mB6phdGf5AxUZ_3byLA3F32IJDPMY,1914168
+vtzero.libs/libstdc++-a9383cce.so.6.0.28,sha256=AQF8xpA7y538aY2feICyHGJkLWgDpwHYribC_iWn8Bw,2447392
+vtzero.libs/libgcc_s-a04fdf82.so.1,sha256=E2_sw1FhiQZsCQiywTDdBDMlSUsazp7QUYpklMz_w_s,81256
+vtzero-0.0.1b4.dist-info/METADATA,sha256=hjjq6CgqGaP_cMGC_0VTJRPB6w5GCWHkqy2TpekmnTg,2006
+vtzero-0.0.1b4.dist-info/RECORD,,
+vtzero-0.0.1b4.dist-info/top_level.txt,sha256=d6G1eguAqPsZCiv8Vb2o-W7fUlnN7ecv1FrCv199898,7
+vtzero-0.0.1b4.dist-info/WHEEL,sha256=-dXUxQJS0dF4AHZCo07Dt2TCYvwyNT7o6m2vzxmW15M,111
