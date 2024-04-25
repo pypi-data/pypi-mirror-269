@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: KOACBIPM
+Version: 0.0.1
+Summary: 基于临床指标的膝骨关节炎患病风险预测模型
+Author-email: hcy <ChangyiHe@stu.xjtu.edu.cn>
+Project-URL: Homepage, https://github.com/hcy
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This is a Python package for predicting knee osteoarthritis using clinical biochemical indicators.
