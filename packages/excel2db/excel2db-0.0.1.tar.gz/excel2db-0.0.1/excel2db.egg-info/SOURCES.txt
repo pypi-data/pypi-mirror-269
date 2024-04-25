@@ -1,0 +1,7 @@
+setup.py
+excel2db/__init__.py
+excel2db/excel2db.py
+excel2db.egg-info/PKG-INFO
+excel2db.egg-info/SOURCES.txt
+excel2db.egg-info/dependency_links.txt
+excel2db.egg-info/top_level.txt
