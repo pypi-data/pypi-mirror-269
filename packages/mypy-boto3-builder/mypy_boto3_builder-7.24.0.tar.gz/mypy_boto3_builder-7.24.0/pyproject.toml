@@ -1,0 +1,202 @@
+[tool.black]
+line-length = 100
+include = '(mypy_boto3_builder|tests)/.*\.pyi?$'
+target-version = ['py310', 'py311', 'py312']
+preview = true
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_third_party = ["botocore", "boto3", "aiobotocore"]
+known_first_party = ["mypy_boto3_builder", "tests"]
+src_paths = []
+
+[tool.poetry]
+name = "mypy-boto3-builder"
+version = "7.24.0"
+description = "Builder for boto3-stubs and types-aiobotocore"
+authors = ["Vlad Emelianov <vlad.emelianov.nz@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://youtype.github.io/mypy_boto3_builder/"
+repository = "https://github.com/youtype/mypy_boto3_builder"
+documentation = "https://youtype.github.io/mypy_boto3_builder/"
+keywords = ["boto3", "type-annotations", "pyright", "mypy", "boto3-stubs"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Typing :: Typed",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+packages = [{ include = "mypy_boto3_builder" }]
+include = [
+    "mypy_boto3_builder/py.typed",
+    "mypy_boto3_builder/templates/*/*.jinja2",
+    "mypy_boto3_builder/templates/*/*/*.jinja2",
+    "mypy_boto3_builder/templates/*/*/*/*.jinja2",
+    "mypy_boto3_builder/stubs_static/*.pyi",
+    "mypy_boto3_builder/stubs_static/*/*.pyi",
+    "mypy_boto3_builder/stubs_static/*/*.py",
+    "mypy_boto3_builder/stubs_static/*/*/*.pyi",
+    "mypy_boto3_builder/stubs_static/*/*/*.py",
+]
+
+[tool.poetry.scripts]
+mypy_boto3_builder = 'mypy_boto3_builder.main:main'
+
+[tool.poetry.urls]
+"Documentation" = "https://youtype.github.io/mypy_boto3_builder/"
+"Source" = "https://github.com/youtype/mypy_boto3_builder"
+"Bug Tracker" = "https://github.com/youtype/mypy_boto3_builder/issues"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pip = "*"
+boto3 = "*"
+black = "*"
+isort = "*"
+jinja2 = "*"
+mdformat = "*"
+newversion = "*"
+cryptography = "*"
+typing_extensions = "*"
+
+[tool.poetry.group.dev.dependencies]
+handsdown = "*"
+mypy = "*"
+ruff = "*"
+flake8 = "*"
+pytest-cov = "*"
+pytest = "*"
+vulture = "*"
+types-requests = "*"
+types-pkg-resources = "*"
+types-six = "*"
+types-certifi = "*"
+types-python-dateutil = "*"
+types-urllib3 = "*"
+types-s3transfer = "*"
+boto3-stubs = "*"
+botocore-stubs = "*"
+istub = "*"
+twine = "*"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.report]
+exclude_lines = [
+    "if self.debug:",
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "@overload",
+]
+ignore_errors = true
+omit = ["tests/*"]
+
+[tool.pyright]
+include = ["mypy_boto3_builder"]
+exclude = ["tests"]
+ignore = [
+    ".venv",
+    "**/__pycache__",
+    "**/build",
+    "typestubs",
+    "examples",
+    "aio_examples",
+]
+typeCheckingMode = "strict"
+reportMissingImports = "error"
+reportMissingTypeStubs = "error"
+reportMissingTypeArgument = "error"
+reportIncompatibleMethodOverride = "error"
+reportIncompatibleVariableOverride = "error"
+reportUnknownParameterType = "error"
+pythonVersion = "3.10"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_ignores = false
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+ignore_errors = false
+
+[[tool.mypy.overrides]]
+module = "mypy-tests.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "mypy-mypy_boto3_builder.stubs_static.aiobotocore.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "mypy-mypy_boto3_builder.stubs_static.aioboto3.*"
+ignore_errors = true
+
+[tool.flake8]
+max-line-length = 100
+exclude = [".git", "__pycache__", "docs", "build", "dist", "test_*.py", "*.pyi"]
+ignore = ["E704", "W503"]
+
+[tool.ruff]
+exclude = [
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "build",
+    "dist",
+]
+
+# Same as Black.
+line-length = 100
+indent-width = 4
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "B", "I", "N", "D", "C4", "C90", "RUF"]
+ignore = [
+    "E501",
+    "N803",
+    "N818",
+    "D107",
+    "D200",
+    "D203",
+    "D212",
+    "D406",
+    "D407",
+    "D413",
+    "D417",
+]
+fixable = ["ALL"]
+unfixable = ["B"]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+exclude = ["test_*.py", "*.pyi"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = false
+docstring-code-line-length = "dynamic"
