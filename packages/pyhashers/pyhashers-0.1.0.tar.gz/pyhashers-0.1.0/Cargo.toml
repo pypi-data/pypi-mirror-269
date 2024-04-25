@@ -1,0 +1,16 @@
+[package]
+name = "pyhashers"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "pyhashers"
+crate-type = ["cdylib"]
+
+[dependencies]
+md5 = "0.7.0"
+pyo3 = "0.20.0"
+rayon = "1.10.0"
+regex = "1.10.4"
+walkdir = "2.5.0"
