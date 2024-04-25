@@ -1,0 +1,3 @@
+[sqlalchemy.dialects]
+solr = sqlalchemy_solr.http:SolrDialect_http
+solr.http = sqlalchemy_solr.http:SolrDialect_http
