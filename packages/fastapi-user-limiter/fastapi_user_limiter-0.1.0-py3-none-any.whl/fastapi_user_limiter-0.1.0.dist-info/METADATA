@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: fastapi_user_limiter
+Version: 0.1.0
+Summary: Rate-limiter for FastAPI with the possibility of user-based rate limits
+Author-email: Ramtin Yazdanian <ramtin.yazdanian@epfl.ch>
+Project-URL: Homepage, https://github.com/epflgraph/fastapi-user-limiter
+Project-URL: Bug Tracker, https://github.com/epflgraph/fastapi-user-limiter/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi[all]
+Requires-Dist: redis
+
+# FastAPI rate limiter
+
+This package adds a rate limiter to FastAPI using Redis.
+
+## Installation
+
+First install Redis, then install the package using:
+```
+pip install fastapi-user-limiter
+```
+
+## Usage
+
+An example of how to use the rate limiter can be found in `example.py`:
+
+```
+from fastapi_user_limiter.limiter import RateLimiter, rate_limit
+from fastapi import FastAPI, Request
+
+
+app = FastAPI()
+rate_limiter = RateLimiter()
+
+
+@app.get("/")
+@rate_limit(rate_limiter, 5, 60)
+async def read_root(request: Request):
+    return {"Hello": "World"}
+```
+
+Every endpoint handler with the rate limiter decorator needs to have `request` (of type `fastapi.Request`) as its first argument.
+
+## Future features
+
+The package will soon have the additional feature of allowing each user account to have a different rate limit for each endpoint.
