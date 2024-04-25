@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: swarmauri_developer
+Version: 0.0.6
+Summary: The Swarmauri Developer Assistant is part of the swarmaURI framework and is designed to enable developers to rapidly develop with the Swarmauri Sdk.. This tool is designed to enhance software development workflows by integrating an advanced AI with pretrained vectorizers and document retrieval. The assistant features a web gui with chatbot, file explorer and editor, and code interpreter.
+Home-page: http://github.com/swarmauri/developer_assistant
+Author: Jacob Stewart
+Author-email: corporate@swarmauri.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: swarmauri[full] ==0.1.80
+
+# Swarmauri Developer Assistant
+
+## Overview
+The Swarmauri Developer Assistant is part of the swarmaURI framework and is designed to enable developers to rapidly develop with the Swarmauri Sdk.. This tool is designed to enhance software development workflows by integrating an advanced AI with pretrained vectorizers and document retrieval. The assistant features a web gui with chatbot, file explorer and editor, and code interpreter.
+
+## Features
+- **AI-Powered Coding Assistance:** Utilize OpenAI's models for real-time coding help and documentation.
+- **File Management Interface:** Navigate and manage your project files within a robust Gradio interface.
+- **Code Execution Environment:** Execute Python code snippets directly from the interface.
+- **Database Integration:** Automatically log interactions in a SQLite database for analysis or record-keeping.
+- **Vector Store Integration:** Efficiently handle and retrieve data using the MLMVectorStore component.
