@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/tf_ctc/__init__.py
+src/tf_ctc/decoding.py
+src/tf_ctc/logits.py
+src/tf_ctc/loss_.py
+src/tf_ctc/metrics.py
+src/tf_ctc/test.py
+src/tf_ctc.egg-info/PKG-INFO
+src/tf_ctc.egg-info/SOURCES.txt
+src/tf_ctc.egg-info/dependency_links.txt
+src/tf_ctc.egg-info/requires.txt
+src/tf_ctc.egg-info/top_level.txt
+src/tf_ctc/tests/test_decoding.py
+src/tf_ctc/tests/test_loss.py
+src/tf_ctc/tests/test_metrics.py
