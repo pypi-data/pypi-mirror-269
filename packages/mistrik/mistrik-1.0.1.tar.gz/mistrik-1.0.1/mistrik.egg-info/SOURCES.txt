@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+mistrik/__init__.py
+mistrik/mistrik.py
+mistrik.egg-info/PKG-INFO
+mistrik.egg-info/SOURCES.txt
+mistrik.egg-info/dependency_links.txt
+mistrik.egg-info/top_level.txt
