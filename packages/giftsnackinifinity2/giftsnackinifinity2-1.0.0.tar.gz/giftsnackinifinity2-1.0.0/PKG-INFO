@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: giftsnackinifinity2
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: https://github.com/bfonfa/giftsnackinifinity2
+Author: bfonfa
+Author-email: bfonfa@icloud.com
+License: MIT
+Project-URL: Documentation, https://giftsnackinifinity2.readthedocs.io
+Project-URL: Source, https://github.com/bfonfa/giftsnackinifinity2
+Description: For the agreement for use of this package please see the following:
+        [https://docs.google.com/document/d/14l37L32M3fLht50hOlNiDoSObsRfooNso_wka4bZm-s/preview](https://docs.google.com/document/d/14l37L32M3fLht50hOlNiDoSObsRfooNso_wka4bZm-s/preview)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
