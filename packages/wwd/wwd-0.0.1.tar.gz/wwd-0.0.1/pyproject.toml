@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "wwd"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyterlab = "^4.1.6"
+jupyter-book = "^1.0.0"
+nbdev = "^2.3.13"
+matplotlib = "^3.8.4"
+numpy = "^1.26.4"
+jax = "^0.4.26"
+equinox = "^0.11.4"
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+fastapi = "^0.110.2"
+black = "^24.4.0"
+mypy = "^1.9.0"
+twine = "^5.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

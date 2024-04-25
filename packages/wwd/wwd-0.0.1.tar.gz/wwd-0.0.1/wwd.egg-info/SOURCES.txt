@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+settings.ini
+setup.py
+wwd/__init__.py
+wwd/_modidx.py
+wwd/data.py
+wwd/template.py
+wwd.egg-info/PKG-INFO
+wwd.egg-info/SOURCES.txt
+wwd.egg-info/dependency_links.txt
+wwd.egg-info/entry_points.txt
+wwd.egg-info/not-zip-safe
+wwd.egg-info/requires.txt
+wwd.egg-info/top_level.txt
