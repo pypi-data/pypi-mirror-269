@@ -1,0 +1,10 @@
+README.md
+setup.py
+Pokebola/__init__.py
+Pokebola/pokemon.csv
+Pokebola/random_pokemon.py
+Pokebola.egg-info/PKG-INFO
+Pokebola.egg-info/SOURCES.txt
+Pokebola.egg-info/dependency_links.txt
+Pokebola.egg-info/requires.txt
+Pokebola.egg-info/top_level.txt
