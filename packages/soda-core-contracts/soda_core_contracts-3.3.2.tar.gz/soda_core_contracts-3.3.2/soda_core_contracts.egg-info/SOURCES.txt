@@ -1,0 +1,16 @@
+README.md
+setup.py
+soda/contracts/connection.py
+soda/contracts/contract.py
+soda/contracts/soda_cloud.py
+soda/contracts/soda_data_contract_json_schema_1_0_0.json
+soda/contracts/impl/contract_parser.py
+soda/contracts/impl/json_schema_verifier.py
+soda/contracts/impl/logs.py
+soda/contracts/impl/variable_resolver.py
+soda/contracts/impl/yaml.py
+soda_core_contracts.egg-info/PKG-INFO
+soda_core_contracts.egg-info/SOURCES.txt
+soda_core_contracts.egg-info/dependency_links.txt
+soda_core_contracts.egg-info/requires.txt
+soda_core_contracts.egg-info/top_level.txt
