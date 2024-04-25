@@ -1,0 +1,4 @@
+sqlalchemy>=1.4.24
+
+[docs]
+sphinx
