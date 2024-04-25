@@ -1,0 +1,82 @@
+[build-system]
+requires = ["hatchling>=1.22.2", "hatch-vcs>=0.3.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stac_geoparquet"
+authors = [{ name = "Tom Augspurger", email = "taugspurger@microsoft.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+requires-python = ">=3.8"
+dependencies = [
+    "ciso8601",
+    "geopandas",
+    "packaging",
+    "pandas",
+    "pyarrow",
+    "pystac",
+    "shapely",
+]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "stac_geoparquet/_version.py"
+
+[project.optional-dependencies]
+pgstac = [
+    "fsspec",
+    "pypgstac",
+    "psycopg[binary,pool]",
+    "tqdm",
+    "python-dateutil",
+]
+pc = ["adlfs", "pypgstac", "psycopg[binary,pool]", "tqdm", "azure-data-tables"]
+test = [
+    "pytest",
+    "requests",
+    "pre-commit",
+    "stac-geoparquet[pgstac]",
+    "stac-geoparquet[pc]",
+    "types-python-dateutil",
+    "types-requests",
+    "mypy",
+]
+
+
+[project.urls]
+Home = "https://github.com/stac-utils/stac-geoparquet"
+
+[project.scripts]
+pc-geoparquet = "stac_geoparquet.cli:main"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+filterwarnings = ["ignore:.*distutils Version.*:DeprecationWarning"]
+
+[tool.mypy]
+
+python_version = "3.10"
+
+[[tool.mypy.overrides]]
+module = [
+    "ciso8601.*",
+    "fsspec.*",
+    "geopandas.*",
+    "pandas.*",
+    "pyarrow.*",
+    "pypgstac.*",
+    "pyproj.*",
+    "rich.*",
+    "shapely.*",
+    "tqdm.*",
+]
+
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "stac_geoparquet.*"
+disallow_untyped_defs = true
