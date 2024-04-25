@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imt-ikarus"
+version = "1.1.2"
+authors = [
+  { name="Simon Bachhuber", email="simon.bachhuber@fau.de" },
+]
+description = "IKArus - Inertial and Optical Data of Kinematic ChAin Motion"
+readme = "readme.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "qmt",
+    "scipy",
+    "dm-tree",
+    "requests",
+    "pandas",
+    "imt-tree-utils",
+]
+
+[project.optional-dependencies]
+benchmark = [
+    "imt-ring",
+]
+baselines = [
+    "onnxruntime",
+]
+
+[project.urls]
+Homepage = "https://github.com/SimiPixel/ikarus"
+Issues = "https://github.com/SimiPixel/ikarus/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ikarus = ["benchmark/xmls/gait.xml", "benchmark/xmls/arm.xml", "baselines/riann/riann.onnx"]
