@@ -1,0 +1,12 @@
+hexfft/__init__.py,sha256=KAwAcoK1D9LV90v73sFk6ghbzWgRyUBqL4ho06PfKs0,84
+hexfft/array.py,sha256=ntQXqXD2rmYUooPqE9jbl6DO5EJGUp5BHa-ngMBRzXg,4435
+hexfft/grids.py,sha256=oqf-m1Xn88C7bKUNVoqU9bRghMgGXFnhtpXOZZMuNDQ,2245
+hexfft/hexfft.py,sha256=Qt9fTPZEJPZeyReMU-L9c33mHHSYWYcG4cjd2plz79Q,20622
+hexfft/plot.py,sha256=6C7osTVjKyNC58RsUCF0RRsAMWy0eRIKviokrsuw8tQ,3722
+hexfft/reference.py,sha256=XFobdLVawfvOeCCJc_vjMQRPL6a2x3pZAkP1r9vpGtU,2896
+hexfft/utils.py,sha256=y_0Ksd6fM0zkp9QcZmoSy1mjtPGzxm6Vs_R4prZ_Zws,3841
+hexfft-0.1.0.dist-info/LICENSE,sha256=0O6peQ6NNwfZ1bIdI0WNhlQ-Hd_o7V_Fgf_Es2FKutU,1078
+hexfft-0.1.0.dist-info/METADATA,sha256=tgckIySzvM5FG_tPJFbT5NLIXs8vw0sEDRP2Cm0nSGM,844
+hexfft-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hexfft-0.1.0.dist-info/top_level.txt,sha256=uNEFtReWTC9mvnPa9SAKdCXJMxSn7_IoNMARnbcVf6o,7
+hexfft-0.1.0.dist-info/RECORD,,
