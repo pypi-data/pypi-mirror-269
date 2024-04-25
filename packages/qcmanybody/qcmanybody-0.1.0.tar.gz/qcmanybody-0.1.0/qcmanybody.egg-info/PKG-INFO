@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: qcmanybody
+Version: 0.1.0
+Summary: QCManyBody
+Author-email: Benjamin Pritchard <bpp4@vt.edu>, "Lori A. Burns" <lori.burns@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2023-2024, The Molecular Sciences Software Institute
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+          list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice,
+          this list of conditions and the following disclaimer in the documentation
+          and/or other materials provided with the distribution.
+        
+        * Neither the name of the copyright holder nor the names of its
+          contributors may be used to endorse or promote products derived from
+          this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://github.com/MolSSI/QCManyBody
+Project-URL: Bug Tracker, https://github.com/MolSSI/QCManyBody/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: qcelemental
+Requires-Dist: qcengine
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: zstandard; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: mkdocs; extra == "docs"
+Requires-Dist: mkdocs-material; extra == "docs"
+Requires-Dist: mkdocstrings[python]; extra == "docs"
+Requires-Dist: tabulate; extra == "docs"
+
+QCManyBody
+==========
+
+<p align="center">
+    <picture>
+    <img alt="QCManyBody Logo" src="https://github.com/MolSSI/QCManyBody/blob/main/docs/logo.png" height="150px">
+    </picture>
+</p>
+
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/MolSSI/QCManyBody/ci.yml?logo=github)](https://github.com/MolSSI/QCManyBody/actions?query=workflow%3ACI)
+[![codecov](https://codecov.io/gh/loriab/QCManyBody/graph/badge.svg?token=E4S0706HJ0)](https://codecov.io/gh/loriab/QCManyBody)
+[![Documentation Status](https://img.shields.io/github/actions/workflow/status/MolSSI/QCManyBody/ci.yml?label=docs&logo=readthedocs&logoColor=white)](https://molssi.github.io/QCManyBody/)
+[![Conda (channel only)](https://img.shields.io/conda/vn/conda-forge/qcmanybody?color=blue&logo=anaconda&logoColor=white)](https://anaconda.org/conda-forge/qcmanybody)
+![python](https://img.shields.io/badge/python-3.8+-blue.svg)
+
+QCManyBody is a python package for running quantum chemistry manybody expansions and interaction calculations in a
+package-independent way.
+
+## Installation
+
+Currently, the package is only available on [GitHub](https://github.com/MolSSI/QCManyBody). To install directly
+from GitHub, use the following command:
+
+```bash
+pip install git+https://github.com/MolSSI/QCManyBody.git
+```
+
+## Documentation
+
+Full documentation is available at [https://molssi.github.io/QCManyBody/](https://molssi.github.io/QCManyBody/)

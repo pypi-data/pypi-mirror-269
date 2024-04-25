@@ -1,0 +1,202 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: "9 16 * * 1"
+
+jobs:
+  build:
+    defaults:
+      run:
+        shell: bash -l {0}
+    strategy:
+      fail-fast: false
+      matrix:
+        cfg:
+          - label: Py-min
+            python-version: "3.8"
+            runs-on: ubuntu-latest
+            pytest: "-m 'not addon'"
+
+          - label: Py-max
+            python-version: "3.12"
+            runs-on: ubuntu-latest
+            pytest: "-k 'not (he4 and (3b or 4b))'"
+
+    name: "🐍 ${{ matrix.cfg.python-version }} • ${{ matrix.cfg.label }} • ${{ matrix.cfg.runs-on }}"
+    runs-on: ${{ matrix.cfg.runs-on }}
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Write a Conda Env File
+      run: |
+          cat > export.yaml <<EOF
+          name: test
+          channels:
+            - conda-forge
+            - nodefaults
+          dependencies:
+            # Build
+            - setuptools
+            - setuptools-scm
+            # Core
+            - python
+            - qcengine
+            - pydantic
+            # Testing
+            - pytest
+            - zstandard
+            - pytest-cov
+            - codecov
+            # Testing CMS
+            - psi4=1.9.1
+            #- nwchem  # lands on different he4 soln
+            #- networkx
+          EOF
+          if [[ "${{ runner.os }}" == "Linux" ]]; then
+            :
+            if [[ "${{ matrix.cfg.label }}" == "Py-min" ]]; then
+                sed -i "s;pydantic;pydantic=1;g" export.yaml
+            fi
+          fi
+          # model sed for L/W
+          #   sed -i "s;;;g" export.yaml
+          # model sed for M
+          #   sed -E -i.bak "s;;;g" export.yaml
+          cat export.yaml
+
+    - name: Create Environment
+      uses: conda-incubator/setup-miniconda@v3
+      with:
+        activate-environment: test
+        environment-file: export.yaml
+        python-version: ${{ matrix.cfg.python-version }}
+        auto-activate-base: false
+        show-channel-urls: true
+        add-pip-as-python-dependency: true
+        channels: conda-forge,nodefaults
+
+    - name: Special Config - QCElemental Dep
+      if: false
+      run: |
+        conda remove qcelemental --force
+        python -m pip install 'git+https://github.com/MolSSI/QCElemental.git@loriab-patch-2' --no-deps
+
+    - name: Special Config - QCEngine Dep
+      if: false
+      #if: "(startsWith(matrix.cfg.label, 'Psi4')) || (matrix.cfg.label == 'ADCC') || (matrix.cfg.label == 'optimization-dispersion')"
+      run: |
+        conda remove qcengine --force
+
+    - name: Environment Information
+      run: |
+        conda info
+        conda list
+
+    - name: Install QCManyBody
+      run: |
+        pip install -e .
+        # python -m pip install . --no-deps  # gives no codecov beyond tests
+
+    - name: Configure QCEngine
+      run: |
+        cat > qcengine.yaml <<EOF
+        all:
+          hostname_pattern: "*"
+          memory: 2
+          ncores: 2
+        EOF
+        cat qcengine.yaml
+        qcengine info
+
+    - name: PyTest
+      run: |
+        pytest -rws -v ${{ matrix.cfg.pytest }} \
+            --cov=qcmanybody --cov-report=xml \
+            --color=yes --durations 50 --durations-min 20
+
+    - name: CodeCov
+      uses: codecov/codecov-action@v4.0.1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        slug: loriab/QCManyBody
+
+  release_docs:
+    needs: [build]
+    defaults:
+      run:
+        shell: bash -l {0}
+    strategy:
+      fail-fast: false
+      matrix:
+        cfg:
+          - label: MkDocs
+            python-version: "3.10"
+            runs-on: ubuntu-latest
+
+    name: "🐍 ${{ matrix.cfg.python-version }} • ${{ matrix.cfg.label }}"
+    runs-on: ${{ matrix.cfg.runs-on }}
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Write a Conda Env File
+      run: |
+          cat > export.yaml <<EOF
+          name: test
+          channels:
+            - conda-forge
+            - nodefaults
+          dependencies:
+            # Build
+            - setuptools
+            - setuptools-scm
+            # Core
+            - python
+            - qcengine
+            - pydantic
+            # Docs
+            - mkdocs
+            - mkdocs-material
+            - mkdocstrings-python
+            - tabulate
+          EOF
+          cat export.yaml
+
+    - name: Create Environment
+      uses: conda-incubator/setup-miniconda@v3
+      with:
+        activate-environment: test
+        environment-file: export.yaml
+        python-version: ${{ matrix.cfg.python-version }}
+        auto-activate-base: false
+        show-channel-urls: true
+        add-pip-as-python-dependency: true
+        channels: conda-forge,nodefaults
+
+    - name: Environment Information
+      run: |
+        conda info
+        conda list --show-channel-urls
+
+    - name: Build Documentation
+      run: |
+        python -m pip install . --no-deps
+        PYTHONPATH=docs/extensions mkdocs build
+        cd docs
+
+    - name: GitHub Pages Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.1
+      if: github.event_name == 'push' && github.repository == 'MolSSI/QCManyBody' && ( startsWith( github.ref, 'refs/tags/' ) || github.ref == 'refs/heads/main' )
+      with:
+        branch: gh-pages
+        folder: site

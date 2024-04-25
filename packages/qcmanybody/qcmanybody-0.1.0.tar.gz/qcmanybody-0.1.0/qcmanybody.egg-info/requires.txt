@@ -1,0 +1,12 @@
+qcelemental
+qcengine
+
+[docs]
+mkdocs
+mkdocs-material
+mkdocstrings[python]
+tabulate
+
+[tests]
+pytest
+zstandard
