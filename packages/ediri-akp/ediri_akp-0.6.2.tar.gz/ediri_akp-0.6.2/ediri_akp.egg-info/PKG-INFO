@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ediri-akp
+Version: 0.6.2
+Summary: A Pulumi package for creating and managing Akuity Platform cloud resources.
+Home-page: https://www.pulumi.com
+License: Apache-2.0
+Project-URL: Repository, https://github.com/dirien/pulumi-akp
+Keywords: pulumi akp category/utility
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Akuity Resource Provider
+
+
