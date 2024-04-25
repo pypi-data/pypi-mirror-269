@@ -1,0 +1,17 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+aiosteam/__init__.py
+aiosteam/apps.py
+aiosteam/client.py
+aiosteam/constants.py
+aiosteam/steam.py
+aiosteam/users.py
+aiosteam/utils.py
+aiosteam_api.egg-info/PKG-INFO
+aiosteam_api.egg-info/SOURCES.txt
+aiosteam_api.egg-info/dependency_links.txt
+aiosteam_api.egg-info/requires.txt
+aiosteam_api.egg-info/top_level.txt
