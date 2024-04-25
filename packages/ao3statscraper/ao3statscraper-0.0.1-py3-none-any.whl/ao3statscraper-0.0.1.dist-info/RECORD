@@ -1,0 +1,15 @@
+ao3statscraper/__init__.py,sha256=_rE0AiWVnSNULy6_RO5-jkFnNjY--tHbU6t1IUuA9fo,523
+ao3statscraper/__version__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+ao3statscraper/ao3requester.py,sha256=dMor7QQV-29QNyLCIf__--LOqBth8nBBiIrRT5HHd3s,2355
+ao3statscraper/configuration.py,sha256=riHXNdksPJQluV0SSyUwXAp87_qMpn70p6anTA_fb74,6533
+ao3statscraper/plotting.py,sha256=eC7Yfdwb7C-ov8osljsvqnqJrO-SX-t823IJWvRWOW4,6530
+ao3statscraper/pw.py,sha256=vrEnf3dpGg3eIxBMEJOkn_dqiXqz9VAGXXY0kr7Rly4,3862
+ao3statscraper/scrape.py,sha256=i3BEUNxd54sXc59NBh5ufC1jkhmyDmTpu4vO_GtC0Y4,8015
+ao3statscraper/statsdata.py,sha256=VBz7AYXZriMx4IMoR2CxxbGp71-Kpt_PH67J5riduw4,11255
+ao3statscraper/utils.py,sha256=DX3Op6UAWP_0PSj8nLYEd2HL36J4HcCPCmAbhJJikl8,1396
+ao3statscraper-0.0.1.dist-info/LICENSE,sha256=8Xz_QldCUg7a2B7AXw5D66oc4UYi0PN5NVasagKpws0,35137
+ao3statscraper-0.0.1.dist-info/METADATA,sha256=ffjwN6NA5ajvrwCV3hQUopTppr5O5eTwzwZLKgdNW0w,43951
+ao3statscraper-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ao3statscraper-0.0.1.dist-info/entry_points.txt,sha256=hdOLMtdUhS9DIa6hhHDWLeHjrcBQdlKu8stlfd4xPfU,263
+ao3statscraper-0.0.1.dist-info/top_level.txt,sha256=mjys-XCFB8GitZtatEulV4YJY0W-L2z6R0-rE1TgD9g,15
+ao3statscraper-0.0.1.dist-info/RECORD,,
