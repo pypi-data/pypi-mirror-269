@@ -1,0 +1,2 @@
+[console_scripts]
+tajimas_d = tajimas_d._tajimas_d:run_cli
