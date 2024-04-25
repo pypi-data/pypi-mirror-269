@@ -1,0 +1,2 @@
+[console_scripts]
+catvibes = catvibes.__main__:main
