@@ -1,0 +1,12 @@
+pz-rail-base
+
+[dev]
+pz-rail[algos]
+coverage
+pytest
+pytest-cov
+pre-commit
+pylint
+
+[full]
+pz-rail[algos]
