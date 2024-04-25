@@ -1,0 +1,9 @@
+simplepgsql/README.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplepgsql/__init__.py,sha256=9JeEkIxNLGG_gxzZJIHRhuzWug5ufnAijfo4iiFAV2A,137
+simplepgsql/src/__init__.py,sha256=9JeEkIxNLGG_gxzZJIHRhuzWug5ufnAijfo4iiFAV2A,137
+simplepgsql/src/depr_simplepgsql.py,sha256=EvjN5CaPRW1SI1M4SyiX8I9QZVRsCf61aci25rh0JCM,16154
+simplepgsql/src/simplepgsql.py,sha256=NRwdmLSf7vkKK178fpxbTqhi0RzAKu4mu5s4fMw4ddY,16257
+simplepgsql-0.1.8.dist-info/METADATA,sha256=67GgK57LMjtgpSuTkXBz_vrFgDe5mn6A7zHlb8TCz6M,42676
+simplepgsql-0.1.8.dist-info/WHEEL,sha256=cDcbFFSNXOE-241I5PFuLkIYfR_FM7WTlPEi33njInY,105
+simplepgsql-0.1.8.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+simplepgsql-0.1.8.dist-info/RECORD,,
