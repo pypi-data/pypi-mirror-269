@@ -1,0 +1,39 @@
+{
+  "name": "Simplified Chinese to Traditional Chinese (Hong Kong variant)",
+  "dicts": [
+    {
+      "file": "../dictionary/s2hk.tlist",
+      "mode": "join",
+      "src": [
+        {
+          "mode": "load",
+          "src": [
+            {
+              "mode": "expand",
+              "placeholders": [
+                "%n"
+              ],
+              "src": [
+                "../dictionary/STPhrases.txt",
+                {
+                  "file": "../dictionary/STPhrasesExpNum.list",
+                  "mode": "expand",
+                  "placeholders": [
+                    "%n"
+                  ],
+                  "src": [
+                    "../dictionary/STPhrasesExpNum.txt",
+                    "../dictionary/STPhrasesExpNumPost.txt"
+                  ]
+                }
+              ]
+            },
+            "../OpenCC/dictionary/STPhrases.txt",
+            "../OpenCC/dictionary/STCharacters.txt"
+          ]
+        },
+        "../OpenCC/dictionary/HKVariants.txt"
+      ]
+    }
+  ]
+}

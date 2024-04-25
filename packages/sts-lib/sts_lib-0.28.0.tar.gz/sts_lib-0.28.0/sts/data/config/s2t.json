@@ -1,0 +1,33 @@
+{
+  "name": "Simplified Chinese to Traditional Chinese",
+  "dicts": [
+    {
+      "file": "../dictionary/s2t.tlist",
+      "mode": "load",
+      "src": [
+        {
+          "mode": "expand",
+          "placeholders": [
+            "%n"
+          ],
+          "src": [
+            "../dictionary/STPhrases.txt",
+            {
+              "file": "../dictionary/STPhrasesExpNum.list",
+              "mode": "expand",
+              "placeholders": [
+                "%n"
+              ],
+              "src": [
+                "../dictionary/STPhrasesExpNum.txt",
+                "../dictionary/STPhrasesExpNumPost.txt"
+              ]
+            }
+          ]
+        },
+        "../OpenCC/dictionary/STPhrases.txt",
+        "../OpenCC/dictionary/STCharacters.txt"
+      ]
+    }
+  ]
+}
