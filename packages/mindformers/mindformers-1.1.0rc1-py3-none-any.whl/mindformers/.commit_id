@@ -1,0 +1,8 @@
+r1.1.rc1
+commit c06e87b
+Merge: 9504c46 2160758
+Author: Lin <heqinglin4@huawei.com>
+Date:   Fri Apr 12 09:42:21 2024 +0000
+
+    !2690 ms更新门禁版本
+    Merge pull request !2690 from Lin/cherry-pick-1712914867
