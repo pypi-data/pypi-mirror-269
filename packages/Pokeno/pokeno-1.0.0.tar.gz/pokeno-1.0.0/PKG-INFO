@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: Pokeno
+Version: 1.0.0
+Summary: Librerias paran generar un Pokemon aleatorio
+Author: Rogelio Guzman
+Author-email: miniroyerguzmam@gmail.com
+Requires-Dist: pandas
