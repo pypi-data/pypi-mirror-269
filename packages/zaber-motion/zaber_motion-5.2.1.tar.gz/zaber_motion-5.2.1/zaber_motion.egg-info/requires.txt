@@ -1,0 +1,18 @@
+protobuf<4.22.0,>=3.20.0
+rx>=3.0.0
+
+[dev]
+invoke
+mypy
+mypy-protobuf
+pylint
+pycodestyle
+pytest
+pytest-asyncio
+setuptools
+build
+wheel
+packaging
+
+[dev:sys_platform == "linux" and platform_machine == "x86_64"]
+twine

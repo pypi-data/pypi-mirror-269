@@ -1,0 +1,3 @@
+exclude test/*
+exclude examples/*
+include zaber_motion_bindings/*
