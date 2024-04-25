@@ -1,0 +1,19 @@
+[project]
+name = "wayfire"
+version = "1.0"
+authors = [{ name = "Thiago", email = "systemofdown@gmail.com" }]
+description = "wayfire compositor library"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Homepage = "https://github.com/killown/waypy"
+Issues = "https://github.com/killown/waypy/issues"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
