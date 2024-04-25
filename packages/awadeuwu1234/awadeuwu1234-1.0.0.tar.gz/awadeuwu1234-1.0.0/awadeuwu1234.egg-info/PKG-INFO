@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: awadeuwu1234
+Version: 1.0.0
+Summary: Librería para generar un Pokémon aleatorio
+Author: Fredd Foxx
+Author-email: 202224031_castillo@tesch.edu.mx
+Requires-Dist: pandas
