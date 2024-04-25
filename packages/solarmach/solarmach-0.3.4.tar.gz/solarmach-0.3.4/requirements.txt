@@ -1,0 +1,18 @@
+astropy
+astroquery
+cmasher
+drms
+imageio>=2.31.6
+Jinja2
+lxml
+matplotlib==3.5.3
+numpy
+pandas
+pfsspy  # TODO: replace with sunkit_magex
+plotly
+python-dateutil
+scipy
+speasy>=1.2.0
+tqdm
+sunpy
+zeep
