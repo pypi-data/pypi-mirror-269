@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pynetgene
+Version: 1.2.0
+Summary: PyNetgene: Python Genetic Algorithms Library
+Author: Catalin Baba
+Author-email: catalin.viorelbaba@gmail.com
+License-File: LICENSE
+Requires-Dist: pytest>=8.1.1
