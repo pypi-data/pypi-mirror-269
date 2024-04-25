@@ -1,0 +1,15 @@
+caikit[runtime-grpc,runtime-http]<0.27.0,>=0.26.17
+caikit-tgis-backend<0.2.0,>=0.1.27
+accelerate>=0.22.0
+datasets>=2.4.0
+huggingface-hub
+numpy>=1.22.4
+pandas>=1.5.0
+scikit-learn>=1.1
+scipy>=1.8.1
+sentence-transformers<2.4.0,>=2.3.1
+tokenizers>=0.13.3
+torch<2.3.0,>=2.0.1
+tqdm>=4.65.0
+transformers>=4.32.0
+peft==0.6.0
