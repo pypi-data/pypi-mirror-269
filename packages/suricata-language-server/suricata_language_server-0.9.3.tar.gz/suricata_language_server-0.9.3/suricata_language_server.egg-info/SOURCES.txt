@@ -1,0 +1,17 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+suricata_language_server.egg-info/PKG-INFO
+suricata_language_server.egg-info/SOURCES.txt
+suricata_language_server.egg-info/dependency_links.txt
+suricata_language_server.egg-info/entry_points.txt
+suricata_language_server.egg-info/top_level.txt
+suricata_language_server.egg-info/zip-safe
+suricatals/__init__.py
+suricatals/jsonrpc.py
+suricatals/langserver.py
+suricatals/lsp_helpers.py
+suricatals/parse_signatures.py
+suricatals/tests_rules.py
+suricatals/unit_tests.py
