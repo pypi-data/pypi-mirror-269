@@ -1,0 +1,3 @@
+include killallappsinfolder/requirements.txt
+include killallappsinfolder/thirdparty.json
+include killallappsinfolder/README.MD

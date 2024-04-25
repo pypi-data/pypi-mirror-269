@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+killallappsinfolder/README.MD
+killallappsinfolder/__init__.py
+killallappsinfolder/requirements.txt
+killallappsinfolder/thirdparty.json
+killallappsinfolder.egg-info/PKG-INFO
+killallappsinfolder.egg-info/SOURCES.txt
+killallappsinfolder.egg-info/dependency_links.txt
+killallappsinfolder.egg-info/requires.txt
+killallappsinfolder.egg-info/top_level.txt
