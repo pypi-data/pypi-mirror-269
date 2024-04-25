@@ -1,0 +1,15 @@
+ckanext/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ckanext/conftest.py,sha256=A3fIRyErvYa_D8xKlmdUdxeUBVWe4zlNKrb4PBqcDnI,333
+ckanext/datapackage/__init__.py,sha256=sZXg3dneNGdwBKypGowJfSGDPOtNBxs0S4UtXHY5XY8,45
+ckanext/datapackage/actions.py,sha256=K8gHy183MfYF_KNrg6r7PHc4a2ZS0dIu8ih-HmWZ4Bs,871
+ckanext/datapackage/auth.py,sha256=bof6ook9dw2z0y7c9k5cL4qiVZlqeo4eiLmAYTKE05c,415
+ckanext/datapackage/blueprint.py,sha256=olXba3DHloeDY1DRVEotb9blkVq0BLiFQsV2IUJGvm8,564
+ckanext/datapackage/plugin.py,sha256=92ln5imL9pGxfeXX7PU8v8jMbdu-s8nXT0r9ixdtbjY,1183
+ckanext/datapackage/settings.py,sha256=ABM4odKia8FJevKJXSUYNu99Pxo706_KVckdVHV4fpc,65
+ckanext/datapackage/__spec__/test_placeholder.py,sha256=9OBU4nWtu0rrJ2VC6adSFER2405hhpVVMHTtes78QOc,40
+ckanext/datapackage/templates/package/snippets/additional_info.html,sha256=T18xUw_rkuEHfSH9RKCMQICeVhv6BEF7tMNLxfVjlys,211
+ckanext_datapackage-0.2.0.dist-info/METADATA,sha256=qAe2gcaqOdS97ajDp1D5a8MlQKIL6VFftMjrdFxxVlI,10694
+ckanext_datapackage-0.2.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+ckanext_datapackage-0.2.0.dist-info/entry_points.txt,sha256=QSiqKbMz91P3zg199DLqiJyvIcc6R22Rn4jCorR5jWU,74
+ckanext_datapackage-0.2.0.dist-info/licenses/LICENSE.md,sha256=lz9hefApxf6nFScSilY0-dydfJCrL0dV89Qq8YtyUG4,1092
+ckanext_datapackage-0.2.0.dist-info/RECORD,,
