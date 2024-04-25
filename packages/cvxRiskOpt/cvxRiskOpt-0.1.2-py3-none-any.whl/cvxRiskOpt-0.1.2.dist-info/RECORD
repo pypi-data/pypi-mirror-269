@@ -1,0 +1,9 @@
+cvxRiskOpt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cvxRiskOpt/cclp_risk_opt.py,sha256=psV3kiTcAEFxsG1s6JOGrXsQmsSDucSgwtRbKzjNvs0,17005
+cvxRiskOpt/mpc_helpers.py,sha256=CxqShNqRzRsb1HT3AubFYClsVNoNxP4CZof2iqkZmPE,7462
+cvxRiskOpt/wass_risk_opt_pb.py,sha256=KoVFyVQ_N1jEHVYxlDa35ooP7-_6isOn9Z_3EWG9-ws,17494
+cvxRiskOpt-0.1.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+cvxRiskOpt-0.1.2.dist-info/METADATA,sha256=otnvR7p9s1T-LCXo5Hc_kvMSKoC39g_eyNJ4mhVwFVY,1536
+cvxRiskOpt-0.1.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cvxRiskOpt-0.1.2.dist-info/top_level.txt,sha256=T-Zy1o9-dIEXEHK1HrvicBjspYwyvrFZZeBMr59Re-I,11
+cvxRiskOpt-0.1.2.dist-info/RECORD,,
