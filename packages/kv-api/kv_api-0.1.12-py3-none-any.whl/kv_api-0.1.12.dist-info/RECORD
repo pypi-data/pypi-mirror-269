@@ -1,0 +1,13 @@
+kv/api/__init__.py,sha256=mF4M_d6EiHbB9U9W_oKlKXYIyh8ZFn3gxe_382VXiLI,95
+kv/api/__init__.pyi,sha256=k0TD9wRpmWmvKl8C0Y94xcfkpN379Xw6AIxG9tArwL4,450
+kv/api/errors.py,sha256=Iafu9FLIvKcNNj_IyshSebHPBzA42n_l7zxl_T4kkoI,632
+kv/api/impl.py,sha256=6QBrLIBSPi4yYzk4Bd6ULfcYtrJ0WtTY10XptMBb60s,1155
+kv/api/kv.py,sha256=N-OyA9hC64gsHSKR4F6IYM8SZq3MWH2chJVtzmJvo5k,1711
+kv/api/extensions/__init__.py,sha256=mF4M_d6EiHbB9U9W_oKlKXYIyh8ZFn3gxe_382VXiLI,95
+kv/api/extensions/__init__.pyi,sha256=vUVRI69GsSZD_PaFQmWx-ZbDcF5Lyrs4OBWcCuiPCKs,197
+kv/api/extensions/append.py,sha256=u-xGMKI3IaEaLrqvooVJpxsr3Jx41xvqdbJgmjx05ek,1221
+kv/api/extensions/locate.py,sha256=EVrds3xouww8x6aO84RUKjXwNP54fv5oD0mEeqXEOL0,262
+kv_api-0.1.12.dist-info/METADATA,sha256=dVNZLCBNg58a3cwCqLu-QHJSfCrsgP6nqvKaMED8k6k,535
+kv_api-0.1.12.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+kv_api-0.1.12.dist-info/top_level.txt,sha256=z85M-ICBi-OoWrXz-dZX8xL06idJqievlWlmDg07U0M,3
+kv_api-0.1.12.dist-info/RECORD,,
