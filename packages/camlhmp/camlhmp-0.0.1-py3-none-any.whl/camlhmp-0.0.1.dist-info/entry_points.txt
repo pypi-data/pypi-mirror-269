@@ -1,0 +1,3 @@
+[console_scripts]
+camlhmp=camlhmp.cli.camlhmp:main
+
