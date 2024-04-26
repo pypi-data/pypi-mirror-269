@@ -1,0 +1,5 @@
+scipy>=1.7.3
+bokeh==3.3.4
+uniswappy==1.3.0
+stableswappy==0.0.11
+balancerpy==0.0.9
