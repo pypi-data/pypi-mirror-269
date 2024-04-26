@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: PetraM_Geom
+Version: 1.4.4
+Summary: PetraM Geometry Package
+Home-page: https://github.com/piScope/PetraM
+Author: S. Sihraiwa
+Author-email: shiraiwa@psfc.mit.edu
+License: GNUv3
+Keywords: MFEM physics
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2.7
+License-File: LICENSE
+
+## Petra-M geometry
+Geometry/Meshing interface for Petra-M
+
+1) Geometry interfaces: 
+2) Meshing interfaces:
+     
+Current version is developed with PyOCC 7.5.1 and gmsh 4.10.5
