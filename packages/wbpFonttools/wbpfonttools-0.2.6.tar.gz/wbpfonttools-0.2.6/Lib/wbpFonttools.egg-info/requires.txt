@@ -1,0 +1,2 @@
+wbBase>=0.2.8
+fonttools[lxml,plot,symfont,ufo,unicode,woff]>=4.48.1
