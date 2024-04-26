@@ -1,0 +1,111 @@
+from collections import defaultdict
+from pathlib import Path
+from typing import Annotated
+
+import typer
+from amsdal.configs.constants import CORE_MIGRATIONS_PATH
+from amsdal.configs.main import settings
+from amsdal.manager import AmsdalManager
+from amsdal.migration.data_classes import ModuleTypes
+from amsdal.migration.file_migration_store import FileMigrationStore
+from amsdal.migration.migrations_loader import MigrationsLoader
+from amsdal.migration.utils import contrib_to_module_root_path
+from amsdal_utils.config.manager import AmsdalConfigManager
+from rich import print
+
+from amsdal_cli.commands.build.utils.build_app import build_app
+from amsdal_cli.commands.generate.enums import SOURCES_DIR
+from amsdal_cli.commands.migrations.app import sub_app
+from amsdal_cli.commands.migrations.constants import MIGRATIONS_DIR_NAME
+from amsdal_cli.utils.cli_config import CliConfig
+
+
+@sub_app.command(name='show')
+def show(
+    ctx: typer.Context,
+    build_dir: Annotated[Path, typer.Option('--build-dir', '-b')] = Path('.'),
+    *,
+    config: Annotated[Path, typer.Option('--config', '-c')] = None,  # type: ignore # noqa: RUF013
+) -> None:
+    """
+    Show all migrations, which are applied and not applied including CORE and CONTRIB migrations.
+    """
+    cli_config: CliConfig = ctx.meta['config']
+    app_source_path = cli_config.app_directory / SOURCES_DIR
+
+    build_app(
+        app_source_path=app_source_path,
+        config_path=config or cli_config.config_path,
+        output=build_dir,
+    )
+
+    config_manager = AmsdalConfigManager()
+    config_manager.load_config(config or cli_config.config_path)
+    amsdal_manager = AmsdalManager()
+    amsdal_manager.setup()
+    amsdal_manager.authenticate()
+    amsdal_manager.post_setup()
+
+    store = FileMigrationStore()
+    _all_applied_migrations = store.fetch_migrations()
+    _core_applied_numbers = [_m.number for _m in _all_applied_migrations if _m.type == ModuleTypes.CORE]
+    _app_applied_numbers = [_m.number for _m in _all_applied_migrations if _m.type == ModuleTypes.APP]
+    _contrib_applied_numbers: dict[str, list[int]] = defaultdict(list)
+
+    for _m in _all_applied_migrations:
+        if _m.type == ModuleTypes.CONTRIB and _m.module:
+            _contrib_applied_numbers[_m.module].append(_m.number)
+
+    core_loader = MigrationsLoader(
+        migrations_dir=CORE_MIGRATIONS_PATH,
+        module_type=ModuleTypes.CORE,
+    )
+    contrib_loaders: list[tuple[str, MigrationsLoader]] = []
+
+    for contrib in settings.CONTRIBS:
+        contrib_root_path = contrib_to_module_root_path(contrib)
+
+        contrib_loaders.append(
+            (
+                contrib,
+                MigrationsLoader(
+                    migrations_dir=contrib_root_path / settings.MIGRATIONS_DIRECTORY_NAME,
+                    module_type=ModuleTypes.CONTRIB,
+                    module_name=contrib,
+                ),
+            ),
+        )
+
+    app_migrations_loader = MigrationsLoader(
+        migrations_dir=build_dir / MIGRATIONS_DIR_NAME,
+        module_type=ModuleTypes.APP,
+    )
+
+    print('[green]Core:[/green]')
+
+    for _migration in core_loader:
+        _is_migrated = 'x' if _migration.number in _core_applied_numbers else ' '
+        _color = 'green' if _is_migrated == 'x' else 'grey'
+        print(rf'[{_color}]  - \[{_is_migrated}] {_migration.path.name}[/{_color}]')
+
+    print('[green]Contrib:[/green]')
+    for _contrib, _loader in contrib_loaders:
+        _contrib_name = _contrib.rsplit('.', 2)[0]
+        _applied_numbers = _contrib_applied_numbers[_contrib]
+
+        for _migration in _loader:
+            _is_migrated = 'x' if _migration.number in _applied_numbers else ' '
+            _color = 'green' if _is_migrated == 'x' else 'grey'
+            print(rf'[{_color}]  - \[{_is_migrated}] {_contrib_name}: {_migration.path.name}[/{_color}]')
+
+    _app_migration_files = list(app_migrations_loader)
+
+    if _app_migration_files:
+        print('[green]App:[/green]')
+
+        for _migration in _app_migration_files:
+            _is_migrated = 'x' if _migration.number in _app_applied_numbers else ' '
+            _color = 'green' if _is_migrated == 'x' else 'grey'
+            print(rf'[{_color}]  - \[{_is_migrated}] {_migration.path.name}[/{_color}]')
+    else:
+        print("[blue]You don't have any migrations in your app[/blue]")
