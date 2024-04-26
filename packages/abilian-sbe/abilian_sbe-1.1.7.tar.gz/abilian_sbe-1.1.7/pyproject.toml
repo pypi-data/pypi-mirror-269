@@ -1,0 +1,370 @@
+[tool.poetry]
+name = "abilian-sbe"
+version = "1.1.7"
+description = "Social Business platform (entreprise collaboration and information management)"
+authors = ["Abilian SAS"]
+license = "LGPL-2.0-or-later"
+readme = "README.md"
+repository = "https://github.com/abilian/abilian-sbe"
+
+packages = [
+        { include = "extranet", from = "src" },
+        { include = "abilian", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.10,<3.13"
+
+# Flask (and dependencies), pinned because it's hard to upgrade
+flask = "~3.0.2"      # last version Flask 3.0.2 : 3 feb 2024
+jinja2 = "~3.1.3"     # 3.1.3 last 11 janv. 2024
+werkzeug = "~3.0.1"   # 3.0.1 las 24 oct. 2023
+markupSafe = "~2.1.4" # last  19 janv. 2024
+
+# Flask plugins (somme are pinned)
+flask-babel = "~1.0.0"
+# note : flask-babel = "~2.0.0" breaks tests
+# flask-babel = "~4.0.0"  # last 2 oct. 2023
+
+# flask-assets = ">=0.12" #0.12: 2016-08-18
+flask-assets = "2.1.0" #0.12: 2016-08-18  see webassets, v2.1.0 last 22 oct 2023
+
+flask-mail = ">=0.9.1"   # last 29 sept. 2014
+flask-migrate = "~4.0.5" # last 12 sept. 2023
+flask-login = "~0.6.3"   # last 30 oct. 2023
+
+# flask-talisman = ">=1.0.0"
+flask-talisman = "~1.1.0" # last  3 août 2023
+
+# TODO: replace by flask-vite which is maintained
+flask-tailwind = "^0.2.2" # last 15 nov. 2023
+
+# Transitive dependencies, but called explicitly in our code
+Babel = "*"
+blinker = ">=1.6.2"
+click = ">=8.1.3"
+itsdangerous = ">=2.1.2"
+numpy = "^1.26.3"        # last  2 janv. 2024
+pytz = "*"
+
+# Databases / persistence
+sqlalchemy = "1.4.35"
+flask-sqlalchemy = "3.0.1"
+psycopg2 = "^2.9.9"
+
+# Currently broken w/ 0.13
+flask-wtf = "1.2.0"
+# https://flask-wtf.readthedocs.io/en/1.2.x/changes/#version-0-13
+
+# Flask-WTF==0.12
+# wtforms = "<2.2"
+#wtforms = "~2.1"
+wtforms = "3.1.2"
+WTForms-Alchemy = "0.18.0"
+wtforms-sqlalchemy = "0.4.1"
+# WTForms==2.1
+# WTForms-Alchemy==0.17.0
+# WTForms-Components==0.10.5
+# WTForms-SQLAlchemy==0.3
+
+# Currently broken w/ 2.0
+# webassets = "< 2"
+# webassets==0.12.1  (2017-01-08)
+webassets = "2.0" # requirement of flask-assets 2.1
+
+# can parse isoformat / used in a jinja filter
+python-dateutil = "^2.8.2" # last 14 juil. 2021
+
+# Indexing
+whoosh-reloaded = "^2.7.5"
+
+# logs
+loguru = "^0.7.2"
+
+# Task queue
+dramatiq = "^1.15.0"
+redis = ">=4.6.0,<5.0"
+flask-dramatiq = "^0.6.0"
+filelock = "~3.13.1"
+
+# Security
+bleach = { version = "^6.1.0", extras = ["css"] }
+bcrypt = "*"
+defusedxml = "^0.7.1"
+
+# low-level tools
+deprecated = "*"
+
+# Used by DeferredJS (TODO: remove)
+lxml = "*"
+
+# Configuration
+toml = "*"
+
+# Used by the session audit
+maxminddb = "*"
+
+# Progres bar, used by some scripts
+tqdm = "*"
+
+# Used by the Sentry extension
+sentry-sdk = { version = "*", extras = ["flask"] }
+
+# antivirus interface
+clamd = "*"
+
+# Content detection / transformation
+python-magic = "*"
+pillow = "*"
+
+# Reporting
+pandas = ">=2.2.0" # last version 20 janv. 2024
+# pandas==2.2.0
+
+#
+# Assets management (might not be necessary if distributing compiled assets)
+#
+jsmin = "*"
+cssmin = "*"
+closure = "==20161201"
+
+# Email validation (when sending digests)
+validate_email = "*" # 1.3 last 23 mars 2015
+
+# Language and charset detection
+langid = ">=1.1.6"
+chardet = "*"
+
+# Markdown support for Wiki
+markdown = "^3" # 3.5.2 last10 janv. 2024
+
+# needed by folder: export to xls
+xlwt = "*"
+openpyxl = "*"
+
+# Better FP library than itertools IMHO.
+toolz = "*"
+
+html2text = "^2020.1.16"
+
+# Production
+gunicorn = "*"
+
+# Debug tools
+devtools = "*"
+
+# Additional stuff
+python-dotenv = "^1.0.1" # last 1.0.1 23 janv. 2024
+
+dramatiq-abort = "^1.1.0"
+apscheduler = "^3.10.4"
+
+# Update of local geoip DB (devel)
+certifi = "*"
+mmdb_writer = "*"
+netaddr = "*"
+
+[tool.poetry.group.dev.dependencies]
+
+# Generic dev deps
+abilian-devtools = "^0.5.17"
+mypy = "^1.5.1"
+
+# Testing
+pytest = "^8"
+tox = "^4.5.1"
+pytest-flask = "*"
+# pytest-testmon = "^1.2.0"
+flask-linktester = "*"
+
+# Debugging
+Flask-DebugToolbar = "*"
+# used by the DTB
+sqlparse = "^0.4.4"
+
+# Rund dev server
+honcho = "*"
+
+# Used for testing
+html5lib = "*"
+hyperlink = "*"
+
+# Typing
+types-bleach = "*"
+types-deprecated = "*"
+types-python-dateutil = "*"
+types-pytz = "*"
+types-pyyaml = "*"
+types-redis = "*"
+types-requests = "*"
+types-setuptools = "*"
+types-chardet = "*"
+types-Markdown = "*"
+
+# Keep for now
+# pyanalyze = "*"
+# Dependency of pyanalzye. Pinned because issue w/ 1.10.1
+# qcore = "1.10.0"
+
+# Tools
+pyupgrade = "*"
+deptry = "^0.14.2"
+
+# Documentation
+mkdocs-material = "^9.5.4"
+types-toml = "^0.10.8.7"
+
+[build-system]
+requires = ["poetry-core>=1.2.0"]
+build-backend = "poetry.core.masonry.api"
+
+# -----------------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+filterwarnings = [
+        'ignore::DeprecationWarning',
+        'ignore::sqlalchemy.exc.SAWarning',
+]
+# addopts = "-ra -q"
+testpaths = ["tests"]
+python_files = ["test_*.py", "tests.py", "test.py", "*_tests.py"]
+# norecursedirs = .* env* _build *.egg *.egg-info tools deploy etc docs demo bin
+
+# -----------------------------------------------------------------------------
+
+[tool.deptry.per_rule_ignores]
+# X defined as a dependency but not used in the codebase
+DEP002 = [
+        # Used (implicitly) by Flask-Migrate
+        'alembic',
+        # Used by webassets
+        'jsmin',
+        'cssmin',
+        'closure',
+        # Used implicitly by SQLA
+        'psycopg2',
+        # Web
+        'gunicorn',
+]
+
+# X imported but missing from the dependency definitions
+DEP001 = ['pkg_resources']
+
+# X imported but declared as a dev dependency
+DEP004 = ['flask_debugtoolbar', 'html5lib']
+
+# -----------------------------------------------------------------------------
+
+[tool.pyright]
+exclude = ['.nox', 'tests', 'noxfile.py']
+include = ["src"]
+# strict = ["src"]
+
+# False positives
+reportPrivateImportUsage = false
+
+# -----------------------------------------------------------------------------
+
+[tool.mypy]
+python_version = "3.10"
+
+ignore_missing_imports = true
+#warn_redundant_casts = true
+#warn_no_return = true
+#warn_return_any = true
+#strict_optional = true
+#warn_unused_ignores = true
+
+# exclude = [
+#     '^file1\.py$',  # TOML literal string (single-quotes, no escaping necessary)
+#     "^file2\\.py$",  # TOML basic string (double-quotes, backslash and other characters need escaping)
+# ]
+
+# -----------------------------------------------------------------------------
+
+[tool.pyanalyze]
+paths = ["src/"]
+import_paths = ["."]
+
+# Enable or disable some checks
+add_import = true
+already_declared = true
+bad_async_yield = true
+bad_evaluator = true
+bad_except_handler = true
+bad_exception = true
+bad_format_string = true
+bad_global = true
+bad_match = true
+bad_nonlocal = true
+
+attribute_is_never_set = false
+
+bad_star_import = true
+bad_super_call = true
+bad_unpack = false
+bad_yield_from = false
+bare_ignore = false
+cant_import = false
+class_variable_redefinition = false
+condition_always_true = false
+duplicate_dict_key = false
+duplicate_enum_member = false
+duplicate_yield = false
+implicit_any = false
+implicit_non_ascii_string = false
+implicit_reexport = false
+import_failed = false
+impossible_pattern = false
+impure_async_call = false
+incompatible_argument = false
+incompatible_assignment = false
+incompatible_call = false
+incompatible_default = false
+incompatible_override = false
+incompatible_return_value = false
+incompatible_yield = false
+inference_failure = false
+internal_error = false
+invalid_annotated_assignment = false
+invalid_annotation = false
+invalid_context_manager = false
+invalid_method_return_type = false
+invalid_typeddict_key = false
+method_first_arg = false
+missing_asynq = false
+missing_await = false
+missing_f = false
+missing_parameter_annotation = false
+missing_return = false
+missing_return_annotation = false
+mixing_bytes_and_text = false
+no_return_may_return = false
+non_boolean_in_boolean_context = false
+not_callable = false
+possibly_undefined_name = false
+suggested_parameter_type = false
+suggested_return_type = false
+task_needs_yield = false
+type_always_true = false
+type_does_not_support_bool = false
+undefined_attribute = false
+undefined_name = false
+unexpected_node = false
+unhashable_key = false
+unnecessary_yield = false
+unsupported_operation = false
+unused_assignment = false
+unused_ignore = false
+unused_variable = false
+use_floor_div = false
+use_fstrings = false
+value_always_true = false
+yield_in_comprehension = false
+yield_without_value = false
+
+# -----------------------------------------------------------------------------
+
+[tool.bandit]
+# nothing
