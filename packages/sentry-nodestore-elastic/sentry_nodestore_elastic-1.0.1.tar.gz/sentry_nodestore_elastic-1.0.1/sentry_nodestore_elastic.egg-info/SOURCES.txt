@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+sentry_nodestore_elastic/__init__.py
+sentry_nodestore_elastic/backend.py
+sentry_nodestore_elastic.egg-info/PKG-INFO
+sentry_nodestore_elastic.egg-info/SOURCES.txt
+sentry_nodestore_elastic.egg-info/dependency_links.txt
+sentry_nodestore_elastic.egg-info/not-zip-safe
+sentry_nodestore_elastic.egg-info/requires.txt
+sentry_nodestore_elastic.egg-info/top_level.txt
