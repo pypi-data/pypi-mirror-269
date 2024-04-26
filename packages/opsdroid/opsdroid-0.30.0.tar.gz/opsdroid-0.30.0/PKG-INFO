@@ -1,0 +1,215 @@
+Metadata-Version: 2.1
+Name: opsdroid
+Version: 0.30.0
+Summary: "An open source ChatOps bot framework."
+Home-page: https://opsdroid.github.io/
+Download-URL: https://github.com/opsdroid/opsdroid/releases
+Author: Jacob Tomlinson
+Author-email: jacob@tom.linson.uk
+License: Apache License 2.0
+Keywords: bot,bot-framework,opsdroid,botkit,python3,asyncio,chatops,devops,nlu
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.6.2
+Requires-Dist: aiohttp-middlewares>=1.2.1
+Requires-Dist: appdirs>=1.4.4
+Requires-Dist: arrow>=0.15.8
+Requires-Dist: Babel>=2.8.0
+Requires-Dist: click>=7.1.2
+Requires-Dist: multidict>=4.7.6
+Requires-Dist: nbconvert>=5.6.1
+Requires-Dist: nbformat>=5.0.6
+Requires-Dist: opsdroid-get-image-size>=0.2.2
+Requires-Dist: parse>=1.16.0
+Requires-Dist: puremagic>=1.9
+Requires-Dist: pycron>=1.0.0
+Requires-Dist: pyyaml>=5.3.1
+Requires-Dist: regex>=2020.7.14
+Requires-Dist: tailer>=0.4.1
+Requires-Dist: voluptuous>=0.11.7
+Requires-Dist: watchgod>=0.6; python_version >= "3.6"
+Requires-Dist: get-video-properties>=0.1.1
+Requires-Dist: bitstring>=3.1.7
+Requires-Dist: rich>=10.1.0
+Provides-Extra: connector-matrix
+Requires-Dist: bleach>=3.1.5; extra == "connector-matrix"
+Requires-Dist: matrix-nio>=0.16.0; extra == "connector-matrix"
+Provides-Extra: connector-matrix-e2e
+Requires-Dist: bleach>=3.1.5; extra == "connector-matrix-e2e"
+Requires-Dist: matrix-nio[e2e]; extra == "connector-matrix-e2e"
+Requires-Dist: python-olm; extra == "connector-matrix-e2e"
+Provides-Extra: connector-mattermost
+Requires-Dist: mattermostdriver>=7.0.1; extra == "connector-mattermost"
+Provides-Extra: connector-slack
+Requires-Dist: certifi>=2020.4.5.2; extra == "connector-slack"
+Requires-Dist: slack_sdk>=3.2.0; extra == "connector-slack"
+Requires-Dist: emoji>=2.1.0; extra == "connector-slack"
+Provides-Extra: connector-webex
+Requires-Dist: webexteamssdk>=1.6; extra == "connector-webex"
+Provides-Extra: connector-teams
+Requires-Dist: botbuilder-core>=4.13.0; extra == "connector-teams"
+Provides-Extra: connector-telegram
+Requires-Dist: emoji>=2.1.0; extra == "connector-telegram"
+Provides-Extra: parser-dialogflow
+Requires-Dist: dialogflow<=1.1.1,>=0.8.0; extra == "parser-dialogflow"
+Provides-Extra: parser-watson
+Requires-Dist: ibm-watson>=4.4.1; extra == "parser-watson"
+Provides-Extra: database-redis
+Requires-Dist: aioredis>=2; extra == "database-redis"
+Provides-Extra: database-sqlite
+Requires-Dist: aiosqlite>=0.15.0; extra == "database-sqlite"
+Provides-Extra: database-mongo
+Requires-Dist: motor>=2.1.0; extra == "database-mongo"
+Requires-Dist: dnspython>=2.1.0; extra == "database-mongo"
+Provides-Extra: database-matrix
+Requires-Dist: wrapt>=1.12.1; extra == "database-matrix"
+Provides-Extra: test
+Requires-Dist: pre-commit; extra == "test"
+Requires-Dist: coveralls>=2.0.0; extra == "test"
+Requires-Dist: astroid>=2.4.1; extra == "test"
+Requires-Dist: pytest>=5.4.2; extra == "test"
+Requires-Dist: anyio>=4.3.0; extra == "test"
+Requires-Dist: pytest-cov>=2.7.1; extra == "test"
+Requires-Dist: pytest-mock>=3.2.0; extra == "test"
+Requires-Dist: pytest-timeout>=1.4.0; extra == "test"
+Requires-Dist: pydocstyle>=5.0.2; extra == "test"
+Requires-Dist: asynctest>=0.13.0; extra == "test"
+Requires-Dist: mypy-lang>=0.5.0; extra == "test"
+Requires-Dist: mock>=4.0.2; extra == "test"
+Requires-Dist: vcrpy>=4.1.1; extra == "test"
+Provides-Extra: docs
+Requires-Dist: pytest>=5.4.2; extra == "docs"
+Requires-Dist: sphinx>=3.0.4; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints>=1.11.1; extra == "docs"
+Requires-Dist: sphinx-click>=2.3.2; extra == "docs"
+Requires-Dist: myst-parser>=2.0.0; extra == "docs"
+Requires-Dist: deadlinks>=0.3.2; extra == "docs"
+Requires-Dist: docutils==0.20; extra == "docs"
+Requires-Dist: linkify-it-py==2.0.3; extra == "docs"
+Provides-Extra: all
+Requires-Dist: bleach>=3.1.5; extra == "all"
+Requires-Dist: matrix-nio>=0.16.0; extra == "all"
+Requires-Dist: mattermostdriver>=7.0.1; extra == "all"
+Requires-Dist: certifi>=2020.4.5.2; extra == "all"
+Requires-Dist: slack_sdk>=3.2.0; extra == "all"
+Requires-Dist: emoji>=2.1.0; extra == "all"
+Requires-Dist: webexteamssdk>=1.6; extra == "all"
+Requires-Dist: botbuilder-core>=4.13.0; extra == "all"
+Requires-Dist: emoji>=2.1.0; extra == "all"
+Requires-Dist: dialogflow<=1.1.1,>=0.8.0; extra == "all"
+Requires-Dist: ibm-watson>=4.4.1; extra == "all"
+Requires-Dist: aioredis>=2; extra == "all"
+Requires-Dist: aiosqlite>=0.15.0; extra == "all"
+Requires-Dist: motor>=2.1.0; extra == "all"
+Requires-Dist: dnspython>=2.1.0; extra == "all"
+Requires-Dist: wrapt>=1.12.1; extra == "all"
+Provides-Extra: all-connectors
+Requires-Dist: bleach>=3.1.5; extra == "all-connectors"
+Requires-Dist: matrix-nio>=0.16.0; extra == "all-connectors"
+Requires-Dist: bleach>=3.1.5; extra == "all-connectors"
+Requires-Dist: matrix-nio[e2e]; extra == "all-connectors"
+Requires-Dist: python-olm; extra == "all-connectors"
+Requires-Dist: mattermostdriver>=7.0.1; extra == "all-connectors"
+Requires-Dist: certifi>=2020.4.5.2; extra == "all-connectors"
+Requires-Dist: slack_sdk>=3.2.0; extra == "all-connectors"
+Requires-Dist: emoji>=2.1.0; extra == "all-connectors"
+Requires-Dist: webexteamssdk>=1.6; extra == "all-connectors"
+Requires-Dist: botbuilder-core>=4.13.0; extra == "all-connectors"
+Requires-Dist: emoji>=2.1.0; extra == "all-connectors"
+Provides-Extra: all-databases
+Requires-Dist: aioredis>=2; extra == "all-databases"
+Requires-Dist: aiosqlite>=0.15.0; extra == "all-databases"
+Requires-Dist: motor>=2.1.0; extra == "all-databases"
+Requires-Dist: dnspython>=2.1.0; extra == "all-databases"
+Requires-Dist: wrapt>=1.12.1; extra == "all-databases"
+Provides-Extra: all-parsers
+Requires-Dist: dialogflow<=1.1.1,>=0.8.0; extra == "all-parsers"
+Requires-Dist: ibm-watson>=4.4.1; extra == "all-parsers"
+Provides-Extra: common
+Requires-Dist: bleach>=3.1.5; extra == "common"
+Requires-Dist: matrix-nio>=0.16.0; extra == "common"
+Requires-Dist: certifi>=2020.4.5.2; extra == "common"
+Requires-Dist: slack_sdk>=3.2.0; extra == "common"
+Requires-Dist: emoji>=2.1.0; extra == "common"
+Requires-Dist: aiosqlite>=0.15.0; extra == "common"
+
+<h6 align=center>
+<img src="https://github.com/opsdroid/style-guidelines/raw/master/logos/logo-wide-light.png" alt="Opsdroid Logo"/>
+</h6>
+
+<h4 align=center>An open source chat-ops bot framework</h4>
+
+<p align=center>
+<a href="https://pypi.python.org/pypi"><img src="https://img.shields.io/pypi/v/opsdroid.svg" alt="Current version of pypi" /></a>
+<a href="https://github.com/opsdroid/opsdroid/actions"><img src="https://github.com/opsdroid/opsdroid/workflows/CI/badge.svg?event=push&branch=master" alt="Github CI Status"></img></a>
+<a href="https://codecov.io/gh/opsdroid/opsdroid"><img src="https://img.shields.io/codecov/c/github/opsdroid/opsdroid.svg" alt="codecov" /></a>
+<a href="https://bettercodehub.com/"><img src="https://bettercodehub.com/edge/badge/opsdroid/opsdroid?branch=master" alt="BCH compliance" /></a>
+<a href="https://hub.docker.com/r/opsdroid/opsdroid/builds/"><img src="https://img.shields.io/docker/build/opsdroid/opsdroid.svg" alt="Docker Build" /></a>
+<a href="https://hub.docker.com/r/opsdroid/opsdroid/builds/"><img alt="Docker Image Size (latest by date)" src="https://img.shields.io/docker/image-size/opsdroid/opsdroid?label=image%20size"></a><a href="https://microbadger.com/#/images/opsdroid/opsdroid"><img src="https://img.shields.io/microbadger/layers/opsdroid/opsdroid.svg" alt="Docker Layers" /></a>
+<a href="http://opsdroid.readthedocs.io/en/stable/?badge=stable"><img src="https://img.shields.io/readthedocs/opsdroid/latest.svg" alt="Documentation Status" /></a>
+<a href="https://app.element.io/#/room/#opsdroid-general:matrix.org"><img src="https://img.shields.io/matrix/opsdroid-general:matrix.org.svg?logo=matrix" alt="Matrix Chat" /></a>
+<a href="#backers"><img src="https://opencollective.com/opsdroid/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="#sponsors"><img src="https://opencollective.com/opsdroid/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+<a href="https://www.codetriage.com/opsdroid/opsdroid"><img src="https://www.codetriage.com/opsdroid/opsdroid/badges/users.svg" alt="Open Source Helpers" /></a>
+</p>
+
+---
+
+<p align="center">
+  <a href="https://docs.opsdroid.dev/en/stable/quickstart.html">Quick Start</a> •
+  <a href="https://docs.opsdroid.dev">Documentation</a> •
+  <a href="https://playground.opsdroid.dev">Playground</a> •
+  <a href="https://medium.com/opsdroid">Blog</a> •
+  <a href="https://app.element.io/#/room/#opsdroid-general:matrix.org">Community</a>
+</p>
+
+---
+
+An open source chatbot framework written in Python. It is designed to be extendable, scalable and simple.
+
+This framework is designed to take events from chat services and other sources and execute Python functions (skills) based on their contents. Those functions can be anything you like, from simple conversational responses to running complex tasks. The true power of this project is to act as a glue library to bring the multitude of natural language APIs, chat services and third-party APIs together.
+
+See [our full documentation](https://docs.opsdroid.dev) to get started.
+
+### Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](https://docs.opsdroid.dev/en/stable/contributing/)].
+<a href="https://github.com/opsdroid/opsdroid/graphs/contributors"><img src="https://opencollective.com/opsdroid/contributors.svg?width=890" /></a>
+
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/opsdroid#backer)]
+
+<a href="https://opencollective.com/opsdroid#backers" target="_blank"><img src="https://opencollective.com/opsdroid/backers.svg?width=890"></a>
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/opsdroid#sponsor)]
+
+<a href="https://opencollective.com/opsdroid/sponsor/0/website" target="_blank"><img src="https://opencollective.com/opsdroid/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/opsdroid/sponsor/1/website" target="_blank"><img src="https://opencollective.com/opsdroid/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/opsdroid/sponsor/2/website" target="_blank"><img src="https://opencollective.com/opsdroid/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/opsdroid/sponsor/3/website" target="_blank"><img src="https://opencollective.com/opsdroid/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/opsdroid/sponsor/4/website" target="_blank"><img src="https://opencollective.com/opsdroid/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/opsdroid/sponsor/5/website" target="_blank"><img src="https://opencollective.com/opsdroid/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/opsdroid/sponsor/6/website" target="_blank"><img src="https://opencollective.com/opsdroid/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/opsdroid/sponsor/7/website" target="_blank"><img src="https://opencollective.com/opsdroid/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/opsdroid/sponsor/8/website" target="_blank"><img src="https://opencollective.com/opsdroid/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/opsdroid/sponsor/9/website" target="_blank"><img src="https://opencollective.com/opsdroid/sponsor/9/avatar.svg"></a>
