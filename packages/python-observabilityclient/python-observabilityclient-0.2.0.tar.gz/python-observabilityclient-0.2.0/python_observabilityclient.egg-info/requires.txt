@@ -1,0 +1,14 @@
+cliff>=1.14.0
+keystoneauth1>=1.0.0
+osc-lib>=1.0.1
+
+[test]
+SQLAlchemy<=1.4.41
+coverage>=3.6
+oslo.db<=12.3.1
+oslotest>=1.10.0
+pifpaf[gnocchi]>=0.23
+reno>=1.6.2
+stestr>=2.0.0
+tempest>=10
+testtools>=1.4.0
