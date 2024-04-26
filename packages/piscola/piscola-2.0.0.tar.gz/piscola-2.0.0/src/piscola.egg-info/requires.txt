@@ -1,0 +1,18 @@
+numpy
+pandas
+matplotlib
+peakutils
+requests
+sfdmap2
+extinction
+astropy
+scipy
+jaxopt
+tinygp
+pytest
+
+[:"linux" in sys_platform or "win" in sys_platform]
+jax
+
+[:python_version < "3.8"]
+pickle5
