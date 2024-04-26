@@ -1,0 +1,17 @@
+nrfregtool/__init__.py,sha256=aMcuSFR6Y9jzKSzAJp3Vx5_VlxNiioVA19VqKSEuBH4,1565
+nrfregtool/__main__.py,sha256=h53HR9vMkaMwi-8wgpUgbOzUKSRLqvSTEIvzIfUWc-M,626
+nrfregtool/bicr.py,sha256=eQ6_2vS6FddBLlHIEKoAy5c2e0YpTEWuqq4KIrX6Ogk,17162
+nrfregtool/cli.py,sha256=01VC5kne_GQdewiaSum-yohy3cAuL0seqgNniMyxsZc,18606
+nrfregtool/common.py,sha256=oPt7shPdKcd6aVJMU6FMeglmmBiqiPHcW4APJZfEjNc,9370
+nrfregtool/core.py,sha256=chrFYGTjN7DbkmIT8aY0quwG46ubWFhdj-oHSh7JnzU,25372
+nrfregtool/main.py,sha256=uGOq8-LquH3fnIPAX9LlswjATsfVq8EcRS11gfIIMfk,906
+nrfregtool/parsed_dt.py,sha256=Rm0pLmq6ZU4DaIu8kPx9L_VRkVmUrebEy8BPmeWIJCo,15737
+nrfregtool/uicr.py,sha256=oVB5-MWTSEqZ9wlqEojOKUNd-K0qLPrMmMAFQCzm18k,72635
+nrfregtool/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nrfregtool/resources/uicrextended.svd,sha256=_WA2FDrw59XbqeyZm8Bnh4PyVBGAx9_i8iyKUXBPF-w,24086
+nrf_regtool-5.2.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+nrf_regtool-5.2.0.dist-info/METADATA,sha256=liZYQQP4Vq5401kHZ7jZCM-w-SrqyVYgtw4V93Jtv6s,13634
+nrf_regtool-5.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+nrf_regtool-5.2.0.dist-info/entry_points.txt,sha256=HiCB37mBF7l_dcqsbKtYGIDmDY0IrSSJYDQk016JJBY,65
+nrf_regtool-5.2.0.dist-info/top_level.txt,sha256=I4ZJ8-YJJSRtwfy0kL1zYMVR4Y3eziGS6bQB90aWdjs,11
+nrf_regtool-5.2.0.dist-info/RECORD,,
