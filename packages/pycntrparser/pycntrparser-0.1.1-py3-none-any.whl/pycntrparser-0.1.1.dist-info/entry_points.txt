@@ -1,0 +1,3 @@
+[console_scripts]
+cntr-check=pycntrparser.__init__:main
+
