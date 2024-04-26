@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: modelscope_tts
+Version: 0.1.0
+Summary: modelscopeTTS Unofficial api
+Home-page: https://github.com/avilliai/modelscopeTTS
+Author: avillia
+Author-email: larea06@gmail.com
+License-File: LICENSE
+Requires-Dist: httpx
+
