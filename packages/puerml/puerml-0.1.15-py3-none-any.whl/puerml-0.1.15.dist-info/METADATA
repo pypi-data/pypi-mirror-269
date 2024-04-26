@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: puerml
+Version: 0.1.15
+License-File: LICENSE
+Requires-Dist: requests
+
