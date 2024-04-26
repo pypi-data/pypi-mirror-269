@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moveread-models"
+version = "0.1.3"
+authors = [
+  {name="Marcel Claramunt", email="marcel@moveread.com"}
+]
+description = "Model training, metrics and metadata for Moveread OCR"
+dependencies = [
+  "lazy-load", "pydantic", "kv-api", "kv-fs", "kv-sqlite-sync"
+]
+requires-python = ">=3.10"
+readme = {file="README.md", content-type="text/markdown"}
+
+[project.urls]
+repo = "https://github.com/moveread/moveread-ocr.git"
+
+[project.optional-dependencies]
+tf = ["tensorflow", "keras"]

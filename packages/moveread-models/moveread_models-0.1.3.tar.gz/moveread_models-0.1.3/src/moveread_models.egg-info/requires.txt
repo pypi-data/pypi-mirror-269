@@ -1,0 +1,9 @@
+lazy-load
+pydantic
+kv-api
+kv-fs
+kv-sqlite-sync
+
+[tf]
+tensorflow
+keras
