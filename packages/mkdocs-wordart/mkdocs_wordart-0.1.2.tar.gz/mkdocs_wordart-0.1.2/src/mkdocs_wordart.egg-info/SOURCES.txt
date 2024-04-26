@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/mkdocs_wordart/plugin.py
+src/mkdocs_wordart.egg-info/PKG-INFO
+src/mkdocs_wordart.egg-info/SOURCES.txt
+src/mkdocs_wordart.egg-info/dependency_links.txt
+src/mkdocs_wordart.egg-info/entry_points.txt
+src/mkdocs_wordart.egg-info/requires.txt
+src/mkdocs_wordart.egg-info/top_level.txt
+src/mkdocs_wordart/assets/wordart.css
+src/mkdocs_wordart/templates/wordart.html
