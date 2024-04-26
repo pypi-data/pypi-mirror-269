@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: shp2ncmask
+Version: 2.1.2
+Summary: shp2ncmask is a tools to transform a shapefile in a netcdf file
+Home-page: https://github.com/yrobink/Shp2ncmask
+Author: Yoann Robin
+Author-email: yoann.robin.k@gmail.com
+License: GNU-GPL3
+Keywords: shapefile,netcdf,mask
+Platform: linux
+Platform: macosx
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Topic :: Utilities
+Requires: numpy (>=1.17)
+Requires: netCDF4 (>=1.5)
+Requires: pyproj (>=2.5)
+Requires: shapely (>=1.7)
+Requires: geopandas (>=0.7)
+Requires: matplotlib (>=3.1)
+License-File: LICENSE
+
+
+shp2ncmask is a tools to transform a shapefile in a netcdf file. Several methods
+are proposed, and the input/output projections can be customized.
