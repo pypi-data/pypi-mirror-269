@@ -1,0 +1,3 @@
+[console_scripts]
+rust-docs-scraper=rust_docs_scraper.rust_docs_scraper:main
+
