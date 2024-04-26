@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: transkribus_rest_api
+Version: 0.3.0
+Summary: Transkribus Metagrapho API Client.
+Author-email: "J. Nathanael Philipp" <nathanael@philipp.land>
+License: GPLv3+
+Project-URL: Homepage, https://github.com/jnphilipp/transkribus_rest_api
+Project-URL: Bug Tracker, http://github.com/jnphilipp/transkribus_rest_api/issues
+Keywords: transkribus,api
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests~=2.31.0
+Requires-Dist: lxml~=5.1.0
+
+# Transkribus Rest API Client
+
+![Tests](https://github.com/jnphilipp/transkribus_rest_api/actions/workflows/tests.yml/badge.svg)
