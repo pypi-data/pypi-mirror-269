@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "step-in-line"
+version = "0.6.2"
+description = ""
+authors = ["Daniel Stahl <danstahl1138@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+attrs = "^23.2.0"
+networkx = "3.2.1"
+cdktf = { version = "^0.20.7", optional = true }
+cdktf-cdktf-provider-aws = { version = "^19.15.0", optional = true }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[tool.poetry.scripts]
+tf-apply = "step_in_line.tf:main"
+
+[tool.poetry.extras]
+terraform = ["cdktf", "cdktf-cdktf-provider-aws"]
