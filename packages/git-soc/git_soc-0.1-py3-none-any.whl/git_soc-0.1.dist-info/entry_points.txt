@@ -1,0 +1,2 @@
+[console_scripts]
+git-soc = gitSOC.tools.main:main
