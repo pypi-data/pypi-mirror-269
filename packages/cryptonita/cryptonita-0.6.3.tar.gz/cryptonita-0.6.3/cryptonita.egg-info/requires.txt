@@ -1,0 +1,12 @@
+base58
+
+[full]
+aspell-python-py3
+gmpy2
+langdetect
+matplotlib
+numpy
+pycryptodome
+scipy
+seaborn
+z3-solver
