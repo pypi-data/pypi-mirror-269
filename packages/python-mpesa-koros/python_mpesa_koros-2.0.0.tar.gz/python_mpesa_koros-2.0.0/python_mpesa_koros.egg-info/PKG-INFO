@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: python_mpesa_koros
+Version: 2.0.0
+Summary: A python package for connecting to MPESA APIs
+Author: Kevin Ongulu
+Author-email: kevinongulu@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: pycryptodome
