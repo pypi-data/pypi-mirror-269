@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+tests/test_usage.py
+timed_decorator/__init__.py
+timed_decorator/nested_timed.py
+timed_decorator/simple_timed.py
+timed_decorator/utils.py
+timed_decorator.egg-info/PKG-INFO
+timed_decorator.egg-info/SOURCES.txt
+timed_decorator.egg-info/dependency_links.txt
+timed_decorator.egg-info/top_level.txt
