@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+torchfuzzy/__init__.py
+torchfuzzy/fuzzy_layer.py
+torchfuzzy.egg-info/PKG-INFO
+torchfuzzy.egg-info/SOURCES.txt
+torchfuzzy.egg-info/dependency_links.txt
+torchfuzzy.egg-info/requires.txt
+torchfuzzy.egg-info/top_level.txt
