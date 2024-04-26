@@ -1,0 +1,180 @@
+Metadata-Version: 2.3
+Name: worker_dispatcher
+Version: 0.0.3
+Summary: Developing
+Project-URL: Homepage, https://github.com/yidas/python-worker-dispatcher
+Project-URL: Issues, https://github.com/yidas/python-worker-dispatcher/issues
+Author-email: Nick Tsai <myintaer@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+<p align="center">
+    <a href="https://www.python.org/psf-landing/" target="_blank">
+        <img src="https://www.python.org/static/community_logos/python-logo.png" height="60px">
+    </a>
+    <h1 align="center">Python Worker Dispatcher</h1>
+    <br>
+</p>
+
+A flexible task dispatcher for Python with multiple threading or processing control
+
+[![PyPI](https://img.shields.io/pypi/v/worker-dispatcher)](https://pypi.org/project/worker-dispatcher/)
+![](https://img.shields.io/pypi/implementation/worker-dispatcher)
+
+
+Features
+--------
+
+- ***Tasks Dispatching** to managed worker*
+
+- ***Elegant Interface** for setup and use*
+
+---
+
+OUTLINE
+-------
+
+- [Demonstration](#demonstration)
+- [Installation](#installation)
+- [Usage](#usage)
+    - [Option](#option)
+        - [callbacks.process](#callbacksprocess)
+        - [callbacks.task](#callbackstask)
+
+---
+
+DEMONSTRATION
+-------------
+
+Use 20 theads concurrently to dispatch tasks for HTTP reqeusts
+
+```python
+import worker_dispatcher
+import requests
+
+def each_task(id: int, config, task):
+    response = requests.get(config['my_endpoint'] + task)
+    return response
+
+responses = worker_dispatcher.start({
+    'task': {
+        'list': ['ORD_AH001', 'ORD_KL502', '...' , 'ORD_GR393'],
+        'callback': each_task,
+        'config': {
+            'my_endpoint': 'https://your.name/order-handler/'
+        },
+    },
+    'worker': {
+        'number': 20,
+    }
+})
+```
+
+Utilizes all CPU cores on the machine to compute tasks.
+
+```python
+import worker_dispatcher
+
+def each_task(id: int, config=None, task=None):
+    result = sum(id * i for i in range(10**9))
+    return result
+
+if __name__ == '__main__':
+    results = worker_dispatcher.start({
+        'task': {
+            'list': 10,
+            'callback': each_task,
+        },
+        'worker': {   
+            'multiprocessing': True
+        }
+    })
+```
+
+---
+
+## INSTALLATION
+
+To install the current release:
+
+```shell
+$ pip install worker-dispatcher
+```
+
+---
+
+## USAGE
+
+By calling the `start()` methid with the configuration parameter, the package will begin dispatching tasks while managing threading or processing based on the provided settings. Once the tasks are completed, the package will return all the results.
+
+An example configuration setting with all options is as follows:
+
+```python
+import worker_dispatcher 
+
+results = worker_dispatcher.start({
+    'debug': False,
+    'task': {
+        'list': [],                     # Support list and integer. Integer represent the number of tasks to be generated.
+        'callback': your_function_name_for_each_task,
+        'config': {'your_config': 'your_value'},
+        'result_callback': your_function_name_for_each_result,
+    },
+    'worker': {
+        'number': 8,
+        'per_second': 0,                # If greater than 0, the specified number of workers run forcefully at set intervals.
+        'multiprocessing': False
+    }
+})
+```
+
+### Options
+
+|Option            |Type     |Deafult      |Description|
+|:--               |:--      |:--          |:--        |
+|debug             |boolean  |False        |Debug mode |
+|task.list         |multitype|list         |The tasks for dispatching to each worker. *<br>- List: Each value will be passed as a parameter to your callback function. <br>- Integer: The number of tasks to be generated.|
+|[task.callback](#taskcallback)             |callable |(sample)          |The callback function called by each worker runs|
+|task.config       |multitype|list         |The custom variable to be passed to the callback function|
+|[task.result_callback](#taskresultcallback) |callable |Null          |The callback function called when each task processes the result|
+|worker.number     |integer  |(auto)       |The number of workers to fork. <br>(The default value is the number of local CPU cores)|
+|worker.per_second |float    |0            |If greater than 0, the specified number of workers run forcefully at set intervals.|
+|worker.multiprocessing                     |boolean  |False        |Use multi-processing instead of the default multi-threading |
+
+
+#### task.callback
+
+The callback function called by each worker runs
+
+```python
+callback_function (id: int=None, config=None, task=None)
+```
+
+|Argument          |Type     |Deafult      |Description|
+|:--               |:--      |:--          |:--        |
+|id                |integer  |(auto)       |The sequence number generated by each task starting from 1|
+|config            |multitype|{}           |The custom variable to be passed to the callback function|
+|task              |multitype|(custom)     |Each value from the `task.list`|
+
+
+#### task.result_allback
+
+The callback function called when each task processes the result
+
+```python
+result_callback_function (id: int=None, config=None, result=None, log: dict=None)
+```
+
+|Argument          |Type     |Deafult      |Description|
+|:--               |:--      |:--          |:--        |
+|id                |integer  |(auto)       |The sequence number generated by each task starting from 1|
+|config            |multitype|{}           |The custom variable to be passed to the callback function|
+|result            |multitype|(custom)     |Each value returned back from `task.callback`|
+|log               |dict     |(auto)       |Each log containing the result of each task processed by the worker <br>- task_id <br>- started_at <br>- ended_at <br>- duration <br>- result|
+
+
+
