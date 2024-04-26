@@ -1,0 +1,13 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_varys.py,sha256=nzQ6n9r_YVTS6W1-HmIO-u5LQD9Ty50c2ojjtVllbM4,6925
+varys/__init__.py,sha256=B_07rtJUszEz3CXadQqOKlPZDROv6NNv1q9uXTskEbM,35
+varys/consumer.py,sha256=PpFg6GkT6PpMo3PA3MWaYbCa-aQQ5vO8mIhy-jgLqYs,3670
+varys/controller.py,sha256=9TPbmpx-AV_S_2od0YZhKKMQtYd-8vDEKirOwkrb4iQ,8018
+varys/process.py,sha256=5d6IfSjISHSWrYTD3MKs0etZJiiqI_twEo9sBHvr3zs,3510
+varys/producer.py,sha256=D6aVinLS3lb2GT1W-sTjulIaOE-M_rC-gpN6SVTtFgM,4012
+varys/utils.py,sha256=3dRQxsi08q0h3jZrFgED13j70iv3WfJezKk7JdgBzwM,1761
+varys_client-1.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+varys_client-1.0.1.dist-info/METADATA,sha256=GQ3R6-AMBAirUonXC_VAB8W6xe5qXCDyNwDUIIdqeVw,5920
+varys_client-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+varys_client-1.0.1.dist-info/top_level.txt,sha256=wzTp8lh657ezr-fp2payJNzh2KsRd9clwTx4ygCLYw8,12
+varys_client-1.0.1.dist-info/RECORD,,
