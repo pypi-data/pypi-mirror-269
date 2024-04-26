@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: scalegen-cli
+Version: 0.0.3
+Summary: ScaleGenAI CLI
+Home-page: https://github.com/ScaleTorch/st-cli
+Requires-Python: >=3.6, <3.12
+
+ScaleGenAI command line application
