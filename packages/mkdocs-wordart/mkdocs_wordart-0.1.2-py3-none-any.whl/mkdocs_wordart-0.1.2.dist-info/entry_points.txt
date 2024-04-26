@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+wordart = mkdocs_wordart.plugin:WordartPlugin
