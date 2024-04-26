@@ -1,0 +1,12 @@
+include/pybind11_numpy_example/pybind11_numpy_example.hpp,sha256=TUDkJjMgR7aKP-dAP-0Fl_K4S0hYfH7eOLmtSm4TYYQ,475
+lib64/libpybind11_numpy_example.a,sha256=KA39aR-WrtUw2NAnP5K24zNr677iHqT4rPAzvlt79uQ,1182
+lib64/cmake/pybind11_numpy_example/pybind11_numpy_example_config-release.cmake,sha256=zzIZaiKLLgZYYlZXha-fjvb6X6Lb2yVsOwdO3ADpJM4,1039
+lib64/cmake/pybind11_numpy_example/pybind11_numpy_example_config.cmake,sha256=JdZ7wgzTbpTGAJhhpOpshDzTpy4pdbQYz_au1iPxpec,4042
+pybind11_numpy_example/_pybind11_numpy_example.pypy38-pp73-x86_64-linux-gnu.so,sha256=-6us_zl6RhwZO5EONkZjIBobohtzzCHr2kFYZnSkxZ8,188248
+pybind11_numpy_example/python_code.py,sha256=Uvylt2ngubWZFLB2oMUrj89dInhKtB4r9_1kGrV_UUw,62
+pybind11_numpy_example/__init__.py,sha256=F71sTB0tD0iimqOmknqmJpXPxWiwLj-EY9WLPVo5QYE,241
+pybind11_numpy_example-0.0.12.dist-info/METADATA,sha256=aflkITWju1A5XFNvv-XopRcS7257GozzNxjYZ5PP2uM,4101
+pybind11_numpy_example-0.0.12.dist-info/RECORD,,
+pybind11_numpy_example-0.0.12.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pybind11_numpy_example-0.0.12.dist-info/WHEEL,sha256=5kJTYWXlMKaZVNLB2Nvq9Kxc9SvG4Ybtyv1wsWR6Pmc,165
+pybind11_numpy_example-0.0.12.dist-info/licenses/LICENSE.md,sha256=swsncgzvQ09rpgybQsDQZFJGdDMdz_ymfxwzgOV--CA,1086
