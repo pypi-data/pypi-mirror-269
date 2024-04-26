@@ -1,0 +1,10 @@
+pandas<2.3
+matplotlib
+seaborn>0.11
+cobra
+cometspy
+scipy
+
+[docs]
+sphinx
+sphinx_rtd_theme
