@@ -1,0 +1,3 @@
+[console_scripts]
+shellcheck-gha=shellcheck_gha.console.app:main
+
