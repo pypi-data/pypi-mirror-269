@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: hurricore
+Version: 0.1.1
+Summary: A deep learning framework based on PyTorch and Accelerate.
+Home-page: https://github.com/universuen/hurricore
+Author: universuen
+Author-email: universuen@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: accelerate >=0.29.3
+Requires-Dist: pytest
+Requires-Dist: tensorboard
+Requires-Dist: pynvml
+Requires-Dist: transformers
+Requires-Dist: datasets
+Requires-Dist: peft
+Requires-Dist: torchvision
+Requires-Dist: opencv-python
+Requires-Dist: rich
+Requires-Dist: imageio
+
+# Hurricane
+Easy-to-use model training framework.
+
+**ATTENTION: This repository is currently under heavy development, so bug-free or compatibility is not guaranteed!**
+
+## Environment
+
+## Usage
