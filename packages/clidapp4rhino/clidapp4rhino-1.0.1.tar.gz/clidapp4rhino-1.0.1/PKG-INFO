@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: clidapp4rhino
+Version: 1.0.1
+Summary: The CliDApp4Rhino package is a Python package that provides a command to install the CliDApp4Rhino plugin for MacOS in Rhino.
+Author-email: "Elizabeth Consulting International Inc." <info@ec-intl.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Project-URL: Homepage, https://github.com/ec-intl/clidapp4rhino
+Project-URL: Issues, https://github.com/ec-intl/clidapp4rhino/issues
+
+# CliDApp4Rhino Package
+
+CliDApp4Rhino package is a Python package with the plugin for the Rhinoceros program developed by CliMA that enables users to download weather files into the Rhinoceros environment from the CliDApp API.
+
