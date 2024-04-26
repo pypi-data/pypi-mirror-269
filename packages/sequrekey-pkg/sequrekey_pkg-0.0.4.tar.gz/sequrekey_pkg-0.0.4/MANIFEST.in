@@ -1,0 +1,2 @@
+recursive-include sequrekey_pkg/ *
+recursive-exclude sequrekey_pkg/ *.pyc
