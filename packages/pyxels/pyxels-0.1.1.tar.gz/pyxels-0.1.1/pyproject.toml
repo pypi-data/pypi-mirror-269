@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pyxels"
+version = "0.1.1"
+description = "Pyxels is a low-level image data manipulation library for Python. It is designed to be fast and efficient, and to provide a simple interface for working with image data."
+authors = ["DJ Stomp <85457381+djstompzone@users.noreply.github.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
