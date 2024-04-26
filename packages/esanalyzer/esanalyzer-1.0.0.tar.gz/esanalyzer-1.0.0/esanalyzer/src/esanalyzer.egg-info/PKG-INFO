@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: esanalyzer
+Version: 1.0.0
+Summary: Emotion and Sentiment Analysis
+Author: Ajay Singh Rajput
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: nrclex
+Requires-Dist: datasets
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: googletrans==4.0.0-rc1
+Requires-Dist: transformers
+Requires-Dist: nltk
