@@ -1,0 +1,10 @@
+gradio_testcomponent/__init__.py,sha256=BQEgXKx3-aq-ZoFJCyo4-FEGk6GKZl9E8FuqxzPQL5M,71
+gradio_testcomponent/testcomponent.py,sha256=y1RHYzfqyjJYee0LGetvfdCMLZC5v9xInsZLMFw2Nag,5159
+gradio_testcomponent/testcomponent.pyi,sha256=Osc3KLkUwGA_iKQNLXol1nFiILAjBdMYnF5DHo__NCI,20459
+gradio_testcomponent/templates/component/index.js,sha256=5PdcygCw6Gc-Jzi6xFWKfv_nvVw6klynrG9z2TJMnGU,62260
+gradio_testcomponent/templates/component/style.css,sha256=4t5JHw65gci1EUYeRGkOSvVpPt9qT4iJTDHlFKnBRhc,13468
+gradio_testcomponent/templates/example/index.js,sha256=Pic4wySeKOeaWNF03ykMdDJ5jMUucugDg_Qp9sOInI8,1641
+gradio_testcomponent/templates/example/style.css,sha256=Aj4k-S41TV83pot-J9j9Fi2UonrXHFC1Jl4Zb1xaYo4,61
+gradio_testcomponent-0.0.1.dist-info/METADATA,sha256=kR2gKwUjH6N5b0cowTJmcDK-4UQi4o3jq7Y7__X37QE,8006
+gradio_testcomponent-0.0.1.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+gradio_testcomponent-0.0.1.dist-info/RECORD,,
