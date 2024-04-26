@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/adlike/__init__.py
+src/adlike/adlike.py
+src/adlike.egg-info/PKG-INFO
+src/adlike.egg-info/SOURCES.txt
+src/adlike.egg-info/dependency_links.txt
+src/adlike.egg-info/top_level.txt

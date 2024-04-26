@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: adlike
+Version: 0.0.1
+Summary: A python package to determine if an Image is an Advertisement
+Author-email: Chitra Vyanjan <chitra.vyanjan@gmail.com>
+Project-URL: Homepage, https://github.com/chitravyanjan/adlike
+Project-URL: Issues, https://github.com/chitravyanjan/adlike/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Detect Advertisement Images
+
+## Usage
+--------------
+
+```python3
+import requests
+from PIL import Image
+
+from adlike import ad_openai_clip_vitl_patch14_336
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+model, preprocess = clip.load("ViT-B/32", device=device)
+
+url = "https://literacyideas.com/wp-content/uploads/2021/08/christmas_advertising.jpg"
+image = Image.open(requests.get(url, stream=True).raw)
+
+
+with torch.no_grad():
+    image = preprocess(img).to(device).unsqueeze(0)
+    probs = model(image)
+
+print("Label probs:", probs)  # prints: tensor([[0.9753]])
+
+```
