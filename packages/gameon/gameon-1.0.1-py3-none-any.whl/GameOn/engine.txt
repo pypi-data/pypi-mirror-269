@@ -1,0 +1,18 @@
+window(width, height) --> Creates window
+fill(color) --> Changes the background color
+fps(frames) --> Sets fps, if print(fps()), it returns the fps
+icon(image) --> Sets the icon image
+title(title) --> Sets the title
+update() --> Updates the screen
+delay(time) --> Delays events
+timer(seconds, countdown, integer) --> Creates a timer
+image(image, x, y) --> Draws an image
+circle(x, y, color, radius, border_radius) --> Draws a circle
+rect(x, y, width, height, color,border_radius)  --> Draws a quadrilateral
+line(x1, y1, x2, y2, color, thickness) --> Draws a line
+rotate(image, angle) --> Rotates the image
+resize(image, width, height) --> Resizes the image
+click(button, one) --> Detects mouse clicks
+press(key, one) --> Detects keypresses
+pos(xy) --> Gives the mouse position
+text(text, color, x, y, size , font, show) --> Displays text 
