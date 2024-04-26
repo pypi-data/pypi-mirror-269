@@ -1,0 +1,5 @@
+# MANIFEST.in
+include csvtojsonify.py
+include README.md
+#include csvtojsonify/*
+recursive-include csvtojsonify *.py
