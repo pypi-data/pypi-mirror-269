@@ -1,0 +1,3 @@
+[console_scripts]
+airda=airda.cli.startup:main
+
