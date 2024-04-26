@@ -1,0 +1,10 @@
+cryptography
+pandas
+colorama
+tk
+optioner>=1.5.2
+pyperclip
+ttkthemes
+pyinstaller
+wrapper-bar>=0.1.4
+requests
