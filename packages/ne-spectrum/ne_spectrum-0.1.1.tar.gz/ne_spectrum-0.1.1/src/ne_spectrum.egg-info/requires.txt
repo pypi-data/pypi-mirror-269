@@ -1,0 +1,5 @@
+numpy
+openTSNE
+contrastive-ne>=0.3.8
+matplotlib
+pillow

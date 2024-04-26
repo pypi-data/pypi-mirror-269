@@ -1,0 +1,11 @@
+LICENSE
+README.md
+VERSION
+pyproject.toml
+src/ne_spectrum/__init__.py
+src/ne_spectrum/spectra.py
+src/ne_spectrum.egg-info/PKG-INFO
+src/ne_spectrum.egg-info/SOURCES.txt
+src/ne_spectrum.egg-info/dependency_links.txt
+src/ne_spectrum.egg-info/requires.txt
+src/ne_spectrum.egg-info/top_level.txt
