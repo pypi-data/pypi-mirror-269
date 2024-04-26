@@ -1,0 +1,11 @@
+cardpydentity/__init__.py,sha256=wLR9XY-2IngFSa0Z25q3EiUdW7MdbVCw6qJsGOY6GS4,2791
+cardpydentity/fuzzy.py,sha256=tSk2x0m6Vt_7hWxgjjCC1fniNWYpuhlyvp-OXhVJUGQ,2334
+cardpydentity/gpt.py,sha256=HndiH9nCMUZR5ElQI4mUwGczxSroH10I6ymRZdKsl00,1543
+cardpydentity/helpers.py,sha256=hIf89NCHC19SGaI8vyf3l8DlLV7SLs2CP0auzpWhhn0,1895
+cardpydentity/load.py,sha256=mXKlCy4lMAlFGO2pdR4wkLyds8aknulrDSeZ37sqV5g,1896
+cardpydentity/matcher.py,sha256=rHxS1fBUTcTLs58oyX2M9ceBoCOOESnC7UU70VQYafo,7842
+cardpydentity-0.1.0.dist-info/LICENSE,sha256=sU_lG02SxzRl-1QElhQqmP2V_RZkdvlrJ3_NfVprQD4,1166
+cardpydentity-0.1.0.dist-info/METADATA,sha256=l894THUnZw2URuXdAoTI8PwjTsDBhsOGsMqjQJODjLQ,855
+cardpydentity-0.1.0.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+cardpydentity-0.1.0.dist-info/top_level.txt,sha256=IFxFVJtCycNDv34-3F2-4aJpkNURoIhOFkcXzeu2oLI,14
+cardpydentity-0.1.0.dist-info/RECORD,,
