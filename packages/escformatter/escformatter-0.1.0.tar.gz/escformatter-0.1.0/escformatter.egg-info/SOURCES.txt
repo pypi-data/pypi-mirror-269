@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+escformatter/__init__.py
+escformatter/esc.py
+escformatter.egg-info/PKG-INFO
+escformatter.egg-info/SOURCES.txt
+escformatter.egg-info/dependency_links.txt
+escformatter.egg-info/top_level.txt
