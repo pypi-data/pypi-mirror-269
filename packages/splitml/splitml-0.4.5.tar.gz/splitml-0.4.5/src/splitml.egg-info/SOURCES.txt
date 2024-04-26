@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/splitml/__init__.py
+src/splitml/constants.py
+src/splitml/groupers.py
+src/splitml/html_splitter.py
+src/splitml/splitml.py
+src/splitml/stats.py
+src/splitml.egg-info/PKG-INFO
+src/splitml.egg-info/SOURCES.txt
+src/splitml.egg-info/dependency_links.txt
+src/splitml.egg-info/requires.txt
+src/splitml.egg-info/top_level.txt
