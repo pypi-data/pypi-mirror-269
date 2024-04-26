@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  smb-server:
+    container_name: smb-server
+    image: vimagick/samba
+    volumes:
+      - ./smb_server/smb.conf:/etc/samba/smb.conf
+      - ./smb_server/share:/share
+    tty: true
+    command: >
+      sh -c "(echo 's4mbAl3l3'; echo 's4mbAl3l3';) | smbpasswd -a root"
+    expose:
+      - "139"
+      - "445"
+    networks:
+      lab-network:
+        ipv4_address: 10.10.1.14
+
+networks:
+  lab-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.10.1.0/24
