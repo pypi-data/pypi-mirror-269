@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: phound
+Version: 0.1.0
+Summary: Phound SDK
+Author: Konstantin Seravin
+Author-email: kseravin@freeconferencecall.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-dotenv ==1.0.1
+
+## Installing
+
+```
+pip install phound
+```
+
+## Usage
+
+Create and fill in `.env` file within your project's directory with:
+
+```
+SBC=wss://ow-sbc.phound.app/ucp
+UID=<uid>
+TOKEN=<token>
+```
+
+Simple python chatbot could look like:
+
+```python
+import os
+import time
+
+from phound import Phound
+from phound.handlers import BaseChatHandler
+
+
+class ChatHandler(BaseChatHandler):
+    def on_message(self, message):
+        print(f"Got new message: {message}")
+        self.show_typing()
+        time.sleep(1)
+        chat_history = self.get_history(depth=10)
+        reply_items = [f"Initial message: {message.text}",
+                       f"response: {message.text[::-1]}",
+                       f"also got chat history with last {len(chat_history)} messages"]
+        self.send_message(os.linesep.join(reply_items))
+
+
+if __name__ == "__main__":
+    with Phound() as phound:
+        phound.register_chat_handler(ChatHandler)
+        phound.start_listen_events()
+```
+
+## API Reference
+
+### Phound:
+The `Phound` interface provides the following methods:
+
+- `register_chat_handler(self, handler: BaseChatHandler, chat_types: Tuple[str, ...] = ("private",))` - Registers specified chat handler, `chat_types` accepts tuple of chat types to handle, valid values are "private" and "group"
+- `start_listen_events()` - Starts listen events
+
+### BaseChatHandler:
+Each instance of `BaseChatHandler` provides the following interface:
+
+#### Attributes:
+- `persona_uid: str` - The unique ID of the persona listening to the chat.
+- `chat_type: str` - Either "private" or "group".
+
+#### Methods:
+- `on_message(self, message: Message)` - Called when a new message is received in the chat.
+- `show_typing(self, timeout: int = 60)` - Displays a typing indicator in the chat. The indicator is shown for the specified `timeout` or until the next message is sent by the handler.
+- `send_message(self, text: str)` - Sends a message with the specified text to the chat.
+- `get_history(self, depth: int = 10, start_message_id: str = "0")` - Retrieves the chat history as a list of `Message` objects. The `depth` parameter determines the number of messages to retrieve, and `start_message_id` can be used to obtain history starting from a specific message ID. Using `"0"` as the `start_message_id` starts from the last message.
+
+### Message:
+The `Message` interface provides the following attributes:
+
+- `id: str` - The ID of the message.
+- `text: str` - The text content of the message.
+- `from_uid: str` - The unique ID of the persona from which the message originated.
+- `tagged: bool` - Indicates whether the persona listening to the chat was tagged in the message.
