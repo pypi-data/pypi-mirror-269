@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: support_lib
+Version: 0.0.2
+Summary: A sample test package
+Home-page: https://bitbucket.org/teamims/support-lib/src/main/
+Author: DarrenWhite
+Author-email: darren.white@ims-evolve.com
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Support Library
+This is a library for common tasks used in support monitoring scripts
+
+# Author
+Darren White : darren.white@ims-evolve.com
+

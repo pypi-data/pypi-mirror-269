@@ -1,0 +1,4 @@
+jira==3.8.0
+opsgenie-sdk==2.1.5
+oracledb==1.3.2
+mysql-connector==2.2.9
