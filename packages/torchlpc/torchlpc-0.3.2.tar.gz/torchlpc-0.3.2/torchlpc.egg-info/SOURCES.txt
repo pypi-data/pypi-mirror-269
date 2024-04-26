@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tests/test_grad.py
+torchlpc/__init__.py
+torchlpc/core.py
+torchlpc.egg-info/PKG-INFO
+torchlpc.egg-info/SOURCES.txt
+torchlpc.egg-info/dependency_links.txt
+torchlpc.egg-info/requires.txt
+torchlpc.egg-info/top_level.txt
