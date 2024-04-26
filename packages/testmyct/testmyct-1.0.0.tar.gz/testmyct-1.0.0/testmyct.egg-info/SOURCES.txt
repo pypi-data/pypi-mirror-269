@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+setup.py
+mycttestsdk/__init__.py
+mycttestsdk/run.py
+testmyct.egg-info/PKG-INFO
+testmyct.egg-info/SOURCES.txt
+testmyct.egg-info/dependency_links.txt
+testmyct.egg-info/top_level.txt
