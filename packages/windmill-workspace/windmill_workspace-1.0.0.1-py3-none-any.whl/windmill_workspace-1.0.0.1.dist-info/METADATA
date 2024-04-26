@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: windmill-workspace
+Version: 1.0.0.1
+Summary: sdk in python for windmill workspace
+Home-page: https://console.cloud.baidu-int.com/devops/icode/repos/baidu/themis/windmill-workspace/tree/master
+Requires-Python: >=3.6
+Requires-Dist: bce-python-sdk (==0.8.87)
+Requires-Dist: multidict (==6.0.4)
+Requires-Dist: bce-internal-sdk
+
