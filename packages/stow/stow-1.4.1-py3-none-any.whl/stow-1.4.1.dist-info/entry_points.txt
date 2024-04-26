@@ -1,0 +1,7 @@
+[console_scripts]
+stow = stow.cli:cli
+
+[stow_managers]
+fs = stow.managers:FS
+k8s = stow.managers.kubernetes:Kubernetes
+s3 = stow.managers.amazon:Amazon
