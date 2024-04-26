@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: auto-audio-rec
+Version: 0.1.0
+Summary: This will allow user to start the microphone after certain period of time and can stop the microphone with a button.
+Author: Kavindu Kariyawasam
+Author-email: kkdkariyawasam@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit>=1.2
+Requires-Dist: jinja2
+
+# auto-audio-rec
+
+This will allow user to start the microphone after certain period of time and can stop the microphone with a button.
+
+## Installation instructions 
+
+```sh
+pip install auto-audio-rec
+```
+
+## Usage instructions
+
+```python
+import streamlit as st
+
+from auto_audio_rec import auto_audio_rec
+
+value = auto_audio_rec()
+
+st.write(value)

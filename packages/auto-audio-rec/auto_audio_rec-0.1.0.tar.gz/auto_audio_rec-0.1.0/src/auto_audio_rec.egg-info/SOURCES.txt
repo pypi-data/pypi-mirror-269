@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/auto_audio_rec/__init__.py
+src/auto_audio_rec.egg-info/PKG-INFO
+src/auto_audio_rec.egg-info/SOURCES.txt
+src/auto_audio_rec.egg-info/dependency_links.txt
+src/auto_audio_rec.egg-info/requires.txt
+src/auto_audio_rec.egg-info/top_level.txt
+src/auto_audio_rec/frontend/index.html
+src/auto_audio_rec/frontend/main.js
+src/auto_audio_rec/frontend/streamlit-component-lib.js
+src/auto_audio_rec/frontend/style.css

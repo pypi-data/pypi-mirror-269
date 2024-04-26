@@ -1,0 +1,3 @@
+recursive-include src/auto_audio_rec/frontend *
+include README.md
+include LICENSE
