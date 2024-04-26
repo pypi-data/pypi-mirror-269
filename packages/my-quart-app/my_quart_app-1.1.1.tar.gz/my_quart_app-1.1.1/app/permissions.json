@@ -1,0 +1,336 @@
+{
+    "Bulk Communication Requests": {
+        "speedpost_upload_activation": {
+            "meta_data": {
+                "name": "Speedpost Upload Activation",
+                "description": "Bulk Speedpost Upload"
+            },
+            "read": {
+                "get_batch_data": [
+                    "POST"
+                ]
+            },
+            "write": {
+                "batch_operation": [
+                    "POST"
+                ],
+                "save_batch_response": [
+                    "POST"
+                ]
+            }
+        },
+        "sms_campaigns": {
+            "meta_data": {
+                "name": "Bulk SMS Requests",
+                "description": "Trigger Bulk SMS Requests"
+            },
+            "read": {
+                "get_campaign_data": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "get_campaigns": [
+                    "POST"
+                ],
+                "get_campaign": [
+                    "POST"
+                ],
+                "campaign_export": [
+                    "POST"
+                ],
+                "campaign_filters": [
+                    "GET"
+                ],
+                "campaign_summary": [
+                    "POST"
+                ]
+            },
+            "write": {
+                "save_response": [
+                    "POST"
+                ],
+                "create_campaign": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "campaign_cancel": [
+                    "POST"
+                ]
+            }
+        },
+        "email_campaigns": {
+            "meta_data": {
+                "name": "Bulk Email Requests",
+                "description": "Trigger Bulk Email Requests"
+            },
+            "read": {
+                "get_campaign_data": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "get_campaigns": [
+                    "POST"
+                ],
+                "get_campaign": [
+                    "POST"
+                ],
+                "campaign_export": [
+                    "POST"
+                ],
+                "campaign_filters": [
+                    "GET"
+                ],
+                "campaign_summary": [
+                    "POST"
+                ]
+            },
+            "write": {
+                "save_response": [
+                    "POST"
+                ],
+                "create_campaign": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "campaign_cancel": [
+                    "POST"
+                ]
+            }
+        },
+        "dtmf_ivr_campaigns": {
+            "meta_data": {
+                "name": "Bulk DTMF IVR Requests",
+                "description": "Trigger Bulk DTMF IVR Requests"
+            },
+            "read": {
+                "get_campaign_data": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "get_campaigns": [
+                    "POST"
+                ],
+                "get_campaign": [
+                    "POST"
+                ],
+                "campaign_export": [
+                    "POST"
+                ],
+                "campaign_filters": [
+                    "GET"
+                ],
+                "campaign_summary": [
+                    "POST"
+                ]
+            },
+            "write": {
+                "save_response": [
+                    "POST"
+                ],
+                "create_campaign": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "save_campaign_batch_response": [
+                    "POST"
+                ],
+                "campaign_cancel": [
+                    "POST"
+                ]
+            }
+        },
+        "obd_ivr_campaigns": {
+            "meta_data": {
+                "name": "Bulk OBD IVR Requests",
+                "description": "Trigger Bulk OBD IVR Requests"
+            },
+            "read": {
+                "get_campaign_data": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "get_campaigns": [
+                    "POST"
+                ],
+                "get_campaign": [
+                    "POST"
+                ],
+                "campaign_export": [
+                    "POST"
+                ],
+                "campaign_filters": [
+                    "GET"
+                ],
+                "campaign_summary": [
+                    "POST"
+                ]
+            },
+            "write": {
+                "save_response": [
+                    "POST"
+                ],
+                "create_campaign": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "campaign_cancel": [
+                    "POST"
+                ]
+            }
+        },
+        "whatsapp_bot_campaigns": {
+            "meta_data": {
+                "name": "Bulk Whatsapp Bot Requests",
+                "description": "Trigger Bulk Whatsapp Bot Requests"
+            },
+            "read": {
+                "get_campaign_data": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "get_campaigns": [
+                    "POST"
+                ],
+                "get_campaign": [
+                    "POST"
+                ],
+                "campaign_export": [
+                    "POST"
+                ],
+                "campaign_filters": [
+                    "GET"
+                ],
+                "campaign_summary": [
+                    "POST"
+                ]
+            },
+            "write": {
+                "save_response": [
+                    "POST"
+                ],
+                "create_campaign": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "campaign_cancel": [
+                    "POST"
+                ]
+            }
+        },
+        "whatsapp_campaigns": {
+            "meta_data": {
+                "name": "Bulk Whatsapp Requests",
+                "description": "Trigger Bulk Whatsapp Requests"
+            },
+            "read": {
+                "get_campaign_data": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "get_campaigns": [
+                    "POST"
+                ],
+                "get_campaign": [
+                    "POST"
+                ],
+                "campaign_export": [
+                    "POST"
+                ],
+                "get_batch_data": [
+                    "POST"
+                ],
+                "campaign_filters": [
+                    "GET"
+                ],
+                "campaign_summary": [
+                    "POST"
+                ]
+            },
+            "write": {
+                "save_response": [
+                    "POST"
+                ],
+                "create_campaign": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "batch_operation": [
+                    "POST"
+                ],
+                "save_batch_response": [
+                    "POST"
+                ],
+                "campaign_cancel": [
+                    "POST"
+                ]
+            }
+        },
+        "master_campaigns": {
+            "meta_data": {
+                "name": "Master Campaign Requests",
+                "description": "Trigger Master Campaign Requests"
+            },
+            "read": {
+                "get_campaign_data": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "get_campaigns": [
+                    "POST"
+                ],
+                "get_campaign": [
+                    "POST"
+                ],
+                "campaign_export": [
+                    "POST"
+                ],
+                "campaign_filters": [
+                    "GET"
+                ],
+                "campaign_summary": [
+                    "POST"
+                ]
+            },
+            "write": {
+                "save_response": [
+                    "POST"
+                ],
+                "create_campaign": [
+                    "POST"
+                ],
+                "get_campaign_report": [
+                    "POST"
+                ],
+                "campaign_cancel": [
+                    "POST"
+                ]
+            }
+        }
+    }
+}
