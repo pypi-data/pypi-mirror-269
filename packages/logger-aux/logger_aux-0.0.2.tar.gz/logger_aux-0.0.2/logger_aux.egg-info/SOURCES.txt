@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+logger_aux/__init__.py
+logger_aux/main.py
+logger_aux.egg-info/PKG-INFO
+logger_aux.egg-info/SOURCES.txt
+logger_aux.egg-info/dependency_links.txt
+logger_aux.egg-info/top_level.txt
