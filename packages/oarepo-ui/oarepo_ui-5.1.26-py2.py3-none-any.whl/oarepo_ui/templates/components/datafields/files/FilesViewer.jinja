@@ -1,0 +1,30 @@
+{# def files #}
+
+{%if files.entries|length > 0 %}
+<table class="ui table striped rel-mb-1">
+    <thead>
+        <tr>
+            <th colspan="3"><h2 class="ui header">{{ _("Files") }}</h2></th>
+        </tr>
+        <tr>
+            <th>{{_("File")}}</th>
+            <th>{{_("Size")}}</th>
+            <th>{{_("Actions")}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for file in array(files.entries) %}
+            <tr>
+                <td>
+                    <a href="{{ file.links.content }}">{{ file.key }}</a>
+                </td>
+                <td>{{ file.size|filesizeformat }}</td>
+                <td>
+                    <i class="ui icon zoom"></i>
+                    <a href="{{ file.links.content }}"><i class="ui icon download"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
