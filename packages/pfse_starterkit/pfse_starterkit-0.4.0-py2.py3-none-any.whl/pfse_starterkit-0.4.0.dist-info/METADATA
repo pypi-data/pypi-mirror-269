@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: pfse_starterkit
+Version: 0.4.0
+Summary: A module to designed to perform package installations, and verification of install,
+Author-email: Connor Ferster <connor@structuralpython.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: streamlit
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: lxml
+Requires-Dist: sympy
+Requires-Dist: shapely>=2.0.0
+Requires-Dist: vtk
+Requires-Dist: matplotlib
+Requires-Dist: plotly
+Requires-Dist: kaleido
+Requires-Dist: sectionproperties
+Requires-Dist: concreteproperties
+Requires-Dist: pycba>=0.4.0
+Requires-Dist: PyNiteFEA>=0.0.87
+Requires-Dist: scipy
+Requires-Dist: handcalcs
+Requires-Dist: more-itertools
+Requires-Dist: forallpeople
+Requires-Dist: pytest
+Requires-Dist: rich
+Requires-Dist: tqdm
+Requires-Dist: papermodels
+Requires-Dist: xlwings
+Requires-Dist: jupyterlab
+Requires-Dist: IPython
+Requires-Dist: ipywidgets
+Requires-Dist: ipykernel
+Requires-Dist: jupyterlab-katex
+Requires-Dist: jupyterlab-mathjax3
+Requires-Dist: nbconvert
+Requires-Dist: pyperclip
+Requires-Dist: typer
+Requires-Dist: flit
+Requires-Dist: python-docx
+Requires-Dist: constable
+Requires-Dist: ruff
+Requires-Dist: black
+Requires-Dist: isort
+Project-URL: Home, https://github.com/connorferster/pfse_starterkit
+
+# pfse_starterkit
+A Python package that installs all required packages for the StructuralPython Python for Structural Engineers (pfse) course.
+
+This installs the following packages:
+
+* streamlit
+* numpy
+* pandas
+* openpyxl
+* lxml
+* sympy
+* shapely
+* vtk
+* matplotlib
+* plotly
+* sectionproperties
+* concreteproperties
+* PyNiteFEA
+* pycba
+* scipy
+* handcalcs
+* forallpeople
+* pytest
+* ipytest
+* rich
+* tqdm
+* papermodels
+* xlwings
+* black
+* jupyterlab
+* IPython
+* ipywidgets
+* ipykernel
+* jupyterlab-katex
+* jupyterlab-mathjax3 (as an option)
+* nbconvert
+* pyperclip
+* typer
+* magicgui[pyside2]
+* flit
+
