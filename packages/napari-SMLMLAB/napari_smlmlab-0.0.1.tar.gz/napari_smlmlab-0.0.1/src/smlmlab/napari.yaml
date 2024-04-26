@@ -1,0 +1,14 @@
+name: napari-SMLMLAB
+display_name: BP04 Practical
+# use 'hidden' to remove plugin from napari hub search results
+visibility: hidden
+# see https://napari.org/stable/plugins/manifest.html for valid categories
+categories: ["Annotation", "Segmentation", "Acquisition"]
+contributions:
+  commands:
+    - id: napari-SMLMLAB.make_qwidget
+      python_name: smlmlab:smlmlabWidget
+      title: Make example QWidget
+  widgets:
+    - command: napari-SMLMLAB.make_qwidget
+      display_name: SMLM LAB
