@@ -1,0 +1,37 @@
+# Dubious tags
+
+Detects and lists dubious OSM tags - with explanation why they are suspicious.
+
+This is intended to cover rather rarely used tags.
+
+It definitely should not include tags where it is disputed or discussed are they good idea or not.
+
+# Warning
+
+Do not change or edits this tags blindly! This tags are listed here rather than [proposed for bot edit](https://wiki.openstreetmap.org/wiki/Mechanical_Edits/Mateusz_Konieczny_-_bot_account#Active_tasks) as it is not safe to change them without verification or local knowledge.
+
+Not editing is better than editing and breaking things.
+
+Though in some cases you may have local knowledge or better understanding. In such case follow [OSM rules](https://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct) if you want to retag objects without individual review.
+
+
+
+# Usage
+
+```
+import dubious_tags
+
+print(dubious_tags.lorem_ipsum.text())
+```
+
+# Installation
+
+`pip install dubious_tags`
+
+It is uploaded to [pypi.org](https://pypi.org/project/dubious_tags/)
+
+# Run tests
+
+```
+python3 -m unittest
+```
