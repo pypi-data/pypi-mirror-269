@@ -1,0 +1,35 @@
+name: gentab
+channels:
+  - pytorch
+  - nvidia
+  - cudistas
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip=23.3.1
+  - cudatoolkit=11.7.0
+  #- cudnn=8.5.0.96
+  - pytorch=2.0.1 
+  - torchvision 
+  - torchaudio 
+  - pytorch-cuda=11.7
+  - pip:
+    - pandas==2.1.3
+    - rich==13.1.0
+    - optuna
+    - scikit-learn
+    - category_encoders
+    - imbalanced-learn
+    - sdv
+    - ForestDiffusion
+    - transformers
+    - datasets
+    - be-great
+    - lightning
+    - ucimlrepo
+    - humanize
+    - dask
+    - dython
+    - skorch
+    
