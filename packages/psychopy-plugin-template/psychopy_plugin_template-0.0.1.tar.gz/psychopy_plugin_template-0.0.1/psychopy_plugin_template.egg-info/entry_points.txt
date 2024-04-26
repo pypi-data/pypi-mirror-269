@@ -1,0 +1,12 @@
+[psychopy.experiment.components]
+ExampleComponent = psychopy_example_plugin.components.exampleComponent:ExampleComponent
+
+[psychopy.experiment.routines]
+ExampleStandaloneRoutine = psychopy_example_plugin.routines.exampleStandaloneRoutine:ExampleStandaloneRoutine
+
+[psychopy.hardware]
+ExampleDevice = psychopy_example_plugin.hardware.exampleDevice:ExampleDevice
+ExampleResponseDevice = psychopy_example_plugin.hardware.exampleResponseDevice:ExampleResponseDevice
+
+[psychopy.visual]
+ExampleVisualStim = psychopy_example_plugin.visual.exampleVisualStim:ExampleVisualStim

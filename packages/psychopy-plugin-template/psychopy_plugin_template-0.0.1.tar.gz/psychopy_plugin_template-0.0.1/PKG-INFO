@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: psychopy-plugin-template
+Version: 0.0.1
+Summary: Tutorial on how to create a plugin component for both PsychoPy and PsychoJS
+Author-email: OST Science Team <science@opensceincetools.org>
+License: MIT
+Project-URL: homepage, https://github.com/psychopy/psychopy-plugin-template
+Project-URL: changelog, https://github.com/psychopy/psychopy-plugin-template/blob/main/CHANGELOG.md
+Provides-Extra: docs
+Requires-Dist: psychopy; extra == "docs"
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+Provides-Extra: tests
+Requires-Dist: psychopy; extra == "tests"
+Requires-Dist: pytest; extra == "tests"
