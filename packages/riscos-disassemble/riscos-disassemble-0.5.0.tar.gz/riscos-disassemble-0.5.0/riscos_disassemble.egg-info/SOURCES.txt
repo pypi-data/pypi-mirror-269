@@ -1,0 +1,14 @@
+README.md
+setup.py
+riscos_disassemble/__init__.py
+riscos_disassemble/__main__.py
+riscos_disassemble/colours.py
+riscos_disassemble/disassemble.py
+riscos_disassemble/postprocess.py
+riscos_disassemble/swis.py
+riscos_disassemble.egg-info/PKG-INFO
+riscos_disassemble.egg-info/SOURCES.txt
+riscos_disassemble.egg-info/dependency_links.txt
+riscos_disassemble.egg-info/entry_points.txt
+riscos_disassemble.egg-info/requires.txt
+riscos_disassemble.egg-info/top_level.txt
