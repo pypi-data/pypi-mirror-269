@@ -1,0 +1,17 @@
+finalsa/sqs/client/__init__.py,sha256=bFCjXJqP4_D8FzCvTdAvka9FrrfRMcmPI9fNbXPVmg4,335
+finalsa/sqs/client/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+finalsa/sqs/client/clients/Client.py,sha256=G5CRgQIVWjD7mpBeJdWxZBw5CzS_3dVRH4vutlB9rUU,4350
+finalsa/sqs/client/clients/__init__.py,sha256=U0DBOwxvcD_7NgUdVoG1HeDxwQ3UM3cntC_VmIS6E9Q,35
+finalsa/sqs/client/exceptions/SqsException.py,sha256=nT4YpdUXCnljpyGly9dJ6ltSJrXd65_i_ZnvUS4NAsk,142
+finalsa/sqs/client/exceptions/__init__.py,sha256=cYCCQbeAGJT2psaSWuxjk00QFhiDxhn6HcgMSffTJHE,39
+finalsa/sqs/client/interfaces/SqsService.py,sha256=ZDh9MGCVrH5_w7CR2Q7UEzOipESGt8DQ8pZLjP7dtT8,1401
+finalsa/sqs/client/interfaces/__init__.py,sha256=QBjhMngisdxZWXjO34GDtkHa9YlA8meXx8XD4KGhLow,35
+finalsa/sqs/client/tests/Client.py,sha256=ohSrfi39IVI0icl6W1x0n0ul-3zRkhMg0R8kZUIjSmM,3688
+finalsa/sqs/client/tests/__init__.py,sha256=qmHp0v2cNtmsdhWGa6X8droNSZdeN-kWNJtr0QMfQ3w,34
+finalsa_sqs_client-0.1.0.data/data/LICENSE.md,sha256=_lu-V-f2tGID1BS2V_W6D2XWppBsylFF1J2KEpfIXN0,1084
+finalsa_sqs_client-0.1.0.dist-info/LICENSE.md,sha256=_lu-V-f2tGID1BS2V_W6D2XWppBsylFF1J2KEpfIXN0,1084
+finalsa_sqs_client-0.1.0.dist-info/METADATA,sha256=e5peHLt9DFiPJhnrUYBEdvhtO3qBDhjUJez6249xc-0,834
+finalsa_sqs_client-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+finalsa_sqs_client-0.1.0.dist-info/top_level.txt,sha256=WR5mpy65XlBv1TYm5kZdRxuAdGiFapDqIIymNMKe4P8,131
+finalsa_sqs_client-0.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+finalsa_sqs_client-0.1.0.dist-info/RECORD,,
