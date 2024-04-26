@@ -1,0 +1,5 @@
+[console_scripts]
+backend = print_service.__main__:main
+
+[pytest11]
+pytest_auth_lib = auth_lib.testing

@@ -1,0 +1,6 @@
+autoflake
+fastapi
+pydantic
+pydantic_settings
+pytest
+setuptools
