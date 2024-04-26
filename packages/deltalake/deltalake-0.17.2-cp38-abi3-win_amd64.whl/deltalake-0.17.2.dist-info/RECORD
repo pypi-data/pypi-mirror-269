@@ -1,0 +1,15 @@
+deltalake-0.17.2.dist-info/METADATA,sha256=Lc4pp7Haw1fMLZs_CKz7n5r2U8_CAH37QYoUB-XRv_g,5113
+deltalake-0.17.2.dist-info/WHEEL,sha256=_-pO1V0R3bpcg5FhWC82Cl79freIhF1O9I5uv0may5k,94
+deltalake-0.17.2.dist-info/license_files/deltalake_license.txt,sha256=OJJo7th6Qg3uOx994oqSj0aDkAQHadPH7xU7vwrlCJM,10436
+deltalake/data_catalog.py,sha256=QAi0oQO8t9CT9eOk4EpmUT6VIER5mBAYe3Q-ODQJ1lY,411
+deltalake/exceptions.py,sha256=Mi5xKS0rye68WcV07K5gOQyy5pQxRd5KrUZdq0GWWRw,309
+deltalake/fs.py,sha256=9lJbxQ9DRxQtKJy0m4nPIqkDucSdfzCc0IC_dxkUytg,2168
+deltalake/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deltalake/schema.py,sha256=Yq9-B1DOmeVLNxVDYhnSjsxOpBNxKsAdWHUMCz7OT4o,4898
+deltalake/table.py,sha256=X33Ve_udZ88HFVrgJuTRApRGAdELUYP3q1Ac-GJXTP8,83584
+deltalake/writer.py,sha256=vm2LhVy_Ja9Z9F9s3gufjDQw_kBzt10oJtmamVrrC48,30642
+deltalake/_internal.pyi,sha256=d4BeOYc4yG8_12mx_Og5wf9bmMzUWHVSevrACEswrsI,26212
+deltalake/_util.py,sha256=sS1KRcLZI1nN18lZ5t_vMP7N1OW-x-3NjLOy008Hqb0,732
+deltalake/__init__.py,sha256=7wWJFd--HmDfYLDxXSuMTcNSFioLGn71XxhhJi77Csw,549
+deltalake/_internal.pyd,sha256=YjTvdtN0Zqa6x04nyPNBp1GvdgBB65YzS4y_6KqLP3w,76791808
+deltalake-0.17.2.dist-info/RECORD,,
