@@ -1,0 +1,48 @@
+future
+six
+boto3
+celery
+Django<4
+django-allowedsites-dynamic
+django-cache-lock
+django-import-export
+djangorestframework
+docopt
+psutil
+python-decouple
+python-memcached==1.59
+pytz
+requests
+shadowsocks-alexforks
+uWSGI
+
+[:python_version < "3.3"]
+ipaddress
+
+[:python_version < "3.8"]
+django-celery-beat<2.6.0
+
+[:python_version <= "2.7"]
+django-celery-beat==1.6.0
+django-celery-results==2.0.1
+django-enumfield<3.0
+django-filter~=1.1
+python-crontab==2.6.0
+
+[:python_version > "2.7"]
+django-celery-results
+django-enumfield
+django-filter
+python-crontab
+
+[:python_version >= "3.8"]
+django-celery-beat
+
+[dev]
+build
+bump-my-version
+codecov-cli
+coverage
+setuptools
+twine
+wheel
