@@ -1,0 +1,57 @@
+name: 'CI docker base'
+
+inputs:
+  base_tag:
+    description: 'Base tag for docker'
+    required: true
+  dockerhub:
+    required: true
+    default: false
+  dockerhub_username:
+    required: false
+  dockerhub_token:
+    required: false
+  github_token:
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: downcase REPO
+      run: |
+        echo "REPO=${GITHUB_REPOSITORY@L}" >> ${GITHUB_ENV}
+        echo "ACTOR=${GITHUB_ACTOR@L}" >> ${GITHUB_ENV}
+        echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_ENV
+      shell: bash
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ inputs.github_token }}
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    - name: Docker meta
+      id: meta
+      uses: docker/metadata-action@v5
+      with:
+        images: ghcr.io/${{ github.repository }}
+        tags: |
+          type=semver,pattern={{version}},suffix=-${{ inputs.base_tag }}
+          type=raw,value=${{ inputs.base_tag }}
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Build and push
+      uses: docker/build-push-action@v5
+      with:
+        provenance: false
+        platforms: linux/amd64
+        file: setup_utils/docker/Dockerfile
+        build-args: |
+          BASE_TAG=${{ inputs.base_tag }}
+          BUILDKIT_CONTEXT_KEEP_GIT_DIR=1
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
