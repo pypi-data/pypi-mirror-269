@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: styledPrinting
+Version: 1.2
+Summary: A simple package to print styled text in the terminal and operate the cursor
+Author: André Ferreira
+Author-email: anfreire.dev@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
