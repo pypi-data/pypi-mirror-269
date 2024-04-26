@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+/Users/yrobin/Git/Github/pigadm/pigadm/__cartopy.py
+/Users/yrobin/Git/Github/pigadm/pigadm/__core.py
+/Users/yrobin/Git/Github/pigadm/pigadm/__curses_doc.py
+/Users/yrobin/Git/Github/pigadm/pigadm/__doc.py
+/Users/yrobin/Git/Github/pigadm/pigadm/__exec.py
+/Users/yrobin/Git/Github/pigadm/pigadm/__init__.py
+/Users/yrobin/Git/Github/pigadm/pigadm/__plot.py
+/Users/yrobin/Git/Github/pigadm/pigadm/__release.py
+pigadm.egg-info/PKG-INFO
+pigadm.egg-info/SOURCES.txt
+pigadm.egg-info/dependency_links.txt
+pigadm.egg-info/top_level.txt
+scripts/pigadm

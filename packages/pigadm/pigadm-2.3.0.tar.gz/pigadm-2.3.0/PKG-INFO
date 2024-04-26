@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pigadm
+Version: 2.3.0
+Summary: Python Interface to GADM shapefile data
+Home-page: https://github.com/yrobink/pigadm
+Author: Yoann Robin
+Author-email: yoann.robin.k@gmail.com
+License: GNU General Public License v3
+Keywords: GADM,shapefile,cartopy
+Platform: linux
+Platform: macosx
+Requires: sys
+Requires: os
+Requires: tempfile
+Requires: urllib
+Requires: progressbar2
+Requires: zipfile
+Requires: cartopy
+License-File: LICENSE
+
+Python package to build cartopy features from GADM data.
