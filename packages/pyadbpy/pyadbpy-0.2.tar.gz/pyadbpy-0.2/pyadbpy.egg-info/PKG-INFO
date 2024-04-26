@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyadbpy
+Version: 0.2
+Summary: Ein Modul für ADB Operationen.
+Home-page: https://github.com/termuxdev314/adbpy
+Author: termuxdev314
+Author-email: termuxdev314@gmail.com
+Description-Content-Type: text/x-rst
+
+===
+
+adbpy_module
+===
+
+Ein Modul für ADB Operationen.
