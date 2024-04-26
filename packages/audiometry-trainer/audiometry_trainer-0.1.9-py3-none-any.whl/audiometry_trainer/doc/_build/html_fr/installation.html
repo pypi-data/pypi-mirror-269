@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; Documentation audiometry_trainer 0.1.9</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Recherche du seuil" href="threshold_search.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            audiometry_trainer
+          </a>
+              <div class="version">
+                0.1.9
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table des matières :</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threshold_search.html">Recherche du seuil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masking.html">Masquage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtual_listener.html">Sujet virtuel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generate_case.html">Générer des fichiers de cas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_interface.html">Interface utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Fonctionnement interne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Références</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">audiometry_trainer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<span id="sec-installation"></span><h1>Installation<a class="headerlink" href="#installation" title="Lien permanent vers cette rubrique"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> a été installé et utilisé avec succès sur Linux et Windows. Il devrait aussi marcher sur des ordinateurs Mac, mais cela n’a pas été testé. Pour Windows, vous pouvez télécharger un programme d’installation dédié sur <a class="reference external" href="https://sourceforge.net/projects/audiometry-trainer/files/">SourceForge</a>.</p>
+<p>Sur Linux et Mac (mais aussi sur Windows si vous ne souhaitez pas utiliser le programme d’installation dédié) <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code>, qui est écrit en Python, peut être installé à travers <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>audiometry-trainer
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> dépend d’un petit nombre de modules Python y compris :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>PyQt5</p></li>
+<li><p>numpy</p></li>
+<li><p>scipy</p></li>
+<li><p>matplotlib</p></li>
+<li><p>pandas</p></li>
+</ul>
+</div></blockquote>
+<p>selon votre distribution il pourrait être souhaitable d’installer ces dépendances avant d’installer <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> à travers <code class="docutils literal notranslate"><span class="pre">pip</span></code> (par exemple à travers <code class="docutils literal notranslate"><span class="pre">conda</span></code> si vous utilisez la distribution de Python Anaconda, ou à travers votre gestionnaire de paquets de Linux si vous utilisez l’installation de Python de votre distribution Linux), sinon <code class="docutils literal notranslate"><span class="pre">pip</span></code> essayera de télécharger et installer ces dépendances de façon automatique. Si le programme est installé avec succès vous devriez pouvoir le lancer depuis un terminal bash/DOS avec la commande :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>audiometry_trainer
+</pre></div>
+</div>
+<p>Si vous utilisez plusieurs installations/environnements de Python, vous devez vous assurer que l’environnement de Python que vous employez quand vous utilisez la commande ci-dessus correspond à celui que vous aviez utilisé lors de l’installation de l’application.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="threshold_search.html" class="btn btn-neutral float-right" title="Recherche du seuil" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Samuele Carcagno.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
