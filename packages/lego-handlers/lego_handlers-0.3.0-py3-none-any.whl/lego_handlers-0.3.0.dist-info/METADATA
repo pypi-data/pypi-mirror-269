@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: lego-handlers
+Version: 0.3.0
+Summary: Add your description here
+Project-URL: Documentation, https://github.com/Tomperez98/lego-handlers#readme
+Project-URL: Issues, https://github.com/Tomperez98/lego-handlers/issues
+Project-URL: Source, https://github.com/Tomperez98/lego-handlers
+Author-email: Tomperez98 <tomasperezalvarez@gmail.com>
+Requires-Python: >=3.10
+Requires-Dist: result>=0.16.1
+Description-Content-Type: text/markdown
+
+# lego-handlers
+
+Describe your project here.
