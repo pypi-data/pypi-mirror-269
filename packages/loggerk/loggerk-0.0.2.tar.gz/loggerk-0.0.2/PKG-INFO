@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: loggerk
+Version: 0.0.2
+Summary: This is a custom logger module for Python
+Author: Kuantik DataJump
+Author-email: master@kuantik.mx
+Maintainer: Angel de Jesús Sanchez Morales
+Maintainer-email: angel.sanchez@kuantik.mx
+Keywords: python,logging
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx
+
+# loggerk
+This is a custom logger module for Python
+
+Enviroment variables required:
+
+- `LOGGER_APP_NAME`: The name of the App
+- `LOGGER_URLS`: a list of URLS to send the log requests to. Separated by commas.
+- `LOGGER_CREDENTIALS`: If needed, the credentials to send the log resuests with.
+
+
+## Usage
+Import LoggerK from the `loggerk` mdoule 
+
+```python
+from loggerk import LoggerK
+```
+
+Then initialize the LoggerK class, and call the usual methods
+
+```python
+logger = LoggerK(__name__)
+
+logger.debug("This is a debug level message.")
+logger.info("This is an info level message")
+logger.warning("This is a warning level message")
+logger.error("This is an error level message")
+logger.critical("This is a critical level message")
+```
+
+The `LoggerK` initializer takes several arguments:
+
+* `name: str` 
+* `app_name: str`
+* `level: str | int`
+* `config: ConfigDict`
+* `file_path: str`
+
+The only required argument is `name`. The rest of the arguments are Optional.
+
+### Note:
+Initializing two `LoggerK` instances with the same name will behave as a Singleton, so any new configuration to the new instance will affect all existing instances with the same name.
+
+#### Example:
+```python
+logger_1 = LoggerK("my_new_logger")
+
+logger_2 = LoggerK(
+    "my_new_logger", 
+    config=SOME_CUSTOM_CONFIG,
+)
+
+# The new config on logger_2 will apply also for the logger_1 as they share the same name.
+```
+
+### `app_name`
+
+Represents the name of the application in which the logger instance is being created. If it is not provided, it will be extracted from the environment as `LOGGER_APP_NAME`.
+
+### `level`
+
+Is the default level for the logger, it can take integer values, however its recommended for better readability to use the Literal values defined in the class:
+
+- `"DEBUG"`
+- `"INFO"`
+- `"WARNING"`
+- `"ERROR"`
+- `"CRITICAL"`
+
+When using handlers, if the handler does not define a logging level, this default level will be used.
+
+### `config`
+
+A dictionary containing the configuration for the logger.
+
+For more info on how to configure the logger check the [logging.config Logging configuration](https://docs.python.org/3/library/logging.config.html#logging-config-dictschema).
+
+The `LoggerK` initializer has a `DEFAULT_CONFIG` dictionary which includes three default handlers:
+
+- An `StreamingHandler` to the standar output.
+- A `RotatingFileHandler` that defaults to `"logs/app.log"`
+- A `CustomHttpHandler` that will make a post request for every log message to the first URL that returns a succesful response within the given URLs  in the `LOGGER_URLS` env variable.
+
+### `file_path`
+
+When given a value, will override every FileHandler inside the `config` dictionary.
