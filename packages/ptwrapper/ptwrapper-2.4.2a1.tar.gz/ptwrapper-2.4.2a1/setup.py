@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup
+
+package_dir = \
+{'': 'src'}
+
+packages = \
+['ptwrapper']
+
+package_data = \
+{'': ['*'],
+ 'ptwrapper': ['config/*',
+               'config/age/*',
+               'config/ise/*',
+               'input/*',
+               'input/edf/*',
+               'input/itl/*']}
+
+install_requires = \
+['osve>=2.4.1']
+
+entry_points = \
+{'console_scripts': ['ptwrapper = ptwrapper.cli:cli']}
+
+setup_kwargs = {
+    'name': 'ptwrapper',
+    'version': '2.4.2a1',
+    'description': 'A Pointing Tool OSVE wrapper',
+    'long_description': '# Pointing Tool Wrapper\n\nA JUICE SOC [Pointing Tool](https://juicept.esac.esa.int/) wrapper (`PTwrapper`) for WINDOWS, LINUX, and MACOSX for use in a local computer.\n\nAllows to simulate a Pointing Timeline Request (PTR) and to generate the corresponding SPICE CK, resolved PTR, \navailable Power, and quaternions dump file.\n\n`PTwrapper` is based on OSVE and mainly provides a shortcut to use the required functionalities and setup limited\nto simulate PTRs. You can find more information on OSVE [here](https://juigitlab.esac.esa.int/core-system/uplink/phs/osve).\n\n\n### Documentation\n\nDocumentation is available at the [JUICE SOC Toolkit Help](https://juicesoc.esac.esa.int/panel/#/navigation/help).\n\n\n## Installation\n\n```shx\npip install ptwrapper\n```\n\n## Development and testing\n\n* Clone this repository\n* Requirements:\n  * Python 3.7+\n* Create a virtual environment and install the dependencies\n\n```shx\npip install -e .\n```\n\nRun the tests with in the `tests` directory with:\n\n```shell\npython3 -m unittest\n```\n\n\n## Using the library\n\nAfter installing the library can be used with the Python Shell or with its CLI.\n\n\n### Python Shell\n\nA basic test of the library for a PTR processing is provided. The sample creates in the working directory a structure \nfolder to invoke the execution and dumps inside the OUTPUT folder the expected products (SPICE CK, resolved PTR, \navailable Power, and quaternions CSV)\n\n```\nimport os\n\nfrom ptwrapper import execute\nfrom ptwrapper import create_structure\n\nptr_content = """<prm>\n   <body>\n      <segment>\n         <data>\n            <timeline frame="SC">\n               <block ref="OBS">\n                  <startTime>2030-10-15T03:40:00</startTime>\n                  <endTime>2030-10-15T04:15:00</endTime>\n                  <attitude ref="track">\n                     <boresight ref="SC_Zaxis"/>\n                     <target ref="Jupiter"/>\n                     <phaseAngle ref="powerOptimised">\n                        <yDir>false</yDir>\n                     </phaseAngle>\n                     </attitude>\n                     <metadata>\n                        <comment>Track Power Optimised C3.0</comment>\n                     </metadata>\n               </block>\n            </timeline>\n         </data>\n     </segment>\n   </body>\n</prm>\n"""\nmk_path = \'metakernel.tm\'\nsession_file_path = create_structure(\'.\', mk_path, ptr_content)\nexecute(os.path.dirname(session_file_path), session_file_path)\n```\n\n### Command line interface\n\nThe package has a CLI entry point:\n\n```shell\nptwrapper -h\n\nusage: ptwrapper [-h] [-s SESSION_FILE] [-m META_KERNEL] [-p PTR] [-w WORKING_DIR] [-o OUTPUT_DIR] [-t TIME_STEP] [-np] [-sa] [-mga] [-q] [-f] [-v]\n\nPointing Tool Wrapper (PTWrapper) simulates a PTR and generates the corresponding resolved PTR, SPICE CK kernels,and other attitude related files. PTWrapper uses OSVE to simulate the PTR.\n\noptional arguments:\n  -h, --help            show this help message and exit\n  -s SESSION_FILE, --session-file SESSION_FILE\n                        Path to the session file to run the simulation. If provided the other arguments are ignored.\n  -m META_KERNEL, --meta-kernel META_KERNEL\n                        Path to the meta-kernel file.\n  -p PTR, --ptr PTR     Path to the PTR/PTX file input file.\n  -w WORKING_DIR, --working-dir WORKING_DIR\n                        Path to the working directory. Default is the current directory.\n  -o OUTPUT_DIR, --output-dir OUTPUT_DIR\n                        Path to the output directory. Overwrites default output file names. Default is the structure of the built-in session file.\n  -t TIME_STEP, --time-step TIME_STEP\n                        Output CK file time step in seconds. Default is 5s.\n  -np, --no-power       Indicates not to calculate available power. Default is that the Available Power will be computed.\n  -sa, --sa-ck          Generate the Solar Arrays SPICE CK. Default is that the SA CK is not generated.\n  -mga, --mga-ck        Generate the Medium Gain Antenna SPICE CK. Default is that the MGA CK is not generated.\n  -q, --quaternions     Calculate the quaternions. Default is that the quaternions will not be computed.\n  -f, --fixed-definitions\n                        Print the AGM Fixed Definitions in use for PTR design.\n  -v, --version         OSVE, AGM, and EPS libraries version.\n```\n\nYou can either run the CLI using an OSVE configuration file (`SESSION_FILE`) or by specifying a \nnumber of inputs and assume the rest of parameters as provided by the default configuration file \nincluded in the package. \n\nIn addition, if you do not specify an output directory (`OUTPUT_DIR`), the package will replicate\nthe canonical output directory and file structure and will also generate a `SESSION_FILE` that can\nbe reused. Contrarily, if you specify an `OUTPUT_DIR` the output will be simplified and provided in\nthat directory; additionally the output files will inherit the name of the input `PTR` file.\n\n> **WARNING:** Remember that the input `META_KERNEL` needs to have an adequate \n> relative or absolute path for its `PATH_VALUES` variable value.\n\nA couple of examples are provided hereunder. First specifying the output directory:\n\n```shell\nptwrapper -m kernels/juice_mini_local.tm -p ptr_simphony.xml -o . \n\nptwrapper session execution\nAGM version:  9.3.0.p1\nOSVE version: 1.6.0\n[INFO]    <AGE>  Attitude Generation Module initialization started\n[INFO]    <AGE>  AGE module setup started\n[INFO]    <AGE>  AGE module setup successfully completed\n[INFO]    <AGE>  Attitude Generation Module initialization completed\n[INFO]    <AGE>  Loading Attitude Timeline\n[INFO]    <AGE>  Checking Attitude Timeline\n[INFO]    <AGE>  Initializing Attitude Timeline\n[INFO]    <AGE>   TOTAL ENERGY for POINTING block from 2030-10-15T03:40:00Z to 2030-10-15T04:15:00Z\n[INFO]    <AGE>   Attitude from actual PTR: 812.096753 Wh (812.096753 Wh)\n[INFO]    <AGE>   Attitude from loaded CK:  812.096096 Wh (812.096096 Wh)\n[INFO]    <PIF>  XML PTR file: "ptr_resolved.ptx" generated\n[INFO]    <PIF>  Generating CK file with the following USER DEFINED parameters:\n[INFO]    <PIF>  CK frame ID:  -28001\n[INFO]    <PIF>  CK time step: 5 s\n[INFO]    <AGE>  Writing Attitude Spice CK File: juice_sc_ptr.bc\n[INFO]    <PIF>  CK file: "juice_sc_ptr.bc" generated\n[INFO]    <AGE>  Writing Attitude Text File\n[INFO]    <PIF>  POWER CSV file: "power.csv" generated\nRenaming quaternions.csv to ptr_simphony_quaternions.csv\nRenaming power.csv to ptr_simphony_power.csv\nRenaming ptr_resolved.ptx to ptr_simphony_resolved.ptx\nRenaming juice_sc_ptr.bc to ptr_simphony.bc\nCleaning up OSVE execution files and directories\n```\n\nThis will generate the following output files.\n\n```shell\n.\n|-- ptr_simphony.bc\n|-- ptr_simphony.csv\n|-- ptr_simphony.xml\n|-- ptr_simphony_log.json\n`-- ptr_simphony_resolved.ptx\n```\n\nThe same run without specifying the `OUTPUT_DIRECTORY` yields the following directory structure:\n\n```shell\n.\n|-- config\n|   |-- age\n|   |   |-- cfg_agm_jui_jupiter.xml\n|   |   |-- cfg_agm_jui_multibody_event_definitions.xml\n|   |   |-- cfg_agm_jui_multibody_fixed_definitions.xml\n|   |   `-- cfg_agm_jui_multibody_predefined_block.xml\n|   `-- ise\n|       |-- BRF_MAL_SGICD_2_1_300101_351005.brf\n|       |-- RES_C50_SA_CELLS_EFFICIENCY_310101_351003.csv\n|       |-- eps.cfg\n|       |-- events.juice.def\n|       |-- phs_com_res_sa_cells_count.asc\n|       `-- units.def\n|-- kernel\n|   `-- juice_mini_local.tm\n|-- output\n|   |-- juice_sc_ptr.bc\n|   |-- power.csv\n|   |-- ptr_resolved.ptx\n|   |-- log.json\n|   `-- quaternions.csv\n|-- ptr\n|   `-- PTR_PT_V1.ptx\n`-- session_file.json\n```',
+    'author': 'Marc Costa',
+    'author_email': 'marc.costa@ext.esa.int',
+    'maintainer': 'None',
+    'maintainer_email': 'None',
+    'url': 'https://juigitlab.esac.esa.int/core-system/uplink/auxiliary-tools/ptwrapper',
+    'package_dir': package_dir,
+    'packages': packages,
+    'package_data': package_data,
+    'install_requires': install_requires,
+    'entry_points': entry_points,
+    'python_requires': '>=3.8,<4.0',
+}
+
+
+setup(**setup_kwargs)
