@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chisel4ml"
+authors = [
+    {name = "Jure Vreca", email = "jure.vreca@ijs.si"}
+]
+description = "A Chisel based hardware generation library for highly quantized neural networks."
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+classifiers = [
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent"
+]
+keywords = ["Chisel", "FPGA", "quantized neural networks"]
+dynamic=["version"]
+dependencies = [
+    "QKeras==0.9.0",
+    "grpcio>1.0.0",
+    "protobuf<=3.20.0",
+    "tf2-keras-surgeon",
+    "pyparsing",
+    "librosa"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "chisel4ml.__version__"}
+
+[tool.setuptools_scm]
+version_file = "chisel4ml/_version.py"
+
+
+[project.optional-dependencies]
+dev = [
+    "tox<4",
+    "tox-run-before",
+    "tox-gh-actions",
+    "flake8",
+    "Flake8-pyproject",
+    "pytest<8",
+    "pytest-cases",
+    "grpcio-tools",
+    "build",
+    "pre_commit",
+    "tensorflow-datasets",
+    "pydub",
+]
+
+[project.urls]
+Repository = "https://github.com/cs-jsi/chisel4ml"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ['.']
+include = ['chisel4ml*']
+exclude = ['chisel4ml.tests']
+namespaces = false
+
+[tool.pytest.ini_options]
+addopts = ""
+filterwarnings = ["ignore:::.*flatbuffers*", "ignore:::.*tensorflow*"]
+testpaths = [
+    "tests",
+]
+
+[tool.flake8]
+extend-ignore = ["E203", "E704"]
+max-line-length = 88
+count= true
+exclude=[
+    "venv",
+    "chisel4ml/bin/",
+    "chisel4ml/lbir"
+]
