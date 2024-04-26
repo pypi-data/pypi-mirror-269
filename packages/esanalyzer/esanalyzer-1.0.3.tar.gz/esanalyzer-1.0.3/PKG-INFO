@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: esanalyzer
+Version: 1.0.3
+Summary: Emotion and Sentiment Analysis
+Home-page: https://github.com/ajaysingh111444/python/tree/esanalyzer/esanalyzer
+Author: Ajay Singh Rajput
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: nrclex
+Requires-Dist: datasets
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: googletrans==4.0.0-rc1
+Requires-Dist: transformers
+Requires-Dist: nltk
+
+# esanalyzer
+
+    The Python Emotion and Sentiment Analysis library you've been looking for.
+
+    ## Services
+    - Emotion Analysis
+    - Sentiment Analysis
+
+    ## Usage
+    - Install using `pip install esanalyzer`
+
+    ```python
+    from esanalyzer.emotion_analyzer import EmotionAnalyzer
+
+    # Create an instance of EmotionAnalyzer
+    analyzer = EmotionAnalyzer()
+
+    # Call the analyze method with the text
+    text = "Wow, I am so happy"
+    result = analyzer.analyze(text)
+
+    # Use the result as needed
+    print(result)
+    
+    
+    {'library': 'default', 'result': {'surprise': 80}, 'max_prediction': {'label': 'surprise', 'percentage': 80}, 'sentiment': 'Positive', 'sentiment_score': 0.999592125415802, 'threshold_value': 0.8}
+    
+    
