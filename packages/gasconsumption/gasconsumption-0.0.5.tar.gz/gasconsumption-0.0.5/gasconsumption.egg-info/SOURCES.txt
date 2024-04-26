@@ -1,0 +1,8 @@
+setup.py
+gasconsumption.egg-info/PKG-INFO
+gasconsumption.egg-info/SOURCES.txt
+gasconsumption.egg-info/dependency_links.txt
+gasconsumption.egg-info/requires.txt
+gasconsumption.egg-info/top_level.txt
+libname/__init__.py
+libname/fastapiwrapper.py
