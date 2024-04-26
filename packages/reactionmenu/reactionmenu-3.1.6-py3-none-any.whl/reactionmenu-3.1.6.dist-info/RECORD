@@ -1,0 +1,12 @@
+reactionmenu/__init__.py,sha256=jhOEXOb7N3vnHch1mW90vFTFTDbkvPOSBtwflnBxqvQ,591
+reactionmenu/abc.py,sha256=EG8stM5gULYPOAhVVFgAgLtj2yAWcORSSGI1rQCUkug,62636
+reactionmenu/buttons.py,sha256=TBZ9LnlitoT_xOkC4ibSN9pu1J-bePxb0iV3hUelqW4,22465
+reactionmenu/core.py,sha256=m00BWvtBTQyPbbhwvOwQc0IF1UamxZUD3Z0KJmdcVyM,30782
+reactionmenu/decorators.py,sha256=BNMFpZVlx6zNHSSrFdiP2tscQIFShmKgTd2MPYmj_Lk,2307
+reactionmenu/errors.py,sha256=KBs9QU9GCvOEzL9qGGdQpaLtZiz5j85QBWADNxLk-O8,3743
+reactionmenu/views_menu.py,sha256=vLO9fKIAIrLYm_U81EfSOO5_htmhHEeODY5Oi9oh0no,67510
+reactionmenu-3.1.6.dist-info/LICENSE,sha256=kQ_7u34JnR-XC5Ys-gZ76cjLh8Dh_r87D0K8Dg9_FqQ,1097
+reactionmenu-3.1.6.dist-info/METADATA,sha256=av5-lflAALu9nu35Tp0i8aHttTGph2V-R4-YfsUzDAA,50857
+reactionmenu-3.1.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+reactionmenu-3.1.6.dist-info/top_level.txt,sha256=1a9s5SbjgASeqI1te3XKpSHHDlvKeltj7P8Sf51WEcA,13
+reactionmenu-3.1.6.dist-info/RECORD,,
