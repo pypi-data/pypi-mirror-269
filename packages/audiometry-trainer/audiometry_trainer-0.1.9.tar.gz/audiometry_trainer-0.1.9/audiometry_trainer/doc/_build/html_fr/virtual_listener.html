@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sujet virtuel &mdash; Documentation audiometry_trainer 0.1.9</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Générer des fichiers de cas" href="generate_case.html" />
+    <link rel="prev" title="Masquage" href="masking.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            audiometry_trainer
+          </a>
+              <div class="version">
+                0.1.9
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table des matières :</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threshold_search.html">Recherche du seuil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masking.html">Masquage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sujet virtuel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generate_case.html">Générer des fichiers de cas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_interface.html">Interface utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Fonctionnement interne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Références</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">audiometry_trainer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Sujet virtuel</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/virtual_listener.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="virtual-listener">
+<span id="sec-virtual-listener"></span><h1>Sujet virtuel<a class="headerlink" href="#virtual-listener" title="Lien permanent vers cette rubrique"></a></h1>
+<p>Les réponses du sujet virtuel sont déterminées à partir d’une courbe psychométrique (CP) qui représente la proportion de réponses « Oui » (j’ai entendu un son) en fonction du niveau du stimulus. Une fonction logistique (<a class="reference internal" href="references.html#kussetal2005" id="id1"><span>[KussEtAl2005]</span></a>; <a class="reference internal" href="references.html#kingdomandprins2016" id="id2"><span>[KingdomAndPrins2016]</span></a>) est utilisée :</p>
+<div class="math notranslate nohighlight" id="logistic-psychometric-function">
+<span id="equation-logistic-psychometric-function"></span><span class="eqno">(2)<a class="headerlink" href="#logistic-psychometric-function" title="Lien permanent vers cette équation"></a></span>\[\psi(x;\alpha,\beta,\gamma,\lambda)  = \gamma + (1-\gamma - \lambda) \left(\frac{1}{1+e^{\beta(\alpha-x)}}\right)\]</div>
+<p>où <span class="math notranslate nohighlight">\(\alpha\)</span> est le point médian, <span class="math notranslate nohighlight">\(\beta\)</span> la pente, <span class="math notranslate nohighlight">\(\gamma\)</span> l’asymptote inférieur, et <span class="math notranslate nohighlight">\(\lambda\)</span> l’asymptote supérieur de la CP; <span class="math notranslate nohighlight">\(x\)</span> est le niveau du stimulus auquel la fonction est évaluée.</p>
+<p>La figure <a class="reference internal" href="#fig-logistic-psy"><span class="std std-ref">Courbes psychométriques logistiques</span></a> montre des exemples de CPs logistiques qui représentent la proportion de réponses « Oui » en fonction du niveau du stimulus. Tous les quatre panneaux affichent la même CP en noise avec une CP de couleur différent qui a A) un point médian différent, B) une pente, et ainsi une largeur, différentes, C) un asymptote inférieur différent, ou D) un asymptote supérieur différent. Les lignes verticales dans A) marquent les points médians des courbes, tandis que dans B) elle masquent la « largeur » de 5% à 95% de réponses « Oui » pour les deux courbes. Les lignes horizontales en pointillé marquent dans tous les panneaux la proportion de réponses correctes au point médian, veillez noter que cela change dans C) et D) en fonction de l’asymptote.</p>
+<figure class="align-default" id="id8">
+<span id="fig-logistic-psy"></span><a class="reference internal image-reference" href="_images/logistic_psy.fr.png"><img alt="Courbes psychométriques logistiques" src="_images/logistic_psy.fr.png" style="width: 675.0px; height: 675.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Courbes psychométriques logistiques</span><a class="headerlink" href="#id8" title="Lien permanent vers cette image"></a></p>
+</figcaption>
+</figure>
+<p>Le point médian est le niveau du stimulus auquel la CP atteigne la moitié de son amplitude, donc pour un sujet virtuel avec <span class="math notranslate nohighlight">\(\gamma = 0\)</span> and <span class="math notranslate nohighlight">\(\lambda=0\)</span>, le point médian <span class="math notranslate nohighlight">\(\alpha\)</span> est le niveau du stimulus auquel le sujet donne (sur la longue durée) 50% de réponses « Oui ». La procédure Hughson-Westlake défini le seuil comme le point le plus bas auquel le sujet donne au moins 50% de réponses « Oui » (sur au moins 3 essais). Par conséquent, le seuil (comme défini avec la procédure Hughson-Westlake) se situera généralement à un point égal ou supérieur du point médian <span class="math notranslate nohighlight">\(\alpha\)</span> <a class="reference internal" href="references.html#marshallandjesteadt1986" id="id3"><span>[MarshallAndJesteadt1986]</span></a>. C’est tout à fait possible que occasionnellement un seuil soit mesuré à un niveau plus bas que ça car la proportion de réponses « Oui » qu’on retrouve sur un petit nombre d’essais peut être bien différente que la proportion de réponses « Oui » qui sont attendues sur le long terme.</p>
+<p>La pente <span class="math notranslate nohighlight">\(\beta\)</span> règle la vitesse à laquelle la CP augmente de sa valeur la plus basse à la plus haute avec l’augmenter du niveau du stimulus. Plutôt de raisonner en termes de pente c’est souvent plus intuitif de raisonner en termes de la « largeur » de la CP (<a class="reference internal" href="references.html#alcala-quintanaandgarcia-perez2004" id="id4"><span>[Alcalá-QuintanaAndGarcía-Pérez2004]</span></a>; <a class="reference internal" href="references.html#kussetal2005" id="id5"><span>[KussEtAl2005]</span></a>), qui est corrélée de façon inverse à la pente. <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> requiert de l’utilisateur la largeur à 90% désirée de la CP pour la génération de fichiers de cas. Par exemple, une largeur de 5 dB indique que la fonction (pour un sujet virtuel avec  <span class="math notranslate nohighlight">\(\gamma = 0\)</span> and <span class="math notranslate nohighlight">\(\lambda=0\)</span>)  varie d’une probabilité de réponse « Oui » de 5% à 95% avec un changement du niveau du stimulus de 5 dB.</p>
+<p>L’asymptote inférieur, <span class="math notranslate nohighlight">\(\gamma\)</span>, représente la tendance du sujet à répondre « Oui », même en l’absence de stimulation. Cette tendance n’est pas mesurée de façon formelle dans l’audiométrie clinique <a class="reference internal" href="references.html#barr-hamiltonetal1969" id="id6"><span>[Barr-HamiltonEtAl1969]</span></a> <a class="reference internal" href="references.html#marshallandjesteadt1986" id="id7"><span>[MarshallAndJesteadt1986]</span></a>. Dans une tâche de type Oui/Non avec des essais marqués temporellement, dans lesquels un signal est présenté ou pas, elle serait équivalente au taux de fausses alarmes. Par exemple, un sujet avec un <span class="math notranslate nohighlight">\(\gamma\)</span> de 0.1 répondrait « Oui » dans 1 fois sur 10 dans des essais dans lesquels il n’y avait pas de stimulation. Sous la perspective de la théorie de la détection du signal cette tendance à répondre « Oui » traduit un critère interne qui peut être plus ou moins prudent. Bien que l’estimation de <span class="math notranslate nohighlight">\(\gamma\)</span> nécessite des essais sans signal, ce critère détermine le processus de décision aussi quand un signal est présent, donc la valeur de <span class="math notranslate nohighlight">\(\gamma\)</span> aura une influence sur la CP sous-jacente la procédure d’audiométrie clinique.</p>
+<p>L’asymptote supérieur, <span class="math notranslate nohighlight">\(\lambda\)</span>, est le taux d’inattention ; il représente la tendance du sujet à rater des réponses à cause de manques d’attention, même pour un stimulus qui est clairement audible.</p>
+<p>Lors du masquage clinique avec <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code>, l’effet du bruit est de déplacer le point médian de la CP, <em>si</em> le niveau du bruit qui arrive à la cochlée, en dB de masquage effectif (« effective masking »; EM), dépasse le point médian de la CP. Le déplacement est égal au niveau par lequel le bruit dépasse le point médian. Par exemple, si le niveau du bruit est 5 dB au dessus du point médian non masqué, le point médian masqué sera 5 dB plus haut.</p>
+<p>L’efficacité du bruit de masquage varie entre sujets ; pour cette raison une autre variable, <code class="docutils literal notranslate"><span class="pre">msk_diff</span></code>, produit un déplacement ultérieur du point médian de la CP dans la présence de bruit. <code class="docutils literal notranslate"><span class="pre">msk_diff</span></code> est tiré de façon aléatoire d’une distribution Normale avec une moyenne de 0 et une déviation standard de 3 pour chaque combinaison de fréquence/oreille lorsque des fichiers de cas sont générés. Ces valeurs sont basés sur l’observation que les différences dans l’efficacité du bruit de masquage sont de l’ordre d’environ 10 dB (cela est la raison pour laquelle une marge de sécurité de 10 dB est généralement ajoutée pour le calcul du niveau de bruit dans les formules de masquage). Il faut remarquer que <code class="docutils literal notranslate"><span class="pre">msk_diff</span></code> peut être une valeur soit positive, soit négative. Une valeur de <code class="docutils literal notranslate"><span class="pre">msk_diff</span></code> positive signifie que l’effet de masquage est plus grand de l’effet moyen (le point médian de la CP est déplacé vers le haut), tandis qu’une valeur négative de <code class="docutils literal notranslate"><span class="pre">msk_diff</span></code> indique que l’effet de masquage est plus petit de l’effet moyen (le point médian de la CP est déplacé vers le bas).</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="masking.html" class="btn btn-neutral float-left" title="Masquage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="generate_case.html" class="btn btn-neutral float-right" title="Générer des fichiers de cas" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Samuele Carcagno.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

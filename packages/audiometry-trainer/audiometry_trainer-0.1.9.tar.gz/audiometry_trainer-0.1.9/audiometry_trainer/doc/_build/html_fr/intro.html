@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; Documentation audiometry_trainer 0.1.9</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Bienvenus à la documentation de audiometry_trainer !" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            audiometry_trainer
+          </a>
+              <div class="version">
+                0.1.9
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table des matières :</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threshold_search.html">Recherche du seuil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masking.html">Masquage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtual_listener.html">Sujet virtuel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generate_case.html">Générer des fichiers de cas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_interface.html">Interface utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Fonctionnement interne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Références</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">audiometry_trainer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/intro.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<span id="sec-intro"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers cette rubrique"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> est un logiciel pour s’entraîner à l’audiométrie clinique. Le logiciel simule les réponses de patients depuis des fichiers de cas et permet de pratiquer des aspects essentiels de la procédure, y compris la recherche de seuil par voie aérienne/osseuse et le masquage clinique. La figure <a class="reference internal" href="#fig-audiometry-trainer-screenshot"><span class="std std-ref">Capture d’écran de la fenêtre principale de audiometry_trainer</span></a> affiche la fenêtre principale de <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code>. Des tutoriels vidéo sont disponible sur <a class="reference external" href="https://www.youtube.com/playlist?list=PLyfCl_MBfnRBh7CLE48BeawkZpKODle1X">Youtube.</a></p>
+<figure class="align-default" id="id1">
+<span id="fig-audiometry-trainer-screenshot"></span><a class="reference internal image-reference" href="_images/audiometry_trainer.fr.png"><img alt="Capture d'écran de la fenêtre principale de ``audiometry_trainer``" src="_images/audiometry_trainer.fr.png" style="width: 641.0px; height: 373.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Capture d’écran de la fenêtre principale de <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code></span><a class="headerlink" href="#id1" title="Lien permanent vers cette image"></a></p>
+</figcaption>
+</figure>
+<p>Au démarrage <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> sélectionne de façon aléatoire un fichier de cas de patient virtuel (vous pouvez charger d’autres cas depuis le menu <code class="docutils literal notranslate"><span class="pre">Fichier</span></code>).</p>
+<figure class="align-default" id="id2">
+<span id="fig-file-menu"></span><a class="reference internal image-reference" href="_images/file_menu.fr.png"><img alt="Fichier menu" src="_images/file_menu.fr.png" style="width: 246.0px; height: 147.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Fichier menu</span><a class="headerlink" href="#id2" title="Lien permanent vers cette image"></a></p>
+</figcaption>
+</figure>
+<p>Le marqueur <code class="docutils literal notranslate"><span class="pre">S</span></code> affiché dans la fenêtre de l’audiogramme indique la fréquence et le niveau courants du stimulus. C’est plus pratique d’effectuer la recherche du seuil avec le clavier qu’en cliquant sur des boutons avec la souris. Appuyez sur la barre d’espace pour jouer le stimulus (le <code class="docutils literal notranslate"><span class="pre">Témoin</span> <span class="pre">du</span> <span class="pre">stimulus</span></code> en bas s’allumera). Si le patient virtuel a entendu le son le <code class="docutils literal notranslate"><span class="pre">Témoin</span> <span class="pre">de</span> <span class="pre">réponse</span></code> sur la gauche s’allumera. Utilisez les flèches haut/bas du clavier pour changer le niveau du stimulus. Lorsque vous avez trouvé le seuil, marquez-le en appuyant sur la touche <code class="docutils literal notranslate"><span class="pre">T</span></code> (de l’anglais « Threshold »). Utilisez les flèches droite/gauche du clavier pour vous déplacer sur une autre fréquence.</p>
+<p>Vous pouvez comparer les seuils que vous avez mesuré avec les seuils attendus en cochant les cases sous <code class="docutils literal notranslate"><span class="pre">Affichage</span> <span class="pre">des</span> <span class="pre">vrais</span> <span class="pre">seuils</span></code> dans la partie basse du panneau de gauche. Les patients virtuels sont modelés à travers des courbes psychométriques et les « vrais » seuils sont calculés à travers des méthodes de Monte-Carlo : ils sont les seuils médians obtenus sur un large nombre de simulations ; des intervalles de confiance de 95% peuvent être affichés en cochant les cases <code class="docutils literal notranslate"><span class="pre">CI</span></code>.</p>
+<p>Vous pouvez passer de l’oreille droite à la gauche et de la stimulation en conduction aérienne à celle en conduction osseuse en sélectionnant les options souhaitées dans les menus déroulant pour le <code class="docutils literal notranslate"><span class="pre">Canal</span> <span class="pre">1</span></code> en haut du panneau de gauche. Le <code class="docutils literal notranslate"><span class="pre">Canal</span> <span class="pre">2</span></code> est utilisé pour envoyer du bruit masquant. Pour allumer le <code class="docutils literal notranslate"><span class="pre">Canal</span> <span class="pre">2</span></code> cochez la case <code class="docutils literal notranslate"><span class="pre">Can.</span> <span class="pre">2</span> <span class="pre">ON</span></code> sur le panneau de droite, un marqueur <code class="docutils literal notranslate"><span class="pre">M</span></code> dans la fenêtre de l’audiogramme affichera le niveau courant du bruit masquant. Vous pouvez utiliser la case <code class="docutils literal notranslate"><span class="pre">Niveau</span> <span class="pre">du</span> <span class="pre">can.</span> <span class="pre">2</span></code> ainsi que les flèches haut/bas à sa droite pour saisir le niveau du bruit masquant. Vous pouvez aussi « verrouiller » le <code class="docutils literal notranslate"><span class="pre">Canal</span> <span class="pre">2</span></code> au <code class="docutils literal notranslate"><span class="pre">Canal</span> <span class="pre">1</span></code> en cochant la case <code class="docutils literal notranslate"><span class="pre">Verrouiller</span> <span class="pre">les</span> <span class="pre">canaux</span></code> sur le panneau de droite : lorsque les canaux sont verrouillés, des augmentations/baisses du niveau du stimulus d’une taille donné déclencheront automatiquement des changements du niveau du masqueur de la même taille.</p>
+<p>Une description détaillée de toutes les fonctionnalités de <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> sera donne dans les sections suivantes. La Section <a class="reference internal" href="installation.html#sec-installation"><span class="std std-ref">Installation</span></a> explique comment obtenir et installer <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code>. Les sections <a class="reference internal" href="threshold_search.html#sec-threshold-search"><span class="std std-ref">Recherche du seuil</span></a> and <a class="reference internal" href="masking.html#sec-masking"><span class="std std-ref">Masquage</span></a> expliquent comment faire une recherche de seuil et comment utiliser le masquage, respectivement.</p>
+<p><code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> utilise des courbes psychométriques pour modéliser les réponses des patients virtuels. Les réponses ne sont pas déterministes (toujours oui/non au dessus/dessous d’un certain niveau de stimulation) mais probabilistes, avec une probabilité de réponse croissante en fonction du niveau de stimulation. Cela rends le logiciel plus réaliste car dans la vie réelle les réponses des patients ne sont pas déterministes. La section <a class="reference internal" href="virtual_listener.html#sec-virtual-listener"><span class="std std-ref">Sujet virtuel</span></a> détaille le modèle de courbe psychométrique utilisé par <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> vous permet de générer et utiliser vous propres fichiers de cas. Vous pouvez accéder à cette fonctionnalité à travers l’action <code class="docutils literal notranslate"><span class="pre">Générer</span> <span class="pre">un</span> <span class="pre">cas</span></code> sous le menu <code class="docutils literal notranslate"><span class="pre">Fichier</span></code> et ça sera illustré en détails dans la Section <a class="reference internal" href="generate_case.html#sec-generate-case"><span class="std std-ref">Générer des fichiers de cas</span></a>. Quelques connaissances du modèle de fonction psychométrique utilisé par <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> seront nécessaires pour la création de vos propres fichiers de cas.</p>
+<p>La Section <a class="reference internal" href="user_interface.html#sec-user-interface"><span class="std std-ref">Interface utilisateur</span></a> couvre en détail toute l’interface utilisateur. La Section <a class="reference internal" href="internals.html#sec-internals"><span class="std std-ref">Fonctionnement interne</span></a> décrits quelques aspects du fonctionnement interne du logiciel et est adressée aux développeurs plutôt qu’aux utilisateurs du logiciel.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="index.html" class="btn btn-neutral float-left" title="Bienvenus à la documentation de audiometry_trainer !" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Samuele Carcagno.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

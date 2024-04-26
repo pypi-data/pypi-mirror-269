@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masquage &mdash; Documentation audiometry_trainer 0.1.9</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Sujet virtuel" href="virtual_listener.html" />
+    <link rel="prev" title="Recherche du seuil" href="threshold_search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            audiometry_trainer
+          </a>
+              <div class="version">
+                0.1.9
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table des matières :</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threshold_search.html">Recherche du seuil</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Masquage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#interaural-attenuation">Atténuation interaurale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#occlusion-effect">Effet d’occlusion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#measuring-the-occlusion-effect">Mesurer l’effet d’occlusion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#central-masking">Masquage central</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="virtual_listener.html">Sujet virtuel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generate_case.html">Générer des fichiers de cas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_interface.html">Interface utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Fonctionnement interne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Références</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">audiometry_trainer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Masquage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/masking.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="masking">
+<span id="sec-masking"></span><h1>Masquage<a class="headerlink" href="#masking" title="Lien permanent vers cette rubrique"></a></h1>
+<p>Pour masquer l’oreille non testée (ONT) pendant l’audiométrie par conduction aérienne fixez le <code class="docutils literal notranslate"><span class="pre">Niveau</span> <span class="pre">du</span> <span class="pre">can.</span> <span class="pre">2</span></code> à la valeur que vous souhaitez et assurez-vous que la case <code class="docutils literal notranslate"><span class="pre">Can.</span> <span class="pre">2</span> <span class="pre">ON</span></code> soit cochée.</p>
+<p>Pour le masquage pendant l’audiométrie en conduction osseuse, en outre, assurez-vous que l” <code class="docutils literal notranslate"><span class="pre">État</span> <span class="pre">de</span> <span class="pre">l'oreille</span> <span class="pre">non</span> <span class="pre">testée</span></code> soit <code class="docutils literal notranslate"><span class="pre">Écouter</span> <span class="pre">sur</span> <span class="pre">l'oreille</span></code> (sinon le logiciel estime que le bruit est envoyé à l’écouter, mais que l’écouter n’est pas sur/dans l’oreille du sujet, par conséquent le bruit n’arrive pas à l’oreille du sujet). <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> mets en automatique l” <code class="docutils literal notranslate"><span class="pre">État</span> <span class="pre">de</span> <span class="pre">l'oreille</span> <span class="pre">non</span> <span class="pre">testée</span></code> sur <code class="docutils literal notranslate"><span class="pre">Écouter</span> <span class="pre">sur</span> <span class="pre">l'oreille</span></code> quand vous cochez la case <code class="docutils literal notranslate"><span class="pre">Can.</span> <span class="pre">2</span> <span class="pre">ON</span></code>. Cette petite complication dans le masquage en conduction osseuse est due au fait que <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> vous permet de tester le seuils par CO soit avec l’ONT nue, soit avec l’ONT couverte par l’écouter sans que l’écouter envoie du bruit. Cela est utile pour mesurer l’effet d’occlusion (voir <a class="reference internal" href="#subsubsec-measure-oe"><span class="std std-ref">Mesurer l’effet d’occlusion</span></a>).</p>
+<p>La case <code class="docutils literal notranslate"><span class="pre">Verrouiller</span> <span class="pre">les</span> <span class="pre">canaux</span></code> peut être utilisée pour « verrouiller » l’oreille testée (OT) et l’ONT de façon que des changements de niveau du signal envoyé à l’OT changent aussi le niveau du bruit envoyé à l’ONT.</p>
+<section id="interaural-attenuation">
+<h2>Atténuation interaurale<a class="headerlink" href="#interaural-attenuation" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Le valeurs d’atténuation interaurale (AI) pour le casque supra-aural et pour l” écouter de type insert sont tirés de façon aléatoire d’une distribution uniforme. Les limites inférieure et supérieure et de cette distribution sont spécifiques à chaque fréquence et sont basés sur les valeurs publiés par <a class="reference internal" href="references.html#munroandagnew1999" id="id2"><span>[MunroAndAgnew1999]</span></a>. Pour les fréquences qui n’ont pas été testées par <a class="reference internal" href="references.html#munroandagnew1999" id="id1"><span>[MunroAndAgnew1999]</span></a> les valeurs d’un fréquence proche ont été utilisées. Les limites inférieure et supérieure de cette distribution en fonction de la fréquence sont affichées dans le tableau <a class="reference internal" href="#table-ia-supra">table-IA_supra</a> pour le casque supra-aural et dans le tableau <a class="reference internal" href="#table-ia-insert">table-IA_insert</a> pour l’écouter insert.</p>
+<span id="table-ia-supra"></span><table class="docutils align-default" id="id16">
+<caption><span class="caption-number">Tableau 1 </span><span class="caption-text">Limites inférieure et supérieure de la distribution uniforme pour l’atténuation interaurale pour le casque supra-aural.</span><a class="headerlink" href="#id16" title="Lien permanent vers ce tableau"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Fréq.</p></th>
+<th class="head"><p>Inférieur</p></th>
+<th class="head"><p>Supérieur</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>125 Hz</p></td>
+<td><p>48</p></td>
+<td><p>74</p></td>
+</tr>
+<tr class="row-odd"><td><p>250 Hz</p></td>
+<td><p>48</p></td>
+<td><p>74</p></td>
+</tr>
+<tr class="row-even"><td><p>500 Hz</p></td>
+<td><p>44</p></td>
+<td><p>74</p></td>
+</tr>
+<tr class="row-odd"><td><p>750 Hz</p></td>
+<td><p>44</p></td>
+<td><p>74</p></td>
+</tr>
+<tr class="row-even"><td><p>1000 Hz</p></td>
+<td><p>48</p></td>
+<td><p>72</p></td>
+</tr>
+<tr class="row-odd"><td><p>1500 Hz</p></td>
+<td><p>48</p></td>
+<td><p>72</p></td>
+</tr>
+<tr class="row-even"><td><p>2000 Hz</p></td>
+<td><p>44</p></td>
+<td><p>74</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000 Hz</p></td>
+<td><p>56</p></td>
+<td><p>82</p></td>
+</tr>
+<tr class="row-even"><td><p>4000 Hz</p></td>
+<td><p>50</p></td>
+<td><p>82</p></td>
+</tr>
+<tr class="row-odd"><td><p>6000 Hz</p></td>
+<td><p>44</p></td>
+<td><p>82</p></td>
+</tr>
+<tr class="row-even"><td><p>8000 Hz</p></td>
+<td><p>42</p></td>
+<td><p>80</p></td>
+</tr>
+</tbody>
+</table>
+<span id="table-ia-insert"></span><table class="docutils align-default" id="id17">
+<caption><span class="caption-number">Tableau 2 </span><span class="caption-text">Limites inférieure et supérieure de la distribution uniforme pour l’atténuation interaurale pour l’écouter insert.</span><a class="headerlink" href="#id17" title="Lien permanent vers ce tableau"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Fréq.</p></th>
+<th class="head"><p>Inférieur</p></th>
+<th class="head"><p>Supérieur</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>125 Hz</p></td>
+<td><p>72</p></td>
+<td><p>103</p></td>
+</tr>
+<tr class="row-odd"><td><p>250 Hz</p></td>
+<td><p>72</p></td>
+<td><p>103</p></td>
+</tr>
+<tr class="row-even"><td><p>500 Hz</p></td>
+<td><p>64</p></td>
+<td><p>96</p></td>
+</tr>
+<tr class="row-odd"><td><p>750 Hz</p></td>
+<td><p>64</p></td>
+<td><p>96</p></td>
+</tr>
+<tr class="row-even"><td><p>1000 Hz</p></td>
+<td><p>58</p></td>
+<td><p>86</p></td>
+</tr>
+<tr class="row-odd"><td><p>1500 Hz</p></td>
+<td><p>58</p></td>
+<td><p>86</p></td>
+</tr>
+<tr class="row-even"><td><p>2000 Hz</p></td>
+<td><p>56</p></td>
+<td><p>82</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000 Hz</p></td>
+<td><p>58</p></td>
+<td><p>96</p></td>
+</tr>
+<tr class="row-even"><td><p>4000 Hz</p></td>
+<td><p>72</p></td>
+<td><p>98</p></td>
+</tr>
+<tr class="row-odd"><td><p>6000 Hz</p></td>
+<td><p>54</p></td>
+<td><p>96</p></td>
+</tr>
+<tr class="row-even"><td><p>8000 Hz</p></td>
+<td><p>62</p></td>
+<td><p>82</p></td>
+</tr>
+</tbody>
+</table>
+<p>Les valeurs d’AI pour la conduction osseuse (CO) sont tirées pour chaque cas d’une distribution uniforme. Les limites inférieure et supérieure de cette distribution en fonction de la fréquence sont affichées dans le tableau <a class="reference internal" href="#table-ia-bone">table-IA_bone</a>. Ces valeurs sont basé sur l’observation que l’AI pour la stimulation en CO est essentiellement néante à 250 Hz et augmente jusqu’à environ 15 dB à 4000 Hz (<a class="reference internal" href="references.html#studebaker1967" id="id3"><span>[Studebaker1967]</span></a>; <a class="reference internal" href="references.html#gelfand2016" id="id4"><span>[Gelfand2016]</span></a>). Des données plus nuancées sur l’AI en CO ont été publiées <a class="reference internal" href="references.html#stenfelt2012" id="id5"><span>[Stenfelt2012]</span></a> et pourraient être intégrées à des versions futurs de <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code>.</p>
+<span id="table-ia-bone"></span><table class="docutils align-default" id="id18">
+<caption><span class="caption-number">Tableau 3 </span><span class="caption-text">Limites inférieure et supérieure de la distribution uniforme pour l’atténuation interaurale en conduction osseuse.</span><a class="headerlink" href="#id18" title="Lien permanent vers ce tableau"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Fréq.</p></th>
+<th class="head"><p>Inférieur</p></th>
+<th class="head"><p>Supérieur</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>125 Hz</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>250 Hz</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>500 Hz</p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>750 Hz</p></td>
+<td><p>0</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>1000 Hz</p></td>
+<td><p>0</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>1500 Hz</p></td>
+<td><p>0</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>2000 Hz</p></td>
+<td><p>0</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000 Hz</p></td>
+<td><p>0</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>4000 Hz</p></td>
+<td><p>0</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-odd"><td><p>6000 Hz</p></td>
+<td><p>0</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-even"><td><p>8000 Hz</p></td>
+<td><p>0</p></td>
+<td><p>15</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="occlusion-effect">
+<h2>Effet d’occlusion<a class="headerlink" href="#occlusion-effect" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Pour des cas sans perte de transmission la taille de l’effet d’occlusion (EO) est tirée de façon aléatoire pour chaque cas d’une distribution uniforme. Les limites inférieure et supérieure de cette distribution en fonction de la fréquence sont affichées dans le tableau <a class="reference internal" href="#table-oe-supra">table-OE_supra</a> pour un casque supra-aural et dans le tableau <a class="reference internal" href="#table-oe-insert">table-OE_insert</a> pour un écouter insert. Ces valeurs ont été choisies pour s’approcher à la gamme des valeurs publiées dans plusieurs études et résumées par <a class="reference internal" href="references.html#gelfand2016" id="id6"><span>[Gelfand2016]</span></a>.</p>
+<span id="table-oe-supra"></span><table class="docutils align-default" id="id19">
+<caption><span class="caption-number">Tableau 4 </span><span class="caption-text">Limites inférieure et supérieure de la distribution uniforme pour l’l’effet d’occlusion pour casque supra-aural. Pour des fréquences &gt; 1000 Hz l’effet d’occlusion est toujours néant.</span><a class="headerlink" href="#id19" title="Lien permanent vers ce tableau"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Fréq.</p></th>
+<th class="head"><p>Inférieur</p></th>
+<th class="head"><p>Supérieur</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>125 Hz</p></td>
+<td><p>15</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-odd"><td><p>125 Hz</p></td>
+<td><p>15</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-even"><td><p>500 Hz</p></td>
+<td><p>8</p></td>
+<td><p>26</p></td>
+</tr>
+<tr class="row-odd"><td><p>750 Hz</p></td>
+<td><p>8</p></td>
+<td><p>26</p></td>
+</tr>
+<tr class="row-even"><td><p>1000 Hz</p></td>
+<td><p>4</p></td>
+<td><p>12</p></td>
+</tr>
+</tbody>
+</table>
+<span id="table-oe-insert"></span><table class="docutils align-default" id="id20">
+<caption><span class="caption-number">Tableau 5 </span><span class="caption-text">Limites inférieure et supérieure de la distribution uniforme pour l’effet d’occlusion pour l’écouter insert. Pour des fréquences &gt; 1000 Hz l’effet d’occlusion est toujours zéro.</span><a class="headerlink" href="#id20" title="Lien permanent vers ce tableau"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Fréq.</p></th>
+<th class="head"><p>Inférieur</p></th>
+<th class="head"><p>Supérieur</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>125 Hz</p></td>
+<td><p>2</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>125 Hz</p></td>
+<td><p>2</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>500 Hz</p></td>
+<td><p>2</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>750 Hz</p></td>
+<td><p>2</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>1000 Hz</p></td>
+<td><p>2</p></td>
+<td><p>10</p></td>
+</tr>
+</tbody>
+</table>
+<p>L’EO est absent en présence d’une perte de transmission/mixte avec un Rinne &gt; 20 dB <a class="reference internal" href="references.html#martinetal1974" id="id7"><span>[MartinEtAl1974]</span></a>. Pour cette raison, s’il y a un Rinne &gt;= 20 dB l’EO est fixée à zéro. Pour un Rinne entre 0 et 10 dB la taille de l’OE est ajustée par rapport au Rinne avec l’équation suivante :</p>
+<div class="math notranslate nohighlight" id="occlusion-effect-scaling-by-the-air-bone-gap">
+<span id="equation-occlusion-effect-scaling-by-the-air-bone-gap"></span><span class="eqno">(1)<a class="headerlink" href="#occlusion-effect-scaling-by-the-air-bone-gap" title="Lien permanent vers cette équation"></a></span>\[OE_{out} = OE_{inp} - OE_{inp} (ABG/20)\]</div>
+<p>où <span class="math notranslate nohighlight">\(OE_{inp}\)</span>  est l’OE avant l’ajustement et <span class="math notranslate nohighlight">\(OE_{out}\)</span> est l’OE après l’ajustement. Cela implique que l’OE est réduit de façon progressive avec l’augmenter du Rinne, arrivant à zéro pour un Rinne de 20 dB.</p>
+<p>L’EO affectera le niveau du signal qui arrive à l’ONT quand on masque pour le test en CO <a class="reference internal" href="references.html#gelfand2016" id="id8"><span>[Gelfand2016]</span></a>. Une chose qui n’est pas souvent mentionnée est que l’EO, ou plus précisément la manque d’EO quand l’OT n’est pas couverte pendant le test en CO, affectera le calcul du niveau du bruit qui arrivera à l’OT. Les valeurs d’AI pour les casques/inserts utilisés pour envoyer le bruit masquant à l’ONT sont basés sur la supposition que les deux oreilles sont couvertes avec le casque/insert. Si cela n’est pas le cas pour une oreille, l’AI pour des sons qui arrivent à cette oreille est augmentée de la taille de l’EO (<a class="reference internal" href="references.html#yacullo1997" id="id9"><span>[Yacullo1997]</span></a>,  <a class="reference internal" href="references.html#turner2004" id="id10"><span>[Turner2004]</span></a>). Cela signifie que pour des sons graves, qui sont concernés par ces effets, tandis que l’EO augmente le niveau minimal du bruit masquant (car le niveau du signal est accru à l’ONT), cette augmentation est « compensée » d’une certaine façon par une augmentation parallèle du niveau maximal du bruit masquant (car l’AI pour le bruit sera plus grande).</p>
+<section id="measuring-the-occlusion-effect">
+<span id="subsubsec-measure-oe"></span><h3>Mesurer l’effet d’occlusion<a class="headerlink" href="#measuring-the-occlusion-effect" title="Lien permanent vers cette rubrique"></a></h3>
+<p>Certains auteurs (par ex. <a class="reference internal" href="references.html#gelfand2016" id="id11"><span>[Gelfand2016]</span></a>) recommandent de mesurer l’EO pour chaque sujet pour fixer la valeur à utiliser dans les formules de masquage. Cela peut se faire en mesurant le seuil en CO pendant que le casque est placé sur l’ONT , mais sans que du bruit soit envoyé avec ce casque. Le seuil obtenu dans cette condition « avec casque » peut ensuite être comparé à celui obtenu avec l’ONT nue pour estimer la taille de l’EO <a class="reference internal" href="references.html#martinetal1974" id="id12"><span>[MartinEtAl1974]</span></a>. Pour obtenir de seuils en CO avec l’ONT couverte par le casque, mais sans que ce dernier envoie du bruit, dans <code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> vous devez mettre l” <code class="docutils literal notranslate"><span class="pre">État</span> <span class="pre">de</span> <span class="pre">l'oreille</span> <span class="pre">non</span> <span class="pre">testée</span></code> sur l’option <code class="docutils literal notranslate"><span class="pre">Écouter</span> <span class="pre">sur</span> <span class="pre">l'oreille</span></code> et vous assurer que la case <code class="docutils literal notranslate"><span class="pre">Can.</span> <span class="pre">2</span> <span class="pre">ON</span></code> ne soit pas cochée. La taille de l’effet d’occlusion mesurée de cette façon dépendra du transducteur sélectionné pour le <code class="docutils literal notranslate"><span class="pre">Canal</span> <span class="pre">2</span></code> (casque supra-aural ou écouter insert), donc assurez-vous d’avoir sélectionné le même transducteur que vous allez utiliser plus tard pour le masquage.</p>
+<p>Une limitation de cette technique est que dans certains cas elle peut sous-estimer la taille de l’EO (<a class="reference internal" href="references.html#fagelsonandmartin1994" id="id13"><span>[FagelsonAndMartin1994]</span></a>; <a class="reference internal" href="references.html#yacullo1997" id="id14"><span>[Yacullo1997]</span></a>). Cela peut arriver dans le cas d’un sujet avec un seuil en CO pour l’ONT qui est proche de la limite inférieure de la sortie de l’ossivibrateur. Par exemple, si le sujet a un seuil en CO proche de 0 dB HL et l’ossivibrateur a une limite de sortie inférieure de -20 dB HL, des EOs supérieurs à 20 dB seraient sous-estimés. Cela peut aussi arriver si le seuil en CO de l’OT est inférieur au seuil en CO de l’ONT. Par exemple, supposez que le seuil en CO de l’OT est de 20 dB HL, celui de l’ONT de 30 dB HL, et que l’EO de l’ONT est de 30 dB. Le seuil mesuré dans la condition oreille nue sera de 20 dB HL et lorsque le casque est placé sur l’ONT le seuil mesuré sera de 0 dB HL ; la différence entre les deux, l’estimation de l’EO, sera de 20 dB plutôt que du vrai EO de 30 dB. Si le masquage est utilisé juste pour confirmer que le seuil en CO non masqué est authentique, la sous-estimation de l’EO n’aura pas de conséquences ; l’OT avait le seuils le plus bas du départ, donc un sous-masquage confirmera simplement, « d’une façon incorrecte », la bonne décision que le seuil mesure venait de l’OT. Si l’EO estimé est utilisé pour une véritable recherche du seuil, le seuil masqué en CO de l’OT pourrait être plus bas que celui non-masqué car l’ONT sera souns-masquée.</p>
+</section>
+</section>
+<section id="central-masking">
+<h2>Masquage central<a class="headerlink" href="#central-masking" title="Lien permanent vers cette rubrique"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">audiometry_trainer</span></code> simule les effets de masquage central en augmentant le seuil de l’oreille testée quand le niveau du bruit masquant dans l’oreille non testée est audible au patient virtuel. La taille de cet effet de masquage central est tirée de façon aléatoire pour chaque sujet virtuel et chaque fréquence d’une distribution normale repliée avec une moyenne de zéro et une déviation standard de 3. Cela est basé sur l’observation que les effets de masquage central sont typiquement petits, de l’ordre de 5 dB <a class="reference internal" href="references.html#yacullo1997" id="id15"><span>[Yacullo1997]</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="threshold_search.html" class="btn btn-neutral float-left" title="Recherche du seuil" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="virtual_listener.html" class="btn btn-neutral float-right" title="Sujet virtuel" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Samuele Carcagno.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
