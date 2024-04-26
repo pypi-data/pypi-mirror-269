@@ -1,0 +1,4 @@
+django-nested-modals
+qrcode
+django-otp
+webauthn>=2.0.0
