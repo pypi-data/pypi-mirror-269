@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: wheelz-idp-validations
+Version: 0.1
+Summary: Validation for spasnish documents
+Project-URL: Homepage, https://github.com/albertvazquezm/wheelz-idp-validations
+Project-URL: Issues, https://github.com/albertvazquezm/wheelz-idp-validationsissues
+Author: Lluis
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# wheelz-data-validations
