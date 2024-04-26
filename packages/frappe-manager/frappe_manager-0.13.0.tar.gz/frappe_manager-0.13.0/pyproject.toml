@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "frappe-manager"
+version = "0.13.0"
+license = "MIT"
+repository = "https://github.com/rtcamp/frappe-manager"
+description = "A CLI tool based on Docker Compose to easily manage Frappe based projects. As of now, only suitable for development in local machines running on Mac and Linux based OS."
+authors = ["rtCamp <sys@rtcamp.com>"]
+maintainers = ["Alok Singh <alok.singh@rtcamp.com>"]
+documentation = "https://github.com/rtcamp/frappe-manager/wiki"
+readme = "README.md"
+
+[tool.black]
+line-length = 150
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/rtcamp/frappe-manager/issues"
+
+[tool.poetry.scripts]
+fm = "frappe_manager.main:cli_entrypoint"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.9.0"}
+requests = "^2.31.0"
+psutil = "^5.9.6"
+ruamel-yaml = "^0.18.5"
+tomlkit = "^0.12.3"
+certbot = "^2.9.0"
+pydantic = "^2.6.4"
+email-validator = "^2.1.1"
+jinja2 = "^3.1.3"
+
+[tool.pyright]
+reportOptionalMemberAccess = false
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
