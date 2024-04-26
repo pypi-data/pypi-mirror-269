@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: splitml
+Version: 0.4.5
+Summary: Split Markup Language (HTML and Markdown) to Groups and Nodes
+Author: Hansimov
+Project-URL: Homepage, https://github.com/Hansimov/splitml
+Project-URL: Issues, https://github.com/Hansimov/splitml/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: purehtml
+Requires-Dist: markdown2
+Requires-Dist: beautifulsoup4
+Requires-Dist: tiktoken
+
+# SplitML
+
+Split Markup Language (HTML and Markdown) to Groups and Nodes
+
+![](https://img.shields.io/pypi/v/splitml?label=splitml&color=blue)
+
+## Install
+
+```sh
+pip install --upgrade splitml
+```
+
+## Usage
+
+```python
+from splitml import HTMLSplitter, NodesGrouper, stat_tokens
+
+html_root = Path(__file__).parent / "samples"
+html_paths = sorted(list(html_root.glob("*.md.html")))[:2]
+splitter = HTMLSplitter()
+grouper = NodesGrouper()
+for html_path in html_paths:
+    # print(f"> Processing: {html_path}")
+    nodes = splitter.split_html_file(html_path)
+    # print(f"  - {len(nodes)} doc nodes.")
+    stat_tokens(nodes)
+    grouped_nodes = grouper.group_nodes(nodes)
+    # print(f"  - {len(grouped_nodes)} doc groups.")
+    stat_tokens(grouped_nodes)
+```
+
+## Classes
+
+```python
+class HTMLSplitter:
+    ...
+
+class NodesGrouper:
+    ...
+```
+
+## Functions
+
+```python
+def split_html_str(html_str: str):
+    ...
+
+def split_html_file(html_path: Union[Path, str]):
+    ...
+
+def chunk_html_str(html_str: str):
+    ...
+
+def chunk_html_file(html_path: Union[Path, str]):
+    ...
+```
+
+```python
+def count_tokens(text):
+    ...
+
+def stat_tokens(nodes, console_abnormal=False):
+    ...
+```
