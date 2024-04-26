@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ttclust
+Version: 4.10.4
+Summary: TTclust : A molecular simulation clustering program
+Home-page: https://github.com/tubiana/TTClust
+Author: Thibault Tubiana
+Author-email: tubiana.thibault@gmail.com
+License: GPL3
+Platform: Linux
+Platform: Solaris
+Platform: Mac OS-X
+Platform: darwin
+Platform: Unix
+Platform: win32
+License-File: LICENSE
+Requires-Dist: argparse
+Requires-Dist: argcomplete
+Requires-Dist: cython
+Requires-Dist: progressbar2
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: prettytable
+Requires-Dist: pandas
+Requires-Dist: scipy>=0.18
+Requires-Dist: scikit-learn
+Requires-Dist: numba
+Requires-Dist: mdtraj>=1.7
