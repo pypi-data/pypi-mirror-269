@@ -1,0 +1,1 @@
+A light package build on scikit-learn, which is used for machine learning missions.By using it, you could conveniently train and use models at the same time, and do some model comparison.
