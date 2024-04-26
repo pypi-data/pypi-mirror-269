@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: uyghur-tili-quralliri
+Version: 0.1.2
+Summary: uyghur language writing and processing tool box ...
+Home-page: https://github.com/kompasim/uyghur-tili-quralliri
+Author: kompasim
+Author-email: kompasim@163.com
+License: MIT Licence
+Keywords: uyghur,uighur,til,yeziq,qural,language,tools
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Uyghur Language Tools
+
+## 0. Description
+
+> a tool box including some useful functions to handle with uyghur writing ...
+
+## 1. Installing
+
+```cmd
+pip install -g uyghur-tili-quralliri
+```
+
+## 2. Usage
+
+```python
+from UyghurLanguageTools import UyghurLanguageTools as Tools
+Tools.main()
+# Uyghur Language Tools (0.1), for more infomation please visit ...
+origin = "merhaba"
+print(origin)
+# merhaba
+target = Tools.toExtended(origin)
+print(target)
+# mer ha ba
+```
+
+## 3. others
+
+> for more information please visit [github](https://github.com/kompasim/uyghur-tili-quralliri).
