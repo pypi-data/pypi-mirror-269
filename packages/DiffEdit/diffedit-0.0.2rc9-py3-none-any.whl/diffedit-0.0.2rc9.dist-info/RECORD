@@ -1,0 +1,15 @@
+diff_edit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+diff_edit/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+diff_edit/model/constants.py,sha256=JawJVo7oh8yuiY2JNzI10f6TsyrBPjTK0JL2bWqMP1U,57
+diff_edit/model/diff_edit_model.py,sha256=9xC2fec_lr9cnbw-l6icrKuADPFuWJXi1es7E40AY7E,10994
+diff_edit/model/image_processing.py,sha256=X3RZd4dq3XkUCsK7nLBTUFR3xWMlKIU4NsDlzkPVDwY,2243
+diff_edit/model/mask_generation.py,sha256=peAEO48CvyFf-bWmq82qoitVPYxkg7Z350_uFto6YeU,8789
+diff_edit/model/mask_inpainting.py,sha256=RtXdtSbLC8-3dCh9_EkZBx-WIyyYZP-6st3R1ira5kQ,852
+diff_edit/model/model_composer.py,sha256=YvZqsRSUskAeQkZPV3gYp8mIExrqtS2dn3KBkNhQae0,3833
+diff_edit/scripts/image_edit.py,sha256=zmiPfvUpMwse9lzaJEAwnya0hvRt7IBSZJs2NXlCLrA,7609
+diff_edit/scripts/mask.png,sha256=MfqMjxEv2T5k5Q7bI_sM9lM7lyApbwSh--ABDkqj2po,434756
+diff_edit/scripts/result.png,sha256=WlVqnTmaa879TnwHYNrW_BE6I-PWZpu9Tz4cHkhfC5A,491401
+diffedit-0.0.2rc9.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+diffedit-0.0.2rc9.dist-info/METADATA,sha256=DxUm9PV2cRI93NpOlTeCJjaIZJDBOPVH7U5FsZg6M8w,7827
+diffedit-0.0.2rc9.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+diffedit-0.0.2rc9.dist-info/RECORD,,
