@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../pc_generic_datascience_scripts/.idea/pc_generic_datascience_scripts.iml" filepath="$PROJECT_DIR$/../pc_generic_datascience_scripts/.idea/pc_generic_datascience_scripts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pricecypher_python_sdk.iml" filepath="$PROJECT_DIR$/.idea/pricecypher_python_sdk.iml" />
+    </modules>
+  </component>
+</project>
