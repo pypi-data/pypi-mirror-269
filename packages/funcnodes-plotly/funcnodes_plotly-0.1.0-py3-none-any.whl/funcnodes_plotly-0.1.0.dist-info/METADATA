@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: funcnodes-plotly
+Version: 0.1.0
+Summary: 
+Author: Julian Kimmig
+Author-email: julian.kimmig@gmx.net
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: funcnodes (>=0.1.40,<0.2.0)
+Requires-Dist: plotly (>=5.21.0,<6.0.0)
+Description-Content-Type: text/markdown
+
+
