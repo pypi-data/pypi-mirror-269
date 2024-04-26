@@ -1,0 +1,9 @@
+base58
+aioflureedb>=0.6.4
+requests<=2.28.1
+
+[docker]
+docker
+
+[domainapi]
+jsonata>=0.2.3

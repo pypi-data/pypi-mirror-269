@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: fsst
+Version: 0.8.12
+Summary: Fluree Schema Scenario Tool
+Home-page: https://github.com/dlosatoes/fluree-schema-scenario-tool
+Author: Rob Meijer
+Author-email: pibara@gmail.com
+License: BSD
+Keywords: flureedb fluree flureeql
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Requires-Dist: base58
+Requires-Dist: aioflureedb>=0.6.4
+Requires-Dist: requests<=2.28.1
+Provides-Extra: domainapi
+Requires-Dist: jsonata>=0.2.3; extra == "domainapi"
+Provides-Extra: docker
+Requires-Dist: docker; extra == "docker"
+
+Testing tool for schema and smart function unit tests for FlureeDB
