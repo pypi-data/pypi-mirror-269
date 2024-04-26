@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cardpydentity
+Version: 0.1.0
+Summary: Python package for identifying Pokemon/MTG cards from auction titles
+Home-page: https://github.com/bapcon/cardpydentity
+Author: Benjamin Perkins
+License: MIT
+Keywords: collectibles,identifier,pokemon,magic the gathering
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: fuzzywuzzy
+Requires-Dist: python-Levenshtein
+Requires-Dist: openai
+Requires-Dist: appdirs

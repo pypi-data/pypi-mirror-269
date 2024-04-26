@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+cardpydentity/__init__.py
+cardpydentity/fuzzy.py
+cardpydentity/gpt.py
+cardpydentity/helpers.py
+cardpydentity/load.py
+cardpydentity/matcher.py
+cardpydentity.egg-info/PKG-INFO
+cardpydentity.egg-info/SOURCES.txt
+cardpydentity.egg-info/dependency_links.txt
+cardpydentity.egg-info/requires.txt
+cardpydentity.egg-info/top_level.txt
