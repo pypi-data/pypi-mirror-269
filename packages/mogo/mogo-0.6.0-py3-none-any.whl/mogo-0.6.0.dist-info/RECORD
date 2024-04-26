@@ -1,0 +1,13 @@
+mogo/__init__.py,sha256=_X60XbKrGMj_1j7oR9LoYhcxcXePr-3-u8KjajUcPMA,558
+mogo/connection.py,sha256=_9PKmoZjjpS73UlEBT6uVWGF2GoliuklwJZwJyCVWmU,4161
+mogo/cursor.py,sha256=_H5fXhG_1Do4capx7bPNYb2YkXjkwWnr3UMlfcQyMFo,4174
+mogo/decorators.py,sha256=DZuSPTagcsKUgFnm38e-Z1x7ljJpcoBpkNqbLOn3nIQ,761
+mogo/field.py,sha256=fEl5lUgvFJMJf0KuygOzwEJSJZUngU-_Dr8APMjT0fM,9070
+mogo/helpers.py,sha256=K9L6JVIBQgyiSC8vGFU3Vl8ISjhWE-LleICbwFL_DsI,264
+mogo/model.py,sha256=QbHGSUMyVM6WRHJg_OfIU2nrLPdrd2PK2Fpl5qs39ds,25932
+mogo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mogo-0.6.0.dist-info/LICENSE.txt,sha256=8q_SGAyD_CufqtdBWZ3-IJX9JVffLkeYc7-Hr2LPER0,524
+mogo-0.6.0.dist-info/METADATA,sha256=NVgVKaCNtZOhguRhw6kVPgujLElyoiG-X7YCEkrGqVs,313
+mogo-0.6.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mogo-0.6.0.dist-info/top_level.txt,sha256=-wPvSbeXl4be2iaaK05hORFl4QMy4v18iqbJNlMnvjk,5
+mogo-0.6.0.dist-info/RECORD,,
