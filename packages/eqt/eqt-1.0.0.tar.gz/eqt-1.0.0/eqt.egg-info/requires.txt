@@ -1,0 +1,7 @@
+pyside2
+qdarkstyle
+
+[dev]
+pytest>=6
+pytest-cov
+pytest-timeout
