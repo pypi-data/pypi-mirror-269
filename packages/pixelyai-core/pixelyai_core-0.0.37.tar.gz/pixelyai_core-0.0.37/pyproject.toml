@@ -1,0 +1,62 @@
+[project]
+
+name = "pixelyai-core"
+version = "0.0.37"
+
+authors = [
+    { name = "Erfan Zare Chavoshi", email = "Erfanzare810@gmail.com" }
+]
+requires-python = ">=3.8"
+
+readme = "README.md"
+
+dependencies = [
+    "typing~=3.7.4.3",
+    "ipython~=8.17.2",
+    "tqdm~=4.64.1",
+    "pydantic==2.5.3",
+    "setuptools~=68.1.2",
+    "gradio~=4.18.0",
+    "numpy~=1.26.2",
+    "uvicorn~=0.23.2",
+    "fastapi==0.110.1",
+    "pydantic-core==2.14.6",
+    "requests~=2.31.0",
+    "transformers>=4.36.1",
+    "huggingface-hub>=0.20.1",
+    "absl-py==2.0.0",
+    "Jinja2~=3.1.2",
+    "agentx"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+description = "PixelyAI Serve Engine"
+
+[project.urls]
+
+Homepage = "https://github.com/erfanzar/PixelyAI"
+Issues = "https://github.com/erfanzar/PixelyAI/issues"
+Documentation = "https://erfanzar.github.io/PixelyAI"
+
+[build-system]
+
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pixelyai_core"]
+package-dir = { "" = "src" }
+
+[tool.setuptools.package-data]
+"pixelyai_core" = ["**/*.jinja2", "**/*.py"]
