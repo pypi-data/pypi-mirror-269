@@ -1,0 +1,8 @@
+setup.py
+numeroPrimo/__init__.py
+numeroPrimo/primo.py
+numeroPrimo/test.py
+verificanumeroprimo.egg-info/PKG-INFO
+verificanumeroprimo.egg-info/SOURCES.txt
+verificanumeroprimo.egg-info/dependency_links.txt
+verificanumeroprimo.egg-info/top_level.txt
