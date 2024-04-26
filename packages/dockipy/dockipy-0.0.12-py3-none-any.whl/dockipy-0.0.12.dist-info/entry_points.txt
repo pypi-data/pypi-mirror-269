@@ -1,0 +1,9 @@
+[console_scripts]
+docki = dockipy.utils:docki
+dockibook = dockipy.dockibook:dockibook
+dockikill = dockipy.utils:dockikill
+dockipy = dockipy.dockipy:dockipy
+dockishell = dockipy.dockishell:dockishell
+dockistop = dockipy.utils:dockistop
+envibook = dockipy.envibook:envibook
+envipy = dockipy.envipy:envipy
