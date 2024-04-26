@@ -1,0 +1,16 @@
+lxml
+h5netcdf
+scipy
+rasterio>=1.3.0
+xarray>=0.18.0
+rioxarray>=0.10.0
+geopandas>=0.11.0
+spyndex>=0.3.0
+pyresample
+zarr
+rtree
+validators
+methodtools
+dicttoxml
+eoreader>=0.21.1
+sertit[full]>=1.36.1
