@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pycntrparser"
+version = "0.1.1"
+description = "Parse CNTR transcriptions using ANTLR4"
+authors = ["Ivan Dustin Bilon <ivan22.dust@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+include = ["pycntrparser/CNTR*"]
+
+[tool.poetry.scripts]
+cntr-check = "pycntrparser.__init__:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+antlr4-python3-runtime = "^4.13.1"
+
+
+[tool.poetry.group.dev.dependencies]
+antlr4-tools = "^0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
