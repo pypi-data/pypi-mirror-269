@@ -1,0 +1,7 @@
+include *.md
+include *.txt
+recursive-include django_twitter_auth_manager *.yml
+recursive-include django_twitter_auth_manager *.html
+
+# added by check_manifest.py
+include *.py
