@@ -1,0 +1,14 @@
+.gitignore
+LICENSE.txt
+README.md
+setup.py
+DataExtractorOEG.egg-info/PKG-INFO
+DataExtractorOEG.egg-info/SOURCES.txt
+DataExtractorOEG.egg-info/dependency_links.txt
+DataExtractorOEG.egg-info/entry_points.txt
+DataExtractorOEG.egg-info/requires.txt
+DataExtractorOEG.egg-info/top_level.txt
+doiExtractor/__init__.py
+doiExtractor/doiExtractor.py
+doiExtractor/main.py
+doiExtractor/openAlex.py
