@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/dropmqttapi/__init__.py
+src/dropmqttapi/discovery.py
+src/dropmqttapi/mqttapi.py
+src/dropmqttapi.egg-info/PKG-INFO
+src/dropmqttapi.egg-info/SOURCES.txt
+src/dropmqttapi.egg-info/dependency_links.txt
+src/dropmqttapi.egg-info/top_level.txt
