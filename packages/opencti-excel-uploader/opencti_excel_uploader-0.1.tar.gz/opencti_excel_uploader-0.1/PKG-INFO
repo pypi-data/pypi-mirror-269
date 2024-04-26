@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: opencti_excel_uploader
+Version: 0.1
+Summary: Uploader for cases and reports from Excel files
+Author: asz,jjk,eby
+Author-email: rnd@stratc.org
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pycti<7.0.0,>=6.0.9
+Requires-Dist: pandas<3.0.0,>=2.2.2
+Requires-Dist: openpyxl<4.0.0,>=3.1.2
+Requires-Dist: python-dotenv<2.0.0,>=1.0.1
+Requires-Dist: urllib3<3.0.0,>=2.2.1
+
+## Configuration
+
+Before using the `opencti-excel-uploader`, set the environment variables for the OpenCTI URL and API token. These variables are necessary for the uploader to authenticate with the OpenCTI platform.
+
+On Unix-based systems (Linux, macOS):
+
+```bash
+export OPENCTI_URL='your_opencti_url_here'
+export OPENCTI_TOKEN='your_opencti_api_token_here'
+```
+
+On Windows machines
+
+set OPENCTI_URL=your_opencti_url_here
+set OPENCTI_TOKEN=your_opencti_api_token_here
