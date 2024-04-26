@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: temalib
+Version: 3.6
+Summary: a library that was for working with files i guess
+Home-page: 
+Author: tema5002
+Author-email: xtema5002x@gmail.com
+License: MIT
+Keywords: bullshuy
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/plain
+License-File: LICENSE.txt
+
+
+idk how to use the restructedtext thingy so uhh
+all commands in this library:
+
+smthfile(fp, mode):
+    does the same what codecs.open(fp, mode, encoding="utf-8") does
+    also check openfile(fp) and editfile(fp)
+
+get_folder_path(caller, *args, create_folders):
+    constructs a folder path relative to the caller's directory, optionally creating missing folders
+    fore xample 👾👾👾👾👾👾:
+        print(temalib.get_folder_path(
+            __file__, "i", "am", "going", "to", "invade", "denmark"
+        ))
+        # output: file's_subfolder/i/am/going/to/invade/denmark
+
+get_file_path(caller, *args, create_folders, create_file):
+    does same what get_folder_path but last arg is a file (also optionally created)
+
+add_line(fp, line):
+    formerly altteotf() (add line to the end of the file)
+
+remove_line(fp, line):
+    if theres that line in the file then removes it
+
+listpaths(fp):
+    return list of paths
+    
