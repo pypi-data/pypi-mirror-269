@@ -1,0 +1,2 @@
+[console_scripts]
+argos = argos.commands:cli

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}<h2>{{ result }}</h2>{% endblock title %}
+{% block content %}
+<dl>
+    <dt>Task</dt>
+    <dd>{{ result.task }}</dd>
+    <dt>Submitted at</dt>
+    <dd>{{ result.submitted_at }}</dd>
+    <dt>Status</dt>
+    <dd>{{ result.status }}</dd>
+    <dt>Severity</dt>
+    <dd>{{ result.severity }}</dd>
+    <dt>Context</dt>
+    <dd>{{ result.context }}</dd>
+</dl>
+{% endblock content %}

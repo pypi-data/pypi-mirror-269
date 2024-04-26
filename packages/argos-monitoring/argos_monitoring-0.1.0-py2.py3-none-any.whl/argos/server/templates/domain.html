@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}<h2>{{ domain }}</h2>{% endblock title %}
+{% block content %}
+    <div id="domains" class="frame">
+        <table id="domains-list" role="grid">
+        <thead>
+            <tr>
+                <th>URL</th>
+                <th>Check</th>
+                <th>Expected</th>
+                <th>Current status</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody id="domains-body">
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task.url }}</td>
+                <td>{{ task.check }}</td>
+                <td>{{ task.expected }}</td>
+                <td class="status highlight">
+                    {% if task.status %}
+                    <a data-tooltip="Completed at {{ task.completed_at }}"
+                       href="{{ url_for('get_result_view', result_id=task.last_result.id) }}">
+                        {% if task.status == "success" %}
+                            ✅ Success
+                        {% elif task.status == "error" %}
+                            ⚠ Error
+                        {% elif task.status == "failure" %}
+                            ❌ Failure
+                        {% elif task.status == "unknown" %}
+                            ❔ Unknown
+                        {% endif %}
+                    </a>
+                    {% else %}
+                        Waiting to be checked
+                    {% endif %}
+                </td>
+                <td><a href="{{ url_for('get_task_results_view', task_id=task.id) }}">view all</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+{% endblock content %}
