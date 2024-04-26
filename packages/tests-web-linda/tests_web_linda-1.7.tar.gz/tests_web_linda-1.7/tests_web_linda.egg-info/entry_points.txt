@@ -1,0 +1,3 @@
+[console_scripts]
+tests_web_linda = tests_web_linda.main:main
+
