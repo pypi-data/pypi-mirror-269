@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "changepoint_online"
+version = "1.0.0"
+authors = [
+  { name="Daniel Grose", email="dan.grose@lancaster.ac.uk" },
+  { name="Gaetano Romano", email="g.romano@lancaster.ac.uk" },
+]
+description = "A Collection of Methods for Online Changepoint Detection"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/grosed/changepoint_online"
+
