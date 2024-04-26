@@ -1,0 +1,9 @@
+README.md
+setup.py
+lotore/__init__.py
+lotore/main.py
+lotore.egg-info/PKG-INFO
+lotore.egg-info/SOURCES.txt
+lotore.egg-info/dependency_links.txt
+lotore.egg-info/entry_points.txt
+lotore.egg-info/top_level.txt
