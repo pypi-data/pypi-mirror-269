@@ -1,0 +1,8 @@
+opentelemetry/instrumentation/transformers/__init__.py,sha256=zgiYXXrYnXN2Sv5gASR_40kNgXXJ5DHjCfSiv0GSBK4,2282
+opentelemetry/instrumentation/transformers/config.py,sha256=CtypZov_ytI9nSrfN9lWnjcufbAR9sfkXRA0OstDEUw,42
+opentelemetry/instrumentation/transformers/text_generation_pipeline_wrapper.py,sha256=UF9h9XboQ4S32e_YqUN_CjjahKsp5uGhQz3AD5og4yk,3128
+opentelemetry/instrumentation/transformers/utils.py,sha256=eqaOw7dK-jD7WYlFG84veTg-2VZe8bkV0sQhs3qgXGc,1018
+opentelemetry/instrumentation/transformers/version.py,sha256=d1jssHDng02ej4s_3Yzl--DPqN1B-xx2byinKhvGh94,23
+opentelemetry_instrumentation_transformers-0.16.7.dist-info/METADATA,sha256=Xhp9jTGVdItcB4q4b0K3FyajR_10fX5x-mebAMfZ1Wc,2282
+opentelemetry_instrumentation_transformers-0.16.7.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+opentelemetry_instrumentation_transformers-0.16.7.dist-info/RECORD,,
