@@ -1,0 +1,9 @@
+languagemodels/__init__.py,sha256=PxtRVzlzD1oWsfMlAQpCgDHtJAb4RjYYLcbM97b2TsE,13369
+languagemodels/config.py,sha256=yiLmvcNuHERQjIoaIjKR3DsoRkqnaCssbTMBxtXjqOs,17362
+languagemodels/embeddings.py,sha256=KhAJKfaUGJBv5AEj4L66vavydB6AkYrdqws33Xa3-hw,11598
+languagemodels/inference.py,sha256=T7friI5clyM8LzhghJq8njGNZhUYBcbNTb5pKaHorPk,10166
+languagemodels/models.py,sha256=3VN2WKwAGVPQqgvxwNGDPEI_oPjx8UEzvoVMQW4pPqU,3462
+languagemodels-0.20.0.dist-info/METADATA,sha256=vsH49dm1oz-F5KDjWTKEQKHXuVvXkQqIxS7vXe9IKlg,8572
+languagemodels-0.20.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+languagemodels-0.20.0.dist-info/top_level.txt,sha256=li4R2z7WQJRsvyLPMMwB9S5gQgiW9AKPgF9hSfOulNw,15
+languagemodels-0.20.0.dist-info/RECORD,,
