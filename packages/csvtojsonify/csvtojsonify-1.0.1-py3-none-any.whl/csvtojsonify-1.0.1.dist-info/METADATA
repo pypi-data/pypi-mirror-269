@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: csvtojsonify
+Version: 1.0.1
+Summary: A Python script to convert CSV to JSON
+Home-page: https://github.com/sriramsreedhar/csvtojsonify
+Author: csvtojsonify
+Author-email: sriramsreedhar003@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+
+# csvtojsonify
+
+A simple tool to convert CSV files to JSON format.
+
+## Usage
+
+ Simply run `csvtojsonify` it will prompt you to enter input CSV file with .csv file extension and output JSON file with .json file extension.
+
+##Sample Run
+(venv-3.12) % python3 csvtojsonify.py 
+Enter the input CSV file name: somefile.csv
+Enter the output JSON file name: results.json
+Conversion successful! The new JSON file is results.json
+(venv-3.12) % 
