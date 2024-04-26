@@ -1,0 +1,3735 @@
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7
+DEBUG:faker.factory:Not in REPL -> leaving logger event level as is.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.address`.
+DEBUG:faker.factory:Provider `faker.providers.address` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.automotive`.
+DEBUG:faker.factory:Provider `faker.providers.automotive` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.bank`.
+DEBUG:faker.factory:Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.barcode`.
+DEBUG:faker.factory:Provider `faker.providers.barcode` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.color`.
+DEBUG:faker.factory:Provider `faker.providers.color` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.company`.
+DEBUG:faker.factory:Provider `faker.providers.company` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.credit_card`.
+DEBUG:faker.factory:Provider `faker.providers.credit_card` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.currency`.
+DEBUG:faker.factory:Provider `faker.providers.currency` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.date_time`.
+DEBUG:faker.factory:Provider `faker.providers.date_time` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.emoji` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.geo`.
+DEBUG:faker.factory:Provider `faker.providers.geo` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.internet`.
+DEBUG:faker.factory:Provider `faker.providers.internet` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.job`.
+DEBUG:faker.factory:Provider `faker.providers.job` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.lorem`.
+DEBUG:faker.factory:Provider `faker.providers.lorem` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.misc`.
+DEBUG:faker.factory:Provider `faker.providers.misc` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.passport`.
+DEBUG:faker.factory:Provider `faker.providers.passport` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.person`.
+DEBUG:faker.factory:Provider `faker.providers.person` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.phone_number`.
+DEBUG:faker.factory:Provider `faker.providers.phone_number` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.sbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.ssn`.
+DEBUG:faker.factory:Provider `faker.providers.ssn` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.piping.pipe(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.rendering.render(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.unflattening.unflatten(['stagger', 'fanout', 'chain', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.viewing.view(['quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.quote(['is_html_string', 'is_valid_id', 'dot_keywords', 'endswith_odd_number_of_backslashes', 'escape_unescaped_quotes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.a_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.attr_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.clear(['keep_attrs'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.__iter__(['subgraph'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.node(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.edge(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.attr(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.subgraph(['name', 'comment', 'graph_attr', 'node_attr', 'edge_attr', 'body'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.piping.Pipe._pipe_legacy(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.saving.Save.save(['directory'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.render(['directory', 'view', 'cleanup', 'format', 'renderer', 'formatter', 'neato_no_op', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.view(['directory', 'cleanup', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.unflattening.Unflatten.unflatten(['stagger', 'fanout', 'chain'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.graphs.BaseGraph.__init__(['comment', 'filename', 'directory', 'format', 'engine', 'encoding', 'graph_attr', 'node_attr', 'edge_attr', 'body', 'strict'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.from_file(['directory', 'format', 'engine', 'encoding', 'renderer', 'formatter'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.__init__(['filename', 'directory', 'format', 'engine', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.save(['directory'])
+DEBUG:root:       soft0     soft1  attribute
+0   0.191519  0.622109        1.0
+1   0.437728  0.785359        0.0
+2   0.779976  0.272593        1.0
+3   0.276464  0.801872        0.0
+4   0.958139  0.875933        0.0
+..       ...       ...        ...
+95  0.640880  0.126205        0.0
+96  0.171465  0.737086        0.0
+97  0.127029  0.369650        0.0
+98  0.604334  0.103104        0.0
+99  0.802374  0.945553        1.0
+
+[100 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:filelock:Attempting to acquire lock 128383918693136 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/node_ip_address.json.lock
+DEBUG:filelock:Lock 128383918693136 acquired on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/node_ip_address.json.lock
+DEBUG:filelock:Attempting to release lock 128383918693136 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/node_ip_address.json.lock
+DEBUG:filelock:Lock 128383918693136 released on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/node_ip_address.json.lock
+DEBUG:filelock:Attempting to acquire lock 128383904270416 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Lock 128383904270416 acquired on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 128383904270416 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Lock 128383904270416 released on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 128383917109584 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Lock 128383917109584 acquired on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 128383917109584 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Lock 128383917109584 released on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 128383918559888 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Lock 128383918559888 acquired on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 128383918559888 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Lock 128383918559888 released on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 128383918693136 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Lock 128383918693136 acquired on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 128383918693136 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Lock 128383918693136 released on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 128383918559888 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Lock 128383918559888 acquired on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 128383918559888 on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:filelock:Lock 128383918559888 released on /tmp/ray/session_2024-03-10_21-07-11_009705_1729393/ports_by_node.json.lock
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:       soft0     soft1  attribute
+0   0.497040  0.017152        0.0
+1   0.839986  0.762198        1.0
+2   0.337489  0.481840        0.0
+3   0.377561  0.474079        1.0
+4   0.707895  0.642156        0.0
+..       ...       ...        ...
+95  0.093191  0.368652        0.0
+96  0.734681  0.033207        1.0
+97  0.369497  0.314458        0.0
+98  0.680153  0.068393        0.0
+99  0.694882  0.247156        0.0
+
+[100 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+INFO:sdv.metadata.single_table:Detected metadata:
+INFO:sdv.metadata.single_table:{
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1",
+    "columns": {
+        "cookie": {
+            "sdtype": "numerical"
+        },
+        "victore": {
+            "sdtype": "numerical"
+        }
+    }
+}
+INFO:sdv.data_processing.data_processor:Fitting table None metadata
+INFO:sdv.data_processing.data_processor:Fitting formatters for table None
+INFO:sdv.data_processing.numerical_formatter:No rounding scheme detected for column 'victore'. Synthetic data will not be rounded.
+INFO:sdv.data_processing.data_processor:Fitting constraints for table None
+INFO:sdv.data_processing.data_processor:Setting the configuration for the ``HyperTransformer`` for table None
+INFO:sdv.data_processing.data_processor:Fitting HyperTransformer for table None
+INFO:rdt.transformers.utils:No rounding scheme detected for column 'victore'. Data will not be rounded.
+DEBUG:sdv.data_processing.data_processor:Transforming constraints for table None
+DEBUG:sdv.data_processing.data_processor:Transforming table None
+INFO:rdt.transformers.null:Guidance: There are no missing values in column cookie. Extra column not created.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column victore. Extra column not created.
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7
+DEBUG:faker.factory:Not in REPL -> leaving logger event level as is.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.address`.
+DEBUG:faker.factory:Provider `faker.providers.address` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.automotive`.
+DEBUG:faker.factory:Provider `faker.providers.automotive` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.bank`.
+DEBUG:faker.factory:Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.barcode`.
+DEBUG:faker.factory:Provider `faker.providers.barcode` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.color`.
+DEBUG:faker.factory:Provider `faker.providers.color` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.company`.
+DEBUG:faker.factory:Provider `faker.providers.company` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.credit_card`.
+DEBUG:faker.factory:Provider `faker.providers.credit_card` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.currency`.
+DEBUG:faker.factory:Provider `faker.providers.currency` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.date_time`.
+DEBUG:faker.factory:Provider `faker.providers.date_time` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.emoji` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.geo`.
+DEBUG:faker.factory:Provider `faker.providers.geo` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.internet`.
+DEBUG:faker.factory:Provider `faker.providers.internet` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.job`.
+DEBUG:faker.factory:Provider `faker.providers.job` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.lorem`.
+DEBUG:faker.factory:Provider `faker.providers.lorem` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.misc`.
+DEBUG:faker.factory:Provider `faker.providers.misc` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.passport`.
+DEBUG:faker.factory:Provider `faker.providers.passport` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.person`.
+DEBUG:faker.factory:Provider `faker.providers.person` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.phone_number`.
+DEBUG:faker.factory:Provider `faker.providers.phone_number` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.sbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.ssn`.
+DEBUG:faker.factory:Provider `faker.providers.ssn` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.piping.pipe(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.rendering.render(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.unflattening.unflatten(['stagger', 'fanout', 'chain', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.viewing.view(['quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.quote(['is_html_string', 'is_valid_id', 'dot_keywords', 'endswith_odd_number_of_backslashes', 'escape_unescaped_quotes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.a_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.attr_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.clear(['keep_attrs'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.__iter__(['subgraph'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.node(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.edge(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.attr(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.subgraph(['name', 'comment', 'graph_attr', 'node_attr', 'edge_attr', 'body'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.piping.Pipe._pipe_legacy(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.saving.Save.save(['directory'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.render(['directory', 'view', 'cleanup', 'format', 'renderer', 'formatter', 'neato_no_op', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.view(['directory', 'cleanup', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.unflattening.Unflatten.unflatten(['stagger', 'fanout', 'chain'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.graphs.BaseGraph.__init__(['comment', 'filename', 'directory', 'format', 'engine', 'encoding', 'graph_attr', 'node_attr', 'edge_attr', 'body', 'strict'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.from_file(['directory', 'format', 'engine', 'encoding', 'renderer', 'formatter'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.__init__(['filename', 'directory', 'format', 'engine', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.save(['directory'])
+DEBUG:root:       soft0     soft1  attribute
+0   0.191519  0.622109        1.0
+1   0.437728  0.785359        0.0
+2   0.779976  0.272593        1.0
+3   0.276464  0.801872        0.0
+4   0.958139  0.875933        0.0
+..       ...       ...        ...
+95  0.640880  0.126205        0.0
+96  0.171465  0.737086        0.0
+97  0.127029  0.369650        0.0
+98  0.604334  0.103104        0.0
+99  0.802374  0.945553        1.0
+
+[100 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:filelock:Attempting to acquire lock 134840610268176 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/node_ip_address.json.lock
+DEBUG:filelock:Lock 134840610268176 acquired on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/node_ip_address.json.lock
+DEBUG:filelock:Attempting to release lock 134840610268176 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/node_ip_address.json.lock
+DEBUG:filelock:Lock 134840610268176 released on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/node_ip_address.json.lock
+DEBUG:filelock:Attempting to acquire lock 134840623494800 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Lock 134840623494800 acquired on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 134840623494800 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Lock 134840623494800 released on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 134840624955600 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Lock 134840624955600 acquired on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 134840624955600 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Lock 134840624955600 released on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 134840623128848 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Lock 134840623128848 acquired on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 134840623128848 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Lock 134840623128848 released on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 134840624955600 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Lock 134840624955600 acquired on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 134840624955600 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Lock 134840624955600 released on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 134840624955600 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Lock 134840624955600 acquired on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 134840624955600 on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:filelock:Lock 134840624955600 released on /tmp/ray/session_2024-03-10_21-37-16_840460_1901503/ports_by_node.json.lock
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:       soft0     soft1  attribute
+0   0.497040  0.017152        0.0
+1   0.839986  0.762198        1.0
+2   0.337489  0.481840        0.0
+3   0.377561  0.474079        1.0
+4   0.707895  0.642156        0.0
+..       ...       ...        ...
+95  0.093191  0.368652        0.0
+96  0.734681  0.033207        1.0
+97  0.369497  0.314458        0.0
+98  0.680153  0.068393        0.0
+99  0.694882  0.247156        0.0
+
+[100 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+INFO:sdv.metadata.single_table:Detected metadata:
+INFO:sdv.metadata.single_table:{
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1",
+    "columns": {
+        "cookie": {
+            "sdtype": "numerical"
+        },
+        "victore": {
+            "sdtype": "numerical"
+        }
+    }
+}
+INFO:sdv.data_processing.data_processor:Fitting table None metadata
+INFO:sdv.data_processing.data_processor:Fitting formatters for table None
+INFO:sdv.data_processing.numerical_formatter:No rounding scheme detected for column 'victore'. Synthetic data will not be rounded.
+INFO:sdv.data_processing.data_processor:Fitting constraints for table None
+INFO:sdv.data_processing.data_processor:Setting the configuration for the ``HyperTransformer`` for table None
+INFO:sdv.data_processing.data_processor:Fitting HyperTransformer for table None
+INFO:rdt.transformers.utils:No rounding scheme detected for column 'victore'. Data will not be rounded.
+DEBUG:sdv.data_processing.data_processor:Transforming constraints for table None
+DEBUG:sdv.data_processing.data_processor:Transforming table None
+INFO:rdt.transformers.null:Guidance: There are no missing values in column cookie. Extra column not created.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column victore. Extra column not created.
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7
+DEBUG:faker.factory:Not in REPL -> leaving logger event level as is.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.address`.
+DEBUG:faker.factory:Provider `faker.providers.address` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.automotive`.
+DEBUG:faker.factory:Provider `faker.providers.automotive` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.bank`.
+DEBUG:faker.factory:Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.barcode`.
+DEBUG:faker.factory:Provider `faker.providers.barcode` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.color`.
+DEBUG:faker.factory:Provider `faker.providers.color` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.company`.
+DEBUG:faker.factory:Provider `faker.providers.company` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.credit_card`.
+DEBUG:faker.factory:Provider `faker.providers.credit_card` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.currency`.
+DEBUG:faker.factory:Provider `faker.providers.currency` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.date_time`.
+DEBUG:faker.factory:Provider `faker.providers.date_time` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.emoji` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.geo`.
+DEBUG:faker.factory:Provider `faker.providers.geo` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.internet`.
+DEBUG:faker.factory:Provider `faker.providers.internet` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.job`.
+DEBUG:faker.factory:Provider `faker.providers.job` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.lorem`.
+DEBUG:faker.factory:Provider `faker.providers.lorem` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.misc`.
+DEBUG:faker.factory:Provider `faker.providers.misc` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.passport`.
+DEBUG:faker.factory:Provider `faker.providers.passport` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.person`.
+DEBUG:faker.factory:Provider `faker.providers.person` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.phone_number`.
+DEBUG:faker.factory:Provider `faker.providers.phone_number` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.sbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.ssn`.
+DEBUG:faker.factory:Provider `faker.providers.ssn` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.piping.pipe(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.rendering.render(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.unflattening.unflatten(['stagger', 'fanout', 'chain', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.viewing.view(['quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.quote(['is_html_string', 'is_valid_id', 'dot_keywords', 'endswith_odd_number_of_backslashes', 'escape_unescaped_quotes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.a_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.attr_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.clear(['keep_attrs'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.__iter__(['subgraph'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.node(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.edge(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.attr(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.subgraph(['name', 'comment', 'graph_attr', 'node_attr', 'edge_attr', 'body'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.piping.Pipe._pipe_legacy(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.saving.Save.save(['directory'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.render(['directory', 'view', 'cleanup', 'format', 'renderer', 'formatter', 'neato_no_op', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.view(['directory', 'cleanup', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.unflattening.Unflatten.unflatten(['stagger', 'fanout', 'chain'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.graphs.BaseGraph.__init__(['comment', 'filename', 'directory', 'format', 'engine', 'encoding', 'graph_attr', 'node_attr', 'edge_attr', 'body', 'strict'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.from_file(['directory', 'format', 'engine', 'encoding', 'renderer', 'formatter'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.__init__(['filename', 'directory', 'format', 'engine', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.save(['directory'])
+DEBUG:root:       soft0     soft1  attribute
+0   0.191519  0.622109        1.0
+1   0.437728  0.785359        0.0
+2   0.779976  0.272593        1.0
+3   0.276464  0.801872        0.0
+4   0.958139  0.875933        0.0
+..       ...       ...        ...
+95  0.640880  0.126205        0.0
+96  0.171465  0.737086        0.0
+97  0.127029  0.369650        0.0
+98  0.604334  0.103104        0.0
+99  0.802374  0.945553        1.0
+
+[100 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:filelock:Attempting to acquire lock 131278196990672 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/node_ip_address.json.lock
+DEBUG:filelock:Lock 131278196990672 acquired on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/node_ip_address.json.lock
+DEBUG:filelock:Attempting to release lock 131278196990672 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/node_ip_address.json.lock
+DEBUG:filelock:Lock 131278196990672 released on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/node_ip_address.json.lock
+DEBUG:filelock:Attempting to acquire lock 131278184505360 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Lock 131278184505360 acquired on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 131278184505360 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Lock 131278184505360 released on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 131278196990544 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Lock 131278196990544 acquired on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 131278196990544 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Lock 131278196990544 released on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 131278199106704 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Lock 131278199106704 acquired on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 131278199106704 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Lock 131278199106704 released on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 131278196990544 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Lock 131278196990544 acquired on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 131278196990544 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Lock 131278196990544 released on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 131278184505360 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Lock 131278184505360 acquired on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 131278184505360 on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:filelock:Lock 131278184505360 released on /tmp/ray/session_2024-03-10_21-53-07_432105_2064340/ports_by_node.json.lock
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:       soft0     soft1  attribute
+0   0.497040  0.017152        0.0
+1   0.839986  0.762198        1.0
+2   0.337489  0.481840        0.0
+3   0.377561  0.474079        1.0
+4   0.707895  0.642156        0.0
+..       ...       ...        ...
+95  0.093191  0.368652        0.0
+96  0.734681  0.033207        1.0
+97  0.369497  0.314458        0.0
+98  0.680153  0.068393        0.0
+99  0.694882  0.247156        0.0
+
+[100 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+INFO:sdv.metadata.single_table:Detected metadata:
+INFO:sdv.metadata.single_table:{
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1",
+    "columns": {
+        "cookie": {
+            "sdtype": "numerical"
+        },
+        "victore": {
+            "sdtype": "numerical"
+        }
+    }
+}
+INFO:sdv.data_processing.data_processor:Fitting table None metadata
+INFO:sdv.data_processing.data_processor:Fitting formatters for table None
+INFO:sdv.data_processing.numerical_formatter:No rounding scheme detected for column 'victore'. Synthetic data will not be rounded.
+INFO:sdv.data_processing.data_processor:Fitting constraints for table None
+INFO:sdv.data_processing.data_processor:Setting the configuration for the ``HyperTransformer`` for table None
+INFO:sdv.data_processing.data_processor:Fitting HyperTransformer for table None
+INFO:rdt.transformers.utils:No rounding scheme detected for column 'victore'. Data will not be rounded.
+DEBUG:sdv.data_processing.data_processor:Transforming constraints for table None
+DEBUG:sdv.data_processing.data_processor:Transforming table None
+INFO:rdt.transformers.null:Guidance: There are no missing values in column cookie. Extra column not created.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column victore. Extra column not created.
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7
+DEBUG:faker.factory:Not in REPL -> leaving logger event level as is.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.address`.
+DEBUG:faker.factory:Provider `faker.providers.address` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.automotive`.
+DEBUG:faker.factory:Provider `faker.providers.automotive` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.bank`.
+DEBUG:faker.factory:Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.barcode`.
+DEBUG:faker.factory:Provider `faker.providers.barcode` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.color`.
+DEBUG:faker.factory:Provider `faker.providers.color` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.company`.
+DEBUG:faker.factory:Provider `faker.providers.company` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.credit_card`.
+DEBUG:faker.factory:Provider `faker.providers.credit_card` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.currency`.
+DEBUG:faker.factory:Provider `faker.providers.currency` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.date_time`.
+DEBUG:faker.factory:Provider `faker.providers.date_time` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.emoji` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.geo`.
+DEBUG:faker.factory:Provider `faker.providers.geo` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.internet`.
+DEBUG:faker.factory:Provider `faker.providers.internet` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.job`.
+DEBUG:faker.factory:Provider `faker.providers.job` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.lorem`.
+DEBUG:faker.factory:Provider `faker.providers.lorem` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.misc`.
+DEBUG:faker.factory:Provider `faker.providers.misc` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.passport`.
+DEBUG:faker.factory:Provider `faker.providers.passport` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.person`.
+DEBUG:faker.factory:Provider `faker.providers.person` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.phone_number`.
+DEBUG:faker.factory:Provider `faker.providers.phone_number` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.sbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.ssn`.
+DEBUG:faker.factory:Provider `faker.providers.ssn` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.piping.pipe(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.rendering.render(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.unflattening.unflatten(['stagger', 'fanout', 'chain', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.viewing.view(['quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.quote(['is_html_string', 'is_valid_id', 'dot_keywords', 'endswith_odd_number_of_backslashes', 'escape_unescaped_quotes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.a_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.attr_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.clear(['keep_attrs'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.__iter__(['subgraph'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.node(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.edge(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.attr(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.subgraph(['name', 'comment', 'graph_attr', 'node_attr', 'edge_attr', 'body'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.piping.Pipe._pipe_legacy(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.saving.Save.save(['directory'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.render(['directory', 'view', 'cleanup', 'format', 'renderer', 'formatter', 'neato_no_op', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.view(['directory', 'cleanup', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.unflattening.Unflatten.unflatten(['stagger', 'fanout', 'chain'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.graphs.BaseGraph.__init__(['comment', 'filename', 'directory', 'format', 'engine', 'encoding', 'graph_attr', 'node_attr', 'edge_attr', 'body', 'strict'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.from_file(['directory', 'format', 'engine', 'encoding', 'renderer', 'formatter'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.__init__(['filename', 'directory', 'format', 'engine', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.save(['directory'])
+DEBUG:root:       soft0     soft1  attribute
+0   0.191519  0.622109        1.0
+1   0.437728  0.785359        0.0
+2   0.779976  0.272593        1.0
+3   0.276464  0.801872        0.0
+4   0.958139  0.875933        0.0
+..       ...       ...        ...
+95  0.640880  0.126205        0.0
+96  0.171465  0.737086        0.0
+97  0.127029  0.369650        0.0
+98  0.604334  0.103104        0.0
+99  0.802374  0.945553        1.0
+
+[100 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:filelock:Attempting to acquire lock 128138264840720 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/node_ip_address.json.lock
+DEBUG:filelock:Lock 128138264840720 acquired on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/node_ip_address.json.lock
+DEBUG:filelock:Attempting to release lock 128138264840720 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/node_ip_address.json.lock
+DEBUG:filelock:Lock 128138264840720 released on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/node_ip_address.json.lock
+DEBUG:filelock:Attempting to acquire lock 128138277496208 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Lock 128138277496208 acquired on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 128138277496208 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Lock 128138277496208 released on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 128138264840720 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Lock 128138264840720 acquired on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 128138264840720 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Lock 128138264840720 released on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 128138277496208 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Lock 128138277496208 acquired on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 128138277496208 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Lock 128138277496208 released on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 128138277496208 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Lock 128138277496208 acquired on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 128138277496208 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Lock 128138277496208 released on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 128138277496208 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Lock 128138277496208 acquired on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 128138277496208 on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:filelock:Lock 128138277496208 released on /tmp/ray/session_2024-03-10_23-13-24_721972_2229920/ports_by_node.json.lock
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:       soft0     soft1  attribute
+0   0.497040  0.017152        0.0
+1   0.839986  0.762198        1.0
+2   0.337489  0.481840        0.0
+3   0.377561  0.474079        1.0
+4   0.707895  0.642156        0.0
+..       ...       ...        ...
+95  0.093191  0.368652        0.0
+96  0.734681  0.033207        1.0
+97  0.369497  0.314458        0.0
+98  0.680153  0.068393        0.0
+99  0.694882  0.247156        0.0
+
+[100 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+INFO:sdv.metadata.single_table:Detected metadata:
+INFO:sdv.metadata.single_table:{
+    "columns": {
+        "cookie": {
+            "sdtype": "numerical"
+        },
+        "victore": {
+            "sdtype": "numerical"
+        }
+    },
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1"
+}
+INFO:sdv.data_processing.data_processor:Fitting table None metadata
+INFO:sdv.data_processing.data_processor:Fitting formatters for table None
+INFO:sdv.data_processing.numerical_formatter:No rounding scheme detected for column 'victore'. Synthetic data will not be rounded.
+INFO:sdv.data_processing.data_processor:Fitting constraints for table None
+INFO:sdv.data_processing.data_processor:Setting the configuration for the ``HyperTransformer`` for table None
+INFO:sdv.data_processing.data_processor:Fitting HyperTransformer for table None
+INFO:rdt.transformers.utils:No rounding scheme detected for column 'victore'. Data will not be rounded.
+DEBUG:sdv.data_processing.data_processor:Transforming constraints for table None
+DEBUG:sdv.data_processing.data_processor:Transforming table None
+INFO:rdt.transformers.null:Guidance: There are no missing values in column cookie. Extra column not created.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column victore. Extra column not created.
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7
+DEBUG:faker.factory:Not in REPL -> leaving logger event level as is.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.address`.
+DEBUG:faker.factory:Provider `faker.providers.address` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.automotive`.
+DEBUG:faker.factory:Provider `faker.providers.automotive` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.bank`.
+DEBUG:faker.factory:Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.barcode`.
+DEBUG:faker.factory:Provider `faker.providers.barcode` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.color`.
+DEBUG:faker.factory:Provider `faker.providers.color` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.company`.
+DEBUG:faker.factory:Provider `faker.providers.company` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.credit_card`.
+DEBUG:faker.factory:Provider `faker.providers.credit_card` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.currency`.
+DEBUG:faker.factory:Provider `faker.providers.currency` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.date_time`.
+DEBUG:faker.factory:Provider `faker.providers.date_time` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.emoji` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.geo`.
+DEBUG:faker.factory:Provider `faker.providers.geo` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.internet`.
+DEBUG:faker.factory:Provider `faker.providers.internet` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.job`.
+DEBUG:faker.factory:Provider `faker.providers.job` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.lorem`.
+DEBUG:faker.factory:Provider `faker.providers.lorem` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.misc`.
+DEBUG:faker.factory:Provider `faker.providers.misc` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.passport`.
+DEBUG:faker.factory:Provider `faker.providers.passport` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.person`.
+DEBUG:faker.factory:Provider `faker.providers.person` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.phone_number`.
+DEBUG:faker.factory:Provider `faker.providers.phone_number` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.sbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.ssn`.
+DEBUG:faker.factory:Provider `faker.providers.ssn` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.piping.pipe(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.rendering.render(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.unflattening.unflatten(['stagger', 'fanout', 'chain', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.viewing.view(['quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.quote(['is_html_string', 'is_valid_id', 'dot_keywords', 'endswith_odd_number_of_backslashes', 'escape_unescaped_quotes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.a_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.attr_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.clear(['keep_attrs'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.__iter__(['subgraph'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.node(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.edge(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.attr(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.subgraph(['name', 'comment', 'graph_attr', 'node_attr', 'edge_attr', 'body'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.piping.Pipe._pipe_legacy(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.saving.Save.save(['directory'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.render(['directory', 'view', 'cleanup', 'format', 'renderer', 'formatter', 'neato_no_op', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.view(['directory', 'cleanup', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.unflattening.Unflatten.unflatten(['stagger', 'fanout', 'chain'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.graphs.BaseGraph.__init__(['comment', 'filename', 'directory', 'format', 'engine', 'encoding', 'graph_attr', 'node_attr', 'edge_attr', 'body', 'strict'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.from_file(['directory', 'format', 'engine', 'encoding', 'renderer', 'formatter'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.__init__(['filename', 'directory', 'format', 'engine', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.save(['directory'])
+DEBUG:root:       soft0     soft1  attribute
+0   0.191519  0.622109        1.0
+1   0.437728  0.785359        0.0
+2   0.779976  0.272593        1.0
+3   0.276464  0.801872        0.0
+4   0.958139  0.875933        0.0
+..       ...       ...        ...
+95  0.640880  0.126205        0.0
+96  0.171465  0.737086        0.0
+97  0.127029  0.369650        0.0
+98  0.604334  0.103104        0.0
+99  0.802374  0.945553        1.0
+
+[100 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:filelock:Attempting to acquire lock 123726511745232 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/node_ip_address.json.lock
+DEBUG:filelock:Lock 123726511745232 acquired on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/node_ip_address.json.lock
+DEBUG:filelock:Attempting to release lock 123726511745232 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/node_ip_address.json.lock
+DEBUG:filelock:Lock 123726511745232 released on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/node_ip_address.json.lock
+DEBUG:filelock:Attempting to acquire lock 123726524077648 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Lock 123726524077648 acquired on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 123726524077648 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Lock 123726524077648 released on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 123726523947088 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Lock 123726523947088 acquired on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 123726523947088 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Lock 123726523947088 released on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 123726525809552 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Lock 123726525809552 acquired on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 123726525809552 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Lock 123726525809552 released on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 123726523954192 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Lock 123726523954192 acquired on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 123726523954192 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Lock 123726523954192 released on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Attempting to acquire lock 123726524077648 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Lock 123726524077648 acquired on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Attempting to release lock 123726524077648 on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:filelock:Lock 123726524077648 released on /tmp/ray/session_2024-03-11_08-30-30_039886_2400817/ports_by_node.json.lock
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.567081  0.818345        0.0
+1    0.938987  0.192901        1.0
+2    0.712844  0.697940        0.0
+3    0.258296  0.915808        1.0
+4    0.532358  0.557964        1.0
+..        ...       ...        ...
+995  0.076155  0.521568        0.0
+996  0.984066  0.424239        1.0
+997  0.635826  0.435568        0.0
+998  0.552829  0.784889        1.0
+999  0.162503  0.582840        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:       soft0     soft1  attribute
+0   0.497040  0.017152        0.0
+1   0.839986  0.762198        1.0
+2   0.337489  0.481840        0.0
+3   0.377561  0.474079        1.0
+4   0.707895  0.642156        0.0
+..       ...       ...        ...
+95  0.093191  0.368652        0.0
+96  0.734681  0.033207        1.0
+97  0.369497  0.314458        0.0
+98  0.680153  0.068393        0.0
+99  0.694882  0.247156        0.0
+
+[100 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+DEBUG:root:        soft0     soft1  attribute
+0    0.645639  0.413412        1.0
+1    0.611039  0.585546        0.0
+2    0.848970  0.523271        0.0
+3    0.811649  0.517849        1.0
+4    0.947506  0.143525        1.0
+..        ...       ...        ...
+995  0.764615  0.042754        1.0
+996  0.354803  0.033246        0.0
+997  0.653933  0.174241        0.0
+998  0.005923  0.813313        0.0
+999  0.311065  0.475430        1.0
+
+[1000 rows x 3 columns]
+INFO:sdv.metadata.single_table:Detected metadata:
+INFO:sdv.metadata.single_table:{
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1",
+    "columns": {
+        "cookie": {
+            "sdtype": "numerical"
+        },
+        "victore": {
+            "sdtype": "numerical"
+        }
+    }
+}
+INFO:sdv.data_processing.data_processor:Fitting table None metadata
+INFO:sdv.data_processing.data_processor:Fitting formatters for table None
+INFO:sdv.data_processing.numerical_formatter:No rounding scheme detected for column 'victore'. Synthetic data will not be rounded.
+INFO:sdv.data_processing.data_processor:Fitting constraints for table None
+INFO:sdv.data_processing.data_processor:Setting the configuration for the ``HyperTransformer`` for table None
+INFO:sdv.data_processing.data_processor:Fitting HyperTransformer for table None
+INFO:rdt.transformers.utils:No rounding scheme detected for column 'victore'. Data will not be rounded.
+DEBUG:sdv.data_processing.data_processor:Transforming constraints for table None
+DEBUG:sdv.data_processing.data_processor:Transforming table None
+INFO:rdt.transformers.null:Guidance: There are no missing values in column cookie. Extra column not created.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column victore. Extra column not created.
+DEBUG:faker.factory:Not in REPL -> leaving logger event level as is.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.address`.
+DEBUG:faker.factory:Provider `faker.providers.address` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.automotive`.
+DEBUG:faker.factory:Provider `faker.providers.automotive` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.bank`.
+DEBUG:faker.factory:Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.barcode`.
+DEBUG:faker.factory:Provider `faker.providers.barcode` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.color`.
+DEBUG:faker.factory:Provider `faker.providers.color` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.company`.
+DEBUG:faker.factory:Provider `faker.providers.company` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.credit_card`.
+DEBUG:faker.factory:Provider `faker.providers.credit_card` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.currency`.
+DEBUG:faker.factory:Provider `faker.providers.currency` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.date_time`.
+DEBUG:faker.factory:Provider `faker.providers.date_time` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.emoji` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.geo`.
+DEBUG:faker.factory:Provider `faker.providers.geo` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.internet`.
+DEBUG:faker.factory:Provider `faker.providers.internet` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.isbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.job`.
+DEBUG:faker.factory:Provider `faker.providers.job` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.lorem`.
+DEBUG:faker.factory:Provider `faker.providers.lorem` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.misc`.
+DEBUG:faker.factory:Provider `faker.providers.misc` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.passport`.
+DEBUG:faker.factory:Provider `faker.providers.passport` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.person`.
+DEBUG:faker.factory:Provider `faker.providers.person` has been localized to `en_US`.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.phone_number`.
+DEBUG:faker.factory:Provider `faker.providers.phone_number` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Provider `faker.providers.sbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:faker.factory:Looking for locale `en_US` in provider `faker.providers.ssn`.
+DEBUG:faker.factory:Provider `faker.providers.ssn` has been localized to `en_US`.
+DEBUG:faker.factory:Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.piping.pipe(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.rendering.render(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.unflattening.unflatten(['stagger', 'fanout', 'chain', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.backend.viewing.view(['quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.quote(['is_html_string', 'is_valid_id', 'dot_keywords', 'endswith_odd_number_of_backslashes', 'escape_unescaped_quotes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.a_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.quoting.attr_list(['kwargs', 'attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.clear(['keep_attrs'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.__iter__(['subgraph'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.node(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.edge(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.attr(['_attributes'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.dot.Dot.subgraph(['name', 'comment', 'graph_attr', 'node_attr', 'edge_attr', 'body'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.piping.Pipe._pipe_legacy(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.saving.Save.save(['directory'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.render(['directory', 'view', 'cleanup', 'format', 'renderer', 'formatter', 'neato_no_op', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.rendering.Render.view(['directory', 'cleanup', 'quiet', 'quiet_view'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.unflattening.Unflatten.unflatten(['stagger', 'fanout', 'chain'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.graphs.BaseGraph.__init__(['comment', 'filename', 'directory', 'format', 'engine', 'encoding', 'graph_attr', 'node_attr', 'edge_attr', 'body', 'strict'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.from_file(['directory', 'format', 'engine', 'encoding', 'renderer', 'formatter'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.__init__(['filename', 'directory', 'format', 'engine', 'encoding'])
+DEBUG:graphviz._tools:deprecate positional args: graphviz.sources.Source.save(['directory'])
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7
+DEBUG:h5py._conv:Creating converter from 7 to 5
+DEBUG:h5py._conv:Creating converter from 5 to 7

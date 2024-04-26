@@ -1,0 +1,102 @@
+INFO:root:aia fold 0
+INFO:root:aia fold 1
+INFO:root:aia fold 2
+INFO:root:aia fold 3
+INFO:root:aia fold 4
+INFO:root:aia fold 0
+INFO:root:aia fold 1
+INFO:root:aia fold 2
+INFO:root:aia fold 3
+INFO:root:aia fold 4
+INFO:root:mia fold 0
+INFO:root:mia fold 1
+INFO:root:mia fold 2
+INFO:root:mia fold 3
+INFO:root:mia fold 4
+INFO:sdv.metadata.single_table:Detected metadata:
+INFO:sdv.metadata.single_table:{
+    "columns": {
+        "cookie": {
+            "sdtype": "numerical"
+        },
+        "victore": {
+            "sdtype": "numerical"
+        }
+    },
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1"
+}
+INFO:sdv.data_processing.data_processor:Fitting table None metadata
+INFO:sdv.data_processing.data_processor:Fitting formatters for table None
+INFO:sdv.data_processing.numerical_formatter:No rounding scheme detected for column 'victore'. Synthetic data will not be rounded.
+INFO:sdv.data_processing.data_processor:Fitting constraints for table None
+INFO:sdv.data_processing.data_processor:Setting the configuration for the ``HyperTransformer`` for table None
+INFO:sdv.data_processing.data_processor:Fitting HyperTransformer for table None
+INFO:rdt.transformers.utils:No rounding scheme detected for column 'victore'. Data will not be rounded.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column cookie. Extra column not created.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column victore. Extra column not created.
+INFO:root:
+           x  PINCP     soft0     soft1  hard      loss
+0   0.699192    0.0 -0.057270  0.211464     1  0.836514
+1   0.820197    1.0 -0.065949  0.221752     1  0.559608
+2   0.577240    1.0 -0.024870  0.184124     1  0.594100
+3   0.465326    1.0 -0.019735  0.155435     1  0.609393
+4   0.682296    1.0 -0.051222  0.207403     1  0.572172
+..       ...    ...       ...       ...   ...       ...
+95  0.240684    1.0 -0.055215  0.330139     1  0.518919
+96  0.216944    1.0 -0.054865  0.344846     1  0.513131
+97  0.859768    0.0 -0.064648  0.224468     1  0.848117
+98  0.508677    0.0 -0.021424  0.165715     1  0.791088
+99  0.947382    1.0 -0.063170  0.245695     1  0.550592
+
+[100 rows x 6 columns]
+INFO:root:aia fold 0
+INFO:root:aia fold 1
+INFO:root:aia fold 2
+INFO:root:aia fold 3
+INFO:root:aia fold 4
+INFO:root:aia fold 0
+INFO:root:aia fold 1
+INFO:root:aia fold 2
+INFO:root:aia fold 3
+INFO:root:aia fold 4
+INFO:root:mia fold 0
+INFO:root:mia fold 1
+INFO:root:mia fold 2
+INFO:root:mia fold 3
+INFO:root:mia fold 4
+INFO:sdv.metadata.single_table:Detected metadata:
+INFO:sdv.metadata.single_table:{
+    "columns": {
+        "cookie": {
+            "sdtype": "numerical"
+        },
+        "victore": {
+            "sdtype": "numerical"
+        }
+    },
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1"
+}
+INFO:sdv.data_processing.data_processor:Fitting table None metadata
+INFO:sdv.data_processing.data_processor:Fitting formatters for table None
+INFO:sdv.data_processing.numerical_formatter:No rounding scheme detected for column 'victore'. Synthetic data will not be rounded.
+INFO:sdv.data_processing.data_processor:Fitting constraints for table None
+INFO:sdv.data_processing.data_processor:Setting the configuration for the ``HyperTransformer`` for table None
+INFO:sdv.data_processing.data_processor:Fitting HyperTransformer for table None
+INFO:rdt.transformers.utils:No rounding scheme detected for column 'victore'. Data will not be rounded.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column cookie. Extra column not created.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column victore. Extra column not created.
+INFO:root:
+           x  PINCP     soft0     soft1  hard      loss
+0   0.699192    0.0 -0.197370  0.198335     1  0.910446
+1   0.820197    1.0 -0.191989  0.193171     1  0.518997
+2   0.577240    1.0 -0.158866  0.169236     1  0.542493
+3   0.465326    1.0 -0.116209  0.132482     1  0.576512
+4   0.682296    1.0 -0.192366  0.194737     1  0.518211
+..       ...    ...       ...       ...   ...       ...
+95  0.240684    1.0 -0.295062  0.306528     1  0.436925
+96  0.216944    1.0 -0.304655  0.315997     1  0.430219
+97  0.859768    0.0 -0.185445  0.188794     1  0.897672
+98  0.508677    0.0 -0.130267  0.145233     1  0.840355
+99  0.947382    1.0 -0.190166  0.195050     1  0.518974
+
+[100 rows x 6 columns]

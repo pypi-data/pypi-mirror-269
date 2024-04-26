@@ -1,0 +1,54 @@
+INFO:root:aia fold 0
+INFO:root:aia fold 1
+INFO:root:aia fold 2
+INFO:root:aia fold 3
+INFO:root:aia fold 4
+INFO:root:aia fold 0
+INFO:root:aia fold 1
+INFO:root:aia fold 2
+INFO:root:aia fold 3
+INFO:root:aia fold 4
+INFO:root:mia fold 0
+INFO:sdv.metadata.single_table:Detected metadata:
+INFO:sdv.metadata.single_table:{
+    "columns": {
+        "cookie": {
+            "sdtype": "numerical"
+        },
+        "victore": {
+            "sdtype": "numerical"
+        }
+    },
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1"
+}
+INFO:sdv.data_processing.data_processor:Fitting table None metadata
+INFO:sdv.data_processing.data_processor:Fitting formatters for table None
+INFO:sdv.data_processing.numerical_formatter:No rounding scheme detected for column 'victore'. Synthetic data will not be rounded.
+INFO:sdv.data_processing.data_processor:Fitting constraints for table None
+INFO:sdv.data_processing.data_processor:Setting the configuration for the ``HyperTransformer`` for table None
+INFO:sdv.data_processing.data_processor:Fitting HyperTransformer for table None
+INFO:rdt.transformers.utils:No rounding scheme detected for column 'victore'. Data will not be rounded.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column cookie. Extra column not created.
+INFO:root:aia fold 0
+INFO:root:mia fold 0
+INFO:sdv.metadata.single_table:Detected metadata:
+INFO:sdv.metadata.single_table:{
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1",
+    "columns": {
+        "cookie": {
+            "sdtype": "numerical"
+        },
+        "victore": {
+            "sdtype": "numerical"
+        }
+    }
+}
+INFO:sdv.data_processing.data_processor:Fitting table None metadata
+INFO:sdv.data_processing.data_processor:Fitting formatters for table None
+INFO:sdv.data_processing.numerical_formatter:No rounding scheme detected for column 'victore'. Synthetic data will not be rounded.
+INFO:sdv.data_processing.data_processor:Fitting constraints for table None
+INFO:sdv.data_processing.data_processor:Setting the configuration for the ``HyperTransformer`` for table None
+INFO:sdv.data_processing.data_processor:Fitting HyperTransformer for table None
+INFO:rdt.transformers.utils:No rounding scheme detected for column 'victore'. Data will not be rounded.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column cookie. Extra column not created.
+INFO:rdt.transformers.null:Guidance: There are no missing values in column victore. Extra column not created.

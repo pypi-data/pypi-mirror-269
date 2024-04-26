@@ -1,0 +1,22 @@
+\subsection{Classification task}
+\subsection{Machine learning}
+In classification tasks, a machine learning model is a function that maps features of a data record to its label.
+Is function has an architecture which describes the strucure of the internal computing and parameters.
+For instance with mono dimensialon data, the linear model is $f(x) = ax+b$ where $x$ is the feature and $a$ and $b$ are the parameters.
+Training a machine learning model means using an optimization algorithm that will find optimal parameters to best achieve the calssification.
+
+\subsection{Synthetic datas}
+A generator is a function that takes as input a real dataset and outputs a synthetic dataset.
+This definition is general enough so that the identity function is a generator.
+Even though synthetic datasets are supposedely different than real world datasets.
+
+\subsection{Membership inference attack}
+This attack infer if a data record has been used in the training of a machin learning model.
+This attack is effectivaly made by leveragin shadow models: models that imitates the behaviour of the target~\cite{shokri2017membership}.
+
+Differential privacy is a probabilistic definition that bound mambership inference attack's success.
+In practice, thoes guaranties are achieved thrgout gradient clipping and additive noise in the training algorithme~\cite{abadi2016deep}.
+
+
+\subsection{Attribut inference attack}
+This attack infer sensitive attributes of a data record.

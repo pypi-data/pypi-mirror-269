@@ -1,0 +1,64 @@
+\begin{thebibliography}{10}
+
+\bibitem{abadi2016deep}
+Martin Abadi, Andy Chu, Ian Goodfellow, H~Brendan McMahan, Ilya Mironov, Kunal
+  Talwar, and Li~Zhang.
+\newblock Deep learning with differential privacy.
+\newblock In {\em Proceedings of the 2016 ACM SIGSAC conference on computer and
+  communications security}, pages 308--318, 2016.
+
+\bibitem{bellovin2019privacy}
+Steven~M Bellovin, Preetam~K Dutta, and Nathan Reitinger.
+\newblock Privacy and synthetic datasets.
+\newblock {\em Stan. Tech. L. Rev.}, 22:1, 2019.
+
+\bibitem{ding2021retiring}
+Frances Ding, Moritz Hardt, John Miller, and Ludwig Schmidt.
+\newblock Retiring adult: New datasets for fair machine learning.
+\newblock {\em Advances in Neural Information Processing Systems}, 34, 2021.
+
+\bibitem{jordon2021hide}
+James Jordon, Daniel Jarrett, Evgeny Saveliev, Jinsung Yoon, Paul Elbers,
+  Patrick Thoral, Ari Ercole, Cheng Zhang, Danielle Belgrave, and Mihaela
+  van~der Schaar.
+\newblock Hide-and-seek privacy challenge: Synthetic data generation vs.
+  patient re-identification.
+\newblock In {\em NeurIPS 2020 Competition and Demonstration Track}, pages
+  206--215. PMLR, 2021.
+
+\bibitem{kuppa2021towards}
+Aditya Kuppa, Lamine Aouad, and Nhien-An Le-Khac.
+\newblock Towards improving privacy of synthetic datasets.
+\newblock In {\em Annual Privacy Forum}, pages 106--119. Springer, 2021.
+
+\bibitem{ping2017datasynthesizer}
+Haoyue Ping, Julia Stoyanovich, and Bill Howe.
+\newblock Datasynthesizer: Privacy-preserving synthetic datasets.
+\newblock In {\em Proceedings of the 29th International Conference on
+  Scientific and Statistical Database Management}, pages 1--5, 2017.
+
+\bibitem{shokri2017membership}
+Reza Shokri, Marco Stronati, Congzheng Song, and Vitaly Shmatikov.
+\newblock Membership inference attacks against machine learning models.
+\newblock In {\em 2017 IEEE symposium on security and privacy (SP)}, pages
+  3--18. IEEE, 2017.
+
+\bibitem{stadler2020synthetic}
+Theresa Stadler, Bristena Oprisanu, and Carmela Troncoso.
+\newblock Synthetic data-a privacy mirage.
+\newblock {\em arXiv preprint arXiv:2011.07018}, 2020.
+
+\bibitem{tai2023user}
+Bo-Chen Tai, Yao-Tung Tsou, Szu-Chuang Li, Yennun Huang, Pei-Yuan Tsai, and
+  Yu-Cheng Tsai.
+\newblock User-driven synthetic dataset generation with quantifiable
+  differential privacy.
+\newblock {\em IEEE Transactions on Services Computing}, 2023.
+
+\bibitem{zhifei2017cvpr}
+Song-Yang Zhang, Zhifei and Hairong Qi.
+\newblock Age progression/regression by conditional adversarial autoencoder.
+\newblock In {\em IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}. IEEE, 2017.
+
+\end{thebibliography}

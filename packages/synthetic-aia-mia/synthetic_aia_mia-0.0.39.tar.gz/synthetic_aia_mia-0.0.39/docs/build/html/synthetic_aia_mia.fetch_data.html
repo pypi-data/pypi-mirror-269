@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>synthetic_aia_mia.fetch_data package &#8212; src  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="synthetic_aia_mia.generator package" href="synthetic_aia_mia.generator.html" />
+    <link rel="prev" title="synthetic_aia_mia.experiments package" href="synthetic_aia_mia.experiments.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="synthetic-aia-mia-fetch-data-package">
+<h1>synthetic_aia_mia.fetch_data package<a class="headerlink" href="#synthetic-aia-mia-fetch-data-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-synthetic_aia_mia.fetch_data.adult">
+<span id="synthetic-aia-mia-fetch-data-adult-module"></span><h2>synthetic_aia_mia.fetch_data.adult module<a class="headerlink" href="#module-synthetic_aia_mia.fetch_data.adult" title="Link to this heading">¶</a></h2>
+<p>Load Adult dataset and manage cross validation.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="synthetic_aia_mia.fetch_data.adult.load">
+<span class="sig-prename descclassname"><span class="pre">synthetic_aia_mia.fetch_data.adult.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sensitive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/synthetic_aia_mia/fetch_data/adult.html#load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#synthetic_aia_mia.fetch_data.adult.load" title="Link to this definition">¶</a></dt>
+<dd><p>Download if necessary folktables adult. Split and return train and test.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sensitive</strong> (<em>list</em><em> of </em><em>str</em>) – (Optional default=[]) List of sensitive attributes to include in the features. The sensitive attribute are “sex” and “race”.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – (Optinal default=0) Corss validation step in {0,1,2,3,4}.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Train and test split dataframes in a dictionary.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-synthetic_aia_mia.fetch_data.split">
+<span id="synthetic-aia-mia-fetch-data-split-module"></span><h2>synthetic_aia_mia.fetch_data.split module<a class="headerlink" href="#module-synthetic_aia_mia.fetch_data.split" title="Link to this heading">¶</a></h2>
+<p>Split data into train / test using 5 folding corss validation.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="synthetic_aia_mia.fetch_data.split.split_numpy">
+<span class="sig-prename descclassname"><span class="pre">synthetic_aia_mia.fetch_data.split.</span></span><span class="sig-name descname"><span class="pre">split_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/synthetic_aia_mia/fetch_data/split.html#split_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#synthetic_aia_mia.fetch_data.split.split_numpy" title="Link to this definition">¶</a></dt>
+<dd><p>5-folding of dataset dictionary of numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>Dictionary</em>) – Dataset where each key maps to a numpy array.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – (Optional) Indice of the fold, can be 0,1,2,3 or 4.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dataset with train and test.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="synthetic_aia_mia.fetch_data.split.split_pandas">
+<span class="sig-prename descclassname"><span class="pre">synthetic_aia_mia.fetch_data.split.</span></span><span class="sig-name descname"><span class="pre">split_pandas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/synthetic_aia_mia/fetch_data/split.html#split_pandas"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#synthetic_aia_mia.fetch_data.split.split_pandas" title="Link to this definition">¶</a></dt>
+<dd><p>5-folding of dataset dictionary of numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pandas.dataframe</em>) – Dataset in the form of a dataframe.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – (Optional) Indice of the fold, can be 0,1,2,3 or 4.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dataset with train and test.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-synthetic_aia_mia.fetch_data.utk">
+<span id="synthetic-aia-mia-fetch-data-utk-module"></span><h2>synthetic_aia_mia.fetch_data.utk module<a class="headerlink" href="#module-synthetic_aia_mia.fetch_data.utk" title="Link to this heading">¶</a></h2>
+<p>Downlaod and manages train / test split for UTKFaces dataset.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="synthetic_aia_mia.fetch_data.utk.load">
+<span class="sig-prename descclassname"><span class="pre">synthetic_aia_mia.fetch_data.utk.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sensitive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/synthetic_aia_mia/fetch_data/utk.html#load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#synthetic_aia_mia.fetch_data.utk.load" title="Link to this definition">¶</a></dt>
+<dd><p>Load UTKFaces Dataset. Downloads if data are not available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k</strong> (<em>int</em>) – (Optinal default=0) Corss validation step in {0,1,2,3,4}.</p></li>
+<li><p><strong>sensitive</strong> (<em>list</em><em> of </em><em>str</em>) – (Optional default=[]) List of sensitive attributes to include in the features. The sensitive attribute are “sex” and “race”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Train and test split numpy.ndarray in a dictionary.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Doctionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-synthetic_aia_mia.fetch_data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-synthetic_aia_mia.fetch_data" title="Link to this heading">¶</a></h2>
+<p>Downloads datasets and splits in train/test.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="synthetic_aia_mia.fetch_data.Dataset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">synthetic_aia_mia.fetch_data.</span></span><span class="sig-name descname"><span class="pre">Dataset</span></span><a class="reference internal" href="_modules/synthetic_aia_mia/fetch_data.html#Dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#synthetic_aia_mia.fetch_data.Dataset" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Managing dataset in the high level interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="synthetic_aia_mia.fetch_data.Dataset.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/synthetic_aia_mia/fetch_data.html#Dataset.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#synthetic_aia_mia.fetch_data.Dataset.load" title="Link to this definition">¶</a></dt>
+<dd><p>Return the dataset loaded into memory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Previously updated dataset.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pandas.dataframe for adul or dictionary of numpy.ndarray for utkfaces</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="synthetic_aia_mia.fetch_data.Dataset.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/synthetic_aia_mia/fetch_data.html#Dataset.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#synthetic_aia_mia.fetch_data.Dataset.update" title="Link to this definition">¶</a></dt>
+<dd><p>Update the content of the dataset.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">src</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="synthetic_aia_mia.html">synthetic_aia_mia package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="synthetic_aia_mia.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="synthetic_aia_mia.aia.html">synthetic_aia_mia.aia package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthetic_aia_mia.experiments.html">synthetic_aia_mia.experiments package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">synthetic_aia_mia.fetch_data package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-synthetic_aia_mia.fetch_data.adult">synthetic_aia_mia.fetch_data.adult module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-synthetic_aia_mia.fetch_data.split">synthetic_aia_mia.fetch_data.split module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-synthetic_aia_mia.fetch_data.utk">synthetic_aia_mia.fetch_data.utk module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-synthetic_aia_mia.fetch_data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="synthetic_aia_mia.generator.html">synthetic_aia_mia.generator package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthetic_aia_mia.metrics.html">synthetic_aia_mia.metrics package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthetic_aia_mia.mia.html">synthetic_aia_mia.mia package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="synthetic_aia_mia.predictor.html">synthetic_aia_mia.predictor package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="synthetic_aia_mia.html#module-synthetic_aia_mia">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="synthetic_aia_mia.html">synthetic_aia_mia package</a><ul>
+      <li>Previous: <a href="synthetic_aia_mia.experiments.html" title="previous chapter">synthetic_aia_mia.experiments package</a></li>
+      <li>Next: <a href="synthetic_aia_mia.generator.html" title="next chapter">synthetic_aia_mia.generator package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Author.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/synthetic_aia_mia.fetch_data.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
