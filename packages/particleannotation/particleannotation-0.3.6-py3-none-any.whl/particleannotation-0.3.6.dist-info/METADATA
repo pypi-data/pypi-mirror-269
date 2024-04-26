@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: particleannotation
+Version: 0.3.6
+Summary: Particle annotation tool for Cryo-EM and Cryo-ET
+Home-page: https://github.com/SMLC-NYSBC/napari-ParticleAnnotation
+Author: Robert Kiewisz
+Author-email: rkiewisz@nysbc.org
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: napari >0.4.0
+Requires-Dist: qtpy >=2.3.1
+Requires-Dist: superqt >=0.4.1
+Requires-Dist: magicgui >=0.7.2
+Requires-Dist: vispy >=0.11.0
+Requires-Dist: napari-bbox >=0.0.7
+Requires-Dist: matplotlib >=3.8.0
+Requires-Dist: scikit-learn >1.0.1
+Requires-Dist: scikit-image >0.19.2
+Requires-Dist: numpy >=1.23.5
+Requires-Dist: tifffile >=2023.3.21
+Requires-Dist: scipy >=1.10.1
+Requires-Dist: starfile >=0.5.6
+Requires-Dist: pandas >=2.1.4
+Requires-Dist: torch >=1.13.0
+Requires-Dist: topaz-em >=0.2.5
+Requires-Dist: fastapi >=0.104.0
+Requires-Dist: uvicorn >=0.23.0
+Requires-Dist: python-multipart >=0.0.6
+Requires-Dist: setuptools >=68.0.0
+Requires-Dist: packaging >=23.2
+Requires-Dist: requests >=2.31.0
+Requires-Dist: pyqt5 >=5.15.10
+Requires-Dist: imageio >=2.31.5
+Requires-Dist: pydantic >=1.10.13
+Requires-Dist: tqdm >=4.66.1
+Provides-Extra: testing
+Requires-Dist: napari ; extra == 'testing'
+Requires-Dist: pyqt5 ; extra == 'testing'
+Requires-Dist: flake8 ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: pytest-qt ; extra == 'testing'
+Requires-Dist: tox ; extra == 'testing'
+
+# napari-particleannotation
+Napari [gen2] plugin for Cry-EM and Cryo-ET micrograph annotation for particles.
+
+
+<video width="320" height="240" controls>
+  <source src="resources/video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
