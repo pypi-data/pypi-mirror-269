@@ -1,0 +1,12 @@
+riscos_disassemble/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+riscos_disassemble/__main__.py,sha256=3ibYtSTY__8oTAgMV8VQqMmFw7A4utDxfAukg0nklw4,20584
+riscos_disassemble/colours.py,sha256=ezrSnqF7KwD7OjXo6PUHdW7O16-fwlt62XeUCu9PK0Y,14953
+riscos_disassemble/disassemble.py,sha256=AGLHLq4JQbJh7nSXS0-C7il8xwKkyiHf0SfLjcJh2Eg,49907
+riscos_disassemble/postprocess.py,sha256=Nc7mngzE1DwI7ZOB-OCMvMbjzq_ijrC5Yt4TXFW79xE,10919
+riscos_disassemble/swis.py,sha256=ulo2DQpy5lES_JZKtFjsdFEQB-BXCIZYOa7MTuee9LI,45692
+riscos_disassemble-0.5.0.dist-info/LICENSE,sha256=oyTTrEZk_3Ckwi_D_GgjN21qcpNNIvJc4_OzYnSJ30c,1062
+riscos_disassemble-0.5.0.dist-info/METADATA,sha256=kn1ruBJEJgAR80n2cxoF_Ck0TIZyLwda4xU-sR9vGPI,8010
+riscos_disassemble-0.5.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+riscos_disassemble-0.5.0.dist-info/entry_points.txt,sha256=ZY3T9JimTJc-3HOCvbEzsheEmApJmpZDWjdNsY1WnGY,67
+riscos_disassemble-0.5.0.dist-info/top_level.txt,sha256=tmEtfftafBtMAERwtvfINtLOY_j4yHUJY0EZMjCnpIw,19
+riscos_disassemble-0.5.0.dist-info/RECORD,,
