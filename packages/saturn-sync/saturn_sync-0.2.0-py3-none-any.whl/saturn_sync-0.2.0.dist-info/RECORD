@@ -1,0 +1,15 @@
+saturn_sync/__init__.py,sha256=z17oexQZKkXq6LNMOr6UspeoyYHUKyoRvf0C5KozAvY,373
+saturn_sync/plugin/__init__.py,sha256=qRPmzxZ9ET2MY0r3Hi45vqG0qvtLsWOhrW9oNHbS2Yw,201
+saturn_sync/plugin/grpc_controller_pb2.py,sha256=BFYgWAdE2kO3bDIoBFlvBOXaCm2huX-x4NKlQcObtbY,1816
+saturn_sync/plugin/grpc_controller_pb2.pyi,sha256=uSiRDt9MgKt2_Irkj7hiLvrEu8tWUeCakbP0ruZx00M,471
+saturn_sync/plugin/grpc_controller_pb2_grpc.py,sha256=Iul9B3cbFB2nMAzepmodYn5KWd5Qhy1UiDieYQu8PQE,2942
+saturn_sync/protocol/__init__.py,sha256=qRPmzxZ9ET2MY0r3Hi45vqG0qvtLsWOhrW9oNHbS2Yw,201
+saturn_sync/protocol/v1/__init__.py,sha256=qRPmzxZ9ET2MY0r3Hi45vqG0qvtLsWOhrW9oNHbS2Yw,201
+saturn_sync/protocol/v1/saturnsync_pb2.py,sha256=UErOrZoMdzFWKso2IUWGzvpEG_H34-8LnVJ3r5oLdf8,6182
+saturn_sync/protocol/v1/saturnsync_pb2.pyi,sha256=bWz1RSWrG9WMOABh7wzfs86VEDekAVTfemiAfa3vebM,4463
+saturn_sync/protocol/v1/saturnsync_pb2_grpc.py,sha256=99h58mujuzR9JgBVj2bMeCGgNnoBNbTunY0qW56OkUs,11944
+saturn_sync/sdk.py,sha256=0hrvmNqh1yvNxGZzCU6cu0jeXnoBRVZ5c4bcTl7qk6c,5935
+saturn_sync-0.2.0.dist-info/LICENSE,sha256=Pz2eACSxkhsGfW9_iN60pgy-enjnbGTj8df8O3ebnQQ,16726
+saturn_sync-0.2.0.dist-info/METADATA,sha256=q7dnrnGk74RuSPa-HP1zbh00B8EVNIlqkc83Yfy5B-M,972
+saturn_sync-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+saturn_sync-0.2.0.dist-info/RECORD,,
