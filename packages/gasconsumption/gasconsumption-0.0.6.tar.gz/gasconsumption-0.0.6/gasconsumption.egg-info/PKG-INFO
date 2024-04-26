@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gasconsumption
+Version: 0.0.6
+Summary: fitching Deftable and timeseries table
+Author: Ahmad Riad
+Author-email: meuralengine@outlook.com
+Keywords: python,Deftable,timeseries table
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+contain an api wrapper that helps to fetch gas cconsumption data.
