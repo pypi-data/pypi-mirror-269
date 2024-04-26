@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: basic_math_ops
+Version: 1.2
+Summary: This package consists of math operation 
+Author: Nipun Verma
+License-File: license.txt
+Provides-Extra: dev
+Requires-Dist: twine>=4.0.2; extra == "dev"
+
+This package performs basic math operations
