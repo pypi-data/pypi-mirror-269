@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "rust_docs_scraper"
+version = "0.0.001"
+description = "A Multithreaded Rust / Web-Based HTML Documentation Scraper and Formatter"
+authors = ["Ben Gorlick <ben@unifiedlearning.ai>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.31.0"
+colorama = "^0.4.6"
+semver = "^3.0.2"
+
+[tool.poetry.scripts]
+rust-docs-scraper = "rust_docs_scraper.rust_docs_scraper:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
