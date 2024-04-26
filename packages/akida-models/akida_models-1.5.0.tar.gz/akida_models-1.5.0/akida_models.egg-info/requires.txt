@@ -1,0 +1,8 @@
+cnn2snn~=2.7.2
+quantizeml~=0.8.1
+scipy
+opencv-python
+mtcnn
+imgaug
+trimesh
+librosa
