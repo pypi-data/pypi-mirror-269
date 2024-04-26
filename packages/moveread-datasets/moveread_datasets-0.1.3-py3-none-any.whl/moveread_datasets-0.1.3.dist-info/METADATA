@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: moveread-datasets
+Version: 0.1.3
+Summary: Datasets storage API for Moveread
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/python-core.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: kv-api
+Requires-Dist: kv-fs
+Requires-Dist: typing-extensions
+Provides-Extra: local
+Requires-Dist: kv-fs ; extra == 'local'
+Requires-Dist: kv-sqlite-sync ; extra == 'local'
+
+# Datasets
+
+> package_description
