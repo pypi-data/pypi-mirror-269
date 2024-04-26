@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+AdroitFisherman/__init__.py
+AdroitFisherman.egg-info/PKG-INFO
+AdroitFisherman.egg-info/SOURCES.txt
+AdroitFisherman.egg-info/dependency_links.txt
+AdroitFisherman.egg-info/top_level.txt
+AdroitFisherman/includes/SeqList.c
+AdroitFisherman/SequentialList/ListObject.py
+AdroitFisherman/SequentialList/__init__.py
+AdroitFisherman/includes/SeqList.c
+AdroitFisherman/includes/SeqList.h
