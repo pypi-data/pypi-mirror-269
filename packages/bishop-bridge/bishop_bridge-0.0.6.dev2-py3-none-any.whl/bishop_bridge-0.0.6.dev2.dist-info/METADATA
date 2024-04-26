@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bishop-bridge
+Version: 0.0.6.dev2
+Summary: A package for creating a Bishop bridge
+Author-email: Noah Hunn <nhunn@calvaryrobotics.com>
+Project-URL: Homepage, https://github.com/CalvaryDesign/bishop-bridge
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-socketio
+Requires-Dist: msgpack
+
+Python backend for the Bishop project.
