@@ -1,0 +1,11 @@
+windmilltrainingv1/__init__.py,sha256=-40HavO7yr8NLlSFfBgNmfscw7UhsKjE83dguUuejbY,236
+windmilltrainingv1/client/__init__.py,sha256=-40HavO7yr8NLlSFfBgNmfscw7UhsKjE83dguUuejbY,236
+windmilltrainingv1/client/training_api_dataset.py,sha256=xso2xxZHZPBlDk8CuOtxnJ0P2ulC12cgkCvNooS19FY,1064
+windmilltrainingv1/client/training_api_job.py,sha256=Lie989-KToJvfv4pqRtHW69ne86q0cZVz6s6F-bPkRQ,1021
+windmilltrainingv1/client/training_api_pipeline.py,sha256=5AfV4JZnHvJRW6JYv7Pw2HsRMToa5tcD85dINSbRnUI,1182
+windmilltrainingv1/client/training_api_project.py,sha256=kKa2oQ45alEJAIDMr2D61dFBg9KLMQPSpIDKj25WEo0,913
+windmilltrainingv1/client/training_client.py,sha256=uz_-DDUUPAcT6xknKQe1T0mbWwvnc8IHaJMXSgiXP2I,27319
+windmill_train-1.0.0.15.dist-info/METADATA,sha256=J2JsQo85rSjzwvev2-BulVuZXwxQ-9o31ryPk0YgwIA,686
+windmill_train-1.0.0.15.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+windmill_train-1.0.0.15.dist-info/top_level.txt,sha256=X5extS0ERqY2Xoyd5tZ2C6CYkrkcDSpTxmjsIERA24o,19
+windmill_train-1.0.0.15.dist-info/RECORD,,
