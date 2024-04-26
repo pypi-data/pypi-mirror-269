@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: fina-cal-abhi
+Version: 0.0.2
+Summary: A finance calculation package
+Author: Abhishek Vyas
+Author-email: abhishek.vyas@gmail.com
+License: NEXT
+Keywords: finance-calculation
+
+A package that makes it easy to do finance calculation
