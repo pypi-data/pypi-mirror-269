@@ -1,0 +1,14 @@
+oaipmh_scythe/__about__.py,sha256=PAuBI8I6F9Yu_86XjI2yaWn8QmCd9ZvK7tkZLWvEg-Q,23
+oaipmh_scythe/__init__.py,sha256=0V6LRabetN_UPTppc_QHKW8cWoLIMx6UlaoImuT631o,832
+oaipmh_scythe/client.py,sha256=NmPTi5c37XRVj1tJIgW4neabg1cgnZCxPEek3Pv5H_E,18229
+oaipmh_scythe/exceptions.py,sha256=s0tebXMo-tTN4DmPK0CQ4Xtak1Dl8UHrRUyiHAcKXsc,4336
+oaipmh_scythe/iterator.py,sha256=IHRGtDTXFJ_i4zFWO77WOK95BQ_VNqZK1_U3xYjYtPU,8881
+oaipmh_scythe/models.py,sha256=vJ3a2GFYMa1Q4LcWp7BNU1LaCHeFWt0cyyBsjRIjue4,11670
+oaipmh_scythe/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oaipmh_scythe/response.py,sha256=Vz69_am9xfcK7SLNiSNd0UtTHyVLuDObeH5mFm_VJRw,1969
+oaipmh_scythe/utils.py,sha256=Jtps8cdw8WQJdLwQ7QFz9dVaTLA3VR9IAyPREAYgcoE,5591
+oaipmh_scythe-0.12.1.dist-info/METADATA,sha256=s0M-s3EYcLkHRINzDr1-6Okf9laooB4YknQTCF9ERdE,9275
+oaipmh_scythe-0.12.1.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+oaipmh_scythe-0.12.1.dist-info/licenses/AUTHORS.md,sha256=Lpfv2hBthVB8L9v1FLPkgs-1ZZUAlNF48ZydRlK6mas,202
+oaipmh_scythe-0.12.1.dist-info/licenses/LICENSE,sha256=EQ2QkO9KjiZRnp0RcL-ii8bKNCzrKODZs1c3CDAzqF0,1570
+oaipmh_scythe-0.12.1.dist-info/RECORD,,
