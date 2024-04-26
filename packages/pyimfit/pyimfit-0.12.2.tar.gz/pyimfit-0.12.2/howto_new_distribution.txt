@@ -1,0 +1,59 @@
+NOTES/CHECKLIST FOR CREATING AND DISTRIBUTION A NEW DISTRIBUTION
+
+
+Working by default in ~/coding/pyimfit on Mac.
+
+[opt]1. Generate updated libimfit.a for macOS, IF NECESSARY
+    A. [mac] cd imfit
+    B. [mac] git pull origin master   [if necessary]
+    C. [mac]
+
+    D. [mac] cp libimfit.a ../prebuilt/macos
+    # copy updated Imfit C++ header files
+    E. [mac] cd .. ; ./update_from_imfit.sh
+
+[opt]2. Generate updated libimfit.a for Linux [VM: ubuntu64-18_iraf], IF NECESSARY
+    A. [vm] cd /home/vagrant/build/pyimfit/imfit
+    B. [vm] git pull origin master   [if necessary]
+    C. [vm] scons libimfit.a
+    D. [vm] cp libimfit.a /vagrant/transfer
+    E. [mac] cp ~/vagrant/ubuntu64-18_iraf/transfer/libimfit.a ./prebuilt/linux64
+
+3. Do new "develop" install and run tests on macOS
+    [mac] $ pip3 install -e ./
+    [mac] $ cd pyimfit/tests ; pytest
+
+4. Do new "develop" install and run tests on Linux VM
+    (note: currently we do this using the ubuntu64-16_dev VM because that has the right
+    Python installations, including numpy)
+    [mac] $ cd ~/vagrant/ubuntu64-16_dev/transfer
+    [mac] $ git clone ~/coding/pyimfit pyimfit
+    [vm] $ cd /vagrant/transfer/pyimfit
+    [vm] $ pip3 install --user -e ./
+    [vm] $ cd pyimfit/tests ; pytest
+
+5. Update version number in pyimfit/__init__.py
+
+6. Generate new version of docs [docs/howto_generate_docs.txt]
+    A. cd docs
+    B. Update version number in conf.py
+    C. IF the Jupyter notebook files have been updated, generate markdown versions with
+        $ jupyter nbconvert --to markdown pyimfit_emcee.ipynb
+        $ jupyter nbconvert pyimfit_bootstrap_BtoT.ipynb --to markdown
+    D. Generate updated documentation
+	    $ ./make_docs.sh
+	E. View resulting docs in a web browser pointed at
+	    file:///Users/erwin/coding/pyimfit/docs/_build/html/index.html
+    F. Commit the changes, upload to github
+        $ git commit -a -m "Updated documentation"      [or something like that]
+        $ git push
+
+7. See if updated version passes Travis CI tests
+
+8. Generate source distribution and Mac binary wheels on Mac, and upload to PyPI:
+    A. test version:
+        $ ./make_upload.sh --test x.x.x   [where "x.x.x" = version number]
+    B. For real:
+        $ ./make_upload.sh x.x.x   [where "x.x.x" = version number]
+
+10. Test installation via pip
