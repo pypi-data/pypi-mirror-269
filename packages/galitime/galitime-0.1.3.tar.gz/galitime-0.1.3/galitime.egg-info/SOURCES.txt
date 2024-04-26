@@ -1,0 +1,13 @@
+LICENSE.txt
+README.rst
+setup.py
+galitime/__init__.py
+galitime/galitime.py
+galitime/increment_version.py
+galitime/version.py
+galitime.egg-info/PKG-INFO
+galitime.egg-info/SOURCES.txt
+galitime.egg-info/dependency_links.txt
+galitime.egg-info/entry_points.txt
+galitime.egg-info/requires.txt
+galitime.egg-info/top_level.txt
