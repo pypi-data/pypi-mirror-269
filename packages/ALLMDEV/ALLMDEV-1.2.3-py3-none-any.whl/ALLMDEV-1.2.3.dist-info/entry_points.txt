@@ -1,0 +1,6 @@
+[console_scripts]
+allm-rag = ALLMDEV.rag:main
+allm-rag-run = ALLMDEV.ragrun:main
+allm-rag-serve = ALLMDEV.ragserve:main
+allm-run = ALLMDEV.cli:main
+allm-serve = ALLMDEV.generate:main
