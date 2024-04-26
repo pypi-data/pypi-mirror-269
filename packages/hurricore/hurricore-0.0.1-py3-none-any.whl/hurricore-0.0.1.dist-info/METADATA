@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: hurricore
+Version: 0.0.1
+Summary: A deep learning framework based on PyTorch and Accelerate.
+Home-page: https://github.com/universuen/hurricore
+Author: universuen
+Author-email: universuen@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: accelerate >=0.29.3
+Requires-Dist: pytest
+Requires-Dist: tensorboard
+Requires-Dist: pynvml
+
+# Hurricore
+Easy-to-use model training framework.
+
+**ATTENTION: This repository is currently under heavy development, so bug-free or compatibility is not guaranteed!**
+
+## Usage
+1. Get `hurricore` from the remote and cd into it
+    ```
+    git clone https://github.com/universuen/hurricore && cd hurricore
+    ```
+2. Install `hurricore` with `your_project_name`
+    ```
+    sh install.sh your_project_name
+    ```
+3. Costimize your project at `./projects/your_project_name`
