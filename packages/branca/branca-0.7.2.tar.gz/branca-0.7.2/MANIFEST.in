@@ -1,0 +1,21 @@
+include *.txt
+include README.md
+include branca/_cnames.json
+include branca/_schemes.json
+include branca/scheme_info.json
+include branca/scheme_base_codes.json
+include pyproject.toml
+
+graft branca
+
+prune docs
+prune tests
+prune examples
+prune *.egg-info
+
+exclude *.yml
+exclude .pre-commit-config.yaml
+exclude .gitignore
+exclude .isort.cfg
+exclude branca/_version.py
+exclude .github
