@@ -1,0 +1,80 @@
+name: Tests
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
+jobs:
+  ruff:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - run: pip install -e '.[dev]'
+      - run: ruff check .
+  mypy:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - run: pip install -e '.[dev]'
+      - run: mypy .
+  ruff-format:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - run: pip install -e '.[dev]'
+      - run: ruff format --check .
+  pytest:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - run: pip install -e '.[dev]'
+      - run: pytest --cov=src --cov-report term-missing
+  doctest:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - run: pip install -e '.[dev]'
+      - run: make -C docs doctest
+  from-sdf-example:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - run: pip install -e '.[dev]'
+      - run: |
+          python examples/from_sdf.py data/molecules.sdf test-atomlite.db
+          test -f test-atomlite.db
+  read-database-example:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - run: pip install -e '.[dev]'
+      - run: python examples/read_database.py data/atomlite.db
