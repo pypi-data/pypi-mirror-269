@@ -1,0 +1,9 @@
+funcnodes_webcam/__init__.py,sha256=pdCNfDqQEjJlJNDNz52vXLOzebKrvdW5hGVQkRnu6D8,156
+funcnodes_webcam/controller.py,sha256=iRBrUoLeXy_KSTx7BC7qc4Yc0NZhPYVmZfGTnRm0ESE,3700
+funcnodes_webcam/filter/__init__.py,sha256=Phy8s5_E4QlHwTM9O3T_5XssTGKcUS3TALF5ZpiDld8,6998
+funcnodes_webcam/manipulation/__init__.py,sha256=nibzDSeb9y8xVVUNUgeIoEjKwrDB4xAdAKs27WKARaE,1174
+funcnodes_webcam/utils/__init__.py,sha256=j6hZROL6qgxucxg6oQp-A8bo8cbEyHKITu29fRslUrM,3737
+funcnodes_webcam/webcam_worker.py,sha256=odu-zzsq6prlnmWh5WPr374KpjPC_BTdICd0cGWo2ac,3697
+funcnodes_webcam-0.1.0.dist-info/METADATA,sha256=4I784Zyq7mCGY9zU7-tNGI79yr-tW2lZi59iI9WvSF0,391
+funcnodes_webcam-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+funcnodes_webcam-0.1.0.dist-info/RECORD,,
