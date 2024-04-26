@@ -1,0 +1,12 @@
+sdypy-sep005>=0.1.1
+pandas
+
+[dev]
+black
+flake8
+isort
+nox
+pytest
+pytest-cov
+pytest-mock
+pytest-xdist

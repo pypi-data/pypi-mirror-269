@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+requirements.txt
+sep005_io_ashes/__init__.py
+sep005_io_ashes/ashes.py
+sep005_io_ashes.egg-info/PKG-INFO
+sep005_io_ashes.egg-info/SOURCES.txt
+sep005_io_ashes.egg-info/dependency_links.txt
+sep005_io_ashes.egg-info/requires.txt
+sep005_io_ashes.egg-info/top_level.txt
+tests/test_ashes.py
