@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/php_compiler_py/__init__.py
+src/php_compiler_py/compile_code.py
+src/php_compiler_py.egg-info/PKG-INFO
+src/php_compiler_py.egg-info/SOURCES.txt
+src/php_compiler_py.egg-info/dependency_links.txt
+src/php_compiler_py.egg-info/top_level.txt
