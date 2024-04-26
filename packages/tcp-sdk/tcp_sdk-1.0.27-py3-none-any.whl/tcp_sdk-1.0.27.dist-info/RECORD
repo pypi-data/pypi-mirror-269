@@ -1,0 +1,13 @@
+tcp/__init__.py,sha256=uILdKHKEjZbZvAYoH0cRu6rgqodhWpcKS97nMq28dxI,27
+tcp/_version.py,sha256=BFoP77JSRWYw9boz6i1KHik7kj9lxXXrcX2G2k1cWrc,23
+tcp/client.py,sha256=B4gpJ_Clt5jPepkmj4k3LHTb3yx88CujuYXudRb9SXs,17342
+tcp/clientAPI.py,sha256=MZ5cCSuTCXYnoDqm07EOLJo__R3OxmbO5hBj_G147ro,3418
+tcp/exceptions.py,sha256=bIAU8GXJY2wCGihC2iE1ZAF4DLP8K0Yv9d1dCk50uYA,1071
+tcp/logs.py,sha256=aqABaWPO4WIRphyMLNz6Dat4b8KM3JwQzH1kler8XOw,1047
+tcp/text_serializer.py,sha256=-5Kgw2aw0SN7nZTk0noVhu5MgDozG5C--g3zS4ZyiVM,300
+tcp/track_usage.py,sha256=ErLDXEqlyeC6cL5mOBclgi0MYz3gnVK176I4ilp9n2o,1165
+tcp/upload.py,sha256=6jcsmVielelGcifs75CEbHO_bO5soILi39bEjibTbFQ,618
+tcp_sdk-1.0.27.dist-info/LICENSE.txt,sha256=j1Q2Tn4oVNeXu3mZ3nw6-fAnUCNBbJIZNY-SU5G5vlE,252
+tcp_sdk-1.0.27.dist-info/METADATA,sha256=weYUaIxmwTWmDIi0LepSpA9Wg3BJtUFcPjyBaKLFL9c,1635
+tcp_sdk-1.0.27.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tcp_sdk-1.0.27.dist-info/RECORD,,
