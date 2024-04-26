@@ -1,0 +1,46 @@
+image: python:3.10
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+
+build:
+  stage: build
+  before_script:
+    - python -m pip install -q build
+  script:
+    - python -m build
+  artifacts:
+    paths:
+      - dist/
+
+lint:
+  stage: test
+  script:
+    - python -m pip install -q ".[lint,typecheck,csv]"
+    - python -m ruff check
+    - python -m ruff format --check
+    - python -m pyright
+  rules:
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == 'main'
+
+publish:
+  stage: deploy
+  dependencies:
+    - build
+  id_tokens:
+    PYPI_ID_TOKEN:
+      aud: pypi
+  before_script:
+    - apt update && apt install -y jq
+    - python -m pip install -q twine id
+  script:
+    - oidc_token=$(python -m id PYPI)
+    - resp=$(curl -X POST https://pypi.org/_/oidc/mint-token -d "{\"token\":\"${oidc_token}\"}")
+    - api_token=$(jq --raw-output '.token' <<< "${resp}")
+    - twine upload -u __token__ -p "${api_token}" dist/*
+  rules:
+    - if: $CI_COMMIT_TAG
