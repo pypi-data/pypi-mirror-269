@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/moveread/datasets/__init__.py
+src/moveread/datasets/main.py
+src/moveread_datasets.egg-info/PKG-INFO
+src/moveread_datasets.egg-info/SOURCES.txt
+src/moveread_datasets.egg-info/dependency_links.txt
+src/moveread_datasets.egg-info/requires.txt
+src/moveread_datasets.egg-info/top_level.txt

@@ -1,0 +1,7 @@
+kv-api
+kv-fs
+typing-extensions
+
+[local]
+kv-fs
+kv-sqlite-sync
