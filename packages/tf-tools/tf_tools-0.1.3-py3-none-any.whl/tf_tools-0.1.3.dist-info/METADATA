@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tf-tools
+Version: 0.1.3
+Summary: Useful tools for `tensorflow`, typed with `jaxtyping`
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: jaxtyping
+Requires-Dist: tensorflow
+Requires-Dist: lazy-loader
+Requires-Dist: keras
+
