@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+setup.py
+mycttestsdk/__init__.py
+mycttestsdk/run.py
+vsvn_application_monitoring.egg-info/PKG-INFO
+vsvn_application_monitoring.egg-info/SOURCES.txt
+vsvn_application_monitoring.egg-info/dependency_links.txt
+vsvn_application_monitoring.egg-info/top_level.txt
