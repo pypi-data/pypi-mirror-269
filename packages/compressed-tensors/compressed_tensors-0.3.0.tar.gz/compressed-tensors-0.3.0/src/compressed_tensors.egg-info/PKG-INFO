@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: compressed-tensors
+Version: 0.3.0
+Summary: Library for utilization of compressed safetensors of neural network models
+Home-page: UNKNOWN
+Author: Neuralmagic, Inc.
+Author-email: support@neuralmagic.com
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: dev
+
+UNKNOWN
+
