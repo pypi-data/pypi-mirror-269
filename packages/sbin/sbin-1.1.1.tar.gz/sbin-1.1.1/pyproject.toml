@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "sbin"
+version = "1.1.1"
+description = "Makes your repo setup clean"
+authors = ["Mazine Mrini <mazmrini@hotmail.com>"]
+keywords= ["bin"]
+license = "MIT License"
+readme = "README.md"
+homepage="https://gitlab.com/mazmrini/bin"
+repository="https://gitlab.com/mazmrini/bin"
+include = ["LICENSE"]
+packages = [{include = "bin"}]
+
+[tool.poetry.scripts]
+bin = "bin.main:main"
+sbin = "bin.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.8.0"
+pydantic = "^1.10.1"
+PyYAML = "^6.0"
+semantic-version = "^2.10.0"
+colorama = "^0.4.5"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.4"
+mypy = "^1.0.0"
+mockito = "^1.4.0"
+pre-commit = "^2.20.0"
+types-PyYAML = "^6.0.11"
+parameterized = "^0.8.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.mypy]
+files = ["bin/**","tests/**"]
+exclude = ["^examples/.+"]
+plugins = ["pydantic.mypy"]
+python_version = "3.8"
+strict = true
+
+[[tool.mypy.overrides]]
+module = [
+    "colorama",
+    "mockito",
+    "parameterized",
+    "semantic_version"
+]
+ignore_missing_imports = true
