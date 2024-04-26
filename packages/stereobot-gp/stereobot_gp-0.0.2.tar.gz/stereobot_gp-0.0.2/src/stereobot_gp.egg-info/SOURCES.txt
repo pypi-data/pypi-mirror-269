@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/stereo_gp/__init__.py
+src/stereo_gp/stereo_gp.py
+src/stereobot_gp.egg-info/PKG-INFO
+src/stereobot_gp.egg-info/SOURCES.txt
+src/stereobot_gp.egg-info/dependency_links.txt
+src/stereobot_gp.egg-info/top_level.txt

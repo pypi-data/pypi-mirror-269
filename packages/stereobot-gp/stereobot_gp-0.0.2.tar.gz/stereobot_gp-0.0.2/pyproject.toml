@@ -1,0 +1,23 @@
+[project]
+name = "stereobot_gp"
+version = "0.0.2"
+authors = [
+  { name="Gabriela Pinheiro", email="gpinheiro2812@gmail.com" },
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/onkarbhardwaj/Stereobot-GP"
+Issues = "https://github.com/onkarbhardwaj/Stereobot-GP"
+
+[build-system]
+requires = ["setuptools>=61.0",
+            "cohere>=5.3.3"]
+build-backend = "setuptools.build_meta"

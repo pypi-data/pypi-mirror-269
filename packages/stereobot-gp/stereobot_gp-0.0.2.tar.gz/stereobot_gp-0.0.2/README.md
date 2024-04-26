@@ -1,0 +1,67 @@
+# Stereobot-GP
+Author: Gabriela Pinheiro
+
+This project contains a Stereotype classifier, the **Stereobot**. 
+
+The Stereobot receives a simple passage that conveys stereotype or anti-stereotype about a specific target and classifies it in one of four possible classes: `Gender, Profession, Race and Religion`.
+
+
+## Installing and Running
+
+### Cohere
+This projects uses the Cohere python library for the classification, requiring the registered and have a API Key to use the service.
+
+ * The user can get registered using this [link](https://dashboard.cohere.com/welcome/register)
+
+ * The API Key can be obtained in the Cohere dashboard or direcly with this [link](https://dashboard.cohere.com/api-keys)
+
+### Instaling Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### Stereobot_gp pip library 
+### Instaling
+```
+pip install stereobot-gp
+```
+### Usage
+After the installation, the library can be imported and used in any python file.
+```
+from stereo_gp import stereo_gp
+
+classifier = stereo_gp.Classifier("API_KEY")
+``` 
+
+### Running the Rest API
+With a terminal open on the project source folder, it is possible to run the Rest API server either locally or containerized.
+
+#### Locally
+The `<API_KEY>` variable should receive the user Cohere API_KEY. 
+```
+ python ./rest_app/server.py run <API_KEY>
+```
+
+#### Containerized
+
+To use the Docker container the user needs to enter the `./rest_app/Dockerfile` file and update the eviromental variable `API_KEY` with the Cohere API_KEY. 
+
+```
+cd ./rest_app
+```
+```
+ docker compose up
+```
+```
+docker run
+```
+
+## Folders structure
+Structure of the main folders of the project.
+* Src
+  - The `src` folder contains the pip library code.
+* Tasks
+  - The `tasks` folder contains the files and documentation used to complete the Tasks 1 and 2.
+* Rest_app
+  - The `rest_app` folder contains the Rest API code.
