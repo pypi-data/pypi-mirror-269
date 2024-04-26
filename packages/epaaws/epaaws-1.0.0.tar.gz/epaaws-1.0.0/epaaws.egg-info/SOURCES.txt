@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+epaaws/__init__.py
+epaaws/mp2022.py
+epaaws/util.py
+epaaws.egg-info/PKG-INFO
+epaaws.egg-info/SOURCES.txt
+epaaws.egg-info/dependency_links.txt
+epaaws.egg-info/requires.txt
+epaaws.egg-info/top_level.txt
+epaaws/tests/__init__.py
+epaaws/tests/test_main.py
