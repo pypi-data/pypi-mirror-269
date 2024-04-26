@@ -1,0 +1,13 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flask-container-scaffold = {path = ".",extras = ["devbase","test","docs","dist","celery"],editable = true}
+
+[packages]
+flask-container-scaffold = {path = ".",editable = true}
+
+[celery]
+flask-container-scaffold = {file = ".", editable = true, extras = ["celery"]}
