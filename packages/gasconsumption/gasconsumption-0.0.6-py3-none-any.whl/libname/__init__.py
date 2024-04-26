@@ -1,0 +1,1 @@
+from fastapiwrapper import Analysis
