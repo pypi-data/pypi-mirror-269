@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/cpanel/__init__.py
+src/cpanel/cpanel.py
+src/cpanel/utils.py
+src/cpanel_client.egg-info/PKG-INFO
+src/cpanel_client.egg-info/SOURCES.txt
+src/cpanel_client.egg-info/dependency_links.txt
+src/cpanel_client.egg-info/top_level.txt
+tests/tests.py
