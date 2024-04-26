@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "exposedfunctionality"
+version = "0.3.6"
+description = "tool to expose functionalities to multiple tools"
+authors = ["Julian Kimmig <julian.kimmig@linkdlab.de>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typing-extensions = "^4.10.0"
+pyyaml = "^6"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.2"
+numpy = "^1.26.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
