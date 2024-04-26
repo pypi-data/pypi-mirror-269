@@ -1,0 +1,88 @@
+""" Common functions for package biobb_pytorch.models """
+import numpy as np
+import torch
+from typing import Callable, List, Optional, Tuple
+
+
+def ndarray_normalization(ndarray: np.ndarray, max_values: np.ndarray, min_values: np.ndarray) -> np.ndarray:
+    """
+    Normalize an ndarray along a specified axis.
+
+    Args:
+        ndarray (np.ndarray): The input ndarray to be normalized.
+        max_values (np.ndarray): The maximum values for normalization.
+        min_values (np.ndarray): The minimum values for normalization.
+
+    Returns:
+        np.ndarray: The normalized ndarray.
+    """
+    return (ndarray - min_values) / (max_values - min_values)
+
+
+def ndarray_denormalization(normalized_ndarray: np.ndarray, max_values: np.ndarray, min_values: np.ndarray) -> np.ndarray:
+    """
+    Denormalizes a normalized ndarray using the given max and min values.
+
+    Args:
+        normalized_ndarray (np.ndarray): The normalized ndarray to be denormalized.
+        max_values (np.ndarray): The maximum value used for normalization.
+        min_values (np.ndarray): The minimum value used for normalization.
+
+    Returns:
+        np.ndarray: The denormalized ndarray.
+    """
+    return normalized_ndarray * (max_values - min_values) + min_values
+
+
+def get_loss_function(loss_function: str) -> Callable:
+    """
+    Get the loss function from the given string.
+
+    Args:
+        loss_function (str): The loss function to be used.
+
+    Returns:
+        Callable: The loss function.
+    """
+    loss_function_dict = dict(filter(lambda pair: pair[0].endswith('Loss'), vars(torch.nn).items()))
+    try:
+        return loss_function_dict[loss_function]
+    except KeyError:
+        raise ValueError(f'Invalid loss function: {loss_function}')
+
+
+def get_optimizer_function(optimizer_function: str) -> Callable:
+    """
+    Get the optimizer function from the given string.
+
+    Args:
+        optimizer_function (str): The optimizer function to be used.
+
+    Returns:
+        Callable: The optimizer function.
+    """
+    optimizer_function_dict = dict(filter(lambda pair: not pair[0].startswith('_'), vars(torch.optim).items()))
+    try:
+        return optimizer_function_dict[optimizer_function]
+    except KeyError:
+        raise ValueError(f'Invalid optimizer function: {optimizer_function}')
+
+
+def execute_model(model: torch.nn.Module, dataloader: torch.utils.data.DataLoader, input_dimensions: int, latent_dimensions: int, loss_function: Optional[torch.nn.modules.loss._Loss] = None) -> Tuple[float, np.ndarray, np.ndarray]:
+    model.eval()
+    losses: List[float] = []
+    z_list: List[float] = []
+    x_hat_list: List[float] = []
+    with torch.no_grad():
+        for data in dataloader:
+            data = data[0].to(model.device)
+            latent, output = model(data)
+            if loss_function:
+                loss = loss_function(output, data)
+                losses.append(loss.item())
+            z_list.append(latent.cpu().numpy())
+            x_hat_list.append(output.cpu().numpy())
+    loss = float(np.mean(losses)) if losses else -1.0
+    latent_space: np.ndarray = np.reshape(np.concatenate(z_list, axis=0), (-1, latent_dimensions))
+    reconstructed_data: np.ndarray = np.reshape(np.concatenate(x_hat_list, axis=0), (-1, input_dimensions))
+    return loss, latent_space, reconstructed_data
