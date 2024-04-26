@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: saturn-sync
+Version: 0.2.0
+Summary: Synchronize and refactor repositories with ease.
+Home-page: https://github.com/wndhydrnt/saturn-sync-protocol
+License: MPL-2.0
+Author: Markus Meyer
+Author-email: hydrantanderwand@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: grpcio (>=1.62.0,<2.0.0)
+Requires-Dist: grpcio-health-checking (>=1.62.0,<2.0.0)
+Project-URL: Repository, https://github.com/wndhydrnt/saturn-sync-protocol
+Description-Content-Type: text/markdown
+
+# saturn-sync-python
+
+Synchronize and refactor repositories with ease.
+
