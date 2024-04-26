@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: kiba-core
+Version: 0.5.2.dev15
+Summary: Kiba Labs' python utilities
+Home-page: https://github.com/kibalabs/core-py
+Requires-Python: ~=3.7
+Requires-Dist: aiofiles ~=23.2.1
+Requires-Dist: pydantic ~=2.4.0
+Provides-Extra: api
+Requires-Dist: fastapi ~=0.103.1 ; extra == 'api'
+Requires-Dist: uvicorn[standard] ~=0.23.2 ; extra == 'api'
+Provides-Extra: database-psql
+Requires-Dist: sqlalchemy[asyncio] ~=2.0.21 ; extra == 'database-psql'
+Requires-Dist: asyncpg ~=0.28.0 ; extra == 'database-psql'
+Provides-Extra: queue-aqs
+Requires-Dist: azure-storage-queue ~=12.7.2 ; extra == 'queue-aqs'
+Provides-Extra: queue-sqs
+Requires-Dist: aiobotocore ~=2.6.0 ; extra == 'queue-sqs'
+Provides-Extra: queues
+Requires-Dist: aiobotocore ~=2.6.0 ; extra == 'queues'
+Provides-Extra: requester
+Requires-Dist: httpx ~=0.25.0 ; extra == 'requester'
+Provides-Extra: storage
+Requires-Dist: aiobotocore ~=2.6.0 ; extra == 'storage'
+Provides-Extra: types
+Requires-Dist: types-aiobotocore[essential] ~=2.6.0 ; extra == 'types'
+Requires-Dist: types-aiofiles ~=23.2.0.0 ; extra == 'types'
+Provides-Extra: web3
+Requires-Dist: web3 ==6.10.0 ; extra == 'web3'
+
