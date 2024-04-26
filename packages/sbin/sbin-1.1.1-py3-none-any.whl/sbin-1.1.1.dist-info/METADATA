@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: sbin
+Version: 1.1.1
+Summary: Makes your repo setup clean
+Home-page: https://gitlab.com/mazmrini/bin
+License: MIT
+Keywords: bin
+Author: Mazine Mrini
+Author-email: mazmrini@hotmail.com
+Requires-Python: >=3.8.0,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: colorama (>=0.4.5,<0.5.0)
+Requires-Dist: pydantic (>=1.10.1,<2.0.0)
+Requires-Dist: semantic-version (>=2.10.0,<3.0.0)
+Project-URL: Repository, https://gitlab.com/mazmrini/bin
+Description-Content-Type: text/markdown
+
+# sbin
+
+[![versions](https://img.shields.io/pypi/pyversions/sbin.svg)](https://gitlab.com/mazmrini/bin)
+[![license](https://img.shields.io/gitlab/license/mazmrini/bin)](https://gitlab.com/mazmrini/bin/-/blob/main/LICENSE)
+
+Automate your project setup with a simple `bin.yml` file.
+
+## Help
+See [documentation](https://google.com) for more details.
+
+## Installation
+We recommend installing `sbin` globally through `pip install sbin`.
+`sbin` and its alias `bin` executables will be available from the command line.
+
+Please note that the documentation will refer to `sbin` as `bin`.
+
+## Quick start
+Start by creating an example `bin.yaml` file at the root of your project with
+```
+bin init
+```
+
+You can explore bin commands through `bin <help|h|-h|--help>`. Here
+are some built-in ones:
+```
+bin req   # makes sure you have the requirements to run the projet 
+bin up    # sets up whatever is needed to run the project
+bin down  # tear down whatever was up
+```
+
+## Examples
+Here are few project [examples](https://gitlab.com/mazmrini/bin/-/blob/main/examples) utilizing `bin`.
+
+## Contributing
+See the [contributing](https://gitlab.com/mazmrini/bin/-/blob/main/CONTRIBUTING.md) doc.
+
