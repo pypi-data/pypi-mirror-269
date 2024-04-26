@@ -1,0 +1,6 @@
+beautifulsoup4>=4.12.3
+extruct>=0.15.0
+isodate>=0.6.1
+
+[online]
+requests>=2.31.0
