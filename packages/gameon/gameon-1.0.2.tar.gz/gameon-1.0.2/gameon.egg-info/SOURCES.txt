@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+gameon/__init__.py
+gameon.egg-info/PKG-INFO
+gameon.egg-info/SOURCES.txt
+gameon.egg-info/dependency_links.txt
+gameon.egg-info/requires.txt
+gameon.egg-info/top_level.txt
