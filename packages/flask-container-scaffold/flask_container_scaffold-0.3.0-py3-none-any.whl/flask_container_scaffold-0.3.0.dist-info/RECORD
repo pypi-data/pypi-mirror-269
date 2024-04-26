@@ -1,0 +1,14 @@
+flask_container_scaffold/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flask_container_scaffold/app_configurator.py,sha256=nPNOrSmCPqhBiwJI6XMxmPYULFJO1vvHxV14IowVRzM,2541
+flask_container_scaffold/app_scaffold.py,sha256=DYHq21gAoWUxM9eY3ltCPEpczJvUQXtf8-YNmrbPsSE,728
+flask_container_scaffold/base.py,sha256=yaan6FZCT1S8JlEEwXbNLWj8_TnffgLwnwwjmOmw2a0,567
+flask_container_scaffold/base_scaffold.py,sha256=huPVD0vavcD1RKIEM6zubmMkUVF0ZacYyJX5yqNOTx0,4431
+flask_container_scaffold/celery_scaffold.py,sha256=6JNr6bW4y9hfsx49g-TwT6yUlrG1PVBkynneD-XuhHM,1420
+flask_container_scaffold/logging.py,sha256=-4Aptte9iGNxEl-y1c2bs00toKJCm8uKG-Mtoerkc-A,1087
+flask_container_scaffold/network.py,sha256=D6b-rZIKexMpiYUz6BDc3M-Z1hMqoR0u23JYwDU0JSI,789
+flask_container_scaffold/util.py,sha256=9eX5xZaTY5xhm4332jZNY0GO-_3F1kEg-tXiwfl1eQ8,3180
+flask_container_scaffold-0.3.0.dist-info/LICENSE,sha256=knBKKd24DWHJf1JDEnT9unjqnHM8m2hl1Z9r914I7Mk,1070
+flask_container_scaffold-0.3.0.dist-info/METADATA,sha256=fSfmbd55ORrGmuZt8B3wAIcUX4noVc9g24EGdLpaRX8,10577
+flask_container_scaffold-0.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+flask_container_scaffold-0.3.0.dist-info/top_level.txt,sha256=hlmDzivK4vbByg0W4Inr3X_lTFcaSChYIgqisGfBiuI,25
+flask_container_scaffold-0.3.0.dist-info/RECORD,,
