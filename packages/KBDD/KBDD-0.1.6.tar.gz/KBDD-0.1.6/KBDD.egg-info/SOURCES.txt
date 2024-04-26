@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+setup.py
+KBDD/EGtest.py
+KBDD/KGML_to_Matrix.py
+KBDD/Network_score_with_cor.py
+KBDD/__init__.py
+KBDD/connect_adj_set.py
+KBDD/left_adj.py
+KBDD/net_gen.py
+KBDD/rightmost_adj.py
+KBDD/show_graph_with_labels.py
+KBDD/truncated_power_law.py
+KBDD.egg-info/PKG-INFO
+KBDD.egg-info/SOURCES.txt
+KBDD.egg-info/dependency_links.txt
+KBDD.egg-info/top_level.txt
