@@ -1,0 +1,28 @@
+# config file
+# update parameters here to change run parameters
+
+epytc_class:
+    module: "MSRT-1"
+    maximum_iterations_required: 1
+    simulation_period_days: 1
+    simulation_time_step: 300
+    base_period_days: 1
+    minimum_pipe_flow_velocity: 1e-4
+    reservoir_quality_matrix: [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+    reservoir_quality_pattern: "none"
+    reservoir_quality_pattern_random_variability: 0.0
+    reservoir_injection_pattern: "none"
+    reservoir_injection_pattern_random_variability: 0.0
+    reservoir_injection_start_time: [[]]
+    reservoir_injection_end_time: [[]]
+    reservoir_injection_input_value: [[]]
+    injection_nodes_index: []
+    injection_nodes_quality_matrix: [[]]
+    injection_node_quality_pattern: "none"
+    injection_node_quality_pattern_random_variability: 0.0
+    injection_node_injection_pattern: "none"
+    injection_node_injection_pattern_random_variability: 0.0
+    injection_node_injection_start_time: [[]]
+    injection_node_injection_end_time: [[]]
+    injection_node_injection_input_value: [[]]
+    hyd_wq_sync_option: "steady"
