@@ -1,0 +1,3 @@
+recursive-include app/services *
+recursive-include app/tasks *
+recursive-include app *
