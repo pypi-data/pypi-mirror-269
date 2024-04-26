@@ -1,0 +1,4 @@
+[console_scripts]
+annoread = annoread.annoread:main
+assignread = annoread.assignread:main
+countmtx = annoread.countmtx:main
