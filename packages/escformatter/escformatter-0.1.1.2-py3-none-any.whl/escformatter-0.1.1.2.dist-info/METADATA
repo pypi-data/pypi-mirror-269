@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: escformatter
+Version: 0.1.1.2
+Summary: A Python class for executing ANSI escape commands in the console.
+Home-page: https://github.com/devleonardoamaral/escformatter.git
+Author: Leonardo S. Amaral
+Author-email: leonardo_amaral98@hotmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# EscFormatter
+
+## Description
+
+This Python package provides a class named `Esc` that enables the execution of ANSI escape commands in the console. It offers functionalities for advanced text formatting, changing font colors in the console, applying text styles, and positioning the cursor.
+
+## Usage Example
+
+```python
+from escformatter import esc
+
+# Register cleanup to reset console styles and colors to default
+esc.register_cleanup()
+
+# Display 'Hello, World!' in red
+print(esc.fg_red + 'Hello, World!')
