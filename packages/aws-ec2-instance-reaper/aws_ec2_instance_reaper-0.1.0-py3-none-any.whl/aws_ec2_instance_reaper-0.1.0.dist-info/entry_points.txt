@@ -1,0 +1,2 @@
+[console_scripts]
+aws-ec2-instance-reaper = aws_ec2_instance_reaper.__main__:main

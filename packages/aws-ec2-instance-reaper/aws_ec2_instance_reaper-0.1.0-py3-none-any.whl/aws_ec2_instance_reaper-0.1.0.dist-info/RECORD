@@ -1,0 +1,13 @@
+aws_ec2_instance_reaper/__init__.py,sha256=ON5rkrpoJWVwtF2NYhKJztSGF93cJbivwEZnjB-l1Ow,51
+aws_ec2_instance_reaper/__main__.py,sha256=sgCwz3mrPwNcHNa6eV1fa0L_75e7UQz8j4_4JC-KCr0,2219
+aws_ec2_instance_reaper/aws.py,sha256=J5gJwxoHhY6R9VDN2j_shcyOKRlPHOBqq_4RfF0O15g,5128
+aws_ec2_instance_reaper/click_argument_types.py,sha256=n2DHny57YgbtXPoIFS9HtZjQJx_lc9cDsnTDUF_VWCY,927
+aws_ec2_instance_reaper/logger.py,sha256=Aqw7le4uygZctNVKaSabW-m9SMPz0rTPl_sHtk_weGs,178
+aws_ec2_instance_reaper/reaper.py,sha256=9aSjcW08Xbk-5G8-k2ugZ-dacfPlGsgU1dhtKKgZJ54,2820
+aws_ec2_instance_reaper/schema.py,sha256=X6wQMDMDT4yJXd_LSl-6_gzj7dfnwYDBLqMz-HBbb7k,2551
+aws_ec2_instance_reaper-0.1.0.dist-info/LICENSE,sha256=gQ2wm-X4EEDUh5k2Kub5KtYxiUVwzzEk5Q5piQbFwfg,11342
+aws_ec2_instance_reaper-0.1.0.dist-info/METADATA,sha256=xcXb5VQ1omFV4m5eA6l0WcyYRKRYg5o6LX4R4LK_WBc,3911
+aws_ec2_instance_reaper-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aws_ec2_instance_reaper-0.1.0.dist-info/entry_points.txt,sha256=8ndMBcl8nE-Uhk-IHFNkirh2xoezwwr4pGcjZhNnci8,82
+aws_ec2_instance_reaper-0.1.0.dist-info/top_level.txt,sha256=aUT1jYZijbxNjVTjuv6rih1LRl1RJ4NsFFYWoI9SZ3Y,24
+aws_ec2_instance_reaper-0.1.0.dist-info/RECORD,,
