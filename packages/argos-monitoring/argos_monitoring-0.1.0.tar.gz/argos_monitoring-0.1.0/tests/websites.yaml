@@ -1,0 +1,6 @@
+- domain: "https://mypads.framapad.org"
+  paths:
+    - path: "/mypads/"
+      checks:
+        - status-is: 200
+        - body-contains: '<div id= "mypads"></div>'

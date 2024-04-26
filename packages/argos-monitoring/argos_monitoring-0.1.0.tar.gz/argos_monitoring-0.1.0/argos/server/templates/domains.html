@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}<h2>Tasks list</h2>{% endblock title %}
+{% block content %}
+    <div id="domains" class="frame">
+        <nav>
+            <ul>
+                <li>
+                    {{ domains | length }} domains,
+                    {{ total_task_count }} tasks,
+                    <a href="{{ url_for('get_agents_view') }}">
+                        {{ agents | length }} agent{{ 's' if agents | length > 1 }}
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <label for="select-status">Show domains with status:</label>
+                    <select id="select-status">
+                        <option value="all">All</option>
+                        <option value="ok">✅ OK</option>
+                        <option value="warning">⚠️ Warning</option>
+                        <option value="critical">❌ Critical</option>
+                        <option value="unknown">❔ Unknown</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+        <table id="domains-list" role="grid">
+            <thead>
+                <tr>
+                    <th>Domain</th>
+                    <th class="today">Current status</th>
+                    <th>Last check</th>
+                </tr>
+            </thead>
+
+            <tbody id="domains-body">
+                {% for (domain, status) in domains %}
+                <tr data-status={{ status }}>
+                    <td>
+                        <a href="{{ url_for('get_domain_tasks_view', domain=domain) }}">
+                            {{ domain }}
+                        </a>
+                    </td>
+                    <td class="status highlight">
+                        {% if status == "ok" %}
+                            ✅ OK
+                        {% elif status == "warning" %}
+                            ⚠️ Warning
+                        {% elif status == "critical" %}
+                            ❌ Critical
+                        {% elif status == "unknown" %}
+                            ❔ Unknown
+                        {% endif %}
+                    </td>
+                    <td>{{ last_checks.get(domain) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        document.getElementById('select-status').addEventListener('change', (e) => {
+            if (e.currentTarget.value === 'all') {
+                document.querySelectorAll('[data-status]').forEach((item) => {
+                    item.style.display = null;
+                })
+            } else {
+                document.querySelectorAll('[data-status]').forEach((item) => {
+                    if (item.dataset.status === e.currentTarget.value) {
+                        item.style.display = null;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                })
+            }
+        });
+    </script>
+{% endblock content %}

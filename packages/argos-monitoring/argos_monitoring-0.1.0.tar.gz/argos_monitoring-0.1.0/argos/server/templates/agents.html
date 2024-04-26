@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}<h2>Agents</h2>{% endblock title %}
+{% block content %}
+<table role="grid">
+    <thead>
+        <tr>
+            <th>Agent</th>
+            <th>Last seen</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for result in last_seen %}
+        <tr>
+            <td>{{ result.agent_id }}</td>
+            <td>{{ result.submitted_at }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

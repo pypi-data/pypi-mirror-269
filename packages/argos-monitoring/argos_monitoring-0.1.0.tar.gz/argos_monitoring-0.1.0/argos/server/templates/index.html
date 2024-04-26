@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}<h2>Dashboard</h2>{% endblock title %}
+{% block content %}
+    <div id="domains" class="frame">
+        <nav>
+            <ul>
+                <li>
+                    <a href="{{ url_for('get_agents_view') }}">
+                        {{ agents | length }} agent{{ 's' if agents | length > 1 }}
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input id="auto-refresh"
+                           name="auto_refresh_enabled"
+                           type="checkbox"
+                           form="refresh-form"
+                           {{ 'checked' if auto_refresh_enabled }}>
+                    <label for="auto-refresh" class="inline-label">Auto-refresh</label>
+                </li>
+                <li>
+                    <label class="inline-label">
+                        Every <input id="refresh-delay"
+                                     class="initial-width"
+                                     name="auto_refresh_seconds"
+                                     type="number"
+                                     form="refresh-form"
+                                     min="1"
+                                     value="{{ auto_refresh_seconds }}"> seconds
+                    </label>
+                </li>
+                <li>
+                    <form id="refresh-form"
+                          method="post"
+                          action="{{ url_for('set_refresh_cookies_view') }}">
+                        <input type="Submit">
+                    </form>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="grid grid-index">
+                <article>
+                    <header title="Unknown">❔</header>
+                    {{ counts_dict['unknown'] }}
+                </article>
+                <article>
+                    <header title="OK">✅</header>
+                    {{ counts_dict['ok'] }}
+                </article>
+                <article>
+                    <header title="Warning">⚠️</header>
+                    {{ counts_dict['warning'] }}
+                </article>
+                <article>
+                    <header title="Critical">❌</header>
+                    {{ counts_dict['critical'] }}
+                </article>
+            </div>
+            <p class="text-center">
+                <a href="{{ url_for('get_domains_view') }}"
+                   class="outline"
+                   role="button">
+                    Domains
+                </a>
+            </p>
+        </div>
+    </div>
+{% endblock content %}

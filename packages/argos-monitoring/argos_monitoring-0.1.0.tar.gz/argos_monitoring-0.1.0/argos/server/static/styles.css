@@ -1,0 +1,53 @@
+@import url("pico.min.css");
+
+code {
+    white-space: pre-wrap;
+}
+
+body > header,
+body > main {
+    padding: 0 !important;
+}
+#title {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-bottom: calc(var(--typography-spacing-vertical) * 0.5);
+}
+
+.grid-index {
+    font-size: 2rem;
+}
+.text-center,
+.grid-index {
+    text-align: center;
+}
+.grid-index article {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: calc(var(--block-spacing-vertical) * 0.7);
+}
+.grid-index article > header {
+    margin-bottom: calc(var(--block-spacing-vertical) * 0.7);
+}
+
+label[for="select-status"] {
+    display: inline-block;
+}
+#select-status {
+    width: initial;
+}
+
+.inline-label {
+    display: inline-block;
+}
+.initial-width {
+    width: initial !important;
+}
+#refresh-form {
+    margin-bottom: 0;
+}
+#refresh-delay {
+    max-width: 120px;
+}

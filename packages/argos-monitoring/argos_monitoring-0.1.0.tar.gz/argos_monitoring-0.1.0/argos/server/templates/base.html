@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Argos</title>
+        <link rel="shortcut icon"
+              href="{{ url_for('static', path='/logo.png') }}">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=Edge">
+        {% if auto_refresh_enabled %}
+        <meta http-equiv="refresh"
+              content="{{ auto_refresh_seconds }}">
+        {% endif %}
+        <link rel="stylesheet"
+              href="{{ url_for('static', path='/styles.css') }}">
+    </head>
+    <body>
+        <header class="container">
+            <nav>
+                <a href="{{ url_for('get_severity_counts_view') }}">
+                    <ul>
+                        <li>
+                            <img src="{{ url_for('static', path='/logo-64.png') }}"
+                                 width="64"
+                                 height="64"
+                                 alt="">
+                        </li>
+                        <li>
+                            <h1 id="title">Argos monitoring</h1>
+                        </li>
+                    </ul>
+                </a>
+                <ul>
+                    <li>
+                        <a href="{{ url_for('get_severity_counts_view') }}"
+                           class="outline {{ 'contrast' if request.url == url_for('get_severity_counts_view') }}"
+                           role="button">
+                            Dashboard
+                        </a>
+                        <a href="{{ url_for('get_domains_view') }}"
+                           class="outline {{ 'contrast' if request.url == url_for('get_domains_view') }}"
+                           role="button">
+                            Domains
+                        </a>
+                        <a href="{{ url_for('get_agents_view') }}"
+                           class="outline {{ 'contrast' if request.url == url_for('get_agents_view') }}"
+                           role="button">
+                            Agents
+                        </a>
+                        <a href="#"
+                           id="reschedule-all"
+                           class="outline"
+                           title="Reschedule non-ok checks as soon as possible">
+                            🕐
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            <dialog id="msg"></dialog>
+            <div id="header">
+                {% block title %}
+                {% endblock title %}
+            </div>
+            <div id="content">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </main>
+        <footer class="text-center">
+            <a href="https://framasoft.frama.io/framaspace/argos/">Argos Panoptès</a>,
+            <a href="https://framagit.org/framasoft/framaspace/argos/-/blob/main/LICENSE">AGPLv3</a>
+            (<a href="https://framagit.org/framasoft/framaspace/argos">sources</a>)
+            <br/>
+            API documentation:
+            <a href="{{ url_for('get_severity_counts_view') }}docs">Swagger</a>
+            or
+            <a href="{{ url_for('get_severity_counts_view') }}redoc">Redoc</a>
+        </footer>
+        <script>
+        async function rescheduleAll() {
+            const response = await fetch('{{ url_for("reschedule_all") }}', {method: 'POST'});
+            const json = await response.json();
+            const dialog = document.getElementById('msg');
+            dialog.innerText = json.msg;
+            dialog.setAttribute('open', '');
+            setTimeout(() => {
+                dialog.removeAttribute('open');
+            }, 1500);
+        }
+        document.getElementById('reschedule-all').addEventListener('click', event => {
+            event.preventDefault();
+            rescheduleAll();
+        });
+        </script>
+    </body>
+</html>

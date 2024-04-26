@@ -1,0 +1,96 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "argos-monitoring"
+dynamic = ["version"]
+description = "Distributed supervision tool for HTTP."
+authors = [
+  { name = "Alexis Métaireau", email = "alexis@notmyidea.org" },
+  { name = "Luc Didry", email = "luc+argos@framasoft.org" },
+]
+readme = "README.md"
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+  "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+  "Intended Audience :: System Administrators",
+]
+
+dependencies = [
+  "alembic>=1.13.0,<1.14",
+  "click>=8.1,<9",
+  "fastapi>=0.103,<0.104",
+  "gunicorn>=21.2,<22",
+  "httpx>=0.25,<1",
+  "Jinja2>=3.0,<4",
+  "psycopg2-binary>=2.9,<3",
+  "pydantic[email]>=2.4,<3",
+  "pydantic-settings>=2.0,<3",
+  "python-multipart>=0.0.9,<1",
+  "pyyaml>=6.0,<7",
+  "pyyaml-include>=1.3,<2",
+  "sqlalchemy[asyncio]>=2.0,<3",
+  "sqlalchemy-utils>=0.41,<1",
+  "tenacity>=8.2,<9",
+  "uvicorn>=0.23,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black==23.3.0",
+  "djlint>=1.34.0",
+  "ipdb>=0.13,<0.14",
+  "ipython>=8.16,<9",
+  "isort==5.11.5",
+  "pylint>=3.0.2",
+  "pytest-asyncio>=0.21,<1",
+  "pytest>=6.2.5",
+  "respx>=0.20,<1",
+  "ruff==0.1.5,<1",
+  "sphinx-autobuild",
+  "hatch==1.9.4",
+]
+docs = [
+  "cogapp", 
+  "myst-parser>=2.0,<3",
+  "shibuya",
+  "sphinx-design",
+  "sphinx>=7,<8",
+  "sphinxcontrib-mermaid>=0.9,<1",
+]
+
+[project.urls]
+homepage = "https://framasoft.frama.io/framaspace/argos/"
+repository = "https://framagit.org/framasoft/framaspace/argos"
+"Funding" = "https://framasoft.org/en/#support"
+"Tracker" = "https://framagit.org/framasoft/framaspace/argos/-/issues"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/argos",
+  "/docs",
+  "/tests",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["argos"]
+
+[tool.hatch.version]
+path = "argos/__init__.py"
+
+
+[project.scripts]
+argos = "argos.commands:cli"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+    "argos"
+]
+pythonpath = "."
