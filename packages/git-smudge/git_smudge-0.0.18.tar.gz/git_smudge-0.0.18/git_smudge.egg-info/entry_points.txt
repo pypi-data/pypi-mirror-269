@@ -1,0 +1,2 @@
+[console_scripts]
+git-smudge = git_smudge.__main__:main
