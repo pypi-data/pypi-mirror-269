@@ -1,0 +1,11 @@
+gitdb
+joblib
+jsonpickle
+PyYAML
+smmap
+tabulate
+requests
+ansible-core
+ruamel.yaml
+filelock
+rapidfuzz
